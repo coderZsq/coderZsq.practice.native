@@ -16,6 +16,10 @@ const logUtil = require('./utils/log_util');
 const api = require('./routes/api');
 const response_formatter = require('./middlewares/response_formatter');
 
+const cors = require('koa-cors');
+
+app.use(cors());
+
 // middlewares
 app.use(convert(bodyparser));
 app.use(convert(json()));

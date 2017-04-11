@@ -11,10 +11,19 @@ import UIKit
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
 
-class View: UIView {
+protocol ViewOperation {
+    mutating func pushTo() -> Void
+}
+
+class View: UIView, ViewInterface {
     
-    var models: [Model]? {
-        didSet {
+    var operation: ViewOperation?
+    var value: ViewModelInterface?
+    var viewModel: ViewModelInterface? {
+        
+        get { return value }
+        set {
+            value = newValue
             tableView.reloadData()
         }
     }
@@ -22,6 +31,7 @@ class View: UIView {
     fileprivate lazy var tableView: UITableView = { [weak self] in
         var tableView = UITableView(frame: self!.bounds, style: .plain)
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
         }()
     
@@ -38,16 +48,29 @@ class View: UIView {
 extension View: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models?.count ?? 0
+        return viewModel?.models.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let identifier = "identifier"
-        let model: Model? = models?[indexPath.row]
+        let model: ModelInterface? = viewModel?.models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: identifier)
         cell.textLabel?.text = model?.text
         cell.detailTextLabel?.text = model?.detailText
+        cell.imageView?.loadUrl(imageUrl: model?.imageUrl)
         return cell
+    }
+}
+
+extension View: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        operation?.pushTo()
     }
 }

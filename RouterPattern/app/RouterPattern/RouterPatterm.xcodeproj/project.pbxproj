@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5018AA1E9CA0A5000C154F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018A91E9CA0A5000C154F /* Presenter.swift */; };
+		CF5018AC1E9CB0C8000C154F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018AB1E9CB0C8000C154F /* WebViewController.swift */; };
+		CF9C6FFA1E9C7A2600DF4901 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9C6FF91E9C7A2600DF4901 /* ViewModel.swift */; };
+		CF9C6FFC1E9C86FD00DF4901 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9C6FFB1E9C86FD00DF4901 /* Image.swift */; };
 		CFEB6B571E9B508F0053BBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB6B561E9B508F0053BBB2 /* AppDelegate.swift */; };
 		CFEB6B591E9B508F0053BBB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB6B581E9B508F0053BBB2 /* ViewController.swift */; };
 		CFEB6B5C1E9B508F0053BBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEB6B5A1E9B508F0053BBB2 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		51ED29C5AFAEF6F88C6FC02B /* Pods_RouterPatterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouterPatterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D0EF8F965085222218BD30 /* Pods-RouterPatterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouterPatterm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouterPatterm/Pods-RouterPatterm.debug.xcconfig"; sourceTree = "<group>"; };
+		CF5018A91E9CA0A5000C154F /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		CF5018AB1E9CB0C8000C154F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CF9C6FF91E9C7A2600DF4901 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CF9C6FFB1E9C86FD00DF4901 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		CFEB6B531E9B508F0053BBB2 /* RouterPatterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterPatterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEB6B561E9B508F0053BBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFEB6B581E9B508F0053BBB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 				CFEB6B561E9B508F0053BBB2 /* AppDelegate.swift */,
 				CFEB6B581E9B508F0053BBB2 /* ViewController.swift */,
 				CFEB6B761E9B7F870053BBB2 /* Http.swift */,
+				CF9C6FFB1E9C86FD00DF4901 /* Image.swift */,
+				CF5018AB1E9CB0C8000C154F /* WebViewController.swift */,
 				CFEB6B5A1E9B508F0053BBB2 /* Main.storyboard */,
 				CFEB6B5D1E9B508F0053BBB2 /* Assets.xcassets */,
 				CFEB6B5F1E9B508F0053BBB2 /* LaunchScreen.storyboard */,
@@ -103,6 +113,8 @@
 			children = (
 				CFEB6B711E9B7E9A0053BBB2 /* Model.swift */,
 				CFEB6B721E9B7E9A0053BBB2 /* View.swift */,
+				CF9C6FF91E9C7A2600DF4901 /* ViewModel.swift */,
+				CF5018A91E9CA0A5000C154F /* Presenter.swift */,
 				CFEB6B701E9B7E9A0053BBB2 /* Controller.swift */,
 			);
 			path = J1;
@@ -231,12 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5018AA1E9CA0A5000C154F /* Presenter.swift in Sources */,
 				CFEB6B731E9B7E9A0053BBB2 /* Controller.swift in Sources */,
+				CF9C6FFC1E9C86FD00DF4901 /* Image.swift in Sources */,
+				CF5018AC1E9CB0C8000C154F /* WebViewController.swift in Sources */,
 				CFEB6B591E9B508F0053BBB2 /* ViewController.swift in Sources */,
 				CFEB6B751E9B7E9A0053BBB2 /* View.swift in Sources */,
 				CFEB6B571E9B508F0053BBB2 /* AppDelegate.swift in Sources */,
 				CFEB6B741E9B7E9A0053BBB2 /* Model.swift in Sources */,
 				CFEB6B771E9B7F870053BBB2 /* Http.swift in Sources */,
+				CF9C6FFA1E9C7A2600DF4901 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +296,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -330,6 +347,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

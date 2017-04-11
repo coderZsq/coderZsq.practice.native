@@ -8,10 +8,11 @@
 
 import UIKit
 
-class Model: NSObject {
-
+class Model: NSObject, ModelInterface {
+    
     var text : String = ""
     var detailText : String = ""
+    var imageUrl : String = ""
     
     init(dict : [String : Any]) {
         super.init()
