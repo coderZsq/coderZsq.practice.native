@@ -1,0 +1,28 @@
+[2017-04-12 15:35:26.095] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/J1/getRouters
+request client ip:  ::1
+request query:  {}
+response time: 65
+err name: ReferenceError
+err message: Routers is not defined
+err stack: ReferenceError: Routers is not defined
+    at /Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/app/controllers/J1.js:3:25
+    at Generator.next (<anonymous>)
+    at step (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/app/controllers/J1.js:3:191)
+    at /Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/app/controllers/J1.js:3:437
+    at /Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/app/controllers/J1.js:3:99
+    at exports.getRouters (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/app/controllers/J1.js:1:1)
+    at dispatch (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:45:18)
+    at /Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-router/lib/router.js:326:16
+    at dispatch (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:45:18)
+    at allowedMethods (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-router/lib/router.js:366:12)
+    at dispatch (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:45:18)
+    at /Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-router/lib/router.js:326:16
+    at dispatch (/Users/Doubles_Z/Desktop/RouterPattern/server/RouterPattern/node_modules/koa-compose/index.js:44:32)
+*************** error log end ***************
+

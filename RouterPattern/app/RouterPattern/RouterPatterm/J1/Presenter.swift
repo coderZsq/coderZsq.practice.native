@@ -49,6 +49,10 @@ extension Presenter {
 extension Presenter: ViewOperation {
     
     func pushTo() {
-        currentController?.navigationController?.pushViewController(WebViewController("http://localhost:8080/"), animated: true)
+        Router.shareRouter.params = [
+            "text" : "app端 传入数据",
+            "code" : 1001
+        ]
+        Router.shareRouter.push("J1")
     }
 }

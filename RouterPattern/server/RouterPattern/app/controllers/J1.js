@@ -1,3 +1,27 @@
+exports.getRouters = async(ctx, next) => {
+
+    var routers = await Routers.find({});
+    ctx.body = {
+        routers: routers[0]
+    }
+}
+
+exports.updateRouters = async(ctx, next) => {
+
+    const controller = ctx.params.controller;
+    const client = ctx.params.client;
+
+    if (controller === 'J1') {
+        Routers.update({
+            mvvm: client
+        }, (err, doc) => {
+            console.log(doc);
+        })
+    } else {
+        console.log('controller is not exist');
+    }
+}
+
 exports.getJ1List = async(ctx, next) => {
 
     ctx.body = {

@@ -13,11 +13,13 @@ class WebViewController: ViewController {
     
     fileprivate lazy var configuretion: WKWebViewConfiguration = { [weak self] in
         let configuretion = WKWebViewConfiguration()
+        configuretion.userContentController.add(self!, name: "push")
+        configuretion.userContentController.add(self!, name: "params")
         return configuretion
     }()
     
     fileprivate lazy var webView: WKWebView = { [weak self] in
-        let webView = WKWebView(frame: self!.view.bounds)
+        let webView = WKWebView(frame: self!.view.bounds, configuration: self!.configuretion)
         webView.navigationDelegate = self
         webView.uiDelegate = self
         return webView
@@ -93,5 +95,25 @@ extension WebViewController: WKUIDelegate {
     }
 }
 
+extension WebViewController: WKScriptMessageHandler {
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+        let methods = "\(message.name):"
+        let selector = NSSelectorFromString(methods)
+        if self.responds(to: selector) {
+            self.perform(selector, with: message.body)
+        }
+    }
+}
 
-
+extension WebViewController {
+    
+    @objc fileprivate func push(_ path: String) {
+        Router.shareRouter.push(path)
+    }
+    
+    @objc fileprivate func params(_ params: [String : Any]) {
+        Router.shareRouter.params = params
+    }
+}

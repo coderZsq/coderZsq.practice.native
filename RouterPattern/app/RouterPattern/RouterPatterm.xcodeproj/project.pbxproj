@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4AB0091E9DF0C1001907E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4AB0081E9DF0C1001907E1 /* Router.swift */; };
 		CF5018AA1E9CA0A5000C154F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018A91E9CA0A5000C154F /* Presenter.swift */; };
 		CF5018AC1E9CB0C8000C154F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018AB1E9CB0C8000C154F /* WebViewController.swift */; };
 		CF9C6FFA1E9C7A2600DF4901 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9C6FF91E9C7A2600DF4901 /* ViewModel.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		51ED29C5AFAEF6F88C6FC02B /* Pods_RouterPatterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouterPatterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D0EF8F965085222218BD30 /* Pods-RouterPatterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouterPatterm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouterPatterm/Pods-RouterPatterm.debug.xcconfig"; sourceTree = "<group>"; };
+		CF4AB0081E9DF0C1001907E1 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CF5018A91E9CA0A5000C154F /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		CF5018AB1E9CB0C8000C154F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CF9C6FF91E9C7A2600DF4901 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				CFEB6B581E9B508F0053BBB2 /* ViewController.swift */,
 				CFEB6B761E9B7F870053BBB2 /* Http.swift */,
 				CF9C6FFB1E9C86FD00DF4901 /* Image.swift */,
+				CF4AB0081E9DF0C1001907E1 /* Router.swift */,
 				CF5018AB1E9CB0C8000C154F /* WebViewController.swift */,
 				CFEB6B5A1E9B508F0053BBB2 /* Main.storyboard */,
 				CFEB6B5D1E9B508F0053BBB2 /* Assets.xcassets */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4AB0091E9DF0C1001907E1 /* Router.swift in Sources */,
 				CF5018AA1E9CA0A5000C154F /* Presenter.swift in Sources */,
 				CFEB6B731E9B7E9A0053BBB2 /* Controller.swift in Sources */,
 				CF9C6FFC1E9C86FD00DF4901 /* Image.swift in Sources */,

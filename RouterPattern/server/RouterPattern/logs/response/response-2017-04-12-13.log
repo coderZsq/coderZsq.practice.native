@@ -1,0 +1,180 @@
+[2017-04-12 13:15:28.368] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:24:45.705] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:28.771] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:33.015] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:34.003] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:34.847] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:35.533] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:36.568] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:37.367] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:38.145] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:25:38.775] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:48:24.232] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:52:38.557] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getJ1List
+request client ip:  ::1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"models":[{"text":"我的账户","detailText":"欢迎进入=>我的账户","imageUrl":"http://localhost:3002/images/J1/我的账户@2x.png"},{"text":"我的优惠券","detailText":"欢迎进入=>我的优惠券","imageUrl":"http://localhost:3002/images/J1/我的优惠券@2x.png"},{"text":"收货地址","detailText":"欢迎进入=>收货地址","imageUrl":"http://localhost:3002/images/J1/收货地址@2x.png"},{"text":"在线客服","detailText":"欢迎进入=>在线客服","imageUrl":"http://localhost:3002/images/J1/在线客服@2x.png"},{"text":"用药提醒","detailText":"欢迎进入=>用药提醒","imageUrl":"http://localhost:3002/images/J1/用药提醒@2x.png"},{"text":"药查查","detailText":"欢迎进入=>药查查","imageUrl":"http://localhost:3002/images/J1/药查查@2x.png"},{"text":"疾病百科","detailText":"欢迎进入=>疾病百科","imageUrl":"http://localhost:3002/images/J1/疾病百科@2x.png"},{"text":"药品百科","detailText":"欢迎进入=>药品百科","imageUrl":"http://localhost:3002/images/J1/药品百科@2x.png"},{"text":"健一咨询","detailText":"欢迎进入=>健一咨询","imageUrl":"http://localhost:3002/images/J1/健一咨询@2x.png"},{"text":"帮助中心","detailText":"欢迎进入=>帮助中心","imageUrl":"http://localhost:3002/images/J1/帮助中心@2x.png"},{"text":"点赞/吐槽","detailText":"欢迎进入=>点赞/吐槽","imageUrl":"http://localhost:3002/images/J1/点赞:吐槽@2x.png"},{"text":"关于健一","detailText":"欢迎进入=>关于健一","imageUrl":"http://localhost:3002/images/J1/关于健一@2x.png"}]}}
+*************** response log end ***************
+
+[2017-04-12 13:52:40.758] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::1
+request query:  {}
+response time: 1673
+response status: 200
+response body: 
+"<!DOCTYPE html><html><head><title>koa2 title</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>koa2 title</h1><p>Welcome to koa2 title</p></body></html>"
+*************** response log end ***************
+
+[2017-04-12 13:54:13.151] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /api/J1/getRouters
+request client ip:  ::1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"routers":{"J1":"web"}}}
+*************** response log end ***************
+
