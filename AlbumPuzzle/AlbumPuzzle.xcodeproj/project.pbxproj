@@ -12,6 +12,7 @@
 		CF3712411EA5A7CD0050EF89 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3712401EA5A7CD0050EF89 /* UIImage+Collage.swift */; };
 		CF3712431EA5C2F10050EF89 /* AlbumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3712421EA5C2F10050EF89 /* AlbumWriter.swift */; };
 		CF3712451EA5C5520050EF89 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3712441EA5C5520050EF89 /* UIViewController+Alert.swift */; };
+		CF37124A1EA702100050EF89 /* PHPhotoLibaray+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3712491EA702100050EF89 /* PHPhotoLibaray+rx.swift */; };
 		CF9710AF1EA4A38600C609BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9710AE1EA4A38600C609BC /* AppDelegate.swift */; };
 		CF9710B11EA4A38600C609BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9710B01EA4A38600C609BC /* ViewController.swift */; };
 		CF9710B41EA4A38600C609BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9710B21EA4A38600C609BC /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		CF3712401EA5A7CD0050EF89 /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Collage.swift"; sourceTree = "<group>"; };
 		CF3712421EA5C2F10050EF89 /* AlbumWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumWriter.swift; sourceTree = "<group>"; };
 		CF3712441EA5C5520050EF89 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		CF3712491EA702100050EF89 /* PHPhotoLibaray+rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibaray+rx.swift"; sourceTree = "<group>"; };
 		CF9710AB1EA4A38600C609BC /* AlbumPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9710AE1EA4A38600C609BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9710B01EA4A38600C609BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				CF3712421EA5C2F10050EF89 /* AlbumWriter.swift */,
 				CF3712401EA5A7CD0050EF89 /* UIImage+Collage.swift */,
 				CF3712441EA5C5520050EF89 /* UIViewController+Alert.swift */,
+				CF3712491EA702100050EF89 /* PHPhotoLibaray+rx.swift */,
 				CF9710B21EA4A38600C609BC /* Main.storyboard */,
 				CF9710B51EA4A38600C609BC /* Assets.xcassets */,
 				CF9710B71EA4A38600C609BC /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			files = (
 				CF37123F1EA5A4770050EF89 /* AlbumViewController.swift in Sources */,
 				CF9710B11EA4A38600C609BC /* ViewController.swift in Sources */,
+				CF37124A1EA702100050EF89 /* PHPhotoLibaray+rx.swift in Sources */,
 				CF9710AF1EA4A38600C609BC /* AppDelegate.swift in Sources */,
 				CF3712451EA5C5520050EF89 /* UIViewController+Alert.swift in Sources */,
 				CF3712411EA5A7CD0050EF89 /* UIImage+Collage.swift in Sources */,
