@@ -13,4 +13,4 @@
 #### Target-3: [AlbumPuzzle](http://www.jianshu.com/p/79010cca3b9c)
 -  Description:  响应式编程实现相片拼图及自定义相片展示库
 -  Language: Swift
--  Technology stack: RxSwift + Photos + Storyboard
+-  Technology stack: RxSwift + Photos + GCD + Storyboard
