@@ -13,9 +13,14 @@
 #### Target-3: [AlbumPuzzle](http://www.jianshu.com/p/79010cca3b9c)
 -  Description:  响应式编程实现相片拼图及自定义相片展示库
 -  Language: Swift
--  Technology stack: RxSwift + Photos + GCD
+-  Technology stack: RxSwift + Photos + filter
 
 #### Target-4: [GitHubRepo](http://www.jianshu.com/p/6b80a0db56bd)
 -  Description:  响应式编程实现网络加载和本地缓存
 -  Language: Swift
--  Technology stack: RxSwift + URLSession + FileManager
+-  Technology stack: RxSwift + map + filter
+
+#### Target-5: [Our Planet](http://www.jianshu.com/p/71c815f1d4de)
+-  Description:  响应式编程实现Slider滑动更改TableView数据
+-  Language: Swift
+-  Technology stack: RxSwift + map + fliter + merge + concat + conbineLeast + scan + bind
