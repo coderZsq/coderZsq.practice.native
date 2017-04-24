@@ -1,0 +1,6 @@
+framework module Pods_Our_Planet {
+  umbrella header "Pods-Our Planet-umbrella.h"
+
+  export *
+  module * { export * }
+}
