@@ -24,3 +24,8 @@
 -  Description:  响应式编程实现Slider滑动更改TableView数据
 -  Language: Swift
 -  Technology stack: RxSwift + map + fliter + merge + concat + conbineLeast + scan + bind
+
+#### Target-6: [Flight Info](http://www.jianshu.com/p/85877d2ddcb8)
+-  Description:  UIView的基本动画
+-  Language: Swift
+-  Technology stack: view animate
