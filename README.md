@@ -30,7 +30,7 @@
 -  Language: Swift
 -  Technology stack: view animate
 
-#### Target-6: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
+#### Target-7: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
 -  Description:  Core Animation 核心动画
 -  Language: Swift
 -  Technology stack: core animation
