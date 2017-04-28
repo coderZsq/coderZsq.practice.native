@@ -26,6 +26,11 @@
 -  Technology stack: RxSwift + map + fliter + merge + concat + conbineLeast + scan + bind
 
 #### Target-6: [Flight Info](http://www.jianshu.com/p/85877d2ddcb8)
--  Description:  UIView的基本动画
+-  Description:  UIView 基本动画
 -  Language: Swift
 -  Technology stack: view animate
+
+#### Target-6: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
+-  Description:  Core Animation 核心动画
+-  Language: Swift
+-  Technology stack: core animation
