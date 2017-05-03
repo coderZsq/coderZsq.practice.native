@@ -34,3 +34,8 @@
 -  Description:  Core Animation 核心动画
 -  Language: Swift
 -  Technology stack: core animation
+
+#### Target-8: [LogoReveal](http://www.jianshu.com/p/732e4c9b410a)
+-  Description:  Customize the transition animation 自定义转场动画
+-  Language: Swift
+-  Technology stack: transition animation
