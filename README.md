@@ -28,14 +28,14 @@
 #### Target-6: [Flight Info](http://www.jianshu.com/p/85877d2ddcb8)
 -  Description:  UIView 基本动画
 -  Language: Swift
--  Technology stack: view animate
+-  Technology stack: view animate api
 
 #### Target-7: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
 -  Description:  Core Animation 核心动画
 -  Language: Swift
--  Technology stack: core animation
+-  Technology stack: core animation api
 
 #### Target-8: [LogoReveal](http://www.jianshu.com/p/732e4c9b410a)
 -  Description:  Customize the transition animation 自定义转场动画
 -  Language: Swift
--  Technology stack: transition animation
+-  Technology stack: transition animation api
