@@ -39,3 +39,8 @@
 -  Description:  Customize the transition animation 自定义转场动画
 -  Language: Swift
 -  Technology stack: transition animation api
+
+#### Target-9: [ImageGallery](http://www.jianshu.com/p/0e24330302f5)
+-  Description:  iOS10 API UIViewPropertyAnimator 属性动画
+-  Language: Swift
+-  Technology stack: UIViewPropertyAnimator api
