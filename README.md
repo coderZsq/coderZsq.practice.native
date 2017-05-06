@@ -1,7 +1,7 @@
 ## Learn the advanced path of Swift
 
 #### Target-1: [PhotoGallery](http://www.jianshu.com/p/555786f35357)
--  Description:  H5调用Native相片库并渲染webView
+-  Description:  与HTML5的简单交互
 -  Language: Swift + Javascript
 -  Technology stack: UIImagePickerController + UIWebView + Dom.js
   
@@ -11,36 +11,42 @@
 -  Technology stack: WKWebView + Vue.js + Koa.js + Node.js + Mongodb
 
 #### Target-3: [AlbumPuzzle](http://www.jianshu.com/p/79010cca3b9c)
--  Description:  响应式编程实现相片拼图及自定义相片展示库
+-  Description:  响应式编程入门及过滤运算符的使用
 -  Language: Swift
 -  Technology stack: RxSwift + Photos + filter
 
 #### Target-4: [GitHubRepo](http://www.jianshu.com/p/6b80a0db56bd)
--  Description:  响应式编程实现网络加载和本地缓存
+-  Description:  响应式编程实入门及映射运算符的使用
 -  Language: Swift
 -  Technology stack: RxSwift + map + filter
 
 #### Target-5: [Our Planet](http://www.jianshu.com/p/71c815f1d4de)
--  Description:  响应式编程实现Slider滑动更改TableView数据
+-  Description:  响应式编程入门及组合运算符的使用
 -  Language: Swift
 -  Technology stack: RxSwift + map + fliter + merge + concat + conbineLeast + scan + bind
 
 #### Target-6: [Flight Info](http://www.jianshu.com/p/85877d2ddcb8)
--  Description:  UIView 基本动画
+-  Description:  基本动画的使用
 -  Language: Swift
 -  Technology stack: view animate api
 
 #### Target-7: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
--  Description:  Core Animation 核心动画
+-  Description:  核心动画的使用
 -  Language: Swift
 -  Technology stack: core animation api
 
 #### Target-8: [LogoReveal](http://www.jianshu.com/p/732e4c9b410a)
--  Description:  Customize the transition animation 自定义转场动画
+-  Description:  自定义转场动画的实现
 -  Language: Swift
 -  Technology stack: transition animation api
 
 #### Target-9: [ImageGallery](http://www.jianshu.com/p/0e24330302f5)
--  Description:  iOS10 API UIViewPropertyAnimator 属性动画
+-  Description:  iOS10新增属性动画的使用
 -  Language: Swift
 -  Technology stack: UIViewPropertyAnimator api
+
+#### Target-10: [ZombieConga](http://www.jianshu.com/p/09bb44d46080)
+-  Description:  SpriteKit入门 2D僵尸游戏
+-  Language: Swift
+-  Technology stack: SKSpriteNode SKCameraNode SKAction SKSence
+
