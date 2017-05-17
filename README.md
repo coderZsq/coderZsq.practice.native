@@ -46,7 +46,7 @@
 -  Technology stack: UIViewPropertyAnimator api
 
 #### Target-10: [ZombieConga](http://www.jianshu.com/p/09bb44d46080)
--  Description:  SpriteKit入门 2D僵尸游戏
+-  Description:  SpriteKit入门 2D游戏基本概念
 -  Language: Swift
 -  Technology stack: SKSpriteNode SKCameraNode SKAction SKSence
 
