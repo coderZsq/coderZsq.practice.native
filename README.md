@@ -50,3 +50,7 @@
 -  Language: Swift
 -  Technology stack: SKSpriteNode SKCameraNode SKAction SKSence
 
+#### Target-11: [CatNap](http://www.jianshu.com/p/5b4e09037337)
+-  Description:  SpriteKit入门 2D游戏物理世界
+-  Language: Swift
+-  Technology stack: SKPhysicsBody SKPhysicsWorld SKPhysicsJoint SKConstraint
