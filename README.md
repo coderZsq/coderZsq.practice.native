@@ -46,11 +46,17 @@
 -  Technology stack: UIViewPropertyAnimator api
 
 #### Target-10: [ZombieConga](http://www.jianshu.com/p/09bb44d46080)
--  Description:  SpriteKit入门 2D游戏基本概念
+-  Description:  SpriteKit入门 2D游戏 基本概念
 -  Language: Swift
 -  Technology stack: SKSpriteNode SKCameraNode SKAction SKSence
 
 #### Target-11: [CatNap](http://www.jianshu.com/p/5b4e09037337)
--  Description:  SpriteKit入门 2D游戏物理世界
+-  Description:  SpriteKit入门 2D游戏 物理世界
 -  Language: Swift
 -  Technology stack: SKPhysicsBody SKPhysicsWorld SKPhysicsJoint SKConstraint
+
+#### Target-12: [PestControl](http://www.jianshu.com/p/da0f9c0cdcff)
+-  Description:  SpriteKit入门 2D游戏 瓦片地图
+-  Language: Swift
+-  Technology stack: SKTileMapNode SKTileSet SKTileGroupRule SKTileDefinition
+
