@@ -28,22 +28,22 @@
 #### Target-6: [Flight Info](http://www.jianshu.com/p/85877d2ddcb8)
 -  Description:  基本动画的使用
 -  Language: Swift
--  Technology stack: view animate api
+-  Technology stack: UIKit Animation Api
 
 #### Target-7: [LoginScreen](http://www.jianshu.com/p/2802dedb587d)
 -  Description:  核心动画的使用
 -  Language: Swift
--  Technology stack: core animation api
+-  Technology stack: Core Animation Api
 
 #### Target-8: [LogoReveal](http://www.jianshu.com/p/732e4c9b410a)
 -  Description:  自定义转场动画的实现
 -  Language: Swift
--  Technology stack: transition animation api
+-  Technology stack: Custom Transition Api
 
 #### Target-9: [ImageGallery](http://www.jianshu.com/p/0e24330302f5)
 -  Description:  iOS10新增属性动画的使用
 -  Language: Swift
--  Technology stack: UIViewPropertyAnimator api
+-  Technology stack: Property Animator Api
 
 #### Target-10: [ZombieConga](http://www.jianshu.com/p/09bb44d46080)
 -  Description:  SpriteKit入门 2D游戏 基本概念
