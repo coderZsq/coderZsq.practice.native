@@ -24,9 +24,11 @@
 - [[Animations] 核心动画什么的要研究透!](http://www.jianshu.com/p/2802dedb587d)
 - [[Animations] 自定义转场现已加入豪华午餐](http://www.jianshu.com/p/732e4c9b410a)
 - [[Animations] 快速上手 iOS10 属性动画](http://www.jianshu.com/p/0e24330302f5)
+- Target: Flight Info(UIKit) / LoginScreen(Core Animation) / LogoReveal(自定义转场) / ImageGallery(属性动画)
 
 #### SpriteKit: ⭐️⭐️
 > 人生技能两条腿, 不止要能够开发应用, 更要能开发游戏
 - [[SpriteKit] 系统框架中Cocos2d-x的怨念](http://www.jianshu.com/p/09bb44d46080)
 - [[SpriteKit] 通过检测掩码进行物理识别](http://www.jianshu.com/p/5b4e09037337)
 - [[SpriteKit] 瓦片地图什么的还挺好玩儿](http://www.jianshu.com/p/da0f9c0cdcff)
+- Target: ZombieConga(基本概念) / CatNap(物理检测) / PestControl(瓦片地图)
