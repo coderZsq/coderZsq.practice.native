@@ -8,6 +8,7 @@
 - [Hybird 搭建前端Vue.js并升级至MVP](http://www.jianshu.com/p/8d4a84e3ddaa)
 - [Hybird 搭建路由Router实现组件化](http://www.jianshu.com/p/36314d0c0032)
 - [Hybird 搭建客户端实时降级架构](http://www.jianshu.com/p/7054a694cfeb)
+- Target: PhotoGallery(Web交互) / RouterPattern(解耦架构)
 
 #### RxSwift: ⭐️⭐️⭐️
 > 上手函数响应式编程, 熟悉订阅, 可观察序列及相关运算符等概念
@@ -15,6 +16,7 @@
 - [[RxSwift] 函数式过滤运算符实操](http://www.jianshu.com/p/04349d324a6f)
 - [[RxSwift] 函数式映射运算符实操](http://www.jianshu.com/p/6b80a0db56bd)
 - [[RxSwift] 函数式组合运算符实操](http://www.jianshu.com/p/71c815f1d4de)
+- Target: AlbumPuzzle(过滤运算符) / GitHubRepo(映射运算符) / Our Planet(组合运算符)
 
 #### Animations: ⭐️⭐️
 > 熟练掌握进阶动画, 让你的app脱颖而出, 此乃升职加薪必备技能
