@@ -32,3 +32,7 @@
 - [[SpriteKit] 通过检测掩码进行物理识别](http://www.jianshu.com/p/5b4e09037337)
 - [[SpriteKit] 瓦片地图什么的还挺好玩儿](http://www.jianshu.com/p/da0f9c0cdcff)
 - Target: ZombieConga(基本概念) / CatNap(物理检测) / PestControl(瓦片地图)
+
+#### CoreData
+> FMDB SQLite Realm 不会选? 试试苹果亲儿子!
+- [[CoreData] SQL写烦了? 试试亲儿子!](http://www.jianshu.com/p/859b4d29e7c0)
