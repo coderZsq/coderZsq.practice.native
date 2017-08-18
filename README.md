@@ -1,5 +1,22 @@
 ## Learn the advanced path of Swift
 
+### Advanced
+![](http://upload-images.jianshu.io/upload_images/1229762-339dba786d1f8e50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+#### RouterPattern
+> 混合web-app / native-app, 打造零耦合可降级架构设计
+- [Hybird 搭建零耦合架构从MVC开始](http://www.jianshu.com/p/5a03995a6ce1)
+- [Hybird 搭建后端Koa.js并过度到MVVM](http://www.jianshu.com/p/846b9f181cb7)
+- [Hybird 搭建前端Vue.js并升级至MVP](http://www.jianshu.com/p/8d4a84e3ddaa)
+- [Hybird 搭建路由Router实现组件化](http://www.jianshu.com/p/36314d0c0032)
+- [Hybird 搭建客户端实时降级架构](http://www.jianshu.com/p/7054a694cfeb)
+
+#### PhotoGallery
+> 本地.html静态页读取系统相册并在WebView中显示
+- [Hybird 说说与Web交互的那些事儿](http://www.jianshu.com/p/555786f35357)
+
+### Raywenderlich
+![](http://upload-images.jianshu.io/upload_images/1229762-5b9003739b8fd7da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 #### SceneKit: ⭐️⭐️
 > 把握未来趋势, 为之后的ARKit打好基础
 - [[SceneKit] 不会 Unity3D 的另一种选择](http://www.jianshu.com/p/f54eb416f8f1)
@@ -31,14 +48,4 @@
 - [[RxSwift] 函数式映射运算符实操](http://www.jianshu.com/p/6b80a0db56bd)
 - [[RxSwift] 函数式组合运算符实操](http://www.jianshu.com/p/71c815f1d4de)
 - Target: AlbumPuzzle(过滤运算符) / GitHubRepo(映射运算符) / Our Planet(组合运算符)
-
-#### Hybird: ⭐️⭐️
-> 混合web-app / native-app, 打造零耦合可降级架构设计
-- [Hybird 说说与Web交互的那些事儿](http://www.jianshu.com/p/555786f35357)
-- [Hybird 搭建零耦合架构从MVC开始](http://www.jianshu.com/p/5a03995a6ce1)
-- [Hybird 搭建后端Koa.js并过度到MVVM](http://www.jianshu.com/p/846b9f181cb7)
-- [Hybird 搭建前端Vue.js并升级至MVP](http://www.jianshu.com/p/8d4a84e3ddaa)
-- [Hybird 搭建路由Router实现组件化](http://www.jianshu.com/p/36314d0c0032)
-- [Hybird 搭建客户端实时降级架构](http://www.jianshu.com/p/7054a694cfeb)
-- Target: PhotoGallery(Web交互) / RouterPattern(解耦架构)
 
