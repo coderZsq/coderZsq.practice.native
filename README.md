@@ -12,8 +12,6 @@
 > 本地.html静态页读取系统相册并在WebView中显示
 - [Hybird 说说与Web交互的那些事儿](http://www.jianshu.com/p/555786f35357)
 
-### @Raywenderlich
-
 #### 3D Apple Games: ⭐️⭐️
 > 把握未来趋势, 为之后的ARKit打好基础
 - [[SceneKit] 不会 Unity3D 的另一种选择](http://www.jianshu.com/p/f54eb416f8f1)
