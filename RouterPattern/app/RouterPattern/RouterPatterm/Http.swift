@@ -19,7 +19,6 @@ class Http {
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
             
             guard let result = response.result.value else {
-                print(response.result.error)
                 return
             }
             

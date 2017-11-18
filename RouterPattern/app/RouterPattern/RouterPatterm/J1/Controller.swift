@@ -25,8 +25,6 @@ class Controller: ViewController {
         super.viewDidLoad()
         setupView()
         adapterView()
-        var url = URL(string: "")
-        url?.scheme
     }
 }
 
