@@ -34,7 +34,6 @@ extension Controller {
         view.addSubview(baseView)
     }
     
-
     fileprivate func adapterView() {
         presenter.adapter(viewModel: viewModel, view: baseView)
     }

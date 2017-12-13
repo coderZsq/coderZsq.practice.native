@@ -16,7 +16,7 @@ protocol ViewOperation {
 }
 
 class View: UIView, ViewInterface {
-    
+        
     var operation: ViewOperation?
     var value: ViewModelInterface?
     var viewModel: ViewModelInterface? {

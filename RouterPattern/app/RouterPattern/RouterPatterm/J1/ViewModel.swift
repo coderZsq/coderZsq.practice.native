@@ -14,7 +14,7 @@ extension ViewModel {
     
     func dynamicBinding(finishedCallback : @escaping () -> ()) {
         
-        Http.requestData(.post, URLString: "http://localhost:8080/user/login.do") { (response) in
+        Http.requestData(.get, URLString: "http://localhost:3001/api/J1/getJ1List") { (response) in
             guard let result = response as? [String : Any] else { return }
             guard let data:[String : Any] = result["data"] as? [String : Any] else { return }
             guard let models:[[String : Any]] = data["models"] as? [[String : Any]] else { return }

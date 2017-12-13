@@ -14,19 +14,19 @@ protocol ModelInterface {
     var imageUrl : String {get set}
 }
 
-protocol ViewInterface {
+protocol ViewInterface:class {
     var viewModel: ViewModelInterface? {get set}
     var operation: ViewOperation? {get set}
 }
 
-protocol ViewModelInterface {
+protocol ViewModelInterface:class {
     var models: [ModelInterface] {get set}
-    mutating func dynamicBinding(finishedCallback : @escaping () -> ())
+    func dynamicBinding(finishedCallback : @escaping () -> ())
 }
 
 class Presenter {
-    var view: ViewInterface?
-    var viewModel: ViewModelInterface?
+    weak var view: ViewInterface?
+    weak var viewModel: ViewModelInterface?
 }
 
 extension Presenter {
@@ -37,9 +37,9 @@ extension Presenter {
         self.viewModel = viewModel
         
         func dynamicBinding() {
-            self.viewModel?.dynamicBinding {
-                self.view?.viewModel = viewModel
-                self.view?.operation = self
+            self.viewModel?.dynamicBinding { [weak self] in
+                self?.view?.viewModel = viewModel
+                self?.view?.operation = self
             }
         }; dynamicBinding()
     }
