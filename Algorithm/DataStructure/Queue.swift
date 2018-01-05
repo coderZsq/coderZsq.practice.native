@@ -1,6 +1,6 @@
 //
 //  Queue.swift
-//  Algorithm
+//  DataStructure
 //
 //  Created by 朱双泉 on 04/01/2018.
 //  Copyright © 2018 Castie!. All rights reserved.
@@ -10,15 +10,14 @@ import Foundation
 
 class Queue<Element> {
     
-    private var queue: [Element]
     private var capacity: Int
     private lazy var head: Int = 0
     private lazy var tail: Int = 0
     private lazy var length: Int = 0
+    private lazy var queue: [Element] = [Element]()
     
-    init(_ queueCapacity: Int) {
+    init(_ queueCapacity: Int = 16) {
         capacity = queueCapacity
-        queue = [Element]()
     }
     
     func clear() {
@@ -39,8 +38,8 @@ class Queue<Element> {
         return length
     }
     
-    @discardableResult  func entry(_ element: Element) -> Bool {
-        guard !isFull() else {return false}
+    @discardableResult func entry(_ element: Element) -> Bool {
+        guard !isFull() else { return false }
         queue.append(element)
         queue[tail] = element
         tail += 1
@@ -50,7 +49,7 @@ class Queue<Element> {
     }
     
     @discardableResult func depart() -> Element? {
-        guard !isEmpty() else {return nil}
+        guard !isEmpty() else { return nil }
         let element = queue[head]
         head += 1
         head %= capacity
@@ -61,7 +60,7 @@ class Queue<Element> {
     func traverse() {
         print("︵")
         for i in head..<length + head {
-            print(queue[i%capacity])
+            print(queue[i % capacity])
         }
         print("︶")
     }
