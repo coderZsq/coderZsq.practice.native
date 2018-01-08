@@ -85,60 +85,61 @@ scope(of: "stack", execute: true) {
     stringS.pop()
     stringS.traverse()
 
-    let converseS = Stack<Int>(30)
-    func converse(_ origin: Int , format: Int) {
+    func converse(_ origin: Int , format: Int) -> String {
+        let stack = Stack<Int>(30)
         var ori = origin
         var mod = 0
         var char = ["0","1","2","3","4","5","6","7","8","9",
                     "A","B","C","D","E","F"]
+        var conversed = ""
         while ori != 0 {
             mod = ori % format
-            converseS.push(mod)
+            stack.push(mod)
             ori /= format
         }
-        print("︵")
-        while !converseS.isEmpty() {
-            guard let index = converseS.pop() else { return }
-            print(char[index])
+        while !stack.isEmpty() {
+            guard let index = stack.pop() else { continue }
+            conversed += char[index]
         }
-        print("︶")
-        converseS.clear()
+        stack.clear()
+        return "(\(conversed))"
     }
-    converse(1000, format: 2)
-    converse(1000, format: 8)
-    converse(1000, format: 10)
-    converse(123456789, format: 16)
-    
-    let stack = Stack<Character>(30)
-    let needStack = Stack<Character>(30)
-    let str = "[()]"
-    var currentNeed = Character(" ")
-    for i in 0..<str.count {
-        let char = str[str.index(str.startIndex, offsetBy: i)]
-        if  char != currentNeed {
-            stack.push(char)
-            switch char {
-            case "[":
-                if currentNeed != Character(" ") {
-                    needStack.push(currentNeed)
+    print(converse(1000, format: 2))
+    print(converse(1000, format: 8))
+    print(converse(1000, format: 10))
+    print(converse(123456789, format: 16))
+
+    func match(_ brackets: String) -> Bool {
+        let stack = Stack<Character>(30)
+        let needStack = Stack<Character>(30)
+        var currentNeed = Character(" ")
+        for i in 0..<brackets.count {
+            let char = brackets[brackets.index(brackets.startIndex, offsetBy: i)]
+            if  char != currentNeed {
+                stack.push(char)
+                switch char {
+                case "[":
+                    if currentNeed != Character(" ") {
+                        needStack.push(currentNeed)
+                    }
+                    currentNeed = "]"
+                    break
+                case "(":
+                    if currentNeed != Character(" ") {
+                        needStack.push(currentNeed)
+                    }
+                    currentNeed = ")"
+                    break
+                default:
+                    return false
                 }
-                currentNeed = "]"
-                break
-            case "(":
-                if currentNeed != Character(" ") {
-                    needStack.push(currentNeed)
-                }
-                currentNeed = ")"
-                break
-            default:
-                print("not match")
-                return
+            } else {
+                stack.pop()
+                guard let need = needStack.pop() else { currentNeed = Character(" "); continue }
+                currentNeed = need
             }
-        } else {
-            stack.pop()
-            guard let need = needStack.pop() else { currentNeed = Character(" "); continue }
-            currentNeed = need
         }
+        return stack.isEmpty()
     }
-    print(stack.isEmpty() ? "match" : "not match")
+    print(match("[]()[]()[]") ? "match" : "not match")
 }
