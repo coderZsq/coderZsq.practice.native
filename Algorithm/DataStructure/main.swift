@@ -182,3 +182,51 @@ scope(of: "list", execute: true) {
     print(list_s.next(of: "five")!)
     print(list_s.getElement(loc: 3)!)
 }
+
+scope(of: "linkList", execute: true) {
+
+    let linkList_i = LinkList<Int>()
+    for i in 1...7 {
+        let node = Node<Int>()
+        node.data = i
+        linkList_i.insertTail(node: node)
+    }
+    linkList_i.traverse()
+    
+    linkList_i.getElement(loc: 2)?.printNode()
+    
+    let node_i = Node<Int>()
+    node_i.data = 1024
+    linkList_i.insert(loc: 5, node: node_i)
+    linkList_i.traverse()
+    
+    print(linkList_i.locate(of: node_i))
+    print(linkList_i.size())
+    
+    linkList_i.prior(of: node_i)?.printNode()
+    linkList_i.next(of: node_i)?.printNode()
+    linkList_i.delete(loc: 5)?.printNode()
+    
+    linkList_i.traverse()
+
+    let linkList_s = LinkList<String>()
+    let alphabet = "ABCDEFG"
+    for i in alphabet {
+        let node = Node<String>()
+        node.data = String(i)
+        linkList_s.insertHead(node: node)
+    }
+    linkList_s.traverse()
+    
+    linkList_s.getElement(loc: 6)?.printNode()
+    
+    let node_s = Node<String>()
+    node_s.data = "Castie!"
+    linkList_s.insert(loc: 3, node: node_s)
+    linkList_s.getElement(loc: 3)?.printNode()
+    
+    linkList_s.traverse()
+    
+    linkList_s.prior(of: node_s)?.printNode()
+    linkList_s.next(of: node_s)?.printNode()
+}

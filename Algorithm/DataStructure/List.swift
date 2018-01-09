@@ -37,7 +37,7 @@ class List<Element: Comparable> {
         return list[index]
     }
     
-    func locateElement(_ element: Element) -> Int {
+    func locate(of element: Element) -> Int {
         for i in 0..<length {
             if list[i] == element {
                 return i
@@ -47,7 +47,7 @@ class List<Element: Comparable> {
     }
     
     func prior(of element: Element) -> Element? {
-        let temp = locateElement(element)
+        let temp = locate(of: element)
         if temp == -1 {
             return nil
         } else {
@@ -60,7 +60,7 @@ class List<Element: Comparable> {
     }
     
     func next(of element: Element) -> Element? {
-        let temp = locateElement(element)
+        let temp = locate(of: element)
         if temp == -1 {
             return nil
         } else {
