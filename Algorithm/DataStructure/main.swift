@@ -8,39 +8,6 @@
 
 import Foundation
 
-class Node<Element: Hashable>: Hashable {
-    
-    var hashValue: Int = 0
-    static func ==(lhs: Node, rhs: Node) -> Bool {
-        func address(of pointer: Node) -> UnsafeMutableRawPointer {
-            return Unmanaged.passUnretained(pointer).toOpaque()
-        }
-        return address(of: lhs) == address(of: rhs) ? true : false
-    }
-    
-    var data: Element?
-    var next: Node?
-    var index: Int = 0
-    var leftChild: Node?
-    var rightChild: Node?
-    var parent: Node?
-    
-    init() {}
-    
-    init(data nodeData: Element) {
-        data = nodeData
-    }
-    
-    init(loc nodeIndex: Int) {
-        index = nodeIndex
-    }
-    
-    func printNode() {
-        guard let data = data else { return }
-        print(data)
-    }
-}
-
 public func scope(of description: String, execute: Bool, action: () -> ()) {
     guard execute else { return }
     print("--- scope of:", description, "---")

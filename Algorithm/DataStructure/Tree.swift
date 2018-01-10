@@ -91,3 +91,47 @@ class Tree<Element> {
         print("︶")
     }
 }
+
+class LinkTree<Element: Hashable> {
+    
+    private var m_pRoot: Node<Element> = Node<Element>()
+    
+    func searchNode(nodeIndex: Int) -> Node<Element>? {
+        return m_pRoot.searchNode(nodeIndex: nodeIndex)
+    }
+    
+    func addNode(nodeIndex: Int, direction: Direction, pNode: Node<Element>) -> Bool {
+        guard let temp = searchNode(nodeIndex: nodeIndex) else { return false }
+        let node = Node<Element>()
+        node.index = pNode.index
+        node.data = pNode.data
+        if direction == .left {
+            temp.leftChild = node
+        }
+        if direction == .right {
+            temp.rightChild = node
+        }
+        return true
+    }
+    
+    func deleteNode(nodeIndex: Int, pNode: Node<Element>?) -> Bool {
+        guard let temp = searchNode(nodeIndex: nodeIndex) else { return false }
+        if pNode != nil {
+            pNode?.data = temp.data
+        }
+        temp.deleteNode()
+        return true
+    }
+    
+    func preorderTraversal() {
+        m_pRoot.printNode(.preorder)
+    }
+    
+    func inorderTraversal() {
+        m_pRoot.printNode(.inorder)
+    }
+    
+    func postorderTraversal() {
+        m_pRoot.printNode(.postorder)
+    }
+}
