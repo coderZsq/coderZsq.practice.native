@@ -8,6 +8,39 @@
 
 import Foundation
 
+class Node<Element: Hashable>: Hashable {
+    
+    var hashValue: Int = 0
+    static func ==(lhs: Node, rhs: Node) -> Bool {
+        func address(of pointer: Node) -> UnsafeMutableRawPointer {
+            return Unmanaged.passUnretained(pointer).toOpaque()
+        }
+        return address(of: lhs) == address(of: rhs) ? true : false
+    }
+    
+    var data: Element?
+    var next: Node?
+    var index: Int = 0
+    var leftChild: Node?
+    var rightChild: Node?
+    var parent: Node?
+    
+    init() {}
+    
+    init(data nodeData: Element) {
+        data = nodeData
+    }
+    
+    init(loc nodeIndex: Int) {
+        index = nodeIndex
+    }
+    
+    func printNode() {
+        guard let data = data else { return }
+        print(data)
+    }
+}
+
 public func scope(of description: String, execute: Bool, action: () -> ()) {
     guard execute else { return }
     print("--- scope of:", description, "---")
@@ -187,16 +220,13 @@ scope(of: "linkList", execute: true) {
 
     let linkList_i = LinkList<Int>()
     for i in 1...7 {
-        let node = Node<Int>()
-        node.data = i
-        linkList_i.insertTail(node: node)
+        linkList_i.insertTail(node: Node<Int>(data: i))
     }
     linkList_i.traverse()
     
     linkList_i.getElement(loc: 2)?.printNode()
     
-    let node_i = Node<Int>()
-    node_i.data = 1024
+    let node_i = Node<Int>(data: 1024)
     linkList_i.insert(loc: 5, node: node_i)
     linkList_i.traverse()
     
@@ -212,16 +242,13 @@ scope(of: "linkList", execute: true) {
     let linkList_s = LinkList<String>()
     let alphabet = "ABCDEFG"
     for i in alphabet {
-        let node = Node<String>()
-        node.data = String(i)
-        linkList_s.insertHead(node: node)
+        linkList_s.insertHead(node: Node<String>(data: String(i)))
     }
     linkList_s.traverse()
     
     linkList_s.getElement(loc: 6)?.printNode()
     
-    let node_s = Node<String>()
-    node_s.data = "Castie!"
+    let node_s = Node<String>(data: "Castie!")
     linkList_s.insert(loc: 3, node: node_s)
     linkList_s.getElement(loc: 3)?.printNode()
     
@@ -229,4 +256,25 @@ scope(of: "linkList", execute: true) {
     
     linkList_s.prior(of: node_s)?.printNode()
     linkList_s.next(of: node_s)?.printNode()
+}
+
+scope(of: "tree", execute: true) {
+    
+    let tree_i = Tree(15, root: Node<Int>(data: 3))
+    tree_i.addNode(loc: 0, direction: .right, node: Node<Int>(data: 4))
+    tree_i.addNode(loc: 2, direction: .left, node: Node<Int>(data: 5))
+    tree_i.addNode(loc: 5, direction: .right, node: Node<Int>(data: 6))
+    
+    tree_i.traverse()
+    
+    tree_i.searchNode(loc: 5)?.printNode()
+    tree_i.deleteNode(loc: 2)
+    
+    tree_i.traverse()
+    
+    let tree_s = Tree(7, root: Node<String>(data: "root"))
+    tree_s.addNode(loc: 0, direction: .left, node: Node<String>(data: "one"))
+    tree_s.addNode(loc: 1, direction: .right, node: Node<String>(data: "two"))
+    
+    tree_s.traverse()
 }

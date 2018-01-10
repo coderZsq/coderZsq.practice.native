@@ -11,7 +11,7 @@ import Foundation
 class Stack<Element> {
     
     private var capacity: Int
-    private lazy var top: Int = 0
+    private lazy var peek: Int = 0
     private lazy var buffer: [Element] = [Element]()
 
     init(_ stackCapacity: Int = 16) {
@@ -19,43 +19,43 @@ class Stack<Element> {
     }
     
     func isEmpty() -> Bool {
-        return top == 0 ? true : false
+        return peek == 0 ? true : false
     }
     
     func isFull() -> Bool {
-        return top == capacity ? true : false
+        return peek == capacity ? true : false
     }
     
     func clear() {
-        top = 0
+        peek = 0
     }
     
     func size() -> Int {
-        return top
+        return peek
     }
     
     @discardableResult func push(_ element: Element) -> Bool {
         guard !isFull() else { return false }
         buffer.append(element)
-        buffer[top] = element
-        top += 1
+        buffer[peek] = element
+        peek += 1
         return true
     }
     
     @discardableResult func pop() -> Element? {
         guard !isEmpty() else { return nil }
-        top -= 1
-        return buffer[top]
+        peek -= 1
+        return buffer[peek]
     }
     
     func traverse(reversed: Bool = false) {
         print("︵")
         if reversed {
-            for i in (0..<top).reversed() {
+            for i in (0..<peek).reversed() {
                 print(buffer[i])
             }
         } else {
-            for i in 0..<top {
+            for i in 0..<peek {
                 print(buffer[i])
             }
         }

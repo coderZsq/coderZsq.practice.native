@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14D3E83A200464C600F8224D /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3E839200464C600F8224D /* LinkList.swift */; };
+		14D3E83C2005A5BF00F8224D /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3E83B2005A5BF00F8224D /* Tree.swift */; };
 		14F4200A1FFF4CA1007941F4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F420091FFF4CA1007941F4 /* main.swift */; };
 		14F420121FFF4CCB007941F4 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F420101FFF4CCB007941F4 /* Stack.swift */; };
 		14F420131FFF4CCB007941F4 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F420111FFF4CCB007941F4 /* Queue.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14D3E839200464C600F8224D /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
+		14D3E83B2005A5BF00F8224D /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		14F420061FFF4CA1007941F4 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F420091FFF4CA1007941F4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		14F420101FFF4CCB007941F4 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				14F420111FFF4CCB007941F4 /* Queue.swift */,
 				14F420101FFF4CCB007941F4 /* Stack.swift */,
 				14F6A86820031DEF0081EC5E /* List.swift */,
-				14D3E839200464C600F8224D /* LinkList.swift */,
+				14D3E83B2005A5BF00F8224D /* Tree.swift */,
 				14F420091FFF4CA1007941F4 /* main.swift */,
 			);
 			path = DataStructure;
@@ -134,7 +134,7 @@
 			files = (
 				14F420121FFF4CCB007941F4 /* Stack.swift in Sources */,
 				14F6A86920031DEF0081EC5E /* List.swift in Sources */,
-				14D3E83A200464C600F8224D /* LinkList.swift in Sources */,
+				14D3E83C2005A5BF00F8224D /* Tree.swift in Sources */,
 				14F420131FFF4CCB007941F4 /* Queue.swift in Sources */,
 				14F4200A1FFF4CA1007941F4 /* main.swift in Sources */,
 			);
