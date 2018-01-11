@@ -10,13 +10,6 @@ import Foundation
 
 class Node<Element: Hashable>: Hashable {
     
-    enum PrintType {
-        case dafault
-        case preorder
-        case inorder
-        case postorder
-    }
-    
     var hashValue: Int = 0
     static func ==(lhs: Node, rhs: Node) -> Bool {
         func address(of pointer: Node) -> UnsafeMutableRawPointer {
@@ -26,11 +19,15 @@ class Node<Element: Hashable>: Hashable {
     }
     
     var data: Element?
+    // for list
     var next: Node?
+    // for tree
     var index: Int = 0
     var leftChild: Node?
     var rightChild: Node?
     var parent: Node?
+    // for map
+    var visited: Bool = false
     
     init() {}
     
@@ -87,6 +84,13 @@ class Node<Element: Hashable>: Hashable {
             }
         }
         parent = nil
+    }
+    
+    enum PrintType {
+        case dafault
+        case preorder
+        case inorder
+        case postorder
     }
     
     func printNode(_ type: PrintType = .dafault) {

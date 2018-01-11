@@ -146,7 +146,7 @@ scope(of: "stack", execute: true) {
 
 scope(of: "list", execute: true) {
     
-    let list_i = List<Int>(10)
+    let list_i = List1<Int>(10)
     list_i.insert(loc: 0, element: 1)
     list_i.insert(loc: 1, element: 2)
     list_i.insert(loc: 2, element: 3)
@@ -164,7 +164,7 @@ scope(of: "list", execute: true) {
     print(list_i.next(of: 1)!)
     print(list_i.getElement(loc: 2)!)
     
-    let list_s = List<String>()
+    let list_s = List1<String>()
     list_s.insert(loc: 0, element: "one")
     list_s.insert(loc: 1, element: "two")
     list_s.insert(loc: 2, element: "three")
@@ -183,9 +183,9 @@ scope(of: "list", execute: true) {
     print(list_s.getElement(loc: 3)!)
 }
 
-scope(of: "linkList", execute: true) {
+scope(of: "list", execute: true) {
 
-    let list_i = LinkList<Int>()
+    let list_i = List2<Int>()
     for i in 1...7 {
         list_i.insertTail(node: Node<Int>(data: i))
     }
@@ -206,7 +206,7 @@ scope(of: "linkList", execute: true) {
     
     list_i.traverse()
 
-    let list_s = LinkList<String>()
+    let list_s = List2<String>()
     let alphabet = "ABCDEFG"
     for i in alphabet {
         list_s.insertHead(node: Node<String>(data: String(i)))
@@ -227,7 +227,7 @@ scope(of: "linkList", execute: true) {
 
 scope(of: "tree", execute: true) {
     
-    let tree_i = Tree(15, root: Node<Int>(data: 3))
+    let tree_i = Tree1(15, root: Node<Int>(data: 3))
     tree_i.addNode(loc: 0, direction: .right, node: Node<Int>(data: 4))
     tree_i.addNode(loc: 2, direction: .left, node: Node<Int>(data: 5))
     tree_i.addNode(loc: 5, direction: .right, node: Node<Int>(data: 6))
@@ -239,16 +239,16 @@ scope(of: "tree", execute: true) {
     
     tree_i.traverse()
     
-    let tree_s = Tree(7, root: Node<String>(data: "root"))
+    let tree_s = Tree1(7, root: Node<String>(data: "root"))
     tree_s.addNode(loc: 0, direction: .left, node: Node<String>(data: "one"))
     tree_s.addNode(loc: 1, direction: .right, node: Node<String>(data: "two"))
     
     tree_s.traverse()
 }
 
-scope(of: "linkTree", execute: true) {
+scope(of: "tree", execute: true) {
 
-    let tree_i = LinkTree(root: Node<Int>(data: 0))
+    let tree_i = Tree2(root: Node<Int>(data: 0))
     tree_i.addNode(loc: 0, direction: .right, node: Node<Int>(index: 1, data: 4))
     tree_i.addNode(loc: 1, direction: .left, node: Node<Int>(index: 2, data: 5))
     tree_i.addNode(loc: 2, direction: .right, node: Node<Int>(index: 3, data: 6))
@@ -264,7 +264,7 @@ scope(of: "linkTree", execute: true) {
     tree_i.inorderTraversal()
     tree_i.postorderTraversal()
     
-    let tree_s = LinkTree(root: Node<String>(data: "root"))
+    let tree_s = Tree2(root: Node<String>(data: "root"))
     tree_s.addNode(loc: 0, direction: .left, node: Node<String>(index: 1, data: "one"))
     tree_s.addNode(loc: 1, direction: .right, node: Node<String>(index: 2, data: "two"))
     tree_s.addNode(loc: 2, direction: .left, node: Node<String>(index: 3, data: "three"))

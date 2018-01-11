@@ -8,7 +8,7 @@
 
 import Foundation
 
-class List<Element: Comparable> {
+class List1<Element: Comparable> {
     
     private var capacity: Int  = 0
     private lazy var length: Int = 0
@@ -105,7 +105,7 @@ class List<Element: Comparable> {
     }
 }
 
-class LinkList<Element: Hashable> {
+class List2<Element: Hashable> {
     
     private var head: Node<Element>
     private var length: Int = 0

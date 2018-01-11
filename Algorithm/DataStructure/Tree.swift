@@ -13,7 +13,7 @@ enum Direction {
     case right
 }
 
-class Tree<Element> {
+class Tree1<Element> {
     
     private var tree: [Any]
     private var capacity: Int
@@ -92,7 +92,7 @@ class Tree<Element> {
     }
 }
 
-class LinkTree<Element: Hashable> {
+class Tree2<Element: Hashable> {
     
     private var root: Node<Element>
     
