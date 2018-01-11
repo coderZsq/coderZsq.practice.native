@@ -185,44 +185,44 @@ scope(of: "list", execute: true) {
 
 scope(of: "linkList", execute: true) {
 
-    let linkList_i = LinkList<Int>()
+    let list_i = LinkList<Int>()
     for i in 1...7 {
-        linkList_i.insertTail(node: Node<Int>(data: i))
+        list_i.insertTail(node: Node<Int>(data: i))
     }
-    linkList_i.traverse()
+    list_i.traverse()
     
-    linkList_i.getElement(loc: 2)?.printNode()
+    list_i.getElement(loc: 2)?.printNode()
     
     let node_i = Node<Int>(data: 1024)
-    linkList_i.insert(loc: 5, node: node_i)
-    linkList_i.traverse()
+    list_i.insert(loc: 5, node: node_i)
+    list_i.traverse()
     
-    print(linkList_i.locate(of: node_i))
-    print(linkList_i.size())
+    print(list_i.locate(of: node_i))
+    print(list_i.size())
     
-    linkList_i.prior(of: node_i)?.printNode()
-    linkList_i.next(of: node_i)?.printNode()
-    linkList_i.delete(loc: 5)?.printNode()
+    list_i.prior(of: node_i)?.printNode()
+    list_i.next(of: node_i)?.printNode()
+    list_i.delete(loc: 5)?.printNode()
     
-    linkList_i.traverse()
+    list_i.traverse()
 
-    let linkList_s = LinkList<String>()
+    let list_s = LinkList<String>()
     let alphabet = "ABCDEFG"
     for i in alphabet {
-        linkList_s.insertHead(node: Node<String>(data: String(i)))
+        list_s.insertHead(node: Node<String>(data: String(i)))
     }
-    linkList_s.traverse()
+    list_s.traverse()
     
-    linkList_s.getElement(loc: 6)?.printNode()
+    list_s.getElement(loc: 6)?.printNode()
     
     let node_s = Node<String>(data: "Castie!")
-    linkList_s.insert(loc: 3, node: node_s)
-    linkList_s.getElement(loc: 3)?.printNode()
+    list_s.insert(loc: 3, node: node_s)
+    list_s.getElement(loc: 3)?.printNode()
     
-    linkList_s.traverse()
+    list_s.traverse()
     
-    linkList_s.prior(of: node_s)?.printNode()
-    linkList_s.next(of: node_s)?.printNode()
+    list_s.prior(of: node_s)?.printNode()
+    list_s.next(of: node_s)?.printNode()
 }
 
 scope(of: "tree", execute: true) {
@@ -244,4 +244,36 @@ scope(of: "tree", execute: true) {
     tree_s.addNode(loc: 1, direction: .right, node: Node<String>(data: "two"))
     
     tree_s.traverse()
+}
+
+scope(of: "linkTree", execute: true) {
+
+    let tree_i = LinkTree(root: Node<Int>(data: 0))
+    tree_i.addNode(loc: 0, direction: .right, node: Node<Int>(index: 1, data: 4))
+    tree_i.addNode(loc: 1, direction: .left, node: Node<Int>(index: 2, data: 5))
+    tree_i.addNode(loc: 2, direction: .right, node: Node<Int>(index: 3, data: 6))
+
+    tree_i.preorderTraversal()
+    tree_i.inorderTraversal()
+    tree_i.postorderTraversal()
+    
+    tree_i.searchNode(loc: 3)?.printNode()
+    tree_i.deleteNode(loc: 1)
+    
+    tree_i.preorderTraversal()
+    tree_i.inorderTraversal()
+    tree_i.postorderTraversal()
+    
+    let tree_s = LinkTree(root: Node<String>(data: "root"))
+    tree_s.addNode(loc: 0, direction: .left, node: Node<String>(index: 1, data: "one"))
+    tree_s.addNode(loc: 1, direction: .right, node: Node<String>(index: 2, data: "two"))
+    tree_s.addNode(loc: 2, direction: .left, node: Node<String>(index: 3, data: "three"))
+    tree_s.addNode(loc: 3, direction: .right, node: Node<String>(index: 4, data: "four"))
+    tree_s.addNode(loc: 4, direction: .left, node: Node<String>(index: 5, data: "five"))
+    tree_s.addNode(loc: 5, direction: .right, node: Node<String>(index: 6, data: "six"))
+    tree_s.addNode(loc: 6, direction: .left, node: Node<String>(index: 7, data: "seven"))
+    
+    tree_s.preorderTraversal()
+    tree_s.inorderTraversal()
+    tree_s.postorderTraversal()
 }

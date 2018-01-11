@@ -94,44 +94,52 @@ class Tree<Element> {
 
 class LinkTree<Element: Hashable> {
     
-    private var m_pRoot: Node<Element> = Node<Element>()
+    private var root: Node<Element>
     
-    func searchNode(nodeIndex: Int) -> Node<Element>? {
-        return m_pRoot.searchNode(nodeIndex: nodeIndex)
+    init(root node: Node<Element>) {
+        root = node
     }
     
-    func addNode(nodeIndex: Int, direction: Direction, pNode: Node<Element>) -> Bool {
-        guard let temp = searchNode(nodeIndex: nodeIndex) else { return false }
-        let node = Node<Element>()
-        node.index = pNode.index
-        node.data = pNode.data
+    func searchNode(loc index: Int) -> Node<Element>? {
+        return root.searchNode(nodeIndex: index)
+    }
+    
+    @discardableResult  func addNode(loc index: Int, direction: Direction, node: Node<Element>) -> Bool {
+        guard let temp = searchNode(loc: index) else { return false }
+        let newNode = Node<Element>()
+        newNode.index = node.index
+        newNode.data = node.data
+        newNode.parent = temp
         if direction == .left {
-            temp.leftChild = node
+            temp.leftChild = newNode
         }
         if direction == .right {
-            temp.rightChild = node
+            temp.rightChild = newNode
         }
         return true
     }
     
-    func deleteNode(nodeIndex: Int, pNode: Node<Element>?) -> Bool {
-        guard let temp = searchNode(nodeIndex: nodeIndex) else { return false }
-        if pNode != nil {
-            pNode?.data = temp.data
-        }
+    @discardableResult func deleteNode(loc index: Int) -> Node<Element>? {
+        guard let temp = searchNode(loc: index) else { return nil }
         temp.deleteNode()
-        return true
+        return temp
     }
     
     func preorderTraversal() {
-        m_pRoot.printNode(.preorder)
+        print("︵")
+        root.printNode(.preorder)
+        print("︶")
     }
     
     func inorderTraversal() {
-        m_pRoot.printNode(.inorder)
+        print("︵")
+        root.printNode(.inorder)
+        print("︶")
     }
     
     func postorderTraversal() {
-        m_pRoot.printNode(.postorder)
+        print("︵")
+        root.printNode(.postorder)
+        print("︶")
     }
 }

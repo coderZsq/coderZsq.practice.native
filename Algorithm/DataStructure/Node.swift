@@ -38,15 +38,35 @@ class Node<Element: Hashable>: Hashable {
         data = nodeData
     }
     
+    init(index nodeIndex: Int, data nodeData: Element) {
+        index = nodeIndex
+        data = nodeData
+    }
+    
     func searchNode(nodeIndex: Int) -> Node<Element>? {
         if index == nodeIndex {
             return self
         }
-        if leftChild != nil && leftChild?.index == nodeIndex {
-            return leftChild
+        var temp: Node<Element>? = nil
+        if leftChild != nil {
+            if leftChild?.index == nodeIndex {
+                return leftChild
+            } else {
+                temp = leftChild?.searchNode(nodeIndex: nodeIndex)
+                if temp != nil {
+                    return temp
+                }
+            }
         }
-        if rightChild != nil && rightChild?.index == nodeIndex {
-            return rightChild
+        if rightChild != nil {
+            if rightChild?.index == nodeIndex {
+                return rightChild
+            } else {
+                temp = rightChild?.searchNode(nodeIndex: nodeIndex)
+                if temp != nil {
+                    return temp
+                }
+            }
         }
         return nil
     }
@@ -66,6 +86,7 @@ class Node<Element: Hashable>: Hashable {
                 parent?.rightChild = nil
             }
         }
+        parent = nil
     }
     
     func printNode(_ type: PrintType = .dafault) {
@@ -74,7 +95,7 @@ class Node<Element: Hashable>: Hashable {
         case .dafault:
             print(data)
         case .preorder:
-            print("data: \(data), index: \(index)")
+            print("\(index), \(data)")
             if leftChild != nil {
                 leftChild?.printNode(.preorder)
             }
@@ -85,7 +106,7 @@ class Node<Element: Hashable>: Hashable {
             if leftChild != nil {
                 leftChild?.printNode(.inorder)
             }
-            print("data: \(data), index: \(index)")
+            print("\(index), \(data)")
             if rightChild != nil {
                 rightChild?.printNode(.inorder)
             }
@@ -96,7 +117,7 @@ class Node<Element: Hashable>: Hashable {
             if rightChild != nil {
                 rightChild?.printNode(.postorder)
             }
-            print("data: \(data), index: \(index)")
+            print("\(index), \(data)")
         }
     }
 }
