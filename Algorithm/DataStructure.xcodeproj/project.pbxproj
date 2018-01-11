@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14CDDC5D20073F5D0090A296 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDDC5C20073F5D0090A296 /* Map.swift */; };
 		14D3E83C2005A5BF00F8224D /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3E83B2005A5BF00F8224D /* Tree.swift */; };
 		14D3E8442006133700F8224D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3E8432006133700F8224D /* Node.swift */; };
 		14F4200A1FFF4CA1007941F4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F420091FFF4CA1007941F4 /* main.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14CDDC5C20073F5D0090A296 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		14D3E83B2005A5BF00F8224D /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		14D3E8432006133700F8224D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		14F420061FFF4CA1007941F4 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				14D3E8432006133700F8224D /* Node.swift */,
 				14F6A86820031DEF0081EC5E /* List.swift */,
 				14D3E83B2005A5BF00F8224D /* Tree.swift */,
+				14CDDC5C20073F5D0090A296 /* Map.swift */,
 				14F420091FFF4CA1007941F4 /* main.swift */,
 			);
 			path = DataStructure;
@@ -138,6 +141,7 @@
 				14F420121FFF4CCB007941F4 /* Stack.swift in Sources */,
 				14F6A86920031DEF0081EC5E /* List.swift in Sources */,
 				14D3E83C2005A5BF00F8224D /* Tree.swift in Sources */,
+				14CDDC5D20073F5D0090A296 /* Map.swift in Sources */,
 				14D3E8442006133700F8224D /* Node.swift in Sources */,
 				14F420131FFF4CCB007941F4 /* Queue.swift in Sources */,
 				14F4200A1FFF4CA1007941F4 /* main.swift in Sources */,

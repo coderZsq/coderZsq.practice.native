@@ -108,7 +108,7 @@ class List1<Element: Comparable> {
 class List2<Element: Hashable> {
     
     private var head: Node<Element>
-    private var length: Int = 0
+    private lazy var length: Int = 0
     
     init() {
         head = Node()

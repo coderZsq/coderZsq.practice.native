@@ -277,3 +277,31 @@ scope(of: "tree", execute: true) {
     tree_s.inorderTraversal()
     tree_s.postorderTraversal()
 }
+
+scope(of: "map", execute: true) {
+    
+    let map_s = Map<String>(8)
+    map_s.addNode(Node<String>(data: "A"))
+    map_s.addNode(Node<String>(data: "B"))
+    map_s.addNode(Node<String>(data: "C"))
+    map_s.addNode(Node<String>(data: "D"))
+    map_s.addNode(Node<String>(data: "E"))
+    map_s.addNode(Node<String>(data: "F"))
+    map_s.addNode(Node<String>(data: "G"))
+    map_s.addNode(Node<String>(data: "H"))
+    
+    map_s.setValueToMatrixForUndirectedGraph(row: 0, col: 1)
+    map_s.setValueToMatrixForUndirectedGraph(row: 0, col: 3)
+    map_s.setValueToMatrixForUndirectedGraph(row: 1, col: 2)
+    map_s.setValueToMatrixForUndirectedGraph(row: 1, col: 5)
+    map_s.setValueToMatrixForUndirectedGraph(row: 3, col: 6)
+    map_s.setValueToMatrixForUndirectedGraph(row: 3, col: 7)
+    map_s.setValueToMatrixForUndirectedGraph(row: 6, col: 7)
+    map_s.setValueToMatrixForUndirectedGraph(row: 2, col: 4)
+    map_s.setValueToMatrixForUndirectedGraph(row: 4, col: 5)
+
+    map_s.printMatrix()
+    map_s.depthFirstTraverse(loc: 0)
+    map_s.resetNode()
+    map_s.breadthFirstTraverse(loc: 0)
+}
