@@ -311,7 +311,7 @@ scope(of: "map", execute: true) {
     map_s.resetNode()
     map_s.breadthFirstTraverse(loc: 0)
     
-    scope(of: "prim-tree", execute: true, action: {
+    scope(of: "prim-tree / kruskal-tree", execute: true, action: {
         
         let map = Map<String>(6)
         map.addNode(Node<String>(data: "A"))
@@ -334,5 +334,6 @@ scope(of: "map", execute: true) {
         
         map.printMatrix()
         map.primTree(loc: 0)
+        map.kruskalTree()
     })
 }

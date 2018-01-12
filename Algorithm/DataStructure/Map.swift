@@ -176,7 +176,7 @@ class Map<Element: Hashable> {
             let edgeIndex = getMinEdge(buffers: edgeBuffers)
             edgeBuffers[edgeIndex].selected = true
             
-            print("\(edgeBuffers[edgeIndex].nodeIndexA) --- \(edgeBuffers[edgeIndex].nodeIndexB) val: \(edgeBuffers[edgeIndex].weightValue)")
+            print(edgeBuffers[edgeIndex].nodeIndexA, edgeBuffers[edgeIndex].nodeIndexB, edgeBuffers[edgeIndex].weightValue)
             
             edge[edgeCount] = edgeBuffers[edgeIndex]
             edgeCount += 1
@@ -191,6 +191,63 @@ class Map<Element: Hashable> {
             print("\(node)", terminator: "")
         }
         print()
+    }
+    
+    func kruskalTree() {
+        var edgeCount = 0
+        var edgeBuffers = [Edge]()
+        var nodeIndexes = [[Int]]()
+        for i in 0..<capacity {
+            for j in i + 1..<capacity {
+                guard let value = getValueFromMatrix(row: i, col: j) else { continue }
+                if value != 0 {
+                    edgeBuffers.append(Edge(nodeIndexA: i, nodeIndexB: j, weightValue: value))
+                }
+            }
+        }
+        while edgeCount < capacity - 1 {
+            let minEdgeIndex = getMinEdge(buffers: edgeBuffers)
+            edgeBuffers[minEdgeIndex].selected = true
+            let nodeAIndex = edgeBuffers[minEdgeIndex].nodeIndexA
+            let nodeBIndex = edgeBuffers[minEdgeIndex].nodeIndexB
+            var nodeAIsInSet = false
+            var nodeBIsInSet = false
+            var nodeAInSetLabel = -1
+            var nodeBInSetLabel = -1
+            for i in 0..<nodeIndexes.count {
+                nodeAIsInSet = isInSet(nodeIndexes[i], nodeAIndex)
+                if nodeAIsInSet {
+                    nodeAInSetLabel = i
+                }
+            }
+            for i in 0..<nodeIndexes.count {
+                nodeBIsInSet = isInSet(nodeIndexes[i], nodeBIndex)
+                if nodeBIsInSet {
+                    nodeBInSetLabel = i
+                }
+            }
+            if nodeAInSetLabel == -1 && nodeBInSetLabel == -1 {
+                var vec = [Int]()
+                vec.append(nodeAIndex)
+                vec.append(nodeBIndex)
+                nodeIndexes.append(vec)
+            } else if nodeAInSetLabel == -1 && nodeAInSetLabel != -1 {
+                nodeIndexes[nodeBInSetLabel].append(nodeAIndex)
+            } else if nodeAInSetLabel != -1 && nodeAInSetLabel == -1 {
+                nodeIndexes[nodeAInSetLabel].append(nodeBIndex)
+            } else if nodeAInSetLabel != -1 && nodeBInSetLabel != -1 && nodeAInSetLabel != nodeBInSetLabel {
+                nodeIndexes[nodeAInSetLabel] =
+                    mergeNodeSets(nodeIndexes[nodeAInSetLabel], nodeIndexes[nodeBInSetLabel])
+                for i in nodeBInSetLabel..<nodeIndexes.count-1 {
+                    nodeIndexes[i] = nodeIndexes[i + 1]
+                }
+            } else if nodeAInSetLabel != -1 && nodeBInSetLabel != -1 && nodeAInSetLabel == nodeBInSetLabel {
+                continue
+            }
+            edge[edgeCount] = edgeBuffers[minEdgeIndex]
+            edgeCount += 1
+            print(edgeBuffers[minEdgeIndex].nodeIndexA, edgeBuffers[minEdgeIndex].nodeIndexB, edgeBuffers[minEdgeIndex].weightValue)
+        }
     }
     
     private func getMinEdge(buffers edgeBuffers: [Edge]) -> Int {
@@ -222,5 +279,22 @@ class Map<Element: Hashable> {
             i += 1
         }
         return edgeIndex
+    }
+    
+    private func isInSet(_ nodeSet:[Int], _ target: Int) -> Bool {
+        for i in 0..<nodeSet.count {
+            if nodeSet[i] == target {
+                return true
+            }
+        }
+        return false
+    }
+    
+    private func mergeNodeSets(_ nodeSetA: [Int], _ nodeSetB: [Int]) -> [Int] {
+        var nodeSet = [Int]()
+        for i in 0..<nodeSetB.count {
+            nodeSet.append(nodeSetB[i])
+        }
+        return nodeSet
     }
 }
