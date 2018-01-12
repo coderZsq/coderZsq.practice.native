@@ -10,14 +10,29 @@ import Foundation
 
 class Map<Element: Hashable> {
     
+    class Edge {
+        var nodeIndexA: Int
+        var nodeIndexB: Int
+        var weightValue: Int
+        var selected: Bool = false
+        
+        init(nodeIndexA A: Int = 0, nodeIndexB B: Int = 0, weightValue Val: Int = 0) {
+            nodeIndexA = A
+            nodeIndexB = B
+            weightValue = Val
+        }
+    }
+    
     private var capacity: Int
     private var matrix: [Int]
+    private var edge: [Edge]
     private lazy var count: Int = 0
     private lazy var map: [Node<Element>] = [Node<Element>]()
     
     init(_ mapCapacity: Int) {
         capacity = mapCapacity
         matrix = [Int](repeating: 0, count: capacity * capacity)
+        edge = [Edge](repeating: Edge(), count: capacity - 1)
     }
     
     @discardableResult func addNode(_ node: Node<Element>?) -> Bool {
@@ -134,6 +149,78 @@ class Map<Element: Hashable> {
         }
         return matrix[row * capacity + col]
     }
+    
+    func primTree(loc index: Int) {
+        var edgeCount = 0
+        var edgeBuffers = [Edge]()
+        var nodeIndexes = [Int]()
+        var primTreePath = [Element]()
+        
+        nodeIndexes.append(index)
+        map[index].visited = true
+        primTreePath.append(map[index].data!)
+        
+        while edgeCount < capacity - 1 {
+            guard let index: Int = nodeIndexes.last else { continue }
+            for i in 0..<capacity {
+                guard let value = getValueFromMatrix(row: index, col: i) else { continue }
+                if value != 0 {
+                    if map[i].visited {
+                        continue
+                    } else {
+                        edgeBuffers.append(Edge(nodeIndexA: index, nodeIndexB: i, weightValue: value))
+                    }
+                }
+            }
+            
+            let edgeIndex = getMinEdge(buffers: edgeBuffers)
+            edgeBuffers[edgeIndex].selected = true
+            
+            print("\(edgeBuffers[edgeIndex].nodeIndexA) --- \(edgeBuffers[edgeIndex].nodeIndexB) val: \(edgeBuffers[edgeIndex].weightValue)")
+            
+            edge[edgeCount] = edgeBuffers[edgeIndex]
+            edgeCount += 1
+            
+            let nextNodeIndex = edgeBuffers[edgeIndex].nodeIndexB
+            nodeIndexes.append(nextNodeIndex)
+            map[nextNodeIndex].visited = true
+            
+            primTreePath.append(map[nextNodeIndex].data!)
+        }
+        for node in primTreePath {
+            print("\(node)", terminator: "")
+        }
+        print()
+    }
+    
+    private func getMinEdge(buffers edgeBuffers: [Edge]) -> Int {
+        var minWeight = 0
+        var edgeIndex = 0
+        var i = 0
+        for _ in 0..<edgeBuffers.count {
+            if !edgeBuffers[i].selected {
+                minWeight = edgeBuffers[i].weightValue
+                edgeIndex = i
+                break
+            }
+            i += 1
+        }
+        if minWeight == 0 {
+            return -1;
+        }
+
+        for _ in i..<edgeBuffers.count {
+            if edgeBuffers[i].selected {
+                i += 1
+                continue
+            } else {
+                if minWeight > edgeBuffers[i].weightValue {
+                    minWeight = edgeBuffers[i].weightValue
+                    edgeIndex = i
+                }
+            }
+            i += 1
+        }
+        return edgeIndex
+    }
 }
-
-
