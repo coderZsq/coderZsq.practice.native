@@ -28,7 +28,13 @@ public func randomList(_ num: UInt32) -> [Int] {
     return list;
 }
 
-scope(of: "sort", execute: false) {
+scope(of: "sort", execute: true) {
+    
+    scope(of: "systemsort", execute: true, action: {
+        let list = randomList(10000)
+        timing {_ = list.sorted()}
+//        print(list.sorted())
+    })
     
     scope(of: "selectsort", execute: true, action: {
         var list = randomList(10000)
