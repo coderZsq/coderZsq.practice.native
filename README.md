@@ -1,7 +1,7 @@
 ## Learn the advanced path of Swift
 
-#### Algorithm
-> 让算法思维运用到生活的方方面面, 学习算法通向未来的世界.
+#### StudyNotes
+> 一些关于代码基础的学习笔记, 通过Swift进行表达
 - [Swift 数据结构与算法初探](https://coderzsq.github.io/2018/01/Swift-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%9D%E6%8E%A2/)
 
 #### RouterPattern
