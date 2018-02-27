@@ -38,8 +38,8 @@ scope(of: "sort", execute: true) {
     
     scope(of: "systemsort2", execute: true, action: {
         let list = randomList(10000)
-        timing {_ = list.sorted {$0 > $1}}
-        //        print(list.sorted())
+        timing {_ = list.sorted {$0 < $1}}
+//        print(list.sorted {$0 < $1})
     })
     
     scope(of: "selectsort", execute: true, action: {
@@ -76,24 +76,16 @@ scope(of: "sort", execute: true) {
 scope(of: "search", execute: true) {
     
     scope(of: "binsearch", execute: true, action: {
-        var list = randomList(10000)
+        let list = randomList(10000)
         var index = 0
-        timing {
-            quickSort(list: &list)
-            //        print(list)
-            index = binSearch(list: list, find: 6)
-        }
+        timing {index = binSearch(list: list.sorted {$0 < $1}, find: 6)}
         print("index: \(index)")
     })
     
     scope(of: "rec_binsearch", execute: true, action: {
-        var list = randomList(10000)
+        let list = randomList(10000)
         var index = 0
-        timing {
-            quickSort(list: &list)
-            //        print(list)
-            index = recursiveBinSearch(list: list, find: 6)
-        }
+        timing { index = recursiveBinSearch(list: list.sorted {$0 < $1}, find: 6)}
         print("index: \(index)")
     })
 }
