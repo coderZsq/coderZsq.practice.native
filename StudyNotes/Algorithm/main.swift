@@ -36,6 +36,12 @@ scope(of: "sort", execute: true) {
 //        print(list.sorted())
     })
     
+    scope(of: "systemsort2", execute: true, action: {
+        let list = randomList(10000)
+        timing {_ = list.sorted {$0 > $1}}
+        //        print(list.sorted())
+    })
+    
     scope(of: "selectsort", execute: true, action: {
         var list = randomList(10000)
         timing {selectSort(list: &list)}
