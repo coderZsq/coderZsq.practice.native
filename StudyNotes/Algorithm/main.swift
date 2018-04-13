@@ -28,7 +28,7 @@ public func randomList(_ num: UInt32) -> [Int] {
     return list;
 }
 
-scope(of: "sort", execute: true) {
+scope(of: "sort", execute: false) {
         
     scope(of: "systemsort", execute: true, action: {
         let list = randomList(10000)
@@ -87,5 +87,19 @@ scope(of: "search", execute: true) {
         var index = 0
         timing { index = recursiveBinSearch(list: list.sorted {$0 < $1}, find: 6)}
         print("index: \(index)")
+    })
+    
+    scope(of: "findMedianSortedArrays_1", execute: true, action: {
+        print(findMedianSortedArrays_1([1, 99], [3, 5, 9, 32]))
+        print(findMedianSortedArrays_2([1, 99], [3, 5, 9, 32]))
+    })
+}
+
+scope(of: "math", execute: true) {
+    
+    scope(of: "pow", execute: true, action: {
+        print(_pow_1(3, 4))
+        print(_pow_2(3, 4))
+        print(_pow_3(3, 4))
     })
 }
