@@ -38,4 +38,8 @@ import Foundation
     return search(list: list, low: 0, high: list.count - 1, find: find)
 }
 
+func findingMedianOfTheSortedArrays(_ array1: [Double], _ array2: [Double]) -> Double {
+    return 0
+}
+
 

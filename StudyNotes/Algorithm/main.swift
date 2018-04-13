@@ -29,7 +29,7 @@ public func randomList(_ num: UInt32) -> [Int] {
 }
 
 scope(of: "sort", execute: true) {
-    
+        
     scope(of: "systemsort", execute: true, action: {
         let list = randomList(10000)
         timing {_ = list.sorted()}
