@@ -89,9 +89,39 @@ scope(of: "search", execute: true) {
         print("index: \(index)")
     })
     
-    scope(of: "findMedianSortedArrays_1", execute: true, action: {
-        print(findMedianSortedArrays_1([1, 99], [3, 5, 9, 32]))
-        print(findMedianSortedArrays_2([1, 99], [3, 5, 9, 32]))
+    scope(of: "findMedianSortedArrays", execute: true, action: {
+        
+        var array1 = randomList(1000000)
+        var array2 = randomList(1000000)
+        quickSort(list: &array1)
+        quickSort(list: &array2)
+        print(findMedianSortedArrays_1(array1, array2))
+        print(findMedianSortedArrays_2(array1, array2))
+        print(findMedianSortedArrays_3(array1, array2))
+        
+        scope(of: "findMedianSortedArrays_1", execute: true, action: {
+            var array1 = randomList(1000000)
+            var array2 = randomList(1000000)
+            quickSort(list: &array1)
+            quickSort(list: &array2)
+            timing { findMedianSortedArrays_1(array1, array2) }
+        })
+        
+        scope(of: "findMedianSortedArrays_2", execute: true, action: {
+            var array1 = randomList(1000000)
+            var array2 = randomList(1000000)
+            quickSort(list: &array1)
+            quickSort(list: &array2)
+            timing { findMedianSortedArrays_2(array1, array2) }
+        })
+        
+        scope(of: "findMedianSortedArrays_3", execute: true, action: {
+            var array1 = randomList(1000000)
+            var array2 = randomList(1000000)
+            quickSort(list: &array1)
+            quickSort(list: &array2)
+            timing { findMedianSortedArrays_3(array1, array2) }
+        })
     })
 }
 

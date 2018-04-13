@@ -21,9 +21,11 @@ class Button: UIControl, ButtonInterface {
 
     lazy var titleLabel: UILabel = UILabel()
     lazy var imageView: UIImageView = UIImageView()
+    lazy var backgroundImageView: UIImageView = UIImageView()
     
     var titleLabelIsCreated = false
     var imageViewIsCreated = false
+    var backgroundImageViewCreated = false
     
     internal func setTitle(_ text: String) {
         if !titleLabelIsCreated {
@@ -55,7 +57,12 @@ class Button: UIControl, ButtonInterface {
     }
     
     internal func setBackgroundImage(_ image: UIImage) {
-        layer.contents = image.cgImage
+        if !backgroundImageViewCreated {
+            addSubview(backgroundImageView)
+            insertSubview(backgroundImageView, at: 0)
+            backgroundImageViewCreated = true
+        }
+        backgroundImageView.image = image
     }
     
     internal func setImageEdgeInsets(_ edgeInsets: UIEdgeInsets) {
@@ -65,7 +72,7 @@ class Button: UIControl, ButtonInterface {
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        if titleLabelIsCreated && !imageViewIsCreated {
+        if titleLabelIsCreated && !imageViewIsCreated && !backgroundImageViewCreated {
             let text: NSString? = titleLabel.text as NSString?
             let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.width ?? 0.0
             let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.height ?? 0.0
@@ -79,8 +86,9 @@ class Button: UIControl, ButtonInterface {
             let imageViewW: CGFloat = imageView.image?.size.width ?? 0.0
             let imageViewH: CGFloat = imageView.image?.size.height ?? 0.0
             return CGSize(width: titleLabelW + imageViewW, height: imageViewH > titleLabelH ? imageViewH : titleLabelH)
+        } else {
+            return backgroundImageView.image?.size ?? CGSize.zero
         }
-        return size
     }
     
     override func layoutSubviews() {
@@ -109,5 +117,8 @@ class Button: UIControl, ButtonInterface {
             imageView.frame = CGRect(x: imageViewX, y: imageViewY, width: imageViewW, height: imageViewH)
         }
         
+        if backgroundImageViewCreated {
+            backgroundImageView.frame = bounds
+        }
     }
 }

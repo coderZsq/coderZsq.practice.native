@@ -38,14 +38,13 @@ import Foundation
     return search(list: list, low: 0, high: list.count - 1, find: find)
 }
 
-func findMedianSortedArrays_1(_ array1: [Int], _ array2: [Int]) -> Double {
+@discardableResult func findMedianSortedArrays_1(_ array1: [Int], _ array2: [Int]) -> Double {
     
     var array = [Int]()
     array.append(contentsOf: array1)
     array.append(contentsOf: array2)
     
     quickSort(list: &array)
-    print(array)
     
     let b = array.count % 2
     let c = array.count
@@ -61,7 +60,7 @@ func findMedianSortedArrays_1(_ array1: [Int], _ array2: [Int]) -> Double {
     return result
 }
 
-func findMedianSortedArrays_2(_ array1: [Int], _ array2: [Int]) -> Double {
+@discardableResult func findMedianSortedArrays_2(_ array1: [Int], _ array2: [Int]) -> Double {
     
     let c1 = array1.count, c2 = array2.count
     var a1 = array1, a2 = array2
@@ -89,12 +88,33 @@ func findMedianSortedArrays_2(_ array1: [Int], _ array2: [Int]) -> Double {
         }
     }
     
-    let totol = c1 + c2
-    if totol % 2 == 1 {
-        return findKth(&a1, i: 0, &a2, j: 0, k: totol / 2 + 1)
+    let total = c1 + c2
+    if total % 2 == 1 {
+        return findKth(&a1, i: 0, &a2, j: 0, k: total / 2 + 1)
     } else {
-        return (findKth(&a1, i: 0, &a2, j: 0, k: totol / 2) + findKth(&a1, i: 0, &a2, j: 0, k: totol / 2 + 1)) / 2.0
+        return (findKth(&a1, i: 0, &a2, j: 0, k: total / 2) + findKth(&a1, i: 0, &a2, j: 0, k: total / 2 + 1)) / 2.0
     }
 }
 
-
+@discardableResult func findMedianSortedArrays_3(_ array1: [Int], _ array2: [Int]) -> Double {
+    
+    let total = array1.count + array2.count
+    let index = total / 2
+    let count = array1.count < array2.count ? array2.count : array1.count
+    var array = [Int]()
+    
+    var i = 0, j = 0;
+    for _ in 0...count {
+        if array.count >= index + 1 {
+            break
+        }
+        if array1[i] < array2[j] {
+            array.append(array1[i])
+            i += 1
+        } else {
+            array.append(array2[j])
+            j += 1
+        }
+    }
+    return total % 2 == 1 ? Double(array[index]) : Double(array[index] + array[index - 1]) * 0.5
+}
