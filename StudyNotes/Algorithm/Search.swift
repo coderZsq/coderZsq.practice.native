@@ -98,9 +98,23 @@ import Foundation
 
 @discardableResult func findMedianSortedArrays_3(_ array1: [Int], _ array2: [Int]) -> Double {
     
+    if array1.count == 0 {
+        if array2.count % 2 == 1 {
+            return Double(array2[array2.count / 2])
+        } else {
+            return Double(array2[array2.count / 2] + array2[array2.count / 2 - 1]) * 0.5
+        }
+    } else if array2.count == 0 {
+        if array1.count % 2 == 1 {
+            return Double(array1[array1.count / 2])
+        } else {
+            return Double(array1[array1.count / 2] + array1[array1.count / 2 - 1]) * 0.5
+        }
+    }
+    
     let total = array1.count + array2.count
     let index = total / 2
-    let count = array1.count < array2.count ? array2.count : array1.count
+    let count = array1.count < array2.count ? array1.count : array2.count
     var array = [Int]()
     
     var i = 0, j = 0;
@@ -117,4 +131,56 @@ import Foundation
         }
     }
     return total % 2 == 1 ? Double(array[index]) : Double(array[index] + array[index - 1]) * 0.5
+}
+
+@discardableResult func findMedianSortedArrays_4(_ array1: [Int], _ array2: [Int]) -> Double {
+    
+    if array1.count == 0 {
+        if array2.count % 2 == 1 {
+            return Double(array2[array2.count / 2])
+        } else {
+            return Double(array2[array2.count / 2] + array2[array2.count / 2 - 1]) * 0.5
+        }
+    } else if array2.count == 0 {
+        if array1.count % 2 == 1 {
+            return Double(array1[array1.count / 2])
+        } else {
+            return Double(array1[array1.count / 2] + array1[array1.count / 2 - 1]) * 0.5
+        }
+    }
+    
+    let total = array1.count + array2.count
+    let count = array1.count < array2.count ? array1.count : array2.count
+    let odd = total % 2 == 1
+    
+    var i = 0, j = 0, f = 1, m1 = 0.0, m2 = 0.0, result = 0.0;
+    for _ in 0...count {
+        if odd { array1[i] < array2[j] ? (i += 1) : (j += 1) }
+        if f >= total / 2 {
+            if odd {
+                result = array1[i] < array2[j] ? Double(array1[i]) : Double(array2[j])
+            } else {
+                if array1[i] < array2[j] {
+                    m1 = Double(array1[i])
+                    if (i + 1) < array1.count && array1[i + 1] < array2[j] {
+                        m2 = Double(array1[i + 1])
+                    } else {
+                        m2 = Double(array2[j])
+                    }
+                } else {
+                    m1 = Double(array2[j])
+                    if (j + 1) < array2.count && array2[j + 1] < array1[i] {
+                        m2 = Double(array2[j + 1])
+                    } else {
+                        m2 = Double(array1[i])
+                    }
+                }
+                result = (m1 + m2) * 0.5
+            }
+            break
+        }
+        if !odd { array1[i] < array2[j] ? (i += 1) : (j += 1) }
+        f += 1
+    }
+    return result
 }

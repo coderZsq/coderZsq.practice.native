@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         uibutton.setTitle("github.com/coderZsq", for: .normal)
         uibutton.setTitleColor(.red, for: .normal)
 //        uibutton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
-//        uibutton.setImage(UIImage(named: "avatar"), for: .normal)
-        uibutton.setBackgroundImage(UIImage(named: "avatar"), for: .normal)
-//        uibutton.imageEdgeInsets = UIEdgeInsetsMake(-10, -10, -10, -10)
+        uibutton.setImage(UIImage(named: "avatar"), for: .normal)
+//        uibutton.setBackgroundImage(UIImage(named: "avatar"), for: .normal)
+//        uibutton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
         view.addSubview(uibutton)
         uibutton.sizeToFit()
         
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
         button.setTitle("github.com/coderZsq")
         button.setTitleColor(.red)
 //        button.setTitleEdgeInsets(UIEdgeInsetsMake(0, 0, 0, 0))
-//        button.setImage(UIImage(named: "avatar") ?? UIImage());
-        button.setBackgroundImage(UIImage(named: "avatar") ?? UIImage())
+        button.setImage(UIImage(named: "avatar") ?? UIImage());
+//        button.setBackgroundImage(UIImage(named: "avatar") ?? UIImage())
 //        button.setImageEdgeInsets(UIEdgeInsetsMake(0, 0, 0, 0))
         view.addSubview(button)
         button.sizeToFit()

@@ -91,14 +91,15 @@ scope(of: "search", execute: true) {
     
     scope(of: "findMedianSortedArrays", execute: true, action: {
         
-        var array1 = randomList(1000000)
+        var array1 = randomList(1000001)
         var array2 = randomList(1000000)
         quickSort(list: &array1)
         quickSort(list: &array2)
         print(findMedianSortedArrays_1(array1, array2))
         print(findMedianSortedArrays_2(array1, array2))
         print(findMedianSortedArrays_3(array1, array2))
-        
+        print(findMedianSortedArrays_4(array1, array2))
+
         scope(of: "findMedianSortedArrays_1", execute: true, action: {
             var array1 = randomList(1000000)
             var array2 = randomList(1000000)
@@ -122,6 +123,14 @@ scope(of: "search", execute: true) {
             quickSort(list: &array2)
             timing { findMedianSortedArrays_3(array1, array2) }
         })
+        scope(of: "findMedianSortedArrays_4", execute: true, action: {
+            var array1 = randomList(1000000)
+            var array2 = randomList(1000000)
+            quickSort(list: &array1)
+            quickSort(list: &array2)
+            timing { findMedianSortedArrays_4(array1, array2) }
+        })
+
     })
 }
 

@@ -19,7 +19,12 @@ protocol ButtonInterface {
 
 class Button: UIControl, ButtonInterface {
 
-    lazy var titleLabel: UILabel = UILabel()
+    lazy var titleLabel: UILabel =  {
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
+        titleLabel.textAlignment = .center
+        return titleLabel
+    }()
     lazy var imageView: UIImageView = UIImageView()
     lazy var backgroundImageView: UIImageView = UIImageView()
     
@@ -51,6 +56,9 @@ class Button: UIControl, ButtonInterface {
     internal func setImage(_ image: UIImage) {
         if !imageViewIsCreated {
             addSubview(imageView)
+            if titleLabelIsCreated {
+                insertSubview(imageView, belowSubview: titleLabel)
+            }
             imageViewIsCreated = true
         }
         imageView.image = image
@@ -96,7 +104,6 @@ class Button: UIControl, ButtonInterface {
 
         if titleLabelIsCreated && !imageViewIsCreated {
             titleLabel.frame = bounds
-            titleLabel.textAlignment = .center
         } else if !titleLabelIsCreated && imageViewIsCreated {
             let y: CGFloat = 0;
             let width: CGFloat = imageView.image?.size.width ?? 0;
