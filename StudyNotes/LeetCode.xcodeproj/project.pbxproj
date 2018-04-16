@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142E20852084C03000EF153B /* Longest Substring Without Repeating Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E20842084C03000EF153B /* Longest Substring Without Repeating Characters.swift */; };
-		14588A6B208241EC0063CF22 /* Add Two Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14588A6A208241EC0063CF22 /* Add Two Numbers.swift */; };
+		142E20852084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */; };
+		14588A6B208241EC0063CF22 /* #2 Add Two Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */; };
 		146E8D94208203F3008BC4F9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D93208203F3008BC4F9 /* main.swift */; };
-		146E8D9B2082040A008BC4F9 /* Two Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D9A2082040A008BC4F9 /* Two Sum.swift */; };
+		146E8D9B2082040A008BC4F9 /* #1 Two Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D9A2082040A008BC4F9 /* #1 Two Sum.swift */; };
 		14DCCCF3208205A00050BD75 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCCF2208205A00050BD75 /* Test.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,11 +27,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		142E20842084C03000EF153B /* Longest Substring Without Repeating Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Longest Substring Without Repeating Characters.swift"; sourceTree = "<group>"; };
-		14588A6A208241EC0063CF22 /* Add Two Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add Two Numbers.swift"; sourceTree = "<group>"; };
+		142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#3 Longest Substring Without Repeating Characters.swift"; sourceTree = "<group>"; };
+		14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#2 Add Two Numbers.swift"; sourceTree = "<group>"; };
 		146E8D90208203F3008BC4F9 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		146E8D93208203F3008BC4F9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		146E8D9A2082040A008BC4F9 /* Two Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Two Sum.swift"; sourceTree = "<group>"; };
+		146E8D9A2082040A008BC4F9 /* #1 Two Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#1 Two Sum.swift"; sourceTree = "<group>"; };
 		14DCCCF2208205A00050BD75 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,9 +65,9 @@
 		146E8D92208203F3008BC4F9 /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				146E8D9A2082040A008BC4F9 /* Two Sum.swift */,
-				14588A6A208241EC0063CF22 /* Add Two Numbers.swift */,
-				142E20842084C03000EF153B /* Longest Substring Without Repeating Characters.swift */,
+				146E8D9A2082040A008BC4F9 /* #1 Two Sum.swift */,
+				14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */,
+				142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */,
 				14DCCCF2208205A00050BD75 /* Test.swift */,
 				146E8D93208203F3008BC4F9 /* main.swift */,
 			);
@@ -134,9 +134,9 @@
 			files = (
 				14DCCCF3208205A00050BD75 /* Test.swift in Sources */,
 				146E8D94208203F3008BC4F9 /* main.swift in Sources */,
-				146E8D9B2082040A008BC4F9 /* Two Sum.swift in Sources */,
-				142E20852084C03000EF153B /* Longest Substring Without Repeating Characters.swift in Sources */,
-				14588A6B208241EC0063CF22 /* Add Two Numbers.swift in Sources */,
+				146E8D9B2082040A008BC4F9 /* #1 Two Sum.swift in Sources */,
+				142E20852084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift in Sources */,
+				14588A6B208241EC0063CF22 /* #2 Add Two Numbers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,6 @@
 		CF18943B1E23758300AADD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1894391E23758300AADD02 /* Main.storyboard */; };
 		CF18943D1E23758300AADD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF18943C1E23758300AADD02 /* Assets.xcassets */; };
 		CF1894401E23758300AADD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF18943E1E23758300AADD02 /* LaunchScreen.storyboard */; };
-		CF18944B1E23758300AADD02 /* PhotoGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF18944A1E23758300AADD02 /* PhotoGalleryTests.swift */; };
-		CF1894561E23758300AADD02 /* PhotoGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1894551E23758300AADD02 /* PhotoGalleryUITests.swift */; };
 		CF1894641E237ADD00AADD02 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = CF1894631E237ADD00AADD02 /* index.html */; };
 		CFC084271E24C9980053F102 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC084261E24C9980053F102 /* placeholder.png */; };
 /* End PBXBuildFile section */
@@ -44,11 +42,7 @@
 		CF18943F1E23758300AADD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1894411E23758300AADD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1894461E23758300AADD02 /* PhotoGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF18944A1E23758300AADD02 /* PhotoGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryTests.swift; sourceTree = "<group>"; };
-		CF18944C1E23758300AADD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1894511E23758300AADD02 /* PhotoGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF1894551E23758300AADD02 /* PhotoGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryUITests.swift; sourceTree = "<group>"; };
-		CF1894571E23758300AADD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1894631E237ADD00AADD02 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		CFC084261E24C9980053F102 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1894341E23758300AADD02 /* PhotoGallery */,
-				CF1894491E23758300AADD02 /* PhotoGalleryTests */,
-				CF1894541E23758300AADD02 /* PhotoGalleryUITests */,
 				CF1894331E23758300AADD02 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,24 +103,6 @@
 				CF1894411E23758300AADD02 /* Info.plist */,
 			);
 			path = PhotoGallery;
-			sourceTree = "<group>";
-		};
-		CF1894491E23758300AADD02 /* PhotoGalleryTests */ = {
-			isa = PBXGroup;
-			children = (
-				CF18944A1E23758300AADD02 /* PhotoGalleryTests.swift */,
-				CF18944C1E23758300AADD02 /* Info.plist */,
-			);
-			path = PhotoGalleryTests;
-			sourceTree = "<group>";
-		};
-		CF1894541E23758300AADD02 /* PhotoGalleryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CF1894551E23758300AADD02 /* PhotoGalleryUITests.swift */,
-				CF1894571E23758300AADD02 /* Info.plist */,
-			);
-			path = PhotoGalleryUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF18944B1E23758300AADD02 /* PhotoGalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF1894561E23758300AADD02 /* PhotoGalleryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
