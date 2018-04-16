@@ -27,12 +27,12 @@ import Foundation
 
 @discardableResult func twoSum_(_ nums: [Int], _ target: Int) -> [Int] {
 
-    var dict = [Int: Int]()
-    for (i, num) in nums.enumerated() {
-        if let lastIndex = dict[target - num] {
-            return [lastIndex, i]
+    var hashTable = [Int : Int]()
+    for (x0, num) in nums.enumerated() {
+        if let x1 = hashTable[target - num] {
+            return [x1, x0]
         }
-        dict[num] = i
+        hashTable[num] = x0
     }    
     fatalError("No valid outputs")
 }
