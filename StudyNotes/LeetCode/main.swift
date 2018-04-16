@@ -36,7 +36,7 @@ scope(of: "#1 Two Sum", execute: false) {
  */
 
 //MARK: - #2 Add Two Numbers
-scope(of: "#2 Add Two Numbers", execute:true) {
+scope(of: "#2 Add Two Numbers", execute:false) {
     
     let l1 = ListNode(2)
     l1.next = ListNode(4)
@@ -45,5 +45,29 @@ scope(of: "#2 Add Two Numbers", execute:true) {
     let l2 = ListNode(5)
     l2.next = ListNode(6)
     l2.next?.next = ListNode(4)
-    addTwoNumbers_(l1: l1, l2)?.printNode()
+    addTwoNumbers_(l1, l2)?.printNode()
+}
+
+/*
+ Examples:
+ 
+ Given "abcabcbb", the answer is "abc", which the length is 3.
+ Given "bbbbb", the answer is "b", with the length of 1.
+ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ */
+
+//MARK: - #3 Longest Substring Without Repeating Characters
+scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
+
+    print(lengthOfLongestSubstring("abcabcbb"))
+    print(lengthOfLongestSubstring("bbbbb"))
+    print(lengthOfLongestSubstring("pwwkew"))
+
+    print(lengthOfLongestSubstring_("abcabcbb"))
+    print(lengthOfLongestSubstring_("bbbbb"))
+    print(lengthOfLongestSubstring_("pwwkew"))
+    
+    let str = randomString(1000000)
+    timing { lengthOfLongestSubstring(str) }
+    timing { lengthOfLongestSubstring_(str) }
 }

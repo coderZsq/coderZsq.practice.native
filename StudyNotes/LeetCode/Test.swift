@@ -1,5 +1,5 @@
 //
-//  Tools.swift
+//  Test.swift
 //  LeetCode
 //
 //  Created by 朱双泉 on 2018/4/14.
@@ -28,6 +28,15 @@ public func randomList(_ num: UInt32) -> [Int] {
     return list;
 }
 
-public func randomNum(_ max: UInt32) -> Int {
-    return Int(arc4random() % max) + 1
+public func randomNum(_ max: UInt32, _ offset: Int = 1) -> Int {
+    return Int(arc4random() % max) + offset
+}
+
+public func randomString(_ num: Int) -> String {
+
+    var str = ""
+    for _ in 0..<num {
+        str.append(Character(UnicodeScalar(randomNum(127, 33))!))
+    }
+    return str
 }
