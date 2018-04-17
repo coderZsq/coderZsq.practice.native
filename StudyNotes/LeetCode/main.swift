@@ -71,3 +71,37 @@ scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
     timing { lengthOfLongestSubstring(str) }
     timing { lengthOfLongestSubstring_(str) }
 }
+
+/*
+ Example 1:
+ nums1 = [1, 3]
+ nums2 = [2]
+ 
+ The median is 2.0
+ 
+ Example 2:
+ nums1 = [1, 2]
+ nums2 = [3, 4]
+ 
+ The median is (2 + 3)/2 = 2.5
+ */
+//MARK: - #4 Median of Two Sorted Arrays
+
+scope(of: "#4 Median of Two Sorted Arrays", execute: true) {
+    
+    print(findMedianSortedArrays([1, 3], [2]))
+    print(findMedianSortedArrays_([1, 3], [2]))
+    print(findMedianSortedArrays__([1, 3], [2]))
+
+    print(findMedianSortedArrays([1, 2], [3, 4]))
+    print(findMedianSortedArrays_([1, 2], [3, 4]))
+    print(findMedianSortedArrays__([1, 2], [3, 4]))
+
+    let array1 = randomList(10000).sorted()
+    let array2 = randomList(10000).sorted()
+    timing { findMedianSortedArrays(array1 ,array2) }
+    timing { findMedianSortedArrays_(array1 ,array2) }
+    timing { findMedianSortedArrays__(array1 ,array2) }
+    timing { findMedianSortedArrays___(array1 ,array2) }
+
+}

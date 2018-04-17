@@ -33,7 +33,6 @@ public func randomNum(_ max: UInt32, _ offset: Int = 1) -> Int {
 }
 
 public func randomString(_ num: Int) -> String {
-
     var str = ""
     for _ in 0..<num {
         str.append(Character(UnicodeScalar(randomNum(127, 33))!))
