@@ -31,6 +31,16 @@ class Button: UIControl, ButtonInterface {
     var titleLabelIsCreated = false
     var imageViewIsCreated = false
     var backgroundImageViewCreated = false
+    var createdFromNib = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        createdFromNib = true
+    }
     
     internal func setTitle(_ text: String) {
         if !titleLabelIsCreated {
@@ -80,6 +90,14 @@ class Button: UIControl, ButtonInterface {
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
+        return bestSize()
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return bestSize()
+    }
+    
+    func bestSize() -> CGSize {
         if titleLabelIsCreated && !imageViewIsCreated && !backgroundImageViewCreated {
             let text: NSString? = titleLabel.text as NSString?
             let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.width ?? 0.0
@@ -102,6 +120,10 @@ class Button: UIControl, ButtonInterface {
     override func layoutSubviews() {
         super.layoutSubviews()
 
+        if createdFromNib {
+            frame.size = intrinsicContentSize
+        }
+        
         if titleLabelIsCreated && !imageViewIsCreated {
             titleLabel.frame = bounds
         } else if !titleLabelIsCreated && imageViewIsCreated {
