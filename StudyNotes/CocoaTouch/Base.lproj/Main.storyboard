@@ -18,13 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68m-vb-Zv1" customClass="Button" customModule="CocoaTouch" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="550" width="40" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68m-vb-Zv1" customClass="Button" customModule="CocoaTouch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="68m-vb-Zv1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="500" id="3EH-4W-LD5"/>
+                            <constraint firstItem="68m-vb-Zv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Nu-2U-hIJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

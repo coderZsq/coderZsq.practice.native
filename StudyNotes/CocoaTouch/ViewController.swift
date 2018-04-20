@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let button = Button()
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
-        
+
         button.frame = CGRect(x: 0, y: 300, width: 44, height: 40)
         button.setTitle("github.com/coderZsq")
         button.setTitleColor(.red)
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         nib_button.setImage(UIImage(named: "avatar") ?? UIImage())
 //        nib_button.setBackgroundImage(UIImage(named: "avatar") ?? UIImage())
         nib_button.setImageEdgeInsets(.zero)
+
     }
 }
 

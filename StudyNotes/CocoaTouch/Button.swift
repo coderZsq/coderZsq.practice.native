@@ -31,16 +31,6 @@ class Button: UIControl, ButtonInterface {
     var titleLabelIsCreated = false
     var imageViewIsCreated = false
     var backgroundImageViewCreated = false
-    var createdFromNib = false
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        createdFromNib = true
-    }
     
     internal func setTitle(_ text: String) {
         if !titleLabelIsCreated {
@@ -120,10 +110,6 @@ class Button: UIControl, ButtonInterface {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        if createdFromNib {
-            frame.size = intrinsicContentSize
-        }
-        
         if titleLabelIsCreated && !imageViewIsCreated {
             titleLabel.frame = bounds
         } else if !titleLabelIsCreated && imageViewIsCreated {
