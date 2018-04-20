@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var nib_button: Button!
+    @IBOutlet weak var alt_button: Button!
     
     override func loadView() {
         super.loadView();
@@ -43,15 +43,15 @@ class ViewController: UIViewController {
         view.addSubview(button)
         button.sizeToFit()
         
-        nib_button.layer.borderWidth = 1
-        nib_button.layer.borderColor = UIColor.black.cgColor
+        alt_button.layer.borderWidth = 1
+        alt_button.layer.borderColor = UIColor.black.cgColor
         
-        nib_button.setTitle("github.com/coderZsq")
-        nib_button.setTitleColor(.red)
+        alt_button.setTitle("github.com/coderZsq")
+        alt_button.setTitleColor(.red)
 //        nib_button.setTitleEdgeInsets(.zero)
-        nib_button.setImage(UIImage(named: "avatar") ?? UIImage())
+        alt_button.setImage(UIImage(named: "avatar") ?? UIImage())
 //        nib_button.setBackgroundImage(UIImage(named: "avatar") ?? UIImage())
-        nib_button.setImageEdgeInsets(.zero)
+        alt_button.setImageEdgeInsets(.zero)
 
     }
 }
