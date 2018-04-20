@@ -5,7 +5,7 @@
 
 - [Swift 数据结构与算法初探](https://coderzsq.github.io/2018/01/Swift-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%9D%E6%8E%A2/)
 - [Swift 排序算法的简单取舍](https://coderzsq.github.io/2018/02/Swift-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%8F%96%E8%88%8D/)
-- [Swift 第二梯队iOS面试败北感悟](https://coderzsq.github.io/2018/04/Swift-%E7%BE%8E%E5%9B%A2iOS%E9%9D%A2%E8%AF%95%E8%B4%A5%E5%8C%97%E6%84%9F%E6%82%9F/)
+- [Swift 第二梯队iOS面试败北感悟](https://coderzsq.github.io/2018/04/Swift-%E7%AC%AC%E4%BA%8C%E6%A2%AF%E9%98%9FiOS%E9%9D%A2%E8%AF%95%E8%B4%A5%E5%8C%97%E6%84%9F%E6%82%9F/)
 
 #### RouterPattern
 > 混合web-app / native-app, 打造零耦合可降级架构设计
