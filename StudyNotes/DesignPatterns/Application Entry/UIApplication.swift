@@ -6,8 +6,6 @@
 //  Copyright © 2018 Castie!. All rights reserved.
 //
 
-import Foundation
-
 class UIApplication: UIApplicationProtocol {
    
     static let sharedApplication = AppDelegate()

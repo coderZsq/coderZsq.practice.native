@@ -6,8 +6,6 @@
 //  Copyright © 2018 Castie!. All rights reserved.
 //
 
-import Foundation
-
 protocol UIApplicationProtocol {
     func applicationDidFinishLaunching() -> Bool
 }

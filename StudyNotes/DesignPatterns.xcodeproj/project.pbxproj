@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1497E51E208B1CF200997974 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E51D208B1CF200997974 /* UIView.swift */; };
+		1497E520208B1FBC00997974 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E51F208B1FBC00997974 /* UILabel.swift */; };
+		1497E522208B22CC00997974 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E521208B22CC00997974 /* UIImageView.swift */; };
 		14DD98D42089BB5D007294F2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD98D32089BB5D007294F2 /* main.swift */; };
 		14DD98EA2089C33D007294F2 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD98E72089C33D007294F2 /* UIApplicationProtocol.swift */; };
 		14DD98EB2089C33D007294F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD98E82089C33D007294F2 /* AppDelegate.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1497E51D208B1CF200997974 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		1497E51F208B1FBC00997974 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		1497E521208B22CC00997974 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		14DD98D02089BB5D007294F2 /* DesignPatterns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignPatterns; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DD98D32089BB5D007294F2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		14DD98E72089C33D007294F2 /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationProtocol.swift; sourceTree = "<group>"; };
@@ -44,6 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1497E51C208B1CCF00997974 /* Render Tree */ = {
+			isa = PBXGroup;
+			children = (
+				1497E51D208B1CF200997974 /* UIView.swift */,
+				1497E51F208B1FBC00997974 /* UILabel.swift */,
+				1497E521208B22CC00997974 /* UIImageView.swift */,
+			);
+			name = "Render Tree";
+			path = "DesignPatterns/Render Tree";
+			sourceTree = SOURCE_ROOT;
+		};
 		14DD98C72089BB5D007294F2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				14DD98E62089C33D007294F2 /* Application Entry */,
+				1497E51C208B1CCF00997974 /* Render Tree */,
 				14DD98D32089BB5D007294F2 /* main.swift */,
 			);
 			path = DesignPatterns;
@@ -137,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1497E522208B22CC00997974 /* UIImageView.swift in Sources */,
 				14DD98EC2089C33D007294F2 /* UIApplication.swift in Sources */,
 				14DD98EB2089C33D007294F2 /* AppDelegate.swift in Sources */,
 				14DD98EA2089C33D007294F2 /* UIApplicationProtocol.swift in Sources */,
+				1497E51E208B1CF200997974 /* UIView.swift in Sources */,
+				1497E520208B1FBC00997974 /* UILabel.swift in Sources */,
 				14DD98D42089BB5D007294F2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
