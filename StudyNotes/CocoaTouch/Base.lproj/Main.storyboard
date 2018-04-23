@@ -31,7 +31,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="nib_button" destination="68m-vb-Zv1" id="bR6-Xn-Kdj"/>
+                        <outlet property="alt_button" destination="68m-vb-Zv1" id="kiI-gc-ZLs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
