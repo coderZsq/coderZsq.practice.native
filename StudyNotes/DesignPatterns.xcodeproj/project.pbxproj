@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146957F8208D8DA5004B4AB7 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146957F7208D8DA5004B4AB7 /* Employee.swift */; };
+		146957FA208D8EEE004B4AB7 /* Technician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146957F9208D8EEE004B4AB7 /* Technician.swift */; };
+		146957FC208DA255004B4AB7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146957FB208DA255004B4AB7 /* Manager.swift */; };
+		146957FE208DA34F004B4AB7 /* SalesMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146957FD208DA34F004B4AB7 /* SalesMan.swift */; };
+		14695800208DA532004B4AB7 /* SalesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146957FF208DA532004B4AB7 /* SalesManager.swift */; };
 		1497E51E208B1CF200997974 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E51D208B1CF200997974 /* UIView.swift */; };
 		1497E520208B1FBC00997974 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E51F208B1FBC00997974 /* UILabel.swift */; };
 		1497E522208B22CC00997974 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497E521208B22CC00997974 /* UIImageView.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		146957F7208D8DA5004B4AB7 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		146957F9208D8EEE004B4AB7 /* Technician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technician.swift; sourceTree = "<group>"; };
+		146957FB208DA255004B4AB7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		146957FD208DA34F004B4AB7 /* SalesMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesMan.swift; sourceTree = "<group>"; };
+		146957FF208DA532004B4AB7 /* SalesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesManager.swift; sourceTree = "<group>"; };
 		1497E51D208B1CF200997974 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		1497E51F208B1FBC00997974 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		1497E521208B22CC00997974 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -50,6 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146957F6208D8D67004B4AB7 /* CMS */ = {
+			isa = PBXGroup;
+			children = (
+				146957F7208D8DA5004B4AB7 /* Employee.swift */,
+				146957F9208D8EEE004B4AB7 /* Technician.swift */,
+				146957FB208DA255004B4AB7 /* Manager.swift */,
+				146957FD208DA34F004B4AB7 /* SalesMan.swift */,
+				146957FF208DA532004B4AB7 /* SalesManager.swift */,
+			);
+			path = CMS;
+			sourceTree = "<group>";
+		};
 		1497E51C208B1CCF00997974 /* Render Tree */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +104,7 @@
 			children = (
 				14DD98E62089C33D007294F2 /* Application Entry */,
 				1497E51C208B1CCF00997974 /* Render Tree */,
+				146957F6208D8D67004B4AB7 /* CMS */,
 				14DD98D32089BB5D007294F2 /* main.swift */,
 			);
 			path = DesignPatterns;
@@ -155,13 +178,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14695800208DA532004B4AB7 /* SalesManager.swift in Sources */,
 				1497E522208B22CC00997974 /* UIImageView.swift in Sources */,
+				146957F8208D8DA5004B4AB7 /* Employee.swift in Sources */,
 				14DD98EC2089C33D007294F2 /* UIApplication.swift in Sources */,
 				14DD98EB2089C33D007294F2 /* AppDelegate.swift in Sources */,
+				146957FE208DA34F004B4AB7 /* SalesMan.swift in Sources */,
 				14DD98EA2089C33D007294F2 /* UIApplicationProtocol.swift in Sources */,
 				1497E51E208B1CF200997974 /* UIView.swift in Sources */,
+				146957FA208D8EEE004B4AB7 /* Technician.swift in Sources */,
 				1497E520208B1FBC00997974 /* UILabel.swift in Sources */,
 				14DD98D42089BB5D007294F2 /* main.swift in Sources */,
+				146957FC208DA255004B4AB7 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

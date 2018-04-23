@@ -17,14 +17,14 @@ class UILabel: UIView {
         super.init(origin, size)
     }
     
-    @discardableResult static func create(_ origin: CGPoint, _ size: CGSize, text: String) -> UILabel {
+    @discardableResult static func create(_ origin: CGPoint, _ size: CGSize, _ text: String) -> UILabel {
         let ret = UILabel(origin, size, text)
         ret.autoRelease()
         return ret
     }
     
     override func description() {
-        print("description: \(_origin), \(_size), \(_text)")
+        print("description: _origin: \(_origin), _size: \(_size), _text: \(_text)")
     }
     
     func autoRelease() {

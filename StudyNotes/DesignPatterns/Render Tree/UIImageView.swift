@@ -17,14 +17,14 @@ class UIImageView: UIView {
         super.init(origin, size)
     }
     
-    @discardableResult static func create(_ origin: CGPoint, _ size: CGSize, text: String) -> UIImageView {
-        let ret = UIImageView(origin, size, text)
+    @discardableResult static func create(_ origin: CGPoint, _ size: CGSize, _ image: String) -> UIImageView {
+        let ret = UIImageView(origin, size, image)
         ret.autoRelease()
         return ret
     }
     
     override func description() {
-        print("description: \(_origin), \(_size), \(_image)")
+        print("description: _origin: \(_origin), _size: \(_size), _image: \(_image)")
     }
     
     func autoRelease() {
