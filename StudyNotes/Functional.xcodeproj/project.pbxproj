@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149F63F220A4353F0063AAB1 /* OptionalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F63F120A4353F0063AAB1 /* OptionalValue.swift */; };
 		14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FEB20A3E57800961BB7 /* AppDelegate.swift */; };
 		14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FED20A3E57800961BB7 /* ViewController.swift */; };
 		14DF5FF120A3E57800961BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DF5FEF20A3E57800961BB7 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149F63F120A4353F0063AAB1 /* OptionalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalValue.swift; sourceTree = "<group>"; };
 		14DF5FE820A3E57800961BB7 /* Functional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Functional.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DF5FEB20A3E57800961BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14DF5FED20A3E57800961BB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				14DF5FFD20A3E58E00961BB7 /* Battleship.swift */,
 				14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */,
 				14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */,
+				149F63F120A4353F0063AAB1 /* OptionalValue.swift */,
 				14DF5FEF20A3E57800961BB7 /* Main.storyboard */,
 				14DF600120A3E5F400961BB7 /* Supporting Files */,
 				14DF5FF720A3E57800961BB7 /* Info.plist */,
@@ -158,6 +161,7 @@
 				14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */,
 				14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */,
 				14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */,
+				149F63F220A4353F0063AAB1 /* OptionalValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

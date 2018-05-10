@@ -192,7 +192,7 @@ extension Array {
         }
     }
 }
-/*
+#if false
 infix operator >>>
 func >>><A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
     return {x in g(f(x))}
@@ -201,4 +201,4 @@ func >>><A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
 func curry<A, B, C>(_ f: @escaping (A, B) -> C) -> (A) -> (B) -> C {
     return { x in { y in f(x, y) } }
 }
-*/
+#endif
