@@ -14,6 +14,7 @@
 		14DF5FF620A3E57800961BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DF5FF420A3E57800961BB7 /* LaunchScreen.storyboard */; };
 		14DF5FFF20A3E58E00961BB7 /* Battleship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FFD20A3E58E00961BB7 /* Battleship.swift */; };
 		14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */; };
+		14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		14DF5FF720A3E57800961BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14DF5FFD20A3E58E00961BB7 /* Battleship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battleship.swift; sourceTree = "<group>"; };
 		14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImage.swift; sourceTree = "<group>"; };
+		14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrderFunc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				14DF5FED20A3E57800961BB7 /* ViewController.swift */,
 				14DF5FFD20A3E58E00961BB7 /* Battleship.swift */,
 				14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */,
+				14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */,
 				14DF5FEF20A3E57800961BB7 /* Main.storyboard */,
 				14DF600120A3E5F400961BB7 /* Supporting Files */,
 				14DF5FF720A3E57800961BB7 /* Info.plist */,
@@ -152,6 +155,7 @@
 			files = (
 				14DF5FFF20A3E58E00961BB7 /* Battleship.swift in Sources */,
 				14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */,
+				14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */,
 				14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */,
 				14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */,
 			);
