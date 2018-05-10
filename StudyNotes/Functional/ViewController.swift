@@ -8,6 +8,17 @@
 
 import UIKit
 
+struct City {
+    let name: String
+    let population: Int
+}
+
+extension City {
+    func scalingPopulation() -> City {
+        return City(name: name, population: population * 1000)
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -15,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coreImage()
+        higherOrderFunc()
     }
 }
 
@@ -52,4 +64,34 @@ extension ViewController {
         add2(1)(2)
         */
     }
+    
+    func higherOrderFunc() {
+        let paris = City(name: "Paris", population: 2241)
+        let madrid = City(name: "Madrid", population: 3165)
+        let amsterdam = City(name: "Amsterdam", population: 827)
+        let berlin = City(name: "Berlin", population: 3562)
+        
+        let cities = [paris, madrid, amsterdam, berlin]
+        
+        print(cities.filter {$0.population > 1000}
+            .map{$0.scalingPopulation()}
+            .reduce("City: Population") { result, c in
+                return result + "\n" + "\(c.name): \(c.population)"
+        })
+        
+        /* generic & any
+        func noOp<T>(_ x: T) -> T {
+            return x
+        }
+        
+        func noOpAny(_ x: Any) -> Any {
+            return x
+        }
+        
+        func noOpAnyWrong(_ x: Any) -> Any {
+            return 0
+        }
+        */
+    }
 }
+
