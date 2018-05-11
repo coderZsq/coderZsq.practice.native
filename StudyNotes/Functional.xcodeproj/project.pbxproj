@@ -17,6 +17,9 @@
 		14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */; };
 		14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */; };
 		14EFCF8320A5298A005A3784 /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFCF8220A5298A005A3784 /* QuickCheck.swift */; };
+		14EFCF8520A561CF005A3784 /* Immutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFCF8420A561CF005A3784 /* Immutable.swift */; };
+		14EFCF8720A58119005A3784 /* Enumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFCF8620A58119005A3784 /* Enumerate.swift */; };
+		14EFCF8920A58B2B005A3784 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFCF8820A58B2B005A3784 /* DataStructures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		14DF5FFE20A3E58E00961BB7 /* CoreImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImage.swift; sourceTree = "<group>"; };
 		14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrderFunc.swift; sourceTree = "<group>"; };
 		14EFCF8220A5298A005A3784 /* QuickCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
+		14EFCF8420A561CF005A3784 /* Immutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Immutable.swift; sourceTree = "<group>"; };
+		14EFCF8620A58119005A3784 /* Enumerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerate.swift; sourceTree = "<group>"; };
+		14EFCF8820A58B2B005A3784 /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				14DF600220A3F5F500961BB7 /* HigherOrderFunc.swift */,
 				149F63F120A4353F0063AAB1 /* OptionalValue.swift */,
 				14EFCF8220A5298A005A3784 /* QuickCheck.swift */,
+				14EFCF8420A561CF005A3784 /* Immutable.swift */,
+				14EFCF8620A58119005A3784 /* Enumerate.swift */,
+				14EFCF8820A58B2B005A3784 /* DataStructures.swift */,
 				14DF5FEF20A3E57800961BB7 /* Main.storyboard */,
 				14DF600120A3E5F400961BB7 /* Supporting Files */,
 				14DF5FF720A3E57800961BB7 /* Info.plist */,
@@ -161,10 +170,13 @@
 			files = (
 				14DF5FFF20A3E58E00961BB7 /* Battleship.swift in Sources */,
 				14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */,
+				14EFCF8520A561CF005A3784 /* Immutable.swift in Sources */,
 				14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */,
 				14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */,
 				14EFCF8320A5298A005A3784 /* QuickCheck.swift in Sources */,
 				14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */,
+				14EFCF8920A58B2B005A3784 /* DataStructures.swift in Sources */,
+				14EFCF8720A58119005A3784 /* Enumerate.swift in Sources */,
 				149F63F220A4353F0063AAB1 /* OptionalValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

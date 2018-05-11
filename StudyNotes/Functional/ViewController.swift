@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         coreImage()
         higherOrderFunc()
         quickCheck()
+        DataStructure.run()
     }
 }
 
