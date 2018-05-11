@@ -20,13 +20,14 @@ extension City {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         coreImage()
         higherOrderFunc()
+        quickCheck()
     }
 }
 
@@ -38,31 +39,31 @@ extension ViewController {
         
         let radius = 5.0
         let color = UIColor.red.withAlphaComponent(0.2)
-//        let blurredImage = blur(radius: radius)(image)
-//        let overlaidImage = overlay(color: color)(blurredImage)
-//
-//        let result = overlay(color: color)(blur(radius: radius)(image))
+        //        let blurredImage = blur(radius: radius)(image)
+        //        let overlaidImage = overlay(color: color)(blurredImage)
+        //
+        //        let result = overlay(color: color)(blur(radius: radius)(image))
         
-//        let blurAndOverlay = compose(filter: blur(radius: radius), with: overlay(color: color))
-//        let result1 = blurAndOverlay(image)
-
+        //        let blurAndOverlay = compose(filter: blur(radius: radius), with: overlay(color: color))
+        //        let result1 = blurAndOverlay(image)
+        
         let blurAndOverlay2 = blur(radius: radius) >>> overlay(color: color)
         let result2 = blurAndOverlay2(image)
         
         imageView.image = UIImage(ciImage: result2)
         
         /* curry
-        func add1(_ x: Int, y: Int) -> Int {
-            return x + y
-        }
-        
-        func add2(_ x: Int) -> ((Int) -> Int) {
-            return { y in x + y }
-        }
-        
-        add1(1, y: 2)
-        add2(1)(2)
-        */
+         func add1(_ x: Int, y: Int) -> Int {
+         return x + y
+         }
+         
+         func add2(_ x: Int) -> ((Int) -> Int) {
+         return { y in x + y }
+         }
+         
+         add1(1, y: 2)
+         add2(1)(2)
+         */
     }
     
     func higherOrderFunc() {
@@ -80,18 +81,35 @@ extension ViewController {
         })
         
         /* generic & any
-        func noOp<T>(_ x: T) -> T {
-            return x
-        }
-        
-        func noOpAny(_ x: Any) -> Any {
-            return x
-        }
-        
-        func noOpAnyWrong(_ x: Any) -> Any {
-            return 0
-        }
-        */
+         func noOp<T>(_ x: T) -> T {
+         return x
+         }
+         
+         func noOpAny(_ x: Any) -> Any {
+         return x
+         }
+         
+         func noOpAnyWrong(_ x: Any) -> Any {
+         return 0
+         }
+         */
+    }
+    
+    func quickCheck() {
+        #if false
+        print(check1("Area should be at least 0") {(size: CGSize) in size.area >= 0})
+        print(check1("Every string starts with Hello") { (s: String) in
+            s.hasPrefix("Hello")
+        })
+        #endif
+        #if false
+        print(check2("qsort should behave like sort") { (x: [Int]) in
+            return qsort(x) == x.sorted()
+        })
+        #endif
+        print(check("qsort should behave like sort") { (x: [Int]) in
+            return qsort(x) == x.sorted()
+        })
     }
 }
 
