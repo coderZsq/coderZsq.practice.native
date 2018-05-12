@@ -16,7 +16,7 @@ class PlayingCardView: UIView {
     @IBInspectable
     var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() }}
     @IBInspectable
-    var isFaceUp: Bool = true { didSet { setNeedsDisplay()}}
+    var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout()}}
     
     var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize { didSet { setNeedsDisplay(); setNeedsLayout() }}
     
