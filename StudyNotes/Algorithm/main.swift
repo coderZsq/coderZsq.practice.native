@@ -42,7 +42,7 @@ extension Int {
 
 scope(of: "coursera", execute: true) {
     
-    scope(of: "maxPairwiseProduct", execute: true, action: {
+    scope(of: "maxPairwiseProduct", execute: false, action: {
         while (true) {
             let n = 1000/*4*/.arc4random + 2
             print(n)
@@ -59,6 +59,20 @@ scope(of: "coursera", execute: true) {
             if res1 != res2 {
                 print("Wrong answer: \(res1) \(res2)")
                 break
+            } else {
+                print("OK")
+            }
+        }
+    })
+    
+    scope(of: "fibonacci", execute: true, action: {
+        while (true) {
+            let n = 40.arc4random
+            print(n)
+            let res1 = fibRecurs(n: n)
+            let res2 = fibList(n: n)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
             } else {
                 print("OK")
             }

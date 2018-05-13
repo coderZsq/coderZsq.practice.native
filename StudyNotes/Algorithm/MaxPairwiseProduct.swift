@@ -8,7 +8,7 @@
 
 import Foundation
 
-@discardableResult func maxPairwiseProduct(numbers: [Int]) -> Int {
+func maxPairwiseProduct(numbers: [Int]) -> Int {
     var result = 0
     let n = numbers.count
     for i in 0..<n {
@@ -21,7 +21,7 @@ import Foundation
     return result
 }
 
-@discardableResult func maxPairwiseProductFast(numbers: [Int]) -> Int {
+func maxPairwiseProductFast(numbers: [Int]) -> Int {
     let n = numbers.count
     var max_index1 = -1
     for i in 0..<n {
