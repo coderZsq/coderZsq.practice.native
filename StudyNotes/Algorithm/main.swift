@@ -28,6 +28,44 @@ public func randomList(_ num: UInt32) -> [Int] {
     return list;
 }
 
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(self)))
+        } else {
+            return 0
+        }
+    }
+}
+
+scope(of: "coursera", execute: true) {
+    
+    scope(of: "maxPairwiseProduct", execute: true, action: {
+        while (true) {
+            let n = 1000/*4*/.arc4random + 2
+            print(n)
+            var a = [Int]()
+            for _ in 0..<n {
+                a.append(100000/*10*/.arc4random)
+            }
+            for i in 0..<n {
+                print(a[i], terminator:" ")
+            }
+            print()
+            let res1 = maxPairwiseProduct(numbers: a)
+            let res2 = maxPairwiseProductFast(numbers: a)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
+}
+
 scope(of: "sort", execute: false) {
         
     scope(of: "systemsort", execute: true, action: {
@@ -73,7 +111,7 @@ scope(of: "sort", execute: false) {
     })
 }
 
-scope(of: "search", execute: true) {
+scope(of: "search", execute: false) {
     
     scope(of: "binsearch", execute: true, action: {
         let list = randomList(10000)
@@ -134,7 +172,7 @@ scope(of: "search", execute: true) {
     })
 }
 
-scope(of: "math", execute: true) {
+scope(of: "math", execute: false) {
     
     scope(of: "pow", execute: true, action: {
         print(_pow_1(3, 4))
