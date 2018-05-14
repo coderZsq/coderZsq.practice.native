@@ -14,6 +14,7 @@
 		14BD47F120A93FE3001B6678 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD47F020A93FE3001B6678 /* ImageViewController.swift */; };
 		14BD47F320A9443B001B6678 /* DemoURLa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD47F220A9443B001B6678 /* DemoURLa.swift */; };
 		14BD47F520A94466001B6678 /* oval.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14BD47F420A94465001B6678 /* oval.jpg */; };
+		14BD47F720A94F20001B6678 /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD47F620A94F20001B6678 /* CassiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		14BD47F020A93FE3001B6678 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		14BD47F220A9443B001B6678 /* DemoURLa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoURLa.swift; sourceTree = "<group>"; };
 		14BD47F420A94465001B6678 /* oval.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oval.jpg; sourceTree = "<group>"; };
+		14BD47F620A94F20001B6678 /* CassiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				14BD47F020A93FE3001B6678 /* ImageViewController.swift */,
+				14BD47F620A94F20001B6678 /* CassiniViewController.swift */,
 				14BD47F220A9443B001B6678 /* DemoURLa.swift */,
 				14BD47E120A93F38001B6678 /* Main.storyboard */,
 				14BD47F420A94465001B6678 /* oval.jpg */,
@@ -154,6 +157,7 @@
 				14BD47F120A93FE3001B6678 /* ImageViewController.swift in Sources */,
 				14BD47DE20A93F38001B6678 /* AppDelegate.swift in Sources */,
 				14BD47F320A9443B001B6678 /* DemoURLa.swift in Sources */,
+				14BD47F720A94F20001B6678 /* CassiniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
