@@ -10,6 +10,7 @@
 		140363EC2043AD0400B0A414 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140363EB2043AD0400B0A414 /* main.swift */; };
 		140364022043AF6900B0A414 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140364012043AF6900B0A414 /* Sort.swift */; };
 		140364042043D95700B0A414 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140364032043D95700B0A414 /* Search.swift */; };
+		142525FF20A9859C006F2D1B /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142525FE20A9859C006F2D1B /* GreatestCommonDivisor.swift */; };
 		142E0A2C20805949005A44CD /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E0A2B20805949005A44CD /* Math.swift */; };
 		14BD47CE20A86E3B001B6678 /* MaxPairwiseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD47CD20A86E3B001B6678 /* MaxPairwiseProduct.swift */; };
 		14BD47D020A892CA001B6678 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD47CF20A892CA001B6678 /* Fibonacci.swift */; };
@@ -32,6 +33,7 @@
 		140363EB2043AD0400B0A414 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		140364012043AF6900B0A414 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		140364032043D95700B0A414 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		142525FE20A9859C006F2D1B /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
 		142E0A2B20805949005A44CD /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		14BD47CD20A86E3B001B6678 /* MaxPairwiseProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxPairwiseProduct.swift; sourceTree = "<group>"; };
 		14BD47CF20A892CA001B6678 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				142E0A2B20805949005A44CD /* Math.swift */,
 				14BD47CD20A86E3B001B6678 /* MaxPairwiseProduct.swift */,
 				14BD47CF20A892CA001B6678 /* Fibonacci.swift */,
+				142525FE20A9859C006F2D1B /* GreatestCommonDivisor.swift */,
 				140363EB2043AD0400B0A414 /* main.swift */,
 			);
 			path = Algorithm;
@@ -138,6 +141,7 @@
 				140364042043D95700B0A414 /* Search.swift in Sources */,
 				140363EC2043AD0400B0A414 /* main.swift in Sources */,
 				140364022043AF6900B0A414 /* Sort.swift in Sources */,
+				142525FF20A9859C006F2D1B /* GreatestCommonDivisor.swift in Sources */,
 				142E0A2C20805949005A44CD /* Math.swift in Sources */,
 				14BD47CE20A86E3B001B6678 /* MaxPairwiseProduct.swift in Sources */,
 				14BD47D020A892CA001B6678 /* Fibonacci.swift in Sources */,

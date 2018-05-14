@@ -65,7 +65,7 @@ scope(of: "coursera", execute: true) {
         }
     })
     
-    scope(of: "fibonacci", execute: true, action: {
+    scope(of: "fibonacci", execute: false, action: {
         while (true) {
             let n = 40.arc4random
             print(n)
@@ -73,6 +73,23 @@ scope(of: "coursera", execute: true) {
             let res2 = fibList(n: n)
             if res1 != res2 {
                 print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
+    
+    scope(of: "greatestCommonDivisor", execute: true, action: {
+        while (true) {
+            let a = 1000000.arc4random
+            let b = 1000000.arc4random
+            print("\(a) - \(b)")
+            let res1 = naiveGCD(a: a, b: b)
+            let res2 = euclidGCD(a: a, b: b)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
             } else {
                 print("OK")
             }
