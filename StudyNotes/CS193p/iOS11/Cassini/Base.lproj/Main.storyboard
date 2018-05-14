@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eyL-dF-xdm">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="4v0-D8-GgE">
+            <objects>
+                <viewController id="eyL-dF-xdm" customClass="ImageViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tmf-28-5pK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YC-C3-xXc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2YC-C3-xXc" firstAttribute="leading" secondItem="Tmf-28-5pK" secondAttribute="leading" id="3rf-Up-qfZ"/>
+                            <constraint firstItem="2YC-C3-xXc" firstAttribute="trailing" secondItem="Tmf-28-5pK" secondAttribute="trailing" id="MDX-Vu-AYm"/>
+                            <constraint firstAttribute="bottom" secondItem="2YC-C3-xXc" secondAttribute="bottom" id="N96-Zy-Nez"/>
+                            <constraint firstItem="2YC-C3-xXc" firstAttribute="top" secondItem="Tmf-28-5pK" secondAttribute="top" id="cbx-r9-y2h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rXk-L7-BMA"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="2YC-C3-xXc" id="k0Q-CA-hVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1D-gi-Krq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349.60000000000002" y="176.60098522167488"/>
+        </scene>
+    </scenes>
+</document>
