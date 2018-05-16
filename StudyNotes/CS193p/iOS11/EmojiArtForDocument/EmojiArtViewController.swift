@@ -48,38 +48,46 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         }
     }
     
-    @IBAction func save(_ sender: UIBarButtonItem) {
-        
-        if let json = emojiArt?.json {
-            if let url = try? FileManager.default.url(
-                for: .documentDirectory,
-                in: .userDomainMask,
-                appropriateFor: nil,
-                create: true
-                ).appendingPathComponent("Untitled.json") {
-                do {
-                    try json.write(to: url)
-                    print("saved successfully!")
-                } catch let error {
-                    print("couldn't save \(error)")
-                }
-            }
+    var document: EmojiArtDocument?
+    
+    @IBAction func save(_ sender: UIBarButtonItem? = nil) {
+        document?.emojiArt = emojiArt
+        if document?.emojiArt != nil {
+            document?.updateChangeCount(.done)
+        }
+    }
+    
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        save()
+        if document?.thumbnail != nil {
+            document?.thumbnail = emojiArtView.snapshot
+        }
+        dismiss(animated: true) {
+            self.document?.close()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let url = try? FileManager.default.url(
-            for: .documentDirectory,
-            in: .userDomainMask,
-            appropriateFor: nil,
-            create: true
-            ).appendingPathComponent("Untitled.json") {
-            if let jsonData = try? Data(contentsOf: url) {
-                emojiArt = EmojiArt(json: jsonData)
+        document?.open { success in
+            if success {
+                self.title = self.document?.localizedName
+                self.emojiArt = self.document?.emojiArt
             }
         }
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        if let url = try? FileManager.default.url(
+//            for: .documentDirectory,
+//            in: .userDomainMask,
+//            appropriateFor: nil,
+//            create: true
+//            ).appendingPathComponent("Untitled.json") {
+//            document = EmojiArtDocument(fileURL: url)
+//        }
+//    }
     
     @IBOutlet weak var dropZone: UIView! {
         didSet {
@@ -137,6 +145,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
             emojiCollectionView.delegate = self
             emojiCollectionView.dragDelegate = self
             emojiCollectionView.dropDelegate = self
+            emojiCollectionView.dragInteractionEnabled = true
         }
     }
     
