@@ -26,14 +26,14 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     var emojiArt: EmojiArt? {
         get {
             if let url = emojiArtBackgroundImage.url {
-                let emojis = emojiArtView.subviews.flatMap { $0 as? UILabel }.flatMap { EmojiArt.EmojiInfo(label: $0) }
+                let emojis = emojiArtView.subviews.compactMap { $0 as? UILabel }.compactMap { EmojiArt.EmojiInfo(label: $0) }
                 return EmojiArt(url: url, emojis: emojis)
             }
             return nil
         }
         set {
             emojiArtBackgroundImage = (nil, nil)
-            emojiArtView.subviews.flatMap { $0 as? UILabel }.forEach { $0.removeFromSuperview() }
+            emojiArtView.subviews.compactMap { $0 as? UILabel }.forEach { $0.removeFromSuperview() }
             if let url = newValue?.url {
                 imageFetcher = ImageFetcher(fetch: url) { (url, image) in
                     DispatchQueue.main.async {
@@ -59,7 +59,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         save()
-        if document?.thumbnail != nil {
+        if document?.thumbnail == nil {
             document?.thumbnail = emojiArtView.snapshot
         }
         dismiss(animated: true) {
