@@ -9,6 +9,7 @@
 import UIKit
 
 extension EmojiArt.EmojiInfo {
+    
     init?(label: UILabel) {
         if let attributedText = label.attributedText, let font = attributedText.font {
             x = Int(label.center.x)
@@ -50,7 +51,8 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     
     var document: EmojiArtDocument?
     
-    @IBAction func save(_ sender: UIBarButtonItem? = nil) {
+//    @IBAction func save(_ sender: UIBarButtonItem? = nil) {
+    func documentChanged() {
         document?.emojiArt = emojiArt
         if document?.emojiArt != nil {
             document?.updateChangeCount(.done)
@@ -58,21 +60,46 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {
-        save()
-        if document?.thumbnail == nil {
+//        save()
+        if let observer = emojiArtViewObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        if document?.emojiArt != nil {
             document?.thumbnail = emojiArtView.snapshot
         }
         dismiss(animated: true) {
-            self.document?.close()
+            self.document?.close { success in
+                if let observer = self.documentObserver {
+                    NotificationCenter.default.removeObserver(observer)
+                }
+            }
         }
     }
     
+    private var documentObserver: NSObjectProtocol?
+    private var emojiArtViewObserver: NSObjectProtocol?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        documentObserver = NotificationCenter.default.addObserver(
+            forName: Notification.Name.UIDocumentStateChanged,
+            object: document,
+            queue: OperationQueue.main,
+            using: { notification in
+                print("documentState changed to \(self.document!.documentState)")
+            }
+        )
         document?.open { success in
             if success {
                 self.title = self.document?.localizedName
                 self.emojiArt = self.document?.emojiArt
+                self.emojiArtViewObserver = NotificationCenter.default.addObserver(
+                    forName: .EmojiArtViewDidChange,
+                    object: self.emojiArtView,
+                    queue: OperationQueue.main,
+                    using: { notification in
+                    self.documentChanged()
+                })
             }
         }
     }
@@ -286,16 +313,54 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     
     var imageFetcher: ImageFetcher!
     
+    private var suppressBadURLWarnings = false
+    
+    private func presentBadURLWarning(for url: URL?) {
+        if !suppressBadURLWarnings {
+            let alert = UIAlertController(
+                title: "Image Transfer Failed",
+                message: "Couldn't transfer the dropped image from its source\nShow this warning in the future?",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(
+                title: "Keep Warning",
+                style: .default
+            ))
+            
+            alert.addAction(UIAlertAction(
+                title: "Stop Warning",
+                style: .destructive,
+                handler: { action in
+                    self.suppressBadURLWarnings = true
+                }
+            ))
+            
+            present(alert, animated: true)
+        }
+    }
+    
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         imageFetcher = ImageFetcher() { (url, image) in
             DispatchQueue.main.async {
                 self.emojiArtBackgroundImage = (url, image)
+                self.documentChanged()
             }
         }
         
         session.loadObjects(ofClass: NSURL.self) { nsurls in
             if let url = nsurls.first as? URL {
-                self.imageFetcher.fetch(url)
+//                self.imageFetcher.fetch(url)
+                DispatchQueue.global(qos: .userInitiated).async {
+                    if let imageData = try? Data(contentsOf: url.imageURL), let image = UIImage(data: imageData) {
+                        DispatchQueue.main.async {
+                            self.emojiArtBackgroundImage = (url, image)
+                            self.documentChanged()
+                        }
+                    } else {
+                        self.presentBadURLWarning(for: url)
+                    }
+                }
             }
         }
         session.loadObjects(ofClass: UIImage.self) { images in

@@ -47,6 +47,10 @@ extension EmojiArtView
             if selectedSubview != nil {
                 recognizer.view?.center = recognizer.view!.center.offset(by: recognizer.translation(in: self))
                 recognizer.setTranslation(CGPoint.zero, in: self)
+                if recognizer.state == .ended {
+                    delegate?.emojiArtViewDidChange(self)
+                    NotificationCenter.default.post(name: .EmojiArtViewDidChange, object: self)
+                }
             }
         default:
             break

@@ -158,15 +158,15 @@ extension NSAttributedString {
 		mutable.setFont(mutable.font?.scaled(by: factor))
 		return mutable
 	}
-	var font: UIFont? {
-		get { return attribute(.font, at: 0, effectiveRange: nil) as? UIFont }
-	}
+    var font: UIFont? {
+        get { return attribute(.font, at: 0, effectiveRange: nil) as? UIFont }
+    }
 }
 
 extension String {
 	func attributedString(withTextStyle style: UIFontTextStyle, ofSize size: CGFloat) -> NSAttributedString {
 		let font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.preferredFont(forTextStyle: .body).withSize(size))
-		return NSAttributedString(string: self, attributes: [.font:font])
+		return NSAttributedString(string: self, attributes: [.font : font])
 	}
 }
 
