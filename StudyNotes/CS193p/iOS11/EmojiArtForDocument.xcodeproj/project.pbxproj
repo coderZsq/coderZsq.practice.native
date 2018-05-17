@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141A92AB20AD4048009FA35E /* DocumentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A92AA20AD4048009FA35E /* DocumentInfoViewController.swift */; };
 		14C6BB1520ABFBD80021161C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6BB1420ABFBD80021161C /* AppDelegate.swift */; };
 		14C6BB1720ABFBD80021161C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6BB1620ABFBD80021161C /* DocumentBrowserViewController.swift */; };
 		14C6BB1B20ABFBD80021161C /* EmojiArtDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6BB1A20ABFBD80021161C /* EmojiArtDocument.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141A92AA20AD4048009FA35E /* DocumentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentInfoViewController.swift; sourceTree = "<group>"; };
 		14C6BB1120ABFBD80021161C /* EmojiArtForDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArtForDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C6BB1420ABFBD80021161C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C6BB1620ABFBD80021161C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		14C6BB1320ABFBD80021161C /* EmojiArtForDocument */ = {
 			isa = PBXGroup;
 			children = (
+				141A92AA20AD4048009FA35E /* DocumentInfoViewController.swift */,
 				14C6BB1620ABFBD80021161C /* DocumentBrowserViewController.swift */,
 				14C6BB1A20ABFBD80021161C /* EmojiArtDocument.swift */,
 				14C6BB3B20ABFDF00021161C /* EmojiArt.swift */,
@@ -79,8 +82,8 @@
 				14C6BB3C20ABFDF00021161C /* EmojiCollectionViewCell.swift */,
 				14C6BB3E20ABFDF00021161C /* TextFieldCollectionViewCell.swift */,
 				14C6BB3F20ABFDF00021161C /* Utilities.swift */,
+				14C6BB1C20ABFBD80021161C /* Main.storyboard */,
 				14C6BB2A20ABFC160021161C /* Supporting Files */,
-				14C6BB2120ABFBD80021161C /* LaunchScreen.storyboard */,
 				14C6BB2420ABFBD80021161C /* Info.plist */,
 			);
 			path = EmojiArtForDocument;
@@ -90,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				14C6BB1420ABFBD80021161C /* AppDelegate.swift */,
-				14C6BB1C20ABFBD80021161C /* Main.storyboard */,
+				14C6BB2120ABFBD80021161C /* LaunchScreen.storyboard */,
 				14C6BB1F20ABFBD80021161C /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141A92AB20AD4048009FA35E /* DocumentInfoViewController.swift in Sources */,
 				14C6BB4520ABFDF00021161C /* TextFieldCollectionViewCell.swift in Sources */,
 				14C6BB4320ABFDF00021161C /* EmojiCollectionViewCell.swift in Sources */,
 				14C6BB4420ABFDF00021161C /* EmojiArtViewController.swift in Sources */,
@@ -251,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -302,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -315,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = EmojiArtForDocument/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.EmojiArtForDocument;
@@ -329,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = EmojiArtForDocument/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.EmojiArtForDocument;

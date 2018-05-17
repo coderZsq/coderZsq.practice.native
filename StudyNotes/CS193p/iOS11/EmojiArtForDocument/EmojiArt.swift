@@ -10,7 +10,8 @@ import Foundation
 
 struct EmojiArt: Codable {
     
-    var url: URL
+    var url: URL?
+    var imageData: Data?
     var emojis = [EmojiInfo]()
     
     struct EmojiInfo: Codable {
@@ -34,6 +35,11 @@ struct EmojiArt: Codable {
     
     init(url: URL, emojis: [EmojiInfo]) {
         self.url = url
+        self.emojis = emojis
+    }
+    
+    init(imageData: Data, emojis: [EmojiInfo]) {
+        self.imageData = imageData
         self.emojis = emojis
     }
 }

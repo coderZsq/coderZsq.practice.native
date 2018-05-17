@@ -48,21 +48,30 @@ class CardBehavior: UIDynamicBehavior {
         addChildBehavior(push)
     }
     
+    var gravityBehavior: UIGravityBehavior = {
+        let behavior = UIGravityBehavior()
+        behavior.magnitude = 0
+        return behavior
+    }()
+    
     func addItem(_ item: UIDynamicItem) {
         collisionBahavior.addItem(item)
         itemBahavior.addItem(item)
+        gravityBehavior.addItem(item)
         push(item)
     }
     
     func removeItem(_ item: UIDynamicItem) {
         collisionBahavior.removeItem(item)
         itemBahavior.removeItem(item)
+        gravityBehavior.removeItem(item)
     }
     
     override init() {
         super.init()
         addChildBehavior(collisionBahavior)
         addChildBehavior(itemBahavior)
+        addChildBehavior(gravityBehavior)
     }
     
     convenience init(in animator: UIDynamicAnimator) {

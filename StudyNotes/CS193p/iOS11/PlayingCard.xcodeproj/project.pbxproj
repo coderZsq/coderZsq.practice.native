@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141A92AD20AD5E86009FA35E /* CMMotionManager+shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A92AC20AD5E86009FA35E /* CMMotionManager+shared.swift */; };
 		142C123B20A6EEA60046274C /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C123A20A6EEA60046274C /* CardBehavior.swift */; };
 		1487EE8520A69B6F008019A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487EE8420A69B6E008019A2 /* Assets.xcassets */; };
 		14C85B8D20A5D3D4003DF3FF /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C85B8C20A5D3D4003DF3FF /* PlayingCard.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141A92AC20AD5E86009FA35E /* CMMotionManager+shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMMotionManager+shared.swift"; sourceTree = "<group>"; };
 		142C123A20A6EEA60046274C /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
 		1487EE8420A69B6E008019A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C85B8C20A5D3D4003DF3FF /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				14C85B8E20A5D6F8003DF3FF /* PlayingCardDeck.swift */,
 				14C85B9020A5DAE6003DF3FF /* PlayingCardView.swift */,
 				142C123A20A6EEA60046274C /* CardBehavior.swift */,
+				141A92AC20AD5E86009FA35E /* CMMotionManager+shared.swift */,
 				14EFCF9A20A5D33B005A3784 /* Main.storyboard */,
 				1487EE8420A69B6E008019A2 /* Assets.xcassets */,
 				14C85B8B20A5D3AB003DF3FF /* Supporting Files */,
@@ -159,6 +162,7 @@
 				14EFCF9920A5D33B005A3784 /* ViewController.swift in Sources */,
 				14C85B8F20A5D6F8003DF3FF /* PlayingCardDeck.swift in Sources */,
 				14C85B8D20A5D3D4003DF3FF /* PlayingCard.swift in Sources */,
+				141A92AD20AD5E86009FA35E /* CMMotionManager+shared.swift in Sources */,
 				14C85B9120A5DAE6003DF3FF /* PlayingCardView.swift in Sources */,
 				14EFCF9720A5D33B005A3784 /* AppDelegate.swift in Sources */,
 				142C123B20A6EEA60046274C /* CardBehavior.swift in Sources */,
@@ -299,7 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = PlayingCard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.PlayingCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,7 +319,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = PlayingCard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.PlayingCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
