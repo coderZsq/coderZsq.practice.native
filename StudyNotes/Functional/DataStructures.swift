@@ -155,3 +155,136 @@ class DataStructure {
         print(copied.elements)
     }
 }
+
+extension String {
+    func complete(history: [String]) -> [String] {
+        return history.filter { $0.hasPrefix(self)}
+    }
+}
+#if false
+struct Trie {
+    let children: [Character : Tire]
+}
+#endif
+struct Trie<Element: Hashable> {
+    let isElement: Bool
+    let children: [Element : Trie<Element>]
+}
+
+extension Trie {
+    init() {
+        isElement = false
+        children = [:]
+    }
+}
+
+extension Trie {
+    var elements: [[Element]] {
+        var result: [[Element]] = isElement ? [[]] : []
+        for (key, value) in children {
+            result += value.elements.map { [key] + $0 }
+        }
+        return result
+    }
+}
+
+extension Array {
+    var slice: ArraySlice<Element> {
+        return ArraySlice(self)
+    }
+}
+
+extension ArraySlice {
+    var decomposed: (Element, ArraySlice<Element>)? {
+        return isEmpty ? nil : (self[startIndex], self.dropFirst())
+    }
+}
+
+func sum(_ integers: ArraySlice<Int>) -> Int {
+    guard let (head, tail) = integers.decomposed else { return 0 }
+    return head + sum(tail)
+}
+
+extension DataStructure {
+    static func run2() {
+        print(sum([1, 2, 3, 4, 5].slice))
+    }
+}
+#if false
+extension Trie {
+    func lookup(key: ArraySlice<Element>) -> Bool {
+        guard let (head, tail) = key.decomposed else { return isElement }
+        guard let subtrie = children[head] else { return false }
+        return subtrie.lookup(key: tail)
+    }
+}
+#endif
+extension Trie {
+    func lookup(key: ArraySlice<Element>) -> Trie<Element>? {
+        guard let (head, tail) = key.decomposed else { return self }
+        guard let remainder = children[head] else { return nil }
+        return remainder.lookup(key: tail)
+    }
+}
+
+extension Trie {
+    func complete(key: ArraySlice<Element>) -> [[Element]] {
+        return lookup(key: key)?.elements ?? []
+    }
+}
+
+extension Trie {
+    init(_ key: ArraySlice<Element>) {
+        if let (head, tail) = key.decomposed {
+            let children = [head : Trie(tail)]
+            self = Trie(isElement: false, children: children)
+        } else {
+            self = Trie(isElement: true, children: [:])
+        }
+    }
+}
+
+extension Trie {
+    func inserting(_ key: ArraySlice<Element>) -> Trie<Element> {
+        guard let (head, tail) = key.decomposed else {
+            return Trie(isElement: true, children: children)
+        }
+        var newChildren = children
+        if let nextTrie = children[head] {
+            newChildren[head] = nextTrie.inserting(tail)
+        } else {
+            newChildren[head] = Trie(tail)
+        }
+        return Trie(isElement: isElement, children: newChildren)
+    }
+}
+
+extension Trie {
+    static func build(words: [String]) -> Trie<Character> {
+        let emptyTrie = Trie<Character>()
+        return words.reduce(emptyTrie) { trie, word in
+            trie.inserting(Array(word.characters).slice)
+        }
+    }
+}
+
+extension String {
+    func complete(_ knownWords: Trie<Character>) -> [String] {
+        let chars = Array(characters).slice
+        let completed = knownWords.complete(key: chars)
+        return completed.map { chars in
+            self + String(chars)
+        }
+    }
+}
+
+extension DataStructure {
+    static func run3() {
+        let contents = ["cat", "car", "cart", "dog"]
+        let trieOfWords = Trie<Character>.build(words: contents)
+        print("car".complete(trieOfWords))
+    }
+}
+#if falase
+func inserting<S: Sequence>(key: Seq) -> Trie<Element> where S.Iterator.Element == Element
+#endif

@@ -21,52 +21,51 @@ extension City {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            let url = URL(string: "http://via.placeholder.com/500x500")!
+            let image = CIImage(contentsOf: url)!
+            
+            let radius = 5.0
+            let color = UIColor.red.withAlphaComponent(0.2)
+            //        let blurredImage = blur(radius: radius)(image)
+            //        let overlaidImage = overlay(color: color)(blurredImage)
+            //
+            //        let result = overlay(color: color)(blur(radius: radius)(image))
+            
+            //        let blurAndOverlay = compose(filter: blur(radius: radius), with: overlay(color: color))
+            //        let result1 = blurAndOverlay(image)
+            
+            let blurAndOverlay2 = blur(radius: radius) >>> overlay(color: color)
+            let result2 = blurAndOverlay2(image)
+            
+            imageView.image = UIImage(ciImage: result2)
+            
+            /* curry
+             func add1(_ x: Int, y: Int) -> Int {
+             return x + y
+             }
+             
+             func add2(_ x: Int) -> ((Int) -> Int) {
+             return { y in x + y }
+             }
+             
+             add1(1, y: 2)
+             add2(1)(2)
+             */
+        }
+    }
+    @IBOutlet weak var drawView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coreImage()
         higherOrderFunc()
         quickCheck()
-        DataStructure.run()
     }
 }
 
 extension ViewController {
-    
-    func coreImage() {
-        let url = URL(string: "http://via.placeholder.com/500x500")!
-        let image = CIImage(contentsOf: url)!
-        
-        let radius = 5.0
-        let color = UIColor.red.withAlphaComponent(0.2)
-        //        let blurredImage = blur(radius: radius)(image)
-        //        let overlaidImage = overlay(color: color)(blurredImage)
-        //
-        //        let result = overlay(color: color)(blur(radius: radius)(image))
-        
-        //        let blurAndOverlay = compose(filter: blur(radius: radius), with: overlay(color: color))
-        //        let result1 = blurAndOverlay(image)
-        
-        let blurAndOverlay2 = blur(radius: radius) >>> overlay(color: color)
-        let result2 = blurAndOverlay2(image)
-        
-        imageView.image = UIImage(ciImage: result2)
-        
-        /* curry
-         func add1(_ x: Int, y: Int) -> Int {
-         return x + y
-         }
-         
-         func add2(_ x: Int) -> ((Int) -> Int) {
-         return { y in x + y }
-         }
-         
-         add1(1, y: 2)
-         add2(1)(2)
-         */
-    }
-    
+
     func higherOrderFunc() {
         let paris = City(name: "Paris", population: 2241)
         let madrid = City(name: "Madrid", population: 3165)
