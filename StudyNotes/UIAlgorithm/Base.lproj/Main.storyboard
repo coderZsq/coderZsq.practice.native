@@ -21,48 +21,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NXX-GZ-vg6">
-                                <rect key="frame" x="8" y="52" width="359" height="363"/>
+                                <rect key="frame" x="25.666666666666657" y="52" width="324" height="328"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VTQ-5n-fZl">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-AY-nQW">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="coc-xp-Tds"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVz-es-zFc">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Gm4-J0-vID"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-u9-tMW">
-                                                <rect key="frame" x="122.33333333333333" y="0.0" width="53.333333333333329" height="54"/>
+                                                <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Kqu-DR-XmD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpO-3h-9Va">
-                                                <rect key="frame" x="183.66666666666666" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="aFU-wV-IUf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6s-O1-CLY">
-                                                <rect key="frame" x="244.66666666666666" y="0.0" width="53.333333333333343" height="54"/>
+                                                <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="DD1-33-sh8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-gb-5bh">
-                                                <rect key="frame" x="306" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="f2g-Dp-6ae"/>
@@ -71,31 +71,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P8W-Qe-cP2">
-                                        <rect key="frame" x="0.0" y="62" width="359" height="53.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="56" width="324" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB7-iw-Jey">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="6bP-Rh-N9L"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-Gf-zWh">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="OVP-lf-k8l"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r4-qB-p1U">
-                                                <rect key="frame" x="122.33333333333333" y="0.0" width="53.333333333333329" height="53.666666666666664"/>
+                                                <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="qL0-Bn-fdv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NH-r8-wyL">
-                                                <rect key="frame" x="183.66666666666666" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0NH-r8-wyL" secondAttribute="height" multiplier="1:1" id="821-AZ-bdN"/>
@@ -105,14 +105,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-Zh-2HB">
-                                                <rect key="frame" x="244.66666666666666" y="0.0" width="53.333333333333343" height="53.666666666666664"/>
+                                                <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="GEH-h6-tek"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-Ce-qLO">
-                                                <rect key="frame" x="306" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Qj9-02-0mc"/>
@@ -121,45 +121,45 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-pj-INR">
-                                        <rect key="frame" x="0.0" y="123.66666666666666" width="359" height="54"/>
+                                        <rect key="frame" x="0.0" y="112" width="324" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDR-QF-VrU">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="LjB-wo-W9k"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-ys-iyR">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="GLa-Jk-7Jt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-8b-XMs">
-                                                <rect key="frame" x="122.33333333333333" y="0.0" width="53.333333333333329" height="54"/>
+                                                <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="elc-mE-eiF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akD-hI-Hb5">
-                                                <rect key="frame" x="183.66666666666666" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="xWE-BD-YYI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpo-ba-btQ">
-                                                <rect key="frame" x="244.66666666666666" y="0.0" width="53.333333333333343" height="54"/>
+                                                <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="UhY-Gd-CE4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0S-Bk-8Yx">
-                                                <rect key="frame" x="306" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="mY7-g2-Ym2"/>
@@ -168,45 +168,45 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8q2-tw-Kxi">
-                                        <rect key="frame" x="0.0" y="185.66666666666666" width="359" height="53.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="168" width="324" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-LU-Fmp">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="cr0-YH-gOr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pc-yn-WRk">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="ZBA-0g-8cD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-2R-1xx">
-                                                <rect key="frame" x="122.33333333333333" y="0.0" width="53.333333333333329" height="53.666666666666664"/>
+                                                <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="jYP-LX-cDQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah6-ud-fbb">
-                                                <rect key="frame" x="183.66666666666666" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="7AL-Pv-azC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxB-L2-dO1">
-                                                <rect key="frame" x="244.66666666666666" y="0.0" width="53.333333333333343" height="53.666666666666664"/>
+                                                <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="pjg-cI-1XN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-Il-eGD">
-                                                <rect key="frame" x="306" y="0.0" width="53" height="53.666666666666664"/>
+                                                <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Egg-Mg-yTg"/>
@@ -215,45 +215,45 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R5L-xC-JuA">
-                                        <rect key="frame" x="0.0" y="247.33333333333331" width="359" height="54"/>
+                                        <rect key="frame" x="0.0" y="224" width="324" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-ur-D6I">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="99c-jw-SZ8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S36-ZN-tVq">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="jKi-Gp-FoF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-jL-SSP">
-                                                <rect key="frame" x="122.33333333333333" y="0.0" width="53.333333333333329" height="54"/>
+                                                <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="J7Y-fv-0wf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z53-Uo-3GP">
-                                                <rect key="frame" x="183.66666666666666" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="6cp-aJ-YXj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-Iv-xzQ">
-                                                <rect key="frame" x="244.66666666666666" y="0.0" width="53.333333333333343" height="54"/>
+                                                <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="NPb-Nv-2B2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-is-Qam">
-                                                <rect key="frame" x="306" y="0.0" width="53" height="54"/>
+                                                <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
                                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="C5s-w7-e0L"/>
@@ -262,7 +262,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-fA-u9r">
-                                        <rect key="frame" x="0.0" y="309.33333333333331" width="359" height="53.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="280" width="324" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Restart"/>
                                         <connections>
@@ -270,13 +270,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="c1k-AB-N05"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NXX-GZ-vg6" firstAttribute="leading" secondItem="OWP-85-yoD" secondAttribute="leading" constant="8" id="NwG-OJ-pzd"/>
-                            <constraint firstItem="OWP-85-yoD" firstAttribute="trailing" secondItem="NXX-GZ-vg6" secondAttribute="trailing" constant="8" id="OoF-5c-2gi"/>
-                            <constraint firstItem="NXX-GZ-vg6" firstAttribute="top" secondItem="OWP-85-yoD" secondAttribute="top" constant="8" id="cBg-OL-bVp"/>
+                            <constraint firstItem="NXX-GZ-vg6" firstAttribute="centerX" secondItem="ogT-pv-Cs5" secondAttribute="centerX" id="ZvR-DA-BIB"/>
+                            <constraint firstItem="NXX-GZ-vg6" firstAttribute="top" secondItem="OWP-85-yoD" secondAttribute="top" constant="8" id="gh2-sx-lfb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OWP-85-yoD"/>
                     </view>

@@ -50,7 +50,7 @@ struct LightSwitch {
         puzzle = [[Int]](repeating: [Int](repeating: 0, count: matrix.columns + 2), count: matrix.rows + 2)
         for r in 0..<matrix.rows + 1 {
             puzzle[r][0] = 0
-            puzzle[r][7] = 0
+            puzzle[r][matrix.columns + 1] = 0
         }
         for c in 1..<matrix.columns + 1 {
             puzzle[0][c] = 0
@@ -61,11 +61,13 @@ struct LightSwitch {
                 lights.append(puzzle[r][c])
             }
         }
+        print("========")
         for r in 0..<matrix.rows + 2 {
             for c in 0..<matrix.columns + 2 {
                 print(puzzle[r][c], terminator: "")
             }
             print()
         }
+        print("========")
     }
 }
