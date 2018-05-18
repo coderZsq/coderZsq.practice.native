@@ -14,6 +14,8 @@
 		14AF7D1720AE98DB00E8B7DA /* MaxPairwiseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */; };
 		14AF7D1920AE98FF00E8B7DA /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */; };
 		14AF7D1B20AE991E00E8B7DA /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */; };
+		14AF7D1D20AE9B2C00E8B7DA /* LargestNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */; };
+		14AF7D1F20AEA35E00E8B7DA /* MinRefills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxPairwiseProduct.swift; sourceTree = "<group>"; };
 		14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
+		14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestNumber.swift; sourceTree = "<group>"; };
+		14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinRefills.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */,
 				14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */,
 				14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */,
+				14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */,
+				14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */,
 				140363EB2043AD0400B0A414 /* main.swift */,
 			);
 			path = Algorithm;
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				140364042043D95700B0A414 /* Search.swift in Sources */,
+				14AF7D1F20AEA35E00E8B7DA /* MinRefills.swift in Sources */,
+				14AF7D1D20AE9B2C00E8B7DA /* LargestNumber.swift in Sources */,
 				140363EC2043AD0400B0A414 /* main.swift in Sources */,
 				14AF7D1920AE98FF00E8B7DA /* Fibonacci.swift in Sources */,
 				140364022043AF6900B0A414 /* Sort.swift in Sources */,

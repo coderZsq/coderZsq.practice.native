@@ -80,7 +80,7 @@ scope(of: "coursera", execute: true) {
         }
     })
     
-    scope(of: "greatestCommonDivisor", execute: true, action: {
+    scope(of: "greatestCommonDivisor", execute: false, action: {
         while (true) {
             let a = 1000000.arc4random
             let b = 1000000.arc4random
@@ -94,6 +94,26 @@ scope(of: "coursera", execute: true) {
                 print("OK")
             }
         }
+    })
+    
+    scope(of: "largestNumber", execute: false, action: {
+        
+        while (true) {
+            let n = randomList(100)
+            let res1 = largestNumber(n)
+            let res2 = n.sorted(by: >)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
+    
+    scope(of: "minRefills", execute: false, action: {
+        let x = [200, 375, 550, 750, 950], n = x.count
+        print(minRefills(x: x, n: n, L: 400) ?? "impossible")
     })
 }
 
