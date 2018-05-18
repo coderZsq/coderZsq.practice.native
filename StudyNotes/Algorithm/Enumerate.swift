@@ -67,7 +67,7 @@ class Enumerate {
         for i in 0..<cases {
             for r in 1..<6 {
                 for c in 1..<7 {
-                    puzzle[r][c] = 0
+                    puzzle[r][c] = 2.arc4random
                 }
             }
             enumerate()
@@ -78,6 +78,14 @@ class Enumerate {
                 }
                 print()
             }
+            print("== press ==")
+            for r in 1..<6 {
+                for c in 1..<7 {
+                    print(press[r][c], terminator: "")
+                }
+                print()
+            }
+            print()
         }
     }
 }
