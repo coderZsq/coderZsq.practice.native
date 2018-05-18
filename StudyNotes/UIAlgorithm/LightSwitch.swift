@@ -48,13 +48,6 @@ struct LightSwitch {
     init(matrix: Matrix) {
         self.matrix = matrix
         puzzle = [[Int]](repeating: [Int](repeating: 0, count: matrix.columns + 2), count: matrix.rows + 2)
-        for r in 0..<matrix.rows + 1 {
-            puzzle[r][0] = 0
-            puzzle[r][matrix.columns + 1] = 0
-        }
-        for c in 1..<matrix.columns + 1 {
-            puzzle[0][c] = 0
-        }
         for r in 1..<matrix.rows + 1 {
             for c in 1..<matrix.columns + 1 {
                 puzzle[r][c] = 2.arc4random
