@@ -42,7 +42,59 @@ extension Int {
 
 scope(of: "coursera", execute: true) {
     
+    scope(of: "maxPairwiseProduct", execute: false, action: {
+        while (true) {
+            let n = 1000/*4*/.arc4random + 2
+            print(n)
+            var a = [Int]()
+            for _ in 0..<n {
+                a.append(100000/*10*/.arc4random)
+            }
+            for i in 0..<n {
+                print(a[i], terminator:" ")
+            }
+            print()
+            let res1 = maxPairwiseProduct(numbers: a)
+            let res2 = maxPairwiseProductFast(numbers: a)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
     
+    scope(of: "fibonacci", execute: false, action: {
+        while (true) {
+            let n = 40.arc4random
+            print(n)
+            let res1 = fibRecurs(n: n)
+            let res2 = fibList(n: n)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
+    
+    scope(of: "greatestCommonDivisor", execute: true, action: {
+        while (true) {
+            let a = 1000000.arc4random
+            let b = 1000000.arc4random
+            print("\(a) - \(b)")
+            let res1 = naiveGCD(a: a, b: b)
+            let res2 = euclidGCD(a: a, b: b)
+            if res1 != res2 {
+                print("Wrong answer: \(res1) \(res2)")
+                break
+            } else {
+                print("OK")
+            }
+        }
+    })
 }
 
 scope(of: "sort", execute: false) {
@@ -157,59 +209,5 @@ scope(of: "math", execute: false) {
         print(_pow_1(3, 4))
         print(_pow_2(3, 4))
         print(_pow_3(3, 4))
-    })
-    
-    scope(of: "maxPairwiseProduct", execute: false, action: {
-        while (true) {
-            let n = 1000/*4*/.arc4random + 2
-            print(n)
-            var a = [Int]()
-            for _ in 0..<n {
-                a.append(100000/*10*/.arc4random)
-            }
-            for i in 0..<n {
-                print(a[i], terminator:" ")
-            }
-            print()
-            let res1 = maxPairwiseProduct(numbers: a)
-            let res2 = maxPairwiseProductFast(numbers: a)
-            if res1 != res2 {
-                print("Wrong answer: \(res1) \(res2)")
-                break
-            } else {
-                print("OK")
-            }
-        }
-    })
-    
-    scope(of: "fibonacci", execute: false, action: {
-        while (true) {
-            let n = 40.arc4random
-            print(n)
-            let res1 = fibRecurs(n: n)
-            let res2 = fibList(n: n)
-            if res1 != res2 {
-                print("Wrong answer: \(res1) \(res2)")
-                break
-            } else {
-                print("OK")
-            }
-        }
-    })
-    
-    scope(of: "greatestCommonDivisor", execute: true, action: {
-        while (true) {
-            let a = 1000000.arc4random
-            let b = 1000000.arc4random
-            print("\(a) - \(b)")
-            let res1 = naiveGCD(a: a, b: b)
-            let res2 = euclidGCD(a: a, b: b)
-            if res1 != res2 {
-                print("Wrong answer: \(res1) \(res2)")
-                break
-            } else {
-                print("OK")
-            }
-        }
     })
 }
