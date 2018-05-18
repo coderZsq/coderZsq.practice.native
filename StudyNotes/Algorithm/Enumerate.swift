@@ -56,7 +56,7 @@ func enumerate() {
 class Enumerate {
     
     static func main() {
-        let cases = 3
+        let cases = 1
         for r in 0..<6 {
             press[r][0] = 0
             press[r][7] = 0
