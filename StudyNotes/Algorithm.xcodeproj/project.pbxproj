@@ -16,6 +16,7 @@
 		14AF7D1B20AE991E00E8B7DA /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */; };
 		14AF7D1D20AE9B2C00E8B7DA /* LargestNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */; };
 		14AF7D1F20AEA35E00E8B7DA /* MinRefills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */; };
+		14AF7D2320AEC2A100E8B7DA /* Enumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
 		14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestNumber.swift; sourceTree = "<group>"; };
 		14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinRefills.swift; sourceTree = "<group>"; };
+		14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */,
 				14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */,
 				14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */,
+				14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */,
 				140363EB2043AD0400B0A414 /* main.swift */,
 			);
 			path = Algorithm;
@@ -152,6 +155,7 @@
 				140364022043AF6900B0A414 /* Sort.swift in Sources */,
 				14AF7D1B20AE991E00E8B7DA /* GreatestCommonDivisor.swift in Sources */,
 				14AF7D1720AE98DB00E8B7DA /* MaxPairwiseProduct.swift in Sources */,
+				14AF7D2320AEC2A100E8B7DA /* Enumerate.swift in Sources */,
 				142E0A2C20805949005A44CD /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,7 +40,12 @@ extension Int {
     }
 }
 
-scope(of: "coursera", execute: true) {
+scope(of: "Enumerate", execute: true) {
+    money100chicken100()
+    Enumerate.main()
+}
+
+scope(of: "coursera", execute: false) {
     
     scope(of: "maxPairwiseProduct", execute: false, action: {
         while (true) {
