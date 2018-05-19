@@ -31,7 +31,17 @@ extension Int {
     }
 }
 
-class ViewController: UIViewController {
+extension UIViewController {
+    var contents: UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController ?? navcon
+        } else {
+            return self
+        }
+    }
+}
+
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet var lights: [UIButton]! {
         didSet {
@@ -66,6 +76,21 @@ class ViewController: UIViewController {
         for (index, light) in (self.lights.enumerated()) {
             light.isSelected = self.switchs.lights[index] == 1 ? true : false
         }
+    }
+    
+    @IBOutlet weak var hintButton: UIButton!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Hint", let destination = segue.destination.contents as? HintViewController,
+            let ppc = destination.popoverPresentationController {
+            ppc.delegate = self
+            ppc.sourceRect = hintButton.bounds
+            destination.switchs = switchs
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
     }
     
     var switchs: LightSwitch = LightSwitch(matrix: Matrix(rows: 5, columns: 6))

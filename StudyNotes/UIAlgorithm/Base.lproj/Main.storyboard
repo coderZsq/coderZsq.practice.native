@@ -28,42 +28,42 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-AY-nQW">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="coc-xp-Tds"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVz-es-zFc">
                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Gm4-J0-vID"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-u9-tMW">
                                                 <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Kqu-DR-XmD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpO-3h-9Va">
                                                 <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="aFU-wV-IUf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6s-O1-CLY">
                                                 <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="DD1-33-sh8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-gb-5bh">
                                                 <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="f2g-Dp-6ae"/>
                                                 </connections>
@@ -75,28 +75,28 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB7-iw-Jey">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="6bP-Rh-N9L"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-Gf-zWh">
                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="OVP-lf-k8l"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r4-qB-p1U">
                                                 <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="qL0-Bn-fdv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NH-r8-wyL">
                                                 <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0NH-r8-wyL" secondAttribute="height" multiplier="1:1" id="821-AZ-bdN"/>
                                                 </constraints>
@@ -106,14 +106,14 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-Zh-2HB">
                                                 <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="GEH-h6-tek"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-Ce-qLO">
                                                 <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Qj9-02-0mc"/>
                                                 </connections>
@@ -125,42 +125,42 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDR-QF-VrU">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="LjB-wo-W9k"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-ys-iyR">
                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="GLa-Jk-7Jt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-8b-XMs">
                                                 <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="elc-mE-eiF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akD-hI-Hb5">
                                                 <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="xWE-BD-YYI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpo-ba-btQ">
                                                 <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="UhY-Gd-CE4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0S-Bk-8Yx">
                                                 <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="mY7-g2-Ym2"/>
                                                 </connections>
@@ -172,42 +172,42 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-LU-Fmp">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="cr0-YH-gOr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pc-yn-WRk">
                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="ZBA-0g-8cD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-2R-1xx">
                                                 <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="jYP-LX-cDQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah6-ud-fbb">
                                                 <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="7AL-Pv-azC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxB-L2-dO1">
                                                 <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="pjg-cI-1XN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-Il-eGD">
                                                 <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Egg-Mg-yTg"/>
                                                 </connections>
@@ -219,56 +219,71 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-ur-D6I">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="99c-jw-SZ8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S36-ZN-tVq">
                                                 <rect key="frame" x="55.333333333333329" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="jKi-Gp-FoF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-jL-SSP">
                                                 <rect key="frame" x="110.66666666666667" y="0.0" width="47.333333333333329" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="J7Y-fv-0wf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z53-Uo-3GP">
                                                 <rect key="frame" x="166" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="6cp-aJ-YXj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-Iv-xzQ">
                                                 <rect key="frame" x="221.33333333333334" y="0.0" width="47.333333333333343" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="NPb-Nv-2B2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-is-Qam">
                                                 <rect key="frame" x="276.66666666666663" y="0.0" width="47.333333333333314" height="48"/>
-                                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <connections>
                                                     <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="C5s-w7-e0L"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-fA-u9r">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0E5-Jq-Tj9">
                                         <rect key="frame" x="0.0" y="280" width="324" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Restart"/>
-                                        <connections>
-                                            <action selector="restart:" destination="WG0-YN-syF" eventType="touchUpInside" id="lP8-CY-Fh3"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJX-Qc-F6V">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Hint"/>
+                                                <connections>
+                                                    <segue destination="6uL-AJ-PCK" kind="popoverPresentation" identifier="Show Hint" popoverAnchorView="dJX-Qc-F6V" id="Iom-q8-Zg4">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-fA-u9r">
+                                                <rect key="frame" x="166" y="0.0" width="158" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Restart"/>
+                                                <connections>
+                                                    <action selector="restart:" destination="WG0-YN-syF" eventType="touchUpInside" id="lP8-CY-Fh3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="324" id="c1k-AB-N05"/>
@@ -283,6 +298,7 @@
                         <viewLayoutGuide key="safeArea" id="OWP-85-yoD"/>
                     </view>
                     <connections>
+                        <outlet property="hintButton" destination="dJX-Qc-F6V" id="rF1-ha-iRC"/>
                         <outletCollection property="lights" destination="dD4-AY-nQW" collectionClass="NSMutableArray" id="Pup-rM-kZW"/>
                         <outletCollection property="lights" destination="mVz-es-zFc" collectionClass="NSMutableArray" id="v1h-cR-BDi"/>
                         <outletCollection property="lights" destination="H1e-u9-tMW" collectionClass="NSMutableArray" id="05J-H2-drb"/>
@@ -317,6 +333,304 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2I-io-rpA" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="209" y="129"/>
+        </scene>
+        <!--Hint View Controller-->
+        <scene sceneID="3ee-5K-QZK">
+            <objects>
+                <viewController id="6uL-AJ-PCK" customClass="HintViewController" customModule="UIAlgorithm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BKG-CL-z6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nk4-KS-wwd">
+                                <rect key="frame" x="77" y="314" width="220" height="185.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-Ly-yd3">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="30.666666666666668"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-UV-8z2">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="3T1-nZ-Yfr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-Va-yS6">
+                                                <rect key="frame" x="38" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="CH0-j7-Ai9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hL-6j-NQf">
+                                                <rect key="frame" x="76" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="MRv-nW-arb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1U-zC-sYb">
+                                                <rect key="frame" x="114" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="EAC-VV-pa5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU7-hX-TbM">
+                                                <rect key="frame" x="152" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="TJ5-bO-GGh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-P2-0wL">
+                                                <rect key="frame" x="190" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="LZJ-Nw-Jhr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8G1-GU-4eN">
+                                        <rect key="frame" x="0.0" y="38.666666666666686" width="220" height="30.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ui-Gg-cq5">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="ELC-ak-hU7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-Iw-Dwv">
+                                                <rect key="frame" x="38" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="bwe-Hg-6SY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc9-lD-xMK">
+                                                <rect key="frame" x="76" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="OIl-Wu-lFR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-t4-gcM">
+                                                <rect key="frame" x="114" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MVK-t4-gcM" secondAttribute="height" multiplier="1:1" id="4v6-hl-7We"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="xIT-gL-Ckk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0n-dn-19E">
+                                                <rect key="frame" x="152" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="aZE-t9-o6E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sa-LW-MfC">
+                                                <rect key="frame" x="190" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="6T3-tj-f1k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gks-1w-GJg">
+                                        <rect key="frame" x="0.0" y="77.333333333333314" width="220" height="30.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBf-wW-1vg">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="att-bZ-E3U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMv-W4-FIK">
+                                                <rect key="frame" x="38" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="4be-Hq-vOq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjf-ws-xem">
+                                                <rect key="frame" x="76" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Tnx-24-afg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-gn-4pr">
+                                                <rect key="frame" x="114" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="rGL-6X-QB6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-VD-Hns">
+                                                <rect key="frame" x="152" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="ZLt-Ev-lp0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFQ-1k-e62">
+                                                <rect key="frame" x="190" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="pXI-gt-VTW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-me-ImX">
+                                        <rect key="frame" x="0.0" y="116.00000000000001" width="220" height="30.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctv-jH-Ps6">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="5UZ-mP-1eV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDJ-3p-Wb6">
+                                                <rect key="frame" x="38" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="PNj-DF-pF6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-hq-J5e">
+                                                <rect key="frame" x="76" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="e1b-L1-eZZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-4v-r3N">
+                                                <rect key="frame" x="114" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="PtI-Ld-oCE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCq-0k-yrA">
+                                                <rect key="frame" x="152" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="uEH-Gk-SMR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDf-jH-qnN">
+                                                <rect key="frame" x="190" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="0oU-kP-sSw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-Aa-Tp2">
+                                        <rect key="frame" x="0.0" y="154.66666666666669" width="220" height="30.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQG-hQ-xNA">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="p3C-8L-tqk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s02-lS-CEl">
+                                                <rect key="frame" x="38" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="asi-Vl-brY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8T-Sz-TLo">
+                                                <rect key="frame" x="76" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="Cbm-wg-3jz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwQ-UH-l7W">
+                                                <rect key="frame" x="114" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="A6r-ej-7o3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bo-xT-JJi">
+                                                <rect key="frame" x="152" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="9FQ-kT-xUT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-Qb-kgx">
+                                                <rect key="frame" x="190" y="0.0" width="30" height="30.666666666666668"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="lightUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="oLs-0Y-5ve"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nk4-KS-wwd" firstAttribute="centerY" secondItem="BKG-CL-z6C" secondAttribute="centerY" id="Rsm-fM-LmW"/>
+                            <constraint firstItem="Nk4-KS-wwd" firstAttribute="centerX" secondItem="BKG-CL-z6C" secondAttribute="centerX" id="kRi-hO-QFl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ezP-Hq-5MU"/>
+                    </view>
+                    <connections>
+                        <outlet property="topLevelView" destination="Nk4-KS-wwd" id="mY9-21-wiD"/>
+                        <outletCollection property="hints" destination="bS0-UV-8z2" collectionClass="NSMutableArray" id="8Sc-fd-ogn"/>
+                        <outletCollection property="hints" destination="BNb-Va-yS6" collectionClass="NSMutableArray" id="wlK-EP-su5"/>
+                        <outletCollection property="hints" destination="6hL-6j-NQf" collectionClass="NSMutableArray" id="1yj-gT-yzk"/>
+                        <outletCollection property="hints" destination="o1U-zC-sYb" collectionClass="NSMutableArray" id="ash-JZ-8yS"/>
+                        <outletCollection property="hints" destination="IU7-hX-TbM" collectionClass="NSMutableArray" id="k3x-eY-3sZ"/>
+                        <outletCollection property="hints" destination="TSP-P2-0wL" collectionClass="NSMutableArray" id="hGH-eh-axS"/>
+                        <outletCollection property="hints" destination="9Ui-Gg-cq5" collectionClass="NSMutableArray" id="zx4-uO-Jen"/>
+                        <outletCollection property="hints" destination="gR3-Iw-Dwv" collectionClass="NSMutableArray" id="yC1-ek-bvw"/>
+                        <outletCollection property="hints" destination="cc9-lD-xMK" collectionClass="NSMutableArray" id="vYk-xl-Yxd"/>
+                        <outletCollection property="hints" destination="MVK-t4-gcM" collectionClass="NSMutableArray" id="yCB-d3-nhd"/>
+                        <outletCollection property="hints" destination="c0n-dn-19E" collectionClass="NSMutableArray" id="VbH-pB-MNp"/>
+                        <outletCollection property="hints" destination="0sa-LW-MfC" collectionClass="NSMutableArray" id="Pu1-hK-9Ps"/>
+                        <outletCollection property="hints" destination="QBf-wW-1vg" collectionClass="NSMutableArray" id="8LL-NQ-6mS"/>
+                        <outletCollection property="hints" destination="eMv-W4-FIK" collectionClass="NSMutableArray" id="Q4n-JS-Jp9"/>
+                        <outletCollection property="hints" destination="rjf-ws-xem" collectionClass="NSMutableArray" id="Upu-iv-FdV"/>
+                        <outletCollection property="hints" destination="Xgb-gn-4pr" collectionClass="NSMutableArray" id="mH7-lQ-sX5"/>
+                        <outletCollection property="hints" destination="GFW-VD-Hns" collectionClass="NSMutableArray" id="mR9-IW-Oua"/>
+                        <outletCollection property="hints" destination="rFQ-1k-e62" collectionClass="NSMutableArray" id="AaA-xJ-RQC"/>
+                        <outletCollection property="hints" destination="Ctv-jH-Ps6" collectionClass="NSMutableArray" id="1MG-VU-Npm"/>
+                        <outletCollection property="hints" destination="nDJ-3p-Wb6" collectionClass="NSMutableArray" id="EKv-pX-sJf"/>
+                        <outletCollection property="hints" destination="H9E-hq-J5e" collectionClass="NSMutableArray" id="kPE-Xg-gzI"/>
+                        <outletCollection property="hints" destination="MkY-4v-r3N" collectionClass="NSMutableArray" id="GYc-yD-01X"/>
+                        <outletCollection property="hints" destination="KCq-0k-yrA" collectionClass="NSMutableArray" id="iRQ-Kp-mkE"/>
+                        <outletCollection property="hints" destination="bDf-jH-qnN" collectionClass="NSMutableArray" id="9m8-Yg-gPk"/>
+                        <outletCollection property="hints" destination="LQG-hQ-xNA" collectionClass="NSMutableArray" id="fZd-ta-D1G"/>
+                        <outletCollection property="hints" destination="s02-lS-CEl" collectionClass="NSMutableArray" id="G3q-CI-m33"/>
+                        <outletCollection property="hints" destination="B8T-Sz-TLo" collectionClass="NSMutableArray" id="Bfd-xr-fDm"/>
+                        <outletCollection property="hints" destination="TwQ-UH-l7W" collectionClass="NSMutableArray" id="ss0-Qg-gAc"/>
+                        <outletCollection property="hints" destination="7bo-xT-JJi" collectionClass="NSMutableArray" id="dqQ-dr-dh0"/>
+                        <outletCollection property="hints" destination="KNB-Qb-kgx" collectionClass="NSMutableArray" id="ueA-CN-Xha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv9-AB-T3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="129"/>
         </scene>
     </scenes>
 </document>

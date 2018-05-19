@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1406CF8C20AFB95A00F2825A /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406CF8B20AFB95900F2825A /* HintViewController.swift */; };
 		14565D2020AF168E00C20930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14565D1F20AF168E00C20930 /* AppDelegate.swift */; };
 		14565D2220AF168E00C20930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14565D2120AF168E00C20930 /* ViewController.swift */; };
 		14565D2520AF168E00C20930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14565D2320AF168E00C20930 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1406CF8B20AFB95900F2825A /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
 		14565D1C20AF168E00C20930 /* UIAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14565D1F20AF168E00C20930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14565D2120AF168E00C20930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				14565D1F20AF168E00C20930 /* AppDelegate.swift */,
-				14565D2120AF168E00C20930 /* ViewController.swift */,
 				14565D3120AF16B400C20930 /* LightSwitch.swift */,
+				14565D2120AF168E00C20930 /* ViewController.swift */,
+				1406CF8B20AFB95900F2825A /* HintViewController.swift */,
 				14565D2320AF168E00C20930 /* Main.storyboard */,
 				14565D2620AF168F00C20930 /* Assets.xcassets */,
 				14565D2820AF168F00C20930 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14565D2220AF168E00C20930 /* ViewController.swift in Sources */,
+				1406CF8C20AFB95A00F2825A /* HintViewController.swift in Sources */,
 				14565D3220AF16B400C20930 /* LightSwitch.swift in Sources */,
 				14565D2020AF168E00C20930 /* AppDelegate.swift in Sources */,
 			);
