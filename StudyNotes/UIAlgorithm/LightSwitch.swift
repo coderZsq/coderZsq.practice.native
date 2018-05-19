@@ -21,6 +21,16 @@ struct LightSwitch {
     var lights = [Int]()
     var hints = [Int]()
     
+    mutating func hintUp() {
+        enumerate()
+        hints.removeAll()
+        for r in 1..<matrix.rows + 1 {
+            for c in 1..<matrix.columns + 1 {
+                hints.append(press[r][c])
+            }
+        }
+    }
+    
     mutating func lightUp(index: Array<Any>.Index?) {
         guard let index = index else { return }
         var m = Matrix(rows: 0, columns: 0)
@@ -86,12 +96,6 @@ struct LightSwitch {
             for c in 1..<matrix.columns + 1 {
                 puzzle[r][c] = 2.arc4random
                 lights.append(puzzle[r][c])
-            }
-        }
-        enumerate()
-        for r in 1..<matrix.rows + 1 {
-            for c in 1..<matrix.columns + 1 {
-                hints.append(press[r][c])
             }
         }
         print("========")

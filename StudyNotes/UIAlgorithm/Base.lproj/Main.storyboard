@@ -269,6 +269,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Hint"/>
                                                 <connections>
+                                                    <action selector="hintUp:" destination="WG0-YN-syF" eventType="touchUpInside" id="tVI-0O-oXg"/>
                                                     <segue destination="6uL-AJ-PCK" kind="popoverPresentation" identifier="Show Hint" popoverAnchorView="dJX-Qc-F6V" id="Iom-q8-Zg4">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>

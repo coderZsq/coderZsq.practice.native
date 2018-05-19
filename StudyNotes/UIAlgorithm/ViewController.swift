@@ -80,6 +80,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBOutlet weak var hintButton: UIButton!
     
+    @IBAction func hintUp(_ sender: UIButton) {
+        switchs.hintUp()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Show Hint", let destination = segue.destination.contents as? HintViewController,
             let ppc = destination.popoverPresentationController {
