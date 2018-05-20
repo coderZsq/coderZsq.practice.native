@@ -55,12 +55,12 @@ class ViewController: UIViewController {
              */
         }
     }
-    @IBOutlet weak var drawView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         higherOrderFunc()
         quickCheck()
+        CoreGraphics.run()
     }
 }
 

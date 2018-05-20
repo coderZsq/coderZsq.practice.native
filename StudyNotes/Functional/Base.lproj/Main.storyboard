@@ -44,7 +44,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="drawView" destination="ZBd-Os-nXb" id="MY9-Zp-1PZ"/>
                         <outlet property="imageView" destination="uXr-Js-1ge" id="ysI-Wn-rvX"/>
                     </connections>
                 </viewController>
