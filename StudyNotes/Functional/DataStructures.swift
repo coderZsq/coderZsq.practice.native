@@ -288,3 +288,13 @@ extension DataStructure {
 #if falase
 func inserting<S: Sequence>(key: Seq) -> Trie<Element> where S.Iterator.Element == Element
 #endif
+
+extension BinarySearchTree: Sequence {
+    func makeIterator() -> AnyIterator<Element> {
+        switch self {
+        case .leaf: return AnyIterator { return nil }
+        case let .node(l, element, r):
+            return l.makeIterator() + CollectionOfOne(element).makeIterator() + r.makeIterator()
+        }
+    }
+}

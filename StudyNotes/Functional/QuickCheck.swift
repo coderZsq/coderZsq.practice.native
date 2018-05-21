@@ -167,3 +167,22 @@ func check<X: Arbitrary>(_ message: String, _ property: ([X]) -> Bool) -> () {
     let instance = ArbitraryInstance(arbitray: Array.arbitrary, smaller: {(x: [X]) in x.smaller()})
     checkHelper(instance, property, message)
 }
+#if false
+protocol Smaller {
+    func smaller() -> AnyIterator<Self>
+}
+
+extension Array {
+    func smaller() -> AnyIterator<[Element]> {
+        var i = 0
+        return AnyIterator {
+            guard i < self.endIndex else { return nil }
+            var result = self
+            result.remove(at: i)
+            i += 1
+            return result
+        }
+    }
+}
+#endif
+//Array([1, 2, 3].smaller())

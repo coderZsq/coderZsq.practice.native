@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         higherOrderFunc()
         quickCheck()
-        CoreGraphics.run()
+        _Sequence.run5()
     }
 }
 

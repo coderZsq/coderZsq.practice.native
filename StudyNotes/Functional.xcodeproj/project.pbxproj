@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1491E2E420B2A41B00564BFD /* IteratorsAndSequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */; };
 		149F63F220A4353F0063AAB1 /* OptionalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F63F120A4353F0063AAB1 /* OptionalValue.swift */; };
 		14AF7D1320AE78B000E8B7DA /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */; };
 		14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FEB20A3E57800961BB7 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorsAndSequences.swift; sourceTree = "<group>"; };
 		149F63F120A4353F0063AAB1 /* OptionalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalValue.swift; sourceTree = "<group>"; };
 		14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphics.swift; sourceTree = "<group>"; };
 		14DF5FE820A3E57800961BB7 /* Functional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Functional.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				14EFCF8620A58119005A3784 /* Enumerate.swift */,
 				14EFCF8820A58B2B005A3784 /* DataStructures.swift */,
 				14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */,
+				1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */,
 				14DF5FEF20A3E57800961BB7 /* Main.storyboard */,
 				14DF600120A3E5F400961BB7 /* Supporting Files */,
 				14DF5FF720A3E57800961BB7 /* Info.plist */,
@@ -173,6 +176,7 @@
 			files = (
 				14DF5FFF20A3E58E00961BB7 /* Battleship.swift in Sources */,
 				14AF7D1320AE78B000E8B7DA /* CoreGraphics.swift in Sources */,
+				1491E2E420B2A41B00564BFD /* IteratorsAndSequences.swift in Sources */,
 				14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */,
 				14EFCF8520A561CF005A3784 /* Immutable.swift in Sources */,
 				14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */,
