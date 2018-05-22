@@ -10,6 +10,7 @@
 		1491E2E420B2A41B00564BFD /* IteratorsAndSequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */; };
 		149F63F220A4353F0063AAB1 /* OptionalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F63F120A4353F0063AAB1 /* OptionalValue.swift */; };
 		14AF7D1320AE78B000E8B7DA /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */; };
+		14C83E8520B3F42A004CAD4C /* ParserCombinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8420B3F42A004CAD4C /* ParserCombinator.swift */; };
 		14DF5FEC20A3E57800961BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FEB20A3E57800961BB7 /* AppDelegate.swift */; };
 		14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF5FED20A3E57800961BB7 /* ViewController.swift */; };
 		14DF5FF120A3E57800961BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DF5FEF20A3E57800961BB7 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorsAndSequences.swift; sourceTree = "<group>"; };
 		149F63F120A4353F0063AAB1 /* OptionalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalValue.swift; sourceTree = "<group>"; };
 		14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphics.swift; sourceTree = "<group>"; };
+		14C83E8420B3F42A004CAD4C /* ParserCombinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserCombinator.swift; sourceTree = "<group>"; };
 		14DF5FE820A3E57800961BB7 /* Functional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Functional.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DF5FEB20A3E57800961BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14DF5FED20A3E57800961BB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				14EFCF8820A58B2B005A3784 /* DataStructures.swift */,
 				14AF7D1220AE78B000E8B7DA /* CoreGraphics.swift */,
 				1491E2E320B2A41B00564BFD /* IteratorsAndSequences.swift */,
+				14C83E8420B3F42A004CAD4C /* ParserCombinator.swift */,
 				14DF5FEF20A3E57800961BB7 /* Main.storyboard */,
 				14DF600120A3E5F400961BB7 /* Supporting Files */,
 				14DF5FF720A3E57800961BB7 /* Info.plist */,
@@ -178,6 +181,7 @@
 				14AF7D1320AE78B000E8B7DA /* CoreGraphics.swift in Sources */,
 				1491E2E420B2A41B00564BFD /* IteratorsAndSequences.swift in Sources */,
 				14DF5FEE20A3E57800961BB7 /* ViewController.swift in Sources */,
+				14C83E8520B3F42A004CAD4C /* ParserCombinator.swift in Sources */,
 				14EFCF8520A561CF005A3784 /* Immutable.swift in Sources */,
 				14DF600320A3F5F500961BB7 /* HigherOrderFunc.swift in Sources */,
 				14DF600020A3E58E00961BB7 /* CoreImage.swift in Sources */,

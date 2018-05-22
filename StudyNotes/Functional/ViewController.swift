@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         higherOrderFunc()
         quickCheck()
-        _Sequence.run5()
+        ParserCombinator.run13()
     }
 }
 
