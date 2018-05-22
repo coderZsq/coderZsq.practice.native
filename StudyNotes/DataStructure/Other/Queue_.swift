@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Queue<Element> {
+class Queue_<Element> {
     
     private var capacity: Int
     private lazy var head: Int = 0

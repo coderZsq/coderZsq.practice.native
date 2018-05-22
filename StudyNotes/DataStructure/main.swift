@@ -16,7 +16,7 @@ public func scope(of description: String, execute: Bool, action: () -> ()) {
 
 scope(of: "queue", execute: true) {
     
-    let queue_i = Queue<Int>()
+    let queue_i = Queue_<Int>()
     queue_i.entry(1)
     queue_i.entry(2)
     queue_i.entry(3)
@@ -35,7 +35,7 @@ scope(of: "queue", execute: true) {
     print(queue_i.depart()!)
     queue_i.traverse()
     
-    let queue_s = Queue<String>(5)
+    let queue_s = Queue_<String>(5)
     queue_s.entry("one")
     queue_s.entry("two")
     queue_s.entry("three")

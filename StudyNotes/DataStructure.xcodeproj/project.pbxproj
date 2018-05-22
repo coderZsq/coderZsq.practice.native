@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143CE54E20B4579D00CD491B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143CE54D20B4579D00CD491B /* Queue.swift */; };
 		1466B1AC20B4322A0085B643 /* Stack_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1A620B4322A0085B643 /* Stack_.swift */; };
 		1466B1AD20B4322A0085B643 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1A720B4322A0085B643 /* List.swift */; };
 		1466B1AE20B4322A0085B643 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1A820B4322A0085B643 /* Tree.swift */; };
-		1466B1AF20B4322A0085B643 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1A920B4322A0085B643 /* Queue.swift */; };
+		1466B1AF20B4322A0085B643 /* Queue_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1A920B4322A0085B643 /* Queue_.swift */; };
 		1466B1B020B4322A0085B643 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1AA20B4322A0085B643 /* Map.swift */; };
 		1466B1B120B4322A0085B643 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1AB20B4322A0085B643 /* Node.swift */; };
 		1466B1B420B432E90085B643 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466B1B220B432610085B643 /* Stack.swift */; };
@@ -30,10 +31,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		143CE54D20B4579D00CD491B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		1466B1A620B4322A0085B643 /* Stack_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack_.swift; sourceTree = "<group>"; };
 		1466B1A720B4322A0085B643 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		1466B1A820B4322A0085B643 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		1466B1A920B4322A0085B643 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		1466B1A920B4322A0085B643 /* Queue_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue_.swift; sourceTree = "<group>"; };
 		1466B1AA20B4322A0085B643 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		1466B1AB20B4322A0085B643 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		1466B1B220B432610085B643 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				1466B1B220B432610085B643 /* Stack.swift */,
+				143CE54D20B4579D00CD491B /* Queue.swift */,
 			);
 			path = Raywenderlich;
 			sourceTree = "<group>";
@@ -66,7 +69,7 @@
 				1466B1A620B4322A0085B643 /* Stack_.swift */,
 				1466B1A720B4322A0085B643 /* List.swift */,
 				1466B1A820B4322A0085B643 /* Tree.swift */,
-				1466B1A920B4322A0085B643 /* Queue.swift */,
+				1466B1A920B4322A0085B643 /* Queue_.swift */,
 				1466B1AA20B4322A0085B643 /* Map.swift */,
 				1466B1AB20B4322A0085B643 /* Node.swift */,
 			);
@@ -158,12 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1466B1B420B432E90085B643 /* Stack.swift in Sources */,
-				1466B1AF20B4322A0085B643 /* Queue.swift in Sources */,
+				1466B1AF20B4322A0085B643 /* Queue_.swift in Sources */,
 				1466B1AC20B4322A0085B643 /* Stack_.swift in Sources */,
 				1466B1AE20B4322A0085B643 /* Tree.swift in Sources */,
 				14F4200A1FFF4CA1007941F4 /* main.swift in Sources */,
 				1466B1B020B4322A0085B643 /* Map.swift in Sources */,
 				1466B1AD20B4322A0085B643 /* List.swift in Sources */,
+				143CE54E20B4579D00CD491B /* Queue.swift in Sources */,
 				1466B1B120B4322A0085B643 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
