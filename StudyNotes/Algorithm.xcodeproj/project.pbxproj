@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		140363EC2043AD0400B0A414 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140363EB2043AD0400B0A414 /* main.swift */; };
-		140364022043AF6900B0A414 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140364012043AF6900B0A414 /* Sort.swift */; };
-		140364042043D95700B0A414 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140364032043D95700B0A414 /* Search.swift */; };
-		142E0A2C20805949005A44CD /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E0A2B20805949005A44CD /* Math.swift */; };
-		14AF7D1720AE98DB00E8B7DA /* MaxPairwiseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */; };
-		14AF7D1920AE98FF00E8B7DA /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */; };
-		14AF7D1B20AE991E00E8B7DA /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */; };
-		14AF7D1D20AE9B2C00E8B7DA /* LargestNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */; };
-		14AF7D1F20AEA35E00E8B7DA /* MinRefills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */; };
-		14AF7D2320AEC2A100E8B7DA /* Enumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */; };
+		14A93AFC20B416AE0082823E /* Big-O notation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A93AFB20B416AE0082823E /* Big-O notation.swift */; };
+		14C83E9220B41625004CAD4C /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8720B41625004CAD4C /* Math.swift */; };
+		14C83E9320B41625004CAD4C /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8820B41625004CAD4C /* Sort.swift */; };
+		14C83E9420B41625004CAD4C /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8920B41625004CAD4C /* Search.swift */; };
+		14C83E9520B41625004CAD4C /* MaxPairwiseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8C20B41625004CAD4C /* MaxPairwiseProduct.swift */; };
+		14C83E9620B41625004CAD4C /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8D20B41625004CAD4C /* Fibonacci.swift */; };
+		14C83E9720B41625004CAD4C /* LargestNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8E20B41625004CAD4C /* LargestNumber.swift */; };
+		14C83E9820B41625004CAD4C /* Enumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E8F20B41625004CAD4C /* Enumerate.swift */; };
+		14C83E9920B41625004CAD4C /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E9020B41625004CAD4C /* GreatestCommonDivisor.swift */; };
+		14C83E9A20B41625004CAD4C /* MinRefills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C83E9120B41625004CAD4C /* MinRefills.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,15 +35,16 @@
 /* Begin PBXFileReference section */
 		140363E82043AD0400B0A414 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		140363EB2043AD0400B0A414 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		140364012043AF6900B0A414 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
-		140364032043D95700B0A414 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		142E0A2B20805949005A44CD /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxPairwiseProduct.swift; sourceTree = "<group>"; };
-		14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
-		14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
-		14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestNumber.swift; sourceTree = "<group>"; };
-		14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinRefills.swift; sourceTree = "<group>"; };
-		14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerate.swift; sourceTree = "<group>"; };
+		14A93AFB20B416AE0082823E /* Big-O notation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Big-O notation.swift"; sourceTree = "<group>"; };
+		14C83E8720B41625004CAD4C /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		14C83E8820B41625004CAD4C /* Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		14C83E8920B41625004CAD4C /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		14C83E8C20B41625004CAD4C /* MaxPairwiseProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxPairwiseProduct.swift; sourceTree = "<group>"; };
+		14C83E8D20B41625004CAD4C /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		14C83E8E20B41625004CAD4C /* LargestNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargestNumber.swift; sourceTree = "<group>"; };
+		14C83E8F20B41625004CAD4C /* Enumerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerate.swift; sourceTree = "<group>"; };
+		14C83E9020B41625004CAD4C /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
+		14C83E9120B41625004CAD4C /* MinRefills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinRefills.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,18 +77,43 @@
 		140363EA2043AD0400B0A414 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				140364012043AF6900B0A414 /* Sort.swift */,
-				140364032043D95700B0A414 /* Search.swift */,
-				142E0A2B20805949005A44CD /* Math.swift */,
-				14AF7D1620AE98DB00E8B7DA /* MaxPairwiseProduct.swift */,
-				14AF7D1820AE98FF00E8B7DA /* Fibonacci.swift */,
-				14AF7D1A20AE991E00E8B7DA /* GreatestCommonDivisor.swift */,
-				14AF7D1C20AE9B2C00E8B7DA /* LargestNumber.swift */,
-				14AF7D1E20AEA35E00E8B7DA /* MinRefills.swift */,
-				14AF7D2220AEC2A100E8B7DA /* Enumerate.swift */,
+				14C83E8620B41625004CAD4C /* Other */,
+				14C83E8B20B41625004CAD4C /* Coursera */,
+				14C83E8A20B41625004CAD4C /* Ray */,
 				140363EB2043AD0400B0A414 /* main.swift */,
 			);
 			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		14C83E8620B41625004CAD4C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14C83E8720B41625004CAD4C /* Math.swift */,
+				14C83E8820B41625004CAD4C /* Sort.swift */,
+				14C83E8920B41625004CAD4C /* Search.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		14C83E8A20B41625004CAD4C /* Ray */ = {
+			isa = PBXGroup;
+			children = (
+				14A93AFB20B416AE0082823E /* Big-O notation.swift */,
+			);
+			path = Ray;
+			sourceTree = "<group>";
+		};
+		14C83E8B20B41625004CAD4C /* Coursera */ = {
+			isa = PBXGroup;
+			children = (
+				14C83E8C20B41625004CAD4C /* MaxPairwiseProduct.swift */,
+				14C83E8D20B41625004CAD4C /* Fibonacci.swift */,
+				14C83E8E20B41625004CAD4C /* LargestNumber.swift */,
+				14C83E8F20B41625004CAD4C /* Enumerate.swift */,
+				14C83E9020B41625004CAD4C /* GreatestCommonDivisor.swift */,
+				14C83E9120B41625004CAD4C /* MinRefills.swift */,
+			);
+			path = Coursera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,16 +174,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140364042043D95700B0A414 /* Search.swift in Sources */,
-				14AF7D1F20AEA35E00E8B7DA /* MinRefills.swift in Sources */,
-				14AF7D1D20AE9B2C00E8B7DA /* LargestNumber.swift in Sources */,
+				14C83E9820B41625004CAD4C /* Enumerate.swift in Sources */,
+				14C83E9920B41625004CAD4C /* GreatestCommonDivisor.swift in Sources */,
+				14C83E9720B41625004CAD4C /* LargestNumber.swift in Sources */,
 				140363EC2043AD0400B0A414 /* main.swift in Sources */,
-				14AF7D1920AE98FF00E8B7DA /* Fibonacci.swift in Sources */,
-				140364022043AF6900B0A414 /* Sort.swift in Sources */,
-				14AF7D1B20AE991E00E8B7DA /* GreatestCommonDivisor.swift in Sources */,
-				14AF7D1720AE98DB00E8B7DA /* MaxPairwiseProduct.swift in Sources */,
-				14AF7D2320AEC2A100E8B7DA /* Enumerate.swift in Sources */,
-				142E0A2C20805949005A44CD /* Math.swift in Sources */,
+				14C83E9420B41625004CAD4C /* Search.swift in Sources */,
+				14C83E9620B41625004CAD4C /* Fibonacci.swift in Sources */,
+				14C83E9220B41625004CAD4C /* Math.swift in Sources */,
+				14A93AFC20B416AE0082823E /* Big-O notation.swift in Sources */,
+				14C83E9520B41625004CAD4C /* MaxPairwiseProduct.swift in Sources */,
+				14C83E9A20B41625004CAD4C /* MinRefills.swift in Sources */,
+				14C83E9320B41625004CAD4C /* Sort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
