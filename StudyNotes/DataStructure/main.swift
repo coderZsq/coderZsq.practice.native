@@ -56,7 +56,7 @@ scope(of: "queue", execute: true) {
 
 scope(of: "stack", execute: true) {
     
-    let stack_i = Stack<Int>(3)
+    let stack_i = Stack_<Int>(3)
     stack_i.push(1)
     stack_i.push(2)
     stack_i.push(3)
@@ -73,7 +73,7 @@ scope(of: "stack", execute: true) {
     print(stack_i.pop()!)
     stack_i.traverse()
 
-    let stack_s = Stack<String>()
+    let stack_s = Stack_<String>()
     stack_s.push("one")
     stack_s.push("two")
     stack_s.push("three")
@@ -86,7 +86,7 @@ scope(of: "stack", execute: true) {
     stack_s.traverse()
 
     func converse(_ origin: Int , format: Int) -> String {
-        let stack = Stack<Int>(30)
+        let stack = Stack_<Int>(30)
         var ori = origin
         var mod = 0
         var char = ["0","1","2","3","4","5","6","7","8","9",
@@ -110,8 +110,8 @@ scope(of: "stack", execute: true) {
     print(converse(123456789, format: 16))
 
     func match(_ brackets: String) -> Bool {
-        let stack = Stack<Character>(30)
-        let needStack = Stack<Character>(30)
+        let stack = Stack_<Character>(30)
+        let needStack = Stack_<Character>(30)
         var currentNeed = Character(" ")
         for i in 0..<brackets.count {
             let char = brackets[brackets.index(brackets.startIndex, offsetBy: i)]

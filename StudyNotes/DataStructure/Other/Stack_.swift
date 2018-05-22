@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Stack<Element> {
+class Stack_<Element> {
     
     private var capacity: Int
     private lazy var peek: Int = 0
