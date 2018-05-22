@@ -79,7 +79,7 @@
 			children = (
 				14C83E8620B41625004CAD4C /* Other */,
 				14C83E8B20B41625004CAD4C /* Coursera */,
-				14C83E8A20B41625004CAD4C /* Ray */,
+				14C83E8A20B41625004CAD4C /* Raywenderlich */,
 				140363EB2043AD0400B0A414 /* main.swift */,
 			);
 			path = Algorithm;
@@ -95,12 +95,12 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		14C83E8A20B41625004CAD4C /* Ray */ = {
+		14C83E8A20B41625004CAD4C /* Raywenderlich */ = {
 			isa = PBXGroup;
 			children = (
 				14A93AFB20B416AE0082823E /* Big-O notation.swift */,
 			);
-			path = Ray;
+			path = Raywenderlich;
 			sourceTree = "<group>";
 		};
 		14C83E8B20B41625004CAD4C /* Coursera */ = {
