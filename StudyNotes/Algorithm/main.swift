@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+minimumMaximum([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5])
 public func scope(of description: String, execute: Bool, action: () -> ()) {
     guard execute else { return }
     print("--- scope of:", description, "---")
