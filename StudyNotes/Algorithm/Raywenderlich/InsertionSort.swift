@@ -35,7 +35,7 @@ func insertionSort(_ array: [Int]) -> [Int] {
 }
 #endif
 
-//n^2
+
 func insertionSort<T>(_ array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
     guard array.count > 1 else { return array }
     
