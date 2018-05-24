@@ -95,6 +95,7 @@ func quickSort(list: inout [Int]) {
                 list[h] = list[l]
             }
             list[h] = pivot
+            print(list)
             sort(list: &list, low: low, high: l-1)
             sort(list: &list, low: l+1, high: high)
         }

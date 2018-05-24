@@ -8,10 +8,6 @@
 
 import Foundation
 
-var list = [8, 0, 3, 9, 2, 14, 10, 27, 1, 5, 8, -1, 26]
-let p = quickSortDutchFlag(&list, low: 0, high: list.count - 1)
-print(list)
-
 public func scope(of description: String, execute: Bool, action: () -> ()) {
     guard execute else { return }
     print("--- scope of:", description, "---")
