@@ -8,6 +8,8 @@
 
 import Foundation
 
+var bits = BitSet(size: 140)
+
 public func scope(of description: String, execute: Bool, action: () -> ()) {
     guard execute else { return }
     print("--- scope of:", description, "---")
