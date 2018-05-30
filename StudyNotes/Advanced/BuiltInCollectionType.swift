@@ -1,5 +1,5 @@
 //
-//  Built-inCollectionType.swift
+//  BuiltInCollectionType.swift
 //  Advanced
 //
 //  Created by 朱双泉 on 2018/5/30.
@@ -7,6 +7,16 @@
 //
 
 import Foundation
+
+struct BuiltInCollectionType {
+    
+    static func run() {
+        Array<Int>.run()
+        Dictionary<String, Int>.run()
+        Set<Int>.run()
+        Range<Int>.run()
+    }
+}
 
 extension Sequence {
     
@@ -104,7 +114,8 @@ extension Array {
         return result
     }
     
-    func run() {
+    static func run() {
+        
         let fibs = [0, 1, 1, 2, 3, 5]
 //        fib.append(1) Cannot use mutating member on immutable value: 'fib' is a 'let' constant
         
@@ -201,5 +212,135 @@ extension Array {
         print(type(of: slice))
         let newArray = Array<Int>(slice)
         print(type(of: newArray))
+    }
+}
+
+extension Sequence where Element: Hashable {
+    var frequencies: [Element : Int] {
+        let frequencyPairs = self.map {($0, 1)}
+        return Dictionary(frequencyPairs, uniquingKeysWith: +)
+    }
+}
+
+extension Dictionary {
+    
+    enum Setting {
+        case text(String)
+        case int(Int)
+        case bool(Bool)
+    }
+    
+    static func run() {
+        
+        let defaultSettings: [String : Setting] = [
+            "Airplane Mode" : .bool(false),
+            "Name" : .text("My iPhone"),
+        ]
+        print(defaultSettings["Name"])
+        
+        var userSettings = defaultSettings
+        userSettings["Name"] = .text("Jared's iPhone")
+        userSettings["Do Not Disturb"] = .bool(true)
+        
+        let oldName = userSettings.updateValue(.text("Jane's iPhone"), forKey: "Name")
+        print(userSettings["Name"])
+        print(oldName)
+        
+        var settings = defaultSettings
+        let overriddenSettings: [String : Setting] = ["Name" : .text("Jane's iPhone")]
+        settings.merge(overriddenSettings, uniquingKeysWith: {$1})
+        print(settings)
+        
+        let frequencies = "hello".frequencies
+        print(frequencies.filter {$0.value > 1})
+        
+        let settingsAsStrings = settings.mapValues {setting -> String in
+            switch setting {
+            case .text(let text): return text
+            case .int(let number): return String(number)
+            case .bool(let value): return String(value)
+            }
+        }
+        print(settingsAsStrings)
+    }
+}
+
+extension Sequence where Element: Hashable {
+    func unique() -> [Element] {
+        var seen: Set<Element> = []
+        return filter {element in
+            if seen.contains(element) {
+                return false
+            } else {
+                seen.insert(element)
+                return true
+            }
+        }
+    }
+}
+
+extension Set {
+    
+    static func run() {
+        
+        let naturals: Set<Int> = [1, 2, 3, 2]
+        print(naturals)
+        print(naturals.contains(3))
+        print(naturals.contains(0))
+        
+        let iPods: Set<String> = ["iPod touch", "iPod nano", "iPod mini", "iPod shuffle", "iPod Classic"]
+        let discontinuedIPods: Set<String> = ["iPod nano", "iPod mini", "iPod shuffle", "iPod Classic"]
+        let currrentIpods = iPods.subtracting(discontinuedIPods)
+        print(currrentIpods)
+        
+        var discontinued: Set<String> = ["iBook", "Powerbook", "Power Mac"]
+        discontinued.formUnion(discontinuedIPods)
+        print(discontinued)
+        
+        var indices = IndexSet()
+        indices.insert(integersIn: 1..<5)
+        indices.insert(integersIn: 11..<15)
+        let evenIndices = indices.filter {$0 % 2 == 0}
+        print(evenIndices)
+        
+        print([1, 2, 3, 12, 1, 3, 4, 5, 6, 4, 6].unique())
+    }
+}
+
+public protocol RangeExpression {
+    associatedtype Bound: Comparable
+    func contains(_ element: Bound) -> Bool
+    func relative<C: Indexable>(to collection: C) -> Range<Bound> where C.Index == Bound
+}
+
+extension Range {
+    
+    static func run() {
+        
+        let singleDigitNumbers = 0..<10
+        print(Array(singleDigitNumbers))
+        
+        let lowercaseLetters = Character("a")...Character("z")
+        let fromZero = 0...
+        let upToZ = ..<Character("z")
+        
+        print(singleDigitNumbers.contains(9))
+        print(lowercaseLetters.overlaps("c"..<"f"))
+        
+        for i in 0..<10 {
+            print("\(i)", terminator: " ")
+        }
+        
+        let fromA: PartialRangeFrom<Character> = Character("a")...
+        let throughZ: PartialRangeThrough<Character> = ...Character("z")
+        let upTo10: PartialRangeUpTo<Int> = ..<10
+        let fromFive: CountablePartialRangeFrom<Int> = 5...
+        
+        let arr = [1, 2, 3, 4]
+        print(arr[2...])
+        print(arr[..<1])
+        print(arr[1...2])
+        print(arr[...])
+        print(type(of: arr))
     }
 }

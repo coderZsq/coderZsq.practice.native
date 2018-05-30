@@ -8,4 +8,4 @@
 
 import Foundation
 
-[].run()
+BuiltInCollectionType.run()
