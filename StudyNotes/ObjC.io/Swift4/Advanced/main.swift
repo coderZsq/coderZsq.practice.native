@@ -9,3 +9,4 @@
 import Foundation
 
 BuiltInCollectionType.run()
+CollectionTypeProtocol.run()

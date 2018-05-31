@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14060D2320BE511900A26400 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14060D2220BE511900A26400 /* PriorityQueue.swift */; };
+		14060D2320BE511900A26400 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14060D2220BE511900A26400 /* LinkedList.swift */; };
 		143C34B920BBF4CE00EC7C49 /* FixedSizeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C34B820BBF4CE00EC7C49 /* FixedSizeArray.swift */; };
 		143C34BB20BC01C500EC7C49 /* OrderedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C34BA20BC01C500EC7C49 /* OrderedArray.swift */; };
 		143CE54E20B4579D00CD491B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143CE54D20B4579D00CD491B /* Queue.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14060D2220BE511900A26400 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		14060D2220BE511900A26400 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		143C34B820BBF4CE00EC7C49 /* FixedSizeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSizeArray.swift; sourceTree = "<group>"; };
 		143C34BA20BC01C500EC7C49 /* OrderedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedArray.swift; sourceTree = "<group>"; };
 		143CE54D20B4579D00CD491B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				1466B1B220B432610085B643 /* Stack.swift */,
 				143CE54D20B4579D00CD491B /* Queue.swift */,
 				146781BC20BE47FB00CFA7F7 /* Deque.swift */,
-				14060D2220BE511900A26400 /* PriorityQueue.swift */,
+				14060D2220BE511900A26400 /* LinkedList.swift */,
 			);
 			path = Raywenderlich;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 				14795F7420B7B190007B4C94 /* BitSet.swift in Sources */,
 				1466B1AF20B4322A0085B643 /* Queue_.swift in Sources */,
 				1466B1AC20B4322A0085B643 /* Stack_.swift in Sources */,
-				14060D2320BE511900A26400 /* PriorityQueue.swift in Sources */,
+				14060D2320BE511900A26400 /* LinkedList.swift in Sources */,
 				1466B1AE20B4322A0085B643 /* Tree.swift in Sources */,
 				143C34B920BBF4CE00EC7C49 /* FixedSizeArray.swift in Sources */,
 				14F4200A1FFF4CA1007941F4 /* main.swift in Sources */,
