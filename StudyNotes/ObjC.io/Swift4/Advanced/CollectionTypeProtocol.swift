@@ -469,3 +469,11 @@ func QueueRun2() {
     playlist[0] = "You Belong With Me"
     print(playlist.first)
 }
+
+extension FIFOQueue: RangeReplaceableCollection {
+    mutating func replaceSubrange<C: Collection>(_ subrange: Range<Int>, with newElements: C) where C.Element == Element {
+        right = left.reversed() + right
+        left.removeAll()
+        right.replaceSubrange(subrange, with: newElements)
+    }
+}
