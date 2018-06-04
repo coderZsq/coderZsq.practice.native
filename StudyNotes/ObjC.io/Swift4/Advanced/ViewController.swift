@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         BuiltInCollectionType.run()
         CollectionTypeProtocol.run()
         OptionalValue.run()
+        StructAndClass.run()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
