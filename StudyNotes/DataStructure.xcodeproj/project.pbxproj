@@ -21,6 +21,7 @@
 		146781BD20BE47FB00CFA7F7 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146781BC20BE47FB00CFA7F7 /* Deque.swift */; };
 		14795F7220B7AC13007B4C94 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14795F7120B7AC13007B4C94 /* Array2D.swift */; };
 		14795F7420B7B190007B4C94 /* BitSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14795F7320B7B190007B4C94 /* BitSet.swift */; };
+		14BA718F20C4FA0A00EBD505 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA718E20C4FA0A00EBD505 /* BinaryTree.swift */; };
 		14D8716E20C0E56500228721 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8716D20C0E56500228721 /* Tree.swift */; };
 		14F0E7C920BD2C880035C102 /* RootishArrayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0E7C820BD2C880035C102 /* RootishArrayStack.swift */; };
 		14F4200A1FFF4CA1007941F4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F420091FFF4CA1007941F4 /* main.swift */; };
@@ -53,6 +54,7 @@
 		146781BC20BE47FB00CFA7F7 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		14795F7120B7AC13007B4C94 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		14795F7320B7B190007B4C94 /* BitSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitSet.swift; sourceTree = "<group>"; };
+		14BA718E20C4FA0A00EBD505 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		14D8716D20C0E56500228721 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		14F0E7C820BD2C880035C102 /* RootishArrayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootishArrayStack.swift; sourceTree = "<group>"; };
 		14F420061FFF4CA1007941F4 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				146781BC20BE47FB00CFA7F7 /* Deque.swift */,
 				14060D2220BE511900A26400 /* LinkedList.swift */,
 				14D8716D20C0E56500228721 /* Tree.swift */,
+				14BA718E20C4FA0A00EBD505 /* BinaryTree.swift */,
 			);
 			path = Raywenderlich;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				1466B1B020B4322A0085B643 /* Map.swift in Sources */,
 				1466B1AD20B4322A0085B643 /* List.swift in Sources */,
 				143CE54E20B4579D00CD491B /* Queue.swift in Sources */,
+				14BA718F20C4FA0A00EBD505 /* BinaryTree.swift in Sources */,
 				1466B1B120B4322A0085B643 /* Node.swift in Sources */,
 				143C34BB20BC01C500EC7C49 /* OrderedArray.swift in Sources */,
 				14795F7220B7AC13007B4C94 /* Array2D.swift in Sources */,
