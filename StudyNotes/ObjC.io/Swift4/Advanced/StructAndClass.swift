@@ -242,14 +242,14 @@ struct StructAndClass {
         window?.rootView = view
 //        view = nil
 //        window = nil
-        
+        #if false
         let handle = FileHandle(forWritingAtPath: "out.html")
         let request = URLRequest(url: URL(string: "https://www.objc.io")!)
         URLSession.shared.dataTask(with: request) { (data, _, _) in
             guard let theData = data else {return}
             handle?.write(theData)
         }.resume()
-        
+        #endif
         window?.onRotate = {[weak view] in
             print("We not also need to update the view: \(String(describing: view))")
         }

@@ -16,6 +16,7 @@
 		14134D7A20C139680034FEFA /* BuiltInCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14134D7820C139680034FEFA /* BuiltInCollectionType.swift */; };
 		14134D7C20C139A80034FEFA /* OptionalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14134D7B20C139A80034FEFA /* OptionalValue.swift */; };
 		14E5AE6F20C53D24005F13B4 /* StructAndClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5AE6E20C53D24005F13B4 /* StructAndClass.swift */; };
+		14F9063F20C67EE5002BA480 /* EncodingAndDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F9063E20C67EE5002BA480 /* EncodingAndDecoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		14134D7820C139680034FEFA /* BuiltInCollectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuiltInCollectionType.swift; sourceTree = "<group>"; };
 		14134D7B20C139A80034FEFA /* OptionalValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalValue.swift; sourceTree = "<group>"; };
 		14E5AE6E20C53D24005F13B4 /* StructAndClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructAndClass.swift; sourceTree = "<group>"; };
+		14F9063E20C67EE5002BA480 /* EncodingAndDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingAndDecoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				14134D7720C139680034FEFA /* CollectionTypeProtocol.swift */,
 				14134D7B20C139A80034FEFA /* OptionalValue.swift */,
 				14E5AE6E20C53D24005F13B4 /* StructAndClass.swift */,
+				14F9063E20C67EE5002BA480 /* EncodingAndDecoding.swift */,
 				14134D6820C139120034FEFA /* Main.storyboard */,
 				14134D7620C139490034FEFA /* Supporting Files */,
 				14134D7020C139130034FEFA /* Info.plist */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F9063F20C67EE5002BA480 /* EncodingAndDecoding.swift in Sources */,
 				14134D7920C139680034FEFA /* CollectionTypeProtocol.swift in Sources */,
 				14134D6720C139120034FEFA /* ViewController.swift in Sources */,
 				14134D7C20C139A80034FEFA /* OptionalValue.swift in Sources */,
