@@ -28,6 +28,7 @@
 		1462D53020C7C7DA0043B631 /* SortTestHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortTestHelper.hpp; sourceTree = "<group>"; };
 		1462D53120C7C7DA0043B631 /* SelectionSort.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SelectionSort.hpp; sourceTree = "<group>"; };
 		1462D53320C7DA550043B631 /* InsertionSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InsertionSort.hpp; sourceTree = "<group>"; };
+		1470E4B520C8CC470051E756 /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				1462D53120C7C7DA0043B631 /* SelectionSort.hpp */,
 				1462D53020C7C7DA0043B631 /* SortTestHelper.hpp */,
 				1462D53320C7DA550043B631 /* InsertionSort.hpp */,
+				1470E4B520C8CC470051E756 /* MergeSort.hpp */,
 			);
 			path = "algorithm4c++";
 			sourceTree = "<group>";
