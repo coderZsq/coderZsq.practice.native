@@ -221,6 +221,44 @@ struct Function {
         
         (japan["coordinates", as: [String : Double].self])?["coordinate"] = 36.0
         print(japan["coordinates"])
+        
+        let streetKeyPath = \Person3.address.street
+        print(streetKeyPath)
+        let nameKeyPath = \Person3.name
+        print(nameKeyPath)
+        
+        let simpsonResidence = Address(street: "1094 Evergreen Terrace", city: "Springfield", zipCode: 97475)
+        var lisa = Person3(name: "Lisa Simpson", address: simpsonResidence)
+        print(lisa[keyPath: nameKeyPath])
+        
+        lisa[keyPath: streetKeyPath] = "742 Evergreen Terrace"
+        print(lisa)
+        
+        let nameCountKeyPath = nameKeyPath.appending(path: \.count)
+        print(nameKeyPath)
+        
+        let streetSD: SortDescriptor<Person3> = sortDescriptor {$0.address.street}
+        
+        let streetSDKeyPath: SortDescriptor<Person3> = sortDescriptor(key: \.address.street)
+        
+        let getStreet: (Person3) -> String = {person in
+            return person.address.street
+        }
+        
+        let setStreet: (inout Person3, String) -> () = {person, newValue in
+            person.address.street = newValue
+        }
+        
+        print(lisa[keyPath: streetKeyPath])
+        print(getStreet(lisa))
+        
+        let sample = Sample()
+        let other = MyObj()
+        let observation = sample.bind(\Sample.name, to: other, \.test)
+        sample.name = "NEW"
+        print(other.test)
+        other.test = "HI"
+        print(sample.name)
     }
 }
 
@@ -597,4 +635,46 @@ extension Dictionary {
             self[key] = value
         }
     }
+}
+
+struct Address {
+    var street: String
+    var city: String
+    var zipCode: Int
+}
+
+struct Person3 {
+    let name: String
+    var address: Address
+}
+
+func sortDescriptor<Value, Key>(key: KeyPath<Value, Key>) -> SortDescriptor<Value> where Key: Comparable {
+    return {$0[keyPath: key] < $1[keyPath: key]}
+}
+
+extension NSObjectProtocol where Self: NSObject {
+    func observe<A, Other>(_ keyPath: KeyPath<Self, A>, writeTo other: Other, _ otherKeyPath: ReferenceWritableKeyPath<Other, A>) -> NSKeyValueObservation where A: Equatable, Other: NSObjectProtocol {
+        return observe(keyPath, options: .new) {_, change in
+            guard let newValue = change.newValue, other[keyPath: otherKeyPath] != newValue else {
+                return
+            }
+            other[keyPath: otherKeyPath] = newValue
+        }
+    }
+}
+
+extension NSObjectProtocol where Self: NSObject {
+    func bind<A, Other>(_ keyPath: ReferenceWritableKeyPath<Self, A>, to other: Other, _ otherKeyPath: ReferenceWritableKeyPath<Other, A>) -> (NSKeyValueObservation, NSKeyValueObservation) where A: Equatable, Other: NSObject {
+        let one = observe(keyPath, writeTo: other, otherKeyPath)
+        let two = other.observe(otherKeyPath, writeTo: self, keyPath)
+        return (one, two)
+    }
+}
+
+final class Sample: NSObject {
+    @objc dynamic var name: String = ""
+}
+
+class MyObj: NSObject {
+    @objc dynamic var test: String = ""
 }
