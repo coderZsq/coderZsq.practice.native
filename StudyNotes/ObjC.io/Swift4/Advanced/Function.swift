@@ -259,6 +259,31 @@ struct Function {
         print(other.test)
         other.test = "HI"
         print(sample.name)
+        
+        let evens = [2, 4, 6]
+        if !evens.isEmpty && evens[0] > 0 {
+            
+        }
+        
+        if let first = evens.first, first > 0 {
+            
+        }
+        
+        if and(!evens.isEmpty, {evens[0] > 0}) {
+            
+        }
+        
+        if and(!evens.isEmpty, evens[0] > 0) {
+            
+        }
+        
+        print(transform(10, with: nil))
+        print(transform(10) {$0 * $0})
+        
+        let areAllEven = [1, 2, 3, 4].all {$0 % 2 == 0}
+        print(areAllEven)
+        let areAllOneDigit = [1, 2, 3, 4].all {$0 < 10}
+        print(areAllOneDigit)
     }
 }
 
@@ -677,4 +702,45 @@ final class Sample: NSObject {
 
 class MyObj: NSObject {
     @objc dynamic var test: String = ""
+}
+
+func and(_ l: Bool, _ r: () -> Bool) -> Bool {
+    guard l else {return false}
+    return r()
+}
+
+func and(_ l: Bool, _ r: @autoclosure () -> Bool) -> Bool {
+    guard l else {return false}
+    return r()
+}
+
+func log(ifFalse condition: Bool, message: @autoclosure () -> (String), file: String = #file, function: String = #function, line: Int = #line) {
+    guard !condition else {return}
+    print("Assertion failed: \(message()), \(file): \(function) (line \(line))")
+}
+
+func transform(_ input: Int, with f: ((Int) -> Int)?) -> Int {
+    print("使用可选值重载")
+    guard let f = f else {return input}
+    return f(input)
+}
+
+func transform(_ input: Int, with f: (Int) -> Int) -> Int {
+    print("使用非可选值重载")
+    return f(input)
+}
+
+//extension Array {
+//    func all(matchig predicate: (Element) -> Bool) -> Bool {
+////        Closure use of non-escaping parameter 'predicate' may allow it to escape
+//        return self.lazy.filter({!predicate($0)}).isEmpty
+//    }
+//}
+
+extension Array {
+    func all(matching predicate: (Element) -> Bool) -> Bool {
+        return withoutActuallyEscaping(predicate) {escapablePredicate in
+            self.lazy.filter {!escapablePredicate($0)}.isEmpty
+        }
+    }
 }
