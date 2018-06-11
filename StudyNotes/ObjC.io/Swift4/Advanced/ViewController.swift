@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         StructAndClass.run()
         EncodingAndDecoding.run()
         Function.run()
+        String.run()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
