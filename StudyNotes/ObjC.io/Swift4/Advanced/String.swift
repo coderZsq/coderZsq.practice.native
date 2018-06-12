@@ -167,6 +167,60 @@ extension String {
 
         let lowercase = ("a" as Unicode.Scalar)..."z"
         print(Array(lowercase.map(Character.init)))
+        
+        let code = "struct Array<Element>: Collection {}"
+        print(code.words())
+        
+        print(Regex("^h..lo*!$").match("hellooooo!"))
+        
+        let r: Regex = "^h..lo*!$"
+        func findMatches(in strings: [String], regex: Regex) -> [String] {
+            return strings.filter {regex.match($0)}
+        }
+        print(findMatches(in: ["foo", "bar", "baz"], regex: "^b.."))
+        
+        print(Regex("colou?r"))
+        
+        var s1 = ""
+        let numbers1 = [1, 2, 3, 4]
+        print(numbers1, to: &s1)
+        print(s1)
+        
+        var stream = ArrayStream()
+        print("Hello", to: &stream)
+        print("World", to: &stream)
+        print(stream.buffer)
+        
+        var utf8Data = Data()
+        var string = "café"
+        print(utf8Data.write(string))
+        
+        var textRepresentation = ""
+        let queue: FIFOQueue = [1, 2, 3]
+        queue.write(to: &textRepresentation)
+        print(textRepresentation)
+        
+        let slow: SlowStreamer = [
+            "You'll see that this gets",
+            "written slowly line by line",
+            "to the standard output"
+        ]
+        print(slow)
+        
+        var standarderror = StdErr()
+        print("oops!", to: &standarderror)
+        print(standarderror)
+        
+        var replacer = ReplacingStream(replacing: [
+            "in the cloud" : "on someone else's computer"
+        ])
+        
+        let source = "People find it convenient to store their data in the cloud."
+        print(source, terminator: "", to: &replacer)
+        
+        var output = ""
+        print(replacer, terminator: "", to: &output)
+        print(output)
     }
 }
 
@@ -250,5 +304,206 @@ extension Unicode.Scalar: Strideable {
     
     public func advanced(by n: Int) -> Unicode.Scalar {
         return Unicode.Scalar(UInt32(Int(value) + n))!
+    }
+}
+
+extension String {
+    func words(with charset: CharacterSet = .alphanumerics) -> [Substring] {
+        return self.unicodeScalars.split {
+            !charset.contains($0)
+        }.map(Substring.init)
+    }
+}
+
+//public struct Character {
+//    internal enum Representation {
+//        case smallUTF16(Builtin.Int63)
+//        case large(Buffer)
+//    }
+//    internal var _representation: Representation
+//}
+
+public struct Regex {
+    private let regexp: String
+    
+    public init(_ regexp: String) {
+        self.regexp = regexp
+    }
+}
+
+extension Regex {
+    
+    public func match(_ text: String) -> Bool {
+        if regexp.first == "^" {
+            return Regex.matchHere(regexp: regexp.dropFirst(), text: text[...])
+        }
+        var idx = text.startIndex
+        while true {
+            if Regex.matchHere(regexp: regexp[...], text: text.suffix(from: idx)) {
+                return true
+            }
+            guard idx != text.endIndex else {break}
+            text.formIndex(after: &idx)
+        }
+        return false
+    }
+}
+
+extension Regex {
+    private static func matchHere(regexp: Substring, text: Substring) -> Bool {
+        if regexp.isEmpty {
+            return true
+        }
+        if let c = regexp.first, regexp.dropFirst().first == "*" {
+            return matchStar(character: c, regexp: regexp.dropFirst(2), text: text)
+        }
+        if regexp.first == "$" && regexp.dropFirst().isEmpty {
+            return text.isEmpty
+        }
+        if let tc = text.first, let rc = regexp.first, rc == "." || tc == rc {
+            return matchHere(regexp: regexp.dropFirst(), text:text.dropFirst())
+        }
+        return false
+    }
+    
+    private static func matchStar(character c: Character, regexp: Substring, text: Substring) -> Bool {
+        var idx = text.startIndex
+        while true {
+            if matchHere(regexp: regexp, text: text.suffix(from: idx)) {
+                return true
+            }
+            if idx == text.endIndex || (text[idx] != c && c != ".") {
+                return false
+            }
+            text.formIndex(after: &idx)
+        }
+    }
+}
+
+extension Regex: ExpressibleByStringLiteral {
+    public init(stringLiteral value: String) {
+        regexp = value
+    }
+}
+
+extension Regex: CustomStringConvertible {
+    public var description: String {
+        return "/\(regexp)/"
+    }
+}
+
+extension Regex: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "{expression: \(regexp)}"
+    }
+}
+
+extension FIFOQueue: CustomStringConvertible, CustomDebugStringConvertible {
+    public var description: String {
+        let elements = map {String(describing: $0)}.joined(separator: ", ")
+        return "[\(elements)]"
+    }
+    public var debugDescription: String {
+        let elements = map {String(reflecting: $0)}.joined(separator: ", ")
+        return "FIFOQueue: [\(elements)]"
+    }
+}
+
+//public func print<Target: TextOutputStream>(_ items: Any..., separator: String = " ". terminator: String = "\n", to output: inout Target)
+
+struct ArrayStream: TextOutputStream {
+    var buffer: [String] = []
+    mutating func write(_ string: String) {
+        buffer.append(string)
+    }
+}
+
+extension Data: TextOutputStream {
+    mutating public func write(_ string: String) {
+        self.append(contentsOf: string.utf8)
+    }
+}
+
+extension FIFOQueue: TextOutputStreamable {
+    func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        target.write("[")
+        target.write(map {String(describing: $0)}.joined(separator: ","))
+        target.write("]")
+    }
+}
+
+struct SlowStreamer: TextOutputStreamable, ExpressibleByArrayLiteral {
+    let contents: [String]
+    
+    init(arrayLiteral elements: String...) {
+        contents = elements
+    }
+    
+    func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        for x in contents {
+            target.write(x)
+            target.write("\n")
+            sleep(1)
+        }
+    }
+}
+
+struct StdErr: TextOutputStream {
+    mutating func write(_ string: String) {
+        guard !string.isEmpty else {return}
+        fputs(string, stderr)
+    }
+}
+
+struct ReplacingStream: TextOutputStream, TextOutputStreamable {
+    let toReplace: DictionaryLiteral<String, String>
+    private var output = ""
+    
+    init(replacing toReplace: DictionaryLiteral<String, String>) {
+        self.toReplace = toReplace
+    }
+    
+    mutating func write(_ string: String) {
+        let toWrite = toReplace.reduce(string) {partialResult, pair in
+            partialResult.replacingOccurrences(of: pair.key, with: pair.value)
+        }
+        print(toWrite, terminator: "", to: &output)
+    }
+    
+    func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        output.write(to: &target)
+    }
+}
+
+protocol StringViewSelector {
+    associatedtype View: Collection
+    
+    static var caret: View.Element {get}
+    static var asterisk: View.Element {get}
+    static var period: View.Element {get}
+    static var dollar: View.Element {get}
+    
+    static func view(from s: String) -> View
+}
+
+struct UTF8ViewSelector: StringViewSelector {
+    static var caret: UInt8 {return UInt8(ascii: "^")}
+    static var asterisk: UInt8 {return UInt8(ascii: "*")}
+    static var period: UInt8 {return UInt8(ascii: ".")}
+    static var dollar: UInt8 {return UInt8(ascii: "$")}
+    
+    static func view(from s: String) -> String.UTF8View {
+        return s.utf8
+    }
+}
+
+struct CharacterViewSelector: StringViewSelector {
+    static var caret: Character {return "^"}
+    static var asterisk: Character {return "*"}
+    static var period: Character {return "."}
+    static var dollar: Character {return "$"}
+    
+    static func view(from s: String) -> String {
+        return s
     }
 }
