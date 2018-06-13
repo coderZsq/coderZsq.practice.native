@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		141B8EF220CFA13700E89425 /* BinarySearch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearch.hpp; sourceTree = "<group>"; };
+		143F393E20D112FA004247E2 /* UnionFind.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UnionFind.hpp; sourceTree = "<group>"; };
 		1462D52620C7C7C80043B631 /* algorithm4c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm4c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1462D52920C7C7C80043B631 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1462D53020C7C7DA0043B631 /* SortTestHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortTestHelper.hpp; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				14C6F25420CA59F50011CA5F /* QuickSort.hpp */,
 				14C6F25720CA736E0011CA5F /* HeapSort.hpp */,
 				141B8EF220CFA13700E89425 /* BinarySearch.hpp */,
+				143F393E20D112FA004247E2 /* UnionFind.hpp */,
 			);
 			path = "algorithm4c++";
 			sourceTree = "<group>";
