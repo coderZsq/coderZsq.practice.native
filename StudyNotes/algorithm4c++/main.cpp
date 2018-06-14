@@ -19,6 +19,9 @@
 #include "HeapSort.hpp"
 
 #include "ReadGraph.hpp"
+#include "Component.hpp"
+#include "Path.hpp"
+#include "ShortestPath.hpp"
 
 using namespace std;
 
@@ -199,11 +202,61 @@ public:
     };
 };
 
+string path = "/Users/zhushuangquan"
+              "/Native Drive/GitHub"
+              "/coderZsq.target.swift/StudyNotes/algorithm4c++/";
+
 int main(int argc, const char * argv[]) {
     
-    string path = "/Users/zhushuangquan"
-                  "/Native Drive/GitHub"
-                  "/coderZsq.target.swift/StudyNotes/algorithm4c++/";
+    string filename = "testG2.txt";
+    SparseGraph g = SparseGraph(7, false);
+    ReadGraph<SparseGraph> readGraph(g, path + filename);
+    g.show();
+    cout<<endl;
+    
+    Path<SparseGraph> dfs(g, 0);
+    cout<<"DFS : ";
+    dfs.showPath(6);
+    
+    ShortestPath<SparseGraph> bfs(g, 0);
+    cout<<"BFS : ";
+    bfs.showPath(6);
+    
+    return 0;
+}
+
+void graphTest4() {
+    
+    string filename = "testG2.txt";
+    SparseGraph g = SparseGraph(7, false);
+    ReadGraph<SparseGraph> readGraph(g, path + filename);
+    g.show();
+    cout<<endl;
+    
+    Path<SparseGraph> dfs(g, 0);
+    cout<<"DFS : ";
+    dfs.showPath(6);
+}
+
+void graphTest3() {
+    
+    //TestG1.txt
+    string filename1 = "testG1.txt";
+    SparseGraph g1 = SparseGraph(13, false);
+    ReadGraph<SparseGraph> readGraph1(g1, path + filename1);
+    Component<SparseGraph> component1(g1);
+    cout<<"TestG1.txt, Component Count: "<<component1.count()<<endl;
+    
+    //TestG2.txt
+    string filename2 = "testG2.txt";
+    SparseGraph g2 = SparseGraph(7, false);
+    ReadGraph<SparseGraph> readGraph2(g2, path + filename2);
+    Component<SparseGraph> component2(g2);
+    cout<<"TestG2.txt, Component Count: "<<component2.count()<<endl;
+    
+}
+
+void graphTest2() {
     
     string filename = "testG1.txt";
     SparseGraph g1(13, false);
@@ -215,11 +268,10 @@ int main(int argc, const char * argv[]) {
     DenseGraph g2(13, false);
     ReadGraph<DenseGraph> readGraph2(g2, path + filename);
     g2.show();
-    
-    return 0;
 }
 
 void graphTest() {
+    
     int N = 20;
     int M = 100;
     

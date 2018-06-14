@@ -36,6 +36,9 @@
 		14E7EE6220D2175900A5D15C /* testG1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG1.txt; sourceTree = "<group>"; };
 		14E7EE6320D2179500A5D15C /* testG2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG2.txt; sourceTree = "<group>"; };
 		14E7EE6520D217E100A5D15C /* ReadGraph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReadGraph.hpp; sourceTree = "<group>"; };
+		14E7EE6820D2370900A5D15C /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		14E7EE6B20D23E6600A5D15C /* Path.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
+		14E7EE6E20D243DA00A5D15C /* ShortestPath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShortestPath.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,9 @@
 				141B8EF220CFA13700E89425 /* BinarySearch.hpp */,
 				143F393E20D112FA004247E2 /* UnionFind.hpp */,
 				14E7EE6520D217E100A5D15C /* ReadGraph.hpp */,
+				14E7EE6820D2370900A5D15C /* Component.hpp */,
+				14E7EE6B20D23E6600A5D15C /* Path.hpp */,
+				14E7EE6E20D243DA00A5D15C /* ShortestPath.hpp */,
 				14E7EE6220D2175900A5D15C /* testG1.txt */,
 				14E7EE6320D2179500A5D15C /* testG2.txt */,
 			);
