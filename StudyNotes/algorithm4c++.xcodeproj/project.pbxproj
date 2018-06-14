@@ -33,6 +33,9 @@
 		1470E4B520C8CC470051E756 /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		14C6F25420CA59F50011CA5F /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		14C6F25720CA736E0011CA5F /* HeapSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = "<group>"; };
+		14E7EE6220D2175900A5D15C /* testG1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG1.txt; sourceTree = "<group>"; };
+		14E7EE6320D2179500A5D15C /* testG2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG2.txt; sourceTree = "<group>"; };
+		14E7EE6520D217E100A5D15C /* ReadGraph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReadGraph.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +69,17 @@
 			isa = PBXGroup;
 			children = (
 				1462D52920C7C7C80043B631 /* main.cpp */,
-				1462D53120C7C7DA0043B631 /* SelectionSort.hpp */,
 				1462D53020C7C7DA0043B631 /* SortTestHelper.hpp */,
+				1462D53120C7C7DA0043B631 /* SelectionSort.hpp */,
 				1462D53320C7DA550043B631 /* InsertionSort.hpp */,
 				1470E4B520C8CC470051E756 /* MergeSort.hpp */,
 				14C6F25420CA59F50011CA5F /* QuickSort.hpp */,
 				14C6F25720CA736E0011CA5F /* HeapSort.hpp */,
 				141B8EF220CFA13700E89425 /* BinarySearch.hpp */,
 				143F393E20D112FA004247E2 /* UnionFind.hpp */,
+				14E7EE6520D217E100A5D15C /* ReadGraph.hpp */,
+				14E7EE6220D2175900A5D15C /* testG1.txt */,
+				14E7EE6320D2179500A5D15C /* testG2.txt */,
 			);
 			path = "algorithm4c++";
 			sourceTree = "<group>";
