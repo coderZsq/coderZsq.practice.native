@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <iomanip>
 
 #include "SortTestHelper.hpp"
 #include "SelectionSort.hpp"
@@ -18,6 +19,8 @@
 #include "QuickSort.hpp"
 #include "HeapSort.hpp"
 
+#include "DenseGraph.hpp"
+#include "SparseGraph.hpp"
 #include "ReadGraph.hpp"
 #include "Component.hpp"
 #include "Path.hpp"
@@ -25,291 +28,133 @@
 
 using namespace std;
 
-void sortTest();
-
-//稀疏图 - 邻接表
-class SparseGraph {
-private:
-    int n, m;
-    bool directed;
-    vector<vector<int>> g;
-    
-public:
-    SparseGraph(int n, bool directed) {
-        this->n = n;
-        this->m = 0;
-        this->directed = directed;
-        for (int i = 0; i < n; i++) {
-            g.push_back(vector<int>());
-        }
-    }
-    
-    ~SparseGraph() {
-        
-    }
-    
-    int V() {return n;}
-    int E() {return m;}
-    
-    void addEdge(int v, int w) {
-        assert(v >= 0 && v < n);
-        assert(w >= 0 && w < n);
-        
-        g[v].push_back(w);
-        if (v != w && !directed) {
-            g[w].push_back(v);
-        }
-        m++;
-    }
-    
-    bool hasEdge(int v, int w) {
-        assert(v >= 0 && v < n);
-        assert(w >= 0 && w < n);
-        
-        for (int i = 0; i < g[n].size(); i++) {
-            if (g[v][i] == w) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    void show() {
-        for (int i = 0; i < n; i++) {
-            cout<<"vertex "<<i<<":\t";
-            for (int j = 0; j < g[i].size(); j++) {
-                cout<<g[i][j]<<"\t";
-            }
-            cout<<endl;
-        }
-    }
-    
-    class adjIterator {
-    private:
-        SparseGraph &G;
-        int v;
-        int index;
-    public:
-        adjIterator(SparseGraph &graph, int v): G(graph) {
-            this->v = v;
-            this->index = 0;
-        }
-        
-        int begin() {
-            index = 0;
-            if (G.g[v].size()) {
-                return G.g[v][index];
-            }
-            return -1;
-        }
-        
-        int next() {
-            index++;
-            if (index < G.g[v].size()) {
-                return G.g[v][index];
-            }
-            return -1;
-        }
-        
-        bool end() {
-            return index >= G.g[v].size();
-        }
-    };
-};
-
-//稠密图 - 邻接矩阵
-class DenseGraph {
-private:
-    int n, m;
-    bool directed;
-    vector<vector<bool>> g;
-
-public:
-    DenseGraph(int n, bool directed) {
-        this->n = n;
-        this->m = 0;
-        this->directed = directed;
-        for (int i = 0; i < n; i++) {
-            g.push_back(vector<bool>(n, false));
-        }
-    }
-    
-    ~DenseGraph() {
-        
-    }
-    
-    int V() {return n;}
-    int E() {return m;}
-    
-    void addEdge(int v, int w) {
-        assert(v >= 0 && v < n);
-        assert(w >= 0 && w < n);
-        
-        if (hasEdge(v, w)) {
-            return;
-        }
-        
-        g[v][w] = true;
-        if (!directed) {
-            g[w][v] = true;
-        }
-        m++;
-    }
-    
-    bool hasEdge(int v, int w) {
-        assert(v >= 0 && v < n);
-        assert(w >= 0 && w < n);
-        return g[v][w];
-    }
-    
-    void show() {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout<<g[i][j]<<"\t";
-            }
-            cout<<endl;
-        }
-    }
-    
-    class adjIterator {
-    private:
-        DenseGraph &G;
-        int v;
-        int index;
-    public:
-        adjIterator(DenseGraph &graph, int v): G(graph) {
-            this->v = v;
-            this->index = -1;
-        }
-        
-        int begin() {
-            index = -1;
-            return next();
-        }
-        
-        int next() {
-            for (index += 1; index < G.V(); index++) {
-                if (G.g[v][index]) {
-                    return index;
-                }
-            }
-            return -1;
-        }
-        
-        bool end() {
-            return index >= G.V();
-        }
-    };
-};
-
 string path = "/Users/zhushuangquan"
               "/Native Drive/GitHub"
               "/coderZsq.target.swift/StudyNotes/algorithm4c++/";
 
 int main(int argc, const char * argv[]) {
     
-    string filename = "testG2.txt";
-    SparseGraph g = SparseGraph(7, false);
-    ReadGraph<SparseGraph> readGraph(g, path + filename);
-    g.show();
+    string filename = "testG3.txt";
+    int V = 8;
+    cout<<fixed<<setprecision(2);
+    
+    //Test Weighted Dense Graph
+    DenseGraph<double> g1 = DenseGraph<double>(V, false);
+    ReadGraph<DenseGraph<double>, double> readGraph1(g1, path + filename);
+    g1.show();
     cout<<endl;
     
-    Path<SparseGraph> dfs(g, 0);
-    cout<<"DFS : ";
-    dfs.showPath(6);
-    
-    ShortestPath<SparseGraph> bfs(g, 0);
-    cout<<"BFS : ";
-    bfs.showPath(6);
+    //Test Weighted Sparse Graph
+    SparseGraph<double> g2 = SparseGraph<double>(V, false);
+    ReadGraph<SparseGraph<double>, double> readGraph2(g2, path + filename);
+    g2.show();
+    cout<<endl;
     
     return 0;
 }
 
+void graphTest5() {
+    
+//    string filename = "testG2.txt";
+//    SparseGraph g = SparseGraph(7, false);
+//    ReadGraph<SparseGraph> readGraph(g, path + filename);
+//    g.show();
+//    cout<<endl;
+//
+//    Path<SparseGraph> dfs(g, 0);
+//    cout<<"DFS : ";
+//    dfs.showPath(6);
+//
+//    ShortestPath<SparseGraph> bfs(g, 0);
+//    cout<<"BFS : ";
+//    bfs.showPath(6);
+}
+
 void graphTest4() {
     
-    string filename = "testG2.txt";
-    SparseGraph g = SparseGraph(7, false);
-    ReadGraph<SparseGraph> readGraph(g, path + filename);
-    g.show();
-    cout<<endl;
-    
-    Path<SparseGraph> dfs(g, 0);
-    cout<<"DFS : ";
-    dfs.showPath(6);
+//    string filename = "testG2.txt";
+//    SparseGraph g = SparseGraph(7, false);
+//    ReadGraph<SparseGraph> readGraph(g, path + filename);
+//    g.show();
+//    cout<<endl;
+//
+//    Path<SparseGraph> dfs(g, 0);
+//    cout<<"DFS : ";
+//    dfs.showPath(6);
 }
 
 void graphTest3() {
     
-    //TestG1.txt
-    string filename1 = "testG1.txt";
-    SparseGraph g1 = SparseGraph(13, false);
-    ReadGraph<SparseGraph> readGraph1(g1, path + filename1);
-    Component<SparseGraph> component1(g1);
-    cout<<"TestG1.txt, Component Count: "<<component1.count()<<endl;
-    
-    //TestG2.txt
-    string filename2 = "testG2.txt";
-    SparseGraph g2 = SparseGraph(7, false);
-    ReadGraph<SparseGraph> readGraph2(g2, path + filename2);
-    Component<SparseGraph> component2(g2);
-    cout<<"TestG2.txt, Component Count: "<<component2.count()<<endl;
+//    //TestG1.txt
+//    string filename1 = "testG1.txt";
+//    SparseGraph g1 = SparseGraph(13, false);
+//    ReadGraph<SparseGraph> readGraph1(g1, path + filename1);
+//    Component<SparseGraph> component1(g1);
+//    cout<<"TestG1.txt, Component Count: "<<component1.count()<<endl;
+//
+//    //TestG2.txt
+//    string filename2 = "testG2.txt";
+//    SparseGraph g2 = SparseGraph(7, false);
+//    ReadGraph<SparseGraph> readGraph2(g2, path + filename2);
+//    Component<SparseGraph> component2(g2);
+//    cout<<"TestG2.txt, Component Count: "<<component2.count()<<endl;
     
 }
 
 void graphTest2() {
-    
-    string filename = "testG1.txt";
-    SparseGraph g1(13, false);
-    ReadGraph<SparseGraph> readGraph1(g1, path + filename);
-    g1.show();
-    
-    cout<<endl;
-    
-    DenseGraph g2(13, false);
-    ReadGraph<DenseGraph> readGraph2(g2, path + filename);
-    g2.show();
+//
+//    string filename = "testG1.txt";
+//    SparseGraph g1(13, false);
+//    ReadGraph<SparseGraph> readGraph1(g1, path + filename);
+//    g1.show();
+//
+//    cout<<endl;
+//
+//    DenseGraph g2(13, false);
+//    ReadGraph<DenseGraph> readGraph2(g2, path + filename);
+//    g2.show();
 }
 
 void graphTest() {
     
-    int N = 20;
-    int M = 100;
-    
-    srand(time(NULL));
-    
-    //Sparse Graph
-    SparseGraph g1(N, false);
-    for (int i = 0; i < M; i++) {
-        int a = rand() % N;
-        int b = rand() % N;
-        g1.addEdge(a, b);
-    }
-    //O(E)
-    for (int v = 0; v < N; v++) {
-        cout<<v<<" : ";
-        SparseGraph::adjIterator adj(g1, v);
-        for (int w = adj.begin(); !adj.end(); w = adj.next()) {
-            cout<<w<<" ";
-        }
-        cout<<endl;
-    }
-    
-    //Dense Graph
-    DenseGraph g2(N, false);
-    for (int i = 0; i < M; i++) {
-        int a = rand() % N;
-        int b = rand() % N;
-        g2.addEdge(a, b);
-    }
-    //O(V ^ 2)
-    for (int v = 0; v < N; v++) {
-        cout<<v<<" : ";
-        DenseGraph::adjIterator adj(g2, v);
-        for (int w = adj.begin(); !adj.end(); w = adj.next()) {
-            cout<<w<<" ";
-        }
-        cout<<endl;
-    }
+//    int N = 20;
+//    int M = 100;
+//
+//    srand(time(NULL));
+//
+//    //Sparse Graph
+//    SparseGraph g1(N, false);
+//    for (int i = 0; i < M; i++) {
+//        int a = rand() % N;
+//        int b = rand() % N;
+//        g1.addEdge(a, b);
+//    }
+//    //O(E)
+//    for (int v = 0; v < N; v++) {
+//        cout<<v<<" : ";
+//        SparseGraph::adjIterator adj(g1, v);
+//        for (int w = adj.begin(); !adj.end(); w = adj.next()) {
+//            cout<<w<<" ";
+//        }
+//        cout<<endl;
+//    }
+//
+//    //Dense Graph
+//    DenseGraph g2(N, false);
+//    for (int i = 0; i < M; i++) {
+//        int a = rand() % N;
+//        int b = rand() % N;
+//        g2.addEdge(a, b);
+//    }
+//    //O(V ^ 2)
+//    for (int v = 0; v < N; v++) {
+//        cout<<v<<" : ";
+//        DenseGraph::adjIterator adj(g2, v);
+//        for (int w = adj.begin(); !adj.end(); w = adj.next()) {
+//            cout<<w<<" ";
+//        }
+//        cout<<endl;
+//    }
 }
 
 void sortTest() {
