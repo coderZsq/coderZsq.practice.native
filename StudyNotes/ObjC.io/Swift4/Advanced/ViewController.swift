@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         Function.run()
         String.run()
         ErrorHandling.run()
+        Generic.run()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
