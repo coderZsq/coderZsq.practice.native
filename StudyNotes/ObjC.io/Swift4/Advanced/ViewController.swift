@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         String.run()
         ErrorHandling.run()
         Generic.run()
+        Protocol.run()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
