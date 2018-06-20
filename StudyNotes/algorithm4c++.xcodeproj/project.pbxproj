@@ -41,6 +41,7 @@
 		14ADB1C820D3AE4400878CF8 /* testG3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG3.txt; sourceTree = "<group>"; };
 		14ADB1CA20D3B03000878CF8 /* DenseGraph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DenseGraph.hpp; sourceTree = "<group>"; };
 		14ADB1CD20D3B08100878CF8 /* SparseGraph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SparseGraph.hpp; sourceTree = "<group>"; };
+		14BA0A5B20D9FBE700620FCF /* Kruskal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Kruskal.hpp; sourceTree = "<group>"; };
 		14C6F25420CA59F50011CA5F /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		14C6F25720CA736E0011CA5F /* HeapSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = "<group>"; };
 		14E7EE6220D2175900A5D15C /* testG1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testG1.txt; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				14ADB1C620D3A71F00878CF8 /* Edge.hpp */,
 				148A135020D8FFA30081C5AB /* LazyPrimMST.hpp */,
 				148A135320D8FFF60081C5AB /* PrimMST.hpp */,
+				14BA0A5B20D9FBE700620FCF /* Kruskal.hpp */,
 				14E7EE6220D2175900A5D15C /* testG1.txt */,
 				14E7EE6320D2179500A5D15C /* testG2.txt */,
 				14ADB1C820D3AE4400878CF8 /* testG3.txt */,

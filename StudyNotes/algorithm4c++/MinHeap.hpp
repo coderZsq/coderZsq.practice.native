@@ -76,7 +76,6 @@ public:
     
     // 向最小堆中插入一个新的元素 item
     void insert(Item item){
-        cout<<count<<endl;
         assert( count + 1 <= capacity );
         data[count+1] = item;
         shiftUp(count+1);
