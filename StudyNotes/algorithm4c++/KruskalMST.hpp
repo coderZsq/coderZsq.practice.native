@@ -1,13 +1,13 @@
 //
-//  Kruskal.hpp
+//  KruskalMST.hpp
 //  algorithm4c++
 //
 //  Created by 朱双泉 on 2018/6/20.
 //  Copyright © 2018 Castie!. All rights reserved.
 //
 
-#ifndef Kruskal_hpp
-#define Kruskal_hpp
+#ifndef KruskalMST_hpp
+#define KruskalMST_hpp
 
 #include <stdio.h>
 
@@ -27,15 +27,13 @@ public:
         MinHeap<Edge<Weight>> pq( graph.E() );
         for( int i = 0 ; i < graph.V() ; i ++ ){
             typename Graph::adjIterator adj(graph,i);
-            for (Edge<Weight> * e = adj.begin(); !adj.end(); e = adj.next()) {
-                if (e->v() < e->w()) {
+            for( Edge<Weight> *e = adj.begin() ; !adj.end() ; e = adj.next() )
+                if( e->v() < e->w() )
                     pq.insert(*e);
-                }
-            }
         }
         
         // 创建一个并查集, 来查看已经访问的节点的联通情况
-        UnionFind5 uf = UnionFind5(graph.V());
+        UnionFind uf = UnionFind(graph.V());
         while( !pq.isEmpty() && mst.size() < graph.V() - 1 ){
             
             // 从最小堆中依次从小到大取出所有的边
@@ -67,4 +65,4 @@ public:
     };
 };
 
-#endif /* Kruskal_hpp */
+#endif /* KruskalMST_hpp */
