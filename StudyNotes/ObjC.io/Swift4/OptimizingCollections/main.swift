@@ -34,4 +34,5 @@ extension Sequence {
     }
 }
 
+NSOrderedSet.run()
 SortedArrays.run()

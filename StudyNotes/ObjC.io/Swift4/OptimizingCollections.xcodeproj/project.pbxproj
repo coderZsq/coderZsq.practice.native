@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1430960120EB42AC00A64D9E /* NSOrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430960020EB42AC00A64D9E /* NSOrderedSet.swift */; };
 		1480D64420E9DFAC00C4400B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480D64320E9DFAC00C4400B /* main.swift */; };
 		1480D64B20E9FA7A00C4400B /* SortedArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480D64A20E9FA7A00C4400B /* SortedArrays.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1430960020EB42AC00A64D9E /* NSOrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOrderedSet.swift; sourceTree = "<group>"; };
 		1480D64020E9DFAC00C4400B /* OptimizingCollections */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OptimizingCollections; sourceTree = BUILT_PRODUCTS_DIR; };
 		1480D64320E9DFAC00C4400B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1480D64A20E9FA7A00C4400B /* SortedArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArrays.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1480D64A20E9FA7A00C4400B /* SortedArrays.swift */,
+				1430960020EB42AC00A64D9E /* NSOrderedSet.swift */,
 				1480D64320E9DFAC00C4400B /* main.swift */,
 			);
 			path = OptimizingCollections;
@@ -122,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1430960120EB42AC00A64D9E /* NSOrderedSet.swift in Sources */,
 				1480D64B20E9FA7A00C4400B /* SortedArrays.swift in Sources */,
 				1480D64420E9DFAC00C4400B /* main.swift in Sources */,
 			);
