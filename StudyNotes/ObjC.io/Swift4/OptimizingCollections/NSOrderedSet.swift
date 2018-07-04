@@ -9,6 +9,7 @@
 import Foundation
 
 struct NSOrderedSet {
+    
     static func run() {
         var set = OrderedSet<Int>()
         for i in (1...20).shuffled() {
