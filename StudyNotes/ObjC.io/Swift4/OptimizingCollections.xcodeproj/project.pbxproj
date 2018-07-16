@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1416489120FC835E004FDF1F /* BTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1416489020FC835E004FDF1F /* BTree.swift */; };
 		1430960120EB42AC00A64D9E /* NSOrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430960020EB42AC00A64D9E /* NSOrderedSet.swift */; };
 		1470487520EC648F00E53585 /* RedBlackTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470487420EC648F00E53585 /* RedBlackTree.swift */; };
 		1480D64420E9DFAC00C4400B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480D64320E9DFAC00C4400B /* main.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1416489020FC835E004FDF1F /* BTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTree.swift; sourceTree = "<group>"; };
 		1430960020EB42AC00A64D9E /* NSOrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOrderedSet.swift; sourceTree = "<group>"; };
 		1470487420EC648F00E53585 /* RedBlackTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBlackTree.swift; sourceTree = "<group>"; };
 		1480D64020E9DFAC00C4400B /* OptimizingCollections */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OptimizingCollections; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				1430960020EB42AC00A64D9E /* NSOrderedSet.swift */,
 				1470487420EC648F00E53585 /* RedBlackTree.swift */,
 				14C4345520F301C20052E4E5 /* CopyOnWrite.swift */,
+				1416489020FC835E004FDF1F /* BTree.swift */,
 				1480D64320E9DFAC00C4400B /* main.swift */,
 			);
 			path = OptimizingCollections;
@@ -133,6 +136,7 @@
 			files = (
 				1430960120EB42AC00A64D9E /* NSOrderedSet.swift in Sources */,
 				1470487520EC648F00E53585 /* RedBlackTree.swift in Sources */,
+				1416489120FC835E004FDF1F /* BTree.swift in Sources */,
 				1480D64B20E9FA7A00C4400B /* SortedArrays.swift in Sources */,
 				14C4345620F301C20052E4E5 /* CopyOnWrite.swift in Sources */,
 				1480D64420E9DFAC00C4400B /* main.swift in Sources */,

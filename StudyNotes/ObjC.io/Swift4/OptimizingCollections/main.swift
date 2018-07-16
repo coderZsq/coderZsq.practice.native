@@ -34,7 +34,22 @@ extension Sequence {
     }
 }
 
-CopyOnWrite.run()
+public let cacheSize: Int? = {
+    #if os(macOS) || os(iOS) || os(watchOS) || os(tvOS)
+    var result: Int = 0
+    var size = MemoryLayout<Int>.size
+    let status = sysctlbyname("hw.l1dcachesize", &result, &size, nil, 0)
+    guard status != -1 else {return nil}
+    return result
+    #elseif os(Linux)
+    return nil
+    #else
+    return nil
+    #endif
+}()
+
+BTree<Int>.run()
+//CopyOnWrite.run()
 //RedBlackTree_.run()
 //NSOrderedSet.run()
 //SortedArrays.run()
