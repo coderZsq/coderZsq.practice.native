@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - #1 Two Sum
 /*
  Example:
  
@@ -16,8 +17,6 @@ import Foundation
  Because nums[0] + nums[1] = 2 + 7 = 9,
  return [0, 1].
  */
-
-//MARK: - #1 Two Sum
 scope(of: "#1 Two Sum", execute: false) {
     
     print(twoSum_([2, 7, 11, 15], 9))
@@ -27,6 +26,7 @@ scope(of: "#1 Two Sum", execute: false) {
     timing { twoSum_(nums, target) }
 }
 
+//MARK: - #2 Add Two Numbers
 /*
  Example
  
@@ -34,8 +34,6 @@ scope(of: "#1 Two Sum", execute: false) {
  Output: 7 -> 0 -> 8
  Explanation: 342 + 465 = 807.
  */
-
-//MARK: - #2 Add Two Numbers
 scope(of: "#2 Add Two Numbers", execute:false) {
     
     let l1 = ListNode(2)
@@ -48,6 +46,7 @@ scope(of: "#2 Add Two Numbers", execute:false) {
     addTwoNumbers_(l1, l2)?.printNode()
 }
 
+//MARK: - #3 Longest Substring Without Repeating Characters
 /*
  Examples:
  
@@ -55,8 +54,6 @@ scope(of: "#2 Add Two Numbers", execute:false) {
  Given "bbbbb", the answer is "b", with the length of 1.
  Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
-
-//MARK: - #3 Longest Substring Without Repeating Characters
 scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
 
     print(lengthOfLongestSubstring("abcabcbb"))
@@ -72,6 +69,7 @@ scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
     timing { lengthOfLongestSubstring_(str) }
 }
 
+//MARK: - #4 Median of Two Sorted Arrays
 /*
  Example 1:
  nums1 = [1, 3]
@@ -85,7 +83,6 @@ scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
  
  The median is (2 + 3)/2 = 2.5
  */
-//MARK: - #4 Median of Two Sorted Arrays
 scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
     
     print(findMedianSortedArrays([1, 3], [2]))
@@ -105,6 +102,25 @@ scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
 
 }
 
+//MARK: - #26 Remove Duplicates from Sorted Array
+/*
+ Example 1:
+ 
+ Given nums = [1,1,2],
+ Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+ It doesn't matter what you leave beyond the returned length.
+ 
+ Example 2:
+ Given nums = [0,0,1,1,1,2,2,3,3,4],
+ Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
+ It doesn't matter what values are set beyond the returned length.
+ */
+scope(of: "#26 Remove Duplicates from Sorted Array", execute: true) {
+    var nums = [1, 1, 2]
+    print(removeDuplicates(&nums))
+}
+
+//MARK: - #27 Remove Element
 /*
  Example 1:
  Given nums = [3,2,2,3], val = 3,
@@ -117,7 +133,6 @@ scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
  Note that the order of those five elements can be arbitrary.
  It doesn't matter what values are set beyond the returned length.
  */
-//MARK: - #27 Remove Element
 scope(of: "#27 Remove Element", execute: false) {
     var nums = [3,2,2,3]
     let val = 3
@@ -134,13 +149,13 @@ scope(of: "#27 Remove Element", execute: false) {
     timing {removeElement__(&randomArr, num)}
 }
 
+//MARK: - #283 Move Zeros
 /*
  Example:
  
  Input: [0,1,0,3,12]
  Output: [1,3,12,0,0]
  */
-//MARK: - #283 Move Zeros
 scope(of: "#283 Move Zeros", execute: false) {
     
     var arr = [0, 1, 0, 3, 12]
