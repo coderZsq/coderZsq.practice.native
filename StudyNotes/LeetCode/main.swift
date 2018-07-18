@@ -86,8 +86,7 @@ scope(of: "#3 Longest Substring Without Repeating Characters", execute: false) {
  The median is (2 + 3)/2 = 2.5
  */
 //MARK: - #4 Median of Two Sorted Arrays
-
-scope(of: "#4 Median of Two Sorted Arrays", execute: true) {
+scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
     
     print(findMedianSortedArrays([1, 3], [2]))
     print(findMedianSortedArrays_([1, 3], [2]))
@@ -104,4 +103,52 @@ scope(of: "#4 Median of Two Sorted Arrays", execute: true) {
     timing { findMedianSortedArrays__(array1 ,array2) }
     timing { findMedianSortedArrays___(array1 ,array2) }
 
+}
+
+/*
+ Example 1:
+ Given nums = [3,2,2,3], val = 3,
+ Your function should return length = 2, with the first two elements of nums being 2.
+ It doesn't matter what you leave beyond the returned length.
+ 
+ Example 2:
+ Given nums = [0,1,2,2,3,0,4,2], val = 2,
+ Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
+ Note that the order of those five elements can be arbitrary.
+ It doesn't matter what values are set beyond the returned length.
+ */
+//MARK: - #27 Remove Element
+scope(of: "#27 Remove Element", execute: false) {
+    var nums = [3,2,2,3]
+    let val = 3
+    print(removeElement__(&nums, val))
+    
+    var nums2 = [0,1,2,2,3,0,4,2]
+    let val2 = 2
+    print(removeElement__(&nums2, val2))
+    
+    var randomArr = randomList(1000000)
+    let num = randomNum(1, 1000)
+    timing {removeElement(&randomArr, num)}
+    timing {removeElement_(&randomArr, num)}
+    timing {removeElement__(&randomArr, num)}
+}
+
+/*
+ Example:
+ 
+ Input: [0,1,0,3,12]
+ Output: [1,3,12,0,0]
+ */
+//MARK: - #283 Move Zeros
+scope(of: "#283 Move Zeros", execute: false) {
+    
+    var arr = [0, 1, 0, 3, 12]
+    moveZeroes__(&arr)
+    print(arr)
+    
+    var randomArr = randomList(1000000)
+    timing {moveZeroes(&randomArr)}
+    timing {moveZeroes_(&randomArr)}
+    timing {moveZeroes__(&randomArr)}
 }

@@ -12,6 +12,10 @@
 		146E8D94208203F3008BC4F9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D93208203F3008BC4F9 /* main.swift */; };
 		146E8D9B2082040A008BC4F9 /* #1 Two Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D9A2082040A008BC4F9 /* #1 Two Sum.swift */; };
 		1483A7D12085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483A7D02085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift */; };
+		149093B520FF1081001EB1D6 /* #283 Move Zeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149093B420FF1081001EB1D6 /* #283 Move Zeros.swift */; };
+		149093B720FF1A66001EB1D6 /* #27 Remove Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149093B620FF1A66001EB1D6 /* #27 Remove Element.swift */; };
+		149093B920FF1B8E001EB1D6 /* #26 Remove Duplicates from Sorted Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149093B820FF1B8E001EB1D6 /* #26 Remove Duplicates from Sorted Array.swift */; };
+		149093BB20FF1BAC001EB1D6 /* #80 Remove Duplicates from Sorted Array II .swift in Sources */ = {isa = PBXBuildFile; fileRef = 149093BA20FF1BAC001EB1D6 /* #80 Remove Duplicates from Sorted Array II .swift */; };
 		14DCCCF3208205A00050BD75 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCCF2208205A00050BD75 /* Test.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		146E8D93208203F3008BC4F9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		146E8D9A2082040A008BC4F9 /* #1 Two Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#1 Two Sum.swift"; sourceTree = "<group>"; };
 		1483A7D02085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#4 Median of Two Sorted Arrays.swift"; sourceTree = "<group>"; };
+		149093B420FF1081001EB1D6 /* #283 Move Zeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#283 Move Zeros.swift"; sourceTree = "<group>"; };
+		149093B620FF1A66001EB1D6 /* #27 Remove Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#27 Remove Element.swift"; sourceTree = "<group>"; };
+		149093B820FF1B8E001EB1D6 /* #26 Remove Duplicates from Sorted Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#26 Remove Duplicates from Sorted Array.swift"; sourceTree = "<group>"; };
+		149093BA20FF1BAC001EB1D6 /* #80 Remove Duplicates from Sorted Array II .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#80 Remove Duplicates from Sorted Array II .swift"; sourceTree = "<group>"; };
 		14DCCCF2208205A00050BD75 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +79,10 @@
 				14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */,
 				142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */,
 				1483A7D02085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift */,
+				149093B820FF1B8E001EB1D6 /* #26 Remove Duplicates from Sorted Array.swift */,
+				149093B620FF1A66001EB1D6 /* #27 Remove Element.swift */,
+				149093BA20FF1BAC001EB1D6 /* #80 Remove Duplicates from Sorted Array II .swift */,
+				149093B420FF1081001EB1D6 /* #283 Move Zeros.swift */,
 				14DCCCF2208205A00050BD75 /* Test.swift */,
 				146E8D93208203F3008BC4F9 /* main.swift */,
 			);
@@ -135,12 +147,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149093B920FF1B8E001EB1D6 /* #26 Remove Duplicates from Sorted Array.swift in Sources */,
 				14DCCCF3208205A00050BD75 /* Test.swift in Sources */,
 				146E8D94208203F3008BC4F9 /* main.swift in Sources */,
 				1483A7D12085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift in Sources */,
+				149093B520FF1081001EB1D6 /* #283 Move Zeros.swift in Sources */,
 				146E8D9B2082040A008BC4F9 /* #1 Two Sum.swift in Sources */,
 				142E20852084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift in Sources */,
 				14588A6B208241EC0063CF22 /* #2 Add Two Numbers.swift in Sources */,
+				149093B720FF1A66001EB1D6 /* #27 Remove Element.swift in Sources */,
+				149093BB20FF1BAC001EB1D6 /* #80 Remove Duplicates from Sorted Array II .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
