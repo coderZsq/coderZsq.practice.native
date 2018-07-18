@@ -102,24 +102,6 @@ scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
 
 }
 
-//MARK: - #26 Remove Duplicates from Sorted Array
-/*
- Example 1:
- 
- Given nums = [1,1,2],
- Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
- It doesn't matter what you leave beyond the returned length.
- 
- Example 2:
- Given nums = [0,0,1,1,1,2,2,3,3,4],
- Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
- It doesn't matter what values are set beyond the returned length.
- */
-scope(of: "#26 Remove Duplicates from Sorted Array", execute: true) {
-    var nums = [1, 1, 2]
-    print(removeDuplicates(&nums))
-}
-
 //MARK: - #27 Remove Element
 /*
  Example 1:
@@ -147,6 +129,19 @@ scope(of: "#27 Remove Element", execute: false) {
     timing {removeElement(&randomArr, num)}
     timing {removeElement_(&randomArr, num)}
     timing {removeElement__(&randomArr, num)}
+}
+
+//MARK: - #75 Sort Colors
+/*
+ Example:
+ 
+ Input: [2,0,2,1,1,0]
+ Output: [0,0,1,1,2,2]
+ */
+scope(of: "#75 Sort Colors", execute: true) {
+    var nums = [2,0,2,1,1,0]
+    sortColors_(&nums)
+    print(nums)
 }
 
 //MARK: - #283 Move Zeros
