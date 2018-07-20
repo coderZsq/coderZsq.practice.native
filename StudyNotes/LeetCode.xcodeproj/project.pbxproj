@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142207262101BB0700D1FB08 /* #167 Two Sum II - Input array is sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142207252101BB0700D1FB08 /* #167 Two Sum II - Input array is sorted.swift */; };
+		142207282101BFA800D1FB08 /* #209 Minimum Size Subarray Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142207272101BFA800D1FB08 /* #209 Minimum Size Subarray Sum.swift */; };
+		1422072A2101C8E700D1FB08 /* #349 Intersection of Two Arrays .swift in Sources */ = {isa = PBXBuildFile; fileRef = 142207292101C8E700D1FB08 /* #349 Intersection of Two Arrays .swift */; };
+		1422072C2101CC4700D1FB08 /* #350 Intersection of Two Arrays II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422072B2101CC4700D1FB08 /* #350 Intersection of Two Arrays II.swift */; };
 		142E20852084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */; };
 		14588A6B208241EC0063CF22 /* #2 Add Two Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */; };
 		146E8D94208203F3008BC4F9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E8D93208203F3008BC4F9 /* main.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		142207252101BB0700D1FB08 /* #167 Two Sum II - Input array is sorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#167 Two Sum II - Input array is sorted.swift"; sourceTree = "<group>"; };
+		142207272101BFA800D1FB08 /* #209 Minimum Size Subarray Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#209 Minimum Size Subarray Sum.swift"; sourceTree = "<group>"; };
+		142207292101C8E700D1FB08 /* #349 Intersection of Two Arrays .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#349 Intersection of Two Arrays .swift"; sourceTree = "<group>"; };
+		1422072B2101CC4700D1FB08 /* #350 Intersection of Two Arrays II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#350 Intersection of Two Arrays II.swift"; sourceTree = "<group>"; };
 		142E20842084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#3 Longest Substring Without Repeating Characters.swift"; sourceTree = "<group>"; };
 		14588A6A208241EC0063CF22 /* #2 Add Two Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "#2 Add Two Numbers.swift"; sourceTree = "<group>"; };
 		146E8D90208203F3008BC4F9 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +87,11 @@
 				1483A7D02085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift */,
 				149093B620FF1A66001EB1D6 /* #27 Remove Element.swift */,
 				149093BC20FF2C46001EB1D6 /* #75 Sort Colors.swift */,
+				142207252101BB0700D1FB08 /* #167 Two Sum II - Input array is sorted.swift */,
+				142207272101BFA800D1FB08 /* #209 Minimum Size Subarray Sum.swift */,
 				149093B420FF1081001EB1D6 /* #283 Move Zeros.swift */,
+				142207292101C8E700D1FB08 /* #349 Intersection of Two Arrays .swift */,
+				1422072B2101CC4700D1FB08 /* #350 Intersection of Two Arrays II.swift */,
 				14DCCCF2208205A00050BD75 /* Test.swift */,
 				146E8D93208203F3008BC4F9 /* main.swift */,
 			);
@@ -146,9 +158,13 @@
 			files = (
 				149093BD20FF2C46001EB1D6 /* #75 Sort Colors.swift in Sources */,
 				14DCCCF3208205A00050BD75 /* Test.swift in Sources */,
+				142207282101BFA800D1FB08 /* #209 Minimum Size Subarray Sum.swift in Sources */,
 				146E8D94208203F3008BC4F9 /* main.swift in Sources */,
+				1422072A2101C8E700D1FB08 /* #349 Intersection of Two Arrays .swift in Sources */,
 				1483A7D12085D15700F0D624 /* #4 Median of Two Sorted Arrays.swift in Sources */,
 				149093B520FF1081001EB1D6 /* #283 Move Zeros.swift in Sources */,
+				142207262101BB0700D1FB08 /* #167 Two Sum II - Input array is sorted.swift in Sources */,
+				1422072C2101CC4700D1FB08 /* #350 Intersection of Two Arrays II.swift in Sources */,
 				146E8D9B2082040A008BC4F9 /* #1 Two Sum.swift in Sources */,
 				142E20852084C03000EF153B /* #3 Longest Substring Without Repeating Characters.swift in Sources */,
 				14588A6B208241EC0063CF22 /* #2 Add Two Numbers.swift in Sources */,

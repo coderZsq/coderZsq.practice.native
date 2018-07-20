@@ -138,10 +138,38 @@ scope(of: "#27 Remove Element", execute: false) {
  Input: [2,0,2,1,1,0]
  Output: [0,0,1,1,2,2]
  */
-scope(of: "#75 Sort Colors", execute: true) {
+scope(of: "#75 Sort Colors", execute: false) {
     var nums = [2,0,2,1,1,0]
     sortColors_(&nums)
     print(nums)
+}
+
+//MARK: - #167 Two Sum II - Input array is sorted
+/*
+ Example:
+ 
+ Input: numbers = [2,7,11,15], target = 9
+ Output: [1,2]
+ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
+ */
+scope(of: "#167 Two Sum II - Input array is sorted", execute: false) {
+    let numbers = [2, 7, 11, 15]
+    let target = 9
+    print(twoSumII(numbers, target))
+}
+
+//MARK - #209 Minimum Size Subarray Sum
+/*
+ Example:
+ 
+ Input: s = 7, nums = [2,3,1,2,4,3]
+ Output: 2
+ Explanation: the subarray [4,3] has the minimal length under the problem constraint.
+ */
+scope(of: "#209 Minimum Size Subarray Sum", execute: false) {
+    let s = 7
+    let nums = [2, 3, 1, 2, 4, 3]
+    print(minSubArrayLen(s, nums))
 }
 
 //MARK: - #283 Move Zeros
@@ -161,4 +189,26 @@ scope(of: "#283 Move Zeros", execute: false) {
     timing {moveZeroes(&randomArr)}
     timing {moveZeroes_(&randomArr)}
     timing {moveZeroes__(&randomArr)}
+}
+
+//MARK - #349 Intersection of Two Arrays
+/*
+ Example:
+ Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+ */
+scope(of: "#349 Intersection of Two Arrays", execute: false) {
+    let num1 = [1, 2, 2, 1]
+    let num2 = [2, 2]
+    print(intersection(num1, num2))
+}
+
+//MARK - #350 Intersection of Two Arrays II
+/*
+ Example:
+ Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+ */
+scope(of: "#350 Intersection of Two Arrays II", execute: true) {
+    let num1 = [1, 2, 2, 1]
+    let num2 = [2, 2]
+    print(intersect(num1, num2))
 }
