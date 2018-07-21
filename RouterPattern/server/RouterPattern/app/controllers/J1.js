@@ -7,7 +7,7 @@ exports.getRouters = async(ctx, next) => {
 
   ctx.body = {
     routers: {
-      "J1": 'web'
+      "J1": 'app'
     }
   }
 }
