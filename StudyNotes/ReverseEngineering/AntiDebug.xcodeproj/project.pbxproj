@@ -13,6 +13,8 @@
 		1464DC5B21254C1D00ED7AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464DC5A21254C1D00ED7AB3 /* Assets.xcassets */; };
 		1464DC5E21254C1D00ED7AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DC5C21254C1D00ED7AB3 /* LaunchScreen.storyboard */; };
 		1464DC6121254C1D00ED7AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464DC6021254C1D00ED7AB3 /* main.m */; };
+		1488E4F021255DB90016E8B8 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4EF21255DB90016E8B8 /* AntiAntiDebug.m */; };
+		1488E4F321255E8B0016E8B8 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F221255E8B0016E8B8 /* fishhook.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1464DC5D21254C1D00ED7AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1464DC5F21254C1D00ED7AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1464DC6021254C1D00ED7AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1488E4EE21255DB90016E8B8 /* AntiAntiDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntiAntiDebug.h; sourceTree = "<group>"; };
+		1488E4EF21255DB90016E8B8 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		1488E4F121255E8B0016E8B8 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		1488E4F221255E8B0016E8B8 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,12 @@
 		1464DC5021254C1C00ED7AB3 /* AntiDebug */ = {
 			isa = PBXGroup;
 			children = (
+				1488E4F221255E8B0016E8B8 /* fishhook.c */,
+				1488E4F121255E8B0016E8B8 /* fishhook.h */,
 				1464DC5121254C1C00ED7AB3 /* AppDelegate.h */,
 				1464DC5221254C1C00ED7AB3 /* AppDelegate.m */,
+				1488E4EE21255DB90016E8B8 /* AntiAntiDebug.h */,
+				1488E4EF21255DB90016E8B8 /* AntiAntiDebug.m */,
 				1464DC5421254C1D00ED7AB3 /* ViewController.h */,
 				1464DC5521254C1D00ED7AB3 /* ViewController.m */,
 				1464DC5721254C1D00ED7AB3 /* Main.storyboard */,
@@ -142,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1464DC5621254C1D00ED7AB3 /* ViewController.m in Sources */,
+				1488E4F321255E8B0016E8B8 /* fishhook.c in Sources */,
+				1488E4F021255DB90016E8B8 /* AntiAntiDebug.m in Sources */,
 				1464DC6121254C1D00ED7AB3 /* main.m in Sources */,
 				1464DC5321254C1C00ED7AB3 /* AppDelegate.m in Sources */,
 			);
@@ -290,6 +302,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-WI,-sectrcreate,__RESTRICT,__restrict,/dev/null";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.AntiDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-WI,-sectrcreate,__RESTRICT,__restrict,/dev/null";
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.AntiDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
