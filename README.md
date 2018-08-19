@@ -24,7 +24,7 @@ questions.
 
 ##### Display
 
-<img src="./StudyNotes/UIAlgorithm/contents/img1.png" width="360"><img src="./StudyNotes/UIAlgorithm/contents/img2.gif" width="388">
+<img src="./StudyNotes/Algorithm/UIAlgorithm/contents/img1.png" width="360"><img src="./StudyNotes/Algorithm/UIAlgorithm/contents/img2.gif" width="388">
 
 Apply the algorithm to the actual, now showing a `visual version` of the light-off problem.
 
