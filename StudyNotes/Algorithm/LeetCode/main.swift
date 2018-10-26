@@ -102,6 +102,33 @@ scope(of: "#4 Median of Two Sorted Arrays", execute: false) {
 
 }
 
+//MARK: - #26 Remove Duplicates from Sorted Array
+/*
+ Example 1:
+ 
+ Given nums = [1,1,2],
+ 
+ Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+ 
+ It doesn't matter what you leave beyond the returned length.
+ Example 2:
+ 
+ Given nums = [0,0,1,1,1,2,2,3,3,4],
+ 
+ Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
+ 
+ It doesn't matter what values are set beyond the returned length.
+ */
+scope(of: "#26 Remove Duplicates from Sorted Array", execute: false) {
+//    var nums = [1,1,2];
+    var nums = [0,0,1,1,1,2,2,3,3,4];
+    let len = removeDuplicates_(nums: &nums)
+    print(len);
+    for i in 0..<len {
+        print(nums[i]);
+    }
+}
+
 //MARK: - #27 Remove Element
 /*
  Example 1:
@@ -207,7 +234,7 @@ scope(of: "#349 Intersection of Two Arrays", execute: false) {
  Example:
  Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
  */
-scope(of: "#350 Intersection of Two Arrays II", execute: true) {
+scope(of: "#350 Intersection of Two Arrays II", execute: false) {
     let num1 = [1, 2, 2, 1]
     let num2 = [2, 2]
     print(intersect(num1, num2))
