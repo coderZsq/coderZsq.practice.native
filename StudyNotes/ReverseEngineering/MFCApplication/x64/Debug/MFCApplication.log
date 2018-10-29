@@ -1,0 +1,13 @@
+﻿  MFCApplication.cpp
+  MFCApplicationDlg.cpp
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u690D' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u7269' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u5927' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u6218' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u50F5' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u5C38' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u4E2D' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u6587' cannot be represented in the current code page (1252)
+\\mac\home\desktop\mfcapplication\mfcapplicationdlg.cpp(20): warning C4566: character represented by universal-character-name '\u7248' cannot be represented in the current code page (1252)
+  Generating Code...
+  MFCApplication.vcxproj -> \\Mac\Home\Desktop\x64\Debug\MFCApplication.exe
