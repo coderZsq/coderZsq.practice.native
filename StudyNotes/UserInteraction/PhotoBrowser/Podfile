@@ -1,0 +1,8 @@
+platform :ios, '9.0'
+
+target 'PhotoBrowser' do
+    use_frameworks!
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+end
+
