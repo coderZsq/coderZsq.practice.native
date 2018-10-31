@@ -40,7 +40,7 @@ extension ViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifer, for: indexPath)
         cell.imageView?.image = UIImage(named: "Mark")
         if let classes = self.dataSource[indexPath.section]["classes"] as? [AnyClass] {
-            cell.textLabel?.text = NSStringFromClass(classes[indexPath.row])
+            cell.textLabel?.text = NSStringFromClass(classes[indexPath.row]).components(separatedBy: ".").last
         }
         return cell
     }

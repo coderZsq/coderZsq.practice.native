@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wN6-eJ-gaF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wN6-eJ-gaF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-d8-1H4">
-                                <rect key="frame" x="87.5" y="83.5" width="200" height="200"/>
+                                <rect key="frame" x="112.5" y="38.5" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="H70-be-pDd"/>
-                                    <constraint firstAttribute="width" constant="200" id="tp2-9M-QA7"/>
+                                    <constraint firstAttribute="height" constant="150" id="H70-be-pDd"/>
+                                    <constraint firstAttribute="width" constant="150" id="tp2-9M-QA7"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-ir-ixR">
-                                <rect key="frame" x="50.5" y="324" width="274" height="150"/>
+                                <rect key="frame" x="50.5" y="239" width="274" height="150"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Shanghai" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kOQ-QM-V73">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
@@ -85,7 +85,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FP-X5-gKN">
-                                <rect key="frame" x="156" y="293.5" width="63" height="20.5"/>
+                                <rect key="frame" x="156" y="208.5" width="63" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,8 +95,8 @@
                         <constraints>
                             <constraint firstItem="Vbg-d8-1H4" firstAttribute="centerX" secondItem="tXK-Wr-RVh" secondAttribute="centerX" id="2mG-h3-M0B"/>
                             <constraint firstItem="zDr-ir-ixR" firstAttribute="top" secondItem="3FP-X5-gKN" secondAttribute="bottom" constant="10" id="56h-XE-7UZ"/>
-                            <constraint firstItem="Vbg-d8-1H4" firstAttribute="centerY" secondItem="tXK-Wr-RVh" secondAttribute="centerY" constant="-150" id="Le9-sq-dXH"/>
-                            <constraint firstItem="3FP-X5-gKN" firstAttribute="top" secondItem="Vbg-d8-1H4" secondAttribute="bottom" constant="10" id="NWc-4N-Jg0"/>
+                            <constraint firstItem="Vbg-d8-1H4" firstAttribute="centerY" secondItem="tXK-Wr-RVh" secondAttribute="centerY" constant="-220" id="Le9-sq-dXH"/>
+                            <constraint firstItem="3FP-X5-gKN" firstAttribute="top" secondItem="Vbg-d8-1H4" secondAttribute="bottom" constant="20" id="NWc-4N-Jg0"/>
                             <constraint firstItem="zDr-ir-ixR" firstAttribute="centerX" secondItem="tXK-Wr-RVh" secondAttribute="centerX" id="nB0-P5-sZM"/>
                             <constraint firstItem="3FP-X5-gKN" firstAttribute="centerX" secondItem="tXK-Wr-RVh" secondAttribute="centerX" id="onO-3X-vc7"/>
                         </constraints>

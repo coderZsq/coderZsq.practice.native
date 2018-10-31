@@ -26,12 +26,11 @@ class LocationViewController: UIViewController {
         geoCoder.geocodeAddressString(addressStr) { (placemarks, error) in
             if error == nil {
                 print("地理编码成功")
-                if let placemarks = placemarks, placemarks.count > 0 {
-                    let placemark = placemarks.first
-//                    print(placemark?.locality)
-                    self.addressTextView.text = placemark?.name
-                    self.latitudeTextField.text = String(describing: placemark?.location?.coordinate.latitude)
-                    self.longitudeTextField.text = String(describing: placemark?.location?.coordinate.longitude)
+                if let placemarks = placemarks, placemarks.count > 0, let placemark = placemarks.first, let location = placemark.location {
+//                    print(placemark.locality)
+                    self.addressTextView.text = placemark.name
+                    self.latitudeTextField.text = String(describing: location.coordinate.latitude)
+                    self.longitudeTextField.text = String(describing: location.coordinate.longitude)
                 }
             } else {
                 print("地理编码失败")
@@ -87,11 +86,7 @@ class LocationViewController: UIViewController {
         }
         startUpdatingLocation()
         startMonitoring()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        longitudeTextField.resignFirstResponder()
-        latitudeTextField.resignFirstResponder()
+        latitudeTextField.becomeFirstResponder()
     }
 }
 
