@@ -12,8 +12,9 @@
 		1480104C21894DB200816B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104A21894DB200816B73 /* Main.storyboard */; };
 		1480104E21894DB300816B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480104D21894DB300816B73 /* Assets.xcassets */; };
 		1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104F21894DB300816B73 /* LaunchScreen.storyboard */; };
-		14B10AF0218956260011ADED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AEF218956260011ADED /* MapViewController.swift */; };
-		14B10AF2218956600011ADED /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* MapViewController.storyboard */; };
+		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
+		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
+		14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB50CE2189A26300F635F3 /* LocationTool.swift */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +26,9 @@
 		1480104D21894DB300816B73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1480105021894DB300816B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1480105221894DB300816B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14B10AEF218956260011ADED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		14B10AF1218956600011ADED /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
+		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		14DB50CE2189A26300F635F3 /* LocationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTool.swift; sourceTree = "<group>"; };
 		C553E8178B7026263E674F6A /* Pods-Business.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.debug.xcconfig"; sourceTree = "<group>"; };
 		EF91199787262547AE4AB2FD /* Pods_Business.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Business.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F240BFCB8FD6F5E607758ADB /* Pods-Business.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.release.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,8 +67,7 @@
 		1480104521894DB200816B73 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				14B10AEF218956260011ADED /* MapViewController.swift */,
-				14B10AF1218956600011ADED /* MapViewController.storyboard */,
+				14DB50CD21899C4800F635F3 /* Location */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -75,6 +76,16 @@
 				1480105221894DB300816B73 /* Info.plist */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		14DB50CD21899C4800F635F3 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				14B10AF321896F2D0011ADED /* LocationViewController.swift */,
+				14B10AF1218956600011ADED /* LocationViewController.storyboard */,
+				14DB50CE2189A26300F635F3 /* LocationTool.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		16867CACA5AF2B0C22BF4BE0 /* Pods */ = {
@@ -105,6 +116,7 @@
 				1480103F21894DB200816B73 /* Sources */,
 				1480104021894DB200816B73 /* Frameworks */,
 				1480104121894DB200816B73 /* Resources */,
+				8835D0269BEDEFA9982CC73A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +139,11 @@
 				TargetAttributes = {
 					1480104221894DB200816B73 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -153,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B10AF2218956600011ADED /* MapViewController.storyboard in Resources */,
+				14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
@@ -181,6 +198,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8835D0269BEDEFA9982CC73A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,8 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
+				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
-				14B10AF0218956260011ADED /* MapViewController.swift in Sources */,
 				1480104721894DB200816B73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -356,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
