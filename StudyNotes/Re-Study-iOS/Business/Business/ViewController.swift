@@ -13,7 +13,8 @@ fileprivate let reuseIdentifer = "reuseIdentifer"
 class ViewController: UITableViewController {
 
     lazy var dataSource: [[String : Any]] = {
-        let dataSource = [["classes" : [LocationViewController.self],
+        let dataSource = [["classes" : [LocationViewController.self,
+                                        MapViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource
