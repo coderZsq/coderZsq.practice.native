@@ -18,6 +18,7 @@ class NavigationMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "NavigationMap"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "BaiduMapKit", style: .plain, target: self, action: #selector(navigationBarButtonClick))
         let circle = MKCircle(center: mapView.centerCoordinate, radius: 100000)
         mapView.addOverlay(circle)
         geoCoder.geocodeAddressString("Shanghai") { [weak self] (placemarks, error)  in
@@ -28,6 +29,13 @@ class NavigationMapViewController: UIViewController {
                 self?.getRouteMessage(start: shanghai, end: beijing)
             })
         }
+    }
+    
+    @objc func navigationBarButtonClick() {
+        guard let viewController = UIStoryboard(name: "BaiduMapKitViewController", bundle: nil).instantiateInitialViewController() else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func getRouteMessage(start: CLPlacemark?, end: CLPlacemark?) {

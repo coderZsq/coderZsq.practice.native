@@ -20,6 +20,9 @@
 		14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD86C218AA3830019AC36 /* Annotation.swift */; };
 		14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD86E218AC2C70019AC36 /* NavigationMapViewController.swift */; };
 		14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFD870218AC3070019AC36 /* NavigationMapViewController.storyboard */; };
+		14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */; };
+		14EDAA79218BF1E400441973 /* BaiduMapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */; };
+		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,10 @@
 		14DFD86C218AA3830019AC36 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		14DFD86E218AC2C70019AC36 /* NavigationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMapViewController.swift; sourceTree = "<group>"; };
 		14DFD870218AC3070019AC36 /* NavigationMapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationMapViewController.storyboard; sourceTree = "<group>"; };
+		14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Business-Bridging-Header.h"; sourceTree = "<group>"; };
+		14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitTool.swift; sourceTree = "<group>"; };
+		14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitViewController.swift; sourceTree = "<group>"; };
+		14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaiduMapKitViewController.storyboard; sourceTree = "<group>"; };
 		C553E8178B7026263E674F6A /* Pods-Business.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.debug.xcconfig"; sourceTree = "<group>"; };
 		EF91199787262547AE4AB2FD /* Pods_Business.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Business.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F240BFCB8FD6F5E607758ADB /* Pods-Business.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.release.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 				1480104D21894DB300816B73 /* Assets.xcassets */,
 				1480104F21894DB300816B73 /* LaunchScreen.storyboard */,
 				1480105221894DB300816B73 /* Info.plist */,
+				14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -107,6 +115,9 @@
 				14DFD86C218AA3830019AC36 /* Annotation.swift */,
 				14DFD86E218AC2C70019AC36 /* NavigationMapViewController.swift */,
 				14DFD870218AC3070019AC36 /* NavigationMapViewController.storyboard */,
+				14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */,
+				14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */,
+				14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 				1480104021894DB200816B73 /* Frameworks */,
 				1480104121894DB200816B73 /* Resources */,
 				8835D0269BEDEFA9982CC73A /* [CP] Embed Pods Frameworks */,
+				0CA217E2360E8A7C277A7BDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +174,7 @@
 				TargetAttributes = {
 					1480104221894DB200816B73 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -199,12 +212,31 @@
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
+				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CA217E2360E8A7C277A7BDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		17B4052B96E23750AB479523 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,12 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
+				14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				14DFD868218A99000019AC36 /* MapViewController.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
 				1480104721894DB200816B73 /* AppDelegate.swift in Sources */,
+				14EDAA79218BF1E400441973 /* BaiduMapKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +435,7 @@
 			baseConfigurationReference = C553E8178B7026263E674F6A /* Pods-Business.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
@@ -410,6 +445,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Business/Business-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,6 +457,7 @@
 			baseConfigurationReference = F240BFCB8FD6F5E607758ADB /* Pods-Business.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
@@ -429,6 +467,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Business/Business-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

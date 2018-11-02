@@ -6,6 +6,7 @@ target 'Business' do
   use_frameworks!
 
   pod 'INTULocationManager'
+  pod 'BaiduMapKit'
   # Pods for Business
 
 end

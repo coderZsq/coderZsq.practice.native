@@ -1,16 +1,20 @@
 PODS:
+  - BaiduMapKit (3.3.2)
   - INTULocationManager (4.2.0)
 
 DEPENDENCIES:
+  - BaiduMapKit
   - INTULocationManager
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BaiduMapKit
     - INTULocationManager
 
 SPEC CHECKSUMS:
+  BaiduMapKit: 5118390d63b375483bd64c963e8e32a40fd9ddb5
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
 
-PODFILE CHECKSUM: e05e24fc177bf30c90798612f44cdce276d3a882
+PODFILE CHECKSUM: a0fcbc8696e6a5be83a97229e4d68c3d6178682d
 
 COCOAPODS: 1.5.3
