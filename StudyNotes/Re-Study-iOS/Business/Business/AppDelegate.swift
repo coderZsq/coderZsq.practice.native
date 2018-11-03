@@ -55,7 +55,17 @@ extension AppDelegate {
             let type = UIUserNotificationType(rawValue: UIUserNotificationType.alert.rawValue | UIUserNotificationType.badge.rawValue | UIUserNotificationType.sound.rawValue)
             let settings = UIUserNotificationSettings(types: type, categories: categories)
             UIApplication.shared.registerUserNotificationSettings(settings)
+            //注意 我们需要发送一个请求, 获取对应的deviceToken
+            //只要调用了一下方法, 系统会自动获取bundle id, uuid 发送请求, 不需要我们做任何处理
+            UIApplication.shared.registerForRemoteNotifications()
+        } else {
+            let type = UIRemoteNotificationType(rawValue: UIRemoteNotificationType.badge.rawValue | UIRemoteNotificationType.alert.rawValue | UIRemoteNotificationType.sound.rawValue)
+            UIApplication.shared.registerForRemoteNotifications(matching: type)
         }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print(deviceToken)
     }
 
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {

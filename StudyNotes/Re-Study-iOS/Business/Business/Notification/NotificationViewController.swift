@@ -13,7 +13,6 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Notification"
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func sendLocalNotificationButtonClick(_ sender: UIButton) {
