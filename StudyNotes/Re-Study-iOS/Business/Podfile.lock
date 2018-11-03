@@ -1,20 +1,28 @@
 PODS:
   - BaiduMapKit (3.3.2)
   - INTULocationManager (4.2.0)
+  - JCore (1.1.5)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
 
 DEPENDENCIES:
   - BaiduMapKit
   - INTULocationManager
+  - JPush
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BaiduMapKit
     - INTULocationManager
+    - JCore
+    - JPush
 
 SPEC CHECKSUMS:
   BaiduMapKit: 5118390d63b375483bd64c963e8e32a40fd9ddb5
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
 
-PODFILE CHECKSUM: a0fcbc8696e6a5be83a97229e4d68c3d6178682d
+PODFILE CHECKSUM: 164e0569a2dd71bd8a509fab8465f9a6bb2be462
 
 COCOAPODS: 1.5.3

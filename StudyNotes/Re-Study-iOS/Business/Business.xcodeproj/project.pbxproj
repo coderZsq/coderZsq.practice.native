@@ -19,6 +19,8 @@
 		14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C7A218D6B5600F0EBCD /* ADViewController.storyboard */; };
 		14919C7E218D741100F0EBCD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C7D218D741100F0EBCD /* NotificationViewController.swift */; };
 		14919C80218D742E00F0EBCD /* NotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */; };
+		14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C87218D96CA00F0EBCD /* SensorViewController.swift */; };
+		14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */; };
 		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
 		14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB50CE2189A26300F635F3 /* LocationTool.swift */; };
@@ -48,6 +50,9 @@
 		14919C7A218D6B5600F0EBCD /* ADViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADViewController.storyboard; sourceTree = "<group>"; };
 		14919C7D218D741100F0EBCD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationViewController.storyboard; sourceTree = "<group>"; };
+		14919C84218D916400F0EBCD /* Business.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Business.entitlements; sourceTree = "<group>"; };
+		14919C87218D96CA00F0EBCD /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SensorViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		14DB50CE2189A26300F635F3 /* LocationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTool.swift; sourceTree = "<group>"; };
@@ -103,12 +108,14 @@
 				14919C75218D429A00F0EBCD /* IAP */,
 				14919C7C218D6B6900F0EBCD /* AD */,
 				14919C81218D743700F0EBCD /* Notification */,
+				14919C8B218D96E100F0EBCD /* Sensor */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
 				1480104D21894DB300816B73 /* Assets.xcassets */,
 				1480104F21894DB300816B73 /* LaunchScreen.storyboard */,
 				1480105221894DB300816B73 /* Info.plist */,
+				14919C84218D916400F0EBCD /* Business.entitlements */,
 				14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */,
 			);
 			path = Business;
@@ -140,6 +147,15 @@
 				14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		14919C8B218D96E100F0EBCD /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				14919C87218D96CA00F0EBCD /* SensorViewController.swift */,
+				14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */,
+			);
+			path = Sensor;
 			sourceTree = "<group>";
 		};
 		14DB50CD21899C4800F635F3 /* Location */ = {
@@ -224,6 +240,12 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
 						};
 					};
 				};
@@ -258,6 +280,7 @@
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
 				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
+				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
 				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
@@ -334,6 +357,7 @@
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				14DFD868218A99000019AC36 /* MapViewController.swift in Sources */,
+				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
 				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
@@ -488,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Business/Business.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
@@ -511,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Business/Business.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;

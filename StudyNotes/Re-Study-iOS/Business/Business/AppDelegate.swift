@@ -14,8 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        guard let options = launchOptions else {
+            return true
+        }
+        if options[UIApplication.LaunchOptionsKey.remoteNotification] != nil {
+            print("接收到远程推送, 以后, 在这里, 做一些业务逻辑")
+        }
         BaiduMapKitTool.shared.authorization()
         notificationAuthorization()
+        jpush(with: launchOptions)
         return true
     }
     
@@ -30,6 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
+    
+    func jpush(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        if #available(iOS 8.0, *) {
+            let types = UIUserNotificationType.badge.rawValue | UIUserNotificationType.sound.rawValue | UIUserNotificationType.alert.rawValue
+            JPUSHService.register(forRemoteNotificationTypes: types, categories: nil)
+        } else {
+            JPUSHService.register(forRemoteNotificationTypes: UIRemoteNotificationType.badge.rawValue | UIRemoteNotificationType.sound.rawValue | UIRemoteNotificationType.alert.rawValue, categories: nil)
+        }
+        JPUSHService.setup(withOption: launchOptions, appKey: "appKey", channel: "App Store", apsForProduction: false)
+    }
     
     func notificationAuthorization() {
         if #available(iOS 8.0, *) {
@@ -63,16 +80,22 @@ extension AppDelegate {
             UIApplication.shared.registerForRemoteNotifications(matching: type)
         }
     }
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print(deviceToken)
-    }
+}
 
+extension AppDelegate {
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        application.applicationIconBadgeNumber = 0
+    }
+}
+
+extension AppDelegate {
+    
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
         print(8.0)
         completionHandler()
     }
-
+    
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, withResponseInfo responseInfo: [AnyHashable : Any], completionHandler: @escaping () -> Void) {
         print(9.0)
         if identifier == "action1" {
@@ -84,7 +107,19 @@ extension AppDelegate {
 
 extension AppDelegate {
     
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        application.applicationIconBadgeNumber = 0
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print(deviceToken)
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("接收到通知")
+        JPUSHService.handleRemoteNotification(userInfo)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("接收到通知")
+        JPUSHService.handleRemoteNotification(userInfo)
+        completionHandler(UIBackgroundFetchResult.newData)
     }
 }

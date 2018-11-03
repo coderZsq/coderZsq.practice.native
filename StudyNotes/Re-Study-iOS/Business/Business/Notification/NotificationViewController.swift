@@ -24,7 +24,7 @@ class NotificationViewController: UIViewController {
         notification.alertAction = "回复"
         notification.alertLaunchImage = ""
         if #available(iOS 8.2, *) {
-            notification.alertTitle = "title"
+            notification.alertTitle = "Business"
         }
         notification.soundName = ""
         notification.applicationIconBadgeNumber = 10
