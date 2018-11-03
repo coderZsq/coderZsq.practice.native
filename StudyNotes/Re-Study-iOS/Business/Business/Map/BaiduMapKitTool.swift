@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias POIResultClosure = (_ poiInfos: [BMKPoiInfo]) -> ()
-
 class BaiduMapKitTool: NSObject {
+    
+    typealias POIResultClosure = (_ poiInfos: [BMKPoiInfo]) -> ()
 
     static let shared = BaiduMapKitTool()
     

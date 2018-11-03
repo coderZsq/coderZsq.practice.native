@@ -9,9 +9,9 @@
 import UIKit
 import CoreLocation
 
-typealias ResultClosure = (_ location: CLLocation?, _ errorMessage: String?) -> ()
-
 class LocationTool: NSObject {
+
+    typealias ResultClosure = (_ location: CLLocation?, _ errorMessage: String?) -> ()
 
     static let shared = LocationTool()
     

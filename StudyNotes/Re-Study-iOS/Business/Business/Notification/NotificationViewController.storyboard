@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AbH-cO-dY5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="odE-jD-Dpz">
+            <objects>
+                <viewController id="AbH-cO-dY5" customClass="NotificationViewController" customModule="Business" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Q8-V7-NNq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q66-Sz-g94">
+                                <rect key="frame" x="101.5" y="40" width="172" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Haj-US-Umh">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                        <state key="normal" title="Send local notifications"/>
+                                        <connections>
+                                            <action selector="sendLocalNotificationButtonClick:" destination="AbH-cO-dY5" eventType="touchUpInside" id="Kkn-7s-LqB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-ti-jFw">
+                                        <rect key="frame" x="0.0" y="40" width="172" height="30"/>
+                                        <state key="normal" title="Cancel local notifications"/>
+                                        <connections>
+                                            <action selector="cancelLocalNotificationButtonClick:" destination="AbH-cO-dY5" eventType="touchUpInside" id="MHX-qL-xni"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38z-yr-uKm">
+                                        <rect key="frame" x="0.0" y="80" width="172" height="30"/>
+                                        <state key="normal" title="View local notifications"/>
+                                        <connections>
+                                            <action selector="viewLocalNotificationButtonClick:" destination="AbH-cO-dY5" eventType="touchUpInside" id="ug5-xc-QZc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q66-Sz-g94" firstAttribute="top" secondItem="Ccx-4Z-mpB" secondAttribute="top" constant="20" id="VhE-NZ-Teo"/>
+                            <constraint firstItem="Q66-Sz-g94" firstAttribute="centerX" secondItem="5Q8-V7-NNq" secondAttribute="centerX" id="wHk-3k-sMn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ccx-4Z-mpB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsU-mB-lId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="-261"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,6 +12,13 @@
 		1480104C21894DB200816B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104A21894DB200816B73 /* Main.storyboard */; };
 		1480104E21894DB300816B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480104D21894DB300816B73 /* Assets.xcassets */; };
 		1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104F21894DB300816B73 /* LaunchScreen.storyboard */; };
+		14919C72218D41C900F0EBCD /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C71218D41C900F0EBCD /* IAPViewController.swift */; };
+		14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C73218D428100F0EBCD /* IAPViewController.storyboard */; };
+		14919C77218D439900F0EBCD /* IAPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C76218D439900F0EBCD /* IAPTool.swift */; };
+		14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C78218D6B4A00F0EBCD /* ADViewController.swift */; };
+		14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C7A218D6B5600F0EBCD /* ADViewController.storyboard */; };
+		14919C7E218D741100F0EBCD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C7D218D741100F0EBCD /* NotificationViewController.swift */; };
+		14919C80218D742E00F0EBCD /* NotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */; };
 		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
 		14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB50CE2189A26300F635F3 /* LocationTool.swift */; };
@@ -34,6 +41,13 @@
 		1480104D21894DB300816B73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1480105021894DB300816B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1480105221894DB300816B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14919C71218D41C900F0EBCD /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
+		14919C73218D428100F0EBCD /* IAPViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPViewController.storyboard; sourceTree = "<group>"; };
+		14919C76218D439900F0EBCD /* IAPTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPTool.swift; sourceTree = "<group>"; };
+		14919C78218D6B4A00F0EBCD /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		14919C7A218D6B5600F0EBCD /* ADViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADViewController.storyboard; sourceTree = "<group>"; };
+		14919C7D218D741100F0EBCD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		14DB50CE2189A26300F635F3 /* LocationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTool.swift; sourceTree = "<group>"; };
@@ -86,6 +100,9 @@
 			children = (
 				14DB50CD21899C4800F635F3 /* Location */,
 				14DFD86B218A995B0019AC36 /* Map */,
+				14919C75218D429A00F0EBCD /* IAP */,
+				14919C7C218D6B6900F0EBCD /* AD */,
+				14919C81218D743700F0EBCD /* Notification */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -95,6 +112,34 @@
 				14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		14919C75218D429A00F0EBCD /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				14919C71218D41C900F0EBCD /* IAPViewController.swift */,
+				14919C73218D428100F0EBCD /* IAPViewController.storyboard */,
+				14919C76218D439900F0EBCD /* IAPTool.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		14919C7C218D6B6900F0EBCD /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				14919C78218D6B4A00F0EBCD /* ADViewController.swift */,
+				14919C7A218D6B5600F0EBCD /* ADViewController.storyboard */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		14919C81218D743700F0EBCD /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				14919C7D218D741100F0EBCD /* NotificationViewController.swift */,
+				14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		14DB50CD21899C4800F635F3 /* Location */ = {
@@ -206,10 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14919C80218D742E00F0EBCD /* NotificationViewController.storyboard in Resources */,
 				14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */,
 				14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */,
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
+				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
+				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
 				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
@@ -281,12 +329,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
+				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
 				14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				14DFD868218A99000019AC36 /* MapViewController.swift in Sources */,
+				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
+				14919C7E218D741100F0EBCD /* NotificationViewController.swift in Sources */,
+				14919C72218D41C900F0EBCD /* IAPViewController.swift in Sources */,
 				1480104721894DB200816B73 /* AppDelegate.swift in Sources */,
 				14EDAA79218BF1E400441973 /* BaiduMapKitViewController.swift in Sources */,
 			);
@@ -439,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = Business/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
