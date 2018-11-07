@@ -15,8 +15,11 @@ class ViewController: UITableViewController {
     lazy var dataSource: [[String : Any]] = {
         let dataSource = [["classes" : [LocationViewController.self,
                                         MapViewController.self,
+                                        IAPViewController.self,
+                                        ADViewController.self,
                                         NotificationViewController.self,
-                                        SensorViewController.self],
+                                        SensorViewController.self,
+                                        DynamicViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource

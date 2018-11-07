@@ -23,6 +23,8 @@
 		14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */; };
 		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
+		14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE321928BA3001F00D7 /* DynamicViewController.swift */; };
+		14D61DE621928BB2001F00D7 /* DynamicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D61DE521928BB2001F00D7 /* DynamicViewController.storyboard */; };
 		14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB50CE2189A26300F635F3 /* LocationTool.swift */; };
 		14DFD868218A99000019AC36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD867218A99000019AC36 /* MapViewController.swift */; };
 		14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFD869218A99120019AC36 /* MapViewController.storyboard */; };
@@ -55,6 +57,8 @@
 		14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SensorViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		14D61DE321928BA3001F00D7 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
+		14D61DE521928BB2001F00D7 /* DynamicViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicViewController.storyboard; sourceTree = "<group>"; };
 		14DB50CE2189A26300F635F3 /* LocationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTool.swift; sourceTree = "<group>"; };
 		14DFD867218A99000019AC36 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14DFD869218A99120019AC36 /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				14919C7C218D6B6900F0EBCD /* AD */,
 				14919C81218D743700F0EBCD /* Notification */,
 				14919C8B218D96E100F0EBCD /* Sensor */,
+				14D61DE721928BBB001F00D7 /* Dynamic */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -156,6 +161,15 @@
 				14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */,
 			);
 			path = Sensor;
+			sourceTree = "<group>";
+		};
+		14D61DE721928BBB001F00D7 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				14D61DE321928BA3001F00D7 /* DynamicViewController.swift */,
+				14D61DE521928BB2001F00D7 /* DynamicViewController.storyboard */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 		14DB50CD21899C4800F635F3 /* Location */ = {
@@ -283,6 +297,7 @@
 				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
+				14D61DE621928BB2001F00D7 /* DynamicViewController.storyboard in Resources */,
 				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
 				14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */,
