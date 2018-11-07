@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,7 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func jpush(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        if #available(iOS 8.0, *) {
+        if #available(iOS 10.0, *) {
+            let types = UNAuthorizationOptions.alert.rawValue | UNAuthorizationOptions.badge.rawValue | UNAuthorizationOptions.sound.rawValue | UNAuthorizationOptions.carPlay.rawValue
+            let entity = JPUSHRegisterEntity()
+            entity.types = Int(types)
+            JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
+        } else if #available(iOS 8.0, *) {
             let types = UIUserNotificationType.badge.rawValue | UIUserNotificationType.sound.rawValue | UIUserNotificationType.alert.rawValue
             JPUSHService.register(forRemoteNotificationTypes: types, categories: nil)
         } else {
@@ -49,7 +55,21 @@ extension AppDelegate {
     }
     
     func notificationAuthorization() {
-        if #available(iOS 8.0, *) {
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            let options = UNAuthorizationOptions.alert.rawValue | UNAuthorizationOptions.badge.rawValue | UNAuthorizationOptions.sound.rawValue | UNAuthorizationOptions.carPlay.rawValue
+            center.delegate = self
+            center.requestAuthorization(options: UNAuthorizationOptions(rawValue: options)) { (granted, error) in
+                if granted {
+                    print("注册成功")
+                    center.getNotificationSettings(completionHandler: { (settings) in
+                        print(settings)
+                    })
+                } else {
+                    print("注册失败")
+                }
+            }
+        } else if #available(iOS 8.0, *) {
             let category = UIMutableUserNotificationCategory()
             category.identifier = "category"
             let action1 = UIMutableUserNotificationAction()
@@ -89,6 +109,44 @@ extension AppDelegate {
     }
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        let request = notification.request
+        let content = request.content
+        let badge = content.badge
+        let body = content.body
+        let sound = content.sound
+        let subtitle = content.subtitle
+        let title = content.title
+        if notification.request.trigger is UNPushNotificationTrigger {
+            print("iOS 10 前台接收到远程通知" + "\(userInfo)")
+        } else {
+            print("iOS 10 前台接收到本地通知" + "\(String(describing: badge))" + "\(body)" + "\(String(describing: sound))" + "\(subtitle)" + "\(title)")
+        }
+        let options = UNNotificationPresentationOptions.alert.rawValue | UNNotificationPresentationOptions.badge.rawValue | UNNotificationPresentationOptions.sound.rawValue
+        completionHandler(UNNotificationPresentationOptions.init(rawValue: options))
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        let request = response.notification.request
+        let content = request.content
+        let badge = content.badge
+        let body = content.body
+        let sound = content.sound
+        let subtitle = content.subtitle
+        let title = content.title
+        if response.notification.request.trigger is UNPushNotificationTrigger {
+            print("iOS 10 接收到远程通知" + "\(userInfo)")
+        } else {
+            print("iOS 10 接收到远程通知" + "\(String(describing: badge))" + "\(body)" + "\(String(describing: sound))" + "\(subtitle)" + "\(title)")
+        }
+        completionHandler()
+    }
+}
+
 extension AppDelegate {
     
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
@@ -105,7 +163,16 @@ extension AppDelegate {
     }
 }
 
-extension AppDelegate {
+extension AppDelegate: JPUSHRegisterDelegate {
+    
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        
+    }
+    
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        JPUSHService.handleRemoteNotification(response.notification.request.content.userInfo)
+        completionHandler()
+    }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print(deviceToken)

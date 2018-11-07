@@ -33,31 +33,33 @@ class SensorViewController: UIViewController {
             }
         }
         
-        if !CMStepCounter.isStepCountingAvailable() {
-            print("计步器失效")
-            return
-        }
-        
-        let start = Date(timeIntervalSinceNow: -24 * 60 * 60)
-        let to = Date(timeIntervalSinceNow: 0)
-        stepCounter.queryStepCountStarting(from: start, to: to, to: OperationQueue.main) { (count, error) in
-            print(count)
-        }
-        
-        if !CMPedometer.isStepCountingAvailable() {
-            print("计步器不可用")
-            return
-        }
-        
-        let now = Date(timeIntervalSinceNow: 0)
-        pedometer.startUpdates(from: now) { (data, error) in
-            print(data ?? "")
-//            data?.numberOfSteps
-//            data?.distance
-//            data?.floorsAscended
-//            data?.floorsDescended
-//            data?.currentPace
-//            data?.currentCadence
+        if #available(iOS 8.0, *) {
+            if !CMPedometer.isStepCountingAvailable() {
+                print("计步器不可用")
+                return
+            }
+            
+            let now = Date(timeIntervalSinceNow: 0)
+            pedometer.startUpdates(from: now) { (data, error) in
+                print(data ?? "")
+                //            data?.numberOfSteps
+                //            data?.distance
+                //            data?.floorsAscended
+                //            data?.floorsDescended
+                //            data?.currentPace
+                //            data?.currentCadence
+            }
+        } else {
+            if !CMStepCounter.isStepCountingAvailable() {
+                print("计步器失效")
+                return
+            }
+            
+            let start = Date(timeIntervalSinceNow: -24 * 60 * 60)
+            let to = Date(timeIntervalSinceNow: 0)
+            stepCounter.queryStepCountStarting(from: start, to: to, to: OperationQueue.main) { (count, error) in
+                print(count)
+            }
         }
     }
     

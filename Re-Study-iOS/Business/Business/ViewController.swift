@@ -19,7 +19,8 @@ class ViewController: UITableViewController {
                                         ADViewController.self,
                                         NotificationViewController.self,
                                         SensorViewController.self,
-                                        DynamicViewController.self],
+                                        DynamicViewController.self,
+                                        Inter_AppViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource
