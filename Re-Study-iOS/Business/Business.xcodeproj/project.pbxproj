@@ -25,8 +25,8 @@
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
 		14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE321928BA3001F00D7 /* DynamicViewController.swift */; };
 		14D61DE621928BB2001F00D7 /* DynamicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D61DE521928BB2001F00D7 /* DynamicViewController.storyboard */; };
-		14D61DE9219296F4001F00D7 /* Inter-AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE8219296F4001F00D7 /* Inter-AppViewController.swift */; };
-		14D61DEB219296FC001F00D7 /* Inter-AppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D61DEA219296FC001F00D7 /* Inter-AppViewController.storyboard */; };
+		14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE8219296F4001F00D7 /* InterAppViewController.swift */; };
+		14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D61DEA219296FC001F00D7 /* InterAppViewController.storyboard */; };
 		14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB50CE2189A26300F635F3 /* LocationTool.swift */; };
 		14DFD868218A99000019AC36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD867218A99000019AC36 /* MapViewController.swift */; };
 		14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFD869218A99120019AC36 /* MapViewController.storyboard */; };
@@ -61,8 +61,8 @@
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		14D61DE321928BA3001F00D7 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
 		14D61DE521928BB2001F00D7 /* DynamicViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicViewController.storyboard; sourceTree = "<group>"; };
-		14D61DE8219296F4001F00D7 /* Inter-AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inter-AppViewController.swift"; sourceTree = "<group>"; };
-		14D61DEA219296FC001F00D7 /* Inter-AppViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Inter-AppViewController.storyboard"; sourceTree = "<group>"; };
+		14D61DE8219296F4001F00D7 /* InterAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterAppViewController.swift; sourceTree = "<group>"; };
+		14D61DEA219296FC001F00D7 /* InterAppViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterAppViewController.storyboard; sourceTree = "<group>"; };
 		14DB50CE2189A26300F635F3 /* LocationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTool.swift; sourceTree = "<group>"; };
 		14DFD867218A99000019AC36 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14DFD869218A99120019AC36 /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 		14D61DEC21929701001F00D7 /* Inter-App */ = {
 			isa = PBXGroup;
 			children = (
-				14D61DE8219296F4001F00D7 /* Inter-AppViewController.swift */,
-				14D61DEA219296FC001F00D7 /* Inter-AppViewController.storyboard */,
+				14D61DE8219296F4001F00D7 /* InterAppViewController.swift */,
+				14D61DEA219296FC001F00D7 /* InterAppViewController.storyboard */,
 			);
 			path = "Inter-App";
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
-				14D61DEB219296FC001F00D7 /* Inter-AppViewController.storyboard in Resources */,
+				14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */,
 				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
 				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
@@ -364,10 +364,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -388,7 +390,7 @@
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				14DFD868218A99000019AC36 /* MapViewController.swift in Sources */,
-				14D61DE9219296F4001F00D7 /* Inter-AppViewController.swift in Sources */,
+				14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */,
 				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
 				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,

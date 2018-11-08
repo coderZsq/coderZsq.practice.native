@@ -19,7 +19,7 @@ class DynamicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Dynamic"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,7 +28,7 @@ class DynamicViewController: UIViewController {
         if let point = touches.first?.location(in: view) {
             snap(point: point)
         }
-        push()
+//        push()
     }
     
     func push() {
@@ -54,9 +54,9 @@ class DynamicViewController: UIViewController {
     
     func gravity() {
         let behavior = UIGravityBehavior(items: [ipad_pro_12_9])
-        behavior.gravityDirection = CGVector(dx: 10, dy: 10)
-        behavior.angle = 0
-        behavior.magnitude = 100
+//        behavior.gravityDirection = CGVector(dx: 10, dy: 10)
+//        behavior.angle = 0
+//        behavior.magnitude = 100
         animator.addBehavior(behavior)
     }
 }

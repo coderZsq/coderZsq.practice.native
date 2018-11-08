@@ -8,6 +8,11 @@ target 'Business' do
   pod 'INTULocationManager'
   pod 'BaiduMapKit'
   pod 'JPush'
+  pod 'UMCCommon'
+  pod 'UMCSecurityPlugins'
+  pod 'UMCShare/UI'
+  pod 'UMCShare/Social/WeChat'
+  pod 'UMCShare/Social/AlipayShare'
   # Pods for Business
 
 end

@@ -25,7 +25,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>prefs</string>
+				<string>Prefs</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>business</string>
 			</array>
 		</dict>
 	</array>
@@ -33,6 +41,10 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>weixin</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -43,6 +55,8 @@
 	<string>Before iOS 8.0 Location Description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>After iOS 8.0 Location Description</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Motion Description</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

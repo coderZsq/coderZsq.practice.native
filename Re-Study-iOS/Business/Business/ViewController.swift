@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
                                         NotificationViewController.self,
                                         SensorViewController.self,
                                         DynamicViewController.self,
-                                        Inter_AppViewController.self],
+                                        InterAppViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource
@@ -67,4 +67,3 @@ extension ViewController {
         return self.dataSource[section]["titlefooter"] as? String
     }
 }
-

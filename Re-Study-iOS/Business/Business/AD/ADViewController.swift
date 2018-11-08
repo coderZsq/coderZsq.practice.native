@@ -19,6 +19,7 @@ class ADViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "AD"
         view.addSubview(adView)
     }
 }

@@ -13,8 +13,13 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var scheme: String?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        configUShareSettings()
+        configUSharePlatforms()
+        
         guard let options = launchOptions else {
             return true
         }
@@ -25,6 +30,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notificationAuthorization()
         jpush(with: launchOptions)
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print(url)
+        guard let host = url.host else {return true}
+        scheme = url.scheme
+        let nav = window?.rootViewController as! UINavigationController
+        let root = nav.topViewController
+        if host == "inter-app" {
+            if let vc = UIStoryboard(name: "InterAppViewController", bundle: nil).instantiateInitialViewController() {
+                root?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        
+        let result = UMSocialManager.default()?.handleOpen(url, options: options)
+        if result == nil {
+            //其他如支付等SDK的回调
+        }
+        return result ?? true
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
@@ -188,5 +212,34 @@ extension AppDelegate: JPUSHRegisterDelegate {
         print("接收到通知")
         JPUSHService.handleRemoteNotification(userInfo)
         completionHandler(UIBackgroundFetchResult.newData)
+    }
+}
+
+extension AppDelegate {
+    
+    func configUShareSettings() {
+        UMSocialGlobal.shareInstance()?.isUsingWaterMark = true
+        UMSocialGlobal.shareInstance()?.isUsingHttpsWhenShareContent = false
+    }
+    
+    func configUSharePlatforms() {
+        UMSocialManager.default()?.setPlaform(.wechatSession, appKey: "", appSecret: "", redirectURL: "")
+        UMSocialManager.default()?.setPlaform(.alipaySession, appKey: "", appSecret: "", redirectURL: "")
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let result = UMSocialManager.default()?.handleOpen(url, sourceApplication: sourceApplication, annotation: annotation)
+        if result == nil {
+            //其他如支付等SDK的回调
+        }
+        return result ?? true
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        let result = UMSocialManager.default()?.handleOpen(url)
+        if result == nil {
+            //其他如支付等SDK的回调
+        }
+        return result ?? true
     }
 }
