@@ -17,40 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-ee-DMM">
-                                <rect key="frame" x="63" y="182" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AddressBookUI"/>
-                                <connections>
-                                    <action selector="addressBookUIButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="zFc-kz-34i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-73-pmV">
-                                <rect key="frame" x="79" y="228" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AddressBook"/>
-                                <connections>
-                                    <action selector="addressBookButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="8zK-nI-pDO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-JK-Kgt">
-                                <rect key="frame" x="86" y="280" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ContactsUI"/>
-                                <connections>
-                                    <action selector="contactsUIButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="lTp-om-fvN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNK-qa-HDD">
-                                <rect key="frame" x="93" y="331" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Contacts"/>
-                                <connections>
-                                    <action selector="contactsButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="Xaq-mL-MZ2"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sKk-sx-nzg">
+                                <rect key="frame" x="134.5" y="108.5" width="106" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-ee-DMM">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                        <state key="normal" title="AddressBookUI"/>
+                                        <connections>
+                                            <action selector="addressBookUIButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="zFc-kz-34i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-73-pmV">
+                                        <rect key="frame" x="7.5" y="40" width="91" height="30"/>
+                                        <state key="normal" title="AddressBook"/>
+                                        <connections>
+                                            <action selector="addressBookButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="8zK-nI-pDO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-JK-Kgt">
+                                        <rect key="frame" x="14.5" y="80" width="77" height="30"/>
+                                        <state key="normal" title="ContactsUI"/>
+                                        <connections>
+                                            <action selector="contactsUIButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="lTp-om-fvN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNK-qa-HDD">
+                                        <rect key="frame" x="22" y="120" width="62" height="30"/>
+                                        <state key="normal" title="Contacts"/>
+                                        <connections>
+                                            <action selector="contactsButtonClick:" destination="KPX-CL-B8p" eventType="touchUpInside" id="Xaq-mL-MZ2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sKk-sx-nzg" firstAttribute="centerX" secondItem="pUe-um-zeI" secondAttribute="centerX" id="Gg5-rV-7WK"/>
+                            <constraint firstItem="sKk-sx-nzg" firstAttribute="centerY" secondItem="pUe-um-zeI" secondAttribute="centerY" constant="-150" id="ieT-Td-7Sm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C57-AX-UAm"/>
                     </view>
                 </viewController>
