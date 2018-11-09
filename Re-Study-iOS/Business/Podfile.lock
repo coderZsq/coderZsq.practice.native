@@ -4,6 +4,8 @@ PODS:
   - JCore (1.1.5)
   - JPush (3.0.6):
     - JCore (~> 1.1.1)
+  - UMCAnalytics (5.5.2):
+    - UMCCommon
   - UMCCommon (1.5.3)
   - UMCSecurityPlugins (1.0.6)
   - UMCShare/Core (6.9.5):
@@ -26,6 +28,7 @@ DEPENDENCIES:
   - BaiduMapKit
   - INTULocationManager
   - JPush
+  - UMCAnalytics
   - UMCCommon
   - UMCSecurityPlugins
   - UMCShare/Social/AlipayShare
@@ -38,6 +41,7 @@ SPEC REPOS:
     - INTULocationManager
     - JCore
     - JPush
+    - UMCAnalytics
     - UMCCommon
     - UMCSecurityPlugins
     - UMCShare
@@ -47,10 +51,11 @@ SPEC CHECKSUMS:
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  UMCAnalytics: 6654fd3c8201ff6da5c86a3ae29cd5c8436d3b7b
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
 
-PODFILE CHECKSUM: d6aca065e68f4b5503e6c2f951c2df7ffb02b786
+PODFILE CHECKSUM: 6aa8b920495fe52af0b99d0dd75073d912990107
 
 COCOAPODS: 1.5.3

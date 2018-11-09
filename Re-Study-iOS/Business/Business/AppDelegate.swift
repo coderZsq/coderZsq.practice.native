@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        MobClick.setScenarioType(eScenarioType.E_UM_NORMAL)
+        MobClick.setCrashReportEnabled(true)
+        
+        UMConfigure.setEncryptEnabled(true)
+        UMConfigure.setLogEnabled(true)
+        UMConfigure.initWithAppkey("5be3ca05b465f545560004c5", channel: "App Store")
+        let deviceID = UMConfigure.deviceIDForIntegration()
+        if deviceID != nil {
+            print("服务器成功返回deviceID")
+        } else {
+            print("服务器还没有返回deviceID")
+        }
+        
         configUShareSettings()
         configUSharePlatforms()
         
@@ -223,6 +236,7 @@ extension AppDelegate {
     }
     
     func configUSharePlatforms() {
+        UMSocialManager.default()?.openLog(true)
         UMSocialManager.default()?.setPlaform(.wechatSession, appKey: "", appSecret: "", redirectURL: "")
         UMSocialManager.default()?.setPlaform(.alipaySession, appKey: "", appSecret: "", redirectURL: "")
     }

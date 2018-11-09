@@ -16,8 +16,52 @@ class InterAppViewController: UIViewController {
         title = "Inter-App"
     }
     
-    @IBAction func umengButtonClick(_ sender: UIButton) {
-        
+    @IBAction func umengLoginButtonClick(_ sender: UIButton) {
+        getUserInfoFor(platformType: UMSocialPlatformType.wechatSession)
+    }
+    
+    @IBAction func umengShareButtonClick(_ sender: UIButton) {
+        UMSocialUIManager.setPreDefinePlatforms([UMSocialPlatformType.wechatSession, UMSocialPlatformType.alipaySession])
+        UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) in
+            
+        }
+    }
+    
+    func getUserInfoFor(platformType: UMSocialPlatformType) {
+        UMSocialManager.default()?.getUserInfo(with: platformType, currentViewController: nil, completion: { (result, error) in
+            if let resp = result as? UMSocialUserInfoResponse {
+                print(resp.uid)
+                print(resp.openid)
+                print(resp.accessToken)
+                print(resp.refreshToken)
+                print(resp.expiration)
+                
+                print(resp.name)
+                print(resp.iconurl)
+                print(resp.unionGender)
+                
+                print(resp.originalResponse)
+            }
+        })
+    }
+    
+    func shareWebPageTo(platformType: UMSocialPlatformType) {
+        let messageObject = UMSocialMessageObject()
+        let thumbURL = "https://avatars1.githubusercontent.com/u/19483268?s=400&u=d48e3738917cf27757bdeaa38bd2f80cdeea532c&v=4"
+        let shareObject = UMShareWebpageObject.shareObject(withTitle: "Castie!", descr: "Notes", thumImage: thumbURL)
+        shareObject?.webpageUrl = "https://github.com/coderZsq"
+        UMSocialManager.default()?.share(to: platformType, messageObject: messageObject, currentViewController: self, completion: { (data, error) in
+            if error != nil {
+                print(error ?? "")
+            } else {
+                guard let resp = data as? UMSocialShareResponse else {
+                    print(data ?? "")
+                    return
+                }
+                print(resp.message ?? "")
+                print(resp.originalResponse ?? "")
+            }
+        })
     }
     
     @IBAction func socialButtonClick(_ sender: UIButton) {

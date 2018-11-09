@@ -10,6 +10,7 @@ target 'Business' do
   pod 'JPush'
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
+  pod 'UMCAnalytics'
   pod 'UMCShare/UI'
   pod 'UMCShare/Social/WeChat'
   pod 'UMCShare/Social/AlipayShare'
