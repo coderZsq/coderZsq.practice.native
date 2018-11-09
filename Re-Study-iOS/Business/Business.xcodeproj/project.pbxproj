@@ -12,6 +12,8 @@
 		1480104C21894DB200816B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104A21894DB200816B73 /* Main.storyboard */; };
 		1480104E21894DB300816B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480104D21894DB300816B73 /* Assets.xcassets */; };
 		1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104F21894DB300816B73 /* LaunchScreen.storyboard */; };
+		148A72A321956E4A003FC473 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148A72A221956E4A003FC473 /* AddressViewController.swift */; };
+		148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148A72A421956E61003FC473 /* AddressViewController.storyboard */; };
 		14919C72218D41C900F0EBCD /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C71218D41C900F0EBCD /* IAPViewController.swift */; };
 		14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C73218D428100F0EBCD /* IAPViewController.storyboard */; };
 		14919C77218D439900F0EBCD /* IAPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C76218D439900F0EBCD /* IAPTool.swift */; };
@@ -47,6 +49,9 @@
 		1480104D21894DB300816B73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1480105021894DB300816B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1480105221894DB300816B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148A72732195681D003FC473 /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStaticLibrary.a; path = ../../../../../Desktop/libStaticLibrary.a; sourceTree = "<group>"; };
+		148A72A221956E4A003FC473 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		148A72A421956E61003FC473 /* AddressViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddressViewController.storyboard; sourceTree = "<group>"; };
 		14919C71218D41C900F0EBCD /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		14919C73218D428100F0EBCD /* IAPViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPViewController.storyboard; sourceTree = "<group>"; };
 		14919C76218D439900F0EBCD /* IAPTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPTool.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 				14919C8B218D96E100F0EBCD /* Sensor */,
 				14D61DE721928BBB001F00D7 /* Dynamic */,
 				14D61DEC21929701001F00D7 /* Inter-App */,
+				148A72A621956E6B003FC473 /* Address */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -129,6 +135,15 @@
 				14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		148A72A621956E6B003FC473 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				148A72A221956E4A003FC473 /* AddressViewController.swift */,
+				148A72A421956E61003FC473 /* AddressViewController.storyboard */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		14919C75218D429A00F0EBCD /* IAP */ = {
@@ -223,6 +238,7 @@
 		F50FB5A093414B78BE88B029 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				148A72732195681D003FC473 /* libStaticLibrary.a */,
 				EF91199787262547AE4AB2FD /* Pods_Business.framework */,
 			);
 			name = Frameworks;
@@ -257,7 +273,7 @@
 		1480103B21894DB200816B73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Castie!";
 				TargetAttributes = {
@@ -307,6 +323,7 @@
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
+				148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */,
 				14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */,
 				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
 				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
@@ -389,6 +406,7 @@
 				14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
+				148A72A321956E4A003FC473 /* AddressViewController.swift in Sources */,
 				14DFD868218A99000019AC36 /* MapViewController.swift in Sources */,
 				14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */,
 				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
@@ -555,6 +573,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Business",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Business/Business-Bridging-Header.h";
@@ -578,6 +600,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Business",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";

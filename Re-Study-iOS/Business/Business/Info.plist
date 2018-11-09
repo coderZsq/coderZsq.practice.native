@@ -66,6 +66,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSContactsUsageDescription</key>
+	<string>Contacts Description</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>After iOS 8.0 Location Description</string>
 	<key>NSLocationAlwaysUsageDescription</key>
