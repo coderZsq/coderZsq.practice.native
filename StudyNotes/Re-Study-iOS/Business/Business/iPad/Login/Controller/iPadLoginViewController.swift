@@ -17,16 +17,24 @@ class iPadLoginViewController: UIViewController {
     @IBOutlet weak var autoLoginSwitch: UISwitch!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-    @IBAction func loginButtonClick(_ sender: UIButton) {
+    @IBAction func loginButtonClick(_ sender: UIButton?) {
         view.isUserInteractionEnabled = false
         indicator.startAnimating()
         if let account = accountTextField.text, let password = passwordTextField.text {
             LoginTool.login(account: account, password: password) { (isSuccess) in
                 if isSuccess {
                     print("成功")
+                    if let vc = UIStoryboard(name: "iPadHomeViewController", bundle: nil).instantiateInitialViewController() {
+                        self.present(vc, animated: false, completion: nil)
+                    }
                 } else {
                     print("失败")
                     ShowMessageTool.showMessage("Account or Password is Wrong")
+                    let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+                    animation.values = [-20, 0, 20, 0]
+                    animation.repeatCount = 3
+                    animation.duration = 0.1
+                    self.animatedView.layer.add(animation, forKey: "error")
                 }
                 self.view.isUserInteractionEnabled = true
                 self.indicator.stopAnimating()
@@ -51,7 +59,6 @@ class iPadLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "iPad"
-//        setNeedsStatusBarAppearanceUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,15 +76,12 @@ class iPadLoginViewController: UIViewController {
 
 extension iPadLoginViewController: UITextFieldDelegate {
     
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == accountTextField {
             passwordTextField.becomeFirstResponder()
         } else {
             print("登录操作")
+            loginButtonClick(nil)
         }
         return true
     }

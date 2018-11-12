@@ -28,6 +28,17 @@
 		14AFA47221991FE400BCB6A7 /* iPadLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47121991FE400BCB6A7 /* iPadLoginViewController.swift */; };
 		14AFA47421992B0F00BCB6A7 /* LoginTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47321992B0F00BCB6A7 /* LoginTool.swift */; };
 		14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */; };
+		14AFA47821993E2000BCB6A7 /* iPadHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47721993E2000BCB6A7 /* iPadHomeViewController.swift */; };
+		14AFA47A21993E4400BCB6A7 /* iPadHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AFA47921993E4400BCB6A7 /* iPadHomeViewController.storyboard */; };
+		14AFA47C219940A300BCB6A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47B219940A300BCB6A7 /* UIView+Extension.swift */; };
+		14AFA47E219944AB00BCB6A7 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47D219944AB00BCB6A7 /* Const.swift */; };
+		14AFA4802199468600BCB6A7 /* iPadDockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47F2199468600BCB6A7 /* iPadDockView.swift */; };
+		14AFA4822199489C00BCB6A7 /* iPadTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA4812199489C00BCB6A7 /* iPadTabbarView.swift */; };
+		14AFA4842199511E00BCB6A7 /* iPadMiddleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA4832199511E00BCB6A7 /* iPadMiddleMenuView.swift */; };
+		14AFA4862199531800BCB6A7 /* iPadMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA4852199531800BCB6A7 /* iPadMenuButton.swift */; };
+		14AFA4882199576B00BCB6A7 /* iPadHeadIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA4872199576B00BCB6A7 /* iPadHeadIconButton.swift */; };
+		14AFA48C2199638D00BCB6A7 /* iPadMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA48B2199638D00BCB6A7 /* iPadMoodViewController.swift */; };
+		14AFA490219969AF00BCB6A7 /* iPadAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA48F219969AF00BCB6A7 /* iPadAllViewController.swift */; };
 		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
 		14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE321928BA3001F00D7 /* DynamicViewController.swift */; };
@@ -70,6 +81,17 @@
 		14AFA47121991FE400BCB6A7 /* iPadLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadLoginViewController.swift; sourceTree = "<group>"; };
 		14AFA47321992B0F00BCB6A7 /* LoginTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTool.swift; sourceTree = "<group>"; };
 		14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMessageTool.swift; sourceTree = "<group>"; };
+		14AFA47721993E2000BCB6A7 /* iPadHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadHomeViewController.swift; sourceTree = "<group>"; };
+		14AFA47921993E4400BCB6A7 /* iPadHomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadHomeViewController.storyboard; sourceTree = "<group>"; };
+		14AFA47B219940A300BCB6A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		14AFA47D219944AB00BCB6A7 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		14AFA47F2199468600BCB6A7 /* iPadDockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadDockView.swift; sourceTree = "<group>"; };
+		14AFA4812199489C00BCB6A7 /* iPadTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadTabbarView.swift; sourceTree = "<group>"; };
+		14AFA4832199511E00BCB6A7 /* iPadMiddleMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMiddleMenuView.swift; sourceTree = "<group>"; };
+		14AFA4852199531800BCB6A7 /* iPadMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMenuButton.swift; sourceTree = "<group>"; };
+		14AFA4872199576B00BCB6A7 /* iPadHeadIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadHeadIconButton.swift; sourceTree = "<group>"; };
+		14AFA48B2199638D00BCB6A7 /* iPadMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMoodViewController.swift; sourceTree = "<group>"; };
+		14AFA48F219969AF00BCB6A7 /* iPadAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadAllViewController.swift; sourceTree = "<group>"; };
 		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		14D61DE321928BA3001F00D7 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +217,8 @@
 		14AFA461219919E100BCB6A7 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				14AFA48D219969A500BCB6A7 /* All */,
+				14AFA4892199636E00BCB6A7 /* Mood */,
 				14AFA46621991B2B00BCB6A7 /* Home */,
 				14AFA46221991B2A00BCB6A7 /* Login */,
 				14AFA46A21991B5F00BCB6A7 /* Other */,
@@ -249,6 +273,8 @@
 		14AFA46721991B2B00BCB6A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				14AFA47721993E2000BCB6A7 /* iPadHomeViewController.swift */,
+				14AFA47921993E4400BCB6A7 /* iPadHomeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +289,11 @@
 		14AFA46921991B2B00BCB6A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				14AFA47F2199468600BCB6A7 /* iPadDockView.swift */,
+				14AFA4812199489C00BCB6A7 /* iPadTabbarView.swift */,
+				14AFA4832199511E00BCB6A7 /* iPadMiddleMenuView.swift */,
+				14AFA4852199531800BCB6A7 /* iPadMenuButton.swift */,
+				14AFA4872199576B00BCB6A7 /* iPadHeadIconButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +303,7 @@
 			children = (
 				14AFA46B21991B5F00BCB6A7 /* System */,
 				14AFA46C21991B5F00BCB6A7 /* Tool */,
+				14AFA47D219944AB00BCB6A7 /* Const.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -288,8 +320,41 @@
 			children = (
 				14AFA47321992B0F00BCB6A7 /* LoginTool.swift */,
 				14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */,
+				14AFA47B219940A300BCB6A7 /* UIView+Extension.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		14AFA4892199636E00BCB6A7 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA48A2199636E00BCB6A7 /* Controller */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		14AFA48A2199636E00BCB6A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA48B2199638D00BCB6A7 /* iPadMoodViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14AFA48D219969A500BCB6A7 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA48E219969A500BCB6A7 /* Controller */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		14AFA48E219969A500BCB6A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA48F219969AF00BCB6A7 /* iPadAllViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		14D61DE721928BBB001F00D7 /* Dynamic */ = {
@@ -436,6 +501,7 @@
 				148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */,
 				14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */,
 				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
+				14AFA47A21993E4400BCB6A7 /* iPadHomeViewController.storyboard in Resources */,
 				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
@@ -509,10 +575,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
+				14AFA47821993E2000BCB6A7 /* iPadHomeViewController.swift in Sources */,
 				14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */,
+				14AFA48C2199638D00BCB6A7 /* iPadMoodViewController.swift in Sources */,
 				14AFA47021991D8800BCB6A7 /* iPadViewController.swift in Sources */,
+				14AFA4822199489C00BCB6A7 /* iPadTabbarView.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
+				14AFA490219969AF00BCB6A7 /* iPadAllViewController.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				148A72A321956E4A003FC473 /* AddressViewController.swift in Sources */,
@@ -520,13 +590,19 @@
 				14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */,
 				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
 				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
+				14AFA4862199531800BCB6A7 /* iPadMenuButton.swift in Sources */,
 				14AFA47221991FE400BCB6A7 /* iPadLoginViewController.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
+				14AFA47C219940A300BCB6A7 /* UIView+Extension.swift in Sources */,
+				14AFA4842199511E00BCB6A7 /* iPadMiddleMenuView.swift in Sources */,
 				14AFA47421992B0F00BCB6A7 /* LoginTool.swift in Sources */,
+				14AFA4802199468600BCB6A7 /* iPadDockView.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
+				14AFA4882199576B00BCB6A7 /* iPadHeadIconButton.swift in Sources */,
 				14919C7E218D741100F0EBCD /* NotificationViewController.swift in Sources */,
 				14919C72218D41C900F0EBCD /* IAPViewController.swift in Sources */,
 				1480104721894DB200816B73 /* AppDelegate.swift in Sources */,
+				14AFA47E219944AB00BCB6A7 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
