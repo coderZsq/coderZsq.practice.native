@@ -23,6 +23,11 @@
 		14919C80218D742E00F0EBCD /* NotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C7F218D742E00F0EBCD /* NotificationViewController.storyboard */; };
 		14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14919C87218D96CA00F0EBCD /* SensorViewController.swift */; };
 		14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */; };
+		14AFA460219919DA00BCB6A7 /* iPadViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AFA45F219919DA00BCB6A7 /* iPadViewController.storyboard */; };
+		14AFA47021991D8800BCB6A7 /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA46F21991D8800BCB6A7 /* iPadViewController.swift */; };
+		14AFA47221991FE400BCB6A7 /* iPadLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47121991FE400BCB6A7 /* iPadLoginViewController.swift */; };
+		14AFA47421992B0F00BCB6A7 /* LoginTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47321992B0F00BCB6A7 /* LoginTool.swift */; };
+		14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */; };
 		14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B10AF1218956600011ADED /* LocationViewController.storyboard */; };
 		14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B10AF321896F2D0011ADED /* LocationViewController.swift */; };
 		14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D61DE321928BA3001F00D7 /* DynamicViewController.swift */; };
@@ -35,8 +40,6 @@
 		14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD86C218AA3830019AC36 /* Annotation.swift */; };
 		14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DFD86E218AC2C70019AC36 /* NavigationMapViewController.swift */; };
 		14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFD870218AC3070019AC36 /* NavigationMapViewController.storyboard */; };
-		14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */; };
-		14EDAA79218BF1E400441973 /* BaiduMapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */; };
 		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,11 @@
 		14919C84218D916400F0EBCD /* Business.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Business.entitlements; sourceTree = "<group>"; };
 		14919C87218D96CA00F0EBCD /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SensorViewController.storyboard; sourceTree = "<group>"; };
+		14AFA45F219919DA00BCB6A7 /* iPadViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadViewController.storyboard; sourceTree = "<group>"; };
+		14AFA46F21991D8800BCB6A7 /* iPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPadViewController.swift; sourceTree = "<group>"; };
+		14AFA47121991FE400BCB6A7 /* iPadLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadLoginViewController.swift; sourceTree = "<group>"; };
+		14AFA47321992B0F00BCB6A7 /* LoginTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTool.swift; sourceTree = "<group>"; };
+		14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMessageTool.swift; sourceTree = "<group>"; };
 		14B10AF1218956600011ADED /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		14B10AF321896F2D0011ADED /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		14D61DE321928BA3001F00D7 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				14D61DE721928BBB001F00D7 /* Dynamic */,
 				14D61DEC21929701001F00D7 /* Inter-App */,
 				148A72A621956E6B003FC473 /* Address */,
+				14AFA461219919E100BCB6A7 /* iPad */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -181,6 +190,106 @@
 				14919C89218D96DC00F0EBCD /* SensorViewController.storyboard */,
 			);
 			path = Sensor;
+			sourceTree = "<group>";
+		};
+		14AFA461219919E100BCB6A7 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA46621991B2B00BCB6A7 /* Home */,
+				14AFA46221991B2A00BCB6A7 /* Login */,
+				14AFA46A21991B5F00BCB6A7 /* Other */,
+				14AFA46F21991D8800BCB6A7 /* iPadViewController.swift */,
+				14AFA45F219919DA00BCB6A7 /* iPadViewController.storyboard */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		14AFA46221991B2A00BCB6A7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA46321991B2A00BCB6A7 /* Controller */,
+				14AFA46421991B2A00BCB6A7 /* Model */,
+				14AFA46521991B2A00BCB6A7 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		14AFA46321991B2A00BCB6A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA47121991FE400BCB6A7 /* iPadLoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14AFA46421991B2A00BCB6A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14AFA46521991B2A00BCB6A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14AFA46621991B2B00BCB6A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA46721991B2B00BCB6A7 /* Controller */,
+				14AFA46821991B2B00BCB6A7 /* Model */,
+				14AFA46921991B2B00BCB6A7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		14AFA46721991B2B00BCB6A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14AFA46821991B2B00BCB6A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14AFA46921991B2B00BCB6A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14AFA46A21991B5F00BCB6A7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA46B21991B5F00BCB6A7 /* System */,
+				14AFA46C21991B5F00BCB6A7 /* Tool */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		14AFA46B21991B5F00BCB6A7 /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		14AFA46C21991B5F00BCB6A7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				14AFA47321992B0F00BCB6A7 /* LoginTool.swift */,
+				14AFA47521992ED400BCB6A7 /* ShowMessageTool.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		14D61DE721928BBB001F00D7 /* Dynamic */ = {
@@ -321,6 +430,7 @@
 				14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */,
 				14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */,
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
+				14AFA460219919DA00BCB6A7 /* iPadViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
 				148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */,
@@ -380,12 +490,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-resources.sh",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,9 +509,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
+				14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */,
+				14AFA47021991D8800BCB6A7 /* iPadViewController.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
-				14EDAA77218BF03700441973 /* BaiduMapKitTool.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				148A72A321956E4A003FC473 /* AddressViewController.swift in Sources */,
@@ -411,12 +520,13 @@
 				14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */,
 				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
 				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
+				14AFA47221991FE400BCB6A7 /* iPadLoginViewController.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
+				14AFA47421992B0F00BCB6A7 /* LoginTool.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
 				14919C7E218D741100F0EBCD /* NotificationViewController.swift in Sources */,
 				14919C72218D41C900F0EBCD /* IAPViewController.swift in Sources */,
 				1480104721894DB200816B73 /* AppDelegate.swift in Sources */,
-				14EDAA79218BF1E400441973 /* BaiduMapKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

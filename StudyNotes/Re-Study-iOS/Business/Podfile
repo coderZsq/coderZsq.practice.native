@@ -6,7 +6,7 @@ target 'Business' do
   use_frameworks!
 
   pod 'INTULocationManager'
-  pod 'BaiduMapKit'
+#  pod 'BaiduMapKit'
   pod 'JPush'
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'

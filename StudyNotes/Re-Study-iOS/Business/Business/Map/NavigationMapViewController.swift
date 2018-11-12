@@ -32,10 +32,10 @@ class NavigationMapViewController: UIViewController {
     }
     
     @objc func navigationBarButtonClick() {
-        guard let viewController = UIStoryboard(name: "BaiduMapKitViewController", bundle: nil).instantiateInitialViewController() else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
+//        guard let viewController = UIStoryboard(name: "BaiduMapKitViewController", bundle: nil).instantiateInitialViewController() else {
+//            return
+//        }
+//        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func getRouteMessage(start: CLPlacemark?, end: CLPlacemark?) {

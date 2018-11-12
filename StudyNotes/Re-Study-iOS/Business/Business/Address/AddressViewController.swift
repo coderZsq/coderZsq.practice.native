@@ -27,7 +27,7 @@ class AddressViewController: UIViewController {
     }
     
     @IBAction func contactsButtonClick(_ sender: UIButton) {
-        var contactStore = CNContactStore()
+        let contactStore = CNContactStore()
         let status = CNContactStore.authorizationStatus(for: .contacts)
         if status == .notDetermined {
             contactStore.requestAccess(for: .contacts) { (granted, error) in

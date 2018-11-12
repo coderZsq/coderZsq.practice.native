@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var scheme: String?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {        
         
         MobClick.setScenarioType(eScenarioType.E_UM_NORMAL)
         MobClick.setCrashReportEnabled(true)
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if options[UIApplication.LaunchOptionsKey.remoteNotification] != nil {
             print("接收到远程推送, 以后, 在这里, 做一些业务逻辑")
         }
-        BaiduMapKitTool.shared.authorization()
+//        BaiduMapKitTool.shared.authorization()
         notificationAuthorization()
         jpush(with: launchOptions)
         return true

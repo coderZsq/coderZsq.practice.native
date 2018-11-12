@@ -1,5 +1,4 @@
 PODS:
-  - BaiduMapKit (3.3.2)
   - INTULocationManager (4.2.0)
   - JCore (1.1.5)
   - JPush (3.0.6):
@@ -25,7 +24,6 @@ PODS:
     - UMCShare/Core
 
 DEPENDENCIES:
-  - BaiduMapKit
   - INTULocationManager
   - JPush
   - UMCAnalytics
@@ -37,7 +35,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - BaiduMapKit
     - INTULocationManager
     - JCore
     - JPush
@@ -47,7 +44,6 @@ SPEC REPOS:
     - UMCShare
 
 SPEC CHECKSUMS:
-  BaiduMapKit: 5118390d63b375483bd64c963e8e32a40fd9ddb5
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
@@ -56,6 +52,6 @@ SPEC CHECKSUMS:
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
 
-PODFILE CHECKSUM: 6aa8b920495fe52af0b99d0dd75073d912990107
+PODFILE CHECKSUM: 4463ef1c0c81711b0bdc232cbbcdc055050b55c6
 
 COCOAPODS: 1.5.3
