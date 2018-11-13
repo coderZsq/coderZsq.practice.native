@@ -22,7 +22,8 @@ class ViewController: UITableViewController {
                                         DynamicViewController.self,
                                         InterAppViewController.self,
                                         AddressViewController.self,
-                                        iPadViewController.self],
+                                        iPadViewController.self,
+                                        AudioViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource

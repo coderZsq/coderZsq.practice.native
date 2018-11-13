@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468A1E8219A691200B8B449 /* AudioViewController.swift */; };
+		1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468A1EA219A692600B8B449 /* AudioViewController.storyboard */; };
 		1480104721894DB200816B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480104621894DB200816B73 /* AppDelegate.swift */; };
 		1480104921894DB200816B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480104821894DB200816B73 /* ViewController.swift */; };
 		1480104C21894DB200816B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104A21894DB200816B73 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1468A1E8219A691200B8B449 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		1468A1EA219A692600B8B449 /* AudioViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioViewController.storyboard; sourceTree = "<group>"; };
 		1480104321894DB200816B73 /* Business.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Business.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1480104621894DB200816B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1480104821894DB200816B73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1468A1EC219A692E00B8B449 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				1468A1E8219A691200B8B449 /* AudioViewController.swift */,
+				1468A1EA219A692600B8B449 /* AudioViewController.storyboard */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		1480103A21894DB200816B73 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 				14D61DEC21929701001F00D7 /* Inter-App */,
 				148A72A621956E6B003FC473 /* Address */,
 				14AFA461219919E100BCB6A7 /* iPad */,
+				1468A1EC219A692E00B8B449 /* Music */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -504,6 +518,7 @@
 				14AFA47A21993E4400BCB6A7 /* iPadHomeViewController.storyboard in Resources */,
 				14919C8A218D96DC00F0EBCD /* SensorViewController.storyboard in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
+				1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
 				14D61DE621928BB2001F00D7 /* DynamicViewController.storyboard in Resources */,
 				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
@@ -580,6 +595,7 @@
 				14AFA48C2199638D00BCB6A7 /* iPadMoodViewController.swift in Sources */,
 				14AFA47021991D8800BCB6A7 /* iPadViewController.swift in Sources */,
 				14AFA4822199489C00BCB6A7 /* iPadTabbarView.swift in Sources */,
+				1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
 				14AFA490219969AF00BCB6A7 /* iPadAllViewController.swift in Sources */,
@@ -762,6 +778,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Business",
+					"$(PROJECT_DIR)/Business/Music/Lame",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,6 +807,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Business",
+					"$(PROJECT_DIR)/Business/Music/Lame",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business;
 				PRODUCT_NAME = "$(TARGET_NAME)";

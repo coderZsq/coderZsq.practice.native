@@ -80,6 +80,8 @@
 	<string>After iOS 8.0 Location Description</string>
 	<key>NSMotionUsageDescription</key>
 	<string>Motion Description</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone Description</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
