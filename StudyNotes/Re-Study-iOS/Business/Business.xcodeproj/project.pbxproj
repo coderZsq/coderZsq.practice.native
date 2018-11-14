@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468A1E8219A691200B8B449 /* AudioViewController.swift */; };
 		1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468A1EA219A692600B8B449 /* AudioViewController.storyboard */; };
+		14765857219BB96000A15569 /* AudioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14765856219BB96000A15569 /* AudioTool.swift */; };
+		14765859219BBE1E00A15569 /* 01 thank u, next.m4p in Resources */ = {isa = PBXBuildFile; fileRef = 14765858219BBE1E00A15569 /* 01 thank u, next.m4p */; };
 		1480104721894DB200816B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480104621894DB200816B73 /* AppDelegate.swift */; };
 		1480104921894DB200816B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480104821894DB200816B73 /* ViewController.swift */; };
 		1480104C21894DB200816B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480104A21894DB200816B73 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		1468A1E8219A691200B8B449 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		1468A1EA219A692600B8B449 /* AudioViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioViewController.storyboard; sourceTree = "<group>"; };
+		14765856219BB96000A15569 /* AudioTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTool.swift; sourceTree = "<group>"; };
+		14765858219BBE1E00A15569 /* 01 thank u, next.m4p */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 thank u, next.m4p"; sourceTree = "<group>"; };
 		1480104321894DB200816B73 /* Business.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Business.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1480104621894DB200816B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1480104821894DB200816B73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				1468A1E8219A691200B8B449 /* AudioViewController.swift */,
 				1468A1EA219A692600B8B449 /* AudioViewController.storyboard */,
+				14765856219BB96000A15569 /* AudioTool.swift */,
+				14765858219BBE1E00A15569 /* 01 thank u, next.m4p */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
 				14AFA460219919DA00BCB6A7 /* iPadViewController.storyboard in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
+				14765859219BBE1E00A15569 /* 01 thank u, next.m4p in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
 				148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */,
 				14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */,
@@ -590,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
+				14765857219BB96000A15569 /* AudioTool.swift in Sources */,
 				14AFA47821993E2000BCB6A7 /* iPadHomeViewController.swift in Sources */,
 				14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */,
 				14AFA48C2199638D00BCB6A7 /* iPadMoodViewController.swift in Sources */,

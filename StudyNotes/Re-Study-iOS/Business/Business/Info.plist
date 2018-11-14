@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -78,12 +76,13 @@
 	<string>Before iOS 8.0 Location Description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>After iOS 8.0 Location Description</string>
-	<key>NSMotionUsageDescription</key>
-	<string>Motion Description</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone Description</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Motion Description</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
 		<string>location</string>
 		<string>remote-notification</string>
 	</array>
@@ -108,5 +107,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>
