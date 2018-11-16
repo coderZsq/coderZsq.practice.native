@@ -12,7 +12,9 @@ import AVFoundation
 class AudioViewController: UIViewController {
     
     @IBAction func music(_ sender: UIButton) {
-        navigationController?.pushViewController(MusicViewController(), animated: true)
+        if let vc = UIStoryboard(name: "ListViewController", bundle: nil).instantiateInitialViewController() {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -29,10 +31,12 @@ class AudioViewController: UIViewController {
     }
     
     var recoder: AVAudioRecorder?
+    var path: String?
     
     @IBAction func startRecoding(_ sender: UIButton) {
         if let url = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first {
             let fullPath = url + "/test.caf"
+            path = fullPath
             guard let fullURL = URL(string: fullPath) else {return}
             let settings = [
                 //编码格式
@@ -72,6 +76,9 @@ class AudioViewController: UIViewController {
         } else {
             print("录音成功")
             recoder.stop()
+            if let path = path {
+                lameTool.audio(toMP3: path, isDeleteSourchFile: false)
+            }
         }
     }
     

@@ -27,3 +27,8 @@
 #import <UShareUI/UShareUI.h>
 
 #import <UMAnalytics/MobClick.h>
+
+#import "lameTool.h"
+
+//#import <OOMDetector/OOMDetector.h>
+
