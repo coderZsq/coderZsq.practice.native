@@ -11,6 +11,18 @@ import AVFoundation
 
 class MusicTool: NSObject {
     
+    override init() {
+        super.init()
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+            try session.setActive(true, options: AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation)
+        } catch {
+            print(error)
+            return
+        }
+    }
+    
     var player: AVAudioPlayer?
     
     func playMusic(musicName: String) {

@@ -13,6 +13,7 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var displayLink: CADisplayLink?
     var window: UIWindow?
     var scheme: String?
     
@@ -258,5 +259,36 @@ extension AppDelegate {
             //其他如支付等SDK的回调
         }
         return result ?? true
+    }
+}
+
+extension AppDelegate {
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        removeDisplayLink()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        addDisplayLink()
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        addDisplayLink()
+    }
+    
+    @objc func updateLockMessage() {
+        MusicOperationTool.shared.setupLockMessage()
+    }
+    
+    func addDisplayLink() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateLockMessage))
+        if let displayLink = displayLink {
+            displayLink.add(to: .current, forMode: .common)
+        }
+    }
+    
+    func removeDisplayLink() {
+        displayLink?.invalidate()
+        displayLink = nil
     }
 }

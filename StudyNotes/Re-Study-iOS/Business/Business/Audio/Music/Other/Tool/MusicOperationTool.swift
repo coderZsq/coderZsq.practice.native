@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MusicOperationTool: NSObject {
+    
+    private var musicMessageModel = MusicMessageModel()
+    
+    func getMusicMessageModel() -> MusicMessageModel {
+        musicMessageModel.musicModel = musicModels?[currentIndex]
+        musicMessageModel.costTime = tool.player?.currentTime
+        musicMessageModel.totalTime = tool.player?.duration
+        musicMessageModel.isPlaying = tool.player?.isPlaying
+        return musicMessageModel
+    }
     
     static let shared = MusicOperationTool()
     
@@ -56,5 +67,35 @@ class MusicOperationTool: NSObject {
         if let musicModel = musicModels?[currentIndex] {
             playMusic(musicModel: musicModel)
         }
+    }
+    
+    func setupLockMessage() {
+        let musicMessageModel = getMusicMessageModel()
+        let infoCenter = MPNowPlayingInfoCenter.default()
+        if
+            let name = musicMessageModel.musicModel?.icon,
+            let lrcname = musicMessageModel.musicModel?.lrcname,
+            let costTime = musicMessageModel.costTime {
+            let image = UIImage(named: name)
+            let lrcModels = DataTool.getLrcModelData(lrcName: lrcname)
+            let (_, lrcModel) = DataTool.getRowLrcModel(lrcModels: lrcModels, currentTime: costTime)
+            let resultImage = ImageTool.getImage(sourceImage: image, text: lrcModel?.lrcContent)
+            let albumArtwork: MPMediaItemArtwork?
+            if #available(iOS 10.0, *) {
+                albumArtwork = MPMediaItemArtwork(boundsSize: resultImage.size, requestHandler: { (size) -> UIImage in
+                    return resultImage
+                })
+            } else {
+                albumArtwork = MPMediaItemArtwork(image: resultImage)
+            }
+
+            let info: [String : Any] = [
+                MPMediaItemPropertyAlbumTitle: musicMessageModel.musicModel?.name ?? "",
+                MPMediaItemPropertyArtist: musicMessageModel.musicModel?.singer ?? "",
+                MPMediaItemPropertyPlaybackDuration: musicMessageModel.totalTime ?? 0,
+                MPMediaItemPropertyArtwork: albumArtwork!]
+            infoCenter.nowPlayingInfo = info
+        }
+        UIApplication.shared.beginReceivingRemoteControlEvents()
     }
 }

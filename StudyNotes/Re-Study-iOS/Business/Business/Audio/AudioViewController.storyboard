@@ -18,80 +18,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sOl-Mp-x2b">
-                                <rect key="frame" x="110.5" y="18.5" width="154" height="430"/>
+                                <rect key="frame" x="106.5" y="38.5" width="162" height="430"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-Z8-zPt">
-                                        <rect key="frame" x="25.5" y="0.0" width="103" height="30"/>
+                                        <rect key="frame" x="29.5" y="0.0" width="103" height="30"/>
                                         <state key="normal" title="Start Recoding"/>
                                         <connections>
                                             <action selector="startRecoding:" destination="o96-1F-Ujm" eventType="touchUpInside" id="F9b-Gf-3vg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wn-9J-Uch">
-                                        <rect key="frame" x="26.5" y="40" width="101" height="30"/>
+                                        <rect key="frame" x="30.5" y="40" width="101" height="30"/>
                                         <state key="normal" title="Stop Recoding"/>
                                         <connections>
                                             <action selector="stopRecoding:" destination="o96-1F-Ujm" eventType="touchUpInside" id="8tI-Qj-Knc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF6-fh-Ehw">
-                                        <rect key="frame" x="41" y="80" width="72" height="30"/>
+                                        <rect key="frame" x="45" y="80" width="72" height="30"/>
                                         <state key="normal" title="Play Audio"/>
                                         <connections>
                                             <action selector="playAudio:" destination="o96-1F-Ujm" eventType="touchUpInside" id="Xt4-qo-mSk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-9e-39i">
-                                        <rect key="frame" x="40" y="120" width="74" height="30"/>
+                                        <rect key="frame" x="44" y="120" width="74" height="30"/>
                                         <state key="normal" title="Play Music"/>
                                         <connections>
                                             <action selector="playMusic:" destination="o96-1F-Ujm" eventType="touchUpInside" id="zoJ-xJ-QmQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opa-UI-kA2">
-                                        <rect key="frame" x="33.5" y="160" width="87" height="30"/>
+                                        <rect key="frame" x="37.5" y="160" width="87" height="30"/>
                                         <state key="normal" title="Pause Music"/>
                                         <connections>
                                             <action selector="pauseMusic:" destination="o96-1F-Ujm" eventType="touchUpInside" id="glO-Oq-uYn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK8-2A-hR7">
-                                        <rect key="frame" x="38.5" y="200" width="77" height="30"/>
+                                        <rect key="frame" x="42.5" y="200" width="77" height="30"/>
                                         <state key="normal" title="Stop Music"/>
                                         <connections>
                                             <action selector="stopMusic:" destination="o96-1F-Ujm" eventType="touchUpInside" id="aTd-Nb-gMb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlr-1b-Sdt">
-                                        <rect key="frame" x="57" y="240" width="40" height="30"/>
+                                        <rect key="frame" x="61" y="240" width="40" height="30"/>
                                         <state key="normal" title="&gt;&gt; 5s"/>
                                         <connections>
                                             <action selector="forward5s:" destination="o96-1F-Ujm" eventType="touchUpInside" id="taK-cU-H9T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-4f-Bjs">
-                                        <rect key="frame" x="57" y="280" width="40" height="30"/>
+                                        <rect key="frame" x="61" y="280" width="40" height="30"/>
                                         <state key="normal" title="&lt;&lt; 5s"/>
                                         <connections>
                                             <action selector="rewind5s:" destination="o96-1F-Ujm" eventType="touchUpInside" id="XuR-tL-bYQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-ZK-Thd">
-                                        <rect key="frame" x="52.5" y="320" width="49" height="30"/>
+                                        <rect key="frame" x="56.5" y="320" width="49" height="30"/>
                                         <state key="normal" title="2x Play"/>
                                         <connections>
                                             <action selector="play2x:" destination="o96-1F-Ujm" eventType="touchUpInside" id="tum-0L-46m"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHs-Dw-E07">
-                                        <rect key="frame" x="49" y="360" width="56" height="30"/>
+                                        <rect key="frame" x="53" y="360" width="56" height="30"/>
                                         <state key="normal" title="UIMusic"/>
                                         <connections>
                                             <action selector="music:" destination="o96-1F-Ujm" eventType="touchUpInside" id="nDw-8R-Key"/>
                                         </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2yz-pb-rwh">
-                                        <rect key="frame" x="-2" y="400" width="158" height="31"/>
+                                        <rect key="frame" x="-2" y="400" width="166" height="31"/>
                                         <connections>
                                             <action selector="volumn:" destination="o96-1F-Ujm" eventType="valueChanged" id="pJC-3s-IRe"/>
                                         </connections>
@@ -107,7 +107,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sOl-Mp-x2b" firstAttribute="centerX" secondItem="TH5-hp-xtI" secondAttribute="centerX" id="BKy-Wy-0x7"/>
-                            <constraint firstItem="sOl-Mp-x2b" firstAttribute="centerY" secondItem="TH5-hp-xtI" secondAttribute="centerY" constant="-100" id="oR7-ea-4Y2"/>
+                            <constraint firstItem="sOl-Mp-x2b" firstAttribute="centerY" secondItem="TH5-hp-xtI" secondAttribute="centerY" constant="-80" id="oR7-ea-4Y2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qZH-GL-sno"/>
                     </view>
