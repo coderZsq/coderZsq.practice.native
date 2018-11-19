@@ -125,6 +125,11 @@
                                             <constraint firstAttribute="height" constant="30" id="AQ0-q6-6os"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.0" green="0.66612810860000005" blue="0.0013801952190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="change:" destination="1vt-lu-PXv" eventType="valueChanged" id="iGk-fE-uwX"/>
+                                            <action selector="down:" destination="1vt-lu-PXv" eventType="touchDown" id="OMc-AD-R9r"/>
+                                            <action selector="up:" destination="1vt-lu-PXv" eventType="touchUpInside" id="3aa-5M-SRz"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var playOrPauseButton: UIButton!
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var costTimeLabel: UILabel!
@@ -24,6 +24,10 @@ class DetailViewController: UIViewController {
     lazy var lrcViewController = LrcViewController()
     var updateTimersTimer: Timer?
     var displayLink: CADisplayLink?
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension DetailViewController {
@@ -34,6 +38,7 @@ extension DetailViewController {
         setLrcBackView()
         setSlider()
         setupOnce()
+        NotificationCenter.default.addObserver(self, selector: #selector(nextMusic), name: playerFinished, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -103,6 +108,23 @@ extension DetailViewController {
         displayLink?.invalidate()
         displayLink = nil
     }
+    
+    @IBAction func down(_ sender: UISlider) {
+        removeTimer()
+    }
+    
+    @IBAction func up(_ sender: UISlider) {
+        let musicMessageModel = MusicOperationTool.shared.getMusicMessageModel()
+        let currentTime = (musicMessageModel.totalTime ?? 0) * Double(sender.value)
+        MusicOperationTool.shared.setTime(currentTime: currentTime)
+        addTimer()
+    }
+
+    @IBAction func change(_ sender: UISlider) {
+        let musicMessageModel = MusicOperationTool.shared.getMusicMessageModel()
+        let currentTime = (musicMessageModel.totalTime ?? 0) * Double(sender.value)
+        costTimeLabel.text = TimeTool.getFormat(time: currentTime)
+    }
 }
 
 extension DetailViewController {
@@ -130,6 +152,7 @@ extension DetailViewController {
         }
         let lrcModels = DataTool.getLrcModelData(lrcName: lrcname)
         lrcViewController.lrcModels = lrcModels
+        progressSlider.value = 0
     }
     
     @objc func setupTimes() {
@@ -141,9 +164,15 @@ extension DetailViewController {
             let totalTime = musicMessageModel.totalTime
             else {return}
         costTimeLabel.text = "\(costTimeFormat)"
-        playOrPauseButton.isSelected = isPlaying
-        progressSlider.value = Float(costTime / totalTime)
-        lrcLabel.text = nil
+        if playOrPauseButton.isSelected != musicMessageModel.isPlaying {
+            playOrPauseButton.isSelected = isPlaying
+            progressSlider.value = Float(costTime / totalTime)
+            if isPlaying {
+                resumeRotationAnimation()
+            } else {
+                pauseRotationAnimation()
+            }
+        }
     }
     
     @objc func updateLrcData() {

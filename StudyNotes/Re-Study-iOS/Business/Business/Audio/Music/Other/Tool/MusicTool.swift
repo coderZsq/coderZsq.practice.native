@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+let playerFinished = Notification.Name("playerFinished")
+
 class MusicTool: NSObject {
     
     override init() {
@@ -35,6 +37,7 @@ class MusicTool: NSObject {
         }
         do {
             player = try AVAudioPlayer(contentsOf: url)
+            player?.delegate = self
         } catch {
             print(error)
             return
@@ -54,6 +57,17 @@ class MusicTool: NSObject {
     func stopCurrentMusic() {
         player?.currentTime = 0
         player?.stop()
+    }
+    
+    func setTime(currentTime: TimeInterval) {
+        player?.currentTime = currentTime
+    }
+}
+
+extension MusicTool: AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        NotificationCenter.default.post(name: playerFinished, object: nil)
     }
 }
 

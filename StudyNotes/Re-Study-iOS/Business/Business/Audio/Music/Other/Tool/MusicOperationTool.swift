@@ -69,6 +69,10 @@ class MusicOperationTool: NSObject {
         }
     }
     
+    func setTime(currentTime: TimeInterval) {
+        tool.setTime(currentTime: currentTime)
+    }
+    
     func setupLockMessage() {
         let musicMessageModel = getMusicMessageModel()
         let infoCenter = MPNowPlayingInfoCenter.default()
