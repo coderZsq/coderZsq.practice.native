@@ -20,6 +20,12 @@
 		141F644721A28DED0010E888 /* LrcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F644521A28DED0010E888 /* LrcCell.swift */; };
 		141F644821A28DED0010E888 /* LrcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141F644621A28DED0010E888 /* LrcCell.xib */; };
 		1449B3F2219BE8850051847C /* 老李.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1449B3F1219BE8850051847C /* 老李.mp3 */; };
+		1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915B21A3CEC100DAA213 /* GenerationViewController.swift */; };
+		1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915D21A3CEC900DAA213 /* ScanningViewController.swift */; };
+		1460916021A3CED600DAA213 /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915F21A3CED600DAA213 /* DetectorViewController.swift */; };
+		1460916821A3CFF400DAA213 /* GenerationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1460916721A3CFF400DAA213 /* GenerationViewController.storyboard */; };
+		1460916A21A3D00E00DAA213 /* ScanningViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1460916921A3D00E00DAA213 /* ScanningViewController.storyboard */; };
+		1460916C21A3D02B00DAA213 /* DetectorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1460916B21A3D02B00DAA213 /* DetectorViewController.storyboard */; };
 		1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468A1E8219A691200B8B449 /* AudioViewController.swift */; };
 		1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468A1EA219A692600B8B449 /* AudioViewController.storyboard */; };
 		146E2267219D064000F8E35C /* lameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 146E2262219D064000F8E35C /* lameTool.m */; };
@@ -120,6 +126,8 @@
 		14E6329421A3A30C0054E93F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6329321A3A30C0054E93F /* VideoViewController.swift */; };
 		14E6329621A3A3200054E93F /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329521A3A3200054E93F /* VideoViewController.storyboard */; };
 		14E6329A21A3AD0B0054E93F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329921A3AD0B0054E93F /* video.mov */; };
+		14E6329C21A3B99B0054E93F /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6329B21A3B99B0054E93F /* QRCodeViewController.swift */; };
+		14E6329E21A3B9A80054E93F /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329D21A3B9A80054E93F /* QRCodeViewController.storyboard */; };
 		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
@@ -138,6 +146,12 @@
 		141F644521A28DED0010E888 /* LrcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LrcCell.swift; sourceTree = "<group>"; };
 		141F644621A28DED0010E888 /* LrcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LrcCell.xib; sourceTree = "<group>"; };
 		1449B3F1219BE8850051847C /* 老李.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老李.mp3"; sourceTree = "<group>"; };
+		1460915B21A3CEC100DAA213 /* GenerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewController.swift; sourceTree = "<group>"; };
+		1460915D21A3CEC900DAA213 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
+		1460915F21A3CED600DAA213 /* DetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
+		1460916721A3CFF400DAA213 /* GenerationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GenerationViewController.storyboard; sourceTree = "<group>"; };
+		1460916921A3D00E00DAA213 /* ScanningViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScanningViewController.storyboard; sourceTree = "<group>"; };
+		1460916B21A3D02B00DAA213 /* DetectorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetectorViewController.storyboard; sourceTree = "<group>"; };
 		1468A1E8219A691200B8B449 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		1468A1EA219A692600B8B449 /* AudioViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioViewController.storyboard; sourceTree = "<group>"; };
 		146E2262219D064000F8E35C /* lameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lameTool.m; sourceTree = "<group>"; };
@@ -244,6 +258,8 @@
 		14E6329321A3A30C0054E93F /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		14E6329521A3A3200054E93F /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		14E6329921A3AD0B0054E93F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		14E6329B21A3B99B0054E93F /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		14E6329D21A3B9A80054E93F /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
 		14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Business-Bridging-Header.h"; sourceTree = "<group>"; };
 		14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitTool.swift; sourceTree = "<group>"; };
 		14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +398,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1460915821A3CEA200DAA213 /* Generation */ = {
+			isa = PBXGroup;
+			children = (
+				1460915B21A3CEC100DAA213 /* GenerationViewController.swift */,
+				1460916721A3CFF400DAA213 /* GenerationViewController.storyboard */,
+			);
+			path = Generation;
+			sourceTree = "<group>";
+		};
+		1460915921A3CEA200DAA213 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				1460915D21A3CEC900DAA213 /* ScanningViewController.swift */,
+				1460916921A3D00E00DAA213 /* ScanningViewController.storyboard */,
+			);
+			path = Scanning;
+			sourceTree = "<group>";
+		};
+		1460915A21A3CEA200DAA213 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				1460915F21A3CED600DAA213 /* DetectorViewController.swift */,
+				1460916B21A3D02B00DAA213 /* DetectorViewController.storyboard */,
+			);
+			path = Detector;
+			sourceTree = "<group>";
+		};
 		1468A1EC219A692E00B8B449 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +492,7 @@
 				14AFA461219919E100BCB6A7 /* iPad */,
 				1468A1EC219A692E00B8B449 /* Audio */,
 				14E6329721A3A3280054E93F /* Video */,
+				14E6329F21A3B9AF0054E93F /* QRCode */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -772,6 +816,18 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		14E6329F21A3B9AF0054E93F /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				1460915821A3CEA200DAA213 /* Generation */,
+				1460915921A3CEA200DAA213 /* Scanning */,
+				1460915A21A3CEA200DAA213 /* Detector */,
+				14E6329B21A3B99B0054E93F /* QRCodeViewController.swift */,
+				14E6329D21A3B9A80054E93F /* QRCodeViewController.storyboard */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		16867CACA5AF2B0C22BF4BE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +945,7 @@
 				141F644821A28DED0010E888 /* LrcCell.xib in Resources */,
 				14E4858D219D0AFF00C15946 /* eason@2x.jpg in Resources */,
 				1480105121894DB300816B73 /* LaunchScreen.storyboard in Resources */,
+				1460916821A3CFF400DAA213 /* GenerationViewController.storyboard in Resources */,
 				14E48591219D0AFF00C15946 /* zxy_icon@2x.jpg in Resources */,
 				14919C74218D428100F0EBCD /* IAPViewController.storyboard in Resources */,
 				14E48584219D0AFF00C15946 /* zxy@2x.jpg in Resources */,
@@ -898,6 +955,7 @@
 				14E48577219D0AFF00C15946 /* 235319.mp3 in Resources */,
 				148A72A521956E61003FC473 /* AddressViewController.storyboard in Resources */,
 				14D61DEB219296FC001F00D7 /* InterAppViewController.storyboard in Resources */,
+				1460916A21A3D00E00DAA213 /* ScanningViewController.storyboard in Resources */,
 				14E48593219D0AFF00C15946 /* Musics.plist in Resources */,
 				14919C7B218D6B5600F0EBCD /* ADViewController.storyboard in Resources */,
 				14E4857E219D0AFF00C15946 /* 339744.mp3 in Resources */,
@@ -916,6 +974,7 @@
 				14E4856E219D0AFF00C15946 /* 10736444.lrc in Resources */,
 				14E4858F219D0AFF00C15946 /* nanquan@2x.jpg in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
+				14E6329E21A3B9A80054E93F /* QRCodeViewController.storyboard in Resources */,
 				1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
 				14E48572219D0AFF00C15946 /* 339744.lrc in Resources */,
@@ -926,6 +985,7 @@
 				14E4858B219D0AFF00C15946 /* kzxd@2x.jpg in Resources */,
 				14E48588219D0AFF00C15946 /* lkq@2x.jpg in Resources */,
 				1404F028219E8E44001193F5 /* MusicListCell.xib in Resources */,
+				1460916C21A3D02B00DAA213 /* DetectorViewController.storyboard in Resources */,
 				14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */,
 				146E2271219D091500F8E35C /* ListViewController.storyboard in Resources */,
 			);
@@ -999,6 +1059,8 @@
 				146E226B219D08E400F8E35C /* DetailViewController.swift in Sources */,
 				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
 				14765857219BB96000A15569 /* AudioTool.swift in Sources */,
+				1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */,
+				1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */,
 				146E2267219D064000F8E35C /* lameTool.m in Sources */,
 				14AFA47821993E2000BCB6A7 /* iPadHomeViewController.swift in Sources */,
 				14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */,
@@ -1028,10 +1090,12 @@
 				14AFA47221991FE400BCB6A7 /* iPadLoginViewController.swift in Sources */,
 				14DFD86D218AA3830019AC36 /* Annotation.swift in Sources */,
 				14AFA47C219940A300BCB6A7 /* UIView+Extension.swift in Sources */,
+				14E6329C21A3B99B0054E93F /* QRCodeViewController.swift in Sources */,
 				1404F02C219E9EA5001193F5 /* MusicOperationTool.swift in Sources */,
 				14AFA4842199511E00BCB6A7 /* iPadMiddleMenuView.swift in Sources */,
 				14AFA47421992B0F00BCB6A7 /* LoginTool.swift in Sources */,
 				14AFA4802199468600BCB6A7 /* iPadDockView.swift in Sources */,
+				1460916021A3CED600DAA213 /* DetectorViewController.swift in Sources */,
 				14E48597219D0C4C00C15946 /* DataTool.swift in Sources */,
 				1404F027219E8E44001193F5 /* MusicListCell.swift in Sources */,
 				1486EE8521A2A22E005B52B2 /* ImageTool.swift in Sources */,

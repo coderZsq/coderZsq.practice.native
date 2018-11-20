@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zvy-3U-7gd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="OXH-TQ-diu">
+            <objects>
+                <viewController id="zvy-3U-7gd" customClass="QRCodeViewController" customModule="Business" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Pj-rv-gfu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-2h-e4N">
+                                <rect key="frame" x="119" y="30" width="137" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-G2-kEB">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                        <state key="normal" title="QR code generation"/>
+                                        <connections>
+                                            <action selector="generation:" destination="zvy-3U-7gd" eventType="touchUpInside" id="p12-ui-TB4"/>
+                                            <segue destination="b06-h0-zWG" kind="show" id="Wjs-Dg-Ef1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pc-bN-WAL">
+                                        <rect key="frame" x="6" y="35" width="125" height="30"/>
+                                        <state key="normal" title="QR code scanning"/>
+                                        <connections>
+                                            <action selector="scanning:" destination="zvy-3U-7gd" eventType="touchUpInside" id="ynx-nB-ABW"/>
+                                            <segue destination="z9P-JZ-nMc" kind="show" id="UIF-0D-9U9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOv-45-rfy">
+                                        <rect key="frame" x="7.5" y="70" width="122" height="30"/>
+                                        <state key="normal" title="QR code detector"/>
+                                        <connections>
+                                            <action selector="detector:" destination="zvy-3U-7gd" eventType="touchUpInside" id="1hn-4t-dbK"/>
+                                            <segue destination="WoY-WC-NJ6" kind="show" id="TTf-op-fYD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G0e-2h-e4N" firstAttribute="centerX" secondItem="8Pj-rv-gfu" secondAttribute="centerX" id="Pad-L6-2nv"/>
+                            <constraint firstItem="G0e-2h-e4N" firstAttribute="top" secondItem="8Me-tg-35g" secondAttribute="top" constant="10" id="Pus-SS-WC3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Me-tg-35g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxk-1q-AhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="-177"/>
+        </scene>
+        <!--GenerationViewController-->
+        <scene sceneID="3F2-Lu-6vi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GenerationViewController" id="b06-h0-zWG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3Z-5h-jIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-465"/>
+        </scene>
+        <!--ScanningViewController-->
+        <scene sceneID="vse-1q-F2w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScanningViewController" id="z9P-JZ-nMc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc6-9B-uUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="-178"/>
+        </scene>
+        <!--DetectorViewController-->
+        <scene sceneID="FEN-BU-w33">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetectorViewController" id="WoY-WC-NJ6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9g-Ew-cK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="42"/>
+        </scene>
+    </scenes>
+</document>
