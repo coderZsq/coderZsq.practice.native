@@ -117,6 +117,9 @@
 		14E48593219D0AFF00C15946 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E4856A219D0AFE00C15946 /* Musics.plist */; };
 		14E48595219D0B4100C15946 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E48594219D0B4100C15946 /* MusicModel.swift */; };
 		14E48597219D0C4C00C15946 /* DataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E48596219D0C4C00C15946 /* DataTool.swift */; };
+		14E6329421A3A30C0054E93F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6329321A3A30C0054E93F /* VideoViewController.swift */; };
+		14E6329621A3A3200054E93F /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329521A3A3200054E93F /* VideoViewController.storyboard */; };
+		14E6329A21A3AD0B0054E93F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329921A3AD0B0054E93F /* video.mov */; };
 		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
@@ -238,6 +241,9 @@
 		14E4856A219D0AFE00C15946 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 		14E48594219D0B4100C15946 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		14E48596219D0C4C00C15946 /* DataTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTool.swift; sourceTree = "<group>"; };
+		14E6329321A3A30C0054E93F /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		14E6329521A3A3200054E93F /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
+		14E6329921A3AD0B0054E93F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Business-Bridging-Header.h"; sourceTree = "<group>"; };
 		14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitTool.swift; sourceTree = "<group>"; };
 		14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitViewController.swift; sourceTree = "<group>"; };
@@ -442,6 +448,7 @@
 				148A72A621956E6B003FC473 /* Address */,
 				14AFA461219919E100BCB6A7 /* iPad */,
 				1468A1EC219A692E00B8B449 /* Audio */,
+				14E6329721A3A3280054E93F /* Video */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -755,6 +762,16 @@
 			path = DataTool;
 			sourceTree = "<group>";
 		};
+		14E6329721A3A3280054E93F /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				14E6329321A3A30C0054E93F /* VideoViewController.swift */,
+				14E6329521A3A3200054E93F /* VideoViewController.storyboard */,
+				14E6329921A3AD0B0054E93F /* video.mov */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		16867CACA5AF2B0C22BF4BE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,12 +874,14 @@
 				14E4858E219D0AFF00C15946 /* jj_icon@2x.png in Resources */,
 				14E4857B219D0AFF00C15946 /* 10405520.mp3 in Resources */,
 				14E4856F219D0AFF00C15946 /* 309769.lrc in Resources */,
+				14E6329621A3A3200054E93F /* VideoViewController.storyboard in Resources */,
 				14E4857A219D0AFF00C15946 /* 1201111234.mp3 in Resources */,
 				14E48579219D0AFF00C15946 /* 10736444.mp3 in Resources */,
 				14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */,
 				14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */,
 				14E4856B219D0AFF00C15946 /* 月半小夜曲.lrc in Resources */,
 				14E4856D219D0AFF00C15946 /* 14945107.lrc in Resources */,
+				14E6329A21A3AD0B0054E93F /* video.mov in Resources */,
 				14E48581219D0AFF00C15946 /* lkq_icon@2x.jpg in Resources */,
 				14E48580219D0AFF00C15946 /* jay@2x.jpg in Resources */,
 				14DFD871218AC3070019AC36 /* NavigationMapViewController.storyboard in Resources */,
@@ -1002,6 +1021,7 @@
 				14D61DE9219296F4001F00D7 /* InterAppViewController.swift in Sources */,
 				14919C88218D96CA00F0EBCD /* SensorViewController.swift in Sources */,
 				141F643A21A261AC0010E888 /* TimeTool.swift in Sources */,
+				14E6329421A3A30C0054E93F /* VideoViewController.swift in Sources */,
 				141F643E21A267D20010E888 /* LrcModel.swift in Sources */,
 				14919C77218D439900F0EBCD /* IAPTool.swift in Sources */,
 				14AFA4862199531800BCB6A7 /* iPadMenuButton.swift in Sources */,

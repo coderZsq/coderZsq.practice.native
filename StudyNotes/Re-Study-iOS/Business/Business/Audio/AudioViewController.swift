@@ -129,6 +129,23 @@ class AudioViewController: UIViewController {
         audioPlayer?.rate = 2.0
     }
     
+    
+    lazy var player: AVPlayer? = {
+        if let url = Bundle.main.url(forResource: "老李.mp3", withExtension: nil) {
+//            let player = AVPlayer(url: url)
+            let playItem = AVPlayerItem(url: url)
+            let player = AVPlayer(playerItem: playItem)
+            return player
+        }
+        return nil
+    }()
+    
+    @IBAction func remotePlay(_ sender: UIButton) {
+        player?.play()
+//        player?.replaceCurrentItem(with: <#T##AVPlayerItem?#>)
+    }
+    
+    
     @IBAction func volumn(_ sender: UISlider) {
         audioPlayer?.volume = sender.value
     }
