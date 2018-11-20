@@ -66,6 +66,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera Description</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Contacts Description</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

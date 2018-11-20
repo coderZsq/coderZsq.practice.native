@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-2h-e4N">
-                                <rect key="frame" x="119" y="30" width="137" height="100"/>
+                                <rect key="frame" x="119" y="183.5" width="137" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-G2-kEB">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
@@ -50,7 +50,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="G0e-2h-e4N" firstAttribute="centerX" secondItem="8Pj-rv-gfu" secondAttribute="centerX" id="Pad-L6-2nv"/>
-                            <constraint firstItem="G0e-2h-e4N" firstAttribute="top" secondItem="8Me-tg-35g" secondAttribute="top" constant="10" id="Pus-SS-WC3"/>
+                            <constraint firstItem="G0e-2h-e4N" firstAttribute="centerY" secondItem="8Pj-rv-gfu" secondAttribute="centerY" constant="-100" id="sN2-SE-Cb4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Me-tg-35g"/>
                     </view>
