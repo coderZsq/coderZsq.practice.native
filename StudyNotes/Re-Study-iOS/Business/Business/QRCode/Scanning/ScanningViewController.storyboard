@@ -50,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="Xnc-bs-qNF"/>
                     </view>
                     <connections>
+                        <outlet property="scanBackView" destination="rCE-rd-eaq" id="YhN-Ym-3X6"/>
                         <outlet property="scanFrameBackView" destination="Rcr-me-dqO" id="WSV-2u-Azi"/>
                         <outlet property="toBottom" destination="1uj-Cw-qcy" id="3db-iq-drK"/>
                     </connections>
