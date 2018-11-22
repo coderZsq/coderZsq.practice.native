@@ -32,3 +32,4 @@
 
 //#import <OOMDetector/OOMDetector.h>
 
+#import "sqlite3.h"

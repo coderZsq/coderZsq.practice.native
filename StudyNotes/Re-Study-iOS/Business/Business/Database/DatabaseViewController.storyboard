@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m49-wb-e7x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Database View Controller-->
+        <scene sceneID="6JY-qL-hAS">
+            <objects>
+                <viewController id="m49-wb-e7x" customClass="DatabaseViewController" customModule="Business" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="reP-Xd-TbX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GVO-9K-Xl1">
+                                <rect key="frame" x="134.5" y="138.5" width="106" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmC-nH-SNq">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                        <state key="normal" title="CREATE_TABLE"/>
+                                        <connections>
+                                            <action selector="create_table:" destination="m49-wb-e7x" eventType="touchUpInside" id="vXq-QL-Phr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reY-3i-15b">
+                                        <rect key="frame" x="0.0" y="40" width="106" height="30"/>
+                                        <state key="normal" title="DROP_TABLE"/>
+                                        <connections>
+                                            <action selector="drop_table:" destination="m49-wb-e7x" eventType="touchUpInside" id="aWd-nI-KXt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-g5-244">
+                                        <rect key="frame" x="0.0" y="80" width="106" height="30"/>
+                                        <state key="normal" title="INSERT_INTO"/>
+                                        <connections>
+                                            <action selector="insert_into:" destination="m49-wb-e7x" eventType="touchUpInside" id="X6A-AK-4Dq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hA-Fb-4y5">
+                                        <rect key="frame" x="0.0" y="120" width="106" height="30"/>
+                                        <state key="normal" title="UPDATE_SET"/>
+                                        <connections>
+                                            <action selector="update_set:" destination="m49-wb-e7x" eventType="touchUpInside" id="8gl-f5-rT1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZi-mr-sua">
+                                        <rect key="frame" x="0.0" y="160" width="106" height="30"/>
+                                        <state key="normal" title="SELECT_FROM"/>
+                                        <connections>
+                                            <action selector="select_from:" destination="m49-wb-e7x" eventType="touchUpInside" id="Iao-Zz-WEn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GVO-9K-Xl1" firstAttribute="centerY" secondItem="reP-Xd-TbX" secondAttribute="centerY" constant="-100" id="WZQ-6R-0bY"/>
+                            <constraint firstItem="GVO-9K-Xl1" firstAttribute="centerX" secondItem="reP-Xd-TbX" secondAttribute="centerX" id="rMU-oc-7YD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ohJ-TV-oAA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVW-VG-xpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="94"/>
+        </scene>
+    </scenes>
+</document>

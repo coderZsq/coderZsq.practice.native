@@ -25,7 +25,8 @@ class ViewController: UITableViewController {
                                         iPadViewController.self,
                                         AudioViewController.self,
                                         VideoViewController.self,
-                                        QRCodeViewController.self],
+                                        QRCodeViewController.self,
+                                        DatabaseViewController.self],
                           "titleheader" : "practical-tech",
                           "titlefooter" : "Some example of practical-tech learning."]]
         return dataSource

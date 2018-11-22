@@ -21,6 +21,11 @@
 		141F644821A28DED0010E888 /* LrcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141F644621A28DED0010E888 /* LrcCell.xib */; };
 		1449B3F2219BE8850051847C /* 老李.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1449B3F1219BE8850051847C /* 老李.mp3 */; };
 		1457821F21A540F500D367B9 /* QRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457821E21A540F500D367B9 /* QRCodeTool.swift */; };
+		1457824821A6470100D367B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1457824721A6470100D367B9 /* libsqlite3.0.tbd */; };
+		1457824A21A6477900D367B9 /* DatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457824921A6477900D367B9 /* DatabaseViewController.swift */; };
+		1457824C21A6478900D367B9 /* DatabaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */; };
+		1457824F21A6510D00D367B9 /* SQLiteTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457824E21A6510D00D367B9 /* SQLiteTool.swift */; };
+		1457825121A652F100D367B9 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825021A652F100D367B9 /* Student.swift */; };
 		1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915B21A3CEC100DAA213 /* GenerationViewController.swift */; };
 		1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915D21A3CEC900DAA213 /* ScanningViewController.swift */; };
 		1460916021A3CED600DAA213 /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915F21A3CED600DAA213 /* DetectorViewController.swift */; };
@@ -148,6 +153,11 @@
 		141F644621A28DED0010E888 /* LrcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LrcCell.xib; sourceTree = "<group>"; };
 		1449B3F1219BE8850051847C /* 老李.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老李.mp3"; sourceTree = "<group>"; };
 		1457821E21A540F500D367B9 /* QRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTool.swift; sourceTree = "<group>"; };
+		1457824721A6470100D367B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1457824921A6477900D367B9 /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
+		1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatabaseViewController.storyboard; sourceTree = "<group>"; };
+		1457824E21A6510D00D367B9 /* SQLiteTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTool.swift; sourceTree = "<group>"; };
+		1457825021A652F100D367B9 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		1460915B21A3CEC100DAA213 /* GenerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewController.swift; sourceTree = "<group>"; };
 		1460915D21A3CEC900DAA213 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		1460915F21A3CED600DAA213 /* DetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1457824821A6470100D367B9 /* libsqlite3.0.tbd in Frameworks */,
 				A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */,
 				146E2268219D064000F8E35C /* libmp3lame.a in Frameworks */,
 			);
@@ -400,6 +411,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1457824D21A6478F00D367B9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1457824921A6477900D367B9 /* DatabaseViewController.swift */,
+				1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */,
+				1457824E21A6510D00D367B9 /* SQLiteTool.swift */,
+				1457825021A652F100D367B9 /* Student.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		1460915821A3CEA200DAA213 /* Generation */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +517,7 @@
 				1468A1EC219A692E00B8B449 /* Audio */,
 				14E6329721A3A3280054E93F /* Video */,
 				14E6329F21A3B9AF0054E93F /* QRCode */,
+				1457824D21A6478F00D367B9 /* Database */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -843,6 +866,7 @@
 		F50FB5A093414B78BE88B029 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1457824721A6470100D367B9 /* libsqlite3.0.tbd */,
 				148A72732195681D003FC473 /* libStaticLibrary.a */,
 				EF91199787262547AE4AB2FD /* Pods_Business.framework */,
 			);
@@ -936,6 +960,7 @@
 				14E6329621A3A3200054E93F /* VideoViewController.storyboard in Resources */,
 				14E4857A219D0AFF00C15946 /* 1201111234.mp3 in Resources */,
 				14E48579219D0AFF00C15946 /* 10736444.mp3 in Resources */,
+				1457824C21A6478900D367B9 /* DatabaseViewController.storyboard in Resources */,
 				14DFD86A218A99120019AC36 /* MapViewController.storyboard in Resources */,
 				14B10AF2218956600011ADED /* LocationViewController.storyboard in Resources */,
 				14E4856B219D0AFF00C15946 /* 月半小夜曲.lrc in Resources */,
@@ -1023,10 +1048,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
+				"${PODS_ROOT}/WoodPeckeriOS/WoodPeckeriOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WoodPeckeriOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1059,6 +1086,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146E226F219D090900F8E35C /* ListViewController.swift in Sources */,
+				1457824F21A6510D00D367B9 /* SQLiteTool.swift in Sources */,
 				146E226B219D08E400F8E35C /* DetailViewController.swift in Sources */,
 				14D61DE421928BA3001F00D7 /* DynamicViewController.swift in Sources */,
 				14765857219BB96000A15569 /* AudioTool.swift in Sources */,
@@ -1103,6 +1131,8 @@
 				14E48597219D0C4C00C15946 /* DataTool.swift in Sources */,
 				1404F027219E8E44001193F5 /* MusicListCell.swift in Sources */,
 				1486EE8521A2A22E005B52B2 /* ImageTool.swift in Sources */,
+				1457824A21A6477900D367B9 /* DatabaseViewController.swift in Sources */,
+				1457825121A652F100D367B9 /* Student.swift in Sources */,
 				141F643821A2585F0010E888 /* MusicMessageModel.swift in Sources */,
 				14DFD86F218AC2C70019AC36 /* NavigationMapViewController.swift in Sources */,
 				14AFA4882199576B00BCB6A7 /* iPadHeadIconButton.swift in Sources */,

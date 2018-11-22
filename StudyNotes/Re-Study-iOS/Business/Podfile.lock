@@ -22,6 +22,7 @@ PODS:
   - UMCShare/UI (6.9.5):
     - UMCCommon
     - UMCShare/Core
+  - WoodPeckeriOS (1.1.4)
 
 DEPENDENCIES:
   - INTULocationManager
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - UMCShare/Social/AlipayShare
   - UMCShare/Social/WeChat
   - UMCShare/UI
+  - WoodPeckeriOS
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - UMCCommon
     - UMCSecurityPlugins
     - UMCShare
+    - WoodPeckeriOS
 
 SPEC CHECKSUMS:
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
@@ -51,7 +54,8 @@ SPEC CHECKSUMS:
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
+  WoodPeckeriOS: e12af9296607e7febefd52666d210cefdef1c44c
 
-PODFILE CHECKSUM: 887aacf03d32d12f84820ea497d6ee748c91342c
+PODFILE CHECKSUM: e220c167b4b483783e4b52c91d4d03f0f7e66703
 
 COCOAPODS: 1.5.3
