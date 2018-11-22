@@ -33,3 +33,4 @@
 //#import <OOMDetector/OOMDetector.h>
 
 #import "sqlite3.h"
+#import <FMDB/FMDB.h>

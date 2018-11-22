@@ -14,7 +14,8 @@ target 'Business' do
   pod 'UMCShare/UI'
   pod 'UMCShare/Social/WeChat'
   pod 'UMCShare/Social/AlipayShare'
-  pod 'WoodPeckeriOS'
+#  pod 'WoodPeckeriOS'
+  pod 'FMDB'
 #  pod 'OOMDetector'
   # Pods for Business
 

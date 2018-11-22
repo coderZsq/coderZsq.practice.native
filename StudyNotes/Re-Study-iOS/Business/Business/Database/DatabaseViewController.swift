@@ -16,6 +16,7 @@ class DatabaseViewController: UIViewController {
     }
     
     @IBAction func create_table(_ sender: UIButton) {
+        SQLiteTool_FMDB.shared.createTable()
         if SQLiteTool.shared.createTable() {
             print("创建表成功")
         } else {
@@ -32,7 +33,7 @@ class DatabaseViewController: UIViewController {
     }
     
     @IBAction func insert_into(_ sender: Any) {
-        
+        SQLiteTool_FMDB.shared.insertStudent()
         let begin = CFAbsoluteTimeGetCurrent()
         SQLiteTool.shared.beginTransaction()
         for i in 0..<10000 {
@@ -63,6 +64,7 @@ class DatabaseViewController: UIViewController {
     }
     
     @IBAction func select_from(_ sender: UIButton) {
+        SQLiteTool_FMDB.shared.queryAll()
 //        Student.queryAll()
         Student.queryAllWithStmt()
     }

@@ -26,6 +26,9 @@
 		1457824C21A6478900D367B9 /* DatabaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */; };
 		1457824F21A6510D00D367B9 /* SQLiteTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457824E21A6510D00D367B9 /* SQLiteTool.swift */; };
 		1457825121A652F100D367B9 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825021A652F100D367B9 /* Student.swift */; };
+		1457825321A67EA200D367B9 /* SQLiteTool_FMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825221A67EA200D367B9 /* SQLiteTool_FMDB.swift */; };
+		1457825521A6A58400D367B9 /* H5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825421A6A58400D367B9 /* H5ViewController.swift */; };
+		1457825721A6A59300D367B9 /* H5ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457825621A6A59300D367B9 /* H5ViewController.storyboard */; };
 		1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915B21A3CEC100DAA213 /* GenerationViewController.swift */; };
 		1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915D21A3CEC900DAA213 /* ScanningViewController.swift */; };
 		1460916021A3CED600DAA213 /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915F21A3CED600DAA213 /* DetectorViewController.swift */; };
@@ -158,6 +161,9 @@
 		1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatabaseViewController.storyboard; sourceTree = "<group>"; };
 		1457824E21A6510D00D367B9 /* SQLiteTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTool.swift; sourceTree = "<group>"; };
 		1457825021A652F100D367B9 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		1457825221A67EA200D367B9 /* SQLiteTool_FMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTool_FMDB.swift; sourceTree = "<group>"; };
+		1457825421A6A58400D367B9 /* H5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H5ViewController.swift; sourceTree = "<group>"; };
+		1457825621A6A59300D367B9 /* H5ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = H5ViewController.storyboard; sourceTree = "<group>"; };
 		1460915B21A3CEC100DAA213 /* GenerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewController.swift; sourceTree = "<group>"; };
 		1460915D21A3CEC900DAA213 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		1460915F21A3CED600DAA213 /* DetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
@@ -417,9 +423,19 @@
 				1457824921A6477900D367B9 /* DatabaseViewController.swift */,
 				1457824B21A6478900D367B9 /* DatabaseViewController.storyboard */,
 				1457824E21A6510D00D367B9 /* SQLiteTool.swift */,
+				1457825221A67EA200D367B9 /* SQLiteTool_FMDB.swift */,
 				1457825021A652F100D367B9 /* Student.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		1457825821A6A5BA00D367B9 /* H5 */ = {
+			isa = PBXGroup;
+			children = (
+				1457825421A6A58400D367B9 /* H5ViewController.swift */,
+				1457825621A6A59300D367B9 /* H5ViewController.storyboard */,
+			);
+			path = H5;
 			sourceTree = "<group>";
 		};
 		1460915821A3CEA200DAA213 /* Generation */ = {
@@ -518,6 +534,7 @@
 				14E6329721A3A3280054E93F /* Video */,
 				14E6329F21A3B9AF0054E93F /* QRCode */,
 				1457824D21A6478F00D367B9 /* Database */,
+				1457825821A6A5BA00D367B9 /* H5 */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -1005,6 +1022,7 @@
 				14E6329E21A3B9A80054E93F /* QRCodeViewController.storyboard in Resources */,
 				1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
+				1457825721A6A59300D367B9 /* H5ViewController.storyboard in Resources */,
 				14E48572219D0AFF00C15946 /* 339744.lrc in Resources */,
 				14E48587219D0AFF00C15946 /* jj@2x.jpg in Resources */,
 				1449B3F2219BE8850051847C /* 老李.mp3 in Resources */,
@@ -1047,13 +1065,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Business/Pods-Business-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
-				"${PODS_ROOT}/WoodPeckeriOS/WoodPeckeriOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WoodPeckeriOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1092,6 +1110,7 @@
 				14765857219BB96000A15569 /* AudioTool.swift in Sources */,
 				1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */,
 				1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */,
+				1457825321A67EA200D367B9 /* SQLiteTool_FMDB.swift in Sources */,
 				146E2267219D064000F8E35C /* lameTool.m in Sources */,
 				14AFA47821993E2000BCB6A7 /* iPadHomeViewController.swift in Sources */,
 				14AFA47621992ED400BCB6A7 /* ShowMessageTool.swift in Sources */,
@@ -1107,6 +1126,7 @@
 				14AFA490219969AF00BCB6A7 /* iPadAllViewController.swift in Sources */,
 				1404F02A219E9DA7001193F5 /* MusicTool.swift in Sources */,
 				14B10AF421896F2D0011ADED /* LocationViewController.swift in Sources */,
+				1457825521A6A58400D367B9 /* H5ViewController.swift in Sources */,
 				1480104921894DB200816B73 /* ViewController.swift in Sources */,
 				148A72A321956E4A003FC473 /* AddressViewController.swift in Sources */,
 				141F644721A28DED0010E888 /* LrcCell.swift in Sources */,
