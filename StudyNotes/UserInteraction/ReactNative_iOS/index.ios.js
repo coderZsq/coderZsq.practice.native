@@ -7,27 +7,20 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
+
+var BaseView = require('./js/baseview');
+var LifeCycle = require('./js/lifecycle');
+var ScrollView = require('./js/scrollview');
 
 export default class ReactNative_iOS extends Component {
   render() {
     return (
-        <View style={styles.outViewStyle}>
-            <Text>你好</Text>
-        </View>
+        // <BaseView/>
+        // <LifeCycle/>
+        <ScrollView/>
     );
   }
 }
-
-const styles = StyleSheet.create({
-    outViewStyle: {
-        backgroundColor: 'green',
-        width: 250,
-        height: 200
-    }
-});
 
 AppRegistry.registerComponent('ReactNative_iOS', () => ReactNative_iOS);
