@@ -29,6 +29,8 @@
 		1457825321A67EA200D367B9 /* SQLiteTool_FMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825221A67EA200D367B9 /* SQLiteTool_FMDB.swift */; };
 		1457825521A6A58400D367B9 /* H5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457825421A6A58400D367B9 /* H5ViewController.swift */; };
 		1457825721A6A59300D367B9 /* H5ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457825621A6A59300D367B9 /* H5ViewController.storyboard */; };
+		1457825A21A79C7600D367B9 /* H5.css in Resources */ = {isa = PBXBuildFile; fileRef = 1457825921A79C7600D367B9 /* H5.css */; };
+		1457825C21A79FB900D367B9 /* H5.js in Resources */ = {isa = PBXBuildFile; fileRef = 1457825B21A79FB900D367B9 /* H5.js */; };
 		1460915C21A3CEC100DAA213 /* GenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915B21A3CEC100DAA213 /* GenerationViewController.swift */; };
 		1460915E21A3CEC900DAA213 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915D21A3CEC900DAA213 /* ScanningViewController.swift */; };
 		1460916021A3CED600DAA213 /* DetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460915F21A3CED600DAA213 /* DetectorViewController.swift */; };
@@ -164,6 +166,8 @@
 		1457825221A67EA200D367B9 /* SQLiteTool_FMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTool_FMDB.swift; sourceTree = "<group>"; };
 		1457825421A6A58400D367B9 /* H5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H5ViewController.swift; sourceTree = "<group>"; };
 		1457825621A6A59300D367B9 /* H5ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = H5ViewController.storyboard; sourceTree = "<group>"; };
+		1457825921A79C7600D367B9 /* H5.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = H5.css; sourceTree = "<group>"; };
+		1457825B21A79FB900D367B9 /* H5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = H5.js; sourceTree = "<group>"; };
 		1460915B21A3CEC100DAA213 /* GenerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationViewController.swift; sourceTree = "<group>"; };
 		1460915D21A3CEC900DAA213 /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		1460915F21A3CED600DAA213 /* DetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +438,8 @@
 			children = (
 				1457825421A6A58400D367B9 /* H5ViewController.swift */,
 				1457825621A6A59300D367B9 /* H5ViewController.storyboard */,
+				1457825921A79C7600D367B9 /* H5.css */,
+				1457825B21A79FB900D367B9 /* H5.js */,
 			);
 			path = H5;
 			sourceTree = "<group>";
@@ -965,6 +971,7 @@
 			files = (
 				14E48582219D0AFF00C15946 /* jay_icon@2x.png in Resources */,
 				14919C80218D742E00F0EBCD /* NotificationViewController.storyboard in Resources */,
+				1457825A21A79C7600D367B9 /* H5.css in Resources */,
 				14E48592219D0AFF00C15946 /* nanquan_icon@2x.jpg in Resources */,
 				14E48586219D0AFF00C15946 /* dzq@2x.jpg in Resources */,
 				14E48576219D0AFF00C15946 /* 255319.mp3 in Resources */,
@@ -1025,6 +1032,7 @@
 				1457825721A6A59300D367B9 /* H5ViewController.storyboard in Resources */,
 				14E48572219D0AFF00C15946 /* 339744.lrc in Resources */,
 				14E48587219D0AFF00C15946 /* jj@2x.jpg in Resources */,
+				1457825C21A79FB900D367B9 /* H5.js in Resources */,
 				1449B3F2219BE8850051847C /* 老李.mp3 in Resources */,
 				14D61DE621928BB2001F00D7 /* DynamicViewController.storyboard in Resources */,
 				14E48585219D0AFF00C15946 /* kzxd_icon@2x.jpg in Resources */,

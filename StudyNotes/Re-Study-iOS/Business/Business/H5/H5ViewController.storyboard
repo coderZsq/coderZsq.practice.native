@@ -34,6 +34,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bTi-ij-beU"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="o5a-Pv-F2b" id="urA-Iz-chY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxo-eG-c0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
