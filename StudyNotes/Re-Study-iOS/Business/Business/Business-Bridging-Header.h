@@ -34,3 +34,5 @@
 
 #import "sqlite3.h"
 #import <FMDB/FMDB.h>
+
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>

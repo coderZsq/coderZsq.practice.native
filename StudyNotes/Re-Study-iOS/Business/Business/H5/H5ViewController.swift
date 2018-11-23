@@ -14,9 +14,18 @@ class H5ViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     
+    var jsBridge: WebViewJavascriptBridge?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "H5"
+        
+        WebViewJavascriptBridge.enableLogging()
+        jsBridge = WebViewJavascriptBridge(webView)
+        jsBridge?.setWebViewDelegate(self)
+        jsBridge?.registerHandler("ObjC Echo", handler: { (data, responseCallback) in
+            print("ObjC Echo")
+        })
         
         if let url = URL(string: "http://c.m.163.com/nc/article/BVEGO8UT05299OU6/full.html") {
             let request = URLRequest(url: url)
@@ -95,5 +104,10 @@ class H5ViewController: UIViewController, UIWebViewDelegate {
             }
         }
         return true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        let jsString = "alert('load success')"
+        webView.stringByEvaluatingJavaScript(from: jsString)
     }
 }

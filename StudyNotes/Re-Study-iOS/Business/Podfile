@@ -17,6 +17,7 @@ target 'Business' do
 #  pod 'WoodPeckeriOS'
   pod 'FMDB'
 #  pod 'OOMDetector'
+  pod 'WebViewJavascriptBridge'
   # Pods for Business
 
 end

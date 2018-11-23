@@ -25,6 +25,7 @@ PODS:
   - UMCShare/UI (6.9.5):
     - UMCCommon
     - UMCShare/Core
+  - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
   - FMDB
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - UMCShare/Social/AlipayShare
   - UMCShare/Social/WeChat
   - UMCShare/UI
+  - WebViewJavascriptBridge
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -47,6 +49,7 @@ SPEC REPOS:
     - UMCCommon
     - UMCSecurityPlugins
     - UMCShare
+    - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -57,7 +60,8 @@ SPEC CHECKSUMS:
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: 403bdca960314470e3e000f68279e9b17a570cac
+PODFILE CHECKSUM: ebe04a532a3f64bf9571c0eacc108b9e0e9b2811
 
 COCOAPODS: 1.5.3
