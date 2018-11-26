@@ -13,6 +13,7 @@ var BaseView = require('./js/baseview');
 var LifeCycle = require('./js/lifecycle');
 var ScrollView = require('./js/scrollview');
 var Carousel = require('./js/carousel')
+var Swiper = require('./js/swiper')
 
 export default class ReactNative_ extends Component {
   render() {
@@ -21,7 +22,8 @@ export default class ReactNative_ extends Component {
         // <LifeCycle/>
         // <ScrollView/>
         // <Carousel/>
-        <Carousel imageData={require('./data/carousel.json').data}/>
+        // <Carousel imageData={require('./data/carousel.json').data}/>
+        <Swiper/>
     );
   }
 }
