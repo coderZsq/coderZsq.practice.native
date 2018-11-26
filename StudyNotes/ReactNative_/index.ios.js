@@ -16,6 +16,8 @@ var Carousel = require('./js/carousel')
 var Swiper = require('./js/swiper')
 var ListView = require('./js/listview')
 var ListView2 = require('./js/listview2')
+var ListView3 = require('./js/listview3')
+var TabBar = require('./js/tabbar')
 
 export default class ReactNative_ extends Component {
   render() {
@@ -27,7 +29,9 @@ export default class ReactNative_ extends Component {
         // <Carousel imageData={require('./data/carousel.json').data}/>
         // <Swiper/>
         // <ListView/>
-        <ListView2/>
+        // <ListView2/>
+        // <ListView3/> 
+        <TabBar/>
     );
   }
 }
