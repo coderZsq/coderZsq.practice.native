@@ -8,7 +8,9 @@
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
-		"react-native": "0.44.3"
+		"react-native": "0.44.3",
+		"react-native-swiper": "^1.5.13",
+		"react-timer-mixin": "^0.13.4"
 	},
 	"devDependencies": {
 		"babel-jest": "23.6.0",
