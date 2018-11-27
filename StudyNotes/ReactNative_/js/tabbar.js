@@ -23,8 +23,7 @@ var TabBar = React.createClass({
                 barTintColor="skyblue"
                 >
                 <TabBarIOS.Item
-                    // systemIcon="bookmarks"
-                    title="首页"
+                    systemIcon="bookmarks"
                     onPress={()=>{
                         this.setState({
                             selectedTab: 0
