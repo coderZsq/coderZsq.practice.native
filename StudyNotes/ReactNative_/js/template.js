@@ -10,7 +10,7 @@ var Template = React.createClass({
 
     render(){
         return (
-
+            <Text></Text>
         )
     },
 });

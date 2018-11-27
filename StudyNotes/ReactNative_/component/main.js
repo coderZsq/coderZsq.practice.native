@@ -38,10 +38,13 @@ var Main = React.createClass({
                     selected={this.state.selectedTab === 'home'}
                 >
                 <NavigatorIOS
+                    tintColor="rgba(255, 130, 1, 1.0)"
                     style={{flex: 1}}
                     initialRoute={{
                         title:'网易',
-                        component: Home
+                        component: Home,
+                        leftButtonIcon: require('../img/navigationbar_friendattention.png'),
+                        rightButtonIcon: require('../img/navigationbar_pop.png')
                     }}
                 />
                 </TabBarIOS.Item>
