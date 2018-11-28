@@ -10,6 +10,7 @@
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.3",
 		"react-native-swiper": "^1.5.14",
+		"react-native-tab-navigator": "^0.3.4",
 		"react-timer-mixin": "^0.13.4"
 	},
 	"devDependencies": {

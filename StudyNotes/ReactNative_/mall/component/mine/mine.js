@@ -6,11 +6,11 @@ import {
   Image
 } from 'react-native';
 
-var Template = React.createClass({
+var Mine = React.createClass({
 
     render(){
         return (
-            <Text>Template</Text>
+            <Text>Mine</Text>
         )
     },
 });
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = Template
+module.exports = Mine
