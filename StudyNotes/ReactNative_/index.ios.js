@@ -19,7 +19,7 @@ var ListView2 = require('./js/listview2')
 var ListView3 = require('./js/listview3')
 var TabBar = require('./js/tabbar')
 var Main = require('./component/main')
-var Mall = require('./mall/component/main/main')
+var TG = require('./tg/component/main/main')
 
 export default class ReactNative_ extends Component {
   render() {
@@ -35,7 +35,7 @@ export default class ReactNative_ extends Component {
         // <ListView3/>
         // <TabBar/>
         // <Main/>
-        <Mall/>
+        <TG/>
     );
   }
 }
