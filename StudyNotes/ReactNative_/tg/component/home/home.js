@@ -6,12 +6,16 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
-  Platform
+  Platform,
+  ScrollView
 } from 'react-native';
 
 var HomeDetail = require('./homedetail')
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window')
+var TopMenu = require('../../data/TopMenu.json')
+
+import HomeTopMenu from './hometopmenu'
 
 var Home = React.createClass({
 
@@ -19,9 +23,9 @@ var Home = React.createClass({
         return (
             <View>
                 {this.renderNavBar()}
-                <TouchableOpacity onPress={() => this.pushToHomeDetail()}>
-                    <Text>Home</Text>
-                </TouchableOpacity>
+                <ScrollView>
+                    <HomeTopMenu data={TopMenu}/>
+                </ScrollView>
             </View>
         )
     },
