@@ -10,6 +10,8 @@ import {
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window')
 
+import HomeTopListView from './hometoplistview'
+
 var HomeTopMenu = React.createClass({
 
     getDefaultProps(){
@@ -66,8 +68,8 @@ var HomeTopMenu = React.createClass({
         var itemArr = [];
         for (var i = 0; i < dataArr.length; i++) {
             itemArr.push(
-                <View key={i} style={{backgroundColor: dataArr[i], width: width, height: 130}}></View>
-            )
+                <HomeTopListView data={dataArr[i]} key={i}/>
+            );
         }
         return itemArr
     }

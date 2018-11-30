@@ -10,21 +10,25 @@ import {
   ScrollView
 } from 'react-native';
 
-var HomeDetail = require('./homedetail')
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window')
-var TopMenu = require('../../data/TopMenu.json')
 
+var TopMenu = require('../../data/TopMenu.json')
+var TopMiddleData = require('../../data/HomeTopMiddleLeft.json')
+
+var HomeDetail = require('./homedetail')
 import HomeTopMenu from './hometopmenu'
+import HomeMiddleView from './homemiddleview'
 
 var Home = React.createClass({
 
     render(){
         return (
-            <View>
+            <View style={{flex: 1, backgroundColor: '#e8e8e8'}}>
                 {this.renderNavBar()}
                 <ScrollView>
-                    <HomeTopMenu data={TopMenu}/>
+                    <HomeTopMenu data={TopMenu.data}/>
+                    <HomeMiddleView dataObj={TopMiddleData}/>
                 </ScrollView>
             </View>
         )
