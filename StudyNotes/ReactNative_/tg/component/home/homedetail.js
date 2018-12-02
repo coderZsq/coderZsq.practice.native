@@ -4,16 +4,18 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  WebView
 } from 'react-native';
 
 var HomeDetail = React.createClass({
 
     render(){
+        // alert(this.props.data);
         return (
-            <TouchableOpacity onPress={() => this.popToHome()}>
-                <Text>HomeDetail</Text>
-            </TouchableOpacity>
+            <WebView
+                source={{uri: this.props.data}}
+            />
         )
     },
 

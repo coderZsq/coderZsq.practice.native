@@ -15,10 +15,14 @@ var {width, height} = Dimensions.get('window')
 
 var TopMenu = require('../../data/TopMenu.json')
 var TopMiddleData = require('../../data/HomeTopMiddleLeft.json')
+var MiddleBottomData = require('../../data/XMG_Home_D4.json')
+var shopCenterData = require('../../data/XMG_Home_D5.json')
 
 var HomeDetail = require('./homedetail')
 import HomeTopMenu from './hometopmenu'
 import HomeMiddleView from './homemiddleview'
+import HomeMiddleBottomView from './homemiddlebottomview'
+import ShopCenterView from './shopcenterview'
 
 var Home = React.createClass({
 
@@ -29,6 +33,8 @@ var Home = React.createClass({
                 <ScrollView>
                     <HomeTopMenu data={TopMenu.data}/>
                     <HomeMiddleView dataObj={TopMiddleData}/>
+                    <HomeMiddleBottomView dataArr={MiddleBottomData.data}/>
+                    <ShopCenterView pushToHome={(data)=>this.pushToHomeDetail(data)} data={shopCenterData}/>
                 </ScrollView>
             </View>
         )
@@ -42,7 +48,7 @@ var Home = React.createClass({
                 </TouchableOpacity>
                 <View>
                     <TextInput
-                        placeholder='数据商家 商圈 品类'
+                        placeholder='搜索商家 商圈 品类'
                         style={styles.textInputStyle}
                     />
                 </View>
@@ -54,10 +60,11 @@ var Home = React.createClass({
         )
     },
 
-    pushToHomeDetail(){
+    pushToHomeDetail(data){
         this.props.navigator.push({
             title: '详情页',
-            component: HomeDetail
+            component: HomeDetail,
+            params: {data}
         })
     }
 });

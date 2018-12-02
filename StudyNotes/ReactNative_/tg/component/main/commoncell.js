@@ -82,7 +82,6 @@ var CommonCell = React.createClass({
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: 'white',
         flexDirection: 'row',
         height: 44,
