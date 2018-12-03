@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func buttonClickAction() {
 //        button.setEnabled(false)
 //        pushController(withName: <#T##String#>, context: <#T##Any?#>)
-        presentController(withName: "vc1", context: nil)
+        presentController(withName: "os2", context: nil)
 //        presentController(withNames: ["vc1", "vc2"], contexts: nil)
     }
     
