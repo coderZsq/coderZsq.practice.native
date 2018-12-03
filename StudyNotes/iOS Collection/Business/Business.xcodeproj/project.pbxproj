@@ -147,6 +147,8 @@
 		14E6329A21A3AD0B0054E93F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329921A3AD0B0054E93F /* video.mov */; };
 		14E6329C21A3B99B0054E93F /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6329B21A3B99B0054E93F /* QRCodeViewController.swift */; };
 		14E6329E21A3B9A80054E93F /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6329D21A3B9A80054E93F /* QRCodeViewController.storyboard */; };
+		14EB7AF721B50BF4001C5281 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB7AF621B50BF4001C5281 /* TableRow.swift */; };
+		14EB7AFB21B512D3001C5281 /* vc1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB7AFA21B512D3001C5281 /* vc1InterfaceController.swift */; };
 		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
@@ -343,6 +345,8 @@
 		14E6329921A3AD0B0054E93F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		14E6329B21A3B99B0054E93F /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		14E6329D21A3B9A80054E93F /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
+		14EB7AF621B50BF4001C5281 /* TableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		14EB7AFA21B512D3001C5281 /* vc1InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc1InterfaceController.swift; sourceTree = "<group>"; };
 		14EDAA72218BEE5C00441973 /* Business-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Business-Bridging-Header.h"; sourceTree = "<group>"; };
 		14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitTool.swift; sourceTree = "<group>"; };
 		14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitViewController.swift; sourceTree = "<group>"; };
@@ -828,6 +832,8 @@
 			isa = PBXGroup;
 			children = (
 				14CA36D521B4F30D006E0DDD /* InterfaceController.swift */,
+				14EB7AFA21B512D3001C5281 /* vc1InterfaceController.swift */,
+				14EB7AF621B50BF4001C5281 /* TableRow.swift */,
 				14CA36D721B4F30D006E0DDD /* ExtensionDelegate.swift */,
 				14CA36D921B4F30D006E0DDD /* NotificationController.swift */,
 				14CA36DB21B4F30E006E0DDD /* Assets.xcassets */,
@@ -1335,8 +1341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CA36DA21B4F30D006E0DDD /* NotificationController.swift in Sources */,
+				14EB7AF721B50BF4001C5281 /* TableRow.swift in Sources */,
 				14CA36D821B4F30D006E0DDD /* ExtensionDelegate.swift in Sources */,
 				14CA36D621B4F30D006E0DDD /* InterfaceController.swift in Sources */,
+				14EB7AFB21B512D3001C5281 /* vc1InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
