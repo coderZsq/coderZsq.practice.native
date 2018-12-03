@@ -23,6 +23,7 @@ import HomeTopMenu from './hometopmenu'
 import HomeMiddleView from './homemiddleview'
 import HomeMiddleBottomView from './homemiddlebottomview'
 import ShopCenterView from './shopcenterview'
+import GuestYouLike from './guestyoulike'
 
 var Home = React.createClass({
 
@@ -35,6 +36,7 @@ var Home = React.createClass({
                     <HomeMiddleView dataObj={TopMiddleData}/>
                     <HomeMiddleBottomView dataArr={MiddleBottomData.data}/>
                     <ShopCenterView pushToHome={(data)=>this.pushToHomeDetail(data)} data={shopCenterData}/>
+                    <GuestYouLike/>
                 </ScrollView>
             </View>
         )
