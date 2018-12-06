@@ -163,4 +163,36 @@ extension BluetoothViewController2: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor descriptor: CBDescriptor, error: Error?) {
         print(#line, descriptor.uuid, descriptor.value ?? "", descriptor)
     }
+    
+    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, readValueFor char: CBCharacteristic) {
+        guard char.properties.contains(.read) else {
+            return
+        }
+        peripheral.readValue(for: char)
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, write value: Data, for char: CBCharacteristic) {
+        guard char.properties.contains(.write) else {
+            return
+        }
+        peripheral.writeValue(value, for: char, type: .withResponse)
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, setNotifyFor char: CBCharacteristic) {
+        guard char.properties.contains(.notify) else {
+            return
+        }
+        peripheral.setNotifyValue(true, for: char)
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, cancelNotifyFor char: CBCharacteristic) {
+        guard char.properties.contains(.notify) else {
+            return
+        }
+        peripheral.setNotifyValue(false, for: char)
+    }
 }
