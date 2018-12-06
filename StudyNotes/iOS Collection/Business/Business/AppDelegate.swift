@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 //import OOMDetector
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var scheme: String?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {        
+        
+//        UserDefaults(suiteName: "相同的suitName")
+        
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            WCSession.default.sendMessage(["iOS" : "send"], replyHandler: { (reply) in
+                print(reply)
+            }, errorHandler: { (error) in
+                print(error)
+            })
+        }
         
 //        OOMDetector.getInstance().setupWithDefaultConfig()
         
@@ -290,5 +306,24 @@ extension AppDelegate {
     func removeDisplayLink() {
         displayLink?.invalidate()
         displayLink = nil
+    }
+}
+
+extension AppDelegate: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidCompleteWith")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("sessionDidBecomeInactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("sessionDidDeactivate")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        replyHandler(["iOS": "Data Connectivity"])
     }
 }

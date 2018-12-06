@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 private var index = 0
 
@@ -24,6 +25,8 @@ extension WKPickerItem {
 class os2InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var picker: WKInterfacePicker!
+    @IBOutlet weak var picker2: WKInterfacePicker!
+    @IBOutlet weak var picker3: WKInterfacePicker!
     @IBAction func pickerAction(_ value: Int) {
         print(value)
     }
@@ -123,15 +126,41 @@ class os2InterfaceController: WKInterfaceController {
         print("pickerDidSettle")
     }
     
+    
+    @IBAction func openHostApp() {
+        WCSession.default.sendMessage(["WatchOS" : "send"], replyHandler: { (reply) in
+            print(reply)
+        }) { (error) in
+            print(error)
+        }
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+        
+        picker.setItems(items)
+        picker.setCoordinatedAnimations(nil)
+        DispatchQueue.main.asyncAfter(deadline:  DispatchTime.now() + 1) {
+            self.picker.setSelectedItemIndex(self.items.count - 1)
+        }
+        picker2.setItems(items)
+        DispatchQueue.main.asyncAfter(deadline:  DispatchTime.now() + 3) {
+            self.picker2.setSelectedItemIndex(self.items.count - 1)
+        }
+        picker3.setItems(items)
+        DispatchQueue.main.asyncAfter(deadline:  DispatchTime.now() + 5) {
+            self.picker3.setSelectedItemIndex(self.items.count - 1)
+        }
         guard index == 0 else {
             return;
         }
         WKInterfaceController.reloadRootControllers(withNames: ["os2","vc1", "vc2", "vc3", "vc4"], contexts: nil)
         index += 1
-
-        picker.setItems(items)
     }
 
     override func willActivate() {
@@ -146,3 +175,13 @@ class os2InterfaceController: WKInterfaceController {
 
 }
 
+extension os2InterfaceController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidCompleteWith")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        replyHandler(["WatchOS": "Data Connectivity"])
+    }
+}

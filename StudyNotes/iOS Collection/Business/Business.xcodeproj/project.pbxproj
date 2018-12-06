@@ -19,6 +19,8 @@
 		141F644221A288980010E888 /* LrcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F644121A288980010E888 /* LrcLabel.swift */; };
 		141F644721A28DED0010E888 /* LrcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F644521A28DED0010E888 /* LrcCell.swift */; };
 		141F644821A28DED0010E888 /* LrcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141F644621A28DED0010E888 /* LrcCell.xib */; };
+		1433FAA521B8CB9400D24067 /* TouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FAA421B8CB9400D24067 /* TouchIDViewController.swift */; };
+		1433FAA721B8CBA400D24067 /* TouchIDViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAA621B8CBA400D24067 /* TouchIDViewController.storyboard */; };
 		1449B3F2219BE8850051847C /* 老李.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1449B3F1219BE8850051847C /* 老李.mp3 */; };
 		1457821F21A540F500D367B9 /* QRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457821E21A540F500D367B9 /* QRCodeTool.swift */; };
 		1457824821A6470100D367B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1457824721A6470100D367B9 /* libsqlite3.0.tbd */; };
@@ -150,6 +152,8 @@
 		14EB7AF721B50BF4001C5281 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB7AF621B50BF4001C5281 /* TableRow.swift */; };
 		14EB7AFD21B514D0001C5281 /* os2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB7AFC21B514D0001C5281 /* os2InterfaceController.swift */; };
 		14EDAA7B218BF1EB00441973 /* BaiduMapKitViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */; };
+		14F629C321B8C06100AAF1E8 /* WatchOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F629C221B8C06100AAF1E8 /* WatchOSViewController.swift */; };
+		14F629C521B8C07A00AAF1E8 /* WatchOSViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F629C421B8C07A00AAF1E8 /* WatchOSViewController.storyboard */; };
 		A024F3A661134AEF89183240 /* Pods_Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91199787262547AE4AB2FD /* Pods_Business.framework */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +212,8 @@
 		141F644121A288980010E888 /* LrcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LrcLabel.swift; sourceTree = "<group>"; };
 		141F644521A28DED0010E888 /* LrcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LrcCell.swift; sourceTree = "<group>"; };
 		141F644621A28DED0010E888 /* LrcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LrcCell.xib; sourceTree = "<group>"; };
+		1433FAA421B8CB9400D24067 /* TouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
+		1433FAA621B8CBA400D24067 /* TouchIDViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchIDViewController.storyboard; sourceTree = "<group>"; };
 		1449B3F1219BE8850051847C /* 老李.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老李.mp3"; sourceTree = "<group>"; };
 		1457821E21A540F500D367B9 /* QRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTool.swift; sourceTree = "<group>"; };
 		1457824721A6470100D367B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -351,6 +357,10 @@
 		14EDAA76218BF03700441973 /* BaiduMapKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitTool.swift; sourceTree = "<group>"; };
 		14EDAA78218BF1E400441973 /* BaiduMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapKitViewController.swift; sourceTree = "<group>"; };
 		14EDAA7A218BF1EB00441973 /* BaiduMapKitViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaiduMapKitViewController.storyboard; sourceTree = "<group>"; };
+		14F629C221B8C06100AAF1E8 /* WatchOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSViewController.swift; sourceTree = "<group>"; };
+		14F629C421B8C07A00AAF1E8 /* WatchOSViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchOSViewController.storyboard; sourceTree = "<group>"; };
+		14F629C721B8C12E00AAF1E8 /* WatchOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchOS.entitlements; sourceTree = "<group>"; };
+		14F629C821B8C14400AAF1E8 /* WatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchOS Extension.entitlements"; sourceTree = "<group>"; };
 		C553E8178B7026263E674F6A /* Pods-Business.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.debug.xcconfig"; sourceTree = "<group>"; };
 		EF91199787262547AE4AB2FD /* Pods_Business.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Business.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F240BFCB8FD6F5E607758ADB /* Pods-Business.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business.release.xcconfig"; path = "Pods/Target Support Files/Pods-Business/Pods-Business.release.xcconfig"; sourceTree = "<group>"; };
@@ -377,6 +387,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1433FAA821B8CBAA00D24067 /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				1433FAA421B8CB9400D24067 /* TouchIDViewController.swift */,
+				1433FAA621B8CBA400D24067 /* TouchIDViewController.storyboard */,
+			);
+			path = TouchID;
+			sourceTree = "<group>";
+		};
 		1449B3F3219BEB2E0051847C /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +636,8 @@
 				14E6329F21A3B9AF0054E93F /* QRCode */,
 				1457824D21A6478F00D367B9 /* Database */,
 				1457825821A6A5BA00D367B9 /* H5 */,
+				14F629C621B8C08100AAF1E8 /* WatchOS */,
+				1433FAA821B8CBAA00D24067 /* TouchID */,
 				1480104621894DB200816B73 /* AppDelegate.swift */,
 				1480104821894DB200816B73 /* ViewController.swift */,
 				1480104A21894DB200816B73 /* Main.storyboard */,
@@ -821,6 +842,7 @@
 		14CA36C521B4F30B006E0DDD /* WatchOS */ = {
 			isa = PBXGroup;
 			children = (
+				14F629C721B8C12E00AAF1E8 /* WatchOS.entitlements */,
 				14CA36C621B4F30B006E0DDD /* Interface.storyboard */,
 				14CA36C921B4F30D006E0DDD /* Assets.xcassets */,
 				14CA36CB21B4F30D006E0DDD /* Info.plist */,
@@ -831,6 +853,7 @@
 		14CA36D421B4F30D006E0DDD /* WatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
+				14F629C821B8C14400AAF1E8 /* WatchOS Extension.entitlements */,
 				14CA36D521B4F30D006E0DDD /* InterfaceController.swift */,
 				14EB7AFC21B514D0001C5281 /* os2InterfaceController.swift */,
 				14EB7AF621B50BF4001C5281 /* TableRow.swift */,
@@ -978,6 +1001,15 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		14F629C621B8C08100AAF1E8 /* WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				14F629C221B8C06100AAF1E8 /* WatchOSViewController.swift */,
+				14F629C421B8C07A00AAF1E8 /* WatchOSViewController.storyboard */,
+			);
+			path = WatchOS;
+			sourceTree = "<group>";
+		};
 		16867CACA5AF2B0C22BF4BE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1102,9 @@
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -1083,9 +1118,22 @@
 					};
 					14CA36C321B4F30B006E0DDD = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					14CA36CF21B4F30D006E0DDD = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1162,6 +1210,7 @@
 				14E48571219D0AFF00C15946 /* 12309111.lrc in Resources */,
 				14E48583219D0AFF00C15946 /* dzq_icon@2x.jpg in Resources */,
 				14E48590219D0AFF00C15946 /* bb_icon@2x.jpg in Resources */,
+				14F629C521B8C07A00AAF1E8 /* WatchOSViewController.storyboard in Resources */,
 				14E48574219D0AFF00C15946 /* 120125029.lrc in Resources */,
 				14E4858C219D0AFF00C15946 /* bb@2x.jpg in Resources */,
 				14E48570219D0AFF00C15946 /* 235319.lrc in Resources */,
@@ -1172,6 +1221,7 @@
 				14E4858F219D0AFF00C15946 /* nanquan@2x.jpg in Resources */,
 				1480104E21894DB300816B73 /* Assets.xcassets in Resources */,
 				14E6329E21A3B9A80054E93F /* QRCodeViewController.storyboard in Resources */,
+				1433FAA721B8CBA400D24067 /* TouchIDViewController.storyboard in Resources */,
 				1468A1EB219A692600B8B449 /* AudioViewController.storyboard in Resources */,
 				1480104C21894DB200816B73 /* Main.storyboard in Resources */,
 				1457825721A6A59300D367B9 /* H5ViewController.storyboard in Resources */,
@@ -1292,6 +1342,7 @@
 				141F644021A27F6A0010E888 /* LrcViewController.swift in Sources */,
 				14AFA47021991D8800BCB6A7 /* iPadViewController.swift in Sources */,
 				14AFA4822199489C00BCB6A7 /* iPadTabbarView.swift in Sources */,
+				14F629C321B8C06100AAF1E8 /* WatchOSViewController.swift in Sources */,
 				1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
@@ -1323,6 +1374,7 @@
 				14E48597219D0C4C00C15946 /* DataTool.swift in Sources */,
 				1404F027219E8E44001193F5 /* MusicListCell.swift in Sources */,
 				1486EE8521A2A22E005B52B2 /* ImageTool.swift in Sources */,
+				1433FAA521B8CB9400D24067 /* TouchIDViewController.swift in Sources */,
 				1457824A21A6477900D367B9 /* DatabaseViewController.swift in Sources */,
 				1457825121A652F100D367B9 /* Student.swift in Sources */,
 				141F643821A2585F0010E888 /* MusicMessageModel.swift in Sources */,
@@ -1571,6 +1623,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchOS/WatchOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				IBSC_MODULE = WatchOS_Extension;
@@ -1590,6 +1643,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchOS/WatchOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				IBSC_MODULE = WatchOS_Extension;
@@ -1608,7 +1662,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchOS Extension/WatchOS Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1629,7 +1685,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchOS Extension/WatchOS Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

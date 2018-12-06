@@ -149,10 +149,19 @@
                                 <action selector="pickerAction:" destination="lgI-B1-kGo" id="y4X-bq-Sfo"/>
                             </connections>
                         </picker>
+                        <picker height="100" alignment="left" style="stack" focusStyle="stack" indicatorMode="shownWhileFocused" id="cgb-YW-2c5"/>
+                        <picker height="100" alignment="left" style="sequence" focusStyle="sequence" indicatorMode="shownWhileFocused" id="SqR-fO-Cny"/>
+                        <button width="1" alignment="left" title="OS2" id="3M4-fm-pRR">
+                            <connections>
+                                <action selector="openHostApp" destination="lgI-B1-kGo" id="ObJ-yC-cGa"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="button" destination="7up-XR-Vy0" id="vWw-0J-d6w"/>
                         <outlet property="picker" destination="FHq-rA-Srv" id="SoH-bP-gis"/>
+                        <outlet property="picker2" destination="cgb-YW-2c5" id="hBv-9M-bhW"/>
+                        <outlet property="picker3" destination="SqR-fO-Cny" id="U08-2w-SVH"/>
                     </connections>
                 </controller>
             </objects>
@@ -222,6 +231,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="69D-Oz-OIP"/>
+        <segue reference="DrP-k1-lCH"/>
     </inferredMetricsTieBreakers>
 </document>

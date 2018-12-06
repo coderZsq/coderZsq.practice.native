@@ -29,7 +29,11 @@ class ViewController: UITableViewController {
                                         DatabaseViewController.self,
                                         H5ViewController.self],
                           "titleheader" : "practical-tech",
-                          "titlefooter" : "Some example of practical-tech learning."]]
+                          "titlefooter" : "Some example of practical-tech learning."],
+                          ["classes" : [WatchOSViewController.self,
+                                        TouchIDViewController.self],
+                           "titleheader" : "zhuangbility-stunts",
+                           "titlefooter" : "Some example of zhuangbility-stunts learning."]]
         return dataSource
     }()
     
