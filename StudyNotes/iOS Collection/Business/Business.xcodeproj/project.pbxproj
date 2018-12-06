@@ -23,6 +23,7 @@
 		1433FAA721B8CBA400D24067 /* TouchIDViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAA621B8CBA400D24067 /* TouchIDViewController.storyboard */; };
 		1433FAAA21B8E10C00D24067 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FAA921B8E10C00D24067 /* BluetoothViewController.swift */; };
 		1433FAAC21B8E11B00D24067 /* BluetoothViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAAB21B8E11B00D24067 /* BluetoothViewController.storyboard */; };
+		1433FAAF21B9015300D24067 /* BluetoothViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FAAE21B9015300D24067 /* BluetoothViewController2.swift */; };
 		1449B3F2219BE8850051847C /* 老李.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1449B3F1219BE8850051847C /* 老李.mp3 */; };
 		1457821F21A540F500D367B9 /* QRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457821E21A540F500D367B9 /* QRCodeTool.swift */; };
 		1457824821A6470100D367B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1457824721A6470100D367B9 /* libsqlite3.0.tbd */; };
@@ -218,6 +219,7 @@
 		1433FAA621B8CBA400D24067 /* TouchIDViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchIDViewController.storyboard; sourceTree = "<group>"; };
 		1433FAA921B8E10C00D24067 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		1433FAAB21B8E11B00D24067 /* BluetoothViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BluetoothViewController.storyboard; sourceTree = "<group>"; };
+		1433FAAE21B9015300D24067 /* BluetoothViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController2.swift; sourceTree = "<group>"; };
 		1449B3F1219BE8850051847C /* 老李.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老李.mp3"; sourceTree = "<group>"; };
 		1457821E21A540F500D367B9 /* QRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTool.swift; sourceTree = "<group>"; };
 		1457824721A6470100D367B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				1433FAA921B8E10C00D24067 /* BluetoothViewController.swift */,
+				1433FAAE21B9015300D24067 /* BluetoothViewController2.swift */,
 				1433FAAB21B8E11B00D24067 /* BluetoothViewController.storyboard */,
 			);
 			path = Bluetooth;
@@ -1360,6 +1363,7 @@
 				14F629C321B8C06100AAF1E8 /* WatchOSViewController.swift in Sources */,
 				1468A1E9219A691200B8B449 /* AudioViewController.swift in Sources */,
 				14DB50CF2189A26300F635F3 /* LocationTool.swift in Sources */,
+				1433FAAF21B9015300D24067 /* BluetoothViewController2.swift in Sources */,
 				14919C79218D6B4A00F0EBCD /* ADViewController.swift in Sources */,
 				14AFA490219969AF00BCB6A7 /* iPadAllViewController.swift in Sources */,
 				1404F02A219E9DA7001193F5 /* MusicTool.swift in Sources */,

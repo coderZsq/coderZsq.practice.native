@@ -47,8 +47,7 @@ class BluetoothViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bluetooth"
-        assistant.start()
+        title = "Multipeer"
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillChangeFrameNotification, object: nil, queue: OperationQueue.main) { (note) in
             if let beginFrame = note.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect, let endFrame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
                 let changeY = endFrame.minY - beginFrame.minY
