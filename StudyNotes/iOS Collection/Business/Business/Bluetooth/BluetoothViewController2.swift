@@ -18,6 +18,8 @@ let notifyCharUUID = "F0E2"
 
 class BluetoothViewController2: UIViewController {
 
+    var timer: Timer?
+    
     var peripheral: CBPeripheral?
     
     lazy var services: [CBMutableService] = {
@@ -83,6 +85,54 @@ extension BluetoothViewController2: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
         print(service, error ?? "", #function, #line)
     }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
+        if request.characteristic.properties.contains(.read) {
+            let data = request.characteristic.value
+            request.value = data
+            peripheral.respond(to: request, withResult: .success)
+        } else {
+            peripheral.respond(to: request, withResult: .readNotPermitted)
+        }
+    }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
+        
+        func manager(_ manager: CBPeripheralManager, respond request: CBATTRequest) {
+            if request.characteristic.properties.contains(.write) {
+                let data = request.value
+                let char = request.characteristic as? CBMutableCharacteristic
+                char?.value = data
+                peripheral.respond(to: request, withResult: .success)
+            } else {
+                peripheral.respond(to: request, withResult: .writeNotPermitted)
+            }
+        }
+        _ = requests.map{manager(peripheral, respond: $0)}
+    }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
+//        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { (timer) in
+//
+//        })
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: Selector(("updateCharacterristic:")), userInfo: characteristic, repeats: true)
+
+        func updateCharacterristic(_ timer: Timer) -> Bool? {
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yy:MM:dd:HH:mm:ss"
+            if  let data = dateFormatter.string(from: date).data(using: .utf8),
+                let char = timer.userInfo as? CBMutableCharacteristic {
+                return peripheral.updateValue(data, for: char, onSubscribedCentrals: nil)
+            }
+            return nil
+        }
+    }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
+        timer?.invalidate()
+        timer = nil
+    }
 }
 
 extension BluetoothViewController2: CBCentralManagerDelegate {
@@ -147,6 +197,12 @@ extension BluetoothViewController2: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         print(service.characteristics?.map{$0.uuid} ?? "")
+        for char: CBCharacteristic in service.characteristics! {
+            if char.uuid.uuidString == notifyCharUUID {
+                self.peripheral(peripheral, setNotifyFor: char)
+                break
+            }
+        }
         _ = service.characteristics?.map{peripheral.readValue(for: $0)}
         _ = service.characteristics?.map{peripheral.discoverDescriptors(for: $0)}
     }
@@ -166,6 +222,10 @@ extension BluetoothViewController2: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
+        print(characteristic.uuid, "is readed", #line, characteristic.value ?? "")
     }
     
     func peripheral(_ peripheral: CBPeripheral, readValueFor char: CBCharacteristic) {
@@ -194,5 +254,12 @@ extension BluetoothViewController2: CBPeripheralDelegate {
             return
         }
         peripheral.setNotifyValue(false, for: char)
+    }
+    
+    func cancelConnected() {
+        c_manager.stopScan()
+        if let peripheral = peripheral {
+            c_manager.cancelPeripheralConnection(peripheral)
+        }
     }
 }
