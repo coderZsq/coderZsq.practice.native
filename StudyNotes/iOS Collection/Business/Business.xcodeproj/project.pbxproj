@@ -35,6 +35,9 @@
 		1433FAEE21BA455100D24067 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FAED21BA455100D24067 /* ActionViewController.swift */; };
 		1433FAF121BA455100D24067 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAEF21BA455100D24067 /* MainInterface.storyboard */; };
 		1433FAF521BA455100D24067 /* Action.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1433FAE921BA455100D24067 /* Action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1433FB0221BA635F00D24067 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FB0121BA635F00D24067 /* ShareViewController.swift */; };
+		1433FB0521BA635F00D24067 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB0321BA635F00D24067 /* MainInterface.storyboard */; };
+		1433FB0921BA635F00D24067 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1433FAFF21BA635E00D24067 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1449B3F2219BE8850051847C /* 老李.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1449B3F1219BE8850051847C /* 老李.mp3 */; };
 		1457821F21A540F500D367B9 /* QRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457821E21A540F500D367B9 /* QRCodeTool.swift */; };
 		1457824821A6470100D367B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1457824721A6470100D367B9 /* libsqlite3.0.tbd */; };
@@ -186,6 +189,13 @@
 			remoteGlobalIDString = 1433FAE821BA455100D24067;
 			remoteInfo = Action;
 		};
+		1433FB0721BA635F00D24067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1480103B21894DB200816B73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1433FAFE21BA635E00D24067;
+			remoteInfo = Share;
+		};
 		14CA36D221B4F30D006E0DDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1480103B21894DB200816B73 /* Project object */;
@@ -210,6 +220,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				1433FAF521BA455100D24067 /* Action.appex in Embed App Extensions */,
+				1433FB0921BA635F00D24067 /* Share.appex in Embed App Extensions */,
 				1433FAC621BA3B6D00D24067 /* Today.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -275,6 +286,10 @@
 		1433FAED21BA455100D24067 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		1433FAF021BA455100D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1433FAF221BA455100D24067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1433FAFF21BA635E00D24067 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1433FB0121BA635F00D24067 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1433FB0421BA635F00D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1433FB0621BA635F00D24067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1449B3F1219BE8850051847C /* 老李.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老李.mp3"; sourceTree = "<group>"; };
 		1457821E21A540F500D367B9 /* QRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTool.swift; sourceTree = "<group>"; };
 		1457824721A6470100D367B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -443,6 +458,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1433FAFC21BA635E00D24067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1480104021894DB200816B73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +545,16 @@
 				1433FAF221BA455100D24067 /* Info.plist */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		1433FB0021BA635F00D24067 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				1433FB0121BA635F00D24067 /* ShareViewController.swift */,
+				1433FB0321BA635F00D24067 /* MainInterface.storyboard */,
+				1433FB0621BA635F00D24067 /* Info.plist */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		1449B3F3219BEB2E0051847C /* List */ = {
@@ -734,6 +766,7 @@
 				1433FABD21BA3B6D00D24067 /* Today */,
 				1433FAD621BA447900D24067 /* Action */,
 				1433FAEA21BA455100D24067 /* Action */,
+				1433FB0021BA635F00D24067 /* Share */,
 				1480104421894DB200816B73 /* Products */,
 				16867CACA5AF2B0C22BF4BE0 /* Pods */,
 				F50FB5A093414B78BE88B029 /* Frameworks */,
@@ -748,6 +781,7 @@
 				14CA36D021B4F30D006E0DDD /* WatchOS Extension.appex */,
 				1433FABA21BA3B6C00D24067 /* Today.appex */,
 				1433FAE921BA455100D24067 /* Action.appex */,
+				1433FAFF21BA635E00D24067 /* Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1203,6 +1237,23 @@
 			productReference = 1433FAE921BA455100D24067 /* Action.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		1433FAFE21BA635E00D24067 /* Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1433FB0A21BA635F00D24067 /* Build configuration list for PBXNativeTarget "Share" */;
+			buildPhases = (
+				1433FAFB21BA635E00D24067 /* Sources */,
+				1433FAFC21BA635E00D24067 /* Frameworks */,
+				1433FAFD21BA635E00D24067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Share;
+			productName = Share;
+			productReference = 1433FAFF21BA635E00D24067 /* Share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1480104221894DB200816B73 /* Business */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1480105521894DB300816B73 /* Build configuration list for PBXNativeTarget "Business" */;
@@ -1222,6 +1273,7 @@
 				14CA36E021B4F30E006E0DDD /* PBXTargetDependency */,
 				1433FAC521BA3B6D00D24067 /* PBXTargetDependency */,
 				1433FAF421BA455100D24067 /* PBXTargetDependency */,
+				1433FB0821BA635F00D24067 /* PBXTargetDependency */,
 			);
 			name = Business;
 			productName = Business;
@@ -1283,6 +1335,9 @@
 					1433FAE821BA455100D24067 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					1433FAFE21BA635E00D24067 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					1480104221894DB200816B73 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1010;
@@ -1340,6 +1395,7 @@
 				14CA36CF21B4F30D006E0DDD /* WatchOS Extension */,
 				1433FAB921BA3B6C00D24067 /* Today */,
 				1433FAE821BA455100D24067 /* Action */,
+				1433FAFE21BA635E00D24067 /* Share */,
 			);
 		};
 /* End PBXProject section */
@@ -1359,6 +1415,14 @@
 			files = (
 				1433FAEC21BA455100D24067 /* Media.xcassets in Resources */,
 				1433FAF121BA455100D24067 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1433FAFD21BA635E00D24067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1433FB0521BA635F00D24067 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,6 +1607,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1433FAFB21BA635E00D24067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1433FB0221BA635F00D24067 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1480103F21894DB200816B73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1639,6 +1711,11 @@
 			target = 1433FAE821BA455100D24067 /* Action */;
 			targetProxy = 1433FAF321BA455100D24067 /* PBXContainerItemProxy */;
 		};
+		1433FB0821BA635F00D24067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1433FAFE21BA635E00D24067 /* Share */;
+			targetProxy = 1433FB0721BA635F00D24067 /* PBXContainerItemProxy */;
+		};
 		14CA36D321B4F30D006E0DDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 14CA36CF21B4F30D006E0DDD /* WatchOS Extension */;
@@ -1672,6 +1749,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1433FAF021BA455100D24067 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		1433FB0321BA635F00D24067 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1433FB0421BA635F00D24067 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -1778,6 +1863,46 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business.Action;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1433FB0B21BA635F00D24067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
+				INFOPLIST_FILE = Share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1433FB0C21BA635F00D24067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
+				INFOPLIST_FILE = Share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.Business.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -2065,6 +2190,15 @@
 			buildConfigurations = (
 				1433FAF721BA455100D24067 /* Debug */,
 				1433FAF821BA455100D24067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1433FB0A21BA635F00D24067 /* Build configuration list for PBXNativeTarget "Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1433FB0B21BA635F00D24067 /* Debug */,
+				1433FB0C21BA635F00D24067 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
