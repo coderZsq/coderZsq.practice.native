@@ -31,9 +31,6 @@
 		1433FAC621BA3B6D00D24067 /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1433FABA21BA3B6C00D24067 /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1433FACC21BA3D7800D24067 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FACB21BA3D7800D24067 /* ExtensionViewController.swift */; };
 		1433FACE21BA3D8B00D24067 /* ExtensionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FACD21BA3D8B00D24067 /* ExtensionViewController.storyboard */; };
-		1433FAEC21BA455100D24067 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAEB21BA455100D24067 /* Media.xcassets */; };
-		1433FAEE21BA455100D24067 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FAED21BA455100D24067 /* ActionViewController.swift */; };
-		1433FAF121BA455100D24067 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FAEF21BA455100D24067 /* MainInterface.storyboard */; };
 		1433FAF521BA455100D24067 /* Action.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1433FAE921BA455100D24067 /* Action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1433FB0221BA635F00D24067 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FB0121BA635F00D24067 /* ShareViewController.swift */; };
 		1433FB0521BA635F00D24067 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB0321BA635F00D24067 /* MainInterface.storyboard */; };
@@ -282,10 +279,6 @@
 		1433FADC21BA447900D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1433FADE21BA447900D24067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1433FAE921BA455100D24067 /* Action.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Action.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1433FAEB21BA455100D24067 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		1433FAED21BA455100D24067 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		1433FAF021BA455100D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		1433FAF221BA455100D24067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1433FAFF21BA635E00D24067 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1433FB0121BA635F00D24067 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		1433FB0421BA635F00D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -536,17 +529,6 @@
 			path = Action;
 			sourceTree = "<group>";
 		};
-		1433FAEA21BA455100D24067 /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				1433FAEB21BA455100D24067 /* Media.xcassets */,
-				1433FAED21BA455100D24067 /* ActionViewController.swift */,
-				1433FAEF21BA455100D24067 /* MainInterface.storyboard */,
-				1433FAF221BA455100D24067 /* Info.plist */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
 		1433FB0021BA635F00D24067 /* Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,7 +747,6 @@
 				14CA36D421B4F30D006E0DDD /* WatchOS Extension */,
 				1433FABD21BA3B6D00D24067 /* Today */,
 				1433FAD621BA447900D24067 /* Action */,
-				1433FAEA21BA455100D24067 /* Action */,
 				1433FB0021BA635F00D24067 /* Share */,
 				1480104421894DB200816B73 /* Products */,
 				16867CACA5AF2B0C22BF4BE0 /* Pods */,
@@ -1413,8 +1394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1433FAEC21BA455100D24067 /* Media.xcassets in Resources */,
-				1433FAF121BA455100D24067 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1603,7 +1582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1433FAEE21BA455100D24067 /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1741,14 +1719,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1433FADC21BA447900D24067 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		1433FAEF21BA455100D24067 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1433FAF021BA455100D24067 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
