@@ -12,10 +12,10 @@
 		1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB3B21BA6F5000D24067 /* Main.storyboard */; };
 		1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB3E21BA6F5100D24067 /* Assets.xcassets */; };
 		1433FB4221BA6F5100D24067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB4021BA6F5100D24067 /* LaunchScreen.storyboard */; };
-		1433FB5B21BA726E00D24067 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB5921BA726E00D24067 /* HomeViewController.storyboard */; };
 		1433FB5D21BA72BB00D24067 /* DiscoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB5C21BA72BB00D24067 /* DiscoverViewController.storyboard */; };
-		1433FB6021BA733000D24067 /* RankViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB5E21BA733000D24067 /* RankViewController.storyboard */; };
 		1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6121BA739100D24067 /* ProfileViewController.storyboard */; };
+		1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6321BA78A000D24067 /* HomeViewController.storyboard */; };
+		1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6521BA78A800D24067 /* RankViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		1433FB3E21BA6F5100D24067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1433FB4121BA6F5100D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1433FB4321BA6F5100D24067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1433FB5A21BA726E00D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiveBroadcast/Classes/Main/Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		1433FB5C21BA72BB00D24067 /* DiscoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiscoverViewController.storyboard; sourceTree = "<group>"; };
-		1433FB5F21BA733000D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LiveBroadcast/Classes/Main/Base.lproj/RankViewController.storyboard; sourceTree = "<group>"; };
 		1433FB6121BA739100D24067 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		1433FB6321BA78A000D24067 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		1433FB6521BA78A800D24067 /* RankViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RankViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		1433FB4A21BA6FFB00D24067 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1433FB5921BA726E00D24067 /* HomeViewController.storyboard */,
+				1433FB6321BA78A000D24067 /* HomeViewController.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 		1433FB4F21BA6FFB00D24067 /* Rank */ = {
 			isa = PBXGroup;
 			children = (
-				1433FB5E21BA733000D24067 /* RankViewController.storyboard */,
+				1433FB6521BA78A800D24067 /* RankViewController.storyboard */,
 			);
 			path = Rank;
 			sourceTree = "<group>";
@@ -198,13 +198,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1433FB5B21BA726E00D24067 /* HomeViewController.storyboard in Resources */,
 				1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */,
 				1433FB4221BA6F5100D24067 /* LaunchScreen.storyboard in Resources */,
+				1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */,
 				1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */,
+				1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */,
 				1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */,
 				1433FB5D21BA72BB00D24067 /* DiscoverViewController.storyboard in Resources */,
-				1433FB6021BA733000D24067 /* RankViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,22 +237,6 @@
 				1433FB4121BA6F5100D24067 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		1433FB5921BA726E00D24067 /* HomeViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1433FB5A21BA726E00D24067 /* Base */,
-			);
-			name = HomeViewController.storyboard;
-			sourceTree = "<group>";
-		};
-		1433FB5E21BA733000D24067 /* RankViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1433FB5F21BA733000D24067 /* Base */,
-			);
-			name = RankViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
