@@ -71,10 +71,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         scheme = url.scheme
         let nav = window?.rootViewController as! UINavigationController
         let root = nav.topViewController
-        if host == "inter-app" {
-            if let vc = UIStoryboard(name: "InterAppViewController", bundle: nil).instantiateInitialViewController() {
+        if host == "inter-app", let vc = UIStoryboard(name: "InterAppViewController", bundle: nil).instantiateInitialViewController() {
                 root?.navigationController?.pushViewController(vc, animated: true)
-            }
+        }
+        if host == "extension", let vc = UIStoryboard(name: "ExtensionViewController", bundle: nil).instantiateInitialViewController() {
+            root?.navigationController?.pushViewController(vc, animated: true)
         }
         
         let result = UMSocialManager.default()?.handleOpen(url, options: options)

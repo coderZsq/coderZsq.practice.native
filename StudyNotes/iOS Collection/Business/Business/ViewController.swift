@@ -32,7 +32,8 @@ class ViewController: UITableViewController {
                           "titlefooter" : "Some example of practical-tech learning."],
                           ["classes" : [WatchOSViewController.self,
                                         TouchIDViewController.self,
-                                        BluetoothViewController.self],
+                                        BluetoothViewController.self,
+                                        ExtensionViewController.self],
                            "titleheader" : "zhuangbility-stunts",
                            "titlefooter" : "Some example of zhuangbility-stunts learning."]]
         return dataSource
