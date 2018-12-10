@@ -12,7 +12,7 @@
         <!--排行-->
         <scene sceneID="er8-iI-1Rv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nRc-kv-NZq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nRc-kv-NZq" customClass="NavigationController" customModule="LiveBroadcast" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="排行" image="ranking-n" id="Lg7-i8-zEF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="go8-df-tJu">
@@ -31,7 +31,7 @@
         <!--直播-->
         <scene sceneID="aoY-jy-eag">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D3B-bp-JPn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D3B-bp-JPn" customClass="NavigationController" customModule="LiveBroadcast" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="直播" image="live-n" id="Ftu-G1-D3Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nic-Ic-7Xt">
@@ -50,7 +50,7 @@
         <!--发现-->
         <scene sceneID="fYL-B3-Ldt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ghd-Z1-lmX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ghd-Z1-lmX" customClass="NavigationController" customModule="LiveBroadcast" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="发现" image="found-n" id="cvD-Tf-Izz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sIg-GO-foL">
@@ -69,7 +69,7 @@
         <!--我的-->
         <scene sceneID="Gln-Az-J1j">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OTe-TQ-ZQN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OTe-TQ-ZQN" customClass="NavigationController" customModule="LiveBroadcast" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="mine-n" id="KIr-Bx-9Hd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dpc-Cq-DVg">
@@ -91,6 +91,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XWi-n4-YYr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YFS-LA-Chu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
