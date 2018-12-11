@@ -12,8 +12,22 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+//        var count: UInt32 = 0
+//        let ivars = class_copyIvarList(UIGestureRecognizer.self, &count)!
+//        for i in 0..<count {
+//            let nameP = ivar_getName(ivars[Int(i)])!
+//            let name = String(cString: nameP)
+//            print(name)
+//        }
+        guard
+            let targets = interactivePopGestureRecognizer!.value(forKey: "_targets") as? [NSObject],
+            let targetObjc = targets.first,
+            let target = targetObjc.value(forKey: "target")
+        else { return }
+        let action = Selector(("handleNavigationTransition:"))
+        let panGes = UIPanGestureRecognizer(target: target, action: action)
+        view.addGestureRecognizer(panGes)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

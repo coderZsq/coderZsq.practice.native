@@ -48,8 +48,8 @@ extension AnchorViewController: UICollectionViewDataSource {
 extension AnchorViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let roomVc = UIViewController()
-        roomVc.view.backgroundColor = UIColor.randomColor()
+        let roomVc = RoomViewController()
+        roomVc.view.backgroundColor = UIColor(r: 65, g: 65, b: 65)
         navigationController?.pushViewController(roomVc, animated: true)
     }
 }

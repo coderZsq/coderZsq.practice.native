@@ -26,6 +26,10 @@
 		145FCB3321BE116C005FEB77 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB3221BE116C005FEB77 /* TitleView.swift */; };
 		145FCB3521BE1179005FEB77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB3421BE1179005FEB77 /* ContentView.swift */; };
 		145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB3621BE1494005FEB77 /* TitleStyle.swift */; };
+		1467613821BF7952008BBA2A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467613421BF7952008BBA2A /* RoomViewController.swift */; };
+		1467613921BF7952008BBA2A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1467613521BF7952008BBA2A /* RoomViewController.xib */; };
+		1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467613C21BF9D82008BBA2A /* Emitterable.swift */; };
+		1467614021BFA662008BBA2A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467613F21BFA662008BBA2A /* NibLoadable.swift */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,10 @@
 		145FCB3221BE116C005FEB77 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		145FCB3421BE1179005FEB77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		145FCB3621BE1494005FEB77 /* TitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleStyle.swift; sourceTree = "<group>"; };
+		1467613421BF7952008BBA2A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		1467613521BF7952008BBA2A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
+		1467613C21BF9D82008BBA2A /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
+		1467613F21BFA662008BBA2A /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				1433FB4A21BA6FFB00D24067 /* Home */,
+				1467613221BF7952008BBA2A /* Live */,
 				1433FB4F21BA6FFB00D24067 /* Rank */,
 				1433FB4B21BA6FFB00D24067 /* Discover */,
 				1433FB4C21BA6FFB00D24067 /* Profile */,
@@ -150,6 +159,7 @@
 		1433FB4D21BA6FFB00D24067 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1467613E21BF9FBE008BBA2A /* Protocol */,
 				145FCB2721BE04F1005FEB77 /* Controller */,
 				145FCB3121BE111D005FEB77 /* View */,
 				145FCB2E21BE0522005FEB77 /* Extension */,
@@ -208,6 +218,24 @@
 				145FCB3421BE1179005FEB77 /* ContentView.swift */,
 			);
 			path = PageView;
+			sourceTree = "<group>";
+		};
+		1467613221BF7952008BBA2A /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				1467613521BF7952008BBA2A /* RoomViewController.xib */,
+				1467613421BF7952008BBA2A /* RoomViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		1467613E21BF9FBE008BBA2A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1467613C21BF9D82008BBA2A /* Emitterable.swift */,
+				1467613F21BFA662008BBA2A /* NibLoadable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		2635368D2F4AA3E72CA48886 /* Frameworks */ = {
@@ -280,6 +308,7 @@
 				1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */,
 				1433FB4221BA6F5100D24067 /* LaunchScreen.storyboard in Resources */,
 				1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */,
+				1467613921BF7952008BBA2A /* RoomViewController.xib in Resources */,
 				1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */,
 				1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */,
 				1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */,
@@ -317,9 +346,12 @@
 			files = (
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
+				1467613821BF7952008BBA2A /* RoomViewController.swift in Sources */,
+				1467614021BFA662008BBA2A /* NibLoadable.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
 				142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */,
+				1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
 				145FCB1F21BE002A005FEB77 /* HomeViewController.swift in Sources */,
