@@ -40,8 +40,8 @@ extension PageView {
     private func setupTitleView() {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         titleView = TitleView(frame: titleFrame, titles: titles, style: style)
+        titleView.backgroundColor = UIColor(r: 18, g: 18, b: 18)
         addSubview(titleView)
-        titleView.backgroundColor = UIColor.randomColor()
     }
     
     private func setupContentView() {

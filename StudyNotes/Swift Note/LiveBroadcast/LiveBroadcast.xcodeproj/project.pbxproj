@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142D692921BE674400669EAB /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D692821BE674400669EAB /* AnchorViewController.swift */; };
+		142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */; };
 		1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FB3721BA6F5000D24067 /* AppDelegate.swift */; };
 		1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB3B21BA6F5000D24067 /* Main.storyboard */; };
 		1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB3E21BA6F5100D24067 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142D692821BE674400669EAB /* AnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
+		142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		1433FB3421BA6F5000D24067 /* LiveBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1433FB3721BA6F5000D24067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1433FB3C21BA6F5000D24067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				1433FB6321BA78A000D24067 /* HomeViewController.storyboard */,
 				145FCB1E21BE002A005FEB77 /* HomeViewController.swift */,
+				142D692821BE674400669EAB /* AnchorViewController.swift */,
+				142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -309,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
+				142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
 				145FCB1F21BE002A005FEB77 /* HomeViewController.swift in Sources */,
