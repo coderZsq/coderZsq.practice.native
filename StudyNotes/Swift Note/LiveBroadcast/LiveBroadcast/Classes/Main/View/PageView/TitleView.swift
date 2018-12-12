@@ -148,8 +148,16 @@ extension TitleView: ContentViewDelegate {
     }
     
     func contentView(_ contentView: ContentView, targetIndex: Int, progress: CGFloat) {
+        setTitleWithProgress(progress, sourceIndex: currentIndex, targetIndex: targetIndex)
+    }
+    
+}
+
+extension TitleView {
+    
+    func setTitleWithProgress(_ progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         let targetLabel = titleLabels[targetIndex]
-        let sourceLabel = titleLabels[currentIndex]
+        let sourceLabel = titleLabels[sourceIndex]
         let deltaRGB = UIColor.getRGBDelta(style.selectColor, style.normalColor)
         let selectRGB = style.selectColor.getRGB()
         let normalRGB = style.normalColor.getRGB()
@@ -170,5 +178,4 @@ extension TitleView: ContentViewDelegate {
             bottomLine.frame.size.width = sourceLabel.frame.width + deltaW * progress
         }
     }
-    
 }

@@ -31,6 +31,7 @@
 		1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614221BFAC79008BBA2A /* RoomViewController.swift */; };
 		1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1467614321BFAC79008BBA2A /* RoomViewController.xib */; };
 		1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614821BFAF55008BBA2A /* PageCollectionView.swift */; };
+		149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905421C0B24700852311 /* PageCollectionViewLayout.swift */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		1467614221BFAC79008BBA2A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		1467614321BFAC79008BBA2A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		1467614821BFAF55008BBA2A /* PageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
+		149C905421C0B24700852311 /* PageCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewLayout.swift; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				145FCB3221BE116C005FEB77 /* TitleView.swift */,
 				145FCB3421BE1179005FEB77 /* ContentView.swift */,
 				1467614821BFAF55008BBA2A /* PageCollectionView.swift */,
+				149C905421C0B24700852311 /* PageCollectionViewLayout.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -235,8 +238,8 @@
 		1467614121BFAC79008BBA2A /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				1467614221BFAC79008BBA2A /* RoomViewController.swift */,
 				1467614321BFAC79008BBA2A /* RoomViewController.xib */,
+				1467614221BFAC79008BBA2A /* RoomViewController.swift */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
+				149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */,
 				145FCB1F21BE002A005FEB77 /* HomeViewController.swift in Sources */,
 				145FCB3521BE1179005FEB77 /* ContentView.swift in Sources */,
 				145FCB2A21BE04F1005FEB77 /* MainViewController.swift in Sources */,

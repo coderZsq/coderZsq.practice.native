@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let kEmoticonCell = "kEmoticonCell"
+
 class RoomViewController: UIViewController {
     
     @IBOutlet weak var bgImageView: UIImageView!
@@ -33,6 +35,22 @@ extension RoomViewController {
     
     fileprivate func setupUI() {
         setupBlurView()
+        
+        let pageFrame = CGRect(x: 0, y: 100, width: view.bounds.width, height: 300)
+        let titles = ["土豪", "热门", "专属", "常见"]
+        let style = TitleStyle()
+        style.isShowScrollLine = true
+        let layout = PageCollectionViewLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.cols = 7
+        layout.rows = 3
+        let pageCollectionView = PageCollectionView(frame: pageFrame, titles: titles, isTitleInTop: false, style: style, layout: layout)
+        pageCollectionView.dataSource = self
+        pageCollectionView.register(cell: UICollectionViewCell.self, identifier: "kEmoticonCell")
+        view.addSubview(pageCollectionView)
+
     }
     
     fileprivate func setupBlurView() {
@@ -44,6 +62,23 @@ extension RoomViewController {
     }
 }
 
+extension RoomViewController: PageCollectionViewDataSource {
+    
+    func numberOfSections(in pageCollectionView: PageCollectionView) -> Int {
+        return 4
+    }
+    
+    func pageCollectionView(_ collectionView: PageCollectionView, numberOfItemsInSection section: Int) -> Int {
+        return [40, 50, 60, 70][section]
+    }
+    
+    func pageCollectionView(_ pageCollectionView: PageCollectionView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kEmoticonCell, for: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        return cell
+    }
+    
+}
 
 extension RoomViewController: Emitterable {
     
