@@ -6,5 +6,7 @@ target 'LiveBroadcast' do
   use_frameworks!
 
   # Pods for LiveBroadcast
-
+  pod 'Alamofire'
+  pod 'Kingfisher'
+  
 end

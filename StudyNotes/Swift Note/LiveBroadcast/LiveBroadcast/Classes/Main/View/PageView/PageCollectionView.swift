@@ -64,6 +64,7 @@ extension PageCollectionView {
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         addSubview(collectionView)
+        pageControl.backgroundColor = collectionView.backgroundColor
     }
 }
 

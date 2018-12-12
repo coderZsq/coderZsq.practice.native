@@ -32,6 +32,26 @@
 		1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1467614321BFAC79008BBA2A /* RoomViewController.xib */; };
 		1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614821BFAF55008BBA2A /* PageCollectionView.swift */; };
 		149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905421C0B24700852311 /* PageCollectionViewLayout.swift */; };
+		149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905821C0E82900852311 /* ChatToolsView.swift */; };
+		149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C905921C0E82900852311 /* ChatToolsView.xib */; };
+		149C905D21C0F01B00852311 /* EmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905C21C0F01B00852311 /* EmoticonView.swift */; };
+		149C906021C0F2A000852311 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905F21C0F2A000852311 /* Const.swift */; };
+		149C906621C0F46500852311 /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149C906321C0F46400852311 /* QHSohuGifSort.plist */; };
+		149C906721C0F46500852311 /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149C906421C0F46400852311 /* QHNormalEmotionSort.plist */; };
+		149C906A21C0F51200852311 /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C906821C0F51100852311 /* Emoticon.swift */; };
+		149C906B21C0F51200852311 /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C906921C0F51200852311 /* EmoticonPackage.swift */; };
+		149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C906C21C0F56700852311 /* EmoticonViewModel.swift */; };
+		149C906F21C0F75300852311 /* EmoticonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C906E21C0F75300852311 /* EmoticonViewCell.xib */; };
+		149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907021C0F76200852311 /* EmoticonViewCell.swift */; };
+		149C907321C0F86300852311 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149C907221C0F86300852311 /* types.plist */; };
+		149C907521C0F8D900852311 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907421C0F8D900852311 /* HomeType.swift */; };
+		149C907E21C0F9A800852311 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907D21C0F9A800852311 /* BaseModel.swift */; };
+		149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908521C0FD1B00852311 /* NetworkTools.swift */; };
+		149C908821C0FD1B00852311 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908621C0FD1B00852311 /* KingfisherExtension.swift */; };
+		149C908A21C0FD4500852311 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908921C0FD4500852311 /* AnchorModel.swift */; };
+		149C908C21C0FD8300852311 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908B21C0FD8300852311 /* HomeViewModel.swift */; };
+		149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908D21C0FEA600852311 /* HomeViewCell.swift */; };
+		149C909021C0FEA600852311 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C908E21C0FEA600852311 /* HomeViewCell.xib */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +83,26 @@
 		1467614321BFAC79008BBA2A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		1467614821BFAF55008BBA2A /* PageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
 		149C905421C0B24700852311 /* PageCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		149C905821C0E82900852311 /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
+		149C905921C0E82900852311 /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
+		149C905C21C0F01B00852311 /* EmoticonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonView.swift; sourceTree = "<group>"; };
+		149C905F21C0F2A000852311 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		149C906321C0F46400852311 /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
+		149C906421C0F46400852311 /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		149C906821C0F51100852311 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
+		149C906921C0F51200852311 /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
+		149C906C21C0F56700852311 /* EmoticonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonViewModel.swift; sourceTree = "<group>"; };
+		149C906E21C0F75300852311 /* EmoticonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewCell.xib; sourceTree = "<group>"; };
+		149C907021C0F76200852311 /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
+		149C907221C0F86300852311 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		149C907421C0F8D900852311 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		149C907D21C0F9A800852311 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		149C908521C0FD1B00852311 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		149C908621C0FD1B00852311 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		149C908921C0FD4500852311 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		149C908B21C0FD8300852311 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		149C908D21C0FEA600852311 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		149C908E21C0FEA600852311 /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +150,7 @@
 		1433FB3621BA6F5000D24067 /* LiveBroadcast */ = {
 			isa = PBXGroup;
 			children = (
+				149C906121C0F46400852311 /* Resource */,
 				1433FB4921BA6FFB00D24067 /* Classes */,
 				1433FB3721BA6F5000D24067 /* AppDelegate.swift */,
 				1433FB3E21BA6F5100D24067 /* Assets.xcassets */,
@@ -122,12 +163,14 @@
 		1433FB4921BA6FFB00D24067 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				149C907621C0F92900852311 /* Base */,
 				1433FB4A21BA6FFB00D24067 /* Home */,
 				1467614121BFAC79008BBA2A /* Room */,
 				1433FB4F21BA6FFB00D24067 /* Rank */,
 				1433FB4B21BA6FFB00D24067 /* Discover */,
 				1433FB4C21BA6FFB00D24067 /* Profile */,
 				1433FB5021BA6FFB00D24067 /* Base */,
+				149C908421C0FD1B00852311 /* Tools */,
 				1433FB4D21BA6FFB00D24067 /* Main */,
 			);
 			path = Classes;
@@ -138,6 +181,11 @@
 			children = (
 				1433FB6321BA78A000D24067 /* HomeViewController.storyboard */,
 				145FCB1E21BE002A005FEB77 /* HomeViewController.swift */,
+				149C908B21C0FD8300852311 /* HomeViewModel.swift */,
+				149C907421C0F8D900852311 /* HomeType.swift */,
+				149C908D21C0FEA600852311 /* HomeViewCell.swift */,
+				149C908E21C0FEA600852311 /* HomeViewCell.xib */,
+				149C908921C0FD4500852311 /* AnchorModel.swift */,
 				142D692821BE674400669EAB /* AnchorViewController.swift */,
 				142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */,
 			);
@@ -163,6 +211,7 @@
 		1433FB4D21BA6FFB00D24067 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				149C905E21C0F2A000852311 /* Common */,
 				1467613E21BF9FBE008BBA2A /* Protocol */,
 				145FCB2721BE04F1005FEB77 /* Controller */,
 				145FCB3121BE111D005FEB77 /* View */,
@@ -240,8 +289,52 @@
 			children = (
 				1467614321BFAC79008BBA2A /* RoomViewController.xib */,
 				1467614221BFAC79008BBA2A /* RoomViewController.swift */,
+				149C905921C0E82900852311 /* ChatToolsView.xib */,
+				149C905821C0E82900852311 /* ChatToolsView.swift */,
+				149C905C21C0F01B00852311 /* EmoticonView.swift */,
+				149C907021C0F76200852311 /* EmoticonViewCell.swift */,
+				149C906E21C0F75300852311 /* EmoticonViewCell.xib */,
+				149C906821C0F51100852311 /* Emoticon.swift */,
+				149C906921C0F51200852311 /* EmoticonPackage.swift */,
+				149C906C21C0F56700852311 /* EmoticonViewModel.swift */,
 			);
 			path = Room;
+			sourceTree = "<group>";
+		};
+		149C905E21C0F2A000852311 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				149C905F21C0F2A000852311 /* Const.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		149C906121C0F46400852311 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				149C906321C0F46400852311 /* QHSohuGifSort.plist */,
+				149C906421C0F46400852311 /* QHNormalEmotionSort.plist */,
+				149C907221C0F86300852311 /* types.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		149C907621C0F92900852311 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				149C907D21C0F9A800852311 /* BaseModel.swift */,
+			);
+			name = Base;
+			path = "../../../../../../../../Downloads/代码/02-XMGTV(表情布局)/XMGTV/Classes/Base";
+			sourceTree = "<group>";
+		};
+		149C908421C0FD1B00852311 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				149C908521C0FD1B00852311 /* NetworkTools.swift */,
+				149C908621C0FD1B00852311 /* KingfisherExtension.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		2635368D2F4AA3E72CA48886 /* Frameworks */ = {
@@ -263,6 +356,7 @@
 				1433FB3021BA6F5000D24067 /* Sources */,
 				1433FB3121BA6F5000D24067 /* Frameworks */,
 				1433FB3221BA6F5000D24067 /* Resources */,
+				56676387DFB4F82C2D1EC8EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,11 +405,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149C906621C0F46500852311 /* QHSohuGifSort.plist in Resources */,
 				1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */,
+				149C906F21C0F75300852311 /* EmoticonViewCell.xib in Resources */,
 				1433FB4221BA6F5100D24067 /* LaunchScreen.storyboard in Resources */,
 				1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */,
 				1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */,
+				149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */,
 				1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */,
+				149C906721C0F46500852311 /* QHNormalEmotionSort.plist in Resources */,
+				149C909021C0FEA600852311 /* HomeViewCell.xib in Resources */,
+				149C907321C0F86300852311 /* types.plist in Resources */,
 				1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */,
 				1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */,
 				1433FB5D21BA72BB00D24067 /* DiscoverViewController.storyboard in Resources */,
@@ -325,6 +425,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		56676387DFB4F82C2D1EC8EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA4FD9AD7A4CD2E2956E3AD3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,22 +470,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */,
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
+				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
+				149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
 				1467614021BFA662008BBA2A /* NibLoadable.swift in Sources */,
 				1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
+				149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */,
 				142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */,
 				1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */,
+				149C906021C0F2A000852311 /* Const.swift in Sources */,
+				149C907521C0F8D900852311 /* HomeType.swift in Sources */,
+				149C908C21C0FD8300852311 /* HomeViewModel.swift in Sources */,
 				1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */,
+				149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
+				149C908A21C0FD4500852311 /* AnchorModel.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
+				149C907E21C0F9A800852311 /* BaseModel.swift in Sources */,
+				149C906A21C0F51200852311 /* Emoticon.swift in Sources */,
 				149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */,
+				149C905D21C0F01B00852311 /* EmoticonView.swift in Sources */,
 				145FCB1F21BE002A005FEB77 /* HomeViewController.swift in Sources */,
 				145FCB3521BE1179005FEB77 /* ContentView.swift in Sources */,
+				149C908821C0FD1B00852311 /* KingfisherExtension.swift in Sources */,
 				145FCB2A21BE04F1005FEB77 /* MainViewController.swift in Sources */,
 				145FCB3021BE110F005FEB77 /* PageView.swift in Sources */,
+				149C906B21C0F51200852311 /* EmoticonPackage.swift in Sources */,
 				145FCB3321BE116C005FEB77 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

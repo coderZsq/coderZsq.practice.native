@@ -25,21 +25,33 @@ extension HomeViewController {
     }
     
     private func setupContentView() {
-        let titles = ["游戏", "娱乐", "趣玩", "美女", "颜值"]
-        let style = TitleStyle()
-        style.isScrollEnable = false
-        style.isShowScrollLine = true
-        var childVcs = [UIViewController]()
-        for _ in 0..<titles.count {
-            let vc = AnchorViewController()
-            childVcs.append(vc)
+        let homeTypes = loadTypesData()
+        let titles = homeTypes.map({ $0.title })
+        var childVcs = [AnchorViewController]()
+        for type in homeTypes {
+            let anchorVc = AnchorViewController()
+            anchorVc.homeType = type
+            childVcs.append(anchorVc)
         }
+        let style = TitleStyle()
+        style.isScrollEnable = true
+        style.isShowScrollLine = true
         let statusbarH = UIApplication.shared.statusBarFrame.size.height
         let navbarH = navigationController!.navigationBar.frame.size.height
         let tabbarH = tabBarController!.tabBar.frame.size.height
         let pageFrame = CGRect(x: 0, y: statusbarH + navbarH, width: view.bounds.width, height: view.bounds.height - statusbarH - navbarH - tabbarH)
         let pageView = PageView(frame: pageFrame, titles: titles, childVcs: childVcs, parentVc: self, style: style)
         view.addSubview(pageView)
+    }
+    
+    fileprivate func loadTypesData() -> [HomeType] {
+        let path = Bundle.main.path(forResource: "types.plist", ofType: nil)!
+        let dataArray = NSArray(contentsOfFile: path) as! [[String : Any]]
+        var tempArray = [HomeType]()
+        for dict in dataArray {
+            tempArray.append(HomeType(dict: dict))
+        }
+        return tempArray
     }
     
     private func setupNavigationBar() {
@@ -52,11 +64,13 @@ extension HomeViewController {
         let searchFrame = CGRect(x: 0, y: 0, width: 200, height: 32)
         let searchBar = UISearchBar(frame: searchFrame)
         searchBar.placeholder = "主播昵称/房间号/链接"
-//        navigationItem.titleView = searchBar
+        navigationItem.titleView = searchBar
         searchBar.searchBarStyle = .minimal
         
         let searchFiled = searchBar.value(forKey: "_searchField") as? UITextField
         searchFiled?.textColor = UIColor.white
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
     }
 }
 

@@ -8,15 +8,18 @@
 
 import UIKit
 
+private let kChatToolsViewHeight: CGFloat = 44
 private let kEmoticonCell = "kEmoticonCell"
 
 class RoomViewController: UIViewController {
     
     @IBOutlet weak var bgImageView: UIImageView!
+    fileprivate lazy var chatToolsView = ChatToolsView.loadFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,22 +38,7 @@ extension RoomViewController {
     
     fileprivate func setupUI() {
         setupBlurView()
-        
-        let pageFrame = CGRect(x: 0, y: 100, width: view.bounds.width, height: 300)
-        let titles = ["土豪", "热门", "专属", "常见"]
-        let style = TitleStyle()
-        style.isShowScrollLine = true
-        let layout = PageCollectionViewLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.cols = 7
-        layout.rows = 3
-        let pageCollectionView = PageCollectionView(frame: pageFrame, titles: titles, isTitleInTop: false, style: style, layout: layout)
-        pageCollectionView.dataSource = self
-        pageCollectionView.register(cell: UICollectionViewCell.self, identifier: "kEmoticonCell")
-        view.addSubview(pageCollectionView)
-
+        setupBottomView()
     }
     
     fileprivate func setupBlurView() {
@@ -60,24 +48,12 @@ extension RoomViewController {
         blurView.frame = bgImageView.bounds
         bgImageView.addSubview(blurView)
     }
-}
-
-extension RoomViewController: PageCollectionViewDataSource {
     
-    func numberOfSections(in pageCollectionView: PageCollectionView) -> Int {
-        return 4
+    fileprivate func setupBottomView() {
+        chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
+        chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        view.addSubview(chatToolsView)
     }
-    
-    func pageCollectionView(_ collectionView: PageCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return [40, 50, 60, 70][section]
-    }
-    
-    func pageCollectionView(_ pageCollectionView: PageCollectionView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kEmoticonCell, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
-        return cell
-    }
-    
 }
 
 extension RoomViewController: Emitterable {
@@ -86,10 +62,14 @@ extension RoomViewController: Emitterable {
         _ = navigationController?.popViewController(animated: true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        chatToolsView.inputTextField.resignFirstResponder()
+    }
+    
     @IBAction func bottomMenuClick(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("点击了聊天")
+            chatToolsView.inputTextField.becomeFirstResponder()
         case 1:
             print("点击了分享")
         case 2:
@@ -106,3 +86,17 @@ extension RoomViewController: Emitterable {
     }
 }
 
+extension RoomViewController {
+    
+    @objc fileprivate func keyboardWillChangeFrame(_ note: Notification) {
+        let duration = note.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let endFrame = (note.userInfo![UIResponder.keyboardFrameEndUserInfoKey]) as! CGRect
+        let inputViewY = endFrame.origin.y - kChatToolsViewHeight
+        UIView.animate(withDuration: duration) {
+            UIView.setAnimationCurve(UIView.AnimationCurve(rawValue: 7)!)
+            let endY = inputViewY == (self.view.bounds.height - kChatToolsViewHeight) ? self.view.bounds.height : inputViewY
+            self.chatToolsView.frame.origin.y = endY
+        }
+    }
+    
+}

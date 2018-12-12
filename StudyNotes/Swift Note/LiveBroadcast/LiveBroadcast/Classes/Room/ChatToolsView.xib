@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatToolsView" customModule="LiveBroadcast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="愉快地和主播聊一聊吧" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-ov-Wpc">
+                    <rect key="frame" x="5" y="5" width="300" height="34"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidEdit:" destination="iN0-l3-epB" eventType="editingChanged" id="3t7-id-A32"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7Q-VF-EBl">
+                    <rect key="frame" x="310" y="5" width="60" height="34"/>
+                    <color key="backgroundColor" red="0.81176470590000005" green="0.58431372550000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="wSj-zX-PJw"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sendBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="3KI-yw-nhN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="V7Q-VF-EBl" firstAttribute="leading" secondItem="OEc-ov-Wpc" secondAttribute="trailing" constant="5" id="3Wf-L9-lGl"/>
+                <constraint firstAttribute="bottom" secondItem="V7Q-VF-EBl" secondAttribute="bottom" constant="5" id="E6e-nu-T6E"/>
+                <constraint firstItem="OEc-ov-Wpc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="GSX-Oq-nzb"/>
+                <constraint firstAttribute="bottom" secondItem="OEc-ov-Wpc" secondAttribute="bottom" constant="5" id="Mhi-WS-eqH"/>
+                <constraint firstItem="OEc-ov-Wpc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="TDp-OU-Qd3"/>
+                <constraint firstAttribute="trailing" secondItem="V7Q-VF-EBl" secondAttribute="trailing" constant="5" id="Vs3-hT-Csj"/>
+                <constraint firstItem="V7Q-VF-EBl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="hAQ-DF-Tgj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputTextField" destination="OEc-ov-Wpc" id="2iZ-Oa-rSP"/>
+                <outlet property="sendMsgBtn" destination="V7Q-VF-EBl" id="gLa-OQ-RVd"/>
+            </connections>
+            <point key="canvasLocation" x="45.5" y="107"/>
+        </view>
+    </objects>
+</document>
