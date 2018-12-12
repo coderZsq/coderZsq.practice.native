@@ -14,9 +14,14 @@ protocol PageCollectionViewDataSource: class {
     func pageCollectionView(_ pageCollectionView: PageCollectionView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
+protocol PageCollectionViewDelegate: class {
+    func pageCollectionView(_ pageCollectionView: PageCollectionView, didSelectItemAt indexPath: IndexPath)
+}
+
 class PageCollectionView: UIView {
 
     weak var dataSource: PageCollectionViewDataSource?
+    weak var delegate: PageCollectionViewDelegate?
     
     fileprivate var titles: [String]
     fileprivate var isTitleInTop: Bool
@@ -78,6 +83,10 @@ extension PageCollectionView {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
     }
     
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
 }
 
 extension PageCollectionView: UICollectionViewDataSource {
@@ -101,6 +110,10 @@ extension PageCollectionView: UICollectionViewDataSource {
 }
 
 extension PageCollectionView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pageCollectionView(self, didSelectItemAt: indexPath)
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewEndScroll()

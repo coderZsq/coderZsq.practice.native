@@ -49,14 +49,24 @@ extension ChatToolsView {
         inputTextField.rightView = emoticonBtn
         inputTextField.rightViewMode = .always
         inputTextField.allowsEditingTextAttributes = true
+        emoticonView.emotionClickCallback = { [weak self] emoticon in
+            if emoticon.emoticonName == "delete-n" {
+                self?.inputTextField.deleteBackward()
+                return
+            }
+            guard let range = self?.inputTextField.selectedTextRange else { return }
+            self?.inputTextField.replace(range, withText: emoticon.emoticonName)
+        }
     }
 }
 
 extension ChatToolsView {
     @objc fileprivate func emoticonBtnClick(_ btn : UIButton) {
         btn.isSelected = !btn.isSelected
+        let range = inputTextField.selectedTextRange
         inputTextField.resignFirstResponder()
         inputTextField.inputView = inputTextField.inputView == nil ? emoticonView : nil
         inputTextField.becomeFirstResponder()
+        inputTextField.selectedTextRange = range
     }
 }

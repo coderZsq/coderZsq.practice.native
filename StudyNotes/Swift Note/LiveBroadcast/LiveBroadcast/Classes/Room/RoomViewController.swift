@@ -9,12 +9,14 @@
 import UIKit
 
 private let kChatToolsViewHeight: CGFloat = 44
+private let kGiftListViewHeight: CGFloat = 320
 private let kEmoticonCell = "kEmoticonCell"
 
 class RoomViewController: UIViewController {
     
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate lazy var chatToolsView = ChatToolsView.loadFromNib()
+    fileprivate lazy var giftListView = GiftListView.loadFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +54,11 @@ extension RoomViewController {
     fileprivate func setupBottomView() {
         chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
         chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        chatToolsView.delegate = self
         view.addSubview(chatToolsView)
+        giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftListViewHeight)
+        giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        view.addSubview(giftListView)
     }
 }
 
@@ -64,6 +70,9 @@ extension RoomViewController: Emitterable {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         chatToolsView.inputTextField.resignFirstResponder()
+        UIView.animate(withDuration: 0.25) {
+            self.giftListView.frame.origin.y = kScreenH
+        }
     }
     
     @IBAction func bottomMenuClick(_ sender: UIButton) {
@@ -73,7 +82,9 @@ extension RoomViewController: Emitterable {
         case 1:
             print("点击了分享")
         case 2:
-            print("点击了礼物")
+            UIView.animate(withDuration: 0.25) {
+                self.giftListView.frame.origin.y = kScreenH - kGiftListViewHeight
+            }
         case 3:
             print("点击了更多")
         case 4:
@@ -99,4 +110,12 @@ extension RoomViewController {
         }
     }
     
+}
+
+extension RoomViewController: ChatToolsViewDelegate {
+    
+    func chatToolsView(toolView: ChatToolsView, message: String) {
+        print(message)
+    }
+
 }

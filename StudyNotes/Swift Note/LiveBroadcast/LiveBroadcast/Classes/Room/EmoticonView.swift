@@ -12,6 +12,8 @@ private let kEmoticonCellID = "kEmoticonCellID"
 
 class EmoticonView: UIView {
 
+    var emotionClickCallback: ((Emoticon) -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -37,7 +39,19 @@ extension EmoticonView {
         let pageCollectionView = PageCollectionView(frame: bounds, titles: ["普通", "粉丝专属"], isTitleInTop: false, style: style, layout: layout)
         addSubview(pageCollectionView)
         pageCollectionView.dataSource = self
+        pageCollectionView.delegate = self
         pageCollectionView.register(nib: UINib(nibName: "EmoticonViewCell", bundle: nil), identifier: kEmoticonCellID)
+    }
+    
+}
+
+extension EmoticonView: PageCollectionViewDelegate {
+    
+    func pageCollectionView(_ pageCollectionView: PageCollectionView, didSelectItemAt indexPath: IndexPath) {
+        let emoticon = EmoticonViewModel.shared.packages[indexPath.section].emoticons[indexPath.item]
+        if let emotionClickCallback = emotionClickCallback {
+            emotionClickCallback(emoticon)
+        }
     }
     
 }
