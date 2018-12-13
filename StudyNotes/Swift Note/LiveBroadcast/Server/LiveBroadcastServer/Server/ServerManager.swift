@@ -16,11 +16,8 @@ class ServerManager: NSObject {
 
 extension ServerManager {
     func startRunning() {
-        // 1.开启监听
         serverSocket.listen()
         isServerRunning = true
-        
-        // 2.开始接受客户端
         DispatchQueue.global().async {
             while self.isServerRunning {
                 if let client = self.serverSocket.accept() {
