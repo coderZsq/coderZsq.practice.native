@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70AA51E11DFD2EAB00A553DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */; };
-		70AA51E31DFD2EAB00A553DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51E21DFD2EAB00A553DA /* ViewController.swift */; };
-		70AA51E51DFD2EAB00A553DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AA51E41DFD2EAB00A553DA /* Assets.xcassets */; };
-		70AA51E81DFD2EAB00A553DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AA51E61DFD2EAB00A553DA /* Main.storyboard */; };
-		70AA51F11DFD2F9B00A553DA /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F01DFD2F9B00A553DA /* ServerManager.swift */; };
-		70AA51F81DFD300A00A553DA /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F31DFD300A00A553DA /* ysocket.swift */; };
-		70AA51F91DFD300A00A553DA /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F41DFD300A00A553DA /* ytcpsocket.c */; };
-		70AA51FA1DFD300A00A553DA /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F51DFD300A00A553DA /* ytcpsocket.swift */; };
-		70AA51FB1DFD300A00A553DA /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F61DFD300A00A553DA /* yudpsocket.c */; };
-		70AA51FC1DFD300A00A553DA /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F71DFD300A00A553DA /* yudpsocket.swift */; };
+		1440101421C2273800235D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100521C2273800235D67 /* ViewController.swift */; };
+		1440101521C2273800235D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1440100621C2273800235D67 /* Assets.xcassets */; };
+		1440101621C2273800235D67 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 1440100921C2273800235D67 /* yudpsocket.c */; };
+		1440101721C2273800235D67 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100A21C2273800235D67 /* yudpsocket.swift */; };
+		1440101821C2273800235D67 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 1440100B21C2273800235D67 /* ytcpsocket.c */; };
+		1440101921C2273800235D67 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100C21C2273800235D67 /* ysocket.swift */; };
+		1440101A21C2273800235D67 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100D21C2273800235D67 /* ytcpsocket.swift */; };
+		1440101B21C2273800235D67 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100E21C2273800235D67 /* ServerManager.swift */; };
+		1440101D21C2273800235D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440101021C2273800235D67 /* Main.storyboard */; };
+		1440101E21C2273800235D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440101221C2273800235D67 /* AppDelegate.swift */; };
+		1440101F21C2273800235D67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1440101321C2273800235D67 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1440100521C2273800235D67 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1440100621C2273800235D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1440100921C2273800235D67 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		1440100A21C2273800235D67 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		1440100B21C2273800235D67 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		1440100C21C2273800235D67 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		1440100D21C2273800235D67 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		1440100E21C2273800235D67 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		1440101121C2273800235D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1440101221C2273800235D67 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1440101321C2273800235D67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcastServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70AA51E21DFD2EAB00A553DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70AA51E41DFD2EAB00A553DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70AA51E71DFD2EAB00A553DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70AA51E91DFD2EAB00A553DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70AA51F01DFD2F9B00A553DA /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
-		70AA51F31DFD300A00A553DA /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
-		70AA51F41DFD300A00A553DA /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
-		70AA51F51DFD300A00A553DA /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
-		70AA51F61DFD300A00A553DA /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
-		70AA51F71DFD300A00A553DA /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +46,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1440100421C2273800235D67 /* LiveBroadcastServer */ = {
+			isa = PBXGroup;
+			children = (
+				1440100721C2273800235D67 /* Server */,
+				1440100521C2273800235D67 /* ViewController.swift */,
+				1440101221C2273800235D67 /* AppDelegate.swift */,
+				1440100621C2273800235D67 /* Assets.xcassets */,
+				1440101021C2273800235D67 /* Main.storyboard */,
+				1440101321C2273800235D67 /* Info.plist */,
+			);
+			path = LiveBroadcastServer;
+			sourceTree = "<group>";
+		};
+		1440100721C2273800235D67 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				1440100821C2273800235D67 /* ysocket */,
+				1440100E21C2273800235D67 /* ServerManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		1440100821C2273800235D67 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				1440100921C2273800235D67 /* yudpsocket.c */,
+				1440100A21C2273800235D67 /* yudpsocket.swift */,
+				1440100B21C2273800235D67 /* ytcpsocket.c */,
+				1440100C21C2273800235D67 /* ysocket.swift */,
+				1440100D21C2273800235D67 /* ytcpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
 		70AA51D41DFD2EAB00A553DA = {
 			isa = PBXGroup;
 			children = (
-				70AA51DF1DFD2EAB00A553DA /* LiveBroadcastServer */,
+				1440100421C2273800235D67 /* LiveBroadcastServer */,
 				70AA51DE1DFD2EAB00A553DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,40 +94,6 @@
 				70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		70AA51DF1DFD2EAB00A553DA /* LiveBroadcastServer */ = {
-			isa = PBXGroup;
-			children = (
-				70AA51EF1DFD2F8B00A553DA /* Server */,
-				70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */,
-				70AA51E21DFD2EAB00A553DA /* ViewController.swift */,
-				70AA51E41DFD2EAB00A553DA /* Assets.xcassets */,
-				70AA51E61DFD2EAB00A553DA /* Main.storyboard */,
-				70AA51E91DFD2EAB00A553DA /* Info.plist */,
-			);
-			path = LiveBroadcastServer;
-			sourceTree = "<group>";
-		};
-		70AA51EF1DFD2F8B00A553DA /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				70AA51F21DFD300A00A553DA /* ysocket */,
-				70AA51F01DFD2F9B00A553DA /* ServerManager.swift */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
-		70AA51F21DFD300A00A553DA /* ysocket */ = {
-			isa = PBXGroup;
-			children = (
-				70AA51F31DFD300A00A553DA /* ysocket.swift */,
-				70AA51F41DFD300A00A553DA /* ytcpsocket.c */,
-				70AA51F51DFD300A00A553DA /* ytcpsocket.swift */,
-				70AA51F61DFD300A00A553DA /* yudpsocket.c */,
-				70AA51F71DFD300A00A553DA /* yudpsocket.swift */,
-			);
-			path = ysocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +155,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70AA51E51DFD2EAB00A553DA /* Assets.xcassets in Resources */,
-				70AA51E81DFD2EAB00A553DA /* Main.storyboard in Resources */,
+				1440101521C2273800235D67 /* Assets.xcassets in Resources */,
+				1440101D21C2273800235D67 /* Main.storyboard in Resources */,
+				1440101F21C2273800235D67 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,24 +168,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70AA51FA1DFD300A00A553DA /* ytcpsocket.swift in Sources */,
-				70AA51E31DFD2EAB00A553DA /* ViewController.swift in Sources */,
-				70AA51F11DFD2F9B00A553DA /* ServerManager.swift in Sources */,
-				70AA51F81DFD300A00A553DA /* ysocket.swift in Sources */,
-				70AA51E11DFD2EAB00A553DA /* AppDelegate.swift in Sources */,
-				70AA51F91DFD300A00A553DA /* ytcpsocket.c in Sources */,
-				70AA51FC1DFD300A00A553DA /* yudpsocket.swift in Sources */,
-				70AA51FB1DFD300A00A553DA /* yudpsocket.c in Sources */,
+				1440101A21C2273800235D67 /* ytcpsocket.swift in Sources */,
+				1440101721C2273800235D67 /* yudpsocket.swift in Sources */,
+				1440101621C2273800235D67 /* yudpsocket.c in Sources */,
+				1440101E21C2273800235D67 /* AppDelegate.swift in Sources */,
+				1440101821C2273800235D67 /* ytcpsocket.c in Sources */,
+				1440101B21C2273800235D67 /* ServerManager.swift in Sources */,
+				1440101921C2273800235D67 /* ysocket.swift in Sources */,
+				1440101421C2273800235D67 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		70AA51E61DFD2EAB00A553DA /* Main.storyboard */ = {
+		1440101021C2273800235D67 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				70AA51E71DFD2EAB00A553DA /* Base */,
+				1440101121C2273800235D67 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -305,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Server/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -321,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Server/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
