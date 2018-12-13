@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1405852C21C23F2D000808BA /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405852B21C23F2D000808BA /* Immessage.proto.swift */; };
+		1405879C21C24214000808BA /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1405879A21C2420A000808BA /* ProtocolBuffers.framework */; };
 		1440101421C2273800235D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100521C2273800235D67 /* ViewController.swift */; };
 		1440101521C2273800235D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1440100621C2273800235D67 /* Assets.xcassets */; };
 		1440101621C2273800235D67 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 1440100921C2273800235D67 /* yudpsocket.c */; };
@@ -17,10 +19,248 @@
 		1440101B21C2273800235D67 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440100E21C2273800235D67 /* ServerManager.swift */; };
 		1440101D21C2273800235D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440101021C2273800235D67 /* Main.storyboard */; };
 		1440101E21C2273800235D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440101221C2273800235D67 /* AppDelegate.swift */; };
-		1440101F21C2273800235D67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1440101321C2273800235D67 /* Info.plist */; };
+		1440102221C2299100235D67 /* ClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440102121C2299100235D67 /* ClientManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1405878F21C2420A000808BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140586C921C2420A000808BA /* PBCompiler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6111791D85A7E000DE3C9D;
+			remoteInfo = PBCompiler;
+		};
+		1405879721C2420A000808BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140586AA21C2420A000808BA /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBufferTests::Product";
+			remoteInfo = ProtocolBufferTests;
+		};
+		1405879921C2420A000808BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140586AA21C2420A000808BA /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBuffers::Product";
+			remoteInfo = ProtocolBuffers;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1405852B21C23F2D000808BA /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		140586A021C2420A000808BA /* ProtocolBuffers-Swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolBuffers-Swift.podspec"; sourceTree = "<group>"; };
+		140586A121C2420A000808BA /* protobuf-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "protobuf-swift.xcodeproj"; sourceTree = "<group>"; };
+		140586A421C2420A000808BA /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		140586A521C2420A000808BA /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		140586A621C2420A000808BA /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		140586A721C2420A000808BA /* ltmain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ltmain.sh; sourceTree = "<group>"; };
+		140586A821C2420A000808BA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		140586A921C2420A000808BA /* configure */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		140586AA21C2420A000808BA /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProtocolBuffers.xcodeproj; sourceTree = "<group>"; };
+		140586AE21C2420A000808BA /* Google.Protobuf.FieldMask.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.FieldMask.proto.swift; sourceTree = "<group>"; };
+		140586AF21C2420A000808BA /* AbstractMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMessage.swift; sourceTree = "<group>"; };
+		140586B021C2420A000808BA /* Google.Protobuf.Any.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Any.proto.swift; sourceTree = "<group>"; };
+		140586B121C2420A000808BA /* ProtocolBuffers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolBuffers.h; sourceTree = "<group>"; };
+		140586B221C2420A000808BA /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		140586B321C2420A000808BA /* Google.Protobuf.Wrappers.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Wrappers.proto.swift; sourceTree = "<group>"; };
+		140586B421C2420A000808BA /* UnknownFieldSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownFieldSet.swift; sourceTree = "<group>"; };
+		140586B521C2420A000808BA /* WireFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormat.swift; sourceTree = "<group>"; };
+		140586B621C2420A000808BA /* Google.Protobuf.Api.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Api.proto.swift; sourceTree = "<group>"; };
+		140586B721C2420A000808BA /* Google.Protobuf.Empty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Empty.proto.swift; sourceTree = "<group>"; };
+		140586B821C2420A000808BA /* Google.Protobuf.Duration.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Duration.proto.swift; sourceTree = "<group>"; };
+		140586B921C2420A000808BA /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		140586BA21C2420A000808BA /* Google.Protobuf.Struct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Struct.proto.swift; sourceTree = "<group>"; };
+		140586BB21C2420A000808BA /* Google.Protobuf.Type.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Type.proto.swift; sourceTree = "<group>"; };
+		140586BC21C2420A000808BA /* ExtensionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionRegistry.swift; sourceTree = "<group>"; };
+		140586BD21C2420A000808BA /* Google.Protobuf.Timestamp.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Timestamp.proto.swift; sourceTree = "<group>"; };
+		140586BE21C2420A000808BA /* GeneratedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessage.swift; sourceTree = "<group>"; };
+		140586BF21C2420A000808BA /* CodedInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStream.swift; sourceTree = "<group>"; };
+		140586C021C2420A000808BA /* CodedOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOutputStream.swift; sourceTree = "<group>"; };
+		140586C121C2420A000808BA /* ConcreateExtensionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreateExtensionField.swift; sourceTree = "<group>"; };
+		140586C221C2420A000808BA /* Google.Protobuf.SwiftDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SwiftDescriptor.proto.swift; sourceTree = "<group>"; };
+		140586C321C2420A000808BA /* Google.Protobuf.Descriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Descriptor.proto.swift; sourceTree = "<group>"; };
+		140586C421C2420A000808BA /* ExtendableMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendableMessage.swift; sourceTree = "<group>"; };
+		140586C521C2420A000808BA /* Google.Protobuf.SourceContext.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SourceContext.proto.swift; sourceTree = "<group>"; };
+		140586C621C2420A000808BA /* protobuf-swift.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "protobuf-swift.rb"; sourceTree = "<group>"; };
+		140586C921C2420A000808BA /* PBCompiler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PBCompiler.xcodeproj; sourceTree = "<group>"; };
+		140586CD21C2420A000808BA /* GeneratedMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessageTests.swift; sourceTree = "<group>"; };
+		140586CE21C2420A000808BA /* SmallBlockInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBlockInputStream.swift; sourceTree = "<group>"; };
+		140586CF21C2420A000808BA /* WireFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormatTests.swift; sourceTree = "<group>"; };
+		140586D121C2420A000808BA /* delimitedFile.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = delimitedFile.dat; sourceTree = "<group>"; };
+		140586D421C2420A000808BA /* text_format_unittest_data_oneof_implemented.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_oneof_implemented.txt; sourceTree = "<group>"; };
+		140586D521C2420A000808BA /* text_format_unittest_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data.txt; sourceTree = "<group>"; };
+		140586D621C2420A000808BA /* text_format_unittest_data_pointy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_pointy.txt; sourceTree = "<group>"; };
+		140586D721C2420A000808BA /* text_format_unittest_extensions_data_pointy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_extensions_data_pointy.txt; sourceTree = "<group>"; };
+		140586D821C2420A000808BA /* delimitedFile.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = delimitedFile.dat; sourceTree = "<group>"; };
+		140586D921C2420A000808BA /* golden_message_oneof_implemented */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_message_oneof_implemented; sourceTree = "<group>"; };
+		140586DA21C2420A000808BA /* bad_utf8_string */ = {isa = PBXFileReference; lastKnownFileType = file; path = bad_utf8_string; sourceTree = "<group>"; };
+		140586DB21C2420A000808BA /* text_format_unittest_data_pointy_oneof.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_pointy_oneof.txt; sourceTree = "<group>"; };
+		140586DC21C2420A000808BA /* golden_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_message; sourceTree = "<group>"; };
+		140586DD21C2420A000808BA /* text_format_unittest_extensions_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_extensions_data.txt; sourceTree = "<group>"; };
+		140586DE21C2420A000808BA /* golden_packed_fields_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_packed_fields_message; sourceTree = "<group>"; };
+		140586DF21C2420A000808BA /* Bar.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.Foo.proto.swift; sourceTree = "<group>"; };
+		140586E021C2420A000808BA /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublicLite.proto.swift; sourceTree = "<group>"; };
+		140586E121C2420A000808BA /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift; sourceTree = "<group>"; };
+		140586E221C2420A000808BA /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift; sourceTree = "<group>"; };
+		140586E321C2420A000808BA /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.UnittestEnormousDescriptor.proto.swift; sourceTree = "<group>"; };
+		140586E421C2420A000808BA /* Baz.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baz.Foo.proto.swift; sourceTree = "<group>"; };
+		140586E521C2420A000808BA /* ProtobufUnittestImport.UnittestImportLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportLite.proto.swift; sourceTree = "<group>"; };
+		140586E621C2420A000808BA /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift; sourceTree = "<group>"; };
+		140586E721C2420A000808BA /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		140586E821C2420A000808BA /* ProtobufUnittest.Unittest.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.Unittest.proto.swift; sourceTree = "<group>"; };
+		140586E921C2420A000808BA /* ThreadingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadingTest.swift; sourceTree = "<group>"; };
+		140586EA21C2420A000808BA /* ProtobufUnittestImport.UnittestImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImport.proto.swift; sourceTree = "<group>"; };
+		140586EB21C2420A000808BA /* ProtobufUnittest.UnittestLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLite.proto.swift; sourceTree = "<group>"; };
+		140586EC21C2420A000808BA /* UnittestEmpty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestEmpty.proto.swift; sourceTree = "<group>"; };
+		140586ED21C2420A000808BA /* UnittestErrorType.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestErrorType.proto.swift; sourceTree = "<group>"; };
+		140586EE21C2420A000808BA /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublic.proto.swift; sourceTree = "<group>"; };
+		140586EF21C2420A000808BA /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestNoArena.UnittestNoArena.proto.swift; sourceTree = "<group>"; };
+		140586F021C2420A000808BA /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestWellKnownTypes.proto.swift; sourceTree = "<group>"; };
+		140586F121C2420A000808BA /* UnittestStruct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestStruct.proto.swift; sourceTree = "<group>"; };
+		140586F221C2420A000808BA /* ProtobufUnittest.UnittestMset.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestMset.proto.swift; sourceTree = "<group>"; };
+		140586F321C2420A000808BA /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift; sourceTree = "<group>"; };
+		140586F421C2420A000808BA /* Proto2ArenaUnittest.UnittestArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestArena.proto.swift; sourceTree = "<group>"; };
+		140586F521C2420A000808BA /* UnittestThreading.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestThreading.proto.swift; sourceTree = "<group>"; };
+		140586F621C2420A000808BA /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift; sourceTree = "<group>"; };
+		140586F721C2420A000808BA /* SwiftProtobufUnittest.UnittestMaps.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtobufUnittest.UnittestMaps.proto.swift; sourceTree = "<group>"; };
+		140586F821C2420A000808BA /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift; sourceTree = "<group>"; };
+		140586F921C2420A000808BA /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		140586FA21C2420A000808BA /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3ArenaUnittest.UnittestProto3Arena.proto.swift; sourceTree = "<group>"; };
+		140586FB21C2420A000808BA /* ProtobufUnittest.UnittestCustomOptions.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestCustomOptions.proto.swift; sourceTree = "<group>"; };
+		140586FC21C2420A000808BA /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		140586FD21C2420A000808BA /* SizeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeTest.swift; sourceTree = "<group>"; };
+		140586FE21C2420A000808BA /* CodedOuputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOuputStreamTests.swift; sourceTree = "<group>"; };
+		140586FF21C2420A000808BA /* PluginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTest.swift; sourceTree = "<group>"; };
+		1405870021C2420A000808BA /* MapFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFieldsTests.swift; sourceTree = "<group>"; };
+		1405870121C2420A000808BA /* UnknowFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknowFieldsTests.swift; sourceTree = "<group>"; };
+		1405870221C2420A000808BA /* ProtocolBuffersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuffersTests.swift; sourceTree = "<group>"; };
+		1405870321C2420A000808BA /* ErrorHandlingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTest.swift; sourceTree = "<group>"; };
+		1405870421C2420A000808BA /* CodedInputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStreamTests.swift; sourceTree = "<group>"; };
+		1405870521C2420A000808BA /* Performance.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.proto.swift; sourceTree = "<group>"; };
+		1405870621C2420A000808BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1405870721C2420A000808BA /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		1405870921C2420A000808BA /* swift_generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_generator.h; sourceTree = "<group>"; };
+		1405870A21C2420A000808BA /* swift_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_field.cc; sourceTree = "<group>"; };
+		1405870B21C2420A000808BA /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		1405870C21C2420A000808BA /* swift_helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_helpers.h; sourceTree = "<group>"; };
+		1405870D21C2420A000808BA /* swift_enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_enum.h; sourceTree = "<group>"; };
+		1405870E21C2420A000808BA /* swift_generator.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_generator.cc; sourceTree = "<group>"; };
+		1405870F21C2420A000808BA /* swift_extension.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_extension.cc; sourceTree = "<group>"; };
+		1405871021C2420A000808BA /* swift_message.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_message.cc; sourceTree = "<group>"; };
+		1405871121C2420A000808BA /* swift_file.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_file.cc; sourceTree = "<group>"; };
+		1405871221C2420A000808BA /* swift_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_field.h; sourceTree = "<group>"; };
+		1405871321C2420A000808BA /* swift_oneof.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_oneof.cc; sourceTree = "<group>"; };
+		1405871621C2420A000808BA /* unittest_no_field_presence.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_field_presence.proto; sourceTree = "<group>"; };
+		1405871721C2420A000808BA /* map_proto2_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_proto2_unittest.proto; sourceTree = "<group>"; };
+		1405871921C2420A000808BA /* substitute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = substitute.h; sourceTree = "<group>"; };
+		1405871A21C2420A000808BA /* strutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
+		1405871B21C2420A000808BA /* hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		1405871C21C2420A000808BA /* timestamp.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = timestamp.proto; sourceTree = "<group>"; };
+		1405871D21C2420A000808BA /* field_mask.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = field_mask.proto; sourceTree = "<group>"; };
+		1405871E21C2420A000808BA /* descriptor.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = descriptor.pb.cc; sourceTree = "<group>"; };
+		1405871F21C2420A000808BA /* unittest_optimize_for.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_optimize_for.proto; sourceTree = "<group>"; };
+		1405872021C2420A000808BA /* unittest_drop_unknown_fields.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_drop_unknown_fields.proto; sourceTree = "<group>"; };
+		1405872121C2420A000808BA /* map_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_unittest.proto; sourceTree = "<group>"; };
+		1405872221C2420A000808BA /* unknown_enum_test.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unknown_enum_test.proto; sourceTree = "<group>"; };
+		1405872321C2420A000808BA /* unittest_well_known_types.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_well_known_types.proto; sourceTree = "<group>"; };
+		1405872421C2420A000808BA /* unittest_enormous_descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_enormous_descriptor.proto; sourceTree = "<group>"; };
+		1405872521C2420A000808BA /* unittest_embed_optimize_for.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_embed_optimize_for.proto; sourceTree = "<group>"; };
+		1405872621C2420A000808BA /* unittest_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_arena.proto; sourceTree = "<group>"; };
+		1405872721C2420A000808BA /* unittest_threading.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_threading.proto; sourceTree = "<group>"; };
+		1405872821C2420A000808BA /* unittest_preserve_unknown_enum.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_preserve_unknown_enum.proto; sourceTree = "<group>"; };
+		1405872921C2420A000808BA /* swift-descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = "swift-descriptor.proto"; sourceTree = "<group>"; };
+		1405872A21C2420A000808BA /* unittest_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_lite.proto; sourceTree = "<group>"; };
+		1405872B21C2420A000808BA /* unittest_proto3_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_proto3_arena.proto; sourceTree = "<group>"; };
+		1405872C21C2420A000808BA /* api.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
+		1405872D21C2420A000808BA /* unittest_import.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import.proto; sourceTree = "<group>"; };
+		1405872E21C2420A000808BA /* duration.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = duration.proto; sourceTree = "<group>"; };
+		1405872F21C2420A000808BA /* plugin.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = plugin.proto; sourceTree = "<group>"; };
+		1405873021C2420A000808BA /* unittest_struct.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_struct.proto; sourceTree = "<group>"; };
+		1405873121C2420A000808BA /* struct.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = struct.proto; sourceTree = "<group>"; };
+		1405873221C2420A000808BA /* unittest_no_generic_services.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_generic_services.proto; sourceTree = "<group>"; };
+		1405873321C2420A000808BA /* wrappers.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = wrappers.proto; sourceTree = "<group>"; };
+		1405873421C2420A000808BA /* source_context.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = source_context.proto; sourceTree = "<group>"; };
+		1405873521C2420A000808BA /* any.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = any.proto; sourceTree = "<group>"; };
+		1405873621C2420A000808BA /* descriptor.pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = descriptor.pb.h; sourceTree = "<group>"; };
+		1405873721C2420A000808BA /* unittest_import_public.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_public.proto; sourceTree = "<group>"; };
+		1405873821C2420A000808BA /* unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest.proto; sourceTree = "<group>"; };
+		1405873921C2420A000808BA /* unittest_maps.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_maps.proto; sourceTree = "<group>"; };
+		1405873A21C2420A000808BA /* unittest_no_arena_import.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_arena_import.proto; sourceTree = "<group>"; };
+		1405873B21C2420A000808BA /* swift-descriptor.pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-descriptor.pb.h"; sourceTree = "<group>"; };
+		1405873C21C2420A000808BA /* unittest_no_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_arena.proto; sourceTree = "<group>"; };
+		1405873D21C2420A000808BA /* unittest_empty.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_empty.proto; sourceTree = "<group>"; };
+		1405873E21C2420A000808BA /* unittest_error_type.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_error_type.proto; sourceTree = "<group>"; };
+		1405873F21C2420A000808BA /* unittest_import_public_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_public_lite.proto; sourceTree = "<group>"; };
+		1405874021C2420A000808BA /* map_lite_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_lite_unittest.proto; sourceTree = "<group>"; };
+		1405874121C2420A000808BA /* type.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = type.proto; sourceTree = "<group>"; };
+		1405874221C2420A000808BA /* unittest_mset.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_mset.proto; sourceTree = "<group>"; };
+		1405874321C2420A000808BA /* unittest_import_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_lite.proto; sourceTree = "<group>"; };
+		1405874421C2420A000808BA /* performance.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = performance.proto; sourceTree = "<group>"; };
+		1405874521C2420A000808BA /* empty.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = empty.proto; sourceTree = "<group>"; };
+		1405874621C2420A000808BA /* swift-descriptor.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "swift-descriptor.pb.cc"; sourceTree = "<group>"; };
+		1405874721C2420A000808BA /* unittest_lite_imports_nonlite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_lite_imports_nonlite.proto; sourceTree = "<group>"; };
+		1405874821C2420A000808BA /* descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = descriptor.proto; sourceTree = "<group>"; };
+		1405874921C2420A000808BA /* .dirstamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = .dirstamp; sourceTree = "<group>"; };
+		1405874A21C2420A000808BA /* any_test.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = any_test.proto; sourceTree = "<group>"; };
+		1405874B21C2420A000808BA /* unittest_custom_options.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_custom_options.proto; sourceTree = "<group>"; };
+		1405874C21C2420A000808BA /* swift_extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_extension.h; sourceTree = "<group>"; };
+		1405874D21C2420A000808BA /* swift_map_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_map_field.h; sourceTree = "<group>"; };
+		1405874E21C2420A000808BA /* swift_primitive_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_primitive_field.cc; sourceTree = "<group>"; };
+		1405874F21C2420A000808BA /* swift_primitive_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_primitive_field.h; sourceTree = "<group>"; };
+		1405875221C2420A000808BA /* foo.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = foo.proto; sourceTree = "<group>"; };
+		1405875421C2420A000808BA /* foo.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = foo.proto; sourceTree = "<group>"; };
+		1405875521C2420A000808BA /* swift_enum.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_enum.cc; sourceTree = "<group>"; };
+		1405875621C2420A000808BA /* swift_enum_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_enum_field.cc; sourceTree = "<group>"; };
+		1405875721C2420A000808BA /* swift_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_file.h; sourceTree = "<group>"; };
+		1405875821C2420A000808BA /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		1405875A21C2420A000808BA /* swift_generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_generator.h; sourceTree = "<group>"; };
+		1405875B21C2420A000808BA /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		1405875C21C2420A000808BA /* swift_react.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_react.cc; sourceTree = "<group>"; };
+		1405875D21C2420A000808BA /* swift_generator.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_generator.cc; sourceTree = "<group>"; };
+		1405875E21C2420A000808BA /* swift_file.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_file.cc; sourceTree = "<group>"; };
+		1405875F21C2420A000808BA /* swift_helpers_react.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_helpers_react.h; sourceTree = "<group>"; };
+		1405876021C2420A000808BA /* swift_react.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_react.h; sourceTree = "<group>"; };
+		1405876121C2420A000808BA /* swift_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_file.h; sourceTree = "<group>"; };
+		1405876221C2420A000808BA /* swift_react_enums.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_react_enums.cc; sourceTree = "<group>"; };
+		1405876321C2420A000808BA /* swift_react_enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_react_enums.h; sourceTree = "<group>"; };
+		1405876421C2420A000808BA /* swift_helpers_react.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_helpers_react.cc; sourceTree = "<group>"; };
+		1405876521C2420A000808BA /* .dirstamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = .dirstamp; sourceTree = "<group>"; };
+		1405876621C2420A000808BA /* swift_message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_message.h; sourceTree = "<group>"; };
+		1405876721C2420A000808BA /* swift_helpers.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_helpers.cc; sourceTree = "<group>"; };
+		1405876821C2420A000808BA /* swift_oneof.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_oneof.h; sourceTree = "<group>"; };
+		1405876921C2420A000808BA /* swift_map_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_map_field.cc; sourceTree = "<group>"; };
+		1405876A21C2420A000808BA /* RESERVEDWORDS */ = {isa = PBXFileReference; lastKnownFileType = text; path = RESERVEDWORDS; sourceTree = "<group>"; };
+		1405876B21C2420A000808BA /* swift_message_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_message_field.h; sourceTree = "<group>"; };
+		1405876C21C2420A000808BA /* swift_enum_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_enum_field.h; sourceTree = "<group>"; };
+		1405876D21C2420A000808BA /* swift_message_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_message_field.cc; sourceTree = "<group>"; };
+		1405876E21C2420A000808BA /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		1405876F21C2420A000808BA /* config.h.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		1405877021C2420A000808BA /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		1405877121C2420A000808BA /* depcomp */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		1405877221C2420A000808BA /* missing */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		1405877321C2420A000808BA /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		1405877421C2420A000808BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1405877521C2420A000808BA /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		1405877621C2420A000808BA /* compile */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = compile; sourceTree = "<group>"; };
+		1405877721C2420A000808BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1405877921C2420A000808BA /* makeDescriptor.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makeDescriptor.sh; sourceTree = "<group>"; };
+		1405877A21C2420A000808BA /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		1405877B21C2420A000808BA /* makeTests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makeTests.sh; sourceTree = "<group>"; };
+		1405877C21C2420A000808BA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		1405877E21C2420A000808BA /* ltversion.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltversion.m4; sourceTree = "<group>"; };
+		1405877F21C2420A000808BA /* libtool.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = libtool.m4; sourceTree = "<group>"; };
+		1405878021C2420A000808BA /* ltoptions.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltoptions.m4; sourceTree = "<group>"; };
+		1405878121C2420A000808BA /* ltsugar.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ltsugar.m4; sourceTree = "<group>"; };
+		1405878221C2420A000808BA /* lt~obsolete.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lt~obsolete.m4"; sourceTree = "<group>"; };
+		1405878321C2420A000808BA /* ISSUE_TEMPLATE */ = {isa = PBXFileReference; lastKnownFileType = text; path = ISSUE_TEMPLATE; sourceTree = "<group>"; };
+		1405878421C2420A000808BA /* config.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.log; sourceTree = "<group>"; };
+		1405878521C2420A000808BA /* protobuf-swift 2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "protobuf-swift 2.xcodeproj"; sourceTree = "<group>"; };
+		1405878821C2420A000808BA /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		1405878921C2420A000808BA /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		1405878A21C2420A000808BA /* aclocal.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		1405878B21C2420A000808BA /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		1405878C21C2420A000808BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1405878D21C2420A000808BA /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
 		1440100521C2273800235D67 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1440100621C2273800235D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1440100921C2273800235D67 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
@@ -32,6 +272,7 @@
 		1440101121C2273800235D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1440101221C2273800235D67 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1440101321C2273800235D67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1440102121C2299100235D67 /* ClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientManager.swift; sourceTree = "<group>"; };
 		70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcastServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,12 +281,408 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1405879C21C24214000808BA /* ProtocolBuffers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1405869F21C2420A000808BA /* protobuf-swift */ = {
+			isa = PBXGroup;
+			children = (
+				140586A021C2420A000808BA /* ProtocolBuffers-Swift.podspec */,
+				140586A121C2420A000808BA /* protobuf-swift.xcodeproj */,
+				140586A421C2420A000808BA /* install-sh */,
+				140586A521C2420A000808BA /* configure.ac */,
+				140586A621C2420A000808BA /* .swift-version */,
+				140586A721C2420A000808BA /* ltmain.sh */,
+				140586A821C2420A000808BA /* LICENSE */,
+				140586A921C2420A000808BA /* configure */,
+				140586AA21C2420A000808BA /* ProtocolBuffers.xcodeproj */,
+				140586AD21C2420A000808BA /* Source */,
+				140586C621C2420A000808BA /* protobuf-swift.rb */,
+				140586C721C2420A000808BA /* plugin */,
+				1405876F21C2420A000808BA /* config.h.in */,
+				1405877021C2420A000808BA /* config.guess */,
+				1405877121C2420A000808BA /* depcomp */,
+				1405877221C2420A000808BA /* missing */,
+				1405877321C2420A000808BA /* Makefile.am */,
+				1405877421C2420A000808BA /* README.md */,
+				1405877521C2420A000808BA /* config.sub */,
+				1405877621C2420A000808BA /* compile */,
+				1405877721C2420A000808BA /* .gitignore */,
+				1405877821C2420A000808BA /* scripts */,
+				1405877C21C2420A000808BA /* Package.swift */,
+				1405877D21C2420A000808BA /* m4 */,
+				1405878321C2420A000808BA /* ISSUE_TEMPLATE */,
+				1405878421C2420A000808BA /* config.log */,
+				1405878521C2420A000808BA /* protobuf-swift 2.xcodeproj */,
+				1405878821C2420A000808BA /* Makefile.in */,
+				1405878921C2420A000808BA /* .travis.yml */,
+				1405878A21C2420A000808BA /* aclocal.m4 */,
+				1405878B21C2420A000808BA /* CREDITS */,
+				1405878C21C2420A000808BA /* Info.plist */,
+				1405878D21C2420A000808BA /* autogen.sh */,
+			);
+			name = "protobuf-swift";
+			path = "../../../../../../../Desktop/protobuf-swift";
+			sourceTree = "<group>";
+		};
+		140586A221C2420A000808BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		140586AB21C2420A000808BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1405879821C2420A000808BA /* ProtocolBufferTests.xctest */,
+				1405879A21C2420A000808BA /* ProtocolBuffers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		140586AD21C2420A000808BA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				140586AE21C2420A000808BA /* Google.Protobuf.FieldMask.proto.swift */,
+				140586AF21C2420A000808BA /* AbstractMessage.swift */,
+				140586B021C2420A000808BA /* Google.Protobuf.Any.proto.swift */,
+				140586B121C2420A000808BA /* ProtocolBuffers.h */,
+				140586B221C2420A000808BA /* RingBuffer.swift */,
+				140586B321C2420A000808BA /* Google.Protobuf.Wrappers.proto.swift */,
+				140586B421C2420A000808BA /* UnknownFieldSet.swift */,
+				140586B521C2420A000808BA /* WireFormat.swift */,
+				140586B621C2420A000808BA /* Google.Protobuf.Api.proto.swift */,
+				140586B721C2420A000808BA /* Google.Protobuf.Empty.proto.swift */,
+				140586B821C2420A000808BA /* Google.Protobuf.Duration.proto.swift */,
+				140586B921C2420A000808BA /* Field.swift */,
+				140586BA21C2420A000808BA /* Google.Protobuf.Struct.proto.swift */,
+				140586BB21C2420A000808BA /* Google.Protobuf.Type.proto.swift */,
+				140586BC21C2420A000808BA /* ExtensionRegistry.swift */,
+				140586BD21C2420A000808BA /* Google.Protobuf.Timestamp.proto.swift */,
+				140586BE21C2420A000808BA /* GeneratedMessage.swift */,
+				140586BF21C2420A000808BA /* CodedInputStream.swift */,
+				140586C021C2420A000808BA /* CodedOutputStream.swift */,
+				140586C121C2420A000808BA /* ConcreateExtensionField.swift */,
+				140586C221C2420A000808BA /* Google.Protobuf.SwiftDescriptor.proto.swift */,
+				140586C321C2420A000808BA /* Google.Protobuf.Descriptor.proto.swift */,
+				140586C421C2420A000808BA /* ExtendableMessage.swift */,
+				140586C521C2420A000808BA /* Google.Protobuf.SourceContext.proto.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		140586C721C2420A000808BA /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				140586C821C2420A000808BA /* PBCompiler */,
+				140586CC21C2420A000808BA /* Tests */,
+				1405870821C2420A000808BA /* compiler */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		140586C821C2420A000808BA /* PBCompiler */ = {
+			isa = PBXGroup;
+			children = (
+				140586C921C2420A000808BA /* PBCompiler.xcodeproj */,
+			);
+			path = PBCompiler;
+			sourceTree = "<group>";
+		};
+		140586CA21C2420A000808BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1405879021C2420A000808BA /* PBCompiler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		140586CC21C2420A000808BA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				140586CD21C2420A000808BA /* GeneratedMessageTests.swift */,
+				140586CE21C2420A000808BA /* SmallBlockInputStream.swift */,
+				140586CF21C2420A000808BA /* WireFormatTests.swift */,
+				140586D021C2420A000808BA /* testdata */,
+				140586D221C2420A000808BA /* pbTests */,
+				140586FC21C2420A000808BA /* TestUtilities.swift */,
+				140586FD21C2420A000808BA /* SizeTest.swift */,
+				140586FE21C2420A000808BA /* CodedOuputStreamTests.swift */,
+				140586FF21C2420A000808BA /* PluginTest.swift */,
+				1405870021C2420A000808BA /* MapFieldsTests.swift */,
+				1405870121C2420A000808BA /* UnknowFieldsTests.swift */,
+				1405870221C2420A000808BA /* ProtocolBuffersTests.swift */,
+				1405870321C2420A000808BA /* ErrorHandlingTest.swift */,
+				1405870421C2420A000808BA /* CodedInputStreamTests.swift */,
+				1405870521C2420A000808BA /* Performance.proto.swift */,
+				1405870621C2420A000808BA /* Info.plist */,
+				1405870721C2420A000808BA /* MessageTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		140586D021C2420A000808BA /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				140586D121C2420A000808BA /* delimitedFile.dat */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
+		140586D221C2420A000808BA /* pbTests */ = {
+			isa = PBXGroup;
+			children = (
+				140586D321C2420A000808BA /* testdata */,
+				140586DF21C2420A000808BA /* Bar.Foo.proto.swift */,
+				140586E021C2420A000808BA /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */,
+				140586E121C2420A000808BA /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */,
+				140586E221C2420A000808BA /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */,
+				140586E321C2420A000808BA /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */,
+				140586E421C2420A000808BA /* Baz.Foo.proto.swift */,
+				140586E521C2420A000808BA /* ProtobufUnittestImport.UnittestImportLite.proto.swift */,
+				140586E621C2420A000808BA /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */,
+				140586E721C2420A000808BA /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */,
+				140586E821C2420A000808BA /* ProtobufUnittest.Unittest.proto.swift */,
+				140586E921C2420A000808BA /* ThreadingTest.swift */,
+				140586EA21C2420A000808BA /* ProtobufUnittestImport.UnittestImport.proto.swift */,
+				140586EB21C2420A000808BA /* ProtobufUnittest.UnittestLite.proto.swift */,
+				140586EC21C2420A000808BA /* UnittestEmpty.proto.swift */,
+				140586ED21C2420A000808BA /* UnittestErrorType.proto.swift */,
+				140586EE21C2420A000808BA /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */,
+				140586EF21C2420A000808BA /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */,
+				140586F021C2420A000808BA /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */,
+				140586F121C2420A000808BA /* UnittestStruct.proto.swift */,
+				140586F221C2420A000808BA /* ProtobufUnittest.UnittestMset.proto.swift */,
+				140586F321C2420A000808BA /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */,
+				140586F421C2420A000808BA /* Proto2ArenaUnittest.UnittestArena.proto.swift */,
+				140586F521C2420A000808BA /* UnittestThreading.proto.swift */,
+				140586F621C2420A000808BA /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */,
+				140586F721C2420A000808BA /* SwiftProtobufUnittest.UnittestMaps.proto.swift */,
+				140586F821C2420A000808BA /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */,
+				140586F921C2420A000808BA /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */,
+				140586FA21C2420A000808BA /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */,
+				140586FB21C2420A000808BA /* ProtobufUnittest.UnittestCustomOptions.proto.swift */,
+			);
+			path = pbTests;
+			sourceTree = "<group>";
+		};
+		140586D321C2420A000808BA /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				140586D421C2420A000808BA /* text_format_unittest_data_oneof_implemented.txt */,
+				140586D521C2420A000808BA /* text_format_unittest_data.txt */,
+				140586D621C2420A000808BA /* text_format_unittest_data_pointy.txt */,
+				140586D721C2420A000808BA /* text_format_unittest_extensions_data_pointy.txt */,
+				140586D821C2420A000808BA /* delimitedFile.dat */,
+				140586D921C2420A000808BA /* golden_message_oneof_implemented */,
+				140586DA21C2420A000808BA /* bad_utf8_string */,
+				140586DB21C2420A000808BA /* text_format_unittest_data_pointy_oneof.txt */,
+				140586DC21C2420A000808BA /* golden_message */,
+				140586DD21C2420A000808BA /* text_format_unittest_extensions_data.txt */,
+				140586DE21C2420A000808BA /* golden_packed_fields_message */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
+		1405870821C2420A000808BA /* compiler */ = {
+			isa = PBXGroup;
+			children = (
+				1405870921C2420A000808BA /* swift_generator.h */,
+				1405870A21C2420A000808BA /* swift_field.cc */,
+				1405870B21C2420A000808BA /* main.cc */,
+				1405870C21C2420A000808BA /* swift_helpers.h */,
+				1405870D21C2420A000808BA /* swift_enum.h */,
+				1405870E21C2420A000808BA /* swift_generator.cc */,
+				1405870F21C2420A000808BA /* swift_extension.cc */,
+				1405871021C2420A000808BA /* swift_message.cc */,
+				1405871121C2420A000808BA /* swift_file.cc */,
+				1405871221C2420A000808BA /* swift_field.h */,
+				1405871321C2420A000808BA /* swift_oneof.cc */,
+				1405871421C2420A000808BA /* google */,
+				1405874C21C2420A000808BA /* swift_extension.h */,
+				1405874D21C2420A000808BA /* swift_map_field.h */,
+				1405874E21C2420A000808BA /* swift_primitive_field.cc */,
+				1405874F21C2420A000808BA /* swift_primitive_field.h */,
+				1405875021C2420A000808BA /* tests */,
+				1405875521C2420A000808BA /* swift_enum.cc */,
+				1405875621C2420A000808BA /* swift_enum_field.cc */,
+				1405875721C2420A000808BA /* swift_file.h */,
+				1405875821C2420A000808BA /* Makefile.am */,
+				1405875921C2420A000808BA /* react_native */,
+				1405876621C2420A000808BA /* swift_message.h */,
+				1405876721C2420A000808BA /* swift_helpers.cc */,
+				1405876821C2420A000808BA /* swift_oneof.h */,
+				1405876921C2420A000808BA /* swift_map_field.cc */,
+				1405876A21C2420A000808BA /* RESERVEDWORDS */,
+				1405876B21C2420A000808BA /* swift_message_field.h */,
+				1405876C21C2420A000808BA /* swift_enum_field.h */,
+				1405876D21C2420A000808BA /* swift_message_field.cc */,
+				1405876E21C2420A000808BA /* Makefile.in */,
+			);
+			path = compiler;
+			sourceTree = "<group>";
+		};
+		1405871421C2420A000808BA /* google */ = {
+			isa = PBXGroup;
+			children = (
+				1405871521C2420A000808BA /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		1405871521C2420A000808BA /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				1405871621C2420A000808BA /* unittest_no_field_presence.proto */,
+				1405871721C2420A000808BA /* map_proto2_unittest.proto */,
+				1405871821C2420A000808BA /* stubs */,
+				1405871C21C2420A000808BA /* timestamp.proto */,
+				1405871D21C2420A000808BA /* field_mask.proto */,
+				1405871E21C2420A000808BA /* descriptor.pb.cc */,
+				1405871F21C2420A000808BA /* unittest_optimize_for.proto */,
+				1405872021C2420A000808BA /* unittest_drop_unknown_fields.proto */,
+				1405872121C2420A000808BA /* map_unittest.proto */,
+				1405872221C2420A000808BA /* unknown_enum_test.proto */,
+				1405872321C2420A000808BA /* unittest_well_known_types.proto */,
+				1405872421C2420A000808BA /* unittest_enormous_descriptor.proto */,
+				1405872521C2420A000808BA /* unittest_embed_optimize_for.proto */,
+				1405872621C2420A000808BA /* unittest_arena.proto */,
+				1405872721C2420A000808BA /* unittest_threading.proto */,
+				1405872821C2420A000808BA /* unittest_preserve_unknown_enum.proto */,
+				1405872921C2420A000808BA /* swift-descriptor.proto */,
+				1405872A21C2420A000808BA /* unittest_lite.proto */,
+				1405872B21C2420A000808BA /* unittest_proto3_arena.proto */,
+				1405872C21C2420A000808BA /* api.proto */,
+				1405872D21C2420A000808BA /* unittest_import.proto */,
+				1405872E21C2420A000808BA /* duration.proto */,
+				1405872F21C2420A000808BA /* plugin.proto */,
+				1405873021C2420A000808BA /* unittest_struct.proto */,
+				1405873121C2420A000808BA /* struct.proto */,
+				1405873221C2420A000808BA /* unittest_no_generic_services.proto */,
+				1405873321C2420A000808BA /* wrappers.proto */,
+				1405873421C2420A000808BA /* source_context.proto */,
+				1405873521C2420A000808BA /* any.proto */,
+				1405873621C2420A000808BA /* descriptor.pb.h */,
+				1405873721C2420A000808BA /* unittest_import_public.proto */,
+				1405873821C2420A000808BA /* unittest.proto */,
+				1405873921C2420A000808BA /* unittest_maps.proto */,
+				1405873A21C2420A000808BA /* unittest_no_arena_import.proto */,
+				1405873B21C2420A000808BA /* swift-descriptor.pb.h */,
+				1405873C21C2420A000808BA /* unittest_no_arena.proto */,
+				1405873D21C2420A000808BA /* unittest_empty.proto */,
+				1405873E21C2420A000808BA /* unittest_error_type.proto */,
+				1405873F21C2420A000808BA /* unittest_import_public_lite.proto */,
+				1405874021C2420A000808BA /* map_lite_unittest.proto */,
+				1405874121C2420A000808BA /* type.proto */,
+				1405874221C2420A000808BA /* unittest_mset.proto */,
+				1405874321C2420A000808BA /* unittest_import_lite.proto */,
+				1405874421C2420A000808BA /* performance.proto */,
+				1405874521C2420A000808BA /* empty.proto */,
+				1405874621C2420A000808BA /* swift-descriptor.pb.cc */,
+				1405874721C2420A000808BA /* unittest_lite_imports_nonlite.proto */,
+				1405874821C2420A000808BA /* descriptor.proto */,
+				1405874921C2420A000808BA /* .dirstamp */,
+				1405874A21C2420A000808BA /* any_test.proto */,
+				1405874B21C2420A000808BA /* unittest_custom_options.proto */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		1405871821C2420A000808BA /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+				1405871921C2420A000808BA /* substitute.h */,
+				1405871A21C2420A000808BA /* strutil.h */,
+				1405871B21C2420A000808BA /* hash.h */,
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
+		1405875021C2420A000808BA /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				1405875121C2420A000808BA /* baz */,
+				1405875321C2420A000808BA /* bar */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		1405875121C2420A000808BA /* baz */ = {
+			isa = PBXGroup;
+			children = (
+				1405875221C2420A000808BA /* foo.proto */,
+			);
+			path = baz;
+			sourceTree = "<group>";
+		};
+		1405875321C2420A000808BA /* bar */ = {
+			isa = PBXGroup;
+			children = (
+				1405875421C2420A000808BA /* foo.proto */,
+			);
+			path = bar;
+			sourceTree = "<group>";
+		};
+		1405875921C2420A000808BA /* react_native */ = {
+			isa = PBXGroup;
+			children = (
+				1405875A21C2420A000808BA /* swift_generator.h */,
+				1405875B21C2420A000808BA /* main.cc */,
+				1405875C21C2420A000808BA /* swift_react.cc */,
+				1405875D21C2420A000808BA /* swift_generator.cc */,
+				1405875E21C2420A000808BA /* swift_file.cc */,
+				1405875F21C2420A000808BA /* swift_helpers_react.h */,
+				1405876021C2420A000808BA /* swift_react.h */,
+				1405876121C2420A000808BA /* swift_file.h */,
+				1405876221C2420A000808BA /* swift_react_enums.cc */,
+				1405876321C2420A000808BA /* swift_react_enums.h */,
+				1405876421C2420A000808BA /* swift_helpers_react.cc */,
+				1405876521C2420A000808BA /* .dirstamp */,
+			);
+			path = react_native;
+			sourceTree = "<group>";
+		};
+		1405877821C2420A000808BA /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				1405877921C2420A000808BA /* makeDescriptor.sh */,
+				1405877A21C2420A000808BA /* build.sh */,
+				1405877B21C2420A000808BA /* makeTests.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		1405877D21C2420A000808BA /* m4 */ = {
+			isa = PBXGroup;
+			children = (
+				1405877E21C2420A000808BA /* ltversion.m4 */,
+				1405877F21C2420A000808BA /* libtool.m4 */,
+				1405878021C2420A000808BA /* ltoptions.m4 */,
+				1405878121C2420A000808BA /* ltsugar.m4 */,
+				1405878221C2420A000808BA /* lt~obsolete.m4 */,
+			);
+			path = m4;
+			sourceTree = "<group>";
+		};
+		1405878621C2420A000808BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1405879B21C24214000808BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1440100421C2273800235D67 /* LiveBroadcastServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +701,8 @@
 			children = (
 				1440100821C2273800235D67 /* ysocket */,
 				1440100E21C2273800235D67 /* ServerManager.swift */,
+				1440102121C2299100235D67 /* ClientManager.swift */,
+				1405852B21C23F2D000808BA /* Immessage.proto.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -83,8 +722,10 @@
 		70AA51D41DFD2EAB00A553DA = {
 			isa = PBXGroup;
 			children = (
+				1405869F21C2420A000808BA /* protobuf-swift */,
 				1440100421C2273800235D67 /* LiveBroadcastServer */,
 				70AA51DE1DFD2EAB00A553DA /* Products */,
+				1405879B21C24214000808BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,12 +784,54 @@
 			mainGroup = 70AA51D41DFD2EAB00A553DA;
 			productRefGroup = 70AA51DE1DFD2EAB00A553DA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 140586CA21C2420A000808BA /* Products */;
+					ProjectRef = 140586C921C2420A000808BA /* PBCompiler.xcodeproj */;
+				},
+				{
+					ProductGroup = 1405878621C2420A000808BA /* Products */;
+					ProjectRef = 1405878521C2420A000808BA /* protobuf-swift 2.xcodeproj */;
+				},
+				{
+					ProductGroup = 140586A221C2420A000808BA /* Products */;
+					ProjectRef = 140586A121C2420A000808BA /* protobuf-swift.xcodeproj */;
+				},
+				{
+					ProductGroup = 140586AB21C2420A000808BA /* Products */;
+					ProjectRef = 140586AA21C2420A000808BA /* ProtocolBuffers.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				70AA51DC1DFD2EAB00A553DA /* LiveBroadcastServer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1405879021C2420A000808BA /* PBCompiler */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PBCompiler;
+			remoteRef = 1405878F21C2420A000808BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1405879821C2420A000808BA /* ProtocolBufferTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProtocolBufferTests.xctest;
+			remoteRef = 1405879721C2420A000808BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1405879A21C2420A000808BA /* ProtocolBuffers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProtocolBuffers.framework;
+			remoteRef = 1405879921C2420A000808BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		70AA51DB1DFD2EAB00A553DA /* Resources */ = {
@@ -157,7 +840,6 @@
 			files = (
 				1440101521C2273800235D67 /* Assets.xcassets in Resources */,
 				1440101D21C2273800235D67 /* Main.storyboard in Resources */,
-				1440101F21C2273800235D67 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +855,11 @@
 				1440101621C2273800235D67 /* yudpsocket.c in Sources */,
 				1440101E21C2273800235D67 /* AppDelegate.swift in Sources */,
 				1440101821C2273800235D67 /* ytcpsocket.c in Sources */,
+				1405852C21C23F2D000808BA /* Immessage.proto.swift in Sources */,
 				1440101B21C2273800235D67 /* ServerManager.swift in Sources */,
 				1440101921C2273800235D67 /* ysocket.swift in Sources */,
 				1440101421C2273800235D67 /* ViewController.swift in Sources */,
+				1440102221C2299100235D67 /* ClientManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +998,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcastServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -330,6 +1015,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcastServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

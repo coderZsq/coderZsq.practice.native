@@ -19,4 +19,18 @@ class RankViewController: UIViewController {
         }
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let userInfo = UserInfo.Builder()
+        userInfo.name = "Castiel"
+        userInfo.level = 20
+        let msgData = (try! userInfo.build()).data()
+        var length = msgData.count
+        let headerData = Data(bytes: &length, count: 4)
+        var type = 2
+        let typeData = Data(bytes: &type, count: 2)
+        let totalData = headerData + typeData + msgData
+        socket.send(totalData)
+    }
+    
 }

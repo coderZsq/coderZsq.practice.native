@@ -8,10 +8,10 @@
 
 import Cocoa
 
-class ServerManager: NSObject {
-    fileprivate lazy var serverSocket : TCPServer = TCPServer(addr: "0.0.0.0", port: 6666)
-    
+class ServerManager {
+    fileprivate lazy var serverSocket = TCPServer(addr: "0.0.0.0", port: 6666)
     fileprivate var isServerRunning = false
+    fileprivate lazy var clientManagers = [ClientManager]()
 }
 
 extension ServerManager {
@@ -22,7 +22,7 @@ extension ServerManager {
             while self.isServerRunning {
                 if let client = self.serverSocket.accept() {
                     DispatchQueue.global().async {
-                        print("接收到一个客户端的链接")
+                        self.handlerClient(client)
                     }
                 }
             }
@@ -31,6 +31,16 @@ extension ServerManager {
     
     func stopRunning() {
         isServerRunning = false
+    }
+    
+}
+
+extension ServerManager {
+    
+    fileprivate func handlerClient(_ client: TCPClient) {
+        let manager = ClientManager(tcpClient: client)
+        clientManagers.append(manager)
+        manager.startReadMessage()
     }
     
 }

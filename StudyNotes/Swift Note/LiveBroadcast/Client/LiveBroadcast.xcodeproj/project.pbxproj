@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140584EF21C23B3C000808BA /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140584EE21C23B3C000808BA /* Immessage.proto.swift */; };
 		142D692921BE674400669EAB /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D692821BE674400669EAB /* AnchorViewController.swift */; };
 		142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */; };
 		1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433FB3721BA6F5000D24067 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 		1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6121BA739100D24067 /* ProfileViewController.storyboard */; };
 		1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6321BA78A000D24067 /* HomeViewController.storyboard */; };
 		1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1433FB6521BA78A800D24067 /* RankViewController.storyboard */; };
+		1440102421C234F400235D67 /* IMMessage.proto in Sources */ = {isa = PBXBuildFile; fileRef = 1440102321C234F400235D67 /* IMMessage.proto */; };
 		145FCB1F21BE002A005FEB77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB1E21BE002A005FEB77 /* HomeViewController.swift */; };
 		145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB2021BE00BE005FEB77 /* RankViewController.swift */; };
 		145FCB2A21BE04F1005FEB77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FCB2821BE04F1005FEB77 /* MainViewController.swift */; };
@@ -69,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140584EE21C23B3C000808BA /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
 		142D692821BE674400669EAB /* AnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
 		142D692A21BE6A3F00669EAB /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		1433FB3421BA6F5000D24067 /* LiveBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,7 @@
 		1433FB6121BA739100D24067 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		1433FB6321BA78A000D24067 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		1433FB6521BA78A800D24067 /* RankViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RankViewController.storyboard; sourceTree = "<group>"; };
+		1440102321C234F400235D67 /* IMMessage.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = IMMessage.proto; sourceTree = "<group>"; };
 		145FCB1E21BE002A005FEB77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		145FCB2021BE00BE005FEB77 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		145FCB2821BE04F1005FEB77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				1433FB3E21BA6F5100D24067 /* Assets.xcassets */,
 				1433FB4021BA6F5100D24067 /* LaunchScreen.storyboard */,
 				1433FB4321BA6F5100D24067 /* Info.plist */,
+				140584EE21C23B3C000808BA /* Immessage.proto.swift */,
+				1440102321C234F400235D67 /* IMMessage.proto */,
 			);
 			path = LiveBroadcast;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1440102421C234F400235D67 /* IMMessage.proto in Sources */,
 				149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */,
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
@@ -526,6 +533,7 @@
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
 				149C90DC21C2082400852311 /* Socket.swift in Sources */,
 				1467614021BFA662008BBA2A /* NibLoadable.swift in Sources */,
+				140584EF21C23B3C000808BA /* Immessage.proto.swift in Sources */,
 				149C909721C108F800852311 /* GiftViewCell.swift in Sources */,
 				149C90E621C20D2600852311 /* ysocket.swift in Sources */,
 				1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */,

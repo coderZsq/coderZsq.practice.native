@@ -21,4 +21,8 @@ extension Socket {
         return tcpClient.connect(timeout: 5).0
     }
     
+    func send(_ message: Data) {
+        tcpClient.send(data: message)
+    }
+    
 }
