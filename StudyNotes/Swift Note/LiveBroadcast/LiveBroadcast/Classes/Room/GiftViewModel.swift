@@ -27,7 +27,6 @@ extension GiftViewModel {
                 guard let dict = dataDict["type\(i+1)"] as? [String : Any] else { continue }
                 self.giftlistData.append(GiftPackage(dict: dict))
             }
-            
             self.giftlistData = self.giftlistData.filter({ return $0.t != 0 }).sorted(by: { return $0.t > $1.t })
             
             finishedCallback()
