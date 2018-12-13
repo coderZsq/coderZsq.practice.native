@@ -58,6 +58,7 @@ extension RoomViewController {
         view.addSubview(chatToolsView)
         giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftListViewHeight)
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        giftListView.delegate = self
         view.addSubview(giftListView)
     }
 }
@@ -118,4 +119,12 @@ extension RoomViewController: ChatToolsViewDelegate {
         print(message)
     }
 
+}
+
+extension RoomViewController: GiftListViewDelegate {
+    
+    func giftListView(giftView: GiftListView, giftModel: GiftModel) {
+        print(giftModel.subject)
+    }
+    
 }

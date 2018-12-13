@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70AA51E11DFD2EAB00A553DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */; };
+		70AA51E31DFD2EAB00A553DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51E21DFD2EAB00A553DA /* ViewController.swift */; };
+		70AA51E51DFD2EAB00A553DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AA51E41DFD2EAB00A553DA /* Assets.xcassets */; };
+		70AA51E81DFD2EAB00A553DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AA51E61DFD2EAB00A553DA /* Main.storyboard */; };
+		70AA51F11DFD2F9B00A553DA /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F01DFD2F9B00A553DA /* ServerManager.swift */; };
+		70AA51F81DFD300A00A553DA /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F31DFD300A00A553DA /* ysocket.swift */; };
+		70AA51F91DFD300A00A553DA /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F41DFD300A00A553DA /* ytcpsocket.c */; };
+		70AA51FA1DFD300A00A553DA /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F51DFD300A00A553DA /* ytcpsocket.swift */; };
+		70AA51FB1DFD300A00A553DA /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F61DFD300A00A553DA /* yudpsocket.c */; };
+		70AA51FC1DFD300A00A553DA /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA51F71DFD300A00A553DA /* yudpsocket.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcastServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70AA51E21DFD2EAB00A553DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70AA51E41DFD2EAB00A553DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70AA51E71DFD2EAB00A553DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70AA51E91DFD2EAB00A553DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70AA51F01DFD2F9B00A553DA /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		70AA51F31DFD300A00A553DA /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		70AA51F41DFD300A00A553DA /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		70AA51F51DFD300A00A553DA /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		70AA51F61DFD300A00A553DA /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		70AA51F71DFD300A00A553DA /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70AA51DA1DFD2EAB00A553DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70AA51D41DFD2EAB00A553DA = {
+			isa = PBXGroup;
+			children = (
+				70AA51DF1DFD2EAB00A553DA /* LiveBroadcastServer */,
+				70AA51DE1DFD2EAB00A553DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70AA51DE1DFD2EAB00A553DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70AA51DF1DFD2EAB00A553DA /* LiveBroadcastServer */ = {
+			isa = PBXGroup;
+			children = (
+				70AA51EF1DFD2F8B00A553DA /* Server */,
+				70AA51E01DFD2EAB00A553DA /* AppDelegate.swift */,
+				70AA51E21DFD2EAB00A553DA /* ViewController.swift */,
+				70AA51E41DFD2EAB00A553DA /* Assets.xcassets */,
+				70AA51E61DFD2EAB00A553DA /* Main.storyboard */,
+				70AA51E91DFD2EAB00A553DA /* Info.plist */,
+			);
+			path = LiveBroadcastServer;
+			sourceTree = "<group>";
+		};
+		70AA51EF1DFD2F8B00A553DA /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				70AA51F21DFD300A00A553DA /* ysocket */,
+				70AA51F01DFD2F9B00A553DA /* ServerManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		70AA51F21DFD300A00A553DA /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				70AA51F31DFD300A00A553DA /* ysocket.swift */,
+				70AA51F41DFD300A00A553DA /* ytcpsocket.c */,
+				70AA51F51DFD300A00A553DA /* ytcpsocket.swift */,
+				70AA51F61DFD300A00A553DA /* yudpsocket.c */,
+				70AA51F71DFD300A00A553DA /* yudpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70AA51DC1DFD2EAB00A553DA /* LiveBroadcastServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70AA51EC1DFD2EAB00A553DA /* Build configuration list for PBXNativeTarget "LiveBroadcastServer" */;
+			buildPhases = (
+				70AA51D91DFD2EAB00A553DA /* Sources */,
+				70AA51DA1DFD2EAB00A553DA /* Frameworks */,
+				70AA51DB1DFD2EAB00A553DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveBroadcastServer;
+			productName = Server;
+			productReference = 70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70AA51D51DFD2EAB00A553DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Castie!";
+				TargetAttributes = {
+					70AA51DC1DFD2EAB00A553DA = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 70AA51D81DFD2EAB00A553DA /* Build configuration list for PBXProject "LiveBroadcastServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70AA51D41DFD2EAB00A553DA;
+			productRefGroup = 70AA51DE1DFD2EAB00A553DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70AA51DC1DFD2EAB00A553DA /* LiveBroadcastServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70AA51DB1DFD2EAB00A553DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70AA51E51DFD2EAB00A553DA /* Assets.xcassets in Resources */,
+				70AA51E81DFD2EAB00A553DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70AA51D91DFD2EAB00A553DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70AA51FA1DFD300A00A553DA /* ytcpsocket.swift in Sources */,
+				70AA51E31DFD2EAB00A553DA /* ViewController.swift in Sources */,
+				70AA51F11DFD2F9B00A553DA /* ServerManager.swift in Sources */,
+				70AA51F81DFD300A00A553DA /* ysocket.swift in Sources */,
+				70AA51E11DFD2EAB00A553DA /* AppDelegate.swift in Sources */,
+				70AA51F91DFD300A00A553DA /* ytcpsocket.c in Sources */,
+				70AA51FC1DFD300A00A553DA /* yudpsocket.swift in Sources */,
+				70AA51FB1DFD300A00A553DA /* yudpsocket.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		70AA51E61DFD2EAB00A553DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70AA51E71DFD2EAB00A553DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70AA51EA1DFD2EAB00A553DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70AA51EB1DFD2EAB00A553DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		70AA51ED1DFD2EAB00A553DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcastServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		70AA51EE1DFD2EAB00A553DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcastServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70AA51D81DFD2EAB00A553DA /* Build configuration list for PBXProject "LiveBroadcastServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70AA51EA1DFD2EAB00A553DA /* Debug */,
+				70AA51EB1DFD2EAB00A553DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70AA51EC1DFD2EAB00A553DA /* Build configuration list for PBXNativeTarget "LiveBroadcastServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70AA51ED1DFD2EAB00A553DA /* Debug */,
+				70AA51EE1DFD2EAB00A553DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70AA51D51DFD2EAB00A553DA /* Project object */;
+}

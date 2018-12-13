@@ -45,7 +45,6 @@
 		149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907021C0F76200852311 /* EmoticonViewCell.swift */; };
 		149C907321C0F86300852311 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149C907221C0F86300852311 /* types.plist */; };
 		149C907521C0F8D900852311 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907421C0F8D900852311 /* HomeType.swift */; };
-		149C907E21C0F9A800852311 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C907D21C0F9A800852311 /* BaseModel.swift */; };
 		149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908521C0FD1B00852311 /* NetworkTools.swift */; };
 		149C908821C0FD1B00852311 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908621C0FD1B00852311 /* KingfisherExtension.swift */; };
 		149C908A21C0FD4500852311 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C908921C0FD4500852311 /* AnchorModel.swift */; };
@@ -59,6 +58,13 @@
 		149C909B21C1091300852311 /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C909921C1091300852311 /* GiftModel.swift */; };
 		149C909C21C1091300852311 /* GiftPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C909A21C1091300852311 /* GiftPackage.swift */; };
 		149C909E21C1096B00852311 /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C909D21C1096B00852311 /* GiftViewModel.swift */; };
+		149C90CE21C207A700852311 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90CD21C207A600852311 /* BaseModel.swift */; };
+		149C90DC21C2082400852311 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90DB21C2082400852311 /* Socket.swift */; };
+		149C90E321C20D2600852311 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 149C90DE21C20D2600852311 /* yudpsocket.c */; };
+		149C90E421C20D2600852311 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90DF21C20D2600852311 /* yudpsocket.swift */; };
+		149C90E521C20D2600852311 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E021C20D2600852311 /* ytcpsocket.c */; };
+		149C90E621C20D2600852311 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E121C20D2600852311 /* ysocket.swift */; };
+		149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E221C20D2600852311 /* ytcpsocket.swift */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +109,6 @@
 		149C907021C0F76200852311 /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
 		149C907221C0F86300852311 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		149C907421C0F8D900852311 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
-		149C907D21C0F9A800852311 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		149C908521C0FD1B00852311 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		149C908621C0FD1B00852311 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		149C908921C0FD4500852311 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -117,6 +122,13 @@
 		149C909921C1091300852311 /* GiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
 		149C909A21C1091300852311 /* GiftPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftPackage.swift; sourceTree = "<group>"; };
 		149C909D21C1096B00852311 /* GiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
+		149C90CD21C207A600852311 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		149C90DB21C2082400852311 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		149C90DE21C20D2600852311 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		149C90DF21C20D2600852311 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		149C90E021C20D2600852311 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		149C90E121C20D2600852311 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		149C90E221C20D2600852311 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 		1433FB3621BA6F5000D24067 /* LiveBroadcast */ = {
 			isa = PBXGroup;
 			children = (
+				149C90DA21C207F400852311 /* Socket */,
 				149C906121C0F46400852311 /* Resource */,
 				1433FB4921BA6FFB00D24067 /* Classes */,
 				1433FB3721BA6F5000D24067 /* AppDelegate.swift */,
@@ -183,7 +196,7 @@
 				1433FB4B21BA6FFB00D24067 /* Discover */,
 				1433FB4C21BA6FFB00D24067 /* Profile */,
 				149C908421C0FD1B00852311 /* Tools */,
-				149C907621C0F92900852311 /* Base */,
+				149C90CC21C207A600852311 /* Base */,
 				1433FB4D21BA6FFB00D24067 /* Main */,
 			);
 			path = Classes;
@@ -332,15 +345,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		149C907621C0F92900852311 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				149C907D21C0F9A800852311 /* BaseModel.swift */,
-			);
-			name = Base;
-			path = "../../../../../../../../Downloads/代码/02-XMGTV(表情布局)/XMGTV/Classes/Base";
-			sourceTree = "<group>";
-		};
 		149C908421C0FD1B00852311 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +352,35 @@
 				149C908621C0FD1B00852311 /* KingfisherExtension.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		149C90CC21C207A600852311 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				149C90CD21C207A600852311 /* BaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		149C90DA21C207F400852311 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				149C90DD21C20D2600852311 /* ysocket */,
+				149C90DB21C2082400852311 /* Socket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		149C90DD21C20D2600852311 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				149C90DE21C20D2600852311 /* yudpsocket.c */,
+				149C90DF21C20D2600852311 /* yudpsocket.swift */,
+				149C90E021C20D2600852311 /* ytcpsocket.c */,
+				149C90E121C20D2600852311 /* ysocket.swift */,
+				149C90E221C20D2600852311 /* ytcpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 		2635368D2F4AA3E72CA48886 /* Frameworks */ = {
@@ -491,24 +524,29 @@
 				149C909B21C1091300852311 /* GiftModel.swift in Sources */,
 				149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
+				149C90DC21C2082400852311 /* Socket.swift in Sources */,
 				1467614021BFA662008BBA2A /* NibLoadable.swift in Sources */,
 				149C909721C108F800852311 /* GiftViewCell.swift in Sources */,
+				149C90E621C20D2600852311 /* ysocket.swift in Sources */,
 				1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
+				149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
 				149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */,
 				142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */,
+				149C90E521C20D2600852311 /* ytcpsocket.c in Sources */,
 				1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */,
 				149C906021C0F2A000852311 /* Const.swift in Sources */,
 				149C907521C0F8D900852311 /* HomeType.swift in Sources */,
 				149C909521C108F800852311 /* GiftListView.swift in Sources */,
 				149C908C21C0FD8300852311 /* HomeViewModel.swift in Sources */,
+				149C90CE21C207A700852311 /* BaseModel.swift in Sources */,
 				1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */,
 				149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */,
+				149C90E321C20D2600852311 /* yudpsocket.c in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
 				149C908A21C0FD4500852311 /* AnchorModel.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
-				149C907E21C0F9A800852311 /* BaseModel.swift in Sources */,
 				149C906A21C0F51200852311 /* Emoticon.swift in Sources */,
 				149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */,
 				149C905D21C0F01B00852311 /* EmoticonView.swift in Sources */,
@@ -519,6 +557,7 @@
 				145FCB3021BE110F005FEB77 /* PageView.swift in Sources */,
 				149C909E21C1096B00852311 /* GiftViewModel.swift in Sources */,
 				149C906B21C0F51200852311 /* EmoticonPackage.swift in Sources */,
+				149C90E421C20D2600852311 /* yudpsocket.swift in Sources */,
 				149C909C21C1091300852311 /* GiftPackage.swift in Sources */,
 				145FCB3321BE116C005FEB77 /* TitleView.swift in Sources */,
 			);
@@ -669,6 +708,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LiveBroadcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,6 +728,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LiveBroadcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

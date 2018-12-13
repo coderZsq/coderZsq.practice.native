@@ -51,7 +51,7 @@ extension GiftListView {
         
         var pageViewFrame = giftView.bounds
         pageViewFrame.size.width = kScreenW
-        pageCollectionView = PageCollectionView(frame: pageViewFrame, titles: ["热门", "高级", "豪华"], isTitleInTop: true, style: style, layout : layout)
+        pageCollectionView = PageCollectionView(frame: pageViewFrame, titles: ["热门", "高级", "专属"], isTitleInTop: true, style: style, layout : layout)
         giftView.addSubview(pageCollectionView)
         
         pageCollectionView.dataSource = self
