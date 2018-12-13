@@ -60,9 +60,9 @@ extension AnchorViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kContentCellID, for: indexPath) as! HomeViewCell
         cell.anchorModel = homeVM.anchorModels[indexPath.item]
-//        if indexPath.item == homeVM.anchorModels.count - 1 {
-//            loadData(index: homeVM.anchorModels.count)
-//        }
+        if indexPath.item == homeVM.anchorModels.count - 1 {
+            loadData(index: homeVM.anchorModels.count)
+        }
         return cell
     }
 }

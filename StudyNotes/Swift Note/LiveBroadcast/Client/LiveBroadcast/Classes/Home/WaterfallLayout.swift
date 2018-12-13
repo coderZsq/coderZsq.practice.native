@@ -28,7 +28,7 @@ extension WaterfallLayout {
         super.prepare()
         let itemCount = collectionView!.numberOfItems(inSection: 0)
         let cellW: CGFloat = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - CGFloat(cols - 1) * minimumInteritemSpacing) / CGFloat(cols)
-        for i in 0..<itemCount {
+        for i in cellAttrs.count..<itemCount {
             let indexPath = IndexPath(item: i, section: 0)
             let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             guard let cellH: CGFloat = dataSource?.waterfall(self, item: i) else {
@@ -37,7 +37,7 @@ extension WaterfallLayout {
             let minH = totalHeights.min()!
             let minIndex = totalHeights.index(of: minH)!
             let cellX: CGFloat = sectionInset.left + (minimumInteritemSpacing + cellW) * CGFloat(minIndex)
-            let cellY: CGFloat = minH + minimumLineSpacing
+            let cellY: CGFloat = minH
             attr.frame = CGRect(x: cellX, y: cellY, width: cellW, height: cellH)
             cellAttrs.append(attr)
             totalHeights[minIndex] = minH + minimumLineSpacing + cellH
@@ -57,7 +57,7 @@ extension WaterfallLayout {
 extension WaterfallLayout {
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 0, height: totalHeights.max()! + sectionInset.bottom)
+        return CGSize(width: 0, height: totalHeights.max()! + sectionInset.bottom - minimumLineSpacing)
     }
     
 }
