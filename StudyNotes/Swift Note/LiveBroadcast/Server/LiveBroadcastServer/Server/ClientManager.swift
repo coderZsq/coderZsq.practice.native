@@ -43,18 +43,27 @@ extension ClientManager {
                     return
                 }
                 let data = Data(bytes: msg, count: Int(length))
-//                switch type {
-//                case 0, 1:
-//                    let user = try! UserInfo.parseFrom(data: data)
-//                    print(user.name)
-//                    print(user.level)
-//                default:
-//                    print("未知类型")
-//                }
+                switch type {
+                case 0, 1:
+                    let user = try! UserInfo.parseFrom(data: data)
+                    print(user.name)
+                    print(user.level)
+                case 2:
+                    let textMsg = try! TextMessage.parseFrom(data: data)
+                    print(textMsg.text)
+                case 3:
+                    let giftMsg = try! GiftMessage.parseFrom(data: data)
+                    print(giftMsg.giftname)
+                    print(giftMsg.gitUrl)
+                    print(giftMsg.giftCount)
+                default:
+                    print("未知类型")
+                }
                 let totalData = headData + typeData + data
                 delegate?.sendMsgToClient(totalData)
             } else {
                 isClientConnected = false
+                tcpClient.close()
                 print("客户端断开连接")
             }
         }

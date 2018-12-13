@@ -18,19 +18,17 @@ class RankViewController: UIViewController {
             socket.startReadMessage()
         }
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let userInfo = UserInfo.Builder()
-        userInfo.name = "Castiel"
-        userInfo.level = 20
-        let msgData = (try! userInfo.build()).data()
-        var length = msgData.count
-        let headerData = Data(bytes: &length, count: 4)
-        var type = 0
-        let typeData = Data(bytes: &type, count: 2)
-        let totalData = headerData + typeData + msgData
-        socket.send(totalData)
-    }
     
+    @IBAction func d(_ sender: Any) {
+        socket.sendGiftMsg(giftName: "火箭", giftURL: "1111", giftCount: 123)
+    }
+    @IBAction func c(_ sender: Any) {
+        socket.sendTextMsg(message: "这个文本信息")
+    }
+    @IBAction func b(_ sender: Any) {
+        socket.sendLeaveRoom()
+    }
+    @IBAction func a(_ sender: Any) {
+        socket.sendJoinRoom()
+    }
 }

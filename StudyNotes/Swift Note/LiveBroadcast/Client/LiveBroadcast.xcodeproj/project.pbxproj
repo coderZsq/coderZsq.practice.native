@@ -187,8 +187,6 @@
 				1433FB3E21BA6F5100D24067 /* Assets.xcassets */,
 				1433FB4021BA6F5100D24067 /* LaunchScreen.storyboard */,
 				1433FB4321BA6F5100D24067 /* Info.plist */,
-				140584EE21C23B3C000808BA /* Immessage.proto.swift */,
-				1440102321C234F400235D67 /* IMMessage.proto */,
 			);
 			path = LiveBroadcast;
 			sourceTree = "<group>";
@@ -373,6 +371,8 @@
 			children = (
 				149C90DD21C20D2600852311 /* ysocket */,
 				149C90DB21C2082400852311 /* Socket.swift */,
+				140584EE21C23B3C000808BA /* Immessage.proto.swift */,
+				1440102321C234F400235D67 /* IMMessage.proto */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
