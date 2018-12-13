@@ -25,4 +25,35 @@ extension Socket {
         tcpClient.send(data: message)
     }
     
+    func startReadMessage() {
+        DispatchQueue.global().async {
+            while true {
+                guard let lengthMsg = self.tcpClient.read(4) else {
+                    return
+                }
+                let headData = Data(bytes: lengthMsg, count: 4)
+                var length: UInt8 = 0
+                headData.copyBytes(to: &length, count: 4)
+                guard let typeMsg = self.tcpClient.read(2) else {
+                    return
+                }
+                let typeData = Data(bytes: typeMsg, count: 2)
+                var type: UInt8 = 0
+                typeData.copyBytes(to: &type, count: 2)
+                guard let msg = self.tcpClient.read(Int(length)) else {
+                    return
+                }
+                let data = Data(bytes: msg, count: Int(length))
+                switch type {
+                case 0, 1:
+                    let user = try! UserInfo.parseFrom(data: data)
+                    print(user.name)
+                    print(user.level)
+                default:
+                    print("未知类型")
+                }
+            }
+        }
+    }
+    
 }

@@ -8,9 +8,14 @@
 
 import Cocoa
 
+protocol ClientManagerDelegate: class {
+    func sendMsgToClient(_ data: Data)
+}
+
 class ClientManager {
     
     var tcpClient: TCPClient
+    weak var delegate: ClientManagerDelegate?
     fileprivate var isClientConnected = false
     
     init(tcpClient: TCPClient) {
@@ -25,9 +30,9 @@ extension ClientManager {
         isClientConnected = true
         while isClientConnected {
             if let lengthMsg = tcpClient.read(4) {
-                let msgData = Data(bytes: lengthMsg, count: 4)
+                let headData = Data(bytes: lengthMsg, count: 4)
                 var length: UInt8 = 0
-                msgData.copyBytes(to: &length, count: 4)
+                headData.copyBytes(to: &length, count: 4)
                 guard let typeMsg = tcpClient.read(2) else {
                     return
                 }
@@ -38,7 +43,16 @@ extension ClientManager {
                     return
                 }
                 let data = Data(bytes: msg, count: Int(length))
-                let string = String(data: data, encoding: .utf8)
+//                switch type {
+//                case 0, 1:
+//                    let user = try! UserInfo.parseFrom(data: data)
+//                    print(user.name)
+//                    print(user.level)
+//                default:
+//                    print("未知类型")
+//                }
+                let totalData = headData + typeData + data
+                delegate?.sendMsgToClient(totalData)
             } else {
                 isClientConnected = false
                 print("客户端断开连接")

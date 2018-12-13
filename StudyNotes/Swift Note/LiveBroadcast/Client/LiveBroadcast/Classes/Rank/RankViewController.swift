@@ -15,7 +15,7 @@ class RankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if socket.connectServer() {
-            print("链接上服务器")
+            socket.startReadMessage()
         }
     }
 
@@ -27,7 +27,7 @@ class RankViewController: UIViewController {
         let msgData = (try! userInfo.build()).data()
         var length = msgData.count
         let headerData = Data(bytes: &length, count: 4)
-        var type = 2
+        var type = 0
         let typeData = Data(bytes: &type, count: 2)
         let totalData = headerData + typeData + msgData
         socket.send(totalData)

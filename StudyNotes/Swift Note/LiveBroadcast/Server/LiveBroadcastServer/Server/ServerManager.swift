@@ -39,8 +39,19 @@ extension ServerManager {
     
     fileprivate func handlerClient(_ client: TCPClient) {
         let manager = ClientManager(tcpClient: client)
-        clientManagers.append(manager)
+        manager.delegate = self
         manager.startReadMessage()
+        clientManagers.append(manager)
     }
     
+}
+
+extension ServerManager: ClientManagerDelegate {
+    
+    func sendMsgToClient(_ data: Data) {
+        for manager in clientManagers {
+            manager.tcpClient.send(data: data)
+        }
+    }
+
 }
