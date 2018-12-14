@@ -17,7 +17,7 @@ class ClientManager: NSObject {
     
     var tcpClient: TCPClient
     weak var delegate: ClientManagerDelegate?
-    fileprivate var isReceiveHeartBeat = false
+    fileprivate var heartTimeCount = 0
     fileprivate var isClientConnected = false
     
     init(tcpClient: TCPClient) {
@@ -30,8 +30,9 @@ extension ClientManager {
     
     func startReadMessage() {
         isClientConnected = true
-        let timer = Timer(fireAt: Date(timeIntervalSinceNow: 10), interval: 10, target: self, selector: #selector(checkHeartbeat), userInfo: nil, repeats: true)
+        let timer = Timer(fireAt: Date(), interval: 1, target: self, selector: #selector(checkHeartbeat), userInfo: nil, repeats: true)
         RunLoop.current.add(timer, forMode: .default)
+        timer.fire()
         while isClientConnected {
             if let lengthMsg = tcpClient.read(4) {
                 let headData = Data(bytes: lengthMsg, count: 4)
@@ -43,17 +44,19 @@ extension ClientManager {
                 let typeData = Data(bytes: typeMsg, count: 2)
                 var type: UInt8 = 0
                 typeData.copyBytes(to: &type, count: 2)
-                if type == 1 {
-                    tcpClient.close()
-                    delegate?.removeClient(self)
-                } else if type == 100 {
-                    isReceiveHeartBeat = true
-                    continue
-                }
                 guard let msg = tcpClient.read(Int(length)) else {
                     return
                 }
                 let data = Data(bytes: msg, count: Int(length))
+                if type == 1 {
+                    tcpClient.close()
+                    delegate?.removeClient(self)
+                } else if type == 100 {
+                    heartTimeCount = 0
+                    let msg = String(data: data, encoding: .utf8)!
+                    print(msg)
+                    continue
+                }
                 switch type {
                 case 0, 1:
                     let user = try! UserInfo.parseFrom(data: data)
@@ -73,21 +76,23 @@ extension ClientManager {
                 let totalData = headData + typeData + data
                 delegate?.sendMsgToClient(totalData)
             } else {
-                delegate?.removeClient(self)
-                isClientConnected = false
-                tcpClient.close()
-                print("客户端断开连接")
+                self.removeClient()
             }
         }
     }
     
     @objc fileprivate func checkHeartbeat() {
-        if !isReceiveHeartBeat {
-            tcpClient.close()
-            delegate?.removeClient(self)
-        } else {
-            isReceiveHeartBeat = false
+        heartTimeCount += 1
+        if heartTimeCount >= 10 {
+            removeClient()
         }
+    }
+    
+    private func removeClient() {
+        delegate?.removeClient(self)
+        isClientConnected = false
+        tcpClient.close()
+        print("客户端断开连接")
     }
     
 }

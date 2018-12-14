@@ -11,8 +11,8 @@ import UIKit
 protocol SocketDelegate: class {
     func socket(_ socket: Socket, joinRoom user: UserInfo)
     func socket(_ socket: Socket, leaveRoom user: UserInfo)
-    func socket(_ socket: Socket, textMsg user: TextMessage)
-    func socket(_ socket: Socket, giftMsg user: GiftMessage)
+    func socket(_ socket: Socket, textMsg: TextMessage)
+    func socket(_ socket: Socket, giftMsg: GiftMessage)
 }
 
 class Socket: NSObject {
@@ -108,6 +108,12 @@ extension Socket {
         giftMsg.giftCount = String(giftCount)
         let giftData = (try! giftMsg.build()).data()
         sendMessage(data: giftData, type: 3)
+    }
+    
+    func sendHeartBeat() {
+        let heartString = "❤️"
+        let heartData = heartString.data(using: .utf8)!
+        sendMessage(data: heartData, type: 100)
     }
     
     func sendMessage(data: Data, type: Int) {

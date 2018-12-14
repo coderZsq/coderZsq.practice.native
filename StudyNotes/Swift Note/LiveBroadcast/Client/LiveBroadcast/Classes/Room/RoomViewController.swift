@@ -17,11 +17,24 @@ class RoomViewController: UIViewController {
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate lazy var chatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView = GiftListView.loadFromNib()
+    fileprivate lazy var socket = Socket(addr: "0.0.0.0", port: 6666)
+    fileprivate var heartBeatTimer: Timer?
+    
+    deinit {
+        heartBeatTimer?.invalidate()
+        heartBeatTimer = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        if socket.connectServer() {
+            addHeartBeatTimer()
+            socket.sendJoinRoom()
+            socket.startReadMessage()
+            socket.delegate = self
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +45,11 @@ class RoomViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        socket.sendLeaveRoom()
     }
 }
 
@@ -60,6 +78,11 @@ extension RoomViewController {
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         giftListView.delegate = self
         view.addSubview(giftListView)
+    }
+    
+    fileprivate func addHeartBeatTimer() {
+        heartBeatTimer = Timer(fireAt: Date(), interval: 9, target: self, selector: #selector(sendHeartBeat), userInfo: nil, repeats: true)
+        RunLoop.main.add(heartBeatTimer!, forMode: .common)
     }
 }
 
@@ -116,7 +139,7 @@ extension RoomViewController {
 extension RoomViewController: ChatToolsViewDelegate {
     
     func chatToolsView(toolView: ChatToolsView, message: String) {
-        print(message)
+        socket.sendTextMsg(message: message)
     }
 
 }
@@ -124,7 +147,35 @@ extension RoomViewController: ChatToolsViewDelegate {
 extension RoomViewController: GiftListViewDelegate {
     
     func giftListView(giftView: GiftListView, giftModel: GiftModel) {
-        print(giftModel.subject)
+        socket.sendGiftMsg(giftName: giftModel.subject, giftURL: giftModel.img2, giftCount: 1)
+    }
+    
+}
+
+extension RoomViewController {
+    
+    @objc fileprivate func sendHeartBeat() {
+        socket.sendHeartBeat()
+    }
+    
+}
+
+extension RoomViewController: SocketDelegate {
+    
+    func socket(_ socket: Socket, joinRoom user: UserInfo) {
+        print("\(user.name!) 进入房间")
+    }
+    
+    func socket(_ socket: Socket, leaveRoom user: UserInfo) {
+        print("\(user.name!) 离开房间")
+    }
+    
+    func socket(_ socket: Socket, textMsg: TextMessage) {
+        print("\(textMsg.user.name!): \(textMsg.text!)")
+    }
+    
+    func socket(_ socket: Socket, giftMsg: GiftMessage) {
+        print("\(giftMsg.user.name!) 赠送 \(giftMsg.giftname!) \(giftMsg.gitUrl!)")
     }
     
 }

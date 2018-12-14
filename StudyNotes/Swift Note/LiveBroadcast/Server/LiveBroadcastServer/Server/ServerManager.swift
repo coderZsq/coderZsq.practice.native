@@ -39,9 +39,9 @@ extension ServerManager {
     
     fileprivate func handlerClient(_ client: TCPClient) {
         let manager = ClientManager(tcpClient: client)
+        clientManagers.append(manager)
         manager.delegate = self
         manager.startReadMessage()
-        clientManagers.append(manager)
     }
     
 }
