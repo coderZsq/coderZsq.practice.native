@@ -10,13 +10,14 @@ import UIKit
 
 private let kChatToolsViewHeight: CGFloat = 44
 private let kGiftListViewHeight: CGFloat = 320
-private let kEmoticonCell = "kEmoticonCell"
+private let kChatContentViewHeight: CGFloat = 200
 
 class RoomViewController: UIViewController {
     
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate lazy var chatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView = GiftListView.loadFromNib()
+    fileprivate lazy var chatContentView = ChatContentView.loadFromNib()
     fileprivate lazy var socket = Socket(addr: "0.0.0.0", port: 6666)
     fileprivate var heartBeatTimer: Timer?
     
@@ -70,6 +71,9 @@ extension RoomViewController {
     }
     
     fileprivate func setupBottomView() {
+        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - kChatToolsViewHeight - kChatContentViewHeight, width: view.bounds.width, height: kChatContentViewHeight)
+        chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(chatContentView)
         chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
         chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         chatToolsView.delegate = self
@@ -131,6 +135,8 @@ extension RoomViewController {
             UIView.setAnimationCurve(UIView.AnimationCurve(rawValue: 7)!)
             let endY = inputViewY == (self.view.bounds.height - kChatToolsViewHeight) ? self.view.bounds.height : inputViewY
             self.chatToolsView.frame.origin.y = endY
+            let contentEndY = inputViewY == (kScreenH - kChatToolsViewHeight) ? (kScreenH - kChatContentViewHeight - kChatToolsViewHeight) : endY - kChatContentViewHeight
+            self.chatContentView.frame.origin.y = contentEndY
         }
     }
     
@@ -163,19 +169,19 @@ extension RoomViewController {
 extension RoomViewController: SocketDelegate {
     
     func socket(_ socket: Socket, joinRoom user: UserInfo) {
-        print("\(user.name!) 进入房间")
+        chatContentView.insertMessage(AttrStringGenerator.generateJoinLeaveRoom(user.name, isJoin: true))
     }
     
     func socket(_ socket: Socket, leaveRoom user: UserInfo) {
-        print("\(user.name!) 离开房间")
+        chatContentView.insertMessage(AttrStringGenerator.generateJoinLeaveRoom(user.name, isJoin: false))
     }
     
     func socket(_ socket: Socket, textMsg: TextMessage) {
-        print("\(textMsg.user.name!): \(textMsg.text!)")
+        chatContentView.insertMessage(AttrStringGenerator.generateTextMessage(textMsg.user.name, message: textMsg.text))
     }
     
     func socket(_ socket: Socket, giftMsg: GiftMessage) {
-        print("\(giftMsg.user.name!) 赠送 \(giftMsg.giftname!) \(giftMsg.gitUrl!)")
+        chatContentView.insertMessage(AttrStringGenerator.generateGiftMessage(giftMsg.user.name, giftname: giftMsg.giftname, giftURL: giftMsg.gitUrl))
     }
     
 }

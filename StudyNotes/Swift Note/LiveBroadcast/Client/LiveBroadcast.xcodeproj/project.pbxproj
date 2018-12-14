@@ -67,6 +67,11 @@
 		149C90E521C20D2600852311 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E021C20D2600852311 /* ytcpsocket.c */; };
 		149C90E621C20D2600852311 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E121C20D2600852311 /* ysocket.swift */; };
 		149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E221C20D2600852311 /* ytcpsocket.swift */; };
+		14FAF48E21C380D1000DB5D1 /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF48D21C380D1000DB5D1 /* ChatContentView.swift */; };
+		14FAF49021C380E9000DB5D1 /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */; };
+		14FAF49321C38506000DB5D1 /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49121C38506000DB5D1 /* ChatContentCell.swift */; };
+		14FAF49421C38506000DB5D1 /* ChatContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF49221C38506000DB5D1 /* ChatContentCell.xib */; };
+		14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49521C39564000DB5D1 /* AttrStringGenerator.swift */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +138,11 @@
 		149C90E021C20D2600852311 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
 		149C90E121C20D2600852311 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
 		149C90E221C20D2600852311 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		14FAF48D21C380D1000DB5D1 /* ChatContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
+		14FAF49121C38506000DB5D1 /* ChatContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
+		14FAF49221C38506000DB5D1 /* ChatContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatContentCell.xib; sourceTree = "<group>"; };
+		14FAF49521C39564000DB5D1 /* AttrStringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttrStringGenerator.swift; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +337,10 @@
 				149C909921C1091300852311 /* GiftModel.swift */,
 				149C909A21C1091300852311 /* GiftPackage.swift */,
 				149C909D21C1096B00852311 /* GiftViewModel.swift */,
+				14FAF48D21C380D1000DB5D1 /* ChatContentView.swift */,
+				14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */,
+				14FAF49121C38506000DB5D1 /* ChatContentCell.swift */,
+				14FAF49221C38506000DB5D1 /* ChatContentCell.xib */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -354,6 +368,7 @@
 			children = (
 				149C908521C0FD1B00852311 /* NetworkTools.swift */,
 				149C908621C0FD1B00852311 /* KingfisherExtension.swift */,
+				14FAF49521C39564000DB5D1 /* AttrStringGenerator.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -459,6 +474,7 @@
 			files = (
 				149C906621C0F46500852311 /* QHSohuGifSort.plist in Resources */,
 				1433FB6221BA739100D24067 /* ProfileViewController.storyboard in Resources */,
+				14FAF49021C380E9000DB5D1 /* ChatContentView.xib in Resources */,
 				149C906F21C0F75300852311 /* EmoticonViewCell.xib in Resources */,
 				1433FB4221BA6F5100D24067 /* LaunchScreen.storyboard in Resources */,
 				1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */,
@@ -473,6 +489,7 @@
 				1433FB6621BA78A800D24067 /* RankViewController.storyboard in Resources */,
 				1433FB3D21BA6F5000D24067 /* Main.storyboard in Resources */,
 				1433FB5D21BA72BB00D24067 /* DiscoverViewController.storyboard in Resources */,
+				14FAF49421C38506000DB5D1 /* ChatContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +545,7 @@
 				149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */,
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
+				14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */,
 				149C909B21C1091300852311 /* GiftModel.swift in Sources */,
 				149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
@@ -537,6 +555,7 @@
 				149C909721C108F800852311 /* GiftViewCell.swift in Sources */,
 				149C90E621C20D2600852311 /* ysocket.swift in Sources */,
 				1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */,
+				14FAF48E21C380D1000DB5D1 /* ChatContentView.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
 				149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
@@ -568,6 +587,7 @@
 				149C90E421C20D2600852311 /* yudpsocket.swift in Sources */,
 				149C909C21C1091300852311 /* GiftPackage.swift in Sources */,
 				145FCB3321BE116C005FEB77 /* TitleView.swift in Sources */,
+				14FAF49321C38506000DB5D1 /* ChatContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
