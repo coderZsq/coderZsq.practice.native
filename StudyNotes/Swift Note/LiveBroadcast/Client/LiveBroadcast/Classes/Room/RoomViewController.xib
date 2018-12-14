@@ -145,6 +145,32 @@
                     </constraints>
                     <state key="normal" image="zhibo_btn_people"/>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ard-mt-vzL">
+                    <rect key="frame" x="108.5" y="468.5" width="158" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HA-2A-4Et">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="a:" destination="-1" eventType="touchUpInside" id="k81-Rc-LJG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjq-wi-b8t">
+                            <rect key="frame" x="56" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="b:" destination="-1" eventType="touchUpInside" id="veL-cS-s6G"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqt-Vz-qk1">
+                            <rect key="frame" x="112" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="c:" destination="-1" eventType="touchUpInside" id="HkO-NA-Kkq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -152,6 +178,8 @@
                 <constraint firstAttribute="trailing" secondItem="mL0-zd-7mL" secondAttribute="trailing" id="4Ox-Cj-bX8"/>
                 <constraint firstItem="mL0-zd-7mL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5mE-Dh-3cm"/>
                 <constraint firstAttribute="bottom" secondItem="4et-1r-XYL" secondAttribute="bottom" id="6xz-L3-3r0"/>
+                <constraint firstItem="ard-mt-vzL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="150" id="Bfv-u9-0rA"/>
+                <constraint firstItem="ard-mt-vzL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F2y-Zr-GjE"/>
                 <constraint firstItem="6Zp-qz-ytg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Lvm-Ax-YsS"/>
                 <constraint firstItem="YEp-zg-BIl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="NcF-7c-f81"/>
                 <constraint firstAttribute="bottom" secondItem="mL0-zd-7mL" secondAttribute="bottom" id="O4F-kC-daS"/>

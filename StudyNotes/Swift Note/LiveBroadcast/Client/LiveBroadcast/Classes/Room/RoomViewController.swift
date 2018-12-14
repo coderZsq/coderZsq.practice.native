@@ -14,6 +14,10 @@ private let kChatContentViewHeight: CGFloat = 200
 
 class RoomViewController: UIViewController {
     
+    
+    @IBOutlet weak var testLabel: GiftDigitLabel!
+    fileprivate lazy var giftContainerView = GiftContainerView()
+    
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate lazy var chatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView = GiftListView.loadFromNib()
@@ -25,7 +29,7 @@ class RoomViewController: UIViewController {
         heartBeatTimer?.invalidate()
         heartBeatTimer = nil
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -182,6 +186,27 @@ extension RoomViewController: SocketDelegate {
     
     func socket(_ socket: Socket, giftMsg: GiftMessage) {
         chatContentView.insertMessage(AttrStringGenerator.generateGiftMessage(giftMsg.user.name, giftname: giftMsg.giftname, giftURL: giftMsg.gitUrl))
+    }
+    
+}
+
+extension RoomViewController {
+    
+    @IBAction func a(_ sender: Any) {
+        let gift1 = GiftChannelModel(senderName: "SSS", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        giftContainerView.showGiftChannelView(gift1)
+    }
+    
+    
+    @IBAction func b(_ sender: Any) {
+        let gift1 = GiftChannelModel(senderName: "SSS1", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        giftContainerView.showGiftChannelView(gift1)
+    }
+    
+    
+    @IBAction func c(_ sender: Any) {
+        let gift1 = GiftChannelModel(senderName: "SSS2", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        giftContainerView.showGiftChannelView(gift1)
     }
     
 }

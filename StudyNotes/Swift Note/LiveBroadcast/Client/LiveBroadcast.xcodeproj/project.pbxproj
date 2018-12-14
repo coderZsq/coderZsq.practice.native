@@ -72,6 +72,11 @@
 		14FAF49321C38506000DB5D1 /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49121C38506000DB5D1 /* ChatContentCell.swift */; };
 		14FAF49421C38506000DB5D1 /* ChatContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF49221C38506000DB5D1 /* ChatContentCell.xib */; };
 		14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49521C39564000DB5D1 /* AttrStringGenerator.swift */; };
+		14FAF49821C39AA7000DB5D1 /* GiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49721C39AA7000DB5D1 /* GiftContainerView.swift */; };
+		14FAF49A21C39ABA000DB5D1 /* GiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49921C39ABA000DB5D1 /* GiftChannelView.swift */; };
+		14FAF49C21C39AF5000DB5D1 /* GiftDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49B21C39AF5000DB5D1 /* GiftDigitLabel.swift */; };
+		14FAF49E21C39F76000DB5D1 /* GiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF49D21C39F76000DB5D1 /* GiftChannelView.xib */; };
+		14FAF4A021C3A021000DB5D1 /* GiftChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49F21C3A021000DB5D1 /* GiftChannelModel.swift */; };
 		859FEBA0D997871121F02231 /* Pods_LiveBroadcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +148,11 @@
 		14FAF49121C38506000DB5D1 /* ChatContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
 		14FAF49221C38506000DB5D1 /* ChatContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatContentCell.xib; sourceTree = "<group>"; };
 		14FAF49521C39564000DB5D1 /* AttrStringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttrStringGenerator.swift; sourceTree = "<group>"; };
+		14FAF49721C39AA7000DB5D1 /* GiftContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftContainerView.swift; sourceTree = "<group>"; };
+		14FAF49921C39ABA000DB5D1 /* GiftChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftChannelView.swift; sourceTree = "<group>"; };
+		14FAF49B21C39AF5000DB5D1 /* GiftDigitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDigitLabel.swift; sourceTree = "<group>"; };
+		14FAF49D21C39F76000DB5D1 /* GiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftChannelView.xib; sourceTree = "<group>"; };
+		14FAF49F21C3A021000DB5D1 /* GiftChannelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftChannelModel.swift; sourceTree = "<group>"; };
 		28B611D7C1DB6308CCC8696E /* Pods_LiveBroadcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveBroadcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74F4DF8739E75046B664326 /* Pods-LiveBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		F95A37E1651EBEBD6734673D /* Pods-LiveBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast.release.xcconfig"; sourceTree = "<group>"; };
@@ -341,6 +351,11 @@
 				14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */,
 				14FAF49121C38506000DB5D1 /* ChatContentCell.swift */,
 				14FAF49221C38506000DB5D1 /* ChatContentCell.xib */,
+				14FAF49721C39AA7000DB5D1 /* GiftContainerView.swift */,
+				14FAF49F21C3A021000DB5D1 /* GiftChannelModel.swift */,
+				14FAF49921C39ABA000DB5D1 /* GiftChannelView.swift */,
+				14FAF49D21C39F76000DB5D1 /* GiftChannelView.xib */,
+				14FAF49B21C39AF5000DB5D1 /* GiftDigitLabel.swift */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -481,6 +496,7 @@
 				1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */,
 				149C909821C108F800852311 /* GiftViewCell.xib in Resources */,
 				149C909621C108F800852311 /* GiftListView.xib in Resources */,
+				14FAF49E21C39F76000DB5D1 /* GiftChannelView.xib in Resources */,
 				149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */,
 				1433FB3F21BA6F5100D24067 /* Assets.xcassets in Resources */,
 				149C906721C0F46500852311 /* QHNormalEmotionSort.plist in Resources */,
@@ -544,6 +560,7 @@
 				1440102421C234F400235D67 /* IMMessage.proto in Sources */,
 				149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */,
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
+				14FAF49A21C39ABA000DB5D1 /* GiftChannelView.swift in Sources */,
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
 				14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */,
 				149C909B21C1091300852311 /* GiftModel.swift in Sources */,
@@ -561,6 +578,7 @@
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
 				149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */,
 				142D692B21BE6A3F00669EAB /* WaterfallLayout.swift in Sources */,
+				14FAF4A021C3A021000DB5D1 /* GiftChannelModel.swift in Sources */,
 				149C90E521C20D2600852311 /* ytcpsocket.c in Sources */,
 				1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */,
 				149C906021C0F2A000852311 /* Const.swift in Sources */,
@@ -568,6 +586,7 @@
 				149C909521C108F800852311 /* GiftListView.swift in Sources */,
 				149C908C21C0FD8300852311 /* HomeViewModel.swift in Sources */,
 				149C90CE21C207A700852311 /* BaseModel.swift in Sources */,
+				14FAF49C21C39AF5000DB5D1 /* GiftDigitLabel.swift in Sources */,
 				1467613D21BF9D82008BBA2A /* Emitterable.swift in Sources */,
 				149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */,
 				149C90E321C20D2600852311 /* yudpsocket.c in Sources */,
@@ -583,6 +602,7 @@
 				145FCB2A21BE04F1005FEB77 /* MainViewController.swift in Sources */,
 				145FCB3021BE110F005FEB77 /* PageView.swift in Sources */,
 				149C909E21C1096B00852311 /* GiftViewModel.swift in Sources */,
+				14FAF49821C39AA7000DB5D1 /* GiftContainerView.swift in Sources */,
 				149C906B21C0F51200852311 /* EmoticonPackage.swift in Sources */,
 				149C90E421C20D2600852311 /* yudpsocket.swift in Sources */,
 				149C909C21C1091300852311 /* GiftPackage.swift in Sources */,
