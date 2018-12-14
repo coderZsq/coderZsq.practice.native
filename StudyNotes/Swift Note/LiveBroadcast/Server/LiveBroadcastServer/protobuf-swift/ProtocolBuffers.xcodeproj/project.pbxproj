@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"ProtocolBuffers::ProtocolBuffersPackageTests::ProductTarget" /* ProtocolBuffersPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_172 /* Build configuration list for PBXAggregateTarget "ProtocolBuffersPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_175 /* PBXTargetDependency */,
+			);
+			name = ProtocolBuffersPackageTests;
+			productName = ProtocolBuffersPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_100 /* MapFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* MapFieldsTests.swift */; };
+		OBJ_101 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* MessageTests.swift */; };
+		OBJ_102 /* Performance.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Performance.proto.swift */; };
+		OBJ_103 /* PluginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* PluginTest.swift */; };
+		OBJ_104 /* ProtocolBuffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ProtocolBuffersTests.swift */; };
+		OBJ_105 /* SizeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SizeTest.swift */; };
+		OBJ_106 /* SmallBlockInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* SmallBlockInputStream.swift */; };
+		OBJ_107 /* TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* TestUtilities.swift */; };
+		OBJ_108 /* UnknowFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* UnknowFieldsTests.swift */; };
+		OBJ_109 /* WireFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* WireFormatTests.swift */; };
+		OBJ_110 /* Bar.Foo.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Bar.Foo.proto.swift */; };
+		OBJ_111 /* Baz.Foo.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Baz.Foo.proto.swift */; };
+		OBJ_112 /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */; };
+		OBJ_113 /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */; };
+		OBJ_114 /* Proto2ArenaUnittest.UnittestArena.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Proto2ArenaUnittest.UnittestArena.proto.swift */; };
+		OBJ_115 /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */; };
+		OBJ_116 /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */; };
+		OBJ_117 /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */; };
+		OBJ_118 /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */; };
+		OBJ_119 /* ProtobufUnittest.Unittest.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ProtobufUnittest.Unittest.proto.swift */; };
+		OBJ_120 /* ProtobufUnittest.UnittestCustomOptions.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ProtobufUnittest.UnittestCustomOptions.proto.swift */; };
+		OBJ_121 /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */; };
+		OBJ_122 /* ProtobufUnittest.UnittestLite.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* ProtobufUnittest.UnittestLite.proto.swift */; };
+		OBJ_123 /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */; };
+		OBJ_124 /* ProtobufUnittest.UnittestMset.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* ProtobufUnittest.UnittestMset.proto.swift */; };
+		OBJ_125 /* ProtobufUnittest.UnittestOptimizeFor.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */; };
+		OBJ_126 /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */; };
+		OBJ_127 /* ProtobufUnittestImport.UnittestImport.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ProtobufUnittestImport.UnittestImport.proto.swift */; };
+		OBJ_128 /* ProtobufUnittestImport.UnittestImportLite.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* ProtobufUnittestImport.UnittestImportLite.proto.swift */; };
+		OBJ_129 /* ProtobufUnittestImport.UnittestImportPublic.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */; };
+		OBJ_130 /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */; };
+		OBJ_131 /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */; };
+		OBJ_132 /* SwiftProtobufUnittest.UnittestMaps.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* SwiftProtobufUnittest.UnittestMaps.proto.swift */; };
+		OBJ_133 /* ThreadingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* ThreadingTest.swift */; };
+		OBJ_134 /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */; };
+		OBJ_135 /* UnittestEmpty.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* UnittestEmpty.proto.swift */; };
+		OBJ_136 /* UnittestErrorType.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* UnittestErrorType.proto.swift */; };
+		OBJ_137 /* UnittestStruct.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* UnittestStruct.proto.swift */; };
+		OBJ_138 /* UnittestThreading.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* UnittestThreading.proto.swift */; };
+		OBJ_140 /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ProtocolBuffers::ProtocolBuffers::Product" /* ProtocolBuffers.framework */; };
+		OBJ_147 /* AbstractMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* AbstractMessage.swift */; };
+		OBJ_148 /* CodedInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CodedInputStream.swift */; };
+		OBJ_149 /* CodedOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CodedOutputStream.swift */; };
+		OBJ_150 /* ConcreateExtensionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ConcreateExtensionField.swift */; };
+		OBJ_151 /* ExtendableMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ExtendableMessage.swift */; };
+		OBJ_152 /* ExtensionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ExtensionRegistry.swift */; };
+		OBJ_153 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Field.swift */; };
+		OBJ_154 /* GeneratedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* GeneratedMessage.swift */; };
+		OBJ_155 /* Google.Protobuf.Any.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Google.Protobuf.Any.proto.swift */; };
+		OBJ_156 /* Google.Protobuf.Api.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Google.Protobuf.Api.proto.swift */; };
+		OBJ_157 /* Google.Protobuf.Descriptor.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Google.Protobuf.Descriptor.proto.swift */; };
+		OBJ_158 /* Google.Protobuf.Duration.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Google.Protobuf.Duration.proto.swift */; };
+		OBJ_159 /* Google.Protobuf.Empty.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Google.Protobuf.Empty.proto.swift */; };
+		OBJ_160 /* Google.Protobuf.FieldMask.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Google.Protobuf.FieldMask.proto.swift */; };
+		OBJ_161 /* Google.Protobuf.SourceContext.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Google.Protobuf.SourceContext.proto.swift */; };
+		OBJ_162 /* Google.Protobuf.Struct.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Google.Protobuf.Struct.proto.swift */; };
+		OBJ_163 /* Google.Protobuf.SwiftDescriptor.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Google.Protobuf.SwiftDescriptor.proto.swift */; };
+		OBJ_164 /* Google.Protobuf.Timestamp.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Google.Protobuf.Timestamp.proto.swift */; };
+		OBJ_165 /* Google.Protobuf.Type.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Google.Protobuf.Type.proto.swift */; };
+		OBJ_166 /* Google.Protobuf.Wrappers.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Google.Protobuf.Wrappers.proto.swift */; };
+		OBJ_167 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* RingBuffer.swift */; };
+		OBJ_168 /* UnknownFieldSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* UnknownFieldSet.swift */; };
+		OBJ_169 /* WireFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* WireFormat.swift */; };
+		OBJ_90 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_96 /* CodedInputStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* CodedInputStreamTests.swift */; };
+		OBJ_97 /* CodedOuputStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CodedOuputStreamTests.swift */; };
+		OBJ_98 /* ErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* ErrorHandlingTest.swift */; };
+		OBJ_99 /* GeneratedMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* GeneratedMessageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F130A3F1FAB2CFA00E29F61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBuffers";
+			remoteInfo = ProtocolBuffers;
+		};
+		3F130A401FAB2CFB00E29F61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBufferTests";
+			remoteInfo = ProtocolBufferTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		OBJ_10 /* CodedInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStream.swift; sourceTree = "<group>"; };
+		OBJ_11 /* CodedOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOutputStream.swift; sourceTree = "<group>"; };
+		OBJ_12 /* ConcreateExtensionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreateExtensionField.swift; sourceTree = "<group>"; };
+		OBJ_13 /* ExtendableMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendableMessage.swift; sourceTree = "<group>"; };
+		OBJ_14 /* ExtensionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionRegistry.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		OBJ_16 /* GeneratedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessage.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Google.Protobuf.Any.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Any.proto.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Google.Protobuf.Api.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Api.proto.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Google.Protobuf.Descriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Descriptor.proto.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Google.Protobuf.Duration.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Duration.proto.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Google.Protobuf.Empty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Empty.proto.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Google.Protobuf.FieldMask.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.FieldMask.proto.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Google.Protobuf.SourceContext.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SourceContext.proto.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Google.Protobuf.Struct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Struct.proto.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Google.Protobuf.SwiftDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SwiftDescriptor.proto.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Google.Protobuf.Timestamp.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Timestamp.proto.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Google.Protobuf.Type.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Type.proto.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Google.Protobuf.Wrappers.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Wrappers.proto.swift; sourceTree = "<group>"; };
+		OBJ_29 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		OBJ_30 /* UnknownFieldSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownFieldSet.swift; sourceTree = "<group>"; };
+		OBJ_31 /* WireFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormat.swift; sourceTree = "<group>"; };
+		OBJ_34 /* CodedInputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStreamTests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* CodedOuputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOuputStreamTests.swift; sourceTree = "<group>"; };
+		OBJ_36 /* ErrorHandlingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTest.swift; sourceTree = "<group>"; };
+		OBJ_37 /* GeneratedMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessageTests.swift; sourceTree = "<group>"; };
+		OBJ_38 /* MapFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFieldsTests.swift; sourceTree = "<group>"; };
+		OBJ_39 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Performance.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.proto.swift; sourceTree = "<group>"; };
+		OBJ_41 /* PluginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTest.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ProtocolBuffersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuffersTests.swift; sourceTree = "<group>"; };
+		OBJ_43 /* SizeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeTest.swift; sourceTree = "<group>"; };
+		OBJ_44 /* SmallBlockInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBlockInputStream.swift; sourceTree = "<group>"; };
+		OBJ_45 /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		OBJ_46 /* UnknowFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknowFieldsTests.swift; sourceTree = "<group>"; };
+		OBJ_47 /* WireFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormatTests.swift; sourceTree = "<group>"; };
+		OBJ_49 /* Bar.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.Foo.proto.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Baz.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baz.Foo.proto.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.UnittestEnormousDescriptor.proto.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Proto2ArenaUnittest.UnittestArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestArena.proto.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3ArenaUnittest.UnittestProto3Arena.proto.swift; sourceTree = "<group>"; };
+		OBJ_57 /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift; sourceTree = "<group>"; };
+		OBJ_58 /* ProtobufUnittest.Unittest.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.Unittest.proto.swift; sourceTree = "<group>"; };
+		OBJ_59 /* ProtobufUnittest.UnittestCustomOptions.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestCustomOptions.proto.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		OBJ_61 /* ProtobufUnittest.UnittestLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLite.proto.swift; sourceTree = "<group>"; };
+		OBJ_62 /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift; sourceTree = "<group>"; };
+		OBJ_63 /* ProtobufUnittest.UnittestMset.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestMset.proto.swift; sourceTree = "<group>"; };
+		OBJ_64 /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		OBJ_65 /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestWellKnownTypes.proto.swift; sourceTree = "<group>"; };
+		OBJ_66 /* ProtobufUnittestImport.UnittestImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImport.proto.swift; sourceTree = "<group>"; };
+		OBJ_67 /* ProtobufUnittestImport.UnittestImportLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportLite.proto.swift; sourceTree = "<group>"; };
+		OBJ_68 /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublic.proto.swift; sourceTree = "<group>"; };
+		OBJ_69 /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublicLite.proto.swift; sourceTree = "<group>"; };
+		OBJ_70 /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestNoArena.UnittestNoArena.proto.swift; sourceTree = "<group>"; };
+		OBJ_71 /* SwiftProtobufUnittest.UnittestMaps.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtobufUnittest.UnittestMaps.proto.swift; sourceTree = "<group>"; };
+		OBJ_72 /* ThreadingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadingTest.swift; sourceTree = "<group>"; };
+		OBJ_73 /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift; sourceTree = "<group>"; };
+		OBJ_74 /* UnittestEmpty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestEmpty.proto.swift; sourceTree = "<group>"; };
+		OBJ_75 /* UnittestErrorType.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestErrorType.proto.swift; sourceTree = "<group>"; };
+		OBJ_76 /* UnittestStruct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestStruct.proto.swift; sourceTree = "<group>"; };
+		OBJ_77 /* UnittestThreading.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestThreading.proto.swift; sourceTree = "<group>"; };
+		OBJ_78 /* plugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plugin; sourceTree = SOURCE_ROOT; };
+		OBJ_79 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = SOURCE_ROOT; };
+		OBJ_80 /* m4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = m4; sourceTree = SOURCE_ROOT; };
+		OBJ_81 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_9 /* AbstractMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMessage.swift; sourceTree = "<group>"; };
+		"ProtocolBuffers::ProtocolBufferTests::Product" /* ProtocolBufferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ProtocolBufferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ProtocolBuffers::ProtocolBuffers::Product" /* ProtocolBuffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolBuffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_140 /* ProtocolBuffers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_170 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_32 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Tests */,
+			);
+			name = Tests;
+			path = plugin;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_33 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_34 /* CodedInputStreamTests.swift */,
+				OBJ_35 /* CodedOuputStreamTests.swift */,
+				OBJ_36 /* ErrorHandlingTest.swift */,
+				OBJ_37 /* GeneratedMessageTests.swift */,
+				OBJ_38 /* MapFieldsTests.swift */,
+				OBJ_39 /* MessageTests.swift */,
+				OBJ_40 /* Performance.proto.swift */,
+				OBJ_41 /* PluginTest.swift */,
+				OBJ_42 /* ProtocolBuffersTests.swift */,
+				OBJ_43 /* SizeTest.swift */,
+				OBJ_44 /* SmallBlockInputStream.swift */,
+				OBJ_45 /* TestUtilities.swift */,
+				OBJ_46 /* UnknowFieldsTests.swift */,
+				OBJ_47 /* WireFormatTests.swift */,
+				OBJ_48 /* pbTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		OBJ_48 /* pbTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_49 /* Bar.Foo.proto.swift */,
+				OBJ_50 /* Baz.Foo.proto.swift */,
+				OBJ_51 /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */,
+				OBJ_52 /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */,
+				OBJ_53 /* Proto2ArenaUnittest.UnittestArena.proto.swift */,
+				OBJ_54 /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */,
+				OBJ_55 /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */,
+				OBJ_56 /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */,
+				OBJ_57 /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */,
+				OBJ_58 /* ProtobufUnittest.Unittest.proto.swift */,
+				OBJ_59 /* ProtobufUnittest.UnittestCustomOptions.proto.swift */,
+				OBJ_60 /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */,
+				OBJ_61 /* ProtobufUnittest.UnittestLite.proto.swift */,
+				OBJ_62 /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */,
+				OBJ_63 /* ProtobufUnittest.UnittestMset.proto.swift */,
+				OBJ_64 /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */,
+				OBJ_65 /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */,
+				OBJ_66 /* ProtobufUnittestImport.UnittestImport.proto.swift */,
+				OBJ_67 /* ProtobufUnittestImport.UnittestImportLite.proto.swift */,
+				OBJ_68 /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */,
+				OBJ_69 /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */,
+				OBJ_70 /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */,
+				OBJ_71 /* SwiftProtobufUnittest.UnittestMaps.proto.swift */,
+				OBJ_72 /* ThreadingTest.swift */,
+				OBJ_73 /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */,
+				OBJ_74 /* UnittestEmpty.proto.swift */,
+				OBJ_75 /* UnittestErrorType.proto.swift */,
+				OBJ_76 /* UnittestStruct.proto.swift */,
+				OBJ_77 /* UnittestThreading.proto.swift */,
+			);
+			path = pbTests;
+			sourceTree = "<group>";
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_32 /* Tests */,
+				OBJ_78 /* plugin */,
+				OBJ_79 /* scripts */,
+				OBJ_80 /* m4 */,
+				OBJ_81 /* DerivedData */,
+				OBJ_82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Source */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* AbstractMessage.swift */,
+				OBJ_10 /* CodedInputStream.swift */,
+				OBJ_11 /* CodedOutputStream.swift */,
+				OBJ_12 /* ConcreateExtensionField.swift */,
+				OBJ_13 /* ExtendableMessage.swift */,
+				OBJ_14 /* ExtensionRegistry.swift */,
+				OBJ_15 /* Field.swift */,
+				OBJ_16 /* GeneratedMessage.swift */,
+				OBJ_17 /* Google.Protobuf.Any.proto.swift */,
+				OBJ_18 /* Google.Protobuf.Api.proto.swift */,
+				OBJ_19 /* Google.Protobuf.Descriptor.proto.swift */,
+				OBJ_20 /* Google.Protobuf.Duration.proto.swift */,
+				OBJ_21 /* Google.Protobuf.Empty.proto.swift */,
+				OBJ_22 /* Google.Protobuf.FieldMask.proto.swift */,
+				OBJ_23 /* Google.Protobuf.SourceContext.proto.swift */,
+				OBJ_24 /* Google.Protobuf.Struct.proto.swift */,
+				OBJ_25 /* Google.Protobuf.SwiftDescriptor.proto.swift */,
+				OBJ_26 /* Google.Protobuf.Timestamp.proto.swift */,
+				OBJ_27 /* Google.Protobuf.Type.proto.swift */,
+				OBJ_28 /* Google.Protobuf.Wrappers.proto.swift */,
+				OBJ_29 /* RingBuffer.swift */,
+				OBJ_30 /* UnknownFieldSet.swift */,
+				OBJ_31 /* WireFormat.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		OBJ_82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ProtocolBuffers::ProtocolBufferTests::Product" /* ProtocolBufferTests.xctest */,
+				"ProtocolBuffers::ProtocolBuffers::Product" /* ProtocolBuffers.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"ProtocolBuffers::ProtocolBufferTests" /* ProtocolBufferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_92 /* Build configuration list for PBXNativeTarget "ProtocolBufferTests" */;
+			buildPhases = (
+				OBJ_95 /* Sources */,
+				OBJ_139 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_141 /* PBXTargetDependency */,
+			);
+			name = ProtocolBufferTests;
+			productName = ProtocolBufferTests;
+			productReference = "ProtocolBuffers::ProtocolBufferTests::Product" /* ProtocolBufferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"ProtocolBuffers::ProtocolBuffers" /* ProtocolBuffers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */;
+			buildPhases = (
+				OBJ_146 /* Sources */,
+				OBJ_170 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProtocolBuffers;
+			productName = ProtocolBuffers;
+			productReference = "ProtocolBuffers::ProtocolBuffers::Product" /* ProtocolBuffers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"ProtocolBuffers::SwiftPMPackageDescription" /* ProtocolBuffersPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "ProtocolBuffersPackageDescription" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProtocolBuffersPackageDescription;
+			productName = ProtocolBuffersPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"ProtocolBuffers::ProtocolBufferTests" = {
+						LastSwiftMigration = 1000;
+					};
+					"ProtocolBuffers::ProtocolBuffers" = {
+						LastSwiftMigration = 1000;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "ProtocolBuffers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"ProtocolBuffers::SwiftPMPackageDescription" /* ProtocolBuffersPackageDescription */,
+				"ProtocolBuffers::ProtocolBufferTests" /* ProtocolBufferTests */,
+				"ProtocolBuffers::ProtocolBuffers" /* ProtocolBuffers */,
+				"ProtocolBuffers::ProtocolBuffersPackageTests::ProductTarget" /* ProtocolBuffersPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_147 /* AbstractMessage.swift in Sources */,
+				OBJ_148 /* CodedInputStream.swift in Sources */,
+				OBJ_149 /* CodedOutputStream.swift in Sources */,
+				OBJ_150 /* ConcreateExtensionField.swift in Sources */,
+				OBJ_151 /* ExtendableMessage.swift in Sources */,
+				OBJ_152 /* ExtensionRegistry.swift in Sources */,
+				OBJ_153 /* Field.swift in Sources */,
+				OBJ_154 /* GeneratedMessage.swift in Sources */,
+				OBJ_155 /* Google.Protobuf.Any.proto.swift in Sources */,
+				OBJ_156 /* Google.Protobuf.Api.proto.swift in Sources */,
+				OBJ_157 /* Google.Protobuf.Descriptor.proto.swift in Sources */,
+				OBJ_158 /* Google.Protobuf.Duration.proto.swift in Sources */,
+				OBJ_159 /* Google.Protobuf.Empty.proto.swift in Sources */,
+				OBJ_160 /* Google.Protobuf.FieldMask.proto.swift in Sources */,
+				OBJ_161 /* Google.Protobuf.SourceContext.proto.swift in Sources */,
+				OBJ_162 /* Google.Protobuf.Struct.proto.swift in Sources */,
+				OBJ_163 /* Google.Protobuf.SwiftDescriptor.proto.swift in Sources */,
+				OBJ_164 /* Google.Protobuf.Timestamp.proto.swift in Sources */,
+				OBJ_165 /* Google.Protobuf.Type.proto.swift in Sources */,
+				OBJ_166 /* Google.Protobuf.Wrappers.proto.swift in Sources */,
+				OBJ_167 /* RingBuffer.swift in Sources */,
+				OBJ_168 /* UnknownFieldSet.swift in Sources */,
+				OBJ_169 /* WireFormat.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_96 /* CodedInputStreamTests.swift in Sources */,
+				OBJ_97 /* CodedOuputStreamTests.swift in Sources */,
+				OBJ_98 /* ErrorHandlingTest.swift in Sources */,
+				OBJ_99 /* GeneratedMessageTests.swift in Sources */,
+				OBJ_100 /* MapFieldsTests.swift in Sources */,
+				OBJ_101 /* MessageTests.swift in Sources */,
+				OBJ_102 /* Performance.proto.swift in Sources */,
+				OBJ_103 /* PluginTest.swift in Sources */,
+				OBJ_104 /* ProtocolBuffersTests.swift in Sources */,
+				OBJ_105 /* SizeTest.swift in Sources */,
+				OBJ_106 /* SmallBlockInputStream.swift in Sources */,
+				OBJ_107 /* TestUtilities.swift in Sources */,
+				OBJ_108 /* UnknowFieldsTests.swift in Sources */,
+				OBJ_109 /* WireFormatTests.swift in Sources */,
+				OBJ_110 /* Bar.Foo.proto.swift in Sources */,
+				OBJ_111 /* Baz.Foo.proto.swift in Sources */,
+				OBJ_112 /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift in Sources */,
+				OBJ_113 /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift in Sources */,
+				OBJ_114 /* Proto2ArenaUnittest.UnittestArena.proto.swift in Sources */,
+				OBJ_115 /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift in Sources */,
+				OBJ_116 /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift in Sources */,
+				OBJ_117 /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift in Sources */,
+				OBJ_118 /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift in Sources */,
+				OBJ_119 /* ProtobufUnittest.Unittest.proto.swift in Sources */,
+				OBJ_120 /* ProtobufUnittest.UnittestCustomOptions.proto.swift in Sources */,
+				OBJ_121 /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift in Sources */,
+				OBJ_122 /* ProtobufUnittest.UnittestLite.proto.swift in Sources */,
+				OBJ_123 /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift in Sources */,
+				OBJ_124 /* ProtobufUnittest.UnittestMset.proto.swift in Sources */,
+				OBJ_125 /* ProtobufUnittest.UnittestOptimizeFor.proto.swift in Sources */,
+				OBJ_126 /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift in Sources */,
+				OBJ_127 /* ProtobufUnittestImport.UnittestImport.proto.swift in Sources */,
+				OBJ_128 /* ProtobufUnittestImport.UnittestImportLite.proto.swift in Sources */,
+				OBJ_129 /* ProtobufUnittestImport.UnittestImportPublic.proto.swift in Sources */,
+				OBJ_130 /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift in Sources */,
+				OBJ_131 /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift in Sources */,
+				OBJ_132 /* SwiftProtobufUnittest.UnittestMaps.proto.swift in Sources */,
+				OBJ_133 /* ThreadingTest.swift in Sources */,
+				OBJ_134 /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift in Sources */,
+				OBJ_135 /* UnittestEmpty.proto.swift in Sources */,
+				OBJ_136 /* UnittestErrorType.proto.swift in Sources */,
+				OBJ_137 /* UnittestStruct.proto.swift in Sources */,
+				OBJ_138 /* UnittestThreading.proto.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ProtocolBuffers::ProtocolBuffers" /* ProtocolBuffers */;
+			targetProxy = 3F130A3F1FAB2CFA00E29F61 /* PBXContainerItemProxy */;
+		};
+		OBJ_175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ProtocolBuffers::ProtocolBufferTests" /* ProtocolBufferTests */;
+			targetProxy = 3F130A401FAB2CFB00E29F61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBuffers_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ProtocolBuffers;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ProtocolBuffers;
+			};
+			name = Debug;
+		};
+		OBJ_145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBuffers_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ProtocolBuffers;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ProtocolBuffers;
+			};
+			name = Release;
+		};
+		OBJ_173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBufferTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ProtocolBufferTests;
+			};
+			name = Debug;
+		};
+		OBJ_94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBufferTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ProtocolBufferTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_143 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_144 /* Debug */,
+				OBJ_145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_172 /* Build configuration list for PBXAggregateTarget "ProtocolBuffersPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_173 /* Debug */,
+				OBJ_174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "ProtocolBuffers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "ProtocolBuffersPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_92 /* Build configuration list for PBXNativeTarget "ProtocolBufferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_93 /* Debug */,
+				OBJ_94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

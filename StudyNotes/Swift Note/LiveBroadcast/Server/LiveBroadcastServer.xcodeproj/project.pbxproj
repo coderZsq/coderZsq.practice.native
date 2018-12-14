@@ -19,7 +19,32 @@
 		1440101D21C2273800235D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440101021C2273800235D67 /* Main.storyboard */; };
 		1440101E21C2273800235D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440101221C2273800235D67 /* AppDelegate.swift */; };
 		1440102221C2299100235D67 /* ClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440102121C2299100235D67 /* ClientManager.swift */; };
+		14AA4C3D21C4019000CFBDEC /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AA4C3C21C4017F00CFBDEC /* ProtocolBuffers.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14AA4C3221C4017F00CFBDEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14AA4B7F21C4017F00CFBDEC /* PBCompiler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6111791D85A7E000DE3C9D;
+			remoteInfo = PBCompiler;
+		};
+		14AA4C3921C4017F00CFBDEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14AA4B6021C4017F00CFBDEC /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBufferTests::Product";
+			remoteInfo = ProtocolBufferTests;
+		};
+		14AA4C3B21C4017F00CFBDEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14AA4B6021C4017F00CFBDEC /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBuffers::Product";
+			remoteInfo = ProtocolBuffers;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1405852B21C23F2D000808BA /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
@@ -35,6 +60,200 @@
 		1440101221C2273800235D67 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1440101321C2273800235D67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1440102121C2299100235D67 /* ClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientManager.swift; sourceTree = "<group>"; };
+		14AA4B5921C4017F00CFBDEC /* ProtocolBuffers-Swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolBuffers-Swift.podspec"; sourceTree = "<group>"; };
+		14AA4B5A21C4017F00CFBDEC /* protobuf-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "protobuf-swift.xcodeproj"; sourceTree = "<group>"; };
+		14AA4B5D21C4017F00CFBDEC /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		14AA4B5E21C4017F00CFBDEC /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		14AA4B5F21C4017F00CFBDEC /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		14AA4B6021C4017F00CFBDEC /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProtocolBuffers.xcodeproj; sourceTree = "<group>"; };
+		14AA4B6421C4017F00CFBDEC /* Google.Protobuf.FieldMask.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.FieldMask.proto.swift; sourceTree = "<group>"; };
+		14AA4B6521C4017F00CFBDEC /* AbstractMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMessage.swift; sourceTree = "<group>"; };
+		14AA4B6621C4017F00CFBDEC /* Google.Protobuf.Any.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Any.proto.swift; sourceTree = "<group>"; };
+		14AA4B6721C4017F00CFBDEC /* ProtocolBuffers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolBuffers.h; sourceTree = "<group>"; };
+		14AA4B6821C4017F00CFBDEC /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		14AA4B6921C4017F00CFBDEC /* Google.Protobuf.Wrappers.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Wrappers.proto.swift; sourceTree = "<group>"; };
+		14AA4B6A21C4017F00CFBDEC /* UnknownFieldSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownFieldSet.swift; sourceTree = "<group>"; };
+		14AA4B6B21C4017F00CFBDEC /* WireFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormat.swift; sourceTree = "<group>"; };
+		14AA4B6C21C4017F00CFBDEC /* Google.Protobuf.Api.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Api.proto.swift; sourceTree = "<group>"; };
+		14AA4B6D21C4017F00CFBDEC /* Google.Protobuf.Empty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Empty.proto.swift; sourceTree = "<group>"; };
+		14AA4B6E21C4017F00CFBDEC /* Google.Protobuf.Duration.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Duration.proto.swift; sourceTree = "<group>"; };
+		14AA4B6F21C4017F00CFBDEC /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		14AA4B7021C4017F00CFBDEC /* Google.Protobuf.Struct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Struct.proto.swift; sourceTree = "<group>"; };
+		14AA4B7121C4017F00CFBDEC /* Google.Protobuf.Type.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Type.proto.swift; sourceTree = "<group>"; };
+		14AA4B7221C4017F00CFBDEC /* ExtensionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionRegistry.swift; sourceTree = "<group>"; };
+		14AA4B7321C4017F00CFBDEC /* Google.Protobuf.Timestamp.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Timestamp.proto.swift; sourceTree = "<group>"; };
+		14AA4B7421C4017F00CFBDEC /* GeneratedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessage.swift; sourceTree = "<group>"; };
+		14AA4B7521C4017F00CFBDEC /* CodedInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStream.swift; sourceTree = "<group>"; };
+		14AA4B7621C4017F00CFBDEC /* CodedOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOutputStream.swift; sourceTree = "<group>"; };
+		14AA4B7721C4017F00CFBDEC /* ConcreateExtensionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreateExtensionField.swift; sourceTree = "<group>"; };
+		14AA4B7821C4017F00CFBDEC /* Google.Protobuf.SwiftDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SwiftDescriptor.proto.swift; sourceTree = "<group>"; };
+		14AA4B7921C4017F00CFBDEC /* Google.Protobuf.Descriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.Descriptor.proto.swift; sourceTree = "<group>"; };
+		14AA4B7A21C4017F00CFBDEC /* ExtendableMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendableMessage.swift; sourceTree = "<group>"; };
+		14AA4B7B21C4017F00CFBDEC /* Google.Protobuf.SourceContext.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.SourceContext.proto.swift; sourceTree = "<group>"; };
+		14AA4B7C21C4017F00CFBDEC /* protobuf-swift.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "protobuf-swift.rb"; sourceTree = "<group>"; };
+		14AA4B7F21C4017F00CFBDEC /* PBCompiler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PBCompiler.xcodeproj; sourceTree = "<group>"; };
+		14AA4B8321C4017F00CFBDEC /* GeneratedMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMessageTests.swift; sourceTree = "<group>"; };
+		14AA4B8421C4017F00CFBDEC /* SmallBlockInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBlockInputStream.swift; sourceTree = "<group>"; };
+		14AA4B8521C4017F00CFBDEC /* WireFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormatTests.swift; sourceTree = "<group>"; };
+		14AA4B8721C4017F00CFBDEC /* delimitedFile.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = delimitedFile.dat; sourceTree = "<group>"; };
+		14AA4B8A21C4017F00CFBDEC /* text_format_unittest_data_oneof_implemented.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_oneof_implemented.txt; sourceTree = "<group>"; };
+		14AA4B8B21C4017F00CFBDEC /* text_format_unittest_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data.txt; sourceTree = "<group>"; };
+		14AA4B8C21C4017F00CFBDEC /* text_format_unittest_data_pointy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_pointy.txt; sourceTree = "<group>"; };
+		14AA4B8D21C4017F00CFBDEC /* text_format_unittest_extensions_data_pointy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_extensions_data_pointy.txt; sourceTree = "<group>"; };
+		14AA4B8E21C4017F00CFBDEC /* delimitedFile.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = delimitedFile.dat; sourceTree = "<group>"; };
+		14AA4B8F21C4017F00CFBDEC /* golden_message_oneof_implemented */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_message_oneof_implemented; sourceTree = "<group>"; };
+		14AA4B9021C4017F00CFBDEC /* bad_utf8_string */ = {isa = PBXFileReference; lastKnownFileType = file; path = bad_utf8_string; sourceTree = "<group>"; };
+		14AA4B9121C4017F00CFBDEC /* text_format_unittest_data_pointy_oneof.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_data_pointy_oneof.txt; sourceTree = "<group>"; };
+		14AA4B9221C4017F00CFBDEC /* golden_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_message; sourceTree = "<group>"; };
+		14AA4B9321C4017F00CFBDEC /* text_format_unittest_extensions_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text_format_unittest_extensions_data.txt; sourceTree = "<group>"; };
+		14AA4B9421C4017F00CFBDEC /* golden_packed_fields_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_packed_fields_message; sourceTree = "<group>"; };
+		14AA4B9521C4017F00CFBDEC /* Bar.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.Foo.proto.swift; sourceTree = "<group>"; };
+		14AA4B9621C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublicLite.proto.swift; sourceTree = "<group>"; };
+		14AA4B9721C4017F00CFBDEC /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift; sourceTree = "<group>"; };
+		14AA4B9821C4017F00CFBDEC /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift; sourceTree = "<group>"; };
+		14AA4B9921C4017F00CFBDEC /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.UnittestEnormousDescriptor.proto.swift; sourceTree = "<group>"; };
+		14AA4B9A21C4017F00CFBDEC /* Baz.Foo.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baz.Foo.proto.swift; sourceTree = "<group>"; };
+		14AA4B9B21C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportLite.proto.swift; sourceTree = "<group>"; };
+		14AA4B9C21C4017F00CFBDEC /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift; sourceTree = "<group>"; };
+		14AA4B9D21C4017F00CFBDEC /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		14AA4B9E21C4017F00CFBDEC /* ProtobufUnittest.Unittest.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.Unittest.proto.swift; sourceTree = "<group>"; };
+		14AA4B9F21C4017F00CFBDEC /* ThreadingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadingTest.swift; sourceTree = "<group>"; };
+		14AA4BA021C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImport.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImport.proto.swift; sourceTree = "<group>"; };
+		14AA4BA121C4017F00CFBDEC /* ProtobufUnittest.UnittestLite.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestLite.proto.swift; sourceTree = "<group>"; };
+		14AA4BA221C4017F00CFBDEC /* UnittestEmpty.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestEmpty.proto.swift; sourceTree = "<group>"; };
+		14AA4BA321C4017F00CFBDEC /* UnittestErrorType.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestErrorType.proto.swift; sourceTree = "<group>"; };
+		14AA4BA421C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestImport.UnittestImportPublic.proto.swift; sourceTree = "<group>"; };
+		14AA4BA521C4017F00CFBDEC /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittestNoArena.UnittestNoArena.proto.swift; sourceTree = "<group>"; };
+		14AA4BA621C4017F00CFBDEC /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestWellKnownTypes.proto.swift; sourceTree = "<group>"; };
+		14AA4BA721C4017F00CFBDEC /* UnittestStruct.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestStruct.proto.swift; sourceTree = "<group>"; };
+		14AA4BA821C4017F00CFBDEC /* ProtobufUnittest.UnittestMset.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestMset.proto.swift; sourceTree = "<group>"; };
+		14AA4BA921C4017F00CFBDEC /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift; sourceTree = "<group>"; };
+		14AA4BAA21C4017F00CFBDEC /* Proto2ArenaUnittest.UnittestArena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto2ArenaUnittest.UnittestArena.proto.swift; sourceTree = "<group>"; };
+		14AA4BAB21C4017F00CFBDEC /* UnittestThreading.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestThreading.proto.swift; sourceTree = "<group>"; };
+		14AA4BAC21C4017F00CFBDEC /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift; sourceTree = "<group>"; };
+		14AA4BAD21C4017F00CFBDEC /* SwiftProtobufUnittest.UnittestMaps.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtobufUnittest.UnittestMaps.proto.swift; sourceTree = "<group>"; };
+		14AA4BAE21C4017F00CFBDEC /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift; sourceTree = "<group>"; };
+		14AA4BAF21C4017F00CFBDEC /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestOptimizeFor.proto.swift; sourceTree = "<group>"; };
+		14AA4BB021C4017F00CFBDEC /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proto3ArenaUnittest.UnittestProto3Arena.proto.swift; sourceTree = "<group>"; };
+		14AA4BB121C4017F00CFBDEC /* ProtobufUnittest.UnittestCustomOptions.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufUnittest.UnittestCustomOptions.proto.swift; sourceTree = "<group>"; };
+		14AA4BB221C4017F00CFBDEC /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		14AA4BB321C4017F00CFBDEC /* SizeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeTest.swift; sourceTree = "<group>"; };
+		14AA4BB421C4017F00CFBDEC /* CodedOuputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedOuputStreamTests.swift; sourceTree = "<group>"; };
+		14AA4BB521C4017F00CFBDEC /* PluginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTest.swift; sourceTree = "<group>"; };
+		14AA4BB621C4017F00CFBDEC /* MapFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFieldsTests.swift; sourceTree = "<group>"; };
+		14AA4BB721C4017F00CFBDEC /* UnknowFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknowFieldsTests.swift; sourceTree = "<group>"; };
+		14AA4BB821C4017F00CFBDEC /* ProtocolBuffersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuffersTests.swift; sourceTree = "<group>"; };
+		14AA4BB921C4017F00CFBDEC /* ErrorHandlingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTest.swift; sourceTree = "<group>"; };
+		14AA4BBA21C4017F00CFBDEC /* CodedInputStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedInputStreamTests.swift; sourceTree = "<group>"; };
+		14AA4BBB21C4017F00CFBDEC /* Performance.proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.proto.swift; sourceTree = "<group>"; };
+		14AA4BBC21C4017F00CFBDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AA4BBD21C4017F00CFBDEC /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		14AA4BBF21C4017F00CFBDEC /* swift_generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_generator.h; sourceTree = "<group>"; };
+		14AA4BC021C4017F00CFBDEC /* swift_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_field.cc; sourceTree = "<group>"; };
+		14AA4BC121C4017F00CFBDEC /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		14AA4BC221C4017F00CFBDEC /* swift_helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_helpers.h; sourceTree = "<group>"; };
+		14AA4BC321C4017F00CFBDEC /* swift_enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_enum.h; sourceTree = "<group>"; };
+		14AA4BC421C4017F00CFBDEC /* swift_generator.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_generator.cc; sourceTree = "<group>"; };
+		14AA4BC521C4017F00CFBDEC /* swift_extension.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_extension.cc; sourceTree = "<group>"; };
+		14AA4BC621C4017F00CFBDEC /* swift_message.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_message.cc; sourceTree = "<group>"; };
+		14AA4BC721C4017F00CFBDEC /* swift_file.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_file.cc; sourceTree = "<group>"; };
+		14AA4BC821C4017F00CFBDEC /* swift_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_field.h; sourceTree = "<group>"; };
+		14AA4BC921C4017F00CFBDEC /* swift_oneof.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_oneof.cc; sourceTree = "<group>"; };
+		14AA4BCC21C4017F00CFBDEC /* unittest_no_field_presence.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_field_presence.proto; sourceTree = "<group>"; };
+		14AA4BCD21C4017F00CFBDEC /* map_proto2_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_proto2_unittest.proto; sourceTree = "<group>"; };
+		14AA4BCF21C4017F00CFBDEC /* substitute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = substitute.h; sourceTree = "<group>"; };
+		14AA4BD021C4017F00CFBDEC /* strutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
+		14AA4BD121C4017F00CFBDEC /* hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		14AA4BD221C4017F00CFBDEC /* timestamp.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = timestamp.proto; sourceTree = "<group>"; };
+		14AA4BD321C4017F00CFBDEC /* field_mask.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = field_mask.proto; sourceTree = "<group>"; };
+		14AA4BD421C4017F00CFBDEC /* descriptor.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = descriptor.pb.cc; sourceTree = "<group>"; };
+		14AA4BD521C4017F00CFBDEC /* unittest_optimize_for.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_optimize_for.proto; sourceTree = "<group>"; };
+		14AA4BD621C4017F00CFBDEC /* unittest_drop_unknown_fields.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_drop_unknown_fields.proto; sourceTree = "<group>"; };
+		14AA4BD721C4017F00CFBDEC /* map_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_unittest.proto; sourceTree = "<group>"; };
+		14AA4BD821C4017F00CFBDEC /* unknown_enum_test.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unknown_enum_test.proto; sourceTree = "<group>"; };
+		14AA4BD921C4017F00CFBDEC /* unittest_well_known_types.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_well_known_types.proto; sourceTree = "<group>"; };
+		14AA4BDA21C4017F00CFBDEC /* unittest_enormous_descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_enormous_descriptor.proto; sourceTree = "<group>"; };
+		14AA4BDB21C4017F00CFBDEC /* unittest_embed_optimize_for.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_embed_optimize_for.proto; sourceTree = "<group>"; };
+		14AA4BDC21C4017F00CFBDEC /* unittest_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_arena.proto; sourceTree = "<group>"; };
+		14AA4BDD21C4017F00CFBDEC /* unittest_threading.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_threading.proto; sourceTree = "<group>"; };
+		14AA4BDE21C4017F00CFBDEC /* unittest_preserve_unknown_enum.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_preserve_unknown_enum.proto; sourceTree = "<group>"; };
+		14AA4BDF21C4017F00CFBDEC /* swift-descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = "swift-descriptor.proto"; sourceTree = "<group>"; };
+		14AA4BE021C4017F00CFBDEC /* unittest_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_lite.proto; sourceTree = "<group>"; };
+		14AA4BE121C4017F00CFBDEC /* unittest_proto3_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_proto3_arena.proto; sourceTree = "<group>"; };
+		14AA4BE221C4017F00CFBDEC /* api.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
+		14AA4BE321C4017F00CFBDEC /* unittest_import.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import.proto; sourceTree = "<group>"; };
+		14AA4BE421C4017F00CFBDEC /* duration.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = duration.proto; sourceTree = "<group>"; };
+		14AA4BE521C4017F00CFBDEC /* plugin.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = plugin.proto; sourceTree = "<group>"; };
+		14AA4BE621C4017F00CFBDEC /* unittest_struct.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_struct.proto; sourceTree = "<group>"; };
+		14AA4BE721C4017F00CFBDEC /* struct.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = struct.proto; sourceTree = "<group>"; };
+		14AA4BE821C4017F00CFBDEC /* unittest_no_generic_services.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_generic_services.proto; sourceTree = "<group>"; };
+		14AA4BE921C4017F00CFBDEC /* wrappers.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = wrappers.proto; sourceTree = "<group>"; };
+		14AA4BEA21C4017F00CFBDEC /* source_context.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = source_context.proto; sourceTree = "<group>"; };
+		14AA4BEB21C4017F00CFBDEC /* any.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = any.proto; sourceTree = "<group>"; };
+		14AA4BEC21C4017F00CFBDEC /* descriptor.pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = descriptor.pb.h; sourceTree = "<group>"; };
+		14AA4BED21C4017F00CFBDEC /* unittest_import_public.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_public.proto; sourceTree = "<group>"; };
+		14AA4BEE21C4017F00CFBDEC /* unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest.proto; sourceTree = "<group>"; };
+		14AA4BEF21C4017F00CFBDEC /* unittest_maps.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_maps.proto; sourceTree = "<group>"; };
+		14AA4BF021C4017F00CFBDEC /* unittest_no_arena_import.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_arena_import.proto; sourceTree = "<group>"; };
+		14AA4BF121C4017F00CFBDEC /* swift-descriptor.pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-descriptor.pb.h"; sourceTree = "<group>"; };
+		14AA4BF221C4017F00CFBDEC /* unittest_no_arena.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_no_arena.proto; sourceTree = "<group>"; };
+		14AA4BF321C4017F00CFBDEC /* unittest_empty.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_empty.proto; sourceTree = "<group>"; };
+		14AA4BF421C4017F00CFBDEC /* unittest_error_type.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_error_type.proto; sourceTree = "<group>"; };
+		14AA4BF521C4017F00CFBDEC /* unittest_import_public_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_public_lite.proto; sourceTree = "<group>"; };
+		14AA4BF621C4017F00CFBDEC /* map_lite_unittest.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = map_lite_unittest.proto; sourceTree = "<group>"; };
+		14AA4BF721C4017F00CFBDEC /* type.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = type.proto; sourceTree = "<group>"; };
+		14AA4BF821C4017F00CFBDEC /* unittest_mset.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_mset.proto; sourceTree = "<group>"; };
+		14AA4BF921C4017F00CFBDEC /* unittest_import_lite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_import_lite.proto; sourceTree = "<group>"; };
+		14AA4BFA21C4017F00CFBDEC /* performance.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = performance.proto; sourceTree = "<group>"; };
+		14AA4BFB21C4017F00CFBDEC /* empty.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = empty.proto; sourceTree = "<group>"; };
+		14AA4BFC21C4017F00CFBDEC /* swift-descriptor.pb.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "swift-descriptor.pb.cc"; sourceTree = "<group>"; };
+		14AA4BFD21C4017F00CFBDEC /* unittest_lite_imports_nonlite.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_lite_imports_nonlite.proto; sourceTree = "<group>"; };
+		14AA4BFE21C4017F00CFBDEC /* descriptor.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = descriptor.proto; sourceTree = "<group>"; };
+		14AA4BFF21C4017F00CFBDEC /* .dirstamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = .dirstamp; sourceTree = "<group>"; };
+		14AA4C0021C4017F00CFBDEC /* any_test.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = any_test.proto; sourceTree = "<group>"; };
+		14AA4C0121C4017F00CFBDEC /* unittest_custom_options.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = unittest_custom_options.proto; sourceTree = "<group>"; };
+		14AA4C0221C4017F00CFBDEC /* swift_extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_extension.h; sourceTree = "<group>"; };
+		14AA4C0321C4017F00CFBDEC /* swift_map_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_map_field.h; sourceTree = "<group>"; };
+		14AA4C0421C4017F00CFBDEC /* swift_primitive_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_primitive_field.cc; sourceTree = "<group>"; };
+		14AA4C0521C4017F00CFBDEC /* swift_primitive_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_primitive_field.h; sourceTree = "<group>"; };
+		14AA4C0821C4017F00CFBDEC /* foo.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = foo.proto; sourceTree = "<group>"; };
+		14AA4C0A21C4017F00CFBDEC /* foo.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = foo.proto; sourceTree = "<group>"; };
+		14AA4C0B21C4017F00CFBDEC /* swift_enum.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_enum.cc; sourceTree = "<group>"; };
+		14AA4C0C21C4017F00CFBDEC /* swift_enum_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_enum_field.cc; sourceTree = "<group>"; };
+		14AA4C0D21C4017F00CFBDEC /* swift_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_file.h; sourceTree = "<group>"; };
+		14AA4C0E21C4017F00CFBDEC /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		14AA4C1021C4017F00CFBDEC /* swift_generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_generator.h; sourceTree = "<group>"; };
+		14AA4C1121C4017F00CFBDEC /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		14AA4C1221C4017F00CFBDEC /* swift_react.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_react.cc; sourceTree = "<group>"; };
+		14AA4C1321C4017F00CFBDEC /* swift_generator.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_generator.cc; sourceTree = "<group>"; };
+		14AA4C1421C4017F00CFBDEC /* swift_file.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_file.cc; sourceTree = "<group>"; };
+		14AA4C1521C4017F00CFBDEC /* swift_helpers_react.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_helpers_react.h; sourceTree = "<group>"; };
+		14AA4C1621C4017F00CFBDEC /* swift_react.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_react.h; sourceTree = "<group>"; };
+		14AA4C1721C4017F00CFBDEC /* swift_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_file.h; sourceTree = "<group>"; };
+		14AA4C1821C4017F00CFBDEC /* swift_react_enums.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_react_enums.cc; sourceTree = "<group>"; };
+		14AA4C1921C4017F00CFBDEC /* swift_react_enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_react_enums.h; sourceTree = "<group>"; };
+		14AA4C1A21C4017F00CFBDEC /* swift_helpers_react.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_helpers_react.cc; sourceTree = "<group>"; };
+		14AA4C1B21C4017F00CFBDEC /* .dirstamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = .dirstamp; sourceTree = "<group>"; };
+		14AA4C1C21C4017F00CFBDEC /* swift_message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_message.h; sourceTree = "<group>"; };
+		14AA4C1D21C4017F00CFBDEC /* swift_helpers.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_helpers.cc; sourceTree = "<group>"; };
+		14AA4C1E21C4017F00CFBDEC /* swift_oneof.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_oneof.h; sourceTree = "<group>"; };
+		14AA4C1F21C4017F00CFBDEC /* swift_map_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_map_field.cc; sourceTree = "<group>"; };
+		14AA4C2021C4017F00CFBDEC /* RESERVEDWORDS */ = {isa = PBXFileReference; lastKnownFileType = text; path = RESERVEDWORDS; sourceTree = "<group>"; };
+		14AA4C2121C4017F00CFBDEC /* swift_message_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_message_field.h; sourceTree = "<group>"; };
+		14AA4C2221C4017F00CFBDEC /* swift_enum_field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_enum_field.h; sourceTree = "<group>"; };
+		14AA4C2321C4017F00CFBDEC /* swift_message_field.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = swift_message_field.cc; sourceTree = "<group>"; };
+		14AA4C2421C4017F00CFBDEC /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		14AA4C2521C4017F00CFBDEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14AA4C2621C4017F00CFBDEC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		14AA4C2821C4017F00CFBDEC /* makeDescriptor.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makeDescriptor.sh; sourceTree = "<group>"; };
+		14AA4C2921C4017F00CFBDEC /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		14AA4C2A21C4017F00CFBDEC /* makeTests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makeTests.sh; sourceTree = "<group>"; };
+		14AA4C2B21C4017F00CFBDEC /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		14AA4C2C21C4017F00CFBDEC /* ISSUE_TEMPLATE */ = {isa = PBXFileReference; lastKnownFileType = text; path = ISSUE_TEMPLATE; sourceTree = "<group>"; };
+		14AA4C2D21C4017F00CFBDEC /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		14AA4C2E21C4017F00CFBDEC /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		14AA4C2F21C4017F00CFBDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AA4C3021C4017F00CFBDEC /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
 		70AA51DD1DFD2EAB00A553DA /* LiveBroadcastServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBroadcastServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AA4C3D21C4019000CFBDEC /* ProtocolBuffers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +279,7 @@
 		1440100421C2273800235D67 /* LiveBroadcastServer */ = {
 			isa = PBXGroup;
 			children = (
+				14AA4B5821C4017F00CFBDEC /* protobuf-swift */,
 				1440100721C2273800235D67 /* Server */,
 				1440100521C2273800235D67 /* ViewController.swift */,
 				1440101221C2273800235D67 /* AppDelegate.swift */,
@@ -90,6 +311,359 @@
 				1440100D21C2273800235D67 /* ytcpsocket.swift */,
 			);
 			path = ysocket;
+			sourceTree = "<group>";
+		};
+		14AA4B5821C4017F00CFBDEC /* protobuf-swift */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B5921C4017F00CFBDEC /* ProtocolBuffers-Swift.podspec */,
+				14AA4B5A21C4017F00CFBDEC /* protobuf-swift.xcodeproj */,
+				14AA4B5D21C4017F00CFBDEC /* configure.ac */,
+				14AA4B5E21C4017F00CFBDEC /* .swift-version */,
+				14AA4B5F21C4017F00CFBDEC /* LICENSE */,
+				14AA4B6021C4017F00CFBDEC /* ProtocolBuffers.xcodeproj */,
+				14AA4B6321C4017F00CFBDEC /* Source */,
+				14AA4B7C21C4017F00CFBDEC /* protobuf-swift.rb */,
+				14AA4B7D21C4017F00CFBDEC /* plugin */,
+				14AA4C2421C4017F00CFBDEC /* Makefile.am */,
+				14AA4C2521C4017F00CFBDEC /* README.md */,
+				14AA4C2621C4017F00CFBDEC /* .gitignore */,
+				14AA4C2721C4017F00CFBDEC /* scripts */,
+				14AA4C2B21C4017F00CFBDEC /* Package.swift */,
+				14AA4C2C21C4017F00CFBDEC /* ISSUE_TEMPLATE */,
+				14AA4C2D21C4017F00CFBDEC /* .travis.yml */,
+				14AA4C2E21C4017F00CFBDEC /* CREDITS */,
+				14AA4C2F21C4017F00CFBDEC /* Info.plist */,
+				14AA4C3021C4017F00CFBDEC /* autogen.sh */,
+			);
+			path = "protobuf-swift";
+			sourceTree = "<group>";
+		};
+		14AA4B5B21C4017F00CFBDEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14AA4B6121C4017F00CFBDEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C3A21C4017F00CFBDEC /* ProtocolBufferTests.xctest */,
+				14AA4C3C21C4017F00CFBDEC /* ProtocolBuffers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14AA4B6321C4017F00CFBDEC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B6421C4017F00CFBDEC /* Google.Protobuf.FieldMask.proto.swift */,
+				14AA4B6521C4017F00CFBDEC /* AbstractMessage.swift */,
+				14AA4B6621C4017F00CFBDEC /* Google.Protobuf.Any.proto.swift */,
+				14AA4B6721C4017F00CFBDEC /* ProtocolBuffers.h */,
+				14AA4B6821C4017F00CFBDEC /* RingBuffer.swift */,
+				14AA4B6921C4017F00CFBDEC /* Google.Protobuf.Wrappers.proto.swift */,
+				14AA4B6A21C4017F00CFBDEC /* UnknownFieldSet.swift */,
+				14AA4B6B21C4017F00CFBDEC /* WireFormat.swift */,
+				14AA4B6C21C4017F00CFBDEC /* Google.Protobuf.Api.proto.swift */,
+				14AA4B6D21C4017F00CFBDEC /* Google.Protobuf.Empty.proto.swift */,
+				14AA4B6E21C4017F00CFBDEC /* Google.Protobuf.Duration.proto.swift */,
+				14AA4B6F21C4017F00CFBDEC /* Field.swift */,
+				14AA4B7021C4017F00CFBDEC /* Google.Protobuf.Struct.proto.swift */,
+				14AA4B7121C4017F00CFBDEC /* Google.Protobuf.Type.proto.swift */,
+				14AA4B7221C4017F00CFBDEC /* ExtensionRegistry.swift */,
+				14AA4B7321C4017F00CFBDEC /* Google.Protobuf.Timestamp.proto.swift */,
+				14AA4B7421C4017F00CFBDEC /* GeneratedMessage.swift */,
+				14AA4B7521C4017F00CFBDEC /* CodedInputStream.swift */,
+				14AA4B7621C4017F00CFBDEC /* CodedOutputStream.swift */,
+				14AA4B7721C4017F00CFBDEC /* ConcreateExtensionField.swift */,
+				14AA4B7821C4017F00CFBDEC /* Google.Protobuf.SwiftDescriptor.proto.swift */,
+				14AA4B7921C4017F00CFBDEC /* Google.Protobuf.Descriptor.proto.swift */,
+				14AA4B7A21C4017F00CFBDEC /* ExtendableMessage.swift */,
+				14AA4B7B21C4017F00CFBDEC /* Google.Protobuf.SourceContext.proto.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		14AA4B7D21C4017F00CFBDEC /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B7E21C4017F00CFBDEC /* PBCompiler */,
+				14AA4B8221C4017F00CFBDEC /* Tests */,
+				14AA4BBE21C4017F00CFBDEC /* compiler */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		14AA4B7E21C4017F00CFBDEC /* PBCompiler */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B7F21C4017F00CFBDEC /* PBCompiler.xcodeproj */,
+			);
+			path = PBCompiler;
+			sourceTree = "<group>";
+		};
+		14AA4B8021C4017F00CFBDEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C3321C4017F00CFBDEC /* PBCompiler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14AA4B8221C4017F00CFBDEC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B8321C4017F00CFBDEC /* GeneratedMessageTests.swift */,
+				14AA4B8421C4017F00CFBDEC /* SmallBlockInputStream.swift */,
+				14AA4B8521C4017F00CFBDEC /* WireFormatTests.swift */,
+				14AA4B8621C4017F00CFBDEC /* testdata */,
+				14AA4B8821C4017F00CFBDEC /* pbTests */,
+				14AA4BB221C4017F00CFBDEC /* TestUtilities.swift */,
+				14AA4BB321C4017F00CFBDEC /* SizeTest.swift */,
+				14AA4BB421C4017F00CFBDEC /* CodedOuputStreamTests.swift */,
+				14AA4BB521C4017F00CFBDEC /* PluginTest.swift */,
+				14AA4BB621C4017F00CFBDEC /* MapFieldsTests.swift */,
+				14AA4BB721C4017F00CFBDEC /* UnknowFieldsTests.swift */,
+				14AA4BB821C4017F00CFBDEC /* ProtocolBuffersTests.swift */,
+				14AA4BB921C4017F00CFBDEC /* ErrorHandlingTest.swift */,
+				14AA4BBA21C4017F00CFBDEC /* CodedInputStreamTests.swift */,
+				14AA4BBB21C4017F00CFBDEC /* Performance.proto.swift */,
+				14AA4BBC21C4017F00CFBDEC /* Info.plist */,
+				14AA4BBD21C4017F00CFBDEC /* MessageTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		14AA4B8621C4017F00CFBDEC /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B8721C4017F00CFBDEC /* delimitedFile.dat */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
+		14AA4B8821C4017F00CFBDEC /* pbTests */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B8921C4017F00CFBDEC /* testdata */,
+				14AA4B9521C4017F00CFBDEC /* Bar.Foo.proto.swift */,
+				14AA4B9621C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportPublicLite.proto.swift */,
+				14AA4B9721C4017F00CFBDEC /* Proto2NofieldpresenceUnittest.UnittestNoFieldPresence.proto.swift */,
+				14AA4B9821C4017F00CFBDEC /* Proto2ArenaUnittest.UnittestNoArenaImport.proto.swift */,
+				14AA4B9921C4017F00CFBDEC /* Google.Protobuf.UnittestEnormousDescriptor.proto.swift */,
+				14AA4B9A21C4017F00CFBDEC /* Baz.Foo.proto.swift */,
+				14AA4B9B21C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportLite.proto.swift */,
+				14AA4B9C21C4017F00CFBDEC /* ProtobufUnittest.UnittestLiteImportsNonlite.proto.swift */,
+				14AA4B9D21C4017F00CFBDEC /* ProtobufUnittest.UnittestEmbedOptimizeFor.proto.swift */,
+				14AA4B9E21C4017F00CFBDEC /* ProtobufUnittest.Unittest.proto.swift */,
+				14AA4B9F21C4017F00CFBDEC /* ThreadingTest.swift */,
+				14AA4BA021C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImport.proto.swift */,
+				14AA4BA121C4017F00CFBDEC /* ProtobufUnittest.UnittestLite.proto.swift */,
+				14AA4BA221C4017F00CFBDEC /* UnittestEmpty.proto.swift */,
+				14AA4BA321C4017F00CFBDEC /* UnittestErrorType.proto.swift */,
+				14AA4BA421C4017F00CFBDEC /* ProtobufUnittestImport.UnittestImportPublic.proto.swift */,
+				14AA4BA521C4017F00CFBDEC /* ProtobufUnittestNoArena.UnittestNoArena.proto.swift */,
+				14AA4BA621C4017F00CFBDEC /* ProtobufUnittest.UnittestWellKnownTypes.proto.swift */,
+				14AA4BA721C4017F00CFBDEC /* UnittestStruct.proto.swift */,
+				14AA4BA821C4017F00CFBDEC /* ProtobufUnittest.UnittestMset.proto.swift */,
+				14AA4BA921C4017F00CFBDEC /* Google.Protobuf.NoGenericServicesTest.UnittestNoGenericServices.proto.swift */,
+				14AA4BAA21C4017F00CFBDEC /* Proto2ArenaUnittest.UnittestArena.proto.swift */,
+				14AA4BAB21C4017F00CFBDEC /* UnittestThreading.proto.swift */,
+				14AA4BAC21C4017F00CFBDEC /* UnittestDropUnknownFields.UnittestDropUnknownFields.proto.swift */,
+				14AA4BAD21C4017F00CFBDEC /* SwiftProtobufUnittest.UnittestMaps.proto.swift */,
+				14AA4BAE21C4017F00CFBDEC /* Proto3PreserveUnknownEnumUnittest.UnittestPreserveUnknownEnum.proto.swift */,
+				14AA4BAF21C4017F00CFBDEC /* ProtobufUnittest.UnittestOptimizeFor.proto.swift */,
+				14AA4BB021C4017F00CFBDEC /* Proto3ArenaUnittest.UnittestProto3Arena.proto.swift */,
+				14AA4BB121C4017F00CFBDEC /* ProtobufUnittest.UnittestCustomOptions.proto.swift */,
+			);
+			path = pbTests;
+			sourceTree = "<group>";
+		};
+		14AA4B8921C4017F00CFBDEC /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4B8A21C4017F00CFBDEC /* text_format_unittest_data_oneof_implemented.txt */,
+				14AA4B8B21C4017F00CFBDEC /* text_format_unittest_data.txt */,
+				14AA4B8C21C4017F00CFBDEC /* text_format_unittest_data_pointy.txt */,
+				14AA4B8D21C4017F00CFBDEC /* text_format_unittest_extensions_data_pointy.txt */,
+				14AA4B8E21C4017F00CFBDEC /* delimitedFile.dat */,
+				14AA4B8F21C4017F00CFBDEC /* golden_message_oneof_implemented */,
+				14AA4B9021C4017F00CFBDEC /* bad_utf8_string */,
+				14AA4B9121C4017F00CFBDEC /* text_format_unittest_data_pointy_oneof.txt */,
+				14AA4B9221C4017F00CFBDEC /* golden_message */,
+				14AA4B9321C4017F00CFBDEC /* text_format_unittest_extensions_data.txt */,
+				14AA4B9421C4017F00CFBDEC /* golden_packed_fields_message */,
+			);
+			path = testdata;
+			sourceTree = "<group>";
+		};
+		14AA4BBE21C4017F00CFBDEC /* compiler */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4BBF21C4017F00CFBDEC /* swift_generator.h */,
+				14AA4BC021C4017F00CFBDEC /* swift_field.cc */,
+				14AA4BC121C4017F00CFBDEC /* main.cc */,
+				14AA4BC221C4017F00CFBDEC /* swift_helpers.h */,
+				14AA4BC321C4017F00CFBDEC /* swift_enum.h */,
+				14AA4BC421C4017F00CFBDEC /* swift_generator.cc */,
+				14AA4BC521C4017F00CFBDEC /* swift_extension.cc */,
+				14AA4BC621C4017F00CFBDEC /* swift_message.cc */,
+				14AA4BC721C4017F00CFBDEC /* swift_file.cc */,
+				14AA4BC821C4017F00CFBDEC /* swift_field.h */,
+				14AA4BC921C4017F00CFBDEC /* swift_oneof.cc */,
+				14AA4BCA21C4017F00CFBDEC /* google */,
+				14AA4C0221C4017F00CFBDEC /* swift_extension.h */,
+				14AA4C0321C4017F00CFBDEC /* swift_map_field.h */,
+				14AA4C0421C4017F00CFBDEC /* swift_primitive_field.cc */,
+				14AA4C0521C4017F00CFBDEC /* swift_primitive_field.h */,
+				14AA4C0621C4017F00CFBDEC /* tests */,
+				14AA4C0B21C4017F00CFBDEC /* swift_enum.cc */,
+				14AA4C0C21C4017F00CFBDEC /* swift_enum_field.cc */,
+				14AA4C0D21C4017F00CFBDEC /* swift_file.h */,
+				14AA4C0E21C4017F00CFBDEC /* Makefile.am */,
+				14AA4C0F21C4017F00CFBDEC /* react_native */,
+				14AA4C1C21C4017F00CFBDEC /* swift_message.h */,
+				14AA4C1D21C4017F00CFBDEC /* swift_helpers.cc */,
+				14AA4C1E21C4017F00CFBDEC /* swift_oneof.h */,
+				14AA4C1F21C4017F00CFBDEC /* swift_map_field.cc */,
+				14AA4C2021C4017F00CFBDEC /* RESERVEDWORDS */,
+				14AA4C2121C4017F00CFBDEC /* swift_message_field.h */,
+				14AA4C2221C4017F00CFBDEC /* swift_enum_field.h */,
+				14AA4C2321C4017F00CFBDEC /* swift_message_field.cc */,
+			);
+			path = compiler;
+			sourceTree = "<group>";
+		};
+		14AA4BCA21C4017F00CFBDEC /* google */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4BCB21C4017F00CFBDEC /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		14AA4BCB21C4017F00CFBDEC /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4BCC21C4017F00CFBDEC /* unittest_no_field_presence.proto */,
+				14AA4BCD21C4017F00CFBDEC /* map_proto2_unittest.proto */,
+				14AA4BCE21C4017F00CFBDEC /* stubs */,
+				14AA4BD221C4017F00CFBDEC /* timestamp.proto */,
+				14AA4BD321C4017F00CFBDEC /* field_mask.proto */,
+				14AA4BD421C4017F00CFBDEC /* descriptor.pb.cc */,
+				14AA4BD521C4017F00CFBDEC /* unittest_optimize_for.proto */,
+				14AA4BD621C4017F00CFBDEC /* unittest_drop_unknown_fields.proto */,
+				14AA4BD721C4017F00CFBDEC /* map_unittest.proto */,
+				14AA4BD821C4017F00CFBDEC /* unknown_enum_test.proto */,
+				14AA4BD921C4017F00CFBDEC /* unittest_well_known_types.proto */,
+				14AA4BDA21C4017F00CFBDEC /* unittest_enormous_descriptor.proto */,
+				14AA4BDB21C4017F00CFBDEC /* unittest_embed_optimize_for.proto */,
+				14AA4BDC21C4017F00CFBDEC /* unittest_arena.proto */,
+				14AA4BDD21C4017F00CFBDEC /* unittest_threading.proto */,
+				14AA4BDE21C4017F00CFBDEC /* unittest_preserve_unknown_enum.proto */,
+				14AA4BDF21C4017F00CFBDEC /* swift-descriptor.proto */,
+				14AA4BE021C4017F00CFBDEC /* unittest_lite.proto */,
+				14AA4BE121C4017F00CFBDEC /* unittest_proto3_arena.proto */,
+				14AA4BE221C4017F00CFBDEC /* api.proto */,
+				14AA4BE321C4017F00CFBDEC /* unittest_import.proto */,
+				14AA4BE421C4017F00CFBDEC /* duration.proto */,
+				14AA4BE521C4017F00CFBDEC /* plugin.proto */,
+				14AA4BE621C4017F00CFBDEC /* unittest_struct.proto */,
+				14AA4BE721C4017F00CFBDEC /* struct.proto */,
+				14AA4BE821C4017F00CFBDEC /* unittest_no_generic_services.proto */,
+				14AA4BE921C4017F00CFBDEC /* wrappers.proto */,
+				14AA4BEA21C4017F00CFBDEC /* source_context.proto */,
+				14AA4BEB21C4017F00CFBDEC /* any.proto */,
+				14AA4BEC21C4017F00CFBDEC /* descriptor.pb.h */,
+				14AA4BED21C4017F00CFBDEC /* unittest_import_public.proto */,
+				14AA4BEE21C4017F00CFBDEC /* unittest.proto */,
+				14AA4BEF21C4017F00CFBDEC /* unittest_maps.proto */,
+				14AA4BF021C4017F00CFBDEC /* unittest_no_arena_import.proto */,
+				14AA4BF121C4017F00CFBDEC /* swift-descriptor.pb.h */,
+				14AA4BF221C4017F00CFBDEC /* unittest_no_arena.proto */,
+				14AA4BF321C4017F00CFBDEC /* unittest_empty.proto */,
+				14AA4BF421C4017F00CFBDEC /* unittest_error_type.proto */,
+				14AA4BF521C4017F00CFBDEC /* unittest_import_public_lite.proto */,
+				14AA4BF621C4017F00CFBDEC /* map_lite_unittest.proto */,
+				14AA4BF721C4017F00CFBDEC /* type.proto */,
+				14AA4BF821C4017F00CFBDEC /* unittest_mset.proto */,
+				14AA4BF921C4017F00CFBDEC /* unittest_import_lite.proto */,
+				14AA4BFA21C4017F00CFBDEC /* performance.proto */,
+				14AA4BFB21C4017F00CFBDEC /* empty.proto */,
+				14AA4BFC21C4017F00CFBDEC /* swift-descriptor.pb.cc */,
+				14AA4BFD21C4017F00CFBDEC /* unittest_lite_imports_nonlite.proto */,
+				14AA4BFE21C4017F00CFBDEC /* descriptor.proto */,
+				14AA4BFF21C4017F00CFBDEC /* .dirstamp */,
+				14AA4C0021C4017F00CFBDEC /* any_test.proto */,
+				14AA4C0121C4017F00CFBDEC /* unittest_custom_options.proto */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		14AA4BCE21C4017F00CFBDEC /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4BCF21C4017F00CFBDEC /* substitute.h */,
+				14AA4BD021C4017F00CFBDEC /* strutil.h */,
+				14AA4BD121C4017F00CFBDEC /* hash.h */,
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
+		14AA4C0621C4017F00CFBDEC /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C0721C4017F00CFBDEC /* baz */,
+				14AA4C0921C4017F00CFBDEC /* bar */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		14AA4C0721C4017F00CFBDEC /* baz */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C0821C4017F00CFBDEC /* foo.proto */,
+			);
+			path = baz;
+			sourceTree = "<group>";
+		};
+		14AA4C0921C4017F00CFBDEC /* bar */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C0A21C4017F00CFBDEC /* foo.proto */,
+			);
+			path = bar;
+			sourceTree = "<group>";
+		};
+		14AA4C0F21C4017F00CFBDEC /* react_native */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C1021C4017F00CFBDEC /* swift_generator.h */,
+				14AA4C1121C4017F00CFBDEC /* main.cc */,
+				14AA4C1221C4017F00CFBDEC /* swift_react.cc */,
+				14AA4C1321C4017F00CFBDEC /* swift_generator.cc */,
+				14AA4C1421C4017F00CFBDEC /* swift_file.cc */,
+				14AA4C1521C4017F00CFBDEC /* swift_helpers_react.h */,
+				14AA4C1621C4017F00CFBDEC /* swift_react.h */,
+				14AA4C1721C4017F00CFBDEC /* swift_file.h */,
+				14AA4C1821C4017F00CFBDEC /* swift_react_enums.cc */,
+				14AA4C1921C4017F00CFBDEC /* swift_react_enums.h */,
+				14AA4C1A21C4017F00CFBDEC /* swift_helpers_react.cc */,
+				14AA4C1B21C4017F00CFBDEC /* .dirstamp */,
+			);
+			path = react_native;
+			sourceTree = "<group>";
+		};
+		14AA4C2721C4017F00CFBDEC /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				14AA4C2821C4017F00CFBDEC /* makeDescriptor.sh */,
+				14AA4C2921C4017F00CFBDEC /* build.sh */,
+				14AA4C2A21C4017F00CFBDEC /* makeTests.sh */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 		70AA51D41DFD2EAB00A553DA = {
@@ -156,12 +730,50 @@
 			mainGroup = 70AA51D41DFD2EAB00A553DA;
 			productRefGroup = 70AA51DE1DFD2EAB00A553DA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 14AA4B8021C4017F00CFBDEC /* Products */;
+					ProjectRef = 14AA4B7F21C4017F00CFBDEC /* PBCompiler.xcodeproj */;
+				},
+				{
+					ProductGroup = 14AA4B5B21C4017F00CFBDEC /* Products */;
+					ProjectRef = 14AA4B5A21C4017F00CFBDEC /* protobuf-swift.xcodeproj */;
+				},
+				{
+					ProductGroup = 14AA4B6121C4017F00CFBDEC /* Products */;
+					ProjectRef = 14AA4B6021C4017F00CFBDEC /* ProtocolBuffers.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				70AA51DC1DFD2EAB00A553DA /* LiveBroadcastServer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		14AA4C3321C4017F00CFBDEC /* PBCompiler */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PBCompiler;
+			remoteRef = 14AA4C3221C4017F00CFBDEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14AA4C3A21C4017F00CFBDEC /* ProtocolBufferTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProtocolBufferTests.xctest;
+			remoteRef = 14AA4C3921C4017F00CFBDEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14AA4C3C21C4017F00CFBDEC /* ProtocolBuffers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProtocolBuffers.framework;
+			remoteRef = 14AA4C3B21C4017F00CFBDEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		70AA51DB1DFD2EAB00A553DA /* Resources */ = {
