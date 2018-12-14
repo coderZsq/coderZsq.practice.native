@@ -48,6 +48,11 @@ extension ServerManager {
 
 extension ServerManager: ClientManagerDelegate {
     
+    func removeClient(_ client: ClientManager) {
+        guard let index = clientManagers.index(of: client) else { return }
+        clientManagers.remove(at: index)
+    }
+    
     func sendMsgToClient(_ data: Data) {
         for manager in clientManagers {
             manager.tcpClient.send(data: data)

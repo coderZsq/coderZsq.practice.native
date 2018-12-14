@@ -26,6 +26,7 @@ class Socket: NSObject {
     }()
     init(addr: String, port: Int) {
         tcpClient = TCPClient(addr: addr, port: port)
+        super.init()
     }
 }
 
@@ -37,10 +38,8 @@ extension Socket {
     
     func startReadMessage() {
         DispatchQueue.global().async {
-            
             while true {
-                print(self.tcpClient.read(1))
-                guard let lengthMsg = self.tcpClient.read(4) else {
+                guard let lengthMsg = self.tcpClient.read(4, timeout: 1) else {
                     continue
                 }
                 let headData = Data(bytes: lengthMsg, count: 4)
