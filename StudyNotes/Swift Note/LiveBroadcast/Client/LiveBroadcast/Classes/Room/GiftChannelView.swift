@@ -28,6 +28,8 @@ class GiftChannelView: UIView, NibLoadable {
     fileprivate var currentNumber = 0
     var state = GiftChannelViewState.idle
     
+    var completionCallback: ((GiftChannelView) -> Void)?
+    
     var giftChannelModel: GiftChannelModel? {
         didSet {
             guard let giftChannelModel = giftChannelModel  else {
@@ -74,6 +76,8 @@ extension GiftChannelView {
 extension GiftChannelView {
     
     fileprivate func performAnimation() {
+        digitLabel.alpha = 1.0
+        digitLabel.text = " x1 "
         UIView.animate(withDuration: 0.25, animations: {
             self.alpha = 1.0
             self.frame.origin.x = 0
@@ -84,7 +88,7 @@ extension GiftChannelView {
     
     fileprivate func performDigitAnimation() {
         currentNumber += 1
-        digitLabel.text = "x\(currentNumber)"
+        digitLabel.text = " x\(currentNumber) "
         digitLabel.showDigitAnimation {
             if self.cacheNumber > 0 {
                 self.cacheNumber -= 1
@@ -102,9 +106,15 @@ extension GiftChannelView {
             self.frame.origin.x = UIScreen.main.bounds.width
             self.alpha = 0.0
         }) { (isFinished) in
+            self.currentNumber = 0
+            self.cacheNumber = 0
             self.giftChannelModel = nil
             self.frame.origin.x = -self.frame.width
             self.state = .idle
+            self.digitLabel.alpha = 0.0
+            if let completionCallback = self.completionCallback {
+                completionCallback(self)
+            }
         }
     }
     

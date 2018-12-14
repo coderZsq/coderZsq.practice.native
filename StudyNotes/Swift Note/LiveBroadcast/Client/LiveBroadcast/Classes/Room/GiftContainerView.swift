@@ -35,12 +35,26 @@ extension GiftContainerView {
         let x : CGFloat = 0
         for i in 0..<kChannelCount {
             let y : CGFloat = (h + kChannelMargin) * CGFloat(i)
-            
             let channelView = GiftChannelView.loadFromNib()
             channelView.frame = CGRect(x: x, y: y, width: w, height: h)
             channelView.alpha = 0.0
             addSubview(channelView)
             channelViews.append(channelView)
+            channelView.completionCallback = { channelView in
+                guard self.cacheGiftChannelModels.count != 0 else {
+                    return
+                }
+                let firstGiftChannelModel = self.cacheGiftChannelModels.first!
+                self.cacheGiftChannelModels.removeFirst()
+                channelView.giftChannelModel = firstGiftChannelModel
+                for i in (0..<self.cacheGiftChannelModels.count).reversed() {
+                    let giftChannelModel = self.cacheGiftChannelModels[i]
+                    if giftChannelModel.isEqual(firstGiftChannelModel) {
+                        channelView.addOnceToCache()
+                        self.cacheGiftChannelModels.remove(at: i)
+                    }
+                }
+            }
         }
     }
     
@@ -51,9 +65,11 @@ extension GiftContainerView {
     func showGiftChannelView(_ giftChannelModel: GiftChannelModel) {
         if let channelView = checkUsingChannelView(giftChannelModel) {
             channelView.addOnceToCache()
+            return
         }
         if let channelView = checkIdleChanelView() {
             channelView.giftChannelModel = giftChannelModel
+            return
         }
         cacheGiftChannelModels.append(giftChannelModel)
     }

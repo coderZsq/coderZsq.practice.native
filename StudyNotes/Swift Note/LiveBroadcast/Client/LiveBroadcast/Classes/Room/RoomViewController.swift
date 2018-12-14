@@ -32,6 +32,11 @@ class RoomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        giftContainerView.frame = CGRect(x: 0, y: 100, width: 250, height: 90)
+        giftContainerView.backgroundColor = UIColor.lightGray
+        view.addSubview(giftContainerView)
+        
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         if socket.connectServer() {
