@@ -1,0 +1,17 @@
+language: objective-c
+osx_image: xcode10
+before_install:
+  - brew update
+  - brew unlink python
+  - brew install protobuf
+#  - brew uninstall xctool
+#  - brew install xctool --HEAD
+
+install:
+  - scripts/build.sh
+  - scripts/makeTests.sh
+script:
+  - xcodebuild test -project ./ProtocolBuffers.xcodeproj -scheme "ProtocolBuffers" -destination 'platform=macos'
+#  - xctool -project ./plugin/ProtocolBuffers/ProtocolBuffers.xcodeproj -sdk iphonesimulator -scheme ProtocolBuffers build test
+#  - xctool -project ./plugin/ProtocolBuffers/ProtocolBuffers.xcodeproj -scheme "ProtocolBuffers(OSX)" build test
+#  - xctool -project ./plugin/ProtocolBuffers/ProtocolBuffers.xcodeproj -sdk appletvsimulator -scheme "ProtocolBuffers(tvOS)" build test

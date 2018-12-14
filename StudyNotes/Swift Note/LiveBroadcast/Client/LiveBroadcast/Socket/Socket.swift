@@ -37,7 +37,9 @@ extension Socket {
     
     func startReadMessage() {
         DispatchQueue.global().async {
+            
             while true {
+                print(self.tcpClient.read(1))
                 guard let lengthMsg = self.tcpClient.read(4) else {
                     continue
                 }

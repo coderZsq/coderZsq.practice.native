@@ -1,0 +1,273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		14FAF20E21C35114000DB5D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FAF1EB21C35114000DB5D1 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBufferTests::Product";
+			remoteInfo = ProtocolBufferTests;
+		};
+		14FAF21021C35114000DB5D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FAF1EB21C35114000DB5D1 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "ProtocolBuffers::ProtocolBuffers::Product";
+			remoteInfo = ProtocolBuffers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14FAF1E021C35114000DB5D1 /* ProtocolBuffers-Swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolBuffers-Swift.podspec"; sourceTree = "<group>"; };
+		14FAF1E121C35114000DB5D1 /* protobuf-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "protobuf-swift.xcodeproj"; sourceTree = "<group>"; };
+		14FAF1E421C35114000DB5D1 /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		14FAF1E521C35114000DB5D1 /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		14FAF1E621C35114000DB5D1 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		14FAF1E721C35114000DB5D1 /* ltmain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ltmain.sh; sourceTree = "<group>"; };
+		14FAF1E821C35114000DB5D1 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		14FAF1E921C35114000DB5D1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		14FAF1EA21C35114000DB5D1 /* configure */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		14FAF1EB21C35114000DB5D1 /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProtocolBuffers.xcodeproj; sourceTree = "<group>"; };
+		14FAF1EE21C35114000DB5D1 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Source; sourceTree = "<group>"; };
+		14FAF1EF21C35114000DB5D1 /* protobuf-swift.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "protobuf-swift.rb"; sourceTree = "<group>"; };
+		14FAF1F021C35114000DB5D1 /* plugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plugin; sourceTree = "<group>"; };
+		14FAF1F121C35114000DB5D1 /* config.h.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		14FAF1F221C35114000DB5D1 /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		14FAF1F321C35114000DB5D1 /* depcomp */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		14FAF1F421C35114000DB5D1 /* missing */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		14FAF1F521C35114000DB5D1 /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		14FAF1F621C35114000DB5D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14FAF1F721C35114000DB5D1 /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		14FAF1F821C35114000DB5D1 /* compile */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = compile; sourceTree = "<group>"; };
+		14FAF1F921C35114000DB5D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		14FAF1FA21C35114000DB5D1 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		14FAF1FB21C35114000DB5D1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		14FAF1FC21C35114000DB5D1 /* m4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = m4; sourceTree = "<group>"; };
+		14FAF1FD21C35114000DB5D1 /* ISSUE_TEMPLATE */ = {isa = PBXFileReference; lastKnownFileType = text; path = ISSUE_TEMPLATE; sourceTree = "<group>"; };
+		14FAF1FE21C35114000DB5D1 /* config.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.log; sourceTree = "<group>"; };
+		14FAF1FF21C35114000DB5D1 /* protobuf-swift 2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "protobuf-swift 2.xcodeproj"; sourceTree = "<group>"; };
+		14FAF20221C35114000DB5D1 /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		14FAF20321C35114000DB5D1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		14FAF20421C35114000DB5D1 /* aclocal.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		14FAF20521C35114000DB5D1 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		14FAF20621C35114000DB5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FAF20721C35114000DB5D1 /* autogen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autogen.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		14FAF1DA21C35114000DB5D1 = {
+			isa = PBXGroup;
+			children = (
+				14FAF1E021C35114000DB5D1 /* ProtocolBuffers-Swift.podspec */,
+				14FAF1E121C35114000DB5D1 /* protobuf-swift.xcodeproj */,
+				14FAF1E421C35114000DB5D1 /* install-sh */,
+				14FAF1E521C35114000DB5D1 /* configure.ac */,
+				14FAF1E621C35114000DB5D1 /* .swift-version */,
+				14FAF1E721C35114000DB5D1 /* ltmain.sh */,
+				14FAF1E821C35114000DB5D1 /* .DS_Store */,
+				14FAF1E921C35114000DB5D1 /* LICENSE */,
+				14FAF1EA21C35114000DB5D1 /* configure */,
+				14FAF1EB21C35114000DB5D1 /* ProtocolBuffers.xcodeproj */,
+				14FAF1EE21C35114000DB5D1 /* Source */,
+				14FAF1EF21C35114000DB5D1 /* protobuf-swift.rb */,
+				14FAF1F021C35114000DB5D1 /* plugin */,
+				14FAF1F121C35114000DB5D1 /* config.h.in */,
+				14FAF1F221C35114000DB5D1 /* config.guess */,
+				14FAF1F321C35114000DB5D1 /* depcomp */,
+				14FAF1F421C35114000DB5D1 /* missing */,
+				14FAF1F521C35114000DB5D1 /* Makefile.am */,
+				14FAF1F621C35114000DB5D1 /* README.md */,
+				14FAF1F721C35114000DB5D1 /* config.sub */,
+				14FAF1F821C35114000DB5D1 /* compile */,
+				14FAF1F921C35114000DB5D1 /* .gitignore */,
+				14FAF1FA21C35114000DB5D1 /* scripts */,
+				14FAF1FB21C35114000DB5D1 /* Package.swift */,
+				14FAF1FC21C35114000DB5D1 /* m4 */,
+				14FAF1FD21C35114000DB5D1 /* ISSUE_TEMPLATE */,
+				14FAF1FE21C35114000DB5D1 /* config.log */,
+				14FAF1FF21C35114000DB5D1 /* protobuf-swift 2.xcodeproj */,
+				14FAF20221C35114000DB5D1 /* Makefile.in */,
+				14FAF20321C35114000DB5D1 /* .travis.yml */,
+				14FAF20421C35114000DB5D1 /* aclocal.m4 */,
+				14FAF20521C35114000DB5D1 /* CREDITS */,
+				14FAF20621C35114000DB5D1 /* Info.plist */,
+				14FAF20721C35114000DB5D1 /* autogen.sh */,
+			);
+			sourceTree = "<group>";
+		};
+		14FAF1E221C35114000DB5D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14FAF1EC21C35114000DB5D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14FAF20F21C35114000DB5D1 /* ProtocolBufferTests.xctest */,
+				14FAF21121C35114000DB5D1 /* ProtocolBuffers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14FAF20021C35114000DB5D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		14FAF1DF21C35114000DB5D1 /* protobuf-swift */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 14FAF21221C35114000DB5D1 /* Build configuration list for PBXLegacyTarget "protobuf-swift" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/zhushuangquan/Native Drive/GitHub/coderZsq.practice.native.swift/StudyNotes/Swift Note/LiveBroadcast/Server/LiveBroadcastServer/protobuf-swift";
+			dependencies = (
+			);
+			name = "protobuf-swift";
+			passBuildSettingsInEnvironment = 1;
+			productName = "protobuf-swift";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		14FAF1DB21C35114000DB5D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 14FAF1DE21C35114000DB5D1 /* Build configuration list for PBXProject "protobuf-swift 3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14FAF1DA21C35114000DB5D1;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 14FAF20021C35114000DB5D1 /* Products */;
+					ProjectRef = 14FAF1FF21C35114000DB5D1 /* protobuf-swift 2.xcodeproj */;
+				},
+				{
+					ProductGroup = 14FAF1E221C35114000DB5D1 /* Products */;
+					ProjectRef = 14FAF1E121C35114000DB5D1 /* protobuf-swift.xcodeproj */;
+				},
+				{
+					ProductGroup = 14FAF1EC21C35114000DB5D1 /* Products */;
+					ProjectRef = 14FAF1EB21C35114000DB5D1 /* ProtocolBuffers.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				14FAF1DF21C35114000DB5D1 /* protobuf-swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		14FAF20F21C35114000DB5D1 /* ProtocolBufferTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProtocolBufferTests.xctest;
+			remoteRef = 14FAF20E21C35114000DB5D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14FAF21121C35114000DB5D1 /* ProtocolBuffers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProtocolBuffers.framework;
+			remoteRef = 14FAF21021C35114000DB5D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin XCBuildConfiguration section */
+		14FAF1DC21C35114000DB5D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		14FAF1DD21C35114000DB5D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		14FAF21321C35114000DB5D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "protobuf-swift";
+			};
+			name = Debug;
+		};
+		14FAF21421C35114000DB5D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "protobuf-swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14FAF1DE21C35114000DB5D1 /* Build configuration list for PBXProject "protobuf-swift 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FAF1DC21C35114000DB5D1 /* Debug */,
+				14FAF1DD21C35114000DB5D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14FAF21221C35114000DB5D1 /* Build configuration list for PBXLegacyTarget "protobuf-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FAF21321C35114000DB5D1 /* Debug */,
+				14FAF21421C35114000DB5D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14FAF1DB21C35114000DB5D1 /* Project object */;
+}
