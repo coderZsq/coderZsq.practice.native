@@ -17,10 +17,52 @@
                     <view key="view" contentMode="scaleToFill" id="KxI-9c-OoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-ar-RQ6">
+                                <rect key="frame" x="84.5" y="218.5" width="206" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-8n-diX">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="开始采集"/>
+                                        <connections>
+                                            <action selector="startCapturing:" destination="Bkg-hO-daD" eventType="touchUpInside" id="MZ8-fa-Uw6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czR-u6-lhi">
+                                        <rect key="frame" x="72" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="停止采集"/>
+                                        <connections>
+                                            <action selector="stopCapturing:" destination="Bkg-hO-daD" eventType="touchUpInside" id="Dd1-RE-yBg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8K-3U-foq">
+                                        <rect key="frame" x="144" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="翻转镜头"/>
+                                        <connections>
+                                            <action selector="rotateCamera:" destination="Bkg-hO-daD" eventType="touchUpInside" id="PmK-N4-A7n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-ei-VLk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hjy-ei-VLk" firstAttribute="leading" secondItem="Rng-lc-6al" secondAttribute="leading" id="1QK-2M-8nx"/>
+                            <constraint firstItem="Hjy-ei-VLk" firstAttribute="top" secondItem="KxI-9c-OoL" secondAttribute="top" id="YiW-Mh-6Ra"/>
+                            <constraint firstItem="ZMm-ar-RQ6" firstAttribute="centerY" secondItem="KxI-9c-OoL" secondAttribute="centerY" constant="-100" id="alC-Ah-jk0"/>
+                            <constraint firstItem="ZMm-ar-RQ6" firstAttribute="centerX" secondItem="KxI-9c-OoL" secondAttribute="centerX" id="e4y-ey-0j0"/>
+                            <constraint firstItem="Rng-lc-6al" firstAttribute="trailing" secondItem="Hjy-ei-VLk" secondAttribute="trailing" id="pFw-Eq-5OU"/>
+                            <constraint firstItem="Rng-lc-6al" firstAttribute="bottom" secondItem="Hjy-ei-VLk" secondAttribute="bottom" id="yxw-SE-ZqF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rng-lc-6al"/>
                     </view>
                     <navigationItem key="navigationItem" id="4zN-qx-Lp7"/>
+                    <connections>
+                        <outlet property="imageView" destination="Hjy-ei-VLk" id="kjg-7A-sdM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbN-KU-g16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

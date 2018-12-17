@@ -9,5 +9,5 @@ target 'LiveBroadcast' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'ProtocolBuffers-Swift'
-  
+  pod 'GPUImage'
 end

@@ -33,6 +33,7 @@
 		1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614221BFAC79008BBA2A /* RoomViewController.swift */; };
 		1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1467614321BFAC79008BBA2A /* RoomViewController.xib */; };
 		1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614821BFAF55008BBA2A /* PageCollectionView.swift */; };
+		148C93C521C743A1004140E8 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C93C421C743A1004140E8 /* UIImageView+Extension.swift */; };
 		149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905421C0B24700852311 /* PageCollectionViewLayout.swift */; };
 		149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905821C0E82900852311 /* ChatToolsView.swift */; };
 		149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C905921C0E82900852311 /* ChatToolsView.xib */; };
@@ -109,6 +110,7 @@
 		1467614221BFAC79008BBA2A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		1467614321BFAC79008BBA2A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		1467614821BFAF55008BBA2A /* PageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
+		148C93C421C743A1004140E8 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		149C905421C0B24700852311 /* PageCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewLayout.swift; sourceTree = "<group>"; };
 		149C905821C0E82900852311 /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
 		149C905921C0E82900852311 /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				145FCB2C21BE051C005FEB77 /* UIColor+Extension.swift */,
+				148C93C421C743A1004140E8 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -520,12 +523,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ProtocolBuffers-Swift/ProtocolBuffers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtocolBuffers.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,6 +566,7 @@
 			files = (
 				1440102421C234F400235D67 /* IMMessage.proto in Sources */,
 				149C906D21C0F56700852311 /* EmoticonViewModel.swift in Sources */,
+				148C93C521C743A1004140E8 /* UIImageView+Extension.swift in Sources */,
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				14FAF49A21C39ABA000DB5D1 /* GiftChannelView.swift in Sources */,
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
