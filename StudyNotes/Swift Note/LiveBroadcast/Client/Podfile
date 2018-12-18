@@ -11,4 +11,6 @@ target 'LiveBroadcast' do
   pod 'ProtocolBuffers-Swift'
 #  pod 'GPUImage'
   pod 'LFLiveKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

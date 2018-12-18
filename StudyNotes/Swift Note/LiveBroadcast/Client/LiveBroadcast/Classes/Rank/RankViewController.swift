@@ -24,15 +24,15 @@ class RankViewController: UIViewController {
     fileprivate var movieOutput: AVCaptureMovieFileOutput?
     fileprivate var fileURL: URL? {
         let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/abc.mp4"
-        do {
-            if FileManager.default.fileExists(atPath: filePath) {
-                try FileManager.default.removeItem(atPath: filePath)
-            }
+//        do {
+//            if FileManager.default.fileExists(atPath: filePath) {
+//                try FileManager.default.removeItem(atPath: filePath)
+//            }
             return URL(fileURLWithPath: filePath)
-        } catch {
-            print(error)
-            return nil
-        }
+//        } catch {
+//            print(error)
+//            return nil
+//        }
     }
 
     override func viewDidLoad() {
@@ -76,10 +76,10 @@ extension RankViewController {
 //        })
 
         session.startRunning()
+        setupPreviewLayer()
         if let fileURL = fileURL {
             movieOutput?.startRecording(to: fileURL, recordingDelegate: self)
         }
-        setupPreviewLayer()
     }
     
     @IBAction func stopCapturing(_ sender: UIButton) {
