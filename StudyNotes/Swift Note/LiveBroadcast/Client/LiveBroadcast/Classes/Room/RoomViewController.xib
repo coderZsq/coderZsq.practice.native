@@ -146,25 +146,25 @@
                     <state key="normal" image="zhibo_btn_people"/>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ard-mt-vzL">
-                    <rect key="frame" x="108.5" y="468.5" width="158" height="30"/>
+                    <rect key="frame" x="115.5" y="468.5" width="144" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HA-2A-4Et">
-                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                            <state key="normal" title="用户A"/>
                             <connections>
                                 <action selector="a:" destination="-1" eventType="touchUpInside" id="k81-Rc-LJG"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjq-wi-b8t">
-                            <rect key="frame" x="56" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                            <rect key="frame" x="51" y="0.0" width="41" height="30"/>
+                            <state key="normal" title="用户B"/>
                             <connections>
                                 <action selector="b:" destination="-1" eventType="touchUpInside" id="veL-cS-s6G"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqt-Vz-qk1">
-                            <rect key="frame" x="112" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                            <rect key="frame" x="102" y="0.0" width="42" height="30"/>
+                            <state key="normal" title="用户C"/>
                             <connections>
                                 <action selector="c:" destination="-1" eventType="touchUpInside" id="HkO-NA-Kkq"/>
                             </connections>

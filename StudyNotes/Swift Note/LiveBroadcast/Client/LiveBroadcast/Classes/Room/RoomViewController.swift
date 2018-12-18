@@ -24,6 +24,7 @@ class RoomViewController: UIViewController {
     fileprivate lazy var chatContentView = ChatContentView.loadFromNib()
     fileprivate lazy var socket = Socket(addr: "0.0.0.0", port: 6666)
     fileprivate var heartBeatTimer: Timer?
+    var anchor: AnchorModel?
     
     deinit {
         heartBeatTimer?.invalidate()
@@ -33,9 +34,10 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        giftContainerView.frame = CGRect(x: 0, y: 100, width: 250, height: 90)
-        giftContainerView.backgroundColor = UIColor.lightGray
+        giftContainerView.frame = CGRect(x: 100, y: 100, width: 250, height: 90)
+        giftContainerView.backgroundColor = UIColor.clear
         view.addSubview(giftContainerView)
+        loadAnchorAddress()
         
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -63,6 +65,13 @@ class RoomViewController: UIViewController {
     }
 }
 
+extension RoomViewController {
+    
+    fileprivate func loadAnchorAddress() {
+        
+    }
+    
+}
 
 extension RoomViewController {
     
@@ -198,19 +207,19 @@ extension RoomViewController: SocketDelegate {
 extension RoomViewController {
     
     @IBAction func a(_ sender: Any) {
-        let gift1 = GiftChannelModel(senderName: "SSS", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        let gift1 = GiftChannelModel(senderName: "用户A", senderURL: "", giftName: "礼物1", giftURL: "")
         giftContainerView.showGiftChannelView(gift1)
     }
     
     
     @IBAction func b(_ sender: Any) {
-        let gift1 = GiftChannelModel(senderName: "SSS1", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        let gift1 = GiftChannelModel(senderName: "用户B", senderURL: "", giftName: "礼物2", giftURL: "")
         giftContainerView.showGiftChannelView(gift1)
     }
     
     
     @IBAction func c(_ sender: Any) {
-        let gift1 = GiftChannelModel(senderName: "SSS2", senderURL: "DDD", giftName: "233", giftURL: "DDD")
+        let gift1 = GiftChannelModel(senderName: "用户C", senderURL: "", giftName: "礼物3", giftURL: "")
         giftContainerView.showGiftChannelView(gift1)
     }
     
