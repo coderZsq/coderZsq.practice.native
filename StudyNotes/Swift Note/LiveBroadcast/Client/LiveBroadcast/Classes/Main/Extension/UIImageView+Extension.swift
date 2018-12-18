@@ -7,30 +7,30 @@
 //
 
 import UIKit
-import GPUImage
+//import GPUImage
 
 extension UIImageView {
     
-    func blurImageNamed(_ name: String) {
-        guard let sourceImage = UIImage(named: name) else { return }
-        let picProcess = GPUImagePicture(image: sourceImage)
-        let blurFilter = GPUImageGaussianBlurFilter()
-        blurFilter.texelSpacingMultiplier = 5
-        blurFilter.blurRadiusInPixels = 5
-        picProcess?.addTarget(blurFilter)
-        blurFilter.useNextFrameForImageCapture()
-        picProcess?.processImage()
-        let newImage = blurFilter.imageFromCurrentFramebuffer()
-        self.image = newImage
-    }
+//    func blurImageNamed(_ name: String) {
+//        guard let sourceImage = UIImage(named: name) else { return }
+//        let picProcess = GPUImagePicture(image: sourceImage)
+//        let blurFilter = GPUImageGaussianBlurFilter()
+//        blurFilter.texelSpacingMultiplier = 5
+//        blurFilter.blurRadiusInPixels = 5
+//        picProcess?.addTarget(blurFilter)
+//        blurFilter.useNextFrameForImageCapture()
+//        picProcess?.processImage()
+//        let newImage = blurFilter.imageFromCurrentFramebuffer()
+//        self.image = newImage
+//    }
     
-    func processImageNamed(_ name: String, filter: GPUImageFilter) {
-        let picProcess = GPUImagePicture(image: image)
-        picProcess?.addTarget(filter)
-        filter.useNextFrameForImageCapture()
-        picProcess?.processImage()
-        self.image = filter.imageFromCurrentFramebuffer()
-    }
+//    func processImageNamed(_ name: String, filter: GPUImageFilter) {
+//        let picProcess = GPUImagePicture(image: image)
+//        picProcess?.addTarget(filter)
+//        filter.useNextFrameForImageCapture()
+//        picProcess?.processImage()
+//        self.image = filter.imageFromCurrentFramebuffer()
+//    }
     
     func gifImageNamed(_ name: String) {
         guard let path = Bundle.main.path(forResource: name, ofType: "gif") else {

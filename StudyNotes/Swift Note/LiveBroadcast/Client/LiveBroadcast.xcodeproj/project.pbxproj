@@ -68,6 +68,8 @@
 		149C90E521C20D2600852311 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E021C20D2600852311 /* ytcpsocket.c */; };
 		149C90E621C20D2600852311 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E121C20D2600852311 /* ysocket.swift */; };
 		149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C90E221C20D2600852311 /* ytcpsocket.swift */; };
+		14F34DA621C8CD7300FB5A17 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F34DA521C8CD7300FB5A17 /* DiscoverViewController.swift */; };
+		14F34DA921C8E0DF00FB5A17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F34DA821C8E0DF00FB5A17 /* ProfileViewController.swift */; };
 		14FAF48E21C380D1000DB5D1 /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF48D21C380D1000DB5D1 /* ChatContentView.swift */; };
 		14FAF49021C380E9000DB5D1 /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */; };
 		14FAF49321C38506000DB5D1 /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF49121C38506000DB5D1 /* ChatContentCell.swift */; };
@@ -145,6 +147,8 @@
 		149C90E021C20D2600852311 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
 		149C90E121C20D2600852311 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
 		149C90E221C20D2600852311 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		14F34DA521C8CD7300FB5A17 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		14F34DA821C8E0DF00FB5A17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		14FAF48D21C380D1000DB5D1 /* ChatContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
 		14FAF48F21C380E9000DB5D1 /* ChatContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
 		14FAF49121C38506000DB5D1 /* ChatContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				1433FB5C21BA72BB00D24067 /* DiscoverViewController.storyboard */,
+				14F34DA521C8CD7300FB5A17 /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				1433FB6121BA739100D24067 /* ProfileViewController.storyboard */,
+				14F34DA821C8E0DF00FB5A17 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -523,15 +529,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveBroadcast/Pods-LiveBroadcast-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LFLiveKit/LFLiveKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ProtocolBuffers-Swift/ProtocolBuffers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LFLiveKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtocolBuffers.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +576,7 @@
 				142D692921BE674400669EAB /* AnchorViewController.swift in Sources */,
 				14FAF49A21C39ABA000DB5D1 /* GiftChannelView.swift in Sources */,
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
+				14F34DA921C8E0DF00FB5A17 /* ProfileViewController.swift in Sources */,
 				14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */,
 				149C909B21C1091300852311 /* GiftModel.swift in Sources */,
 				149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */,
@@ -599,6 +606,7 @@
 				149C908721C0FD1B00852311 /* NetworkTools.swift in Sources */,
 				149C90E321C20D2600852311 /* yudpsocket.c in Sources */,
 				145FCB2B21BE04F1005FEB77 /* NavigationController.swift in Sources */,
+				14F34DA621C8CD7300FB5A17 /* DiscoverViewController.swift in Sources */,
 				149C908A21C0FD4500852311 /* AnchorModel.swift in Sources */,
 				145FCB2D21BE051C005FEB77 /* UIColor+Extension.swift in Sources */,
 				149C906A21C0F51200852311 /* Emoticon.swift in Sources */,
@@ -772,6 +780,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -792,6 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.LiveBroadcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

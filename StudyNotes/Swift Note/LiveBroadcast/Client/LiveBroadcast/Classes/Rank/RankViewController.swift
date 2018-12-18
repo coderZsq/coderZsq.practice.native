@@ -8,63 +8,78 @@
 
 import UIKit
 import AVFoundation
-import GPUImage
+//import GPUImage
 
 class RankViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    fileprivate lazy var camera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: .front)
-    fileprivate lazy var camera2 = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1280x720.rawValue, cameraPosition: .back)
-    fileprivate lazy var filter = GPUImageBrightnessFilter()
+//    fileprivate lazy var camera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: .front)
+//    fileprivate lazy var camera2 = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1280x720.rawValue, cameraPosition: .back)
+//    fileprivate lazy var filter = GPUImageBrightnessFilter()
     
     fileprivate lazy var session = AVCaptureSession()
     fileprivate var videoOutput: AVCaptureVideoDataOutput?
     fileprivate var previewLayer: AVCaptureVideoPreviewLayer?
     fileprivate var videoInput: AVCaptureDeviceInput?
     fileprivate var movieOutput: AVCaptureMovieFileOutput?
+    fileprivate var fileURL: URL? {
+        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/abc.mp4"
+        do {
+            if FileManager.default.fileExists(atPath: filePath) {
+                try FileManager.default.removeItem(atPath: filePath)
+            }
+            return URL(fileURLWithPath: filePath)
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVideoInputOutput()
         setupAudioInputOutput()
-        setupPreviewLayer()
-        
+        setupMovieFileOutput()
+
 //        filter.brightness = 0.7
 //        camera?.addTarget(filter)
         
-        camera2?.outputImageOrientation = .portrait
-        camera2?.addTarget(filter)
-        camera2?.delegate = self
-        let showView = GPUImageView(frame: view.bounds)
-        view.insertSubview(showView, at: 0)
-        filter.addTarget(showView)
-        camera2?.startCapture()
+//        camera2?.outputImageOrientation = .portrait
+//        camera2?.addTarget(filter)
+//        camera2?.delegate = self
+//        let showView = GPUImageView(frame: view.bounds)
+//        view.insertSubview(showView, at: 0)
+//        filter.addTarget(showView)
+//        camera2?.startCapture()
     }
 
 }
 
-extension RankViewController: GPUImageVideoCameraDelegate {
-    
-    func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
-        print(#function, #line)
-    }
-    
-}
+//extension RankViewController: GPUImageVideoCameraDelegate {
+//
+//    func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
+//        print(#function, #line)
+//    }
+//
+//}
 
 extension RankViewController {
     
     @IBAction func startCapturing(_ sender: UIButton) {
         
-        camera?.capturePhotoAsImageProcessedUp(toFilter: filter, withCompletionHandler: { (image, error) in
-            DispatchQueue.main.async {
-                UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-                self.imageView.image = image
-                self.camera?.stopCapture()
-            }
-        })
-        
+//        camera?.capturePhotoAsImageProcessedUp(toFilter: filter, withCompletionHandler: { (image, error) in
+//            DispatchQueue.main.async {
+//                UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+//                self.imageView.image = image
+//                self.camera?.stopCapture()
+//            }
+//        })
+
         session.startRunning()
-        setupMovieFileOutput()
+        if let fileURL = fileURL {
+            movieOutput?.startRecording(to: fileURL, recordingDelegate: self)
+        }
+        setupPreviewLayer()
     }
     
     @IBAction func stopCapturing(_ sender: UIButton) {
@@ -139,9 +154,6 @@ extension RankViewController {
         if session.canAddOutput(fileOutput) {
             session.addOutput(fileOutput)
         }
-        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/abc.mp4"
-        let fileURL = URL(fileURLWithPath: filePath)
-        fileOutput.startRecording(to: fileURL, recordingDelegate: self)
     }
     
 }

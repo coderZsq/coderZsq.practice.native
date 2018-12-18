@@ -10,14 +10,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Discover View Controller-->
         <scene sceneID="Ls6-KG-ea2">
             <objects>
-                <viewController id="Uma-ey-1M3" sceneMemberID="viewController">
+                <viewController id="Uma-ey-1M3" customClass="DiscoverViewController" customModule="LiveBroadcast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ev5-uD-gao">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-nI-Quc">
+                                <rect key="frame" x="156.5" y="218.5" width="62" height="30"/>
+                                <state key="normal" title="开始推流"/>
+                                <connections>
+                                    <action selector="startRunning:" destination="Uma-ey-1M3" eventType="touchUpInside" id="kgm-vg-hCY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Rq-nI-Quc" firstAttribute="centerY" secondItem="Ev5-uD-gao" secondAttribute="centerY" constant="-100" id="W59-rK-4VN"/>
+                            <constraint firstItem="4Rq-nI-Quc" firstAttribute="centerX" secondItem="Ev5-uD-gao" secondAttribute="centerX" id="bFE-2r-n1z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oOK-Io-ALz"/>
                     </view>
                     <navigationItem key="navigationItem" id="CPo-r8-X0X"/>
