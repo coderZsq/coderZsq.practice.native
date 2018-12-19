@@ -34,6 +34,10 @@
 		1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1467614321BFAC79008BBA2A /* RoomViewController.xib */; };
 		1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467614821BFAF55008BBA2A /* PageCollectionView.swift */; };
 		148C93C521C743A1004140E8 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C93C421C743A1004140E8 /* UIImageView+Extension.swift */; };
+		1498587B21C9EDCE0021EFF3 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498587A21C9EDCE0021EFF3 /* RxTableViewController.swift */; };
+		1498587D21C9EF720021EFF3 /* rx.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1498587C21C9EF720021EFF3 /* rx.plist */; };
+		1498587F21C9EFD10021EFF3 /* RxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498587E21C9EFD10021EFF3 /* RxModel.swift */; };
+		1498588121C9F0380021EFF3 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498588021C9F0380021EFF3 /* RxViewModel.swift */; };
 		149C905521C0B24700852311 /* PageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905421C0B24700852311 /* PageCollectionViewLayout.swift */; };
 		149C905A21C0E82900852311 /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C905821C0E82900852311 /* ChatToolsView.swift */; };
 		149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C905921C0E82900852311 /* ChatToolsView.xib */; };
@@ -113,6 +117,10 @@
 		1467614321BFAC79008BBA2A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		1467614821BFAF55008BBA2A /* PageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
 		148C93C421C743A1004140E8 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		1498587A21C9EDCE0021EFF3 /* RxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
+		1498587C21C9EF720021EFF3 /* rx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rx.plist; sourceTree = "<group>"; };
+		1498587E21C9EFD10021EFF3 /* RxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxModel.swift; sourceTree = "<group>"; };
+		1498588021C9F0380021EFF3 /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
 		149C905421C0B24700852311 /* PageCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewLayout.swift; sourceTree = "<group>"; };
 		149C905821C0E82900852311 /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
 		149C905921C0E82900852311 /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
@@ -262,6 +270,10 @@
 			children = (
 				1433FB6121BA739100D24067 /* ProfileViewController.storyboard */,
 				14F34DA821C8E0DF00FB5A17 /* ProfileViewController.swift */,
+				1498587A21C9EDCE0021EFF3 /* RxTableViewController.swift */,
+				1498587E21C9EFD10021EFF3 /* RxModel.swift */,
+				1498588021C9F0380021EFF3 /* RxViewModel.swift */,
+				1498587C21C9EF720021EFF3 /* rx.plist */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -504,6 +516,7 @@
 				1433FB6421BA78A000D24067 /* HomeViewController.storyboard in Resources */,
 				1467614521BFAC79008BBA2A /* RoomViewController.xib in Resources */,
 				149C909821C108F800852311 /* GiftViewCell.xib in Resources */,
+				1498587D21C9EF720021EFF3 /* rx.plist in Resources */,
 				149C909621C108F800852311 /* GiftListView.xib in Resources */,
 				14FAF49E21C39F76000DB5D1 /* GiftChannelView.xib in Resources */,
 				149C905B21C0E82900852311 /* ChatToolsView.xib in Resources */,
@@ -584,6 +597,7 @@
 				149C907121C0F76200852311 /* EmoticonViewCell.swift in Sources */,
 				14F34DA921C8E0DF00FB5A17 /* ProfileViewController.swift in Sources */,
 				14FAF49621C39564000DB5D1 /* AttrStringGenerator.swift in Sources */,
+				1498587B21C9EDCE0021EFF3 /* RxTableViewController.swift in Sources */,
 				149C909B21C1091300852311 /* GiftModel.swift in Sources */,
 				149C908F21C0FEA600852311 /* HomeViewCell.swift in Sources */,
 				145FCB3721BE1494005FEB77 /* TitleStyle.swift in Sources */,
@@ -594,6 +608,7 @@
 				149C90E621C20D2600852311 /* ysocket.swift in Sources */,
 				1467614421BFAC79008BBA2A /* RoomViewController.swift in Sources */,
 				14FAF48E21C380D1000DB5D1 /* ChatContentView.swift in Sources */,
+				1498587F21C9EFD10021EFF3 /* RxModel.swift in Sources */,
 				1433FB3821BA6F5000D24067 /* AppDelegate.swift in Sources */,
 				149C90E721C20D2600852311 /* ytcpsocket.swift in Sources */,
 				145FCB2121BE00BE005FEB77 /* RankViewController.swift in Sources */,
@@ -602,6 +617,7 @@
 				14FAF4A021C3A021000DB5D1 /* GiftChannelModel.swift in Sources */,
 				149C90E521C20D2600852311 /* ytcpsocket.c in Sources */,
 				1467614921BFAF55008BBA2A /* PageCollectionView.swift in Sources */,
+				1498588121C9F0380021EFF3 /* RxViewModel.swift in Sources */,
 				149C906021C0F2A000852311 /* Const.swift in Sources */,
 				149C907521C0F8D900852311 /* HomeType.swift in Sources */,
 				149C909521C108F800852311 /* GiftListView.swift in Sources */,
