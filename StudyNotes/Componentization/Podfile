@@ -6,6 +6,6 @@ target 'Componentization' do
   use_frameworks!
 
   # Pods for Componentization
-  pod 'LocalLib', :path => './LocalPrivateLib/LocalLib'
-  
+  pod 'BaseComponent', :path => './LocalPrivateLib/BaseComponent'
+
 end

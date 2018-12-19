@@ -106,7 +106,7 @@
 				146F904E21CA142E00017A19 /* Sources */,
 				146F904F21CA142E00017A19 /* Frameworks */,
 				146F905021CA142E00017A19 /* Resources */,
-				1EAFDCFCAAB1191E8113F336 /* [CP] Embed Pods Frameworks */,
+				20F8BEC714B744ED409AB25F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,18 +163,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EAFDCFCAAB1191E8113F336 /* [CP] Embed Pods Frameworks */ = {
+		20F8BEC714B744ED409AB25F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Componentization/Pods-Componentization-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LocalLib/LocalLib.framework",
+				"${BUILT_PRODUCTS_DIR}/BaseComponent/BaseComponent.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocalLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseComponent.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,16 +1,16 @@
 PODS:
-  - LocalLib (0.0.1)
+  - BaseComponent (0.0.1)
 
 DEPENDENCIES:
-  - LocalLib (from `./LocalPrivateLib/LocalLib`)
+  - BaseComponent (from `./LocalPrivateLib/BaseComponent`)
 
 EXTERNAL SOURCES:
-  LocalLib:
-    :path: "./LocalPrivateLib/LocalLib"
+  BaseComponent:
+    :path: "./LocalPrivateLib/BaseComponent"
 
 SPEC CHECKSUMS:
-  LocalLib: dff109f4f5dbb8b0c1f0cb15ab2e403caeaab464
+  BaseComponent: 452be0847928896412f820a8c8bf0d07af9c6ae7
 
-PODFILE CHECKSUM: ba5e72b8d1979e94b4058f1935e548cadda63121
+PODFILE CHECKSUM: 619c1f746b01a3e844cef54ceb5fbaa15bb03ac5
 
 COCOAPODS: 1.5.3
