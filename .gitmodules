@@ -1,0 +1,3 @@
+[submodule "StudyNotes/Componentization/RemotePrivateLib/BaseComponent"]
+	path = StudyNotes/Componentization/RemotePrivateLib/BaseComponent
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/BaseComponent.git
