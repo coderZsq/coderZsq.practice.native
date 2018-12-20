@@ -23,7 +23,7 @@ $ pod repo remove ComponentSpecs
 
 ```
 $ pod lib create BaseComponent
-$ pod lib lint
+$ pod lib lint  --allow-warnings
 ```
 
 ```
@@ -37,6 +37,7 @@ $ git push origin master
 $ git tag '0.1.0'
 $ git tag
 $ git push --tags
-$ pod spec lint
-$ pod repo push coderzsq BaseComponent.podspec
+$ pod spec lint  --allow-warnings
+$ pod cache clean BaseComponent
+$ pod repo push coderzsq BaseComponent.podspec  --allow-warnings
 ```

@@ -1,5 +1,25 @@
 PODS:
-  - BaseComponent (0.1.0)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BaseComponent (0.3.0):
+    - AFNetworking
+    - SDWebImage
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
 
 DEPENDENCIES:
   - BaseComponent
@@ -7,10 +27,15 @@ DEPENDENCIES:
 SPEC REPOS:
   "git@git.dev.tencent.com:dtid_ada36270f1f70012/ComponentSpecs.git":
     - BaseComponent
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  BaseComponent: 77cdd3522b97713492393677004cb2bb27b0dae3
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaseComponent: 1a5e09a3c0794d9f7fd02b14e01e5a909c9225ae
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
 
-PODFILE CHECKSUM: ab63fb17f18e175d4777ffb799c1ffd162350081
+PODFILE CHECKSUM: 7d64f2ae5280ddd1e77f5d3c8b8316f6b2b09451
 
 COCOAPODS: 1.5.3
