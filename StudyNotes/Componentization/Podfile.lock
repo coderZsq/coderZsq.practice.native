@@ -1,6 +1,6 @@
 PODS:
   - BaseComponent/Category (0.4.0)
-  - MainComponent (0.1.0):
+  - MainComponent (0.1.1):
     - BaseComponent/Category
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BaseComponent: 1be1a0728b2adf56106f49188dc6ca36dfa9339a
-  MainComponent: d3d1d4166720d724512a0f423fa514a436c5a8a8
+  MainComponent: eb840b0c662de17fa35e95df86d68ce1f4318360
 
 PODFILE CHECKSUM: f1216d855f4782bcddf96e73938ff66072883500
 
