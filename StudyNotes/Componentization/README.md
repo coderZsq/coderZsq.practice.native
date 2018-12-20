@@ -37,6 +37,8 @@ $ git push origin master
 $ git tag '0.1.0'
 $ git tag
 $ git push --tags
+$ git tag -d 0.1.0
+$ git push origin: 0.1.0
 $ pod spec lint  --allow-warnings
 $ pod cache clean BaseComponent
 $ pod repo push coderzsq BaseComponent.podspec  --allow-warnings

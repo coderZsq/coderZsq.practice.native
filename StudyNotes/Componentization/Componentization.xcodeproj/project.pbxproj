@@ -13,6 +13,8 @@
 		146F905F21CA143000017A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146F905E21CA143000017A19 /* Assets.xcassets */; };
 		146F906221CA143000017A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146F906021CA143000017A19 /* LaunchScreen.storyboard */; };
 		146F906521CA143000017A19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F906421CA143000017A19 /* main.m */; };
+		14B808A621CB90E40063E8E7 /* TestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B808A221CB90E30063E8E7 /* TestVC2.m */; };
+		14B808A721CB90E40063E8E7 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B808A521CB90E40063E8E7 /* TestVC.m */; };
 		5DE1849C5DAB2D45277DD206 /* Pods_Componentization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F120FC41752ED91F3940994 /* Pods_Componentization.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,10 @@
 		146F906121CA143000017A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		146F906321CA143000017A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146F906421CA143000017A19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B808A221CB90E30063E8E7 /* TestVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC2.m; sourceTree = "<group>"; };
+		14B808A321CB90E30063E8E7 /* TestVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC2.h; sourceTree = "<group>"; };
+		14B808A421CB90E40063E8E7 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		14B808A521CB90E40063E8E7 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		2F120FC41752ED91F3940994 /* Pods_Componentization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Componentization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1BB5A1BE513A31C3F1BAEE /* Pods-Componentization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Componentization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Componentization/Pods-Componentization.debug.xcconfig"; sourceTree = "<group>"; };
 		43D5949909EE8DF9C8CDA653 /* Pods-Componentization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Componentization.release.xcconfig"; path = "Pods/Target Support Files/Pods-Componentization/Pods-Componentization.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +75,10 @@
 				146F905621CA142E00017A19 /* AppDelegate.m */,
 				146F905821CA142E00017A19 /* ViewController.h */,
 				146F905921CA142E00017A19 /* ViewController.m */,
+				14B808A421CB90E40063E8E7 /* TestVC.h */,
+				14B808A521CB90E40063E8E7 /* TestVC.m */,
+				14B808A321CB90E30063E8E7 /* TestVC2.h */,
+				14B808A221CB90E30063E8E7 /* TestVC2.m */,
 				146F905B21CA142E00017A19 /* Main.storyboard */,
 				146F905E21CA143000017A19 /* Assets.xcassets */,
 				146F906021CA143000017A19 /* LaunchScreen.storyboard */,
@@ -106,7 +116,7 @@
 				146F904E21CA142E00017A19 /* Sources */,
 				146F904F21CA142E00017A19 /* Frameworks */,
 				146F905021CA142E00017A19 /* Resources */,
-				8A4CFE155663B63AE49C93AA /* [CP] Embed Pods Frameworks */,
+				7E90B015784EB12279286FBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,22 +191,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A4CFE155663B63AE49C93AA /* [CP] Embed Pods Frameworks */ = {
+		7E90B015784EB12279286FBA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Componentization/Pods-Componentization-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BaseComponent/BaseComponent.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MainComponent/MainComponent.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseComponent.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MainComponent.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -213,6 +221,8 @@
 				146F905A21CA142E00017A19 /* ViewController.m in Sources */,
 				146F906521CA143000017A19 /* main.m in Sources */,
 				146F905721CA142E00017A19 /* AppDelegate.m in Sources */,
+				14B808A721CB90E40063E8E7 /* TestVC.m in Sources */,
+				14B808A621CB90E40063E8E7 /* TestVC2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,9 @@ target 'Componentization' do
 
   # Pods for Componentization
   # pod 'BaseComponent', :path => './LocalPrivateLib/BaseComponent'
-  pod 'BaseComponent'
+  # pod 'BaseComponent/Category'
+  # pod 'BaseComponent', :subspecs => ['Base', 'Category']
+  
+  pod 'MainComponent'
 
 end
