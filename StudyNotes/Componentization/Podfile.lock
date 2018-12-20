@@ -1,16 +1,16 @@
 PODS:
-  - BaseComponent (0.0.1)
+  - BaseComponent (0.1.0)
 
 DEPENDENCIES:
-  - BaseComponent (from `./LocalPrivateLib/BaseComponent`)
+  - BaseComponent
 
-EXTERNAL SOURCES:
-  BaseComponent:
-    :path: "./LocalPrivateLib/BaseComponent"
+SPEC REPOS:
+  "git@git.dev.tencent.com:dtid_ada36270f1f70012/ComponentSpecs.git":
+    - BaseComponent
 
 SPEC CHECKSUMS:
-  BaseComponent: 452be0847928896412f820a8c8bf0d07af9c6ae7
+  BaseComponent: 77cdd3522b97713492393677004cb2bb27b0dae3
 
-PODFILE CHECKSUM: 619c1f746b01a3e844cef54ceb5fbaa15bb03ac5
+PODFILE CHECKSUM: ab63fb17f18e175d4777ffb799c1ffd162350081
 
 COCOAPODS: 1.5.3
