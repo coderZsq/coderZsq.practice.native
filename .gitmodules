@@ -1,6 +1,6 @@
 [submodule "BaseComponent"]
-	path = ./StudyNotes/Componentization/RemotePrivateLib/BaseComponent
+	path = StudyNotes/Componentization/RemotePrivateLib/BaseComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/BaseComponent
 [submodule "MainComponent"]
-	path = ./StudyNotes/Componentization/RemotePrivateLib/MainComponent
+	path = StudyNotes/Componentization/RemotePrivateLib/MainComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/MainComponent
