@@ -14,5 +14,4 @@ target 'Componentization' do
   # pod 'BaseComponent', :subspecs => ['Base', 'Category']
   
   pod 'MainComponent'
-
 end

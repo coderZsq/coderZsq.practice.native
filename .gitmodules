@@ -4,3 +4,6 @@
 [submodule "MainComponent"]
 	path = StudyNotes/Componentization/RemotePrivateLib/MainComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/MainComponent
+[submodule "SegmentBarComponent"]
+	path = StudyNotes/Componentization/RemotePrivateLib/SegmentBarComponent
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/SegmentBarComponent
