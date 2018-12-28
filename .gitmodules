@@ -14,8 +14,8 @@
 	path = StudyNotes/Componentization/RemotePrivateLib/DownloaderComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/DownloaderComponent
 [submodule "SqliteComponent"]
-	path = StudyNotes/Componentization/RemotePrivateLib/RemotePlayerComponent
+	path = StudyNotes/Componentization/RemotePrivateLib/SqliteComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/SqliteComponent
 [submodule "TodayFireComponent"]
-	path = StudyNotes/Componentization/RemotePrivateLib/SegmentBarComponent
+	path = StudyNotes/Componentization/RemotePrivateLib/TodayFireComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/TodayFireComponent
