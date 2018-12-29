@@ -1,20 +1,78 @@
 PODS:
-  - BaseComponent/Category (0.4.0)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BaseComponent/Category (0.4.1)
+  - BaseComponent/Network (0.4.1):
+    - AFNetworking
+  - DownloaderComponent (0.1.6)
+  - DownloadListenComponent (0.1.1):
+    - BaseComponent/Category
+    - SegmentBarComponent
+    - SqliteComponent
+    - TodayFireComponent
   - MainComponent (0.2.0):
     - BaseComponent/Category
+  - MJExtension (3.0.15.1)
+  - RemotePlayerComponent (0.1.1)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SegmentBarComponent (0.1.0)
+  - SqliteComponent (0.1.4)
+  - TodayFireComponent (0.1.6):
+    - BaseComponent/Network
+    - DownloaderComponent
+    - MJExtension
+    - RemotePlayerComponent
+    - SDWebImage
+    - SegmentBarComponent
+    - SqliteComponent
 
 DEPENDENCIES:
+  - DownloadListenComponent
   - MainComponent
 
 SPEC REPOS:
   "git@git.dev.tencent.com:dtid_ada36270f1f70012/ComponentSpecs.git":
     - BaseComponent
+    - DownloaderComponent
+    - DownloadListenComponent
     - MainComponent
+    - RemotePlayerComponent
+    - SegmentBarComponent
+    - SqliteComponent
+    - TodayFireComponent
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - MJExtension
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  BaseComponent: 1be1a0728b2adf56106f49188dc6ca36dfa9339a
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaseComponent: 3fb41902f3b5cf1a26bff452e431a3fb7841ad5b
+  DownloaderComponent: 3275745e35673e9bae3e4b9c72794f19eadffe1f
+  DownloadListenComponent: 108993570d14bab36fd1196d573d126ee7e9b308
   MainComponent: e172f4341e8f460941105bf0f558cc5390e29475
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  RemotePlayerComponent: 289d4f2a4c742888847ee06de78a6e93e9bb4319
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SegmentBarComponent: 9bf6f4fe2ad3112ff129066318cdee69cf3b40de
+  SqliteComponent: 78a099a6cadeba2324f0446389b1665d89934fa8
+  TodayFireComponent: 3d000e5df69865a7b31b4421e464014dd555a494
 
-PODFILE CHECKSUM: 94f965b7f7789916d68bfca38999a791ae46adb0
+PODFILE CHECKSUM: f5f9cad0e615281f93e9e1e0adce062274f1f9b8
 
 COCOAPODS: 1.5.3

@@ -19,3 +19,6 @@
 [submodule "TodayFireComponent"]
 	path = StudyNotes/Componentization/RemotePrivateLib/TodayFireComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/TodayFireComponent
+[submodule "DownloadListenComponent"]
+	path = StudyNotes/Componentization/RemotePrivateLib/TodayFireComponent
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/DownloadListenComponent

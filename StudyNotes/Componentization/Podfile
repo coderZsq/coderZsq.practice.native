@@ -14,4 +14,5 @@ target 'Componentization' do
   # pod 'BaseComponent', :subspecs => ['Base', 'Category']
   
   pod 'MainComponent'
+  pod 'DownloadListenComponent'
 end
