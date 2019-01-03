@@ -1,0 +1,60 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+  desc 'ManagerLib 使用这个航道, 可以快速的对自己的私有库, 进行升级维护'
+  lane :ManagerLib do |options|
+
+    tagName = options[:tag]
+    targetName = options[:target]
+
+    #具体这个航道上面执行那些行为
+    # 1. pod install
+    cocoapods(
+      clean: true,
+      podfile: "./Example/Podfile"
+    )
+    # 2. git add .
+    git_add(path: ".")
+    #    git commit -m"add"
+    git_commit(path: '.', message: "版本升级维护")
+    #    git push origin master
+    push_to_git_remote
+
+    if git_tag_exists(tag: tagName)
+        UI.message("发现tag:#{tagName}已经存在, 即将执行删除动作")
+        remove_tag(tag: tagName)
+    end
+
+    # 3. git tag 0.1.0
+    add_git_tag(
+      tag: tagName
+    )
+    #    git push --tags
+    push_git_tags
+
+    # 4. pod sepc lint
+    pod_lib_lint(allow_warnings: true)
+    #    pod repo push coderzsq .podspec
+    pod_push(path: "#{targetName}.podspec", repo: "coderzsq", allow_warnings: true)
+
+  end
+end

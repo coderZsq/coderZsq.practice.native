@@ -44,3 +44,11 @@ $ pod cache clean BaseComponent
 $ pod repo push coderzsq BaseComponent.podspec  --allow-warnings
 
 ```
+
+#### Fastlane
+
+```
+$ fastlane new_action
+$ fastlane action remove_tag
+$ fastlane ManagerLib tag:0.1.2 target:RemotePlayerComponent
+```
