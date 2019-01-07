@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainModuleAPI.h"
 #import "TestVC.h"
+#import "ViewController.h"
 #import "SQDownLoadListernMainViewController.h"
 
 @interface AppDelegate ()
@@ -21,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UITabBarController *rootVC = [MainModuleAPI rootTabBarCcontroller];
     [MainModuleAPI addChildVC:[TestVC new] normalImageName:@"tabbar_find_n" selectedImageName:@"tabbar_find_h" isRequiredNavController:YES];
-    [MainModuleAPI addChildVC:[UIViewController new] normalImageName:@"tabbar_sound_n" selectedImageName:@"tabbar_sound_h" isRequiredNavController:YES];
+    [MainModuleAPI addChildVC:[ViewController new] normalImageName:@"tabbar_sound_n" selectedImageName:@"tabbar_sound_h" isRequiredNavController:YES];
     [MainModuleAPI addChildVC:[SQDownLoadListernMainViewController new] normalImageName:@"tabbar_download_n" selectedImageName:@"tabbar_download_h" isRequiredNavController:YES];
     [MainModuleAPI addChildVC:[UIViewController new] normalImageName:@"tabbar_me_n" selectedImageName:@"tabbar_me_h" isRequiredNavController:YES];
     

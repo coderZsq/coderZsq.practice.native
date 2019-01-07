@@ -52,3 +52,10 @@ $ fastlane new_action
 $ fastlane action remove_tag
 $ fastlane ManagerLib tag:0.1.2 target:RemotePlayerComponent
 ```
+
+#### Package
+
+```
+$ gem install cocoapods-packager
+$ pod package BaseComponent.podspec
+```

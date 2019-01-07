@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1454038521E33FAB00E6E502 /* BarrageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1454038421E33FAB00E6E502 /* BarrageModel.m */; };
 		146F905721CA142E00017A19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F905621CA142E00017A19 /* AppDelegate.m */; };
 		146F905A21CA142E00017A19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F905921CA142E00017A19 /* ViewController.m */; };
 		146F905D21CA142E00017A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146F905B21CA142E00017A19 /* Main.storyboard */; };
 		146F905F21CA143000017A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146F905E21CA143000017A19 /* Assets.xcassets */; };
 		146F906221CA143000017A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146F906021CA143000017A19 /* LaunchScreen.storyboard */; };
 		146F906521CA143000017A19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F906421CA143000017A19 /* main.m */; };
+		14A9C81721E33633006B40CF /* BarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9C81621E33633006B40CF /* BarrageView.m */; };
 		14B808A621CB90E40063E8E7 /* TestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B808A221CB90E30063E8E7 /* TestVC2.m */; };
 		14B808A721CB90E40063E8E7 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B808A521CB90E40063E8E7 /* TestVC.m */; };
+		14F2669321DF5E0D00EB569F /* SQMediatorManager+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2668F21DF5E0D00EB569F /* SQMediatorManager+Main.m */; };
+		14F2669421DF5E0D00EB569F /* SQMediatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2669221DF5E0D00EB569F /* SQMediatorManager.m */; };
 		5DE1849C5DAB2D45277DD206 /* Pods_Componentization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F120FC41752ED91F3940994 /* Pods_Componentization.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140DD15621E3371E00A7921A /* BarrageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageProtocol.h; sourceTree = "<group>"; };
+		1454038321E33FAB00E6E502 /* BarrageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageModel.h; sourceTree = "<group>"; };
+		1454038421E33FAB00E6E502 /* BarrageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageModel.m; sourceTree = "<group>"; };
 		146F905221CA142E00017A19 /* Componentization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Componentization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146F905521CA142E00017A19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		146F905621CA142E00017A19 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,10 +36,16 @@
 		146F906121CA143000017A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		146F906321CA143000017A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146F906421CA143000017A19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14A9C81521E33633006B40CF /* BarrageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageView.h; sourceTree = "<group>"; };
+		14A9C81621E33633006B40CF /* BarrageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageView.m; sourceTree = "<group>"; };
 		14B808A221CB90E30063E8E7 /* TestVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC2.m; sourceTree = "<group>"; };
 		14B808A321CB90E30063E8E7 /* TestVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC2.h; sourceTree = "<group>"; };
 		14B808A421CB90E40063E8E7 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		14B808A521CB90E40063E8E7 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		14F2668F21DF5E0D00EB569F /* SQMediatorManager+Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SQMediatorManager+Main.m"; sourceTree = "<group>"; };
+		14F2669021DF5E0D00EB569F /* SQMediatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQMediatorManager.h; sourceTree = "<group>"; };
+		14F2669121DF5E0D00EB569F /* SQMediatorManager+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SQMediatorManager+Main.h"; sourceTree = "<group>"; };
+		14F2669221DF5E0D00EB569F /* SQMediatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMediatorManager.m; sourceTree = "<group>"; };
 		2F120FC41752ED91F3940994 /* Pods_Componentization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Componentization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1BB5A1BE513A31C3F1BAEE /* Pods-Componentization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Componentization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Componentization/Pods-Componentization.debug.xcconfig"; sourceTree = "<group>"; };
 		43D5949909EE8DF9C8CDA653 /* Pods-Componentization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Componentization.release.xcconfig"; path = "Pods/Target Support Files/Pods-Componentization/Pods-Componentization.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,10 +84,14 @@
 		146F905421CA142E00017A19 /* Componentization */ = {
 			isa = PBXGroup;
 			children = (
+				14A9C81821E3363C006B40CF /* Barrage */,
+				14F2668E21DF5E0D00EB569F /* TargetAction */,
 				146F905521CA142E00017A19 /* AppDelegate.h */,
 				146F905621CA142E00017A19 /* AppDelegate.m */,
 				146F905821CA142E00017A19 /* ViewController.h */,
 				146F905921CA142E00017A19 /* ViewController.m */,
+				1454038321E33FAB00E6E502 /* BarrageModel.h */,
+				1454038421E33FAB00E6E502 /* BarrageModel.m */,
 				14B808A421CB90E40063E8E7 /* TestVC.h */,
 				14B808A521CB90E40063E8E7 /* TestVC.m */,
 				14B808A321CB90E30063E8E7 /* TestVC2.h */,
@@ -86,6 +103,27 @@
 				146F906421CA143000017A19 /* main.m */,
 			);
 			path = Componentization;
+			sourceTree = "<group>";
+		};
+		14A9C81821E3363C006B40CF /* Barrage */ = {
+			isa = PBXGroup;
+			children = (
+				14A9C81521E33633006B40CF /* BarrageView.h */,
+				14A9C81621E33633006B40CF /* BarrageView.m */,
+				140DD15621E3371E00A7921A /* BarrageProtocol.h */,
+			);
+			path = Barrage;
+			sourceTree = "<group>";
+		};
+		14F2668E21DF5E0D00EB569F /* TargetAction */ = {
+			isa = PBXGroup;
+			children = (
+				14F2669121DF5E0D00EB569F /* SQMediatorManager+Main.h */,
+				14F2668F21DF5E0D00EB569F /* SQMediatorManager+Main.m */,
+				14F2669021DF5E0D00EB569F /* SQMediatorManager.h */,
+				14F2669221DF5E0D00EB569F /* SQMediatorManager.m */,
+			);
+			path = TargetAction;
 			sourceTree = "<group>";
 		};
 		6C1C4E52454F0A743AA9C377 /* Pods */ = {
@@ -238,9 +276,13 @@
 			files = (
 				146F905A21CA142E00017A19 /* ViewController.m in Sources */,
 				146F906521CA143000017A19 /* main.m in Sources */,
+				1454038521E33FAB00E6E502 /* BarrageModel.m in Sources */,
 				146F905721CA142E00017A19 /* AppDelegate.m in Sources */,
 				14B808A721CB90E40063E8E7 /* TestVC.m in Sources */,
 				14B808A621CB90E40063E8E7 /* TestVC2.m in Sources */,
+				14F2669321DF5E0D00EB569F /* SQMediatorManager+Main.m in Sources */,
+				14F2669421DF5E0D00EB569F /* SQMediatorManager.m in Sources */,
+				14A9C81721E33633006B40CF /* BarrageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
