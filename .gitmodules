@@ -22,3 +22,15 @@
 [submodule "DownloadListenComponent"]
 	path = StudyNotes/Componentization/RemotePrivateLib/TodayFireComponent
 	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/DownloadListenComponent
+[submodule "HomeKit"]
+	path = StudyNotes/ReactiveCocoa/Repositories/HomeKit
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/HomeKit
+[submodule "CategoryKit"]
+	path = StudyNotes/ReactiveCocoa/Repositories/CategoryKit
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/CategoryKit
+[submodule "LiveKit"]
+	path = StudyNotes/ReactiveCocoa/Repositories/LiveKit
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/LiveKit
+[submodule "ServerKit"]
+	path = StudyNotes/ReactiveCocoa/Repositories/ServerKit
+	url = https://git.dev.tencent.com/dtid_ada36270f1f70012/ServerKit
