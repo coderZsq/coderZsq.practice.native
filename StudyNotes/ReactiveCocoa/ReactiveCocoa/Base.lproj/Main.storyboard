@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="937"/>
         </scene>
-        <!--Schedule View Controller-->
+        <!--View Controller-->
         <scene sceneID="jcQ-TZ-vxY">
             <objects>
-                <viewController id="ics-kK-HJC" customClass="SQScheduleViewController" sceneMemberID="viewController">
+                <viewController id="ics-kK-HJC" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lh5-zb-5nU"/>
                         <viewControllerLayoutGuide type="bottom" id="dMQ-KI-XbE"/>

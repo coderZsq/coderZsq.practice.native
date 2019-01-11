@@ -28,6 +28,7 @@ PODS:
     - ServerKit
     - SVProgressHUD
   - MJExtension (3.0.15.1)
+  - ReactiveObjC (3.1.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.3):
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - HomeKit
+  - ReactiveObjC
 
 SPEC REPOS:
   "git@git.dev.tencent.com:dtid_ada36270f1f70012/ComponentSpecs.git":
@@ -48,6 +50,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - MJExtension
+    - ReactiveObjC
     - SDCycleScrollView
     - SDWebImage
     - SVProgressHUD
@@ -57,11 +60,12 @@ SPEC CHECKSUMS:
   CategoryKit: 9faa6947b4360c88b48437525f50a70c2cf87c73
   HomeKit: e5cecf93099cd8dc27a5247d1c51abd1462d4765
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   ServerKit: ed489b16801d97eb16a2c8e848454c657819cd53
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c33614e9e29bfe0a863bf60e58fe2f7aef8b17e4
+PODFILE CHECKSUM: 9fe8288d69a18bc1ec209048df70ec27facfb4a7
 
 COCOAPODS: 1.5.3

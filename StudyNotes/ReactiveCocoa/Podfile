@@ -10,5 +10,6 @@ target 'ReactiveCocoa' do
 
   # Pods for ReactiveCocoa
   pod 'HomeKit'
-
+  pod 'ReactiveObjC'
+  
 end

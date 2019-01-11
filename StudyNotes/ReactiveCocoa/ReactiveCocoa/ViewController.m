@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ReactiveObjC.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    RACSignal * signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"next"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"disposableWithBlock");
+        }];
+    }];
+    
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"subscribeNext");
+//    }];
+//
+//    [signal subscribeError:^(NSError * _Nullable error) {
+//        NSLog(@"subscribeError");
+//    }];
+//
+//    [signal subscribeCompleted:^{
+//        NSLog(@"subscribeCompleted");
+//    }];
+//
+    [signal subscribeNext:^(id  _Nullable x) {
+
+    } error:^(NSError * _Nullable error) {
+
+    } completed:^{
+
+    }];
 }
 
 
