@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14188D9C21EC852900CBA334 /* RView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14188D9B21EC852900CBA334 /* RView.m */; };
+		14206C7421EC893C00CBC8C7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14206C7321EC893C00CBC8C7 /* flags.plist */; };
+		14206C7721EC8A4900CBC8C7 /* RFlagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14206C7621EC8A4900CBC8C7 /* RFlagItem.m */; };
 		1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82021E882CE00EF0BC4 /* ChainProgramming.m */; };
 		1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82421E886B700EF0BC4 /* NSObject+Responsive.m */; };
 		1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */; };
@@ -20,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14188D9A21EC852900CBA334 /* RView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RView.h; sourceTree = "<group>"; };
+		14188D9B21EC852900CBA334 /* RView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RView.m; sourceTree = "<group>"; };
+		14206C7321EC893C00CBC8C7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
+		14206C7521EC8A4900CBC8C7 /* RFlagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFlagItem.h; sourceTree = "<group>"; };
+		14206C7621EC8A4900CBC8C7 /* RFlagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFlagItem.m; sourceTree = "<group>"; };
 		1422E81F21E882CE00EF0BC4 /* ChainProgramming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainProgramming.h; sourceTree = "<group>"; };
 		1422E82021E882CE00EF0BC4 /* ChainProgramming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainProgramming.m; sourceTree = "<group>"; };
 		1422E82321E886B700EF0BC4 /* NSObject+Responsive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Responsive.h"; sourceTree = "<group>"; };
@@ -92,6 +100,11 @@
 				14CBBBAB21E497CB009010BA /* AppDelegate.m */,
 				14CBBBAD21E497CB009010BA /* ViewController.h */,
 				14CBBBAE21E497CB009010BA /* ViewController.m */,
+				14188D9A21EC852900CBA334 /* RView.h */,
+				14188D9B21EC852900CBA334 /* RView.m */,
+				14206C7521EC8A4900CBC8C7 /* RFlagItem.h */,
+				14206C7621EC8A4900CBC8C7 /* RFlagItem.m */,
+				14206C7321EC893C00CBC8C7 /* flags.plist */,
 				14CBBBB021E497CB009010BA /* Main.storyboard */,
 				14CBBBB321E497CC009010BA /* Assets.xcassets */,
 				14CBBBB521E497CC009010BA /* LaunchScreen.storyboard */,
@@ -179,6 +192,7 @@
 			files = (
 				14CBBBB721E497CC009010BA /* LaunchScreen.storyboard in Resources */,
 				14CBBBB421E497CC009010BA /* Assets.xcassets in Resources */,
+				14206C7421EC893C00CBC8C7 /* flags.plist in Resources */,
 				14CBBBB221E497CB009010BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CBBBAF21E497CB009010BA /* ViewController.m in Sources */,
+				14206C7721EC8A4900CBC8C7 /* RFlagItem.m in Sources */,
 				1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */,
 				1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */,
 				14CBBBBA21E497CC009010BA /* main.m in Sources */,
 				14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */,
+				14188D9C21EC852900CBA334 /* RView.m in Sources */,
 				1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
