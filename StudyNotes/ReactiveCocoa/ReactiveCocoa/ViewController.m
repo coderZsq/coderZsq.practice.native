@@ -12,7 +12,9 @@
 #import "RFlagItem.h"
 
 @interface ViewController () ///<RViewDelegate>
-
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, assign) int age;
 @end
 
 @implementation ViewController
@@ -20,6 +22,111 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)rac_signalForControlEvents {
+    [[_loginButton rac_signalForControlEvents:(UIControlEventTouchDown)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (void)RACObserve {
+    //    [self rac_valuesForKeyPath:nil observer:nil];
+    //    [self rac_valuesAndChangesForKeyPath:nil options:nil observer:nil];
+    
+    //    [[self rac_valuesForKeyPath:@keypath(self, age) observer:self] subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@", x);
+    //    }];
+    //    self removeObserver:<#(nonnull NSObject *)#> forKeyPath:<#(nonnull NSString *)#>
+    
+    [RACObserve(self, age) subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    self.age++;
+//}
+
+- (void)rac_signalForSelector {
+//    ViewController * vc = [super allocWithZone:zone];
+    [[self rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(RACTuple * _Nullable x) {
+        NSLog(@"viewDidLoad");
+        RView * v = [RView new];
+        v.backgroundColor = [UIColor redColor];
+        v.frame = CGRectMake(50, 100, 100, 100);
+        [self.view addSubview:v];
+        
+        [[v rac_signalForSelector:@selector(touchesBegan:withEvent:)] subscribeNext:^(RACTuple * _Nullable x) {
+            NSLog(@"点击View: %@", x);
+        }];
+    }];
+    [[self rac_signalForSelector:@selector(viewWillAppear:)] subscribeNext:^(RACTuple * _Nullable x) {
+        NSLog(@"viewWillAppear");
+    }];
+}
+
+- (void)RACCommandSence {
+    //    _loginButton.rac_command = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+    //        NSLog(@"点击了按钮: %@", input);
+    //        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    //            [subscriber sendNext:input];
+    //            return nil;
+    //        }];
+    //    }];
+    
+    RACSubject * enableSignal = [RACSubject subject];
+    _loginButton.rac_command = [[RACCommand alloc]initWithEnabled:enableSignal signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        NSLog(@"点击了按钮: %@", input);
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            [subscriber sendNext:input];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }];
+    
+    [[_loginButton.rac_command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+        BOOL executing = [x boolValue];
+        [enableSignal sendNext:@(!executing)];
+    }];
+    
+    [_loginButton.rac_command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (void)RACCommand {
+    RACCommand * command = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        NSLog(@"执行Block, %@", input);
+        //        return [RACSignal empty];
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            NSLog(@"执行信号的Block");
+            [subscriber sendNext:@"你好"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }];
+    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    [[command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+        BOOL isExcuting = [x boolValue];
+        if (isExcuting) {
+            NSLog(@"正在执行");
+        } else {
+            NSLog(@"执行完成");
+        }
+    }];
+    //    [command.executionSignals subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@", x);
+    //        [x subscribeNext:^(id  _Nullable x) {
+    //            NSLog(@"%@", x);
+    //        }];
+    //    }];
+    [command execute:@1];
+    //    [[command execute:@1] subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@", x);
+    //    }];
 }
 
 - (void)RACMulticastConnection {
