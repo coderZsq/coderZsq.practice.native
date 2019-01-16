@@ -1,17 +1,17 @@
 //
-//  RFlagItem.m
+//  RModel.m
 //  ReactiveCocoa
 //
 //  Created by 朱双泉 on 2019/1/14.
 //  Copyright © 2019 Castie!. All rights reserved.
 //
 
-#import "RFlagItem.h"
+#import "RModel.h"
 
-@implementation RFlagItem
+@implementation RModel
 
 + (instancetype)itemWithDict:(NSDictionary *)dict {
-    RFlagItem * item = [self new];
+    RModel * item = [self new];
     [item setValuesForKeysWithDictionary:dict];
     return item;
 }

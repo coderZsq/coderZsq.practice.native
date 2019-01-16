@@ -1,5 +1,5 @@
 //
-//  RFlagItem.h
+//  RModel.h
 //  ReactiveCocoa
 //
 //  Created by 朱双泉 on 2019/1/14.
@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RFlagItem : NSObject
+@interface RModel : NSObject
+
+@property (nonatomic, copy) NSString * courseImage;
+@property (nonatomic, copy) NSString * courseName;
+@property (nonatomic, copy) NSString * studentNum;
 
 @property (nonatomic, copy) NSString * name;
 @property (nonatomic, copy) NSString * icon;

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		14188D9C21EC852900CBA334 /* RView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14188D9B21EC852900CBA334 /* RView.m */; };
 		14206C7421EC893C00CBC8C7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14206C7321EC893C00CBC8C7 /* flags.plist */; };
-		14206C7721EC8A4900CBC8C7 /* RFlagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14206C7621EC8A4900CBC8C7 /* RFlagItem.m */; };
+		14206C7721EC8A4900CBC8C7 /* RModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14206C7621EC8A4900CBC8C7 /* RModel.m */; };
 		1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82021E882CE00EF0BC4 /* ChainProgramming.m */; };
 		1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82421E886B700EF0BC4 /* NSObject+Responsive.m */; };
 		1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */; };
@@ -19,6 +19,7 @@
 		14CBBBB421E497CC009010BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB321E497CC009010BA /* Assets.xcassets */; };
 		14CBBBB721E497CC009010BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB521E497CC009010BA /* LaunchScreen.storyboard */; };
 		14CBBBBA21E497CC009010BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBB921E497CC009010BA /* main.m */; };
+		14D7E7C121EF30570071D31F /* RViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D7E7C021EF30570071D31F /* RViewModel.m */; };
 		8AE31327CD649A54698C1070 /* Pods_ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65CBD67E0218482EDDAA6A2 /* Pods_ReactiveCocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +27,8 @@
 		14188D9A21EC852900CBA334 /* RView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RView.h; sourceTree = "<group>"; };
 		14188D9B21EC852900CBA334 /* RView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RView.m; sourceTree = "<group>"; };
 		14206C7321EC893C00CBC8C7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
-		14206C7521EC8A4900CBC8C7 /* RFlagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFlagItem.h; sourceTree = "<group>"; };
-		14206C7621EC8A4900CBC8C7 /* RFlagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFlagItem.m; sourceTree = "<group>"; };
+		14206C7521EC8A4900CBC8C7 /* RModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RModel.h; sourceTree = "<group>"; };
+		14206C7621EC8A4900CBC8C7 /* RModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RModel.m; sourceTree = "<group>"; };
 		1422E81F21E882CE00EF0BC4 /* ChainProgramming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainProgramming.h; sourceTree = "<group>"; };
 		1422E82021E882CE00EF0BC4 /* ChainProgramming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainProgramming.m; sourceTree = "<group>"; };
 		1422E82321E886B700EF0BC4 /* NSObject+Responsive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Responsive.h"; sourceTree = "<group>"; };
@@ -44,6 +45,8 @@
 		14CBBBB621E497CC009010BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CBBBB821E497CC009010BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CBBBB921E497CC009010BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14D7E7BF21EF30570071D31F /* RViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RViewModel.h; sourceTree = "<group>"; };
+		14D7E7C021EF30570071D31F /* RViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RViewModel.m; sourceTree = "<group>"; };
 		D7F69C3FC920D85E0A27BB59 /* Pods-ReactiveCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 		DCEA0BB37BB532A675B5EF2B /* Pods-ReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
 		F65CBD67E0218482EDDAA6A2 /* Pods_ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,14 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				1422E82221E884E300EF0BC4 /* Programming */,
+				14D7E7BB21EF30310071D31F /* MVVM */,
 				14CBBBAA21E497CB009010BA /* AppDelegate.h */,
 				14CBBBAB21E497CB009010BA /* AppDelegate.m */,
 				14CBBBAD21E497CB009010BA /* ViewController.h */,
 				14CBBBAE21E497CB009010BA /* ViewController.m */,
-				14188D9A21EC852900CBA334 /* RView.h */,
-				14188D9B21EC852900CBA334 /* RView.m */,
-				14206C7521EC8A4900CBC8C7 /* RFlagItem.h */,
-				14206C7621EC8A4900CBC8C7 /* RFlagItem.m */,
 				14206C7321EC893C00CBC8C7 /* flags.plist */,
 				14CBBBB021E497CB009010BA /* Main.storyboard */,
 				14CBBBB321E497CC009010BA /* Assets.xcassets */,
@@ -112,6 +112,43 @@
 				14CBBBB921E497CC009010BA /* main.m */,
 			);
 			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		14D7E7BB21EF30310071D31F /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				14D7E7BD21EF30310071D31F /* Model */,
+				14D7E7BE21EF30310071D31F /* View */,
+				14D7E7BC21EF30310071D31F /* ViewModel */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		14D7E7BC21EF30310071D31F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14D7E7BF21EF30570071D31F /* RViewModel.h */,
+				14D7E7C021EF30570071D31F /* RViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14D7E7BD21EF30310071D31F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14206C7521EC8A4900CBC8C7 /* RModel.h */,
+				14206C7621EC8A4900CBC8C7 /* RModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14D7E7BE21EF30310071D31F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14188D9A21EC852900CBA334 /* RView.h */,
+				14188D9B21EC852900CBA334 /* RView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8C5E0C2DA3A5EC1E3E3967EE /* Pods */ = {
@@ -268,12 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CBBBAF21E497CB009010BA /* ViewController.m in Sources */,
-				14206C7721EC8A4900CBC8C7 /* RFlagItem.m in Sources */,
+				14206C7721EC8A4900CBC8C7 /* RModel.m in Sources */,
 				1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */,
 				1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */,
 				14CBBBBA21E497CC009010BA /* main.m in Sources */,
 				14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */,
 				14188D9C21EC852900CBA334 /* RView.m in Sources */,
+				14D7E7C121EF30570071D31F /* RViewModel.m in Sources */,
 				1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

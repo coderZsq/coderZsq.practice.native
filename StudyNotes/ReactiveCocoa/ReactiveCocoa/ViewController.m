@@ -9,19 +9,65 @@
 #import "ViewController.h"
 #import "ReactiveObjC.h"
 #import "RView.h"
-#import "RFlagItem.h"
+#import "RModel.h"
+#import "RViewModel.h"
 
 @interface ViewController () ///<RViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (nonatomic, assign) int age;
+@property (nonatomic, strong) RViewModel * viewModel;
 @end
 
 @implementation ViewController
 
+- (RViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [RViewModel new];
+    }
+    return _viewModel;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[self.viewModel.loadDataCommand execute:nil] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (void)rac_liftSelector {
+    RACSignal * hotSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"最热数据"];
+        return nil;
+    }];
+    RACSignal * newSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"最新数据"];
+        return nil;
+    }];
+    [self rac_liftSelector:@selector(updateUIWithHot:new:) withSignalsFromArray:@[hotSignal, newSignal]];
+}
+
+- (void)updateUIWithHot:(NSString *)hot new:(NSString *)new {
+    NSLog(@"更新数据: %@, %@", hot, new);
+}
+
+- (void)Bind {
+    [_textField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"%@", x);
+        //        self.loginButton.titleLabel.text = x;
+    }];
+    RAC(_loginButton, titleLabel.text) = _textField.rac_textSignal;
+}
+
+- (void)Notification {
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"Note" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        NSLog(@"监听到通知: %@", x);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Note" object:nil];
 }
 
 - (void)rac_signalForControlEvents {
@@ -161,14 +207,14 @@
     //    [datas.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
     //        NSLog(@"%@", [NSThread currentThread]);
     //        NSLog(@"%@", x);
-    //        RFlagItem * item = [RFlagItem itemWithDict:x];
+    //        RModel * item = [RModel itemWithDict:x];
     //        [arrM addObject:item];
     //    } completed:^{
     //        NSLog(@"%@", [NSThread currentThread]);
     //        NSLog(@"%@", arrM);
     //    }];
     NSArray * arr = [[datas.rac_sequence map:^id _Nullable(id  _Nullable value) {
-        return [RFlagItem itemWithDict:value];
+        return [RModel itemWithDict:value];
     }] array];
     NSLog(@"%@", arr);
     
