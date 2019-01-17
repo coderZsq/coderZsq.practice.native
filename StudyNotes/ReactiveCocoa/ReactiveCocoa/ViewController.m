@@ -11,34 +11,259 @@
 #import "RView.h"
 #import "RModel.h"
 #import "RViewModel.h"
+#import "RACReturnSignal.h"
 
 @interface ViewController () ///<RViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
 @property (nonatomic, assign) int age;
 @property (nonatomic, strong) RViewModel * viewModel;
 @end
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+
+- (void)timer {
+    [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSDate * _Nullable x) {
+        NSLog(@"执行了定时器");
+    }];
+    
+    [[[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"hello"];
+        return nil;
+    }] delay:2] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (void)filter {
+    [[_textField2.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+        return value.length > 6;
+    }] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+// 把多个信号的值, 聚合为一个信号
+- (void)reduce {
+    //    [[RACSignal combineLatest:@[_textField.rac_textSignal, _textField2.rac_textSignal] reduce:^id (NSString * text, NSString * text2) {
+    //        NSLog(@"%@, %@", text, text2);
+    //        return @(text.length > 0 && text2.length > 0);
+    //    }] subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"聚合的结果: %@", x);
+    //        self.loginButton.enabled = [x boolValue];
+    //    }];
+    
+    RAC(_loginButton, enabled) = [RACSignal combineLatest:@[_textField.rac_textSignal, _textField2.rac_textSignal] reduce:^id (NSString * text, NSString * text2) {
+        NSLog(@"%@, %@", text, text2);
+        return @(text.length > 0 && text2.length > 0);
+    }];
+}
+
+// 任何一个信号, 只要改变就能订阅
+- (void)combineLatestWith {
+    //    [_textField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+    //        if (x.length > 0) {
+    //
+    //        }
+    //    }];
+    //    [_textField2.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+    //        if (x.length > 0) {
+    //
+    //        }
+    //    }];
+    
+    [[_textField.rac_textSignal combineLatestWith:_textField2.rac_textSignal] subscribeNext:^(RACTwoTuple<NSString *,id> * _Nullable x) {
+        RACTupleUnpack(NSString * text, NSString * text2) = x;
+        NSLog(@"%@, %@", text, text2);
+        self.loginButton.enabled = text.length > 0 && text2.length;
+    }];
+}
+
+// 压缩, 同时发送数据才能订阅
+- (void)zipWith {
+    RACSubject * signalA = [RACSubject subject];
+    RACSubject * signalB = [RACSubject subject];
+    [[signalA zipWith:signalB] subscribeNext:^(id  _Nullable x) {
+        RACTupleUnpack(NSString * a, NSString * b) = x;
+        NSLog(@"%@, %@", a, b);
+    }];
+    [signalA sendNext:@"A"];
+    [signalB sendNext:@"B"];
+}
+
+// 合并, 只要任何一个信号发送数据, 就能订阅
+- (void)merge {
+    RACSubject * signalA = [RACSubject subject];
+    RACSubject * signalB = [RACSubject subject];
+    [[signalA merge:signalB] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    [signalA sendNext:@"B"];
+    [signalA sendNext:@"A"];
+}
+
+- (void)then {
+    RACSignal * signalA = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"执行信号A");
+        [subscriber sendNext:@1];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    /*
+     RACSignal * signalB = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+     NSLog(@"执行信号B");
+     [subscriber sendNext:@2];
+     return nil;
+     }];
+     //不要订阅多次
+     [[signalA concat:signalB] subscribeNext:^(id  _Nullable x) {
+     NSLog(@"%@", x);
+     }];
+     */
+    
+    [[signalA then:^RACSignal * _Nonnull{
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            NSLog(@"执行信号B");
+            [subscriber sendNext:@2];
+            return nil;
+        }];
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    
+    //    [[[self loadCategoryData] then:^RACSignal * _Nonnull{
+    //        return [self loadDetailData];
+    //    }] then:^RACSignal * _Nonnull{
+    //        return [self loadDetailData];
+    //    }];
+    
+    [[[self loadCategoryData] then:^RACSignal * _Nonnull{
+        return [self loadDetailData];
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (RACSignal *)loadCategoryData {
+    RACSubject * signal = [RACReplaySubject subject];
+    [self loadCategoryData:^(id data) {
+        [signal sendNext:data];
+        [signal sendCompleted];
+    }];
+    return signal;
+}
+
+- (RACSignal *)loadDetailData {
+    RACSubject * signal = [RACReplaySubject subject];
+    [self loadDetailData:^(id data) {
+        [signal sendNext:data];
+    }];
+    return signal;
+}
+
+- (void)loadCategoryData:(void(^)(id data))success {
+    success(@"CategoryData");
+}
+
+- (void)loadDetailData:(void(^)(id data))success {
+    success(@"DetailData");
+}
+
+- (void)concat {
+    RACSubject * signalA = [RACSubject subject];
+    RACSubject * signalB = [RACReplaySubject subject];
+    NSMutableArray * arrM = [NSMutableArray array];
+    //    [signalA subscribeNext:^(id  _Nullable x) {
+    //        [arrM addObject:x];
+    //    }];
+    //    [signalB subscribeNext:^(id  _Nullable x) {
+    //        [arrM addObject:x];
+    //    }];
+    [[signalA concat:signalB] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+        [arrM addObject:x];
+    }];
+    [signalB sendNext:@"B"];
+    [signalA sendNext:@"A"];
+    [signalA sendCompleted];
+    NSLog(@"%@", arrM);
+}
+
+- (void)signalOfSignals {
+    RACSubject * signalOfSignals = [RACSubject subject];
+    RACSubject * signal = [RACSubject subject];
+    //    [signalOfSignals subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"信号中信号的值: %@", x);
+    //        [x subscribeNext:^(id  _Nullable x) {
+    //            NSLog(@"信号的值: %@", x);
+    //        }];
+    //    }];
+    [[signalOfSignals flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
+        return [value map:^id _Nullable(id  _Nullable value) {
+            return [NSString stringWithFormat:@"cas: %@", value];
+        }];
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    //    [signal subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@", x);
+    //    }];
+    [signalOfSignals sendNext:signal];
+    [signal sendNext:@"1"];
+}
+
+- (void)flattenMap {
+    [[_textField.rac_textSignal flattenMap:^__kindof RACSignal * _Nullable(NSString * _Nullable value) {
+        NSString * result = [NSString stringWithFormat:@"cas: %@", value];
+        return [RACReturnSignal return:result];
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    
+    [[_textField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+        NSString * result = [NSString stringWithFormat:@"cas: %@", value];
+        return result;
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (void)bind {
+    [[_textField.rac_textSignal bind:^RACSignalBindBlock _Nonnull{
+        NSLog(@"bindBlock");
+        return ^RACSignal *(id value, BOOL *stop){
+            NSLog(@"信号Block: %@", value);
+            NSString * result = [NSString stringWithFormat:@"%@%@", value, @"cas"];
+            return [RACReturnSignal return:result];
+        };
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"获取到处理完的数据: %@", x);
+    }];
+}
+
+- (void)MVVM {
+    @weakify(self);
+    [[self.viewModel.loadDataCommand execute:nil] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        NSLog(@"%@", x);
+        //[self.tableView reloadData];
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
+    //[self.viewModel bindViewModel:self.tableView];
+}
+
 - (RViewModel *)viewModel {
     if (!_viewModel) {
         _viewModel = [RViewModel new];
     }
     return _viewModel;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    @weakify(self);
-    [[self.viewModel.loadDataCommand execute:nil] subscribeNext:^(id  _Nullable x) {
-        @strongify(self);
-        NSLog(@"%@", x);
-        [self.tableView reloadData];
-    } error:^(NSError * _Nullable error) {
-        NSLog(@"%@", error);
-    }];
-    [self.viewModel bindViewModel:self.tableView];
 }
 
 - (void)rac_liftSelector {
@@ -98,7 +323,7 @@
 //}
 
 - (void)rac_signalForSelector {
-//    ViewController * vc = [super allocWithZone:zone];
+    //    ViewController * vc = [super allocWithZone:zone];
     [[self rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(RACTuple * _Nullable x) {
         NSLog(@"viewDidLoad");
         RView * v = [RView new];

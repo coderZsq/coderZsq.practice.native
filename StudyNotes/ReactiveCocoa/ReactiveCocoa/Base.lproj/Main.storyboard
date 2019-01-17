@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="uA7-T8-PNj" kind="relationship" relationship="rootViewController" id="qYs-Tz-v4d"/>
+                        <segue destination="ics-kK-HJC" kind="relationship" relationship="rootViewController" id="Cal-la-hhh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBs-p8-rtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -203,6 +203,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-ND-Muf">
+                                <rect key="frame" x="139" y="223" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="n6S-e2-TpI"/>
@@ -211,6 +218,7 @@
                     <connections>
                         <outlet property="loginButton" destination="Jit-nE-rs9" id="PgY-m0-Dnh"/>
                         <outlet property="textField" destination="hAf-dj-X1c" id="jTo-1d-xfC"/>
+                        <outlet property="textField2" destination="dVg-ND-Muf" id="xd7-JW-PCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWh-bn-Yix" userLabel="First Responder" sceneMemberID="firstResponder"/>
