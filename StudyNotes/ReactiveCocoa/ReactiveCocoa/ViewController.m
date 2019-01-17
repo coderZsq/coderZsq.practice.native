@@ -30,12 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    @weakify(self);
     [[self.viewModel.loadDataCommand execute:nil] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
         NSLog(@"%@", x);
+        [self.tableView reloadData];
     } error:^(NSError * _Nullable error) {
         NSLog(@"%@", error);
     }];
+    [self.viewModel bindViewModel:self.tableView];
 }
 
 - (void)rac_liftSelector {

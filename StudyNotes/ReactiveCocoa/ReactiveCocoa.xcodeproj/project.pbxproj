@@ -13,6 +13,9 @@
 		1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82021E882CE00EF0BC4 /* ChainProgramming.m */; };
 		1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82421E886B700EF0BC4 /* NSObject+Responsive.m */; };
 		1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */; };
+		1459DDC821F02945009A70E1 /* RCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459DDC621F02945009A70E1 /* RCell.m */; };
+		1459DDC921F02945009A70E1 /* RCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1459DDC721F02945009A70E1 /* RCell.xib */; };
+		1459DDCC21F029EE009A70E1 /* RCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459DDCB21F029EE009A70E1 /* RCellViewModel.m */; };
 		14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAB21E497CB009010BA /* AppDelegate.m */; };
 		14CBBBAF21E497CB009010BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAE21E497CB009010BA /* ViewController.m */; };
 		14CBBBB221E497CB009010BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB021E497CB009010BA /* Main.storyboard */; };
@@ -35,6 +38,12 @@
 		1422E82421E886B700EF0BC4 /* NSObject+Responsive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Responsive.m"; sourceTree = "<group>"; };
 		1422E82621E88CFC00EF0BC4 /* FunctionalProgramming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionalProgramming.h; sourceTree = "<group>"; };
 		1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalProgramming.m; sourceTree = "<group>"; };
+		1459DDC521F02945009A70E1 /* RCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCell.h; sourceTree = "<group>"; };
+		1459DDC621F02945009A70E1 /* RCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCell.m; sourceTree = "<group>"; };
+		1459DDC721F02945009A70E1 /* RCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCell.xib; path = "../../../../../../../../Desktop/3 码哥课堂/课堂代码/02阶段/01/RAC/10-ReactiveCocoa + MVVM(网络请求数据)/01-导入RAC/Classes/View/RCell.xib"; sourceTree = "<group>"; };
+		1459DDCA21F029EE009A70E1 /* RCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCellViewModel.h; sourceTree = "<group>"; };
+		1459DDCB21F029EE009A70E1 /* RCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCellViewModel.m; sourceTree = "<group>"; };
+		1492DF7521F02D2000D61130 /* RProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RProtocol.h; sourceTree = "<group>"; };
 		14CBBBA721E497CB009010BA /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBBBAA21E497CB009010BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CBBBAB21E497CB009010BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +86,14 @@
 			path = Programming;
 			sourceTree = "<group>";
 		};
+		1492DF7621F02D4000D61130 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1492DF7521F02D2000D61130 /* RProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		14CBBB9E21E497CB009010BA = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +134,7 @@
 		14D7E7BB21EF30310071D31F /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				1492DF7621F02D4000D61130 /* Protocol */,
 				14D7E7BD21EF30310071D31F /* Model */,
 				14D7E7BE21EF30310071D31F /* View */,
 				14D7E7BC21EF30310071D31F /* ViewModel */,
@@ -129,6 +147,8 @@
 			children = (
 				14D7E7BF21EF30570071D31F /* RViewModel.h */,
 				14D7E7C021EF30570071D31F /* RViewModel.m */,
+				1459DDCA21F029EE009A70E1 /* RCellViewModel.h */,
+				1459DDCB21F029EE009A70E1 /* RCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +167,9 @@
 			children = (
 				14188D9A21EC852900CBA334 /* RView.h */,
 				14188D9B21EC852900CBA334 /* RView.m */,
+				1459DDC521F02945009A70E1 /* RCell.h */,
+				1459DDC621F02945009A70E1 /* RCell.m */,
+				1459DDC721F02945009A70E1 /* RCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +254,7 @@
 				14CBBBB421E497CC009010BA /* Assets.xcassets in Resources */,
 				14206C7421EC893C00CBC8C7 /* flags.plist in Resources */,
 				14CBBBB221E497CB009010BA /* Main.storyboard in Resources */,
+				1459DDC921F02945009A70E1 /* RCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1459DDCC21F029EE009A70E1 /* RCellViewModel.m in Sources */,
 				14CBBBAF21E497CB009010BA /* ViewController.m in Sources */,
 				14206C7721EC8A4900CBC8C7 /* RModel.m in Sources */,
 				1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */,
@@ -312,6 +337,7 @@
 				14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */,
 				14188D9C21EC852900CBA334 /* RView.m in Sources */,
 				14D7E7C121EF30570071D31F /* RViewModel.m in Sources */,
+				1459DDC821F02945009A70E1 /* RCell.m in Sources */,
 				1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

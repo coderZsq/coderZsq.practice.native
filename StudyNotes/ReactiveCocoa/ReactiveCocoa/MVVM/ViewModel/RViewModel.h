@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ReactiveObjC.h"
+#import "RProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RViewModel : NSObject {
+@interface RViewModel : NSObject <RProtocol> {
     RACCommand * _loadDataCommand;
 }
 
