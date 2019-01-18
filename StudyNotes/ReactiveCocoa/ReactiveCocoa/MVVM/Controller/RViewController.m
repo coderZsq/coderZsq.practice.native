@@ -1,19 +1,19 @@
 //
-//  ViewController.m
+//  RViewController.m
 //  ReactiveCocoa
 //
 //  Created by 朱双泉 on 2019/1/8.
 //  Copyright © 2019 Castie!. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RViewController.h"
 #import "ReactiveObjC.h"
 #import "RView.h"
 #import "RModel.h"
 #import "RViewModel.h"
 #import "RACReturnSignal.h"
 
-@interface ViewController () ///<RViewDelegate>
+@interface RViewController () ///<RViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextField *textField2;
@@ -21,7 +21,7 @@
 @property (nonatomic, strong) RViewModel * viewModel;
 @end
 
-@implementation ViewController
+@implementation RViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

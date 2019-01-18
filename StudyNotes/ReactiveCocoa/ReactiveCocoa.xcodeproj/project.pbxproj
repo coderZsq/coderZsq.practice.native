@@ -17,7 +17,7 @@
 		1459DDC921F02945009A70E1 /* RCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1459DDC721F02945009A70E1 /* RCell.xib */; };
 		1459DDCC21F029EE009A70E1 /* RCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459DDCB21F029EE009A70E1 /* RCellViewModel.m */; };
 		14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAB21E497CB009010BA /* AppDelegate.m */; };
-		14CBBBAF21E497CB009010BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAE21E497CB009010BA /* ViewController.m */; };
+		14CBBBAF21E497CB009010BA /* RViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAE21E497CB009010BA /* RViewController.m */; };
 		14CBBBB221E497CB009010BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB021E497CB009010BA /* Main.storyboard */; };
 		14CBBBB421E497CC009010BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB321E497CC009010BA /* Assets.xcassets */; };
 		14CBBBB721E497CC009010BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CBBBB521E497CC009010BA /* LaunchScreen.storyboard */; };
@@ -47,8 +47,8 @@
 		14CBBBA721E497CB009010BA /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBBBAA21E497CB009010BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CBBBAB21E497CB009010BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		14CBBBAD21E497CB009010BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		14CBBBAE21E497CB009010BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		14CBBBAD21E497CB009010BA /* RViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RViewController.h; sourceTree = "<group>"; };
+		14CBBBAE21E497CB009010BA /* RViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RViewController.m; sourceTree = "<group>"; };
 		14CBBBB121E497CB009010BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14CBBBB321E497CC009010BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14CBBBB621E497CC009010BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +86,15 @@
 			path = Programming;
 			sourceTree = "<group>";
 		};
+		14380F5F21F17B990070CFBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14CBBBAD21E497CB009010BA /* RViewController.h */,
+				14CBBBAE21E497CB009010BA /* RViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1492DF7621F02D4000D61130 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,8 +128,6 @@
 				14D7E7BB21EF30310071D31F /* MVVM */,
 				14CBBBAA21E497CB009010BA /* AppDelegate.h */,
 				14CBBBAB21E497CB009010BA /* AppDelegate.m */,
-				14CBBBAD21E497CB009010BA /* ViewController.h */,
-				14CBBBAE21E497CB009010BA /* ViewController.m */,
 				14206C7321EC893C00CBC8C7 /* flags.plist */,
 				14CBBBB021E497CB009010BA /* Main.storyboard */,
 				14CBBBB321E497CC009010BA /* Assets.xcassets */,
@@ -138,6 +145,7 @@
 				14D7E7BD21EF30310071D31F /* Model */,
 				14D7E7BE21EF30310071D31F /* View */,
 				14D7E7BC21EF30310071D31F /* ViewModel */,
+				14380F5F21F17B990070CFBA /* Controller */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -329,7 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1459DDCC21F029EE009A70E1 /* RCellViewModel.m in Sources */,
-				14CBBBAF21E497CB009010BA /* ViewController.m in Sources */,
+				14CBBBAF21E497CB009010BA /* RViewController.m in Sources */,
 				14206C7721EC8A4900CBC8C7 /* RModel.m in Sources */,
 				1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */,
 				1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */,

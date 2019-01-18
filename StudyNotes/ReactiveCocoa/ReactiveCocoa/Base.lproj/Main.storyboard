@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="937"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="5xn-uJ-nhS">
             <objects>
-                <tableViewController id="uA7-T8-PNj" customClass="ViewController" sceneMemberID="viewController">
+                <tableViewController id="uA7-T8-PNj" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hag-bd-nEh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,7 @@
         <!--View Controller-->
         <scene sceneID="jcQ-TZ-vxY">
             <objects>
-                <viewController id="ics-kK-HJC" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="ics-kK-HJC" customClass="RViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lh5-zb-5nU"/>
                         <viewControllerLayoutGuide type="bottom" id="dMQ-KI-XbE"/>
@@ -242,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="1809"/>
         </scene>
-        <!--My Info View Controller-->
+        <!--Node View Controller-->
         <scene sceneID="mpe-vw-OVX">
             <objects>
-                <viewController id="1Ir-bp-nee" customClass="SQMyInfoViewController" sceneMemberID="viewController">
+                <viewController id="1Ir-bp-nee" customClass="NodeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vwQ-Em-qVv"/>
                         <viewControllerLayoutGuide type="bottom" id="MzT-ZW-feo"/>
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf5-4h-o3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="1810"/>
+            <point key="canvasLocation" x="726" y="1809"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RViewController.h
 //  ReactiveCocoa
 //
 //  Created by 朱双泉 on 2019/1/8.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RViewController : UIViewController
 
 
 @end
