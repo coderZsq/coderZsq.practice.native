@@ -242,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="1809"/>
         </scene>
-        <!--Node View Controller-->
+        <!--View Controller-->
         <scene sceneID="mpe-vw-OVX">
             <objects>
-                <viewController id="1Ir-bp-nee" customClass="NodeViewController" sceneMemberID="viewController">
+                <viewController id="1Ir-bp-nee" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vwQ-Em-qVv"/>
                         <viewControllerLayoutGuide type="bottom" id="MzT-ZW-feo"/>
