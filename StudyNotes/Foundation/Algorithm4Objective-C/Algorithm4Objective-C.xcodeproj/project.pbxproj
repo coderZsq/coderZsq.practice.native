@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		149807C421F83BAB000F6532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 149807C321F83BAB000F6532 /* main.m */; };
 		149807CC21F83D02000F6532 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 149807CB21F83D02000F6532 /* ArrayList.c */; };
+		14ABAC2521F9675600EB7005 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC2421F9675600EB7005 /* Object.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		149807C321F83BAB000F6532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		149807CA21F83D02000F6532 /* ArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
 		149807CB21F83D02000F6532 /* ArrayList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayList.c; sourceTree = "<group>"; };
+		14ABAC2321F9675600EB7005 /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		14ABAC2421F9675600EB7005 /* Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				149807CA21F83D02000F6532 /* ArrayList.h */,
 				149807CB21F83D02000F6532 /* ArrayList.c */,
+				14ABAC2321F9675600EB7005 /* Object.h */,
+				14ABAC2421F9675600EB7005 /* Object.m */,
 				149807C321F83BAB000F6532 /* main.m */,
 			);
 			path = "Algorithm4Objective-C";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ABAC2521F9675600EB7005 /* Object.m in Sources */,
 				149807C421F83BAB000F6532 /* main.m in Sources */,
 				149807CC21F83D02000F6532 /* ArrayList.c in Sources */,
 			);

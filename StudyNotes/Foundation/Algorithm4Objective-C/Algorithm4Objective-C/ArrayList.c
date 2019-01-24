@@ -6,18 +6,32 @@
 //  Copyright © 2019 Castie!. All rights reserved.
 //
 
+typedef void * ArrayListNodeValue;
+
+typedef struct {
+    int capacity;
+    int length;
+    ArrayListNodeValue * values;
+} ArrayList;
+
+#define typedef_ArrayList
+
 #include "ArrayList.h"
 #include <stdlib.h>
 
 const int ArrayListNotFound = -1;
 
-void List_Print(ArrayList * list) {
+void List_Print(ArrayList * list, ArrayListPrintFunc func) {
     if (list == NULL) return;
     printf("length = %d\n", list->length);
     printf("capacity = %d\n", list->capacity);
     printf("value = [");
     for (int i = 0; i < list->length; i++) {
-        printf("%d", list->values[i]);
+        if (func) {
+            func(list->values[i]);
+        } else {
+            printf("%p", list->values[i]);
+        }
         if (i != list->length - 1) {
             printf(", ");
         }
@@ -35,11 +49,11 @@ ArrayList * List_Create(int capacity) {
      return pList;
      */
     if (capacity < 0) return NULL;
-    ArrayList * list = malloc(sizeof(ArrayList));
+    ArrayList * list = malloc(sizeof(ArrayList/* + capacity * sizeof(ArrayListNodeValue)*/));
     if (list) {
         list->length = 0;
         list->capacity = capacity;
-        list->values = malloc(capacity * sizeof(ArrayListNodeValue));
+        list->values = malloc(capacity * sizeof(ArrayListNodeValue)); //list + 1;
     }
     return list;
 }

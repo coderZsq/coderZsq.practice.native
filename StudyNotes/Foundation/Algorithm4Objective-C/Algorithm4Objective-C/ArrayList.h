@@ -11,17 +11,16 @@
 
 #include <stdio.h>
 
+#ifndef typedef_ArrayList
+typedef void * ArrayListNodeValue;
+typedef void ArrayList;
+#endif
+
 extern const int ArrayListNotFound;
 
-typedef int ArrayListNodeValue;
+typedef void (*ArrayListPrintFunc) (ArrayListNodeValue value);
 
-typedef struct {
-    int capacity;
-    int length;
-    ArrayListNodeValue * values;
-} ArrayList;
-
-void List_Print(ArrayList * list);
+void List_Print(ArrayList * list, ArrayListPrintFunc func);
 
 ArrayList * List_Create(int capacity);
 void List_Clear(ArrayList * list);
