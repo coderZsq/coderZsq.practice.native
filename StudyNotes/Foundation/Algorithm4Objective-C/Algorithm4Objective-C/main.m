@@ -11,6 +11,30 @@
 #import "Object.h"
 #import "NSArray+Address.h"
 #import "LinkList.h"
+#import "Stack.h"
+
+void testStack() {
+    Stack *stack = Stack_Create(10);
+    Stack_Print(stack, NULL); // []
+    Stack_Push(stack, (void *)10);
+    Stack_Push(stack, (void *)2);
+    Stack_Push(stack, (void *)4);
+    Stack_Push(stack, (void *)5);
+    Stack_Print(stack, NULL); // [10, 2, 4, 5]
+    printf("%d\n", (int)Stack_Pop(stack));
+    printf("%d\n", (int)Stack_Pop(stack));
+    Stack_Print(stack, NULL); // [10, 2]
+    printf("%d\n", (int)Stack_Top(stack)); // 2
+    Stack_Pop(stack);
+    Stack_Pop(stack);
+    Stack_Pop(stack);
+    Stack_Pop(stack);
+    Stack_Print(stack, NULL); // []
+    Stack_Push(stack, (void *)4);
+    Stack_Clear(stack);
+    Stack_Print(stack, NULL); // []
+    Stack_Destroy(stack);
+}
 
 void printIntFunc(LinkListNodeValue value) {
     printf("%d", (int)value);
@@ -147,7 +171,7 @@ void testArray() {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        testStack();
     }
     return 0;
 }

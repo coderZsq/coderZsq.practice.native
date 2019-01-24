@@ -12,6 +12,7 @@
 		149807CC21F83D02000F6532 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 149807CB21F83D02000F6532 /* ArrayList.c */; };
 		14ABAC2521F9675600EB7005 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC2421F9675600EB7005 /* Object.m */; };
 		14C4608F21F989E800415433 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 14C4608E21F989E800415433 /* LinkList.c */; };
+		14F8639621F9A8B800528C8C /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 14F8639521F9A8B800528C8C /* Stack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		14ABAC2421F9675600EB7005 /* Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
 		14C4608D21F989E800415433 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
 		14C4608E21F989E800415433 /* LinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
+		14F8639421F9A8B800528C8C /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		14F8639521F9A8B800528C8C /* Stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 		149807C221F83BAB000F6532 /* Algorithm4Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				14F8639421F9A8B800528C8C /* Stack.h */,
+				14F8639521F9A8B800528C8C /* Stack.c */,
 				14C4608D21F989E800415433 /* LinkList.h */,
 				14C4608E21F989E800415433 /* LinkList.c */,
 				149807CA21F83D02000F6532 /* ArrayList.h */,
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F8639621F9A8B800528C8C /* Stack.c in Sources */,
 				14ABAC2521F9675600EB7005 /* Object.m in Sources */,
 				148EA2C121F9820200A9F524 /* NSArray+Address.m in Sources */,
 				149807C421F83BAB000F6532 /* main.m in Sources */,
