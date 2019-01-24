@@ -11,10 +11,31 @@
 
 #include <stdio.h>
 
+extern const int ArrayListNotFound;
+
+typedef int ArrayListNodeValue;
+
 typedef struct {
-    int capacity; //容量
-    int length; //长度(当前节点的数量)
-    int values[10];
+    int capacity;
+    int length;
+    ArrayListNodeValue * values;
 } ArrayList;
+
+void List_Print(ArrayList * list);
+
+ArrayList * List_Create(int capacity);
+void List_Clear(ArrayList * list);
+void List_Destory(ArrayList * list);
+
+int List_Length(ArrayList * list);
+ArrayListNodeValue List_Get(ArrayList * list, int index);
+int List_Index(ArrayList * list, ArrayListNodeValue value);
+
+void List_Insert(ArrayList * list, int index, ArrayListNodeValue value);
+void List_Add(ArrayList * list, ArrayListNodeValue value);
+void List_Set(ArrayList * list, int index, ArrayListNodeValue value);
+
+ArrayListNodeValue List_Remove(ArrayList * list, int index);
+void List_Remove_Value(ArrayList * list, ArrayListNodeValue value);
 
 #endif /* ArrayList_h */

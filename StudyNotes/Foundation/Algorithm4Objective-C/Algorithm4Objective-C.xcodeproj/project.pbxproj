@@ -60,9 +60,9 @@
 		149807C221F83BAB000F6532 /* Algorithm4Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				149807C321F83BAB000F6532 /* main.m */,
 				149807CA21F83D02000F6532 /* ArrayList.h */,
 				149807CB21F83D02000F6532 /* ArrayList.c */,
+				149807C321F83BAB000F6532 /* main.m */,
 			);
 			path = "Algorithm4Objective-C";
 			sourceTree = "<group>";

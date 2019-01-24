@@ -21,13 +21,31 @@
 		149807AD21F83AB2000F6532 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079721F83AB2000F6532 /* SelectionSort.swift */; };
 		149807AE21F83AB2000F6532 /* CountOccurrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079821F83AB2000F6532 /* CountOccurrences.swift */; };
 		149807AF21F83AB2000F6532 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079921F83AB2000F6532 /* QuickSort.swift */; };
-		149807B021F83AB2000F6532 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079A21F83AB2000F6532 /* main.swift */; };
 		149807B121F83AB2000F6532 /* MaxPairwiseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079C21F83AB2000F6532 /* MaxPairwiseProduct.swift */; };
 		149807B221F83AB2000F6532 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079D21F83AB2000F6532 /* Fibonacci.swift */; };
 		149807B321F83AB2000F6532 /* LargestNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079E21F83AB2000F6532 /* LargestNumber.swift */; };
 		149807B421F83AB2000F6532 /* Enumerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498079F21F83AB2000F6532 /* Enumerate.swift */; };
 		149807B521F83AB2000F6532 /* GreatestCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149807A021F83AB2000F6532 /* GreatestCommonDivisor.swift */; };
 		149807B621F83AB2000F6532 /* MinRefills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149807A121F83AB2000F6532 /* MinRefills.swift */; };
+		14ABAC0C21F9608300EB7005 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABF921F9608300EB7005 /* Stack.swift */; };
+		14ABAC0D21F9608300EB7005 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFA21F9608300EB7005 /* BinarySearchTree.swift */; };
+		14ABAC0E21F9608300EB7005 /* RootishArrayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFB21F9608300EB7005 /* RootishArrayStack.swift */; };
+		14ABAC0F21F9608300EB7005 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFC21F9608300EB7005 /* Deque.swift */; };
+		14ABAC1021F9608300EB7005 /* FixedSizeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFD21F9608300EB7005 /* FixedSizeArray.swift */; };
+		14ABAC1121F9608300EB7005 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFE21F9608300EB7005 /* Tree.swift */; };
+		14ABAC1221F9608300EB7005 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABABFF21F9608300EB7005 /* Array2D.swift */; };
+		14ABAC1321F9608300EB7005 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0021F9608300EB7005 /* Queue.swift */; };
+		14ABAC1421F9608300EB7005 /* BitSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0121F9608300EB7005 /* BitSet.swift */; };
+		14ABAC1521F9608300EB7005 /* OrderedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0221F9608300EB7005 /* OrderedArray.swift */; };
+		14ABAC1621F9608300EB7005 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0321F9608300EB7005 /* LinkedList.swift */; };
+		14ABAC1721F9608300EB7005 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0421F9608300EB7005 /* BinaryTree.swift */; };
+		14ABAC1821F9608300EB7005 /* Stack_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0621F9608300EB7005 /* Stack_.swift */; };
+		14ABAC1921F9608300EB7005 /* Tree_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0721F9608300EB7005 /* Tree_.swift */; };
+		14ABAC1A21F9608300EB7005 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0821F9608300EB7005 /* List.swift */; };
+		14ABAC1B21F9608300EB7005 /* Queue_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0921F9608300EB7005 /* Queue_.swift */; };
+		14ABAC1C21F9608300EB7005 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0A21F9608300EB7005 /* Map.swift */; };
+		14ABAC1D21F9608300EB7005 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC0B21F9608300EB7005 /* Node.swift */; };
+		14ABAC2221F9619000EB7005 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABAC2121F9619000EB7005 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,13 +76,31 @@
 		1498079721F83AB2000F6532 /* SelectionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		1498079821F83AB2000F6532 /* CountOccurrences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountOccurrences.swift; sourceTree = "<group>"; };
 		1498079921F83AB2000F6532 /* QuickSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
-		1498079A21F83AB2000F6532 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1498079C21F83AB2000F6532 /* MaxPairwiseProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxPairwiseProduct.swift; sourceTree = "<group>"; };
 		1498079D21F83AB2000F6532 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		1498079E21F83AB2000F6532 /* LargestNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargestNumber.swift; sourceTree = "<group>"; };
 		1498079F21F83AB2000F6532 /* Enumerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerate.swift; sourceTree = "<group>"; };
 		149807A021F83AB2000F6532 /* GreatestCommonDivisor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreatestCommonDivisor.swift; sourceTree = "<group>"; };
 		149807A121F83AB2000F6532 /* MinRefills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinRefills.swift; sourceTree = "<group>"; };
+		14ABABF921F9608300EB7005 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		14ABABFA21F9608300EB7005 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		14ABABFB21F9608300EB7005 /* RootishArrayStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootishArrayStack.swift; sourceTree = "<group>"; };
+		14ABABFC21F9608300EB7005 /* Deque.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
+		14ABABFD21F9608300EB7005 /* FixedSizeArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedSizeArray.swift; sourceTree = "<group>"; };
+		14ABABFE21F9608300EB7005 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		14ABABFF21F9608300EB7005 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		14ABAC0021F9608300EB7005 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		14ABAC0121F9608300EB7005 /* BitSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitSet.swift; sourceTree = "<group>"; };
+		14ABAC0221F9608300EB7005 /* OrderedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedArray.swift; sourceTree = "<group>"; };
+		14ABAC0321F9608300EB7005 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		14ABAC0421F9608300EB7005 /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		14ABAC0621F9608300EB7005 /* Stack_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack_.swift; sourceTree = "<group>"; };
+		14ABAC0721F9608300EB7005 /* Tree_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree_.swift; sourceTree = "<group>"; };
+		14ABAC0821F9608300EB7005 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		14ABAC0921F9608300EB7005 /* Queue_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue_.swift; sourceTree = "<group>"; };
+		14ABAC0A21F9608300EB7005 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		14ABAC0B21F9608300EB7005 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		14ABAC2121F9619000EB7005 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +133,9 @@
 		1498078921F83AB2000F6532 /* Algorithm4Swift */ = {
 			isa = PBXGroup;
 			children = (
-				1498078A21F83AB2000F6532 /* Other */,
-				1498079B21F83AB2000F6532 /* Coursera */,
-				1498078E21F83AB2000F6532 /* Raywenderlich */,
-				1498079A21F83AB2000F6532 /* main.swift */,
+				14ABABF721F9602F00EB7005 /* Algorithm */,
+				14ABAC1E21F9608A00EB7005 /* DataStructure */,
+				14ABAC2121F9619000EB7005 /* main.swift */,
 			);
 			path = Algorithm4Swift;
 			sourceTree = "<group>";
@@ -144,6 +179,57 @@
 				149807A121F83AB2000F6532 /* MinRefills.swift */,
 			);
 			path = Coursera;
+			sourceTree = "<group>";
+		};
+		14ABABF721F9602F00EB7005 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				1498078A21F83AB2000F6532 /* Other */,
+				1498079B21F83AB2000F6532 /* Coursera */,
+				1498078E21F83AB2000F6532 /* Raywenderlich */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		14ABABF821F9608300EB7005 /* Raywenderlich */ = {
+			isa = PBXGroup;
+			children = (
+				14ABABF921F9608300EB7005 /* Stack.swift */,
+				14ABABFA21F9608300EB7005 /* BinarySearchTree.swift */,
+				14ABABFB21F9608300EB7005 /* RootishArrayStack.swift */,
+				14ABABFC21F9608300EB7005 /* Deque.swift */,
+				14ABABFD21F9608300EB7005 /* FixedSizeArray.swift */,
+				14ABABFE21F9608300EB7005 /* Tree.swift */,
+				14ABABFF21F9608300EB7005 /* Array2D.swift */,
+				14ABAC0021F9608300EB7005 /* Queue.swift */,
+				14ABAC0121F9608300EB7005 /* BitSet.swift */,
+				14ABAC0221F9608300EB7005 /* OrderedArray.swift */,
+				14ABAC0321F9608300EB7005 /* LinkedList.swift */,
+				14ABAC0421F9608300EB7005 /* BinaryTree.swift */,
+			);
+			path = Raywenderlich;
+			sourceTree = "<group>";
+		};
+		14ABAC0521F9608300EB7005 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14ABAC0621F9608300EB7005 /* Stack_.swift */,
+				14ABAC0721F9608300EB7005 /* Tree_.swift */,
+				14ABAC0821F9608300EB7005 /* List.swift */,
+				14ABAC0921F9608300EB7005 /* Queue_.swift */,
+				14ABAC0A21F9608300EB7005 /* Map.swift */,
+				14ABAC0B21F9608300EB7005 /* Node.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		14ABAC1E21F9608A00EB7005 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				14ABAC0521F9608300EB7005 /* Other */,
+				14ABABF821F9608300EB7005 /* Raywenderlich */,
+			);
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ABAC1421F9608300EB7005 /* BitSet.swift in Sources */,
 				149807A921F83AB2000F6532 /* SelectMinimumMaximun.swift in Sources */,
 				149807B621F83AB2000F6532 /* MinRefills.swift in Sources */,
 				149807A421F83AB2000F6532 /* Search.swift in Sources */,
@@ -216,15 +303,32 @@
 				149807AB21F83AB2000F6532 /* BinarySearch.swift in Sources */,
 				149807A621F83AB2000F6532 /* Big-O notation.swift in Sources */,
 				149807AC21F83AB2000F6532 /* ShellSort.swift in Sources */,
+				14ABAC1121F9608300EB7005 /* Tree.swift in Sources */,
+				14ABAC2221F9619000EB7005 /* main.swift in Sources */,
 				149807AF21F83AB2000F6532 /* QuickSort.swift in Sources */,
+				14ABAC0F21F9608300EB7005 /* Deque.swift in Sources */,
 				149807B321F83AB2000F6532 /* LargestNumber.swift in Sources */,
+				14ABAC1A21F9608300EB7005 /* List.swift in Sources */,
+				14ABAC1D21F9608300EB7005 /* Node.swift in Sources */,
+				14ABAC1721F9608300EB7005 /* BinaryTree.swift in Sources */,
 				149807A721F83AB2000F6532 /* MargeSort.swift in Sources */,
+				14ABAC1321F9608300EB7005 /* Queue.swift in Sources */,
+				14ABAC0E21F9608300EB7005 /* RootishArrayStack.swift in Sources */,
 				149807B521F83AB2000F6532 /* GreatestCommonDivisor.swift in Sources */,
-				149807B021F83AB2000F6532 /* main.swift in Sources */,
+				14ABAC1821F9608300EB7005 /* Stack_.swift in Sources */,
+				14ABAC1921F9608300EB7005 /* Tree_.swift in Sources */,
+				14ABAC0C21F9608300EB7005 /* Stack.swift in Sources */,
+				14ABAC1B21F9608300EB7005 /* Queue_.swift in Sources */,
+				14ABAC1C21F9608300EB7005 /* Map.swift in Sources */,
+				14ABAC1221F9608300EB7005 /* Array2D.swift in Sources */,
+				14ABAC0D21F9608300EB7005 /* BinarySearchTree.swift in Sources */,
+				14ABAC1521F9608300EB7005 /* OrderedArray.swift in Sources */,
 				149807A521F83AB2000F6532 /* InsertionSort.swift in Sources */,
 				149807A221F83AB2000F6532 /* Math.swift in Sources */,
 				149807B121F83AB2000F6532 /* MaxPairwiseProduct.swift in Sources */,
 				149807A321F83AB2000F6532 /* Sort.swift in Sources */,
+				14ABAC1621F9608300EB7005 /* LinkedList.swift in Sources */,
+				14ABAC1021F9608300EB7005 /* FixedSizeArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
