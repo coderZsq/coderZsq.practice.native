@@ -20,21 +20,21 @@ extern const int ArrayListNotFound;
 
 typedef void (*ArrayListPrintFunc) (ArrayListNodeValue value);
 
-void List_Print(ArrayList * list, ArrayListPrintFunc func);
+void ArrayList_Print(ArrayList * list, ArrayListPrintFunc func);
 
-ArrayList * List_Create(int capacity);
-void List_Clear(ArrayList * list);
-void List_Destory(ArrayList * list);
+ArrayList * ArrayList_Create(int capacity);
+void ArrayList_Clear(ArrayList * list);
+void ArrayList_Destory(ArrayList * list);
 
-int List_Length(ArrayList * list);
-ArrayListNodeValue List_Get(ArrayList * list, int index);
-int List_Index(ArrayList * list, ArrayListNodeValue value);
+int ArrayList_Length(ArrayList * list);
+ArrayListNodeValue ArrayList_Get(ArrayList * list, int index);
+int ArrayList_Index(ArrayList * list, ArrayListNodeValue value);
 
-void List_Insert(ArrayList * list, int index, ArrayListNodeValue value);
-void List_Add(ArrayList * list, ArrayListNodeValue value);
-void List_Set(ArrayList * list, int index, ArrayListNodeValue value);
+void ArrayList_Insert(ArrayList * list, int index, ArrayListNodeValue value);
+void ArrayList_Add(ArrayList * list, ArrayListNodeValue value);
+void ArrayList_Set(ArrayList * list, int index, ArrayListNodeValue value);
 
-ArrayListNodeValue List_Remove(ArrayList * list, int index);
-void List_Remove_Value(ArrayList * list, ArrayListNodeValue value);
+ArrayListNodeValue ArrayList_Remove(ArrayList * list, int index);
+void ArrayList_Remove_Value(ArrayList * list, ArrayListNodeValue value);
 
 #endif /* ArrayList_h */
