@@ -51,3 +51,7 @@ Author/Maintainer Name [朱双泉]:
 Instantiating iphone/tweak in tweak/...
 Done.
 ```
+```
+export THEOS_DEVICE_IP=127.0.0.1
+export THEOS_DEVICE_PORT=10010
+```
