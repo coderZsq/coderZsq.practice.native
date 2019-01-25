@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="SIGHT" title="图像视频处理" version="9" resetable="yes">
+    <section>
+        <page key="Story_Sight_Quality" title="状态：视频拍摄配置" version="1">
+            <section title="配置参数">
+                <item type="switch"   key="Story_SightQuality_Ignore_Dynamic_Config"  title="采用自定义配置" defaultValue="off"/>
+                <item type="value"    key="Story_SightRecord_Video_Width"  title="视频宽度" defaultValue="720"  maxValue="2160"  minValue="320"  step="10"/>
+                <item type="value"    key="Story_SightRecord_Video_Bitrate"  title="视频比特率" defaultValue="3500"  maxValue="20000"  minValue="1000"  step="100"/>
+                <item type="value"    key="Story_SightRecord_Video_Framerate"  title="视频帧率" defaultValue="30"  maxValue="60"  minValue="5"  step="5"/>
+                <item type="value"    key="Story_SightEncode_KeyFrame_Interval" title="关键帧间隔" defaultValue ="24" minValue="10" maxValue="240" step="1"/>
+                <item type="value"    key="Story_SightRecord_Audio_Bitrate"  title="音频比特率" defaultValue="48"  maxValue="320"  minValue="16"  step="8"/>
+                <item type="switch"   key="Story_SightRecord_Audio_Compression" title="压缩音频" defaultValue="on"/>
+                <item type="switch"   key="Story_SightRecord_Not_Audio" title="Not Audio" defaultValue="off"/>
+            </section>
+            <section title="低端机配置参数">
+                <item type="value"    key="Story_SightRecord_UnderiPhone6s_Video_Width"  title="视频宽度" defaultValue="540"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="Story_SightRecord_UnderiPhone6s_Video_Bitrate"  title="视频比特率" defaultValue="1600"  maxValue="6000"  minValue="200"  step="50"/>
+                <item type="value"    key="Story_SightRecord_UnderiPhone6s_Video_Framerate"  title="视频帧率" defaultValue="30"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="value"    key="Story_SightEncode_UnderiPhone6s_KeyFrame_Interval" title="关键帧间隔" defaultValue ="90" minValue="24" maxValue="240" step="20"/>
+                <item type="value"    key="Story_SightRecord_UnderiPhone6s_Audio_Bitrate"  title="音频比特率" defaultValue="48"  maxValue="320"  minValue="16"  step="8"/>
+            </section>
+        </page>
+    </section>
+    
+    <section>
+        <item type="switch" key="SIGHT_IPAD_SWITCH" title="Open iPad Sight" defaultValue="off"/>
+        <item type="switch" key="SIGHT_CAPTURE_F4" title="Using F4 solution" defaultValue="on"/>
+        <item type="switch" key="SIGHT_MSG_HOLE" title="Message hole in chat" defaultValue="on"/>
+        <item type="switch" key="SIGHT_PRESTART_RECORDING" title="Pre-start recording" defaultValue="on"/>
+        <item type="switch" key="SIGHT_RECORD_BGM" title="Enable record background music" defaultValue ="on"/>
+    </section>
+    
+    <section>
+        <page key= "SIGHT_TAKEPHOTO_MERGE_PAGE" title="Sight: Merge TakePhoto and Sight" version="7">
+            <section title="开关">
+                <item type="switch" key="SIGHT_IMAGE_DRAG_TO_CLOSE" title="Drag To Close" defaultValue="on"/>
+            </section>
+            
+            <section title="拍摄按钮大小">
+                <item type="value" key="SIGHT_CAM_BTN_OUTER_WIDTH" title="外圈直径" defaultValue="74" maxValue="400" minValue="50" step="5"/>
+                <item type="value" key="SIGHT_CAM_BTN_OUTER_WIDTH_HIGHLIGHTED" title="外圈按下时直径" defaultValue="120" maxValue="400" minValue="50" step="5"/>
+                <item type="value" key="SIGHT_CAM_BTN_INNER_WIDTH" title="内圈直径" defaultValue="54" maxValue="400" minValue="10" step="5"/>
+                <item type="value" key="SIGHT_CAM_BTN_INNER_WIDTH_HIGHLIGHTED" title="内圈按下时直径" defaultValue="40" maxValue="400" minValue="10" step="5"/>
+            </section>
+            
+            <section title="边下边播开关">
+                <item type="switch" key="SIGHT_Video_Play_MERGE" title="切换为边下边播组件" defaultValue="on"/>
+            </section>
+            
+            <section title="朋友圈缩略图大小">
+                <item type="value"  key="SIGHT_MERGE_SNS_THUMBSIZEMIN" title="短边推荐值" defaultValue="180" maxValue="375" minValue="50" step="1"/>
+                <item type="value"  key="SIGHT_MERGE_SNS_THUMBSIZEMAX" title="长边最大值" defaultValue="180" maxValue="667" minValue="100" step="1"/>
+            </section>
+            <section title="会话缩略图大小">
+                <item type="value"  key="SIGHT_MERGE_CHAT_THUMBSIZEMIN" title="短边推荐值" defaultValue="141" maxValue="375" minValue="50" step="1"/>
+                <item type="value"  key="SIGHT_MERGE_CHAT_THUMBSIZEMAX" title="长边最大值" defaultValue="141" maxValue="667" minValue="100" step="1"/>
+            </section>
+            <section title="缩略图大小算法说明：规定一个短边推荐值，一个长边最大值；转换大小时，缩放视频至视频短边等于短边推荐值，若此时视频长边超过了最大值，则缩放视频至视频长边等于长边最大值。">
+            </section>
+            <section title="     ">
+            </section>
+            <section title="会话气泡是否显示视频文件大小">
+                <item type="switch" key="SIGHT_MERGE_CHAT_THUMBFILESIZE" title="会话气泡显示视频文件大小" defaultValue="off"/>
+            </section>
+            <section title="裁剪左滑块是否可滑动">
+                <item type="switch" key="SIGHT_MERGE_CROP_LEFTSLIDER" title="裁剪左滑块可滑动" defaultValue="on"/>
+                <item type="switch" key="SIGHT_MERGE_CROP_SYSTEM" title="使用系统裁剪方案" defaultValue="off"/>
+            </section>
+            <section title="视频裁剪最小时长">
+                <item type="value"  key="SIGHT_MERGE_CROP_MINDURATION" title="最小时长" defaultValue="1" maxValue="10" minValue="0" step="0.5"/>
+            </section>
+            <section title="视频裁剪循环播放间隙">
+                <item type="value"  key="SIGHT_MERGE_CROP_INTERVAL" title="播放间隙" defaultValue="0" maxValue="5" minValue="0" step="0.1"/>
+            </section>
+            <section title="视频裁剪终点播放时长">
+                <item type="value"  key="SIGHT_MERGE_CROP_STOP_DURATION" title="播放时长" defaultValue="0" maxValue="5" minValue="0" step="0.1"/>
+            </section>
+            <section title="滑块加手柄">
+                <item type="switch" key="SIGHT_MERGE_CROP_SLIDER_HANDLER" title="滑块加手柄" defaultValue="off"/>
+            </section>
+        </page>
+        <page type="KitNode" key="Sight_DraftBox" title="Sight: DraftBox" version="5" resetable="yes">
+            <section title="Global">
+                <item type="switch" key="SIGHT_DRAFT_BOX" title="Draft Box" defaultValue="on"/>
+                <item type="value"  key="SD_SAVE_DAYS" title="Item Valide Time" defaultValue="14" maxValue="1000" minValue="1" step="1"/>
+                <item type="switch" key="SIGHT_DRAFT_BOX_SAVE_PREVIEW" title="Save moment sight while play" defaultValue="off"/>
+
+                <page type="KitNode" title="Chat Screen" key="SD_CHAT_SCREEN" version="6">
+                    <section>
+                        <item type="switch" title="Need preview" key="SD_CHAT_ITEM_PREVIEW" defaultValue="off"/>
+                        <item type="value" title="Columns" key="SD_Columns" defaultValue="3" maxValue="4" minValue="1" step="1"/>
+                        <item type="value" title="Columns Padding" key="SD_Columns_Padding" defaultValue="14" maxValue="40" minValue="1" step="1"/>
+                        <item type="value" title="Topbar Height" key="SD_TOPBAR_HEIGHT" defaultValue="44" maxValue="80" minValue="10" step="1"/>
+                        <item type="value" title="Topbar Alpha" key="SD_TOPBAR_ALPHA" defaultValue="1" maxValue="1" minValue="0" step="0.05"/>
+                        <item type="value" title="Edge Padding" key="SD_edge_Padding" defaultValue="7" maxValue="40" minValue="1" step="1"/>
+                        <item type="value" title="Switch Anim Dur." key="SD_Switch_Anim" defaultValue="0.3" maxValue="2" minValue="0.1" step="0.05"/>
+                        <item type="value" title="Switch Anim Fade in delay" key="SD_Switch_Anim_Delay" defaultValue="0.3" maxValue="2" minValue="0.1" step="0.05"/>
+                        <item type="value" title="Cell corner" key="SD_Cell_Corner" defaultValue="6" maxValue="10" minValue="0" step="0.5"/>
+                        <item type="value" title="Container Mask" key="SD_Container_Alpha" defaultValue="0.5" maxValue="11" minValue="0" step="0.05"/>
+                    </section>
+                    <section title="moment draft panel">
+                        <item type="value" title="bounce anim count" key="SD_MA_BOUNCES" defaultValue="1" maxValue="6" minValue="1" step="1"/>
+                        <item type="value" title="bounce anim dur." key="SD_MA_DUR" defaultValue="0.6" maxValue="10" minValue="0" step="0.05"/>
+                        <item type="value" title="bounce anim stiffness" key="SD_MA_STIFF" defaultValue="8" maxValue="11" minValue="1" step="0.05"/>
+                    </section>
+                    <section title="cell">
+                        <item type="value" title="bounce size" key="SD_CELL_BOUNCE_SIZE" defaultValue="0.9" maxValue="2" minValue="0.1" step="0.05"/>
+                        <item type="value" title="bounce dur." key="SD_CELL_BOUNCE_DUR" defaultValue="0.3" maxValue="2" minValue="0" step="0.05"/>
+                    </section>
+                    <section title="save and quit">
+                        <item type="value" title="tips delay" key="SD_SQ_TIPS_DELAY" defaultValue="0.5" maxValue="20" minValue="0.1" step="0.05"/>
+                        <item type="value" title="tips last time" key="SD_SQ_TIPS_LAST_TIME" defaultValue="1.2" maxValue="20" minValue="0.1" step="0.1"/>
+                    </section>
+                </page>
+            </section>
+        </page>
+        
+        <include file="SightDetector.xml"/>
+        <include file="SightGroupGen.xml"/>
+
+        <include file="SightMainScreen.xml"/>
+        <include file="SightChatScreen.xml"/>
+        
+        <page key= "SIGHT_MSG_RECORD" title="Sight: MsgRecord" version="1">
+            <mode key="SIGHT_MSG_RECORD_AUTODOWNLOAD" title="Auto download" defaultValue="1" >
+                <option title="Depend on server"/>
+                <option title="Force download"/>
+                <option title="Force not download"/>
+            </mode>
+        </page>
+        
+        <page key="SIGHT_GLOBAL" title="Sight: Global"  version="7" resetable="yes">
+            
+            <section title="GLOBAL">
+                <item type="value" key="SIGHT_MAKE_MASK_GAP" title="BlurImage Delay" defaultValue ="4" maxValue="10" minValue="0.5" step="0.1"/>
+                <item type="value" key="SIGHT_MAKE_MASK_ANIM_DUR" title="BlurrImage Anim. Dur." defaultValue ="0.6" maxValue="1.0" minValue="0.1" step="0.1"/>
+                <item type="switch" key="SMSA_CAMERA_BLACK_STYLE" title="Use Black Theme" defaultValue ="on"/>
+                
+                <item type="value" key="SIGHT_BG_Blurred_Radius" title="Blurred Image Blurred Radius" defaultValue ="40" maxValue="80" minValue="0" step="5"/>
+                <item type="value" key="SIGHT_BG_Blurred_Saturation" title="Blurred Image Blurred Saturation" defaultValue ="2.0" maxValue="4.0" minValue="1.0" step="0.1"/>
+                
+                <item type="value" key="SIGHT_ZOOM_MAX_FACTOR"    title="Max Zoom Factor" defaultValue="15"  maxValue="100"  minValue="1"  step="0.5"/>
+                <item type="value" key="SIGHT_ZOOM_SINGLE_FINGER_MOVE_FACTOR"    title="Single Finger Zoom Scale Factor" defaultValue="40"  maxValue="100"  minValue="1"  step="1"/>
+                <item type="value" key="SIGHT_ZOOM_FACTOR"    title="Zoom Scale" defaultValue="2.4"  maxValue="4"  minValue="1"  step="0.1"/>
+                <item type="value" key="SIGHT_ZOOM_SPEED"    title="Zoom Speed" defaultValue="15"  maxValue="40"  minValue="1.5"  step="0.5"/>
+                <item type="value" key="SIGHT_CAMERA_MARGIN"  title="Camera Position Translation (Not Working, default is -0.12)"   defaultValue="0.0005"  maxValue="0.2"  minValue="-0.2"  step="0.01"/><!-- cannot set to 0, preventing system focus callback -->
+                
+                <item type="value" key="SIGHT_TRINSTION_DUR" title="Loop Crossfate Dur." defaultValue ="0.3" maxValue="1.0" minValue="0.0" step="0.02"/>
+            </section>
+            
+            <mode key="SIGHT_CAPTURE_PRESET" title="Capture Preset" defaultValue="2">
+                <option title="480 x 640"/>
+                <option title="720p"/>
+                <option title="1080p"/>
+                <option title="AVCaptureSessionPresetPhoto"/>
+                <option title="AVCaptureSessionPresetHigh"/>
+                <option title="AVCaptureSessionPresetMedium"/>
+                <option title="AVCaptureSessionPresetLow"/>
+                <option title="iFrame 540 x 960"/>
+                <option title="iFrame 720p"/>
+                
+            </mode>
+        </page>
+        
+        <page key="Sight_Quality" title="Sight Quality" version="17">
+            <section>
+                <item type="switch"   key="SightQuality_Ignore_Dynamic_Config"  title="Ignore Dynamic Config" defaultValue="off"/>
+                <item type="switch"   key="SightQuality_Not_Audio" title="Not Audio" defaultValue="off"/>
+                <item type="switch"   key="SightQuality_Allow_Stereo_Audio" title="Allow Stereo Audio" defaultValue="on"/>
+            </section>
+            
+            <section title="Moment Record Video Quality">
+                <item type="value"    key="SightMomentRecord_Video_Width"  title="Resolution Width" defaultValue="540"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="SightMomentRecord_Video_Bitrate"  title="Video Bitrate" defaultValue="1600"  maxValue="6000"  minValue="200"  step="50"/>
+                <item type="value"    key="SightMomentRecord_Video_Framerate"  title="Video Framerate" defaultValue="30"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="switch"   key="SightMomentRecord_Audio_Compression" title="Compress Audio" defaultValue="on"/>
+                <item type="value"    key="SightMomentRecord_Audio_Bitrate"  title="Audio Bitrate" defaultValue="48"  maxValue="320"  minValue="16"  step="8"/>
+            </section>
+            
+            <section title="Chat Record Video Quality">
+                <item type="value"    key="SightChatRecord_Video_Width"  title="Resolution Width" defaultValue="540"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="SightChatRecord_Video_Bitrate"  title="Video Bitrate" defaultValue="1200"  maxValue="6000"  minValue="200"  step="50"/>
+                <item type="value"    key="SightChatRecord_Video_Framerate"  title="Video Framerate" defaultValue="30"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="switch"   key="SightChatRecord_Audio_Compression" title="Compress Audio" defaultValue="on"/>
+                <item type="value"    key="SightChatRecord_Audio_Bitrate"  title="Audio Bitrate" defaultValue="48"  maxValue="320"  minValue="16"  step="8"/>
+            </section>
+            
+            <section title="Moment Album Video Quality">
+                <item type="value"    key="SightMomentAlbum_Video_Height"  title="Resolution Height(9:16)" defaultValue="960"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="SightMomentAlbum_Video_Bitrate"  title="Video Bitrate" defaultValue="1600"  maxValue="6000"  minValue="200"  step="50"/>
+                <item type="value"    key="SightMomentAlbum_Video_Framerate"  title="Video Framerate" defaultValue="30"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="value"    key="SightMomentAlbum_Audio_Bitrate"  title="Audio Bitrate(kbps)" defaultValue="48"  maxValue="320"  minValue="0"  step="0"/>
+                <item type="switch"   key="SightMomentAlbum_Not_Audio" title="Not Audio" defaultValue="off"/>
+            </section>
+            
+            <section title="Chat Album Video Quality">
+                <item type="value"    key="SightChatAlbum_Video_Height"  title="High Quality Resolution Height(9:16)" defaultValue="960"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="SightChatAlbum_Video_Bitrate"  title="High Quality Video Bitrate" defaultValue="1200"  maxValue="6000"  minValue="200"  step="50"/>
+                <item type="value"    key="SightChatAlbum_Video_Duration_HD"  title="High Quality Video Length" defaultValue="120"  maxValue="300"  minValue="4"  step="2"/>
+                <item type="value"    key="SightChatAlbum_Video_Framerate"  title="Video Framerate" defaultValue="30"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="value"    key="SightChatAlbum_Audio_Bitrate"  title="Audio Bitrate(kbps)" defaultValue="48"  maxValue="320"  minValue="0"  step="0"/>
+                <item type="value"    key="SightChatAlbum_Video_Bitrate_Low"  title="Low Quality Video Framerate" defaultValue="544"  maxValue="6000"  minValue="200"  step="10"/>
+                <item type="value"    key="SightChatAlbum_Video_Height_Low"  title="Low Quality Resolution Height(9:16)" defaultValue="640"  maxValue="1000"  minValue="192"  step="10"/>
+            </section>
+            
+            <mode key="SIGHT_RECORD_RESOLUTION" title="Chat Capture Resolution" defaultValue="1" >
+                <option title="240 x 176">
+                    <script key="SIGHT_RECORD_RESOLUTION_WIDTH" value="240"/>
+                    <script key="SIGHT_RECORD_RESOLUTION_HEIGHT" value="176"/>
+                </option>
+                <option title="208 x 140 (~16:11)">
+                    <script key="SIGHT_RECORD_RESOLUTION_WIDTH" value="208"/>
+                    <script key="SIGHT_RECORD_RESOLUTION_HEIGHT" value="140"/>
+                </option>
+                <option title="224 x 140">
+                    <script key="SIGHT_RECORD_RESOLUTION_WIDTH" value="224"/>
+                    <script key="SIGHT_RECORD_RESOLUTION_HEIGHT" value="140"/>
+                </option>
+                <option title="240 x 144">
+                    <script key="SIGHT_RECORD_RESOLUTION_WIDTH" value="240"/>
+                    <script key="SIGHT_RECORD_RESOLUTION_HEIGHT" value="144"/>
+                </option>
+            </mode>
+            
+            <section title="CAPTURE RESOLUTION">
+                <item type="value"    key="SIGHT_RECORD_RESOLUTION_WIDTH"  title="Chat Res. Width"   defaultValue="240"  maxValue="1000"  minValue="192"  step="10"/>
+                <item type="value"    key="SIGHT_RECORD_RESOLUTION_HEIGHT"  title="Chat Res. Height" defaultValue="176"  maxValue="1000"  minValue="124"  step="10"/>
+            </section>
+            
+            <section title="PLAYBACK SETTINGS">
+                <item type="value"    key="SIGHT_RECORD_BITRATE"    title="Chat Bitrate"        defaultValue="320"  maxValue="640"  minValue="240"  step="80"/>
+                <item type="value"    key="SIGHT_FULLPLAY_STRETCH"  title="Full-play Stretch"   defaultValue="1.0"  maxValue="1.3"  minValue="1.0"  step="0.1"/>
+                <item type="value"    key="SIGHT_CELL_WIDTH"        title="Cell width"          defaultValue="0.68"  maxValue="0.8"  minValue="0.3"  step="0.01"/>
+            </section>
+        </page>
+        
+        <page key="SIGHT_TIMELINE" title="Sight: TimeLine" version="1" resetable="yes">
+            
+            <section>
+                <item type="value" key="SIGHT_TIMELINE_CELL_VIEW_SIZE_PERCENTAGE" title="SightViewSizePercentage" defaultValue ="1.0" maxValue="2.0" minValue="0.5" step="0.05"/>
+            </section >
+        </page>
+        
+        <page key="SIGHT_LEGALITYCHECK" title="Sight: Legality Check" version="0" resetable="yes">
+            
+            <section>
+                <item type="switch" key="SIGHT_LEGALITY_CHECK" title="Legality Check" defaultValue ="off"/>
+            </section>
+            
+        </page>
+        
+        <page key="SIGHT_OPTIMIZE_SIZE" title="Sight: 成本优化"  version="0" resetable="yes">
+            
+            <mode key="SIGHT_CAPTURE_FRAME_RATE" title="Capture FPS" defaultValue="2">
+                <option title="24 FPS"/>
+                <option title="30 FPS"/>
+            </mode>
+            
+            <mode key="SIGHT_ENCODE_PROFILE_LEVEL" title="Profile Level" defaultValue="4">
+                <option title="AVVideoProfileLevelH264Main30"/>
+                <option title="AVVideoProfileLevelH264High40"/>
+                <option title="AVVideoProfileLevelH264High41"/>
+                <option title="AVVideoProfileLevelH264HighAutoLevel"/>
+            </mode>
+            
+            <section title="Key Frame Interval">
+                <item type="value" key="SIGHT_ENCODE_KEY_FRAME_INTERVAL" title="Key Frame Interval(default 30)" defaultValue ="90" minValue="24" maxValue="240" step="20"/>
+            </section>
+        </page>
+        
+        <page key="lightboost_Quality" title="lightboost Quality" version="1" resetable="yes">
+            <section>
+                <item type="switch" key="lightboost_changePreset" title="修改分辨率" defaultValue ="off"/>
+            </section>
+            <mode key="lightboost_preset_value" title="Profile Level" defaultValue="1">
+                <option title="AVCaptureSessionPreset1920x1080"/>
+                <option title="AVCaptureSessionPreset1280x720"/>
+                <option title="AVCaptureSessionPresetiFrame1280x720"/>
+                <option title="AVCaptureSessionPresetiFrame960x540"/>
+                <option title="AVCaptureSessionPreset640x480"/>
+            </mode>
+            <section title="parameters">
+                <item type="value"    key="lightboost_Quality_Exporsure_Time"  title="exposure time(1/value)" defaultValue="23"  maxValue="60"  minValue="5"  step="1"/>
+                <item type="value"    key="lightboost_Quality_ISO"  title="ISO(%)" defaultValue="35"  maxValue="100"  minValue="0"  step="5"/>
+            </section>
+            <section>
+                <item type="switch" key="lightboost_denoise" title="去燥" defaultValue ="off"/>
+            </section>
+        </page>
+
+    </section>
+</page>

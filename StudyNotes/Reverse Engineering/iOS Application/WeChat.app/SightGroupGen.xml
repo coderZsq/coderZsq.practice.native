@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="SIGHT_GG" title="Sight: GroupGen" version="3" resetable="yes">
+    
+    <section title="Group Generation Panel">
+        <item type="value" key="SIGHT_GG_HOR_PADDING" title="BG horizontal padding" defaultValue ="30" minValue="0" maxValue="80" setp="2"/>
+        <item type="value" key="SIGHT_GG_TOP_PADDING" title="BG top padding" defaultValue ="20" minValue="0" maxValue="100" setp="1"/>
+        <item type="value" key="SIGHT_GG_WINDOW_MASK_ALPHA" title="BG mask alpha" defaultValue ="0.3" minValue="0" maxValue="10" setp="0.02"/>
+        <item type="value" key="SIGHT_GG_BG_ANIM_DUR" title="BG anim dur." defaultValue ="0.5" minValue="0" maxValue="2" setp="0.05"/>
+
+        <item type="value" key="SIGHT_GG_CONTENT_TOP_PADDING" title="PANEL top padding" defaultValue ="40" minValue="0" maxValue="200" setp="1"/>
+        <item type="value" key="SIGHT_GG_PANEL_ANIM_DUR" title="PANEL anim dur." defaultValue ="0.3" minValue="0.0" maxValue="2" setp="0.05"/>
+    </section>
+    
+</page>

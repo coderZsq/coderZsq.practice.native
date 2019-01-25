@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="KIT_EMOTICON" title="表情专属" version="3" resetable="yes">
+    
+    <section title="表情其他设置">
+        <item type="switch" key="KIT_EMOTICON_RECENTUSEEMOJI_IGNORE_FILE" title="最近小表情忽略文件缓存" defaultValue="NO"/>
+        <item type="switch" key="KIT_EMOTICON_ADD_CUSTOM_TO_FIRST" title="添加表情到最前面" defaultValue="YES"/>
+    </section>
+    
+    <section title="跟拍配置">
+        <item type="value" key="EMOTICON_YTSDK_FOLLOW_IMAGE_ALPHA" title="跟随表情不透明度" subTitle="0表示完全透明，1表示完全不透明" defaultValue="0.4" maxValue="1" minValue="0.0" step="0.1"/>
+        <item type="switch" key="EMOTICON_YTSDK_FOLLOW_FIRST_LOOP_ORIGIN" title="第一遍不变" defaultValue="NO"/>
+    </section>
+
+    <section title="自拍表情配置">
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_STROKE_WIDTH" title="输出描边宽度" defaultValue="8" maxValue="10" minValue="1" step="1"/>
+        <item type="value" key="EMOTICON_YTSDK_CAPTION_STROKE_WIDTH" title="字幕描边宽度" defaultValue="7" minValue="0" maxValue="15" step="0.5"/>
+        <item type="value" key="EMOTICON_YTSDK_CAPTION_KERN" title="字幕间距" defaultValue="3.5" minValue="0" maxValue="10" step="0.5"/>
+        <item type="value" key="EMOTICON_YTSDK_EMOTICON_WIDGET_COUNT" title="贴的表情上限" defaultValue="8" minValue="0" maxValue="20" step="1"/>
+
+        <item type="switch" key="EMOTICON_YTSDK_FORCE_SHOWTIPS" title="强行展示 Tips" defaultValue="NO"/>
+        <item type="switch" key="EMOTICON_YTSDK_JUST_PREVIEW" title="结束页仅展示效果" defaultValue="NO"/>
+        <item type="switch" key="EMOTICON_YTSDK_TRANS_VOICE" title="语音识别" defaultValue="YES"/>
+        
+        <item type="switch" key="EMOTICON_YTSDK_FORCE_USE_ANOTHER_TYPE" title="强制使用另一种格式" subTitle="打开后，如果当前配置是 GIF 就用 WXAM，否则就用 GIF" defaultValue="NO"/>
+        <item type="value" key="EMOTICON_YTSDK_FPS_NORMAL" title="合成表情正常帧率" defaultValue="20" minValue="1" maxValue="40" step="1"/>
+        <item type="value" key="EMOTICON_YTSDK_FPS_FAST" title="合成表情加速帧率" defaultValue="30" minValue="1" maxValue="60" step="1"/>
+        <item type="value" key="EMOTICON_YTSDK_OUTPUT_SIZE" title="最终生成的size" defaultValue="300" minValue="240" maxValue="450" step="10"/>
+        <item type="value" key="EMOTICON_YTSDK_WXAM_QP" title="WXAM 质量因子" subTitle="1~50 越小越好，默认 25" defaultValue="20" minValue="1" maxValue="50" step="1"/>
+    </section>
+
+    <section title="美颜配置">
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_BEAUTY" title="美颜" defaultValue="0.2" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_BASIC_FACE" title="美型" defaultValue="0.1" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_VFace" title="V脸" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_CHIN" title="下巴" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_THIN_FACE" title="瘦脸" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_SHORT_FACE" title="短脸" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_ENLARGE_EYE" title="大眼" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="value" key="EMOTICON_YTSDK_CONFIG_THIN_NOSE" title="瘦鼻" defaultValue="0" maxValue="1.0" minValue="0" step="0.05" />
+        <item type="switch" key="EMOTICON_YTSDK_CONFIG_FILTER" title="是否使用滤镜" defaultValue="YES"/>
+    </section>
+    
+    <mode key="EMOTICON_YTSDK_CONFIG_CAPTURE_PRESET" title="Capture Preset" subTitle="6sp 的前置摄像头不支持 1080P" defaultValue="2">
+        <option title="480 x 640"/>
+        <option title="720p"/>
+    </mode>
+
+    <mode key="KIT_EMOTICON_GIT_PREVIEW_MODE" title="相册 GIF 预览" defaultValue="2">
+        <option title="放大到屏幕边缘"/>
+        <option title="二倍图"/>
+        <option title="一倍图"/>
+    </mode>
+    
+    <mode key="KIT_FOLLOW_EMOTICON_CONTENT_MODE" title="跟拍表情缩放模式" defaultValue="2">
+        <option title="拉伸以充满"/>
+        <option title="按比例拉伸以合适"/>
+        <option title="按比例拉伸以充满"/>
+    </mode>
+
+    <section title="乱入-地址链接识别">
+        <item type="switch" key="KIT_EMOTICON_ADDRESS_PARSER" title="强行打开地址识别" defaultValue="NO"/>
+    </section>
+</page>

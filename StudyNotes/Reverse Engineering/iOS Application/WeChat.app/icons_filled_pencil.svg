@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_pencil</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_pencil" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#000000" fill-rule="nonzero">
+            <path d="M14,3 L14,5 L5,5 L5,19 L19,19 L19,10 L21,10 L21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 L14,3 Z M19.9403667,3.35355339 L20.6474735,4.06066017 C20.8427356,4.25592232 20.8427356,4.57250481 20.6474735,4.76776695 L11.3142761,14.1009644 L9.32169414,15.0809343 C9.17301667,15.1540552 8.99321354,15.0928045 8.92009261,14.9441271 C8.87903177,14.8606377 8.87903177,14.7628221 8.92009261,14.6793327 L9.90006249,12.6867508 L19.2332599,3.35355339 C19.4285221,3.15829124 19.7451046,3.15829124 19.9403667,3.35355339 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+#font_set {
+    alllevel : 16 17 20 24.5 27.5;
+    chatLevel : 16 17 20 24.5 27.5 30;
+}
+
+#navigation_bar
+{
+    landscape_height : 44;
+    titleview_fontsize : 20 ;
+}

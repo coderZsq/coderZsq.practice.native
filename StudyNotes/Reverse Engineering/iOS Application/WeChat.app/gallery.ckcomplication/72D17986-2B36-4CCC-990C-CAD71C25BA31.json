@@ -1,0 +1,16 @@
+{
+  "imageProvider" : {
+    "tintColor" : {
+      "green" : 0.9098039,
+      "red" : 0.3490196,
+      "alpha" : 1,
+      "blue" : 0.2352941
+    },
+    "onePieceImage" : {
+      "file name" : "2E54608B-3BB0-4B86-9CF7-9BDC034DAE5F.png",
+      "scale" : 2
+    }
+  },
+  "class" : "CLKComplicationTemplateUtilitarianSmallSquare",
+  "version" : 30000
+}

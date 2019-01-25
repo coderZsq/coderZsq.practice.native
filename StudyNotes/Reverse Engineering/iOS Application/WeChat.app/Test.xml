@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="SIGHT_GG" title="Test Page" version="3" resetable="yes">
+    <section>
+        <item type="switch" key="test_defaultLocked" title="Test Default Locked" defaultValue="YES" locked="NO"/>
+    </section>
+    
+    <section>
+        <item type="sound" key="testSound1" title="Test Sound1" defaultValue="kit_default_sound.m4a"/>
+        <item type="sound" key="testSound2" title="Test Sound1" defaultValue="kit_default_sound.m4a" locked="YES"/>
+    </section>
+    
+    <section title="textValue">
+        <item type="value" key="testValue" title="Test Value1" defaultValue="123" locked="no"/>
+        <item type="value" key="testValue2" title="Test Value2 long long long long long title" defaultValue="223"/>
+        <item type="value" key="testValue3" title="Test Value3 with subTitle" subTitle="This is subTitle" defaultValue="222" locked="YES"/>
+        <item type="value" key="testValue4" title="Test Value4 With long subTitle" subTitle="This is a long long long subTitle" defaultValue="234"/>
+        <item type="value" key="testValue5" title="Test Value5 Big" subTitle="This is a long long long subTitle" defaultValue="235" locked="true"/>
+        <item type="value" key="testValue6" title="Test Value6 With long subTitle" subTitle="This is a long long long long long long long long long subTitle" defaultValue="234"/>
+    </section>
+    
+    <section>
+        <item type="switch" key="testSwitch1" title="Test Switch" defaultValue="on" locked="YES"/>
+        <item type="switch" key="testSwitch2" title="Test Switch long long long long long title" defaultValue="on"/>
+        <item type="switch" key="testSwitch3" title="Test Switch with subTitle" subTitle="This is subTitle" defaultValue="on"/>
+        <item type="switch" key="testSwitch4" title="Test Switch with long subTitle" subTitle="This is a long long long subTitle" defaultValue="on"/>
+    </section>
+    
+    <section title="testColor">
+        <item type="color" key="testColor" title="Test Color" defaultValue="#AABBCC" locked="YES"/>
+        <item type="color" key="testColor2" title="Test Color" defaultValue="#AABBCC" subTitle="This is an unused test color setting"/>
+        <item type="color" key="testColor3" title="Test Color" defaultValue="#AABBCC" subTitle="This is an unused test color setting with a long long long long long long subTitle"/>
+    </section>
+    
+    <section>
+        <item type="switch" key="test_useHex" title="Test use Hex in color cell" defaultValue="on"/>
+        <item type="switch" key="test_alphaIn255" title="Test use 255 for alpha" defaultValue="on"/>
+    </section>
+    
+    <section>
+        <item type="switch" key="test_usePrecisionForValue" title="Use Precision For Value" defaultValue="on"/>
+        <item type="value" key="testValueP1" title="test value for precision" defaultValue="1" subTitle="1"/>
+        <item type="value" key="testValueP2" title="test value for precision" defaultValue="1.0" subTitle="1.0"/>
+        <item type="value" key="testValueP3" title="test value for precision" defaultValue="1.0" step="0.001" subTitle="1.0 / 0.001"/>
+    </section>
+    
+</page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page key="Sight_Moment" title="Moment" version="2" resetable="yes">
+    <section title="Moment">
+        <item type="switch" key="SightMoment_View_Debug" title="Debug View Size" defaultValue ="off"/>
+        <item type="value" key="SightMoment_Padding" title="Text Area Padding" defaultValue ="5" maxValue="30" minValue="0" step="1"/>
+        <item type="value" key="SightMoment_Player_Width" title="Mini Video Width" defaultValue ="90" maxValue="200" minValue="20" step="5"/>
+        <item type="value" key="SightMoment_Toolbar_Margin_Left" title="Toolbar Margin Left" defaultValue ="4" maxValue="40" minValue="0" step="1"/>
+        <item type="value" key="SightMoment_Toolbar_Margin_Right" title="Toolbar Margin Right" defaultValue ="14" maxValue="40" minValue="0" step="1"/>
+        <item type="value" key="SightMoment_Toolbar_Margin_Center" title="Toolbar Space Between Emoji and Groups" defaultValue ="10" maxValue="40" minValue="0" step="1"/>
+        <item type="value" key="SightMoment_SentAnim_Dur" title="Sent Anim P1 Dur." defaultValue ="0.6" maxValue="3" minValue="0.1" step="0.1"/>
+        <item type="value" key="SightMoment_SentAnimAlpha_Dur" title="Sent Anim P2 Dur." defaultValue ="0.6" maxValue="3" minValue="0.1" step="0.1"/>
+        <item type="value" key="SightMoment_MoveAnimAlpha_Dur" title="Move Anim P2 Dur." defaultValue ="0.39" maxValue="3" minValue="0.1" step="0.1"/>
+        <item type="value" key="SightMoment_Edit_Fullplay_BGMask_Alpha" title="Fullplay_BGMask_Alpha" defaultValue ="0.95" maxValue="1" minValue="0" step="0.05"/>
+        
+        <item type="value" key="SightMoment_BGMask_Alpha" title="BG Opague Level" defaultValue ="0.6" maxValue="1" minValue="0" step="0.05"/>
+    </section>
+</page>

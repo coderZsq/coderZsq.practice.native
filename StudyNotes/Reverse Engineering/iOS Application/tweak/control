@@ -1,0 +1,9 @@
+Package: com.coderzsq.tweak
+Name: tweak
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: 朱双泉
+Author: 朱双泉
+Section: Tweaks

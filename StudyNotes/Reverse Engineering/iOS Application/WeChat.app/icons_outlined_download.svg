@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_download</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon38" fill="#000000" fill-rule="nonzero">
+            <path d="M18.8,8.2 L16,8.2 L16,7 L19.0010434,7 C19.5508697,7 20,7.44583866 20,7.99580851 L20,21.0041915 C20,21.5510798 19.5541613,22 19.0041915,22 L4.99580851,22 C4.44892021,22 4,21.5541613 4,21.0041915 L4,7.99580851 C4,7.44892021 4.44724809,7 4.99895656,7 L8,7 L8,8.2 L5.2,8.2 L5.2,20.8 L18.8,20.8 L18.8,8.2 Z M12.5999939,12.6171633 L14.6870057,10.5301515 L15.5355339,11.3786797 L12.7071068,14.2071068 C12.3165825,14.5976311 11.6834175,14.5976311 11.2928932,14.2071068 L8.46446609,11.3786797 L9.31299427,10.5301515 L11.3999939,12.6171511 L11.3999939,2 L12.5999939,2 L12.5999939,12.6171633 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

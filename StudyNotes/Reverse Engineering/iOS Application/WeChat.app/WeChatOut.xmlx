@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="WCOUT" title="WeChatOut" version="2" resetable="yes">
+    <section>
+        <item type="switch" key="WCOUT_DIALPAD_ENTRANCE_ROUND" title="使用圆形的键盘按钮入口" defaultValue="off" subTitle="off 则使用工具栏模式的入口"/>
+        <item type="switch" key="WCOUT_DIALPAD_WITH_BORDER" title="数字键盘按钮带边框" defaultValue="off"/>
+        <item type="switch" key="WCOUT_DIALPAD_NUMBER_USE_WCOUTPADBUTTON" title="数字键盘点击效果改善" defaultValue="on"/>
+    </section>
+    
+    <section>
+        <item type="switch" key="WCOUT_AUDIO_CODEC_TYPE" title="WeChatOut Pstn Audio Use G729" defaultValue="on" subTitle="off for G711"/>
+        <item type="switch" key="WCOUT_AUDIO_CONNECT_DUDU" title="对方响铃前播放声音" defaultValue="on"/>
+        <item type="switch" key="WCOUT_AUDIO_CONNECT_VOIP" title="对方响铃前播放voip默认的声音" subTitle="off的话使用嘟嘟声" defaultValue="off"/>
+        <item type="value" key="WCOUT_AUDIO_CONNECT_VOLUME" title="响铃前声音的音量" defaultValue="0.75" minValue="0" maxValue="1" step="0.1"/>
+        <item type="value" key="WCOUT_AUDIO_DUDU_INTERVAL" title="嘟嘟声之间的时间间隔" defaultValue="3.5" minValue="0.1" maxValue="5" step="0.1"/>
+        <item type="value" key="WCOUT_AUDIO_DUDU_START_TIME" title="嘟嘟声第一声的时间" defaultValue="1.5" minValue="0.1" maxValue="5" step="0.1"/>
+    </section>
+    
+    <section>
+        <item type="switch" key="WCOUT_IPAD_AVAILABLE" title="Open iPad WeChatOut" defaultValue="off" subTitle="add by domick"/>
+        <item type="switch" key="WCOUT_KITCHEN_AVAILABLE" title="拨号键盘显示设置入口" defaultValue="off" subTitle="add by domick"/>
+        <item type="switch" key="WCOUT_KITCHEN_SHOWLOG" title="通话界面显示log" defaultValue="off" subTitle="长按设置入口也可以看到最后的log"/>
+        <item type="switch" key="WCOUT_KITCHEN_SHOW_ACTIVITY" title="显示测试活动页面" defaultValue="off" subTitle=""/>
+    </section>
+</page>

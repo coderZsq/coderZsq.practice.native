@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="Image" title="HeadImage" version="2" resetable="yes">
+    <section title="UrlChannel">
+        <item type="switch" key="Kit_UrlChannel_DebugIp" title="使用测试ip" defaultValue="off"/>
+    </section>
+
+    
+</page>

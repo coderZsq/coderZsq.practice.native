@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--****** new color ******-->
+    <!--white and black-->
+    <color name="White">#FFFFFF</color>
+    <color name="BW_97">#F7F7F7</color>
+    <color name="BW_93">#EDEDED</color>
+    <color name="BW_90">#E5E5E5</color>
+    <color name="BW_50">#808080</color>
+    <color name="BW_20">#303030</color>
+    <color name="BW_10">#181818</color>
+    <color name="BW_0">#000000</color>
+    <color name="BW_BG_100">#FFFFFF</color>
+    <color name="BW_BG_20">#333333</color>
+    <color name="BW_BG_0">#000000</color>
+
+    <!--red-->
+    <color name="Red">#FA5151</color>
+    <color name="Red_170">#FDCACA</color>
+    <color name="Red_120">#FB7373</color>
+    <color name="Red_100">#FA5151</color>
+    <color name="Red_90">#E14949</color>
+    <color name="Red_80">#C84040</color>
+    <color name="Red_BG_130">#DD847E</color>
+    <color name="Red_BG_110">#D3625A</color>
+    <color name="Red_BG_100">#CF5148</color>
+    <color name="Red_BG_90">#B94840</color>
+
+    <!--Orange-->
+    <color name="Orange">#FA9D3B</color>
+    <color name="Orange_170">#FDE1C3</color>
+    <color name="Orange_120">#FBB062</color>
+    <color name="Orange_100">#FA9D3B</color>
+    <color name="Orange_90">#E08C34</color>
+    <color name="Orange_80">#C87D2F</color>
+    <color name="Orange_BG_130">#F0A04D</color>
+    <color name="Orange_BG_110">#EC8519</color>
+    <color name="Orange_BG_100">#EA7800</color>
+    <color name="Orange_BG_90">#D26B00</color>
+
+    <!--Yellow-->
+    <color name="Yellow">#FFC300</color>
+    <color name="Yellow_170">#FFECB2</color>
+    <color name="Yellow_120">#FFCF33</color>
+    <color name="Yellow_100">#FFC300</color>
+    <color name="Yellow_90">#E6AF00</color>
+    <color name="Yellow_80">#CC9C00</color>
+    <color name="Yellow_BG_130">#F3CC4D</color>
+    <color name="Yellow_BG_110">#F0BD19</color>
+    <color name="Yellow_BG_100">#EFB600</color>
+    <color name="Yellow_BG_90">#D7A400</color>
+
+    <!--Green-->
+    <color name="Green">#91D300</color>
+    <color name="Green_170">#DEF1B3</color>
+    <color name="Green_120">#A7DB33</color>
+    <color name="Green_100">#91D300</color>
+    <color name="Green_90">#82BD00</color>
+    <color name="Green_80">#74A800</color>
+    <color name="Green_BG_130">#B5D179</color>
+    <color name="Green_BG_110">#A0C452</color>
+    <color name="Green_BG_100">#96BE40</color>
+    <color name="Green_BG_90">#86AA39</color>
+    
+    <!--LightGreen-->
+    <color name="LightGreen">#97E86D</color>
+    <color name="LightGreen_170">#DFF8D2</color>
+    <color name="LightGreen_120">#ABEC8A</color>
+    <color name="LightGreen_100">#97E86D</color>
+    <color name="LightGreen_90">#88D162</color>
+    <color name="LightGreen_80">#78B957</color>
+    <color name="LightGreen_BG_130">#9CDD90</color>
+    <color name="LightGreen_BG_110">#9CDD90</color>
+    <color name="LightGreen_BG_100">#72CF60</color>
+    <color name="LightGreen_BG_90">#66B956</color>
+    
+    <!--Brand-->
+    <color name="Brand">#07C160</color>
+    <color name="Brand_170">#B4ECCE</color>
+    <color name="Brand_120">#38CD7F</color>
+    <color name="Brand_100">#07C160</color>
+    <color name="Brand_90">#06AE56</color>
+    <color name="Brand_80">#059A4C</color>
+    <color name="Brand_BG_130">#69C694</color>
+    <color name="Brand_BG_110">#3EB575</color>
+    <color name="Brand_BG_100">#2AAE67</color>
+    <color name="Brand_BG_90">#259C5C</color>
+
+    <!--Blue-->
+    <color name="Blue">#10AEFF</color>
+    <color name="Blue_170">#B7E6FF</color>
+    <color name="Blue_120">#3FBEFF</color>
+    <color name="Blue_100">#10AEFF</color>
+    <color name="Blue_90">#0E9CE6</color>
+    <color name="Blue_80">#0C8BCC</color>
+    <color name="Blue_BG_130">#7FC0EA</color>
+    <color name="Blue_BG_110">#5AAFE4</color>
+    <color name="Blue_BG_100">#48A6E2</color>
+    <color name="Blue_BG_90">#4095CB</color>
+
+    <!--Indigo-->
+    <color name="Indigo">#1485EE</color>
+    <color name="Indigo_170">#B8DAF9</color>
+    <color name="Indigo_120">#439DF1</color>
+    <color name="Indigo_100">#1485EE</color>
+    <color name="Indigo_90">#1277D6</color>
+    <color name="Indigo_80">#106ABE</color>
+    <color name="Indigo_60">#0C4F8E</color>
+    <color name="Indigo_BG_130">#6BA0D2</color>
+    <color name="Indigo_BG_110">#3F84C5</color>
+    <color name="Indigo_BG_100">#2B77BF</color>
+    <color name="Indigo_BG_90">#266AAB</color>
+
+    <!--Purple-->
+    <color name="Purple">#6467F0</color>
+    <color name="Purple_170">#D0D1FA</color>
+    <color name="Purple_120">#8385F3</color>
+    <color name="Purple_100">#6467F0</color>
+    <color name="Purple_90">#595CD7</color>
+    <color name="Purple_80">#5052C0</color>
+    <color name="Purple_BG_130">#9496CE</color>
+    <color name="Purple_BG_110">#7678C1</color>
+    <color name="Purple_BG_100">#6769BA</color>
+    <color name="Purple_BG_90">#5C5EA7</color>
+    
+    <!--Link-->
+    <color name="Link_100">#576B95</color>
+    <color name="Link_170">#CCD2DE</color>
+    <color name="Link_120">#7888AA</color>
+    <color name="Link_90">#4E6085</color>
+    <color name="Link_80">#455577</color>
+    
+    <!-- new text color -->
+    <color name="normal_text">#E6000000</color>
+    <color name="desc_text">#80000000</color>
+
+</resources>

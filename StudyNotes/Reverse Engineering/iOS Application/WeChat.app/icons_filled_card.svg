@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_card</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="common_icons_wallet" fill="#000000">
+            <path d="M3,4 L21,4 C21.5522847,4 22,4.44771525 22,5 L22,19 C22,19.5522847 21.5522847,20 21,20 L3,20 C2.44771525,20 2,19.5522847 2,19 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M3.5,8 L3.5,10 L20.5,10 L20.5,8 L3.5,8 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

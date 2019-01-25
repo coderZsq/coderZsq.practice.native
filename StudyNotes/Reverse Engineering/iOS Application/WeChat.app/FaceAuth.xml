@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="FaceAuth_Desc" title="视频面核" version="3" resetable="yes">
+    <section title="第三方">
+        <item type="doopr" title="微众银行" key="WEIZHONG_BANK" defaultValue="YES" locked="NO"/>
+    </section>
+    <section title="通话界面">
+        <item type="value" key="FACEAUTH_PRIVACY_TIP_TIME" title="隐私提示时间" defaultValue="6.0" minValue="0.5" maxValue="30.0" step="0.5"/>
+        <item type="switch" key="FACEAUTH_CONTROL_BTN" title="控制按钮" defaultValue="on" subTitle=""/>
+    </section>
+    
+</page>

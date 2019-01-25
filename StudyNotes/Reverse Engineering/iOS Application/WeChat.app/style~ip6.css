@@ -1,0 +1,2070 @@
+/*公众号会话单文章视图*/
+#reader_node_view {
+
+/*外面边框的宽度*/
+    reader_view_width: 351;
+/*  内边框的宽度  */
+/*  单文章图片的高度  */
+    cover_image_height: 196;
+    reader_view_max_height: 570;
+    
+}
+/* 支付和安全相关 */
+#attributed_reader_message_node_view  {
+    reader_view_width: 349;
+}
+
+/*公众号多文章视图子按钮*/
+#read_item_view {
+    reader_top_new_height: 196;
+    reader_view_width: 349;
+    reader_cover_height: 55 "dynamic";
+}
+
+/*公众号会话文本消息卡片视图*/
+#reader_text_node_view {
+    
+    text_content_max_height: 196 "dynamic";   /* 单文本消息内容最大高度(除详情cell高度)*/
+}
+
+/*公众号会话音乐消息卡片视图*/
+#reader_music_node_view {
+    
+    music_top_item_height: 145;
+    
+    title_left_padding: 20;
+    cover_image_width: 100;
+    cover_image_right_padding: 20;
+    
+    play_btn_width: 45;
+    play_normal_btn_width: 30;
+    title_btn_spacing: 20;
+}
+
+/*公众号会话语音消息卡片视图*/
+#reader_voice_node_view {
+    
+    voice_top_item_height: 145;
+    title_left_padding: 20;
+    
+    play_btn_width: 45;
+    play_normal_btn_width: 30;
+    
+    play_btn_right_padding: 20;
+    title_btn_spacing: 20;
+}
+
+/*公众号会话视频消息卡片视图*/
+#reader_image_node_view {
+    image_top_item_height: 196;
+}
+
+/*公众号会话图片消息卡片视图*/
+#reader_video_node_view {
+    video_top_item_height: 196;
+    
+    title_left_padding: 20;
+    
+    play_btn_width: 45;
+    play_normal_btn_width: 30;
+    
+    play_btn_right_padding: 20;
+    title_btn_spacing: 20;
+}
+
+#hardward_message_node_view {
+    node_view_width: 340;
+    node_view_height: 171;
+    
+    notify_node_width: 340;
+    notify_node_height: 73;
+}
+
+/* 朋友圈 */
+#WCTimelineCellView {
+    /*正文长度*/
+    text_line_width : 300;
+    
+    more_action_floatView_width : 350;
+}
+/* 个人相册 */
+#WCListViewRowContentView {
+/*  个人相册中 日期右侧的宽度  */
+    content_view_width : 283;
+}
+
+/*朋友圈详情*/
+#WCComentDetailViewControllerFB {
+/*  朋友圈详情页中 评论 的宽度  */
+    comment_view_width : 350;
+/*  详情页每行点赞头像个数  */
+    comment_head_count_perline : 7;
+}
+
+/* 新晒一晒 */
+#WCContentItemViewTemplateNewSight {
+    /*朋友圈中小视频的宽度  此处按比例缩放的 原来200  */
+    cover_image_width : 234;
+    /*朋友圈中小视频的高度  此处按比例缩放的 原来150  */
+    cover_image_height : 175;
+    
+    moment_edit_player_width : 105;
+    
+    commit_complete_offset : 99;
+    commit_complete_offset_horizontal : 65;
+}
+
+#WCTimeLineCellMediaContentView {
+
+    image_size_max_len : 180;
+    image_size_superwide_max_len : 247;
+    image_size_superheight_max_len : 82;
+    image_size_superheight_min_len : 30;
+    multi_image_len : 79;
+    image_gird_step_len : 5;
+    
+    /* 朋友圈中 feed类型的宽度 template news*/
+    link_area_width : 300;
+    /*  朋友圈分享页面的media 320下是290  */
+    forward_link_area_width : 340;
+}
+
+/* 朋友圈评论 */
+#WCTimeLineCommentCellView {
+    /*赞块的左右内间距*/
+    like_content_left_margin: 10;
+    /*评论宽度（包括了上面的评论左右内间距）*/
+    comment_view_width : 304;
+}
+
+/* 聊天节点 */
+
+#message_node_view {
+    /*message_node_bkg_width : 240;
+    message_node_bkg_shorter_width: 220;*/
+	message_node_bkg_width: 56% width;
+	message_node_bkg_shorter_width: 56% width;
+    
+    /*  mail节点单独计算  */
+    mail_message_node_width : 305;
+    /*  聊天界面图片最大宽度 原来是120 等比放大  */
+    message_node_imageNode_maxSizeLimit : 140;
+    
+    title_label_font: 16 dynamic;
+}
+
+/* 聊天界面背景图选择界面 */
+#ChatBackgroundView {
+/*  宽度  */
+    cell_img_width : 118;
+/*  高度  */
+    cell_img_height : 118;
+}
+
+#GameCenterImg {
+/*  游戏中心横幅宽度  */
+    imgcell_img_width : 355;
+/*  横幅高度  */
+    imgcell_img_height : 106.5;
+/*  横幅cell的高度  */
+    imgcell_height: 126.5;
+}
+
+/* 实时对讲 */
+#WXTalkMain {
+/*  原来48 现+20  */
+    headlist_top : 66;
+/*  原来306 现+55  */
+    headlist_width : 361;
+    headlist_height : 140;
+/*  262 + 55/2  */
+    led_left : 290;
+/*  原来265 +  99/2 */
+    push_button_top : 315;
+    /*   参加个数的左边距 */
+    headlist_membercount_left : 37;
+    /*  参加个数的下边距  */
+    headlist_label_bottom_margin : 18;
+}
+
+#AppNoteNodeView {
+    image_max_count: 4;
+}
+
+#RecordDetailView {
+    image_width : 270;
+    subtitle_max_height : 320;
+}
+
+#WCCommitViewController {
+    gridimg_size:98 98;
+    gridimg_stepWidth : 5;
+    gridimg_single_sizeWidth:300;
+}
+
+#message_node_view {
+    text_message_node_width : 64% width;
+}
+
+/* 输入框附件栏 */
+#input_tool_view_attachment {
+    attachment_view_margin : 3A;
+}
+
+/*商店表情面板*/
+#EmoticonGridView {
+    m_intervalX : 30;
+}
+
+#EmoticonCamera {
+    emoticon_record_button_horizonal_margin: 56;
+    emoticon_record_tips_bottom_margin: 32;
+    emoticon_preview_vertical_margin: 80;
+    emoticon_preview_tool_top_margin: 72;
+    emoticon_colorBar_unselectedPadding: 28;
+    emoticon_comfirmbutton_right_margin: 56;
+    emoticon_comfirmbutton_bottom_margin: 64;
+}
+
+#MMTipsView {
+    background_image_width : 320;
+}
+
+/*手势密码*/
+#pattern_lock_view {
+    circle_radius : 30;
+    circle_gap : 40;
+    
+    tipsView_y : 50;
+    tipsView_bottom_offset : 32;
+}
+
+#login_common
+{
+    textfield_leftview_width: 93;
+    newHeaderViewTitle_topMargin: 73;
+    nextbtn_topMargin: 30;
+    title_bottomMargin: 40;
+    
+    users_cur_head_top: 167;
+    users_retry_margin_x: 43;
+    
+    users_logo_top: 50;
+    users_title_logo_margin: 81;
+    users_title_line_margin: 39;
+    users_head_line_top: 46;
+    users_name_font: 15;
+    users_user_margin_X: 62;
+}
+
+#login_last_user_view
+{
+    textBackViewY : 24;
+    header_headImage_size : 48;
+    headimageview_marginTop : 134;
+    loginbtn_topMargin:60;
+    
+    bottom_btn_margin: 8;
+    bottom_btn_font: 16;
+    bottom_line_height: 13;
+}
+
+
+#device_rank_view {
+    tableheader_height : 342;
+}
+
+#device_profile_view {
+    tableheader_height : 342;
+    
+    step_content_height : 285;
+    step_values_height : 200;
+    steps_time_font_size : 12;
+}
+
+#CustomEmoticonDetailViewController
+{
+    gridViewItemWidth : 93.75
+}
+
+/* 企业红包收取页面样式 */
+
+#EnterpriseLuckyMoneyBaseView
+{
+    frame_width : 326;
+    frame_height : 473;
+}
+
+#EnterpriseLuckyMoneyIconView
+{
+    view_width : 61;
+    view_height : 61;
+    top_margin : 40;
+}
+
+#EnterpriseLuckyMoneyNickNameView
+{
+    top_margin : 20;
+    font_width : 21;
+}
+
+#EnterpriseLuckyMoneyStatusMessView
+{
+    top_margin : 10;
+    font_width : 16;
+}
+
+#EnterpriseLuckyMoneyWishView
+{
+    top_margin : 30;
+    left_margin : 45;
+    font_width : 22;
+}
+
+#EnterpriseLuckyMoneyOpenView
+{
+    top_margin : 278;
+    view_width : 110;
+    view_height : 115;
+    font_width : 21;
+}
+
+#EnterpriseLuckyMoneyPacketView
+{
+    top_margin : 275;
+}
+
+#EnterpriseLuckyMoneyMaskView
+{
+    view_height : 275;
+}
+
+/* 企业红包收取完成页面样式 */
+#EnterpriseLuckyMoneyShareNickNameView
+{
+    top_margin : 25;
+    font_width : 17;
+}
+
+#EnterpriseLuckyMoneyShareFeeView
+{
+    top_margin : 20;
+    font_width : 80;
+}
+
+#EnterpriseLuckyMoneyShareHintView
+{
+    top_margin : 340;
+    font_width : 14;
+}
+
+#EnterpriseLuckyMoneyShareButtonView
+{
+    top_margin : 10;
+    left_margin : 40;
+    view_height : 44;
+}
+
+#EnterpriseLuckyMoneyYenView
+{
+    left_margin : 8;
+    top_margin : 224;
+}
+
+#EnterpriseLuckyMoneyAppFollowView
+{
+    bottom_margin : 20;
+    checkbox_width : 18;
+    font_width : 17;
+    between_margin : 5;
+}
+
+/* 企业红包分享页面样式 */
+#EnterpriseLuckyMoneyShareIconView
+{
+    top_margin : 85;
+    view_width : 50;
+    view_height : 60;
+}
+
+#EnterpriseLuckyMoneyShareNickNameView
+{
+    bottom_margin : 25;
+    font_width : 17;
+}
+
+#EnterpriseLuckyMoneyNicknameView
+{
+    top_margin : 120;
+    font_width : 14;
+}
+
+#EnterpriseLuckyMoneyHintTextView
+{
+    top_margin : 195;
+    font_width : 27;
+    top_margin_1 : 249;
+    font_width_1 : 17;
+    left_margin : 6;
+}
+
+#EnterpriseLuckyMoneyShareBtnView
+{
+    top_margin : 325;
+    left_margin : 41;
+    view_height : 45;
+}
+
+#EnterpriseLuckyMoneyBalanceTextView
+{
+    top_margin : 3;
+}
+
+/* 节日红包显示样式 */
+#FestivalLuckyMoneyRate
+{
+    x_rate : 1;
+    y_rate : 1;
+}
+
+#FestivalLuckyMoneyMoneyView
+{
+    top_margin : 199;/*201*/;
+    font_width : 67;
+    top_margin_1 : 217;
+    top_margin_noscroll : 213;
+    top_margin_noscroll_1 : 211;
+    
+    width: 319;
+    height : 528;
+    
+    emoticon_margin_top : 51;
+    emoticon_width : 150;
+    emoticon_height : 150;
+    
+    emoticon_image_view_margin_top : 54;
+    emoticon_image_view_margin_top_sender_show : 54;
+    
+    greeting_label_margin_top : 226;
+    
+    num_scroll_label_margin_top : 0;
+    num_scroll_label_font_size : 60;
+    
+    num_scroll_unit_label_y : 35;
+    
+    change_num_label_margin_top : 9;
+    change_num_label_font_size : 12;
+    
+    send_btn_margin_left : 24;
+    send_btn_margin_bottom : 54;
+    
+    over_time_status_font_size : 24;
+    
+    save_balance_margin_top : 8;
+    
+    status_message_margin_bottom : 117;
+    status_message_margin_bottom_with_emoticon : 117;
+    
+    add_emoticon_btn_width : 250;
+    add_emoticon_btn_height : 100;
+    
+    add_emoticon_btn_label_offsetY : 4;
+    add_emoticon_btn_image_offsetY : 0;
+    
+    add_emoticon_btn_margin_top : 64;
+    
+    close_btn_margin_top : 40;
+    adjust_offsetY : 20;
+    
+    send_btn_bottom_padding: 30;
+    image_box_left_padding: 30;
+    title_image_top_padding: 40;
+    greeting_tip_padding: 30;
+    send_btn_left_padding: 30;
+    
+    emoticon_layer_corner_radius : 8.57;
+    
+    bgimageview_top_margin : 0;
+    bgimageview_height : 210;
+    bgimageview_bottom_margin: 10.2;
+    bgimageview_bottom_margin_over_time : 19.2;
+    
+    sender_view_bottom : 22.3;
+    
+    /*    greeting_label_margin_top_with_emoticon : 35.9;*/
+    greeting_label_margin_top_with_emoticon : 226;
+    loading_gif_width : 42;
+    loading_gif_height : 42;
+    
+    unit_lable_font_size : 15;
+    
+    topMaskViewHeight : 9;
+    bottomMaskViewHeight : 9;
+    
+    snow_gif_height : 233;
+    
+    fail_retry_btn_width : 101;
+    
+    camera_btn_extra_width : 30;
+}
+
+#FestivalLuckyMoneyMoneyView_667 {
+    width: 311;
+    height : 515;
+    bgimageview_height : 205;
+}
+
+#FestivalLuckyMoneyC2CNodeView
+{
+    nian_top_margin : 72;
+    word_top_margin : 159;
+    left_margin_1 : 30;
+    right_margin_1 : 22;
+    left_margin_2 : 20;
+    right_margin_2 : 27;
+    bottom_line_width : 19;
+    bottom_line_left_padding_1 : 4;
+    bottom_line_left_padding_2 : -3;
+}
+
+/* Festival lucky money sender view. */
+
+/*#ShakeCardDetailView*/
+/*{*/
+/*    background_view_width : 325;*/
+/*    title_font : 24;*/
+/*}*/
+
+#WCRedEnvelopesReceiveHomeView { /* #WCRedEnvelopesReceiveHomeView */
+    
+    bg_image_view_width : 319;
+    bg_image_view_height : 528;
+    bg_image_mask_height : 422;
+    
+    head_bottom_image_view_height : 64.5;
+    
+    head_image_view_x : 16;
+    head_image_view_width : 48;
+    head_image_view_height : 48;
+    head_Image_radius : 4.8;
+    
+    nick_name_title_margin_left : 15;
+    nick_name_title_font : 17;
+    
+    desc_label_margin_top : 12;
+    
+    status_tips_title_y_margin : 6;
+    status_tips_title_font : 14;
+    
+    wishing_tips_y_margin : 12;
+    wishing_tips_title_font : 24;
+    wishing_tips_bottom_margin : 25;
+    
+    bg_mask_image_height : 361.5;
+    
+    top_curve_image_height : 431;
+    
+    open_button_y_margin : 286.8;
+    open_button_width : 110;
+    open_button_height : 115;
+    
+    open_desc_title_font : 20;
+    
+    open_list_bottom_margin : 15;
+    open_list_font : 15;
+    
+    money_icon_margin_bottom : 13;
+    
+    open_red_envelope_button_size : 106;
+    open_red_envelope_button_font_size : 40;
+    open_red_envelope_button_margin_bottom : 56;
+    
+    close_button_size : 13.2;
+    close_button_margin_top : 46;
+    close_button_margin_right : 16.7;
+    
+    not_wish_laebl_left_margin : 30;
+    not_wish_lable_font_size : 17;
+    
+    open_red_envelope_button_font : 25;
+    adjust_offsetY : 37;
+}
+
+#WCRedEnvelopesReceiveHomeView_667 { /* #WCRedEnvelopesReceiveHomeView */
+    
+    bg_image_view_width : 311;
+    bg_image_view_height : 515;
+    bg_image_mask_height : 422;
+    
+    head_bottom_image_view_height : 62.91;
+    
+    head_image_view_x : 16;
+    head_image_view_width : 48;
+    head_image_view_height : 48;
+    head_Image_radius : 4.8;
+    
+    nick_name_title_margin_left : 15;
+    nick_name_title_font : 17;
+    
+    desc_label_margin_top : 12;
+    
+    status_tips_title_y_margin : 6;
+    status_tips_title_font : 14;
+    
+    wishing_tips_y_margin : 12;
+    wishing_tips_title_font : 24;
+    wishing_tips_bottom_margin : 25;
+    
+    bg_mask_image_height : 352.60;
+    
+    top_curve_image_height : 420;
+    
+    open_button_y_margin : 286.8;
+    open_button_width : 110;
+    open_button_height : 115;
+    
+    open_desc_title_font : 20;
+    
+    open_list_bottom_margin : 14.63;
+    open_list_font : 15;
+    
+    money_icon_margin_bottom : 13;
+    
+    open_red_envelope_button_size : 106;
+    open_red_envelope_button_font_size : 39;
+    open_red_envelope_button_margin_bottom : 52;
+    
+    close_button_size : 13.2;
+    close_button_margin_top : 24;
+    close_button_margin_right : 16.7;
+    
+    not_wish_laebl_left_margin : 30;
+    not_wish_lable_font_size : 17;
+    
+    open_red_envelope_button_font : 25;
+    adjust_offsetY : 13;
+}
+
+#WCRedEnvelopesWelcomePageViewController
+{
+    randomButtonMarginTop2017_1 : 396;
+    randomButtonMarginTop2017_2 : 396;
+    
+    normalButtonMarginTop2017_1 : 462;
+    normalButtonMarginTop2017_2 : 462;
+    
+    middleSceneImageMarginBottom2017_1 : 285;
+    middleSceneImageMarginBottom2017_2 : 285;
+    
+    topImageMarginTop2017_1 : 143;
+    topImageMarginTop2017_2 : 143;
+    
+    middleSceneImageMarginBottom2017_1 : 285;
+    middleSceneImageMarginBottom2017_2 : 285;
+    
+    bottomSceneImageMarginBottom2017_1 : 27;
+    bottomSceneImageMarginBottom2017_2 : 27;
+}
+
+#WCRedEnvelopesMakeRedEnvelopesViewController
+{
+    
+    countSelectViewMoveOffset : 98;
+    countSelectViewWithBannerMoveOffset : 63;
+    
+    textViewMoveOffset : 155;
+    textViewMoveWithBannerOffset : 155;
+    
+    moneyInputTextFont : 17;
+    
+    wishLabelMarginTop: 10;
+    
+    moneyLabelMarginTop2017 : 8A;
+    unitLabelMarginTop2017 : 14;
+    makebuttonMarginBottom2017 : 204;
+    
+    makebuttonMarginMoney2017 : 20;
+    bottomSceneImageMarginBottom2017 : 120;
+}
+
+#WCRedEnvelopesRedEnvelopesHistoryListViewController
+{
+    tableViewHeaderHeight : 366;
+    yearSelectorMarginTop : 25;
+    headImageMarginTop : 60;
+    descriptionTextMarginTop : 24;
+    receiveCountCenterMarginTop : 115;
+    statusTitleMarginTop : 100;
+}
+
+#ExtraDeviceLogin
+{
+    button_inner_offset : 8;
+    cancel_button_offset : 45;
+    device_tips_font_size : 15;
+    device_cancel_button_font_size : 15;
+}
+
+#fts_common {
+    education_image_top_margin : 50;
+    education_icon_top_margin : 43;
+    education_icon_left_margin : 40;
+    education_barbutton_top_margin : 40;
+    education_barbutton_hor_margin : 30;
+    
+    searchbar_tag_max_width : 160;
+}
+
+#search_guide {
+    sg_barbutton_top_margin : 40;
+    sg_verts_title_top_margin : 33.5;
+    sg_verts_title_bottom_margin_for_single_row : 30;
+    sg_verts_title_bottom_margin_for_multi_row : 25;
+    sg_verts_button_width : 100;
+    sg_verts_button_intv: 29;
+    
+    sg_verts_title_font_size : 14 dynamic;
+    sg_verts_title_font_size_for_discovery : 13 dynamic;
+    sg_verts_button_title_font_size : 16 dynamic;
+    sg_verts_button_title_font_size_for_discovery : 16 dynamic;
+    sg_verts_button_title_small_font_size : 14 dynamic;
+    sg_verts_button_title_small_font_size_for_discovery : 14 dynamic;
+    
+    sg_msg_verts_button_width : 100;
+    sg_verts_button_title_small_font_size_for_discovery : 12 dynamic;
+    
+    sg_weapp_content_width : 265;
+    sg_weapp_title_bottom_margin : 30;
+    sg_weapp_title_top_margin : 40;
+}
+
+#search_discovery {
+    discovery_search_text_font_size : 16;
+}
+
+#websearch_recommend
+{
+    vc_refresh_icon_top_margin : 106;
+}
+
+#text_actionSheet
+{
+    button_height : 50 dynamic;
+}
+
+#widget_tipsbar_base{
+    /*左边主要图标*/
+    icon_main_right_margin: 15 dynamic;
+    icon_main_left_margin: 15 dynamic;
+}
+
+#SnsABTestTip
+{
+    sns_abtest_tip_default_margin_left : 12;
+    sns_abtest_tip_default_margin_right : 12;
+    sns_abtest_tip_default_button_padding : 28;
+    sns_abtest_tip_default_text_font_size : 14;
+    sns_abtest_tip_default_icon_content_padding : 8;
+    
+    sns_abtest_tip_actionlist_margin_left : 15;
+    sns_abtest_tip_actionlist_margin_right : 15;
+    sns_abtest_tip_actionlist_icon_content_padding : 10;
+}
+
+#CardItemView
+{
+    card_left : 10.0;
+	top_height : 10.0;
+	normal_height : 136.0;
+	tooth_height : 3.0;
+	bottom_mask_height : 34.0;
+	title_font : 13.0;
+	title_2_sub : 8.0;
+	sub_title_font : 22.0;
+	bottom_font : 13.0;
+	logo_width : 42.0;
+	logo_left : 15.0;
+	logo_top : 20.0;
+    head_width: 55.0;
+    head_left : 14.0;
+    entry_title_font : 20.0;
+    entry_sub_title_font : 16.0;
+    invoice_title_left: 20;
+}
+
+#CardDetailView
+{
+    table_left_margin : 10.0;
+    table_right_margin : 10.0;
+}
+
+#CardCodeView
+{
+    begin_y : 60.0;
+    bottom_margin : 150.0;
+    dashline_margin : 35.0;
+    checkbox_fit_y  : 35.0;
+    tips_fit_y : 90.0;
+    qrcode_img_height : 168.0;
+}
+
+#CardConsumedView
+{
+    doneLabel_bottom : 82;
+}
+
+#BizMainHeaderView
+{
+    height : 135;
+    padding-top :30;
+    titleFontSize : 16;
+    descFontSize : 13;
+}
+
+#WCMallActivityView
+{
+    activityLabelFontSize:14;
+    activityFunctionLabelFontSize:12;
+    margin : 10;
+}
+
+#BizMainSectionHeaderView
+{
+    height : 60;
+    fontSize : 14;
+}
+
+#WifiView
+{
+    top-space : 70;
+    logo-size : 135;
+    left-space : 55;
+    large-space : 30;
+    normal-space : 30;
+    small-space : 18;
+    submit-space : 100;
+    privacy-space : 100;
+    buttom-space : 30;
+    bottom-space : 22.5;
+    notice-space : 7.5;
+    button-height : 34;
+    green-button-width : 190;
+    white-button-width : 250;
+    
+    connected-top-space : 60;
+    connected-logo-size : 95;
+    connected-buttom-space : 70;
+    connected-normal-space : 22.5;
+    
+    new-top-space : 92.5;
+    new-logo-size : 80;
+    new-notice-space : 7.5;
+    new-button-space : 25;
+    new-brand-space : 15;
+    new-button-top-space : 370;
+    new-logo-brandname-space : 25;
+    wifi-watermark-width : 114;
+    wifi-watermark-height : 17.5;
+    wifi-watermark-bottom-space : 15;
+    
+    guidepage-top-space : 150;
+    guidepage-notice-space : 30;
+    guidepage-default-font : 15.0;
+    guidepage-ssid-large-font : 30.0;
+    guidepage-ssid-normal-font : 22.5;
+    guidepage-ssid-small-font : 18.0;
+    guidepage-button-space : 155;
+    guidepage-bottom-space : 15;
+    guidepage-wifiName-left-space : 20;
+    guidepage-botton-top-space : 370;
+    newguidepage-wifi-ssid-font : 30.0;
+    newguidepage-wifi-label-font : 14.0;
+    newguidepage-wifi-hint-font : 16.0;
+    newguidepage-top-space : 150;
+    newguidepage-label-ssid-space : 2.5;
+    newguidepage-ssid-hint-space : 20;
+    newguidepage-wifi-hint-left-space : 43;
+    
+    main-font : 27.0;
+    sub-font : 18.0;
+    fail-font : 15.0;
+    privacy-font : 12.0;
+    success-font : 24.0;
+    bottom_notice-font : 9.0;
+    
+    new-main-large-font : 30;
+    new-main-small-font : 25;
+    new-sub-font : 14;
+    
+    pc-fail-margin-top : -10;
+    pc-confirm-button-margin-bottom : 100;
+}
+
+
+#WCFacingReceivePayerView { /* #WCRedEnvelopesReceiveHomeView */
+    
+    total_money_height : 50;
+    total_money_tips_font : 14;
+    total_money_money_font : 15;
+    
+    header_nickname_rightmargin : 10;
+    
+    status_font : 17;
+    money_font : 25;
+    
+    payer_name_font:14;
+    
+    actionbar_top_margin : 5;
+}
+
+#WhatsNew { /* what's new */
+    
+    enterbtn_bottom : 80;
+    enterbtn_width : 250;
+    enterbtn_height : 53;
+    enterbtn_font : 17;
+    page1_qr_size : 180;
+    page1_qr_b_y : 115;
+    page1_text_off_y : 50;
+    page1_text_font : 23;
+    
+    page2_head_size : 108;
+    page2_head_y : 160;
+    page2_name_font : 23;
+    page2_name_off_y : 45;
+    page2_text1_off_y : 20;
+    page2_text1_font : 23;
+}
+
+#chargeMobileView
+{
+    input_phone_view_height : 87;
+    input_phone_view_select_address_top_margin : 19;
+    footer_button_itern_margin : 10;
+    function_button_mainTitle_font : 17;
+    function_button_attrTitle_font : 11;
+}
+
+#Emoticon_Board_Store_Recommend_View
+{
+    cell_left_margin:20;
+    cell_top_margin:15;
+    cell_width :100;
+    cell_height: 125 dynamic;
+}
+
+#EmotionStoreHomePageHotCell
+{
+    cell_height: 155 ;
+    cell_label_width: 65 ;
+}
+
+#WCOutView {
+    /* dial pad */
+    dialPadTopMargin : 163;
+    padBtnDiameter : 105;
+    dialPadVerticalPadding : 1;
+    dialPadHorizontalPadding : 1;
+    callBtnMarginKeyPad: 30;
+    skmBtnsMarginHangupBtn: 40;
+    
+    /* dial view */
+    inputArea_marginTop: 39;
+    inputArea_phoneNumber_marginBottom: 8;
+    
+    /*calling view*/
+    headImageMarginTop: 75;
+    userLabelMarginTopWhenNoHeadImage: 42;
+    
+    /*account  view*/
+    headerViewHeight: 136;
+    balanceFontSize: 18;
+    remainingTimeFontSize :40;
+    headerImg : "wcoutHeader.png";
+    balanceTopMargin : 6;
+    remainingTimeTopMargin : 24;
+    invalidDateTopMargin:12;
+    invalidDateFontSize: 15;
+    productBtnTitleSize:26;
+    faqBtnTopMargin:90;
+}
+
+#WCOutActivityView {
+    title_margin_bottom : 145;
+    title_margin_Left_right : 60;
+    title_line_hight : 40;
+    desc_margin_top : 21;
+    pic_margin_top : 55;
+    img_height_width : 140;
+    try_btn_margin_bottom : 75;
+    
+    title_font_size : 33;
+    desc_font_size : 18;
+    
+}
+
+#WCOutWhatsNewView {
+    pic_margin_top : 80;
+    pic_with_height : 200;
+    title_margin_top : 60;
+    content_margin_left_right : 40;
+    content_margin_top : 5;
+    skip_btn_margin_bottom : 40;
+    try_wco_btn_margin_bottom : 40;
+    try_wco_btn_content_margin_left_right: 30;
+    title_font_size : 18;
+    content_font_size : 24;
+    skip_font_size : 14;
+    pic_btn_first_line_margin_top : 12;
+    pic_btn_second_line_margin_top_left : 15;
+    pic_btn_call_margin_top_left : 33;
+}
+
+#WCOutShareCardView {
+    card_margin_left_top : 30;
+    cell_margin_left_top : 20;
+    second_title_margin_left : 5;
+    separate_line_top : 50;
+    price_margin_top : 15;
+    price_margin_left : 40;
+    code_margin_top : -4;
+    tips_icon_margin_left : 30;
+    share_content_margin_top : 30;
+    
+    title_font_size : 14;
+    price_font_size : 40;
+    code_font_szie:10;
+    tips_font_szie:10;
+}
+
+#WCOutPackageView {
+    price_font_size : 40;
+}
+
+#NewMultiSelectViewController
+{
+    select_display_view_height : 120;
+    
+    select_display_item_topOffset1 : 33;
+    select_display_item_topOffset2 : 10;
+    select_display_item_leftOffset1 : 16;
+    select_display_item_leftOffset2 : 25;
+    select_display_item_interSpacing1 : 16;
+    select_display_item_interSpacing2 : 25;
+    select_display_item_lineSpacing1 : 100;
+    select_display_item_lineSpacing2 : 10;
+    
+    select_viewController_rightBarButton_margin : -9;
+}
+
+#MultiTalkTalkingOperateView
+{
+    title_margin_top : 30;
+    title_margin_left : 30;
+    title_height : 30;
+    title_font_size : 24;
+    title_text_color : "#ffffff";
+    
+    timer_margin_left : 30;
+    timer_font_size : 15;
+    timer_text_color : "#ffffff";
+    
+    minimize_button_center_margin_left : 60;
+    minimize_button_center_margin_bottom : 125;
+    
+    hangup_button_center_margin_bottom : 68;
+    hangup_button_height : 75;
+}
+
+#MultiTalkBeforeTalkingOperateView
+{
+    hangup_button_margin_center : 50;
+    hangup_button_center_margin_bottom : 68;
+    hangup_button_height : 75;
+}
+#MusicPlayerMainViewController
+{
+    
+    bottom_bg_height : 165;
+    shade_Gradient_height : 180;
+    
+    first_page_cover_height : 450;
+    second_page_cover_height : 180;
+    /*cover_image_offset = (first_page_cover_height-second_page_cover_height)/2 */
+    cover_image_offset : 135;
+    
+    table_view_height_to_top : 230;
+    lyrics_table_view_height : 315;
+    max_table_view_height : 315;
+    
+}
+
+#brand_contact_profile {
+    footer_button_margin : 10;
+}
+
+#NewYearSnsFeedView
+{
+    imageview_width : 180;
+    imageview_height : 135;
+}
+
+/*WCFestivalRedEnvReceiveHomeView*/
+#WCFestivalRedEnvReceiveHomeView
+{
+    bg_frame_height : 400;
+    bg_frame_width : 300;
+    
+    logo_width : 40;
+    logo_height : 40;
+    
+    nickname_font : 14;
+    nickname_top_margin : 8;
+    
+    descTitle_font : 20;
+    descTitle_top_margin : 33;
+    
+    linkLabel_font_size : 17;
+    
+    hb_cover_remain_height : 50;
+}
+
+#WCNewYearEnterpriseHBDetailView
+{
+    default_padding : 15;
+    bgView_top_margin : 66;
+    bgView_left_margin : 25;
+    
+    coverFrame_top_margin : 33;
+    coverFrame_left_margin : 14;
+    
+    headImage_top_margin : 22;
+    headImage_size : 41;
+    
+    nameLabel_font_size : 16;
+    nameLabel_top_margin : 10;
+    
+    numView_font_size : 47;
+    numView_top_margin : 43;
+    
+    moneyLabel_font_size : 11;
+    
+    tipsLabel_font_size : 15;
+    tipsLabel_top_margin : 46;
+    
+    fixBar_width : 17;
+}
+
+#WCNewYearHBDetailView
+{
+    bgView_top_margin : 25;
+    bgView_left_margin : 20;
+    
+    coverFrame_top_margin : 45;
+    coverFrame_left_margin : 15;
+    
+    headImage_top_margin : 20;
+    headImage_size : 41;
+    
+    nameLabel_font_size : 16;
+    nameLabel_top_margin : 14;
+    
+    numView_font_size : 64;
+    numView_top_margin : 80;
+    
+    moneyLabel_font_size : 12;
+    
+    tipsLabel_font_size : 14;
+    
+}
+
+#WCPayFetchView
+{
+    top_padding_1: 20;
+    top_padding_2: 20;
+    top_padding_3: 15;
+    top_padding_4: 9;
+    cardInfo_leftMargin : 15;
+}
+
+#WCPayPaidOrderVCActivityView
+{
+    marginView_height : 15;
+    activityView_height : 110;
+    iconView_left_margin : 15;
+    iconView_size : 47;
+    
+    solgnLabel_left_margin : 10;
+    titleLabel_top_margin : 8;
+    titleLabel_font_size : 21;
+    activityBtn_title_margin : 15;
+    
+    firstFlower_x : 196;
+    firstFlower_y : 9;
+    secondFlower_x : 55;
+    secondFlower_bottom_margin : 10;
+    thirdFlower_activityBtn_left_margin : 24;
+    thirdFlower_activityBtn_y : 43;
+}
+
+#WCSnsParticipateFullScreenView
+{
+    desc_font_size : 18;
+    desc_label_padding : 30;
+    participate_btn_padding : 20;
+    
+}
+
+#ShareCardMemberCardView
+{
+    img_left_margin : 32;
+    img_top_margin_to_bar : 12;
+    img_top_margin_to_title : 40;
+    accept_top_margin_to_card : 130;
+}
+
+#WCPayOverseaTransferViewController
+{
+    head_image_view_top_margin : 15;
+    display_name_label_top_margin : 10;
+    panel_view_left_margin : 15;
+    panel_view_top_margin : 15;
+    panel_view_bottom_margin : 15;
+    input_title_label_top_margin : 20;
+    input_title_label_left_margin : 20;
+    currency_input_view_left_margin : 20;
+    currency_input_view_top_margin : 15;
+    currency_input_view_height : 55;
+    line_view_left_margin : 20;
+    line_view_top_margin : 5;
+    line_view_height : 0.5;
+    comment_text_view_left_margin : 20;
+    comment_text_view_top_margin : 10;
+    comment_text_view_height : 16;
+    confirm_button_left_margin : 30;
+    confirm_button_top_margin : 30;
+    hkMoneyLabelFont : 40;
+}
+
+#WCPayCurrencyInputView
+{
+    currency_label_font_size : 40;
+    number_text_field_font_size : 55;
+    number_text_field_height : 55;
+}
+
+#online_device_info {
+    controlButtonsMargin : 18;
+    controlButtonsYOffset : 78;
+    tipsLabelYOffset : 20;
+    deviceViewY : 149;
+    logOutBtnMarginDeviceViewTop: 368;
+    
+    tips_label_font_size : 15;
+    containerView_YOffset : 70;
+}
+
+#WCPayOverseaMainWalletCollectionView
+{
+    banner_height : 135;
+}
+
+#WAHomeListView
+{
+    row_num_perpage : 4;
+    row_count : 4;
+    
+    cell_width : 170;
+    cell_height : 140;
+    section_hon_margin : 10;
+    section_ver_margin : 10;
+}
+
+#WCBackupEntryView
+{
+    icon_image_content_y : 180;
+    icon_image_height : 100;
+    icon_image_width : 160;
+    icon_label_gap : 52;
+    tip_max_content_x : 25;
+    tip_tip_gap : 14;
+    green_button_height : 35;
+    grey_button_height : 17;
+    button_button_gap : 66;
+    grey_button_bottom : 33;
+    left_corner_button_y : 20;
+    left_corner_button_x : 16;
+}
+
+#SightCamera {
+    tips_margin: 20;
+}
+
+
+#FaceHB
+{
+    get_AvatarWidth : 60;
+    get_OpenedAvatarWidth : 70;
+    get_OpenViewWidth : 325;
+    get_OpenViewHeight : 430;
+    get_mask_image_height : 245;
+    get_OpenBtn_topMargin : 82;
+    
+    pay_QR_Width : 180;
+    pay_QR_Top_Margin : 55;
+    pay_HB_SmallWidth : 115;
+    pay_HB_BigWidth : 275;
+    pay_HB_Name_Font : 17;
+    pay_HB_Yuan_Font : 17;
+    pay_HB_Amount_Font : 43;
+    pay_HB_SelectY : 35;
+    
+    pay_Receive_Top_Margin : 40;
+    pay_Receive_HeadWidth : 50;
+}
+
+#MultitalkBannerView
+{
+    banner_height : 44;
+    fold_tips_label_height : 16;
+    unfold_tips_label_height : 16;
+    unfold_title_label_height : 38;
+    unfold_button_height : 50;
+    unfold_title_margin_top  : 20;
+    unfold_label_margin_left : 30;
+    arrow_icon_margin_right : 15;
+    
+    fold_tips_label_font : 15.0;
+    unfold_title_label_font : 17.0;
+    unfold_tips_label_font : 14.0;
+    banner_button_font : 17.0;
+    
+    headimg_size : 30;
+    headimg_title_space : 10;
+    headimg_button_space : 20;
+    headimg_max_space : 10;
+    
+    unfold_button_headimg_space : 20;
+
+    invite_nick_max_len : 14;
+}
+
+#WCPayTransferMoneyViewController
+{
+    currencyLabelFont : 30;
+    moneyLabelFont : 50;
+    hkMoneyLabelFont : 42;
+    moneyLabelHeight : 55;
+    moneyLabelTopMargin : 5;
+    transferBtnTopMargin : 30;
+}
+
+#WCPayTransferMoneyPaidSuccessViewV2
+{
+    WeChatPayIcon_margin_top : 70;
+    WeChatPayIcon_height : 28;
+    WeChatPayIcon_width : 32;
+    
+    successLabel_margin_top : 131;
+    successLabel_font_size : 15;
+    successLabel_font_color : "#1AAD19";
+    
+    tipLabel_margin_top : 66;
+    tipLabel_font_size : 15;
+    tipLabel_font_color : "#353535";
+    
+    moneyLabel_margin_top : 44;
+
+    moneyLabel_margin_top_on_transfer : 14;
+    moneyLabel_font_size : 43.5;
+    moneyLabel_font_color : "#353535";
+    
+    receiverLabel_margin_top : 84;
+    dataLabel_margin_up : 13;
+    dataLabel_margin_left : 22;
+    dataLabel_interval : 6;
+    
+    dataLabel_font_size : 14;
+    dataLabel_font_color : "#888888";
+    
+    doneButton_margin_bottom : 75;
+    doneButton_width : 163;
+    
+    head_image_size : 28;
+    head_image_margin_right : 6;
+    
+    line_view_margin_top : 18;
+    line_view_margin_top_on_transfer : 81;
+    line_view_margin_left : 22;
+    line_view_height : 1;
+    line_view_color : "#C7C7C7";
+    
+    chargefeeLabel_margin_up : 18;
+    
+    firstDataLabel_margin_up : 16;
+    moneyLabel_margin_top_no_lineView : 56;
+    receiverLabel_margin_up_no_lineView : 64;
+    head_image_margin_up_no_lineView : 24;
+    receiverLabel_margin_up_no_lineView : 80;
+    head_image_margin_up_no_lineView : 28;
+}
+
+#OfflinePayView
+{
+    actionbar_top_margin : 5;
+    cardInfo_view_height : 60;
+    actionbar_content_height : 57;
+    
+    bottom_button_content_height : 55;
+    bottom_button_elem_leftMargin : 20;
+    bottom_button_elem_title_font : 16;
+    bottom_button_elem_subTitle_font : 15;
+    
+    codeview_noticecontent_margin : 30;
+    codeview_qrcode_bottom_margin : 25;
+    codeview_barcode_container_height : 136;
+    codeview_barcode_height : 102;
+    codeview_qrcode_width : 147;
+    codeview_tips_font : 14;
+    
+    change_card_view_itemLeftRightMargin : 20;
+    change_card_view_bankName_font : 15;
+    change_card_view_bankDesc_font : 13;
+    change_card_view_forbidDesc_font : 13;
+}
+
+#VoipView
+{
+    warningTips_top_margin : 395;
+    warningTips_left_margin : 35;
+    warningTips_left_span : 17.5;
+    warningTips_font_size : 15;
+    warningTips_width : 305;
+    warningTips_height : 35;
+    warningTips_fill_color : "#E64340";
+    warningTips_font_color : "#FFFFFF";
+}
+
+#VoiceInputViewController
+{
+    fullScreenTextViewHeight: 251;
+    cancel_Button_Left_Margin: 45;
+    halfScreenPadHeight: 330;
+    textViewDefaultHeight: 180;
+}
+
+#PaidNewDetailView {
+    logo_top_margin : 20;
+    logo_top_margin_min : 2;
+    logo_image_width : 32;
+    logo_image_height : 28;
+    brandLabel_top_margin : 10;
+    sellerLabel_top_margin : 64;
+    sellerLabel_top_margin_min : 46;
+    moneyLabel_top_margin : 12;
+    moneyLabel_fee_margin : 6;
+    
+    discount_content_top_margin : 11;
+    discount_content_inner_margin : 13;
+    
+    tinyApp_content_top_margin_with_discount : 10;
+    tinyApp_content_top_margin : 42;
+    tinyApp_content_height : 80;
+    tinyApp_line_leftright_margin : 22;
+    tinyApp_bg_left_margin : 32;
+    tinyApp_logo_len : 46;
+    tinyApp_small_logo_y : 1;
+    tinyApp_small_logo_len : 15;
+    
+    finish_button_width : 163;
+    finish_button_bottom_margin_normal : 90;
+    finish_button_bottom_margin_with_activity : 64;
+    finish_button_bottom_margin_with_activity_subscribe : 90;
+    finish_button_top_margin_min : 65;
+    subscribe_content_top_margin : 27;
+    
+    activity_content_height : 78;
+    activity_content_leftright_margin : 13;
+    activity_content_bottom_margin : 14;
+    activity_logo_left_margin : 19;
+    activity_button_innerMargin : 26;
+    
+    brandLabel_font : 17;
+    fee_type_font : 27;
+    money_font : 43;
+    discount_content_font : 12;
+    tinyApp_name_font : 12;
+    tinyApp_desc_font : 18;
+}
+
+#MobileChargeHistoryView {
+    history_cell_height : 60;
+    history_cell_phone_font : 15;
+    history_cell_username_font : 13;
+    history_cell_content_margin : 2;
+    history_cell_padding_margin : 34;
+    history_cell_maxrow : 3;
+}
+
+#UploadIDTipsViewController {
+    icon_top_margin : 30;
+    title_label_top_margin : 25;
+    content_view_width : 335;
+    content_view_height : 520;
+    separate_line_margin : 23;
+    upload_button_bottom_margin : 65;
+}
+
+#FaceRecoLight {
+    
+    frame_top : 153;
+    title_frame_margin : 46;
+    loading_frame_margin : 30;
+    
+    guide_top : 120;
+}
+
+#FaceReco {
+    icon_top : 104;
+    icon_tip_margin : 40;
+    info_footer_margin : 40;
+    info_leftview_width : 113;
+    title_top : 64;
+    title_frame_margin : 0;
+    frame_width : 300;
+    frame_height : 400;
+    big_tips_title_left_margin : 20;
+    err_tips_left_margin : 20;
+    num_font : 110;
+    
+    confirm_icon_left_margin : 17;
+    confirm_icon_name_gap : 11;
+    confirm_slogan_font : 27;
+    rules_info_screen_bottom_gap : 26;
+    rules_tip_info_gap: 12;
+    
+    prepare_readnumber_y : 220;
+    start_button_width : 144.3;
+    start_button_height : 40;
+    start_button_prepareLabel_gap : 200;
+    
+    result_close_btn_screen_gap : 110;
+    
+    guide_step_font : 20;
+    guide_step_title_y : 90;
+    guide_step_title_numbericon_gap : 60;
+    guide_numberIcon_left_margin : 75;
+    guide_numbericon_width : 24;
+    guide_step_content_numbericon_gap : 10;
+    guide_step_content_title_gap : 20;
+    guide_step_image_content_gap : 25;
+    guide_step_face_image_width : 80;
+    guide_step_number_image_width : 120;
+    guide_step_number_image_height : 35;
+    guide_numbericons_gap : 180;
+    guide_finish_btn_bottom_gap : 110;
+    guide_finish_btn_width : 144.3;
+    guide_finish_btn_height : 40;
+    guide_title_left_margin : 10;
+}
+
+#FaceRecoRamPose {
+    
+    frame_width : 280;
+    icon_top : 146;
+}
+
+#mmasset_define {
+    origin_image_label_font_size: 13;
+}
+
+#WCPayOfflineCheckTipsView
+{
+    iconImgViewTopMargin: 70;
+    tipsContentLeftMargin : 36;
+    tipsContentTopMargin : 30;
+    confirmBtnLeftMargin : 80;
+    confirmBtnTopMargin : 30;
+    
+    tipContentLabelFontSize : 15;
+}
+
+#WCPayOfflineAddNewCardTipsView
+{
+    iconImgViewTopMargin : 58;
+    tipsContentFontSize : 15;
+    tipsTitleTopMargin : 30;
+    tipsContentLeftMargin : 36;
+    addNewCardBtnLeftMargin : 80;
+    addNewCardBtnTopMargin : 40;
+    viewPayCardBtnBottomMargin : 35;
+}
+
+#WCLabsSettingViewController {
+    header_blank_height : 40;
+    footer_tip_toppadding : 57;
+    header_icon_title_padding : 15;
+}
+
+#WCLabsSettingViewControllerNew {
+    header_right_icon_top: 76;
+    header_height: 246;
+}
+
+#OfflinePayPreConfirmView
+{
+    confirmview_icon_topMargin : 84;
+    confirmview_content_fontsize : 18;
+    confirmview_content_topMargin : 30;
+    confirmView_content_leftRight_margin : 170;
+    confirmview_btn_topMargin : 30;
+    confirmview_btn_width : 190;
+}
+
+#MMTableViewIndex
+{
+    indexViewItemHeight : 16;
+    indexRoundImageViewWidth : 14;
+    indexViewFontSize : 10;
+}
+
+#WeNoteView
+{
+    max_textview_height : 400;
+}
+
+#LQTDetailView {
+    header_logo_topMargin : 15;
+    header_bankName_topMargin : 5;
+    header_bankName_fontSize : 15;
+    footer_fontsize : 14;
+    
+    content_view_height : 384;
+    content_view_height_with_activity : 432;
+    activity_btn_height : 56;
+    activity_btn_bottom_margin : 32;
+    content_title_fontSize : 14;
+    content_title_topMargin : 40;
+    content_money_fontSize : 45;
+    content_uint_fontSize : 25;
+    content_money_topMargin : 12;
+    content_money_bottomMargin : 34;
+    content_subcontent_fontSize : 13;
+    content_mainContent_fontSize : 21;
+    content_button_Width : 180;
+    content_button_topMargin : 48;
+    content_sepBar_height : 8;
+    
+    enterContent_view_height : 56;
+    enterContent_fontsize : 15;
+    
+    tinyappContent_view_height : 70;
+    tinyappContent_title_font : 13;
+    tinyappContent_desc_font : 15;
+    tinyappContent_name_font : 10;
+    tinyappContent_topBottom_margin : 15;
+}
+
+#LQTMoneyView {
+    inputContent_cell_height : 290;
+    btn_cell_height : 106;
+    btn_with_ptotocol_cell_height : 160;
+    
+    inputContent_topbar_topMargin : 29;
+    inputContent_cell_topMargin : 29;
+    
+    inputContent_leftRight_margin : 32;
+    inputContent_title_fontSize : 14;
+    inputContent_title_topMargin : 34;
+    inputContent_uint_fontSize : 30;
+    inputContent_money_fontSize : 48;
+    inputContent_cardInfo_leftMargin : 15;
+    
+    btn_cell_checkbox_len : 15;
+    btn_cell_protocol_topMargin : 30;
+    btn_cell_btn_topMargin : 30;
+    btn_cell_btn_topMargin_withProtocol : 15;
+    btn_cell_btn_height : 47;
+    
+    redeemMarginTop : 24;
+    redeemTypeHeight : 64;
+}
+
+#WCPayLQTRedeemTypeCell {
+    paddingLeft : 32;
+    titleMarginUp : 12;
+}
+
+#LQTTransView {
+    trans_succ_icon_topMargin : 50;
+    trans_tips_fontSize : 20;
+    trans_tips_topMargin : 25;
+    trans_money_fontSize : 50;
+    trans_unit_fontSize : 30;
+    trans_money_topMargin : 16;
+    trans_button_topMargin : 100;
+}
+
+#WCWebSearchViewControllerNewH5{
+    TextField_Top_Margin : 24;
+}
+
+#WCPayBizF2FViewController {
+    leftRightMargin : 15;
+    contentLeftRightMargin : 30;
+    
+    topBarMargin : 30;
+    topBarHeight : 90;
+    
+    mch_image_len : 40;
+    
+    mch_name_font : 15;
+    nick_name_font : 13;
+    
+    amountTitleTopMargin : 20;
+    amountTitle_font : 14;
+    unitLabel_font : 30;
+    amountTextField_font : 50;
+    amountTextField_height : 55;
+    
+    descLabelTopMargin : 24;
+    fixAmountContainerViewTopMargin : 18;
+    
+    transferBtnTopMargin : 30;
+    
+    commentTextViewTopMargin : 30;
+    contentViewBottomMargin : 23;
+}
+
+#WCPayBizF2FPaidSuccViewController {
+    logo_top_margin : 10;
+    logo_image_width : 38;
+    logo_image_height : 34;
+    
+    brandLabel_font : 13;
+    brandLabel_top_margin : 8;
+    
+    sellerLabel_top_margin : 50;
+    fee_type_font : 23;
+    money_font : 37;
+    moneyLabel_fee_margin : 5;
+    moneyLabel_top_margin : 10;
+    
+    lineView_top_margin : 100;
+    lineView_leftRight_margin : 25;
+    
+    label_font_size : 13;
+    label_topBottom_margin : 12;
+    label_inner_margin : 4;
+    
+    finish_button_width : 140;
+    finish_button_bottom_margin_normal : 70;
+    
+    activity_content_height : 66;
+    activity_logo_len : 36;
+    activity_title_font : 12;
+    activity_content_font : 16;
+    activity_btn_font : 13;
+    activity_btn_height : 30;
+    activity_btn_innerMargin : 22;
+}
+
+#WCPayRewardViewController {
+    headImage_len : 62;
+    headImage_topMargin : 50;
+    
+    view_container_cornerRadius : 3;
+    view_leftRightMargin : 20;
+    
+    payer_detail_desc_font : 24;
+    payer_detail_amount_leftrightMargin : 17;
+    payer_detail_amount_innerMargin : 10;
+    payer_detail_amount_font : 21;
+    
+    editmoney_amount_container_topMargin : 23;
+    editmoney_desc_container_topMargin : 20;
+    editmoney_button_TopMargin : 140;
+    editmoney_amount_container_height : 60;
+    editmoney_amount_font : 17;
+    
+    confirm_money_uint_font : 33;
+    confirm_money_font : 48;
+    confirm_money_margin : 7;
+    confirm_money_continer_topMargin : 10;
+    confirm_money_btn_topMargin : 140;
+    
+    intro_view_icon_topMargin : 96;
+    intro_view_tips_leftrightMargin : 62;
+    intro_view_btn_width : 180;
+    intro_view_btn_topMargin : 40;
+    intro_view_height : 444;
+    
+    setup_view_headImg_topMargin : 50;
+    setup_view_amount_font : 20;
+    setup_view_confirm_btn_topMargin : 36;
+    setup_view_desc_container_height : 70;
+    setup_view_tips_font : 17;
+    setup_view_amount_container_height : 64;
+    setup_view_bottom_tips_font : 13;
+    
+    codeView_len : 220;
+    receiver_detail_codeview_topMargin : 60;
+    receiver_detail_desc_font : 21;
+    receiver_detail_saveBtn_topMargin : 80;
+    receiver_detail_btn_innerMargin : 70;
+    
+    invalid_tipsView_height : 36;
+}
+
+#WCPayTrasnferToBankCardViewController
+{
+    kBankIconViewTopMargin : 15;
+    kBankInfoLabelTopMargin : 12;
+    kCurrencyInputViewTopMargin : 15;
+    kCurrencyInputViewHeight : 55;
+    kLineViewTopMargin : 5;
+    kConfirmButtonTopMargin : 30;
+    kBottomDescLabelTopMargin : 20;
+    kConfirmBottonMarginTop : 30;
+    kConfirmBottonMarginBottom : 40;
+}
+
+#WCPayTransferToBankCardPaidSuccessViewController {
+    kIconMarginTop : 104;
+    kBriefViewHeight : 166;
+    kBriefViewTitleFontSize : 16;
+    kDetailLabelFontSize : 14;
+    kDetailLabelMarginGap : 14;
+}
+
+#WCPayT2BCHistoryViewController {
+    kBankIconSize : 45;
+    kTitleLabelFontSize : 14;
+    kTimeLabelFontSize : 12;
+    kLabelMarginLeft : 10;
+    kCellHeight : 80;
+    kLabelMarginTop : 20;
+}
+
+#WCPayNewPwdViewController {
+    kTitleTopMargin : 63;
+    kPasswordTextFieldGap : 73;
+    kTitleLabelFontSize : 26;
+    kDescLabelFontSize : 14;
+    kTitleDescLabelGap : 21;
+    kPwdCrtlLabelFont : 13;
+    kPwdCrtlLabelGap : 21;
+    kBiotricBtnBottomGap : 135;
+    kBiotricIconScale : 0.9;
+    kOldPasswordTextFieldGap : 45;
+}
+
+#WCPayPaidSuccessStatusViewController {
+    kIconMarginTop : 104;
+    kBriefViewHeight : 166;
+    kBriefViewTitleFontSize : 16;
+    kDetailLabelFontSize : 14;
+    kDetailLabelMarginGap : 14;
+    kDetailLabelTipsFontSize : 12;
+}
+#WCPayNewPwdViewController {
+    kTitleTopMargin : 63;
+    kPasswordTextFieldGap : 73;
+    kTitleLabelFontSize : 26;
+    kDescLabelFontSize : 14;
+    kTitleDescLabelGap : 21;
+}
+
+#BaseWindowSize {
+    baseWidth: 375;
+    baseHeight: 667;
+}
+
+#WCPayBindCardSuccessViewController
+{
+    icon_size : 72;
+    icon_margin_up : 42;
+    icon_not_button_margin_up : 75;
+    
+    title_font_size : 20;
+    title_color : "#353535";
+    title_margin_up : 24;
+    
+    desc_font_size : 14;
+    desc_color : "#888888";
+    desc_margin_up : 15;
+    
+    topLine_color : "#E5E5E5";
+    topLine_margin_left : 35;
+    topLine_margin_up : 126;
+    topLine_height : 0.5;
+    
+    bankIcon_size : 46;
+    bankIcon_margin_left : 35;
+    bankIcon_margin_up : 20;
+    
+    bankTitle_font_size : 13;
+    bankTitle_color : "#B2B2B2";
+    bankTitle_margin_left : 14.5;
+    bankTitle_margin_up : 21;
+    
+    bankDesc_font_size : 20;
+    bankDesc_color : "#353535";
+    bankDesc_margin_left : 14.5;
+    bankDesc_margin_up : 3;
+    
+    bankButton_width : 60;
+    bankButton_margin_right : 35;
+    bankButton_margin_up : 30;
+    
+    bottomLine_color : "#E5E5E5";
+    bottomLine_margin_left : 35;
+    bottomLine_margin_up : 21;
+    bottomLine_height : 0.5;
+    
+    doneButton_width : 180;
+    doneButton_margin_up : 482;
+    doneButton_no_button_margin_up : 462;
+}
+
+#multi_select_tool_view {
+    btn_margin_border : 57;
+}
+
+#WCPayAutoDeductVC {
+    productNameFont : 17;
+    productNameTopMargin : 20;
+    sellerNameFont : 14;
+    feeFont : 42;
+    feeLabelTopMargin : 24;
+    leftRightMargin : 20;
+    switchContentTopMargin : 45;
+    switchContentInnerMargin : 15;
+    infoDescFont : 14;
+    footerButtonTopMargin : 30;
+}
+
+#WCPayBalanceDetailUI
+{
+    mainLogoTopMargin : 48;
+    mainContentViewBottomWhiteMargin : 40;
+}
+
+#WebMinimizationView
+{
+    webCircle_radius : 120;
+    webCircle_bottomMargin : 16;
+    webCircle_sideMargin : 24;
+    webCircle_iconSize : 40;
+
+    webCircle_corner_radius : 144;
+    webCircle_corner_bottomMargin : 24;
+    webCircle_corner_sideMargin : 32;
+    webCircle_corner_iconSize : 48;
+}
+
+#ResetPwdViewController
+{
+    fillCredInfo_header_height : 71;
+    fillCredInfo_headerTitle_topMargin : 38;
+    fillCredInfo_headerTitle_font : 22;
+    fillCredInfo_font : 17;
+    fillCredInfo_itemLeftMargin : 30;
+    fillCredInfo_leftRightMargin : 30;
+    fillCredInfo_button_width : 180;
+    fillCredInfo_button_topMargin : 160;
+    
+    verifyWay_leftRightMargin : 24;
+    verifyWay_arrowRightMargin : 15;
+    verifyWay_titleFont : 20;
+    verifyWay_descFont : 14;
+}
+
+#WCPayECardBankCardListViewController {
+    title_topMargin : 48;
+    bank_arrow_rightMargin : 48;
+    leftRight_margin : 32;
+}
+
+#WCPayLQTDepositNewPlanViewController
+{
+    kTableViewMarginLeft : 32;
+    kDepositAmountFontSize : 14;
+    kDepositAmountMarginTop : 40;
+    kTextFieldMoneyFontSize : 48;
+    kDepositErrorTipsFontSize : 14;
+    kDepositErrorTipsColor : "#FA5151";
+    kTextFieldAmountMargin : 24;
+    kTextFieldHeight : 55;
+    kTextFieldLineViewMargin : 8;
+    kTipsLabelMarginBottom : 24;
+    kCellSeparatorMargin : 20;
+    kCellHeight : 56;
+    kItemTitleRightMargin : 10;
+    kAgreeBtn_LinkText_Margin : 2;
+    kTableView_ScrollOffset : 33;
+    protocolView_scrollOffset : 70;
+    protocolView_scrollOffset_marign : 24
+}
+
+#WCRedEnvelopesReceiveHomeTemplateView {
+    red_envelopes_corner_radius : 1.35;
+    red_envelopes_height : 245;
+    red_envelopes_width : 148;
+    open_red_envelope_button_font : 19;
+    open_red_envelope_button_margin_bottom : 20;
+    open_red_envelope_button_size : 46.4;
+    open_red_envelope_curve_height : 30;
+    open_red_envelope_top_view_height : 173;
+    
+    mask_view_scale : 0.788;
+}
+
+#WCRedEnvelopesSelectSkinCellView {
+    /*    cell_left_margin : 1.5A;*/
+    /*    cell_right_margin : 0.5A;*/
+    
+    cell_top_margin : 1.5A;
+    
+    cell_height : 424;
+    cell_width : 256;
+    /*    collection_view_header : 3A;*/
+    /*    collection_view_line_spacing : 1A;*/
+    corp_name_font_size : 17;
+    corp_name_label_bottom_margin : 4;
+    over_time_label_bottom_magin : 14;
+    /*    select_image_size : 3A;*/
+    /*    select_image_right_margin : 1.5A;*/
+    /*    select_image_top_margin : 1A;*/
+    /*    corp_label_bottom_margin : 9;*/
+    selected_image_view_size : 24;
+    selected_image_right_margin : 24;
+    selected_image_bottom_margin : 24;
+    
+    border_width : 2;
+    over_time_label_font_size : 12;
+    select_label_font_size : 14;
+    /*    over_time_label_top_margin : 9;*/
+    select_label_left_margin : 4;
+    
+}
+
+#WCRedEnvelopesSelectSkinFlowLayout {
+    cell_width : 280;
+    cell_height : 522;
+    cell_margin : -5;
+    cell_top_margin : 5A;
+    
+}
+
+#WCRedEnvelopesRedEnvelopesDetailViewController {
+    nickname_label_margin_y_new : 32;
+    nickname_label_margin_y_new_hasEmoticon : 24;
+    topCoverImg_topMargin : 70;
+    topCoverImg_topMargin_receiver : 57;
+    money_label_margin_y : 40;
+    thx_emoticon_view_topMargin : 26;
+    thx_emoticon_view_noSelect_topMargin : 26;
+    emoticon_view_loading_topMargin : 50;
+    nickname_label_leftRight_maxMargin : 40;
+}

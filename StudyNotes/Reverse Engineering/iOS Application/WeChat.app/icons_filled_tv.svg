@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_tv</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_tv" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="common_icons_tv&amp;display" fill="#000000" fill-rule="nonzero">
+            <path d="M11.2179689,7.95410156 L6.30000019,7.95410156 L6.30000019,9.16992188 L8.336133,9.16992188 L8.336133,15 L9.81074238,15 L9.81074238,9.16992188 L11.6266126,9.16992188 L13.586133,15 L15.3634768,15 L17.7316408,7.95410156 L16.1251955,7.95410156 L14.5138674,13.4814453 L14.4796877,13.4814453 L12.8683596,7.95410156 L11.2179689,7.95410156 Z M2,5 C2,4.44771525 2.44771525,4 3,4 L21,4 C21.5522847,4 22,4.44771525 22,5 L22,18 C22,18.5522847 21.5522847,19 21,19 L3,19 C2.44771525,19 2,18.5522847 2,18 L2,5 Z M8,21.0499992 C8,20.6357857 8.34375,20.2999992 8.75262058,20.2999992 L15.2473794,20.2999992 C15.6630403,20.2999992 16,20.6328979 16,21.0499992 L16,21.7999992 L8,21.7999992 L8,21.0499992 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

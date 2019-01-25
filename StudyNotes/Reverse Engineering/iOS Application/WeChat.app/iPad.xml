@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="IPAD" title="iPad Settings" version="1" resetable="yes">
+    <section title="iPad SplitView">
+        <item type="value" title="左边栏最大宽度" key="MMiPad_Maximum_Primary_Column_Width" defaultValue="389" minValue="200" maxValue="1080" step="10"/>
+    </section>
+</page>

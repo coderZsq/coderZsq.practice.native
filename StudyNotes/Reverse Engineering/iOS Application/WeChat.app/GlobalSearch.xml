@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="GlobalSearch" title="Global Search" version="2" resetable="yes">
+    <section title="旧版切换">
+        <item type="switch" key="BSS_SPAY_GUIDE_PAGE" title="Spay BSSearch GuidePage" defaultValue ="off"/>
+    </section>
+    
+</page>

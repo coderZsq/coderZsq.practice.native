@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="TimeLine" title="朋友圈" version="1" resetable="yes">
+    <section title="热门图片折叠">
+        <item type="switch" key="TIMELINE_HOT_IMGAE_FOLD" title="强制折叠" defaultValue="NO" locked="NO"/>
+    </section>
+    <section title="原生页广告">
+        <item type="switch" key="TL_Ad_Canvas_Transition" title="新动画" defaultValue="YES" locked="NO"/>
+    </section>
+</page>

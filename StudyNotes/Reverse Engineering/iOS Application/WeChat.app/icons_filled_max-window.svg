@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_max-window</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_max-window" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Max-icon" transform="translate(3.000000, 3.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M18,12 L18,17 C18,17.5522847 17.5522847,18 17,18 L12,18 L12,16 L16,16 L16,12 L18,12 Z M6,0 L6,2 L2,2 L2,6 L0,6 L0,1 C0,0.44771525 0.44771525,6.66133815e-16 1,6.66133815e-16 L6,0 Z M14.5839613,2 L12,2 L12,0 L17,0 C17.5522847,-1.01453063e-16 18,0.44771525 18,1 L18,6 L16,6 L16,3.41364079 L11.6342138,7.77817459 L10.2200003,6.36396103 L14.5839613,2 Z M3.4160387,15.9981749 L6,15.9981749 L6,17.9981749 L1,17.9981749 C0.44771525,17.9981749 0,17.5504596 0,16.9981749 L0,11.9981749 L2,11.9981749 L2,14.5845341 L6.36578617,10.2200003 L7.77999973,11.6342138 L3.4160387,15.9981749 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

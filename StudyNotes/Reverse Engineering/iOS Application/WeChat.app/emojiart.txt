@@ -1,0 +1,49 @@
+<EmojiArtCatalog id="2" name="zh_CN:祝福;zh_TW:祝福;en:Greeting;th:อวยพร;" version="3">
+<Icon>7oyN</Icon>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICAgICAgICAgICAgICAgICAgIO6MtQogICAgICAgICAgICAg4pei7oiZ7oiZ4pejICAKIOOAgCAgIOKXou6Ime6Ime6Ime6ImeKXowogICAgICAge++9nu+9nu+9nu+9nu+9nu+9nu+9nn0gIAogICAgICAgIGzjgIDil4/jgIDjgIAgIOOAgOKXj+OAgGwKIO+8iOKVsO6Bie6Bie6Qmu6Bie6BieKVr++8iSAgCiAgIO+8iO6Bie6Bie6Bie6Bie6Bie6Bie+8iQogICAgIO+8iCDugYnugYnujLLugYnugYnvvIkKICAgIO6AsyAgICAgICAgICAgICAgICAgICAgICAgICAg7oCzCiAg7oCz7oCzICAgIO6Eku6EkiAgICAg7oCz7oCzCiAgICAgICAgICAgICAgICAg</EmojiArt>
+<EmojiArt name="zh_CN:圣诞快乐;zh_TW:聖誕快樂;en:MerryChritmas;th:เมอร์รี่คริสมาสต์;">7oSX7oSX7oSX7oy17oSX7oSX7oSXCu6MriAgICAgICAg7oCz7oCzICDujK4KICAgICAgICAgICDugLPukYjugLMKICAgICAgICAg7oCz7oyl7oyl7oCzCu6MriDugLPujJLugLPujJLugLPujK4KICAg7oCz7oyQ7oyQ7oyQ7oyQ7oCzCiDuhJLuhJLuhJLuhJLuhJLuhJLuhJI=</EmojiArt>
+<EmojiArt name="zh_CN:合家欢;zh_TW:合家歡;en:Family;th:ครอบครัว;">7oy17oyQ7oSX7oSX7oSX7oyQ7oy1CiAgICAgICAgICAg7pGL7oyN7pGLCu6MriAgICAg7pGA7pGA7pGAICAgIO6MrgogICAgICDukLcgICAgICAgICAgICAgIO6QtyAgCiAgIO6Mru6AhO6Agu6Age6Ahe6MrgrujITujITugLDujIXugLDujIPujIM=</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oySIO6MriAgICDujYvujYsgICAgIO6MkgogICAgICAgICDilI/ugYbugYbugYbilJMg7oyuCiAgICAgICAgICDujYvujYsg7o2L7o2LCu6MruKUj+KUge6Nh+6Nh+6Nh+KUgeKUkwogICAgIO6Ni+6Ni+6Ni+6Ni+6Ni+6Niw==</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oGJ7oGJ7pGD7oGJ7oGJ7oGJ7oGJ7oGJCu6Bie6Bie6Bie6Bie6Rg+6Bie6Bie6BiQrukYMgICAgICDukYMgICAgICAgICAgICAg7pGDCiAgICAgICDukYMgICAgICAgICDukYMKICDugLMgICAgICDugYggICAgICAgICAgICAgIO6MpQrugLPugLMg7oGI7oGIICAgIO6RiO6Eku6Ekg==</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICAgIO6MrCAg7oiZICDujKwKICAgICAgICAg77y8IHwg77yPICAgICAgICAgIAruiJkg5LiAIO6MjSDkuIDuiJkKICAgICAgICAg77yPIHwg77y8CiAgICAg7oysICDuiJkgIO6MrAogICAgICAgXCAgXCAg7oy0ICDujLUgIO6MtAogICAgIFwgICAgICAgICAgICDvvLwgfCDvvI8gICAgIArujJAgICAg7oy1IOS4gCDujI0g5LiA7oy1CiAgIO6MkCAgICAgICAgICDvvI8gfCDvvLwKICAgICAgICAgICAgICDujLQgIO6MtSAg7oy0CiAgICAgICAgICAgICAgICAgICAgIO+8j++8jwog7oyHIO6FkyDukL3uhZcgICAg77yP</EmojiArt>
+</EmojiArtCatalog>
+
+<EmojiArtCatalog id="3" name="zh_CN:爱情;zh_TW:愛情;en:Love;th:ความรัก;" version="3">
+<Icon>7oCi</Icon>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oyHICDujK4gIO6EjiAg7pSDICDujK7ujIcK7oyHICAgICAgICAg7pCUICDugZcgICAgICAgIO6MhwrujIcgICAgICAgIC/ujJlcL+6MglzugYQg7oyHCu6MhyAgIO6Asu6Asu6AsO6Asu6AsiDujIcK</EmojiArt>
+<EmojiArt name="zh_CN:我爱你;zh_TW:我愛你;en:iloveu;th:ฉันรักเธอ;">7oCy7oCy7oCy7oSm7oCi7oSm7oCi7oSmCu6Epu6Asu6Epu6Aou6Aou6Aou6Aou6AogruhKbugLLuhKbuhKbugKLugKLugKLuhKYK7oCy7oCy7oCy7oSm7oSm7oCi7oSm7oSmCu6Epu6Epu6Epu6Epu6Epu6Epu6Epu6EpgruhKbuhKbugLLuhKbuhKbugLLuhKbuhKYK7oSm7oSm7oCy7oSm7oSm7oCy7oSm7oSmCu6Epu6Epu6Asu6Epu6Epu6Asu6Epu6EpgruhKbuhKbuhKbugLLugLLuhKbuhKbuhKY=</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oSD7oSD7oSD7oSD7oSD7oSD7oSD7oSDCu6Eg+6Eg+6IjO6IjO6IjO6IjO6Eg+6EgwruhIMgICAg7oSD7oiM7oiM7oSDICAgICAg7oSDCu6EgyAgICAgICAgICAgIO6EgyAgICAgICAgICAgICDuhIMK7oSDICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg7oSDCu6Eg+6Eg+6Eg+6Eg+6Eg+6Eg+6Eg+6EgwogIO6Aon7uhIJ+7pClfu6Egn7ugKI=</EmojiArt>
+<EmojiArt name="zh_CN:小红花;zh_TW:小紅花;en: Little Red Flower;th:ดอกไม้สีแดงเล็กน้อย;">7oyu7oyD7oyDICAgIO6Mg+6Mg+6MrgogIO6Mg+6Mg+6Mg+6Mg+6Mg+6MgwogICAg7oyD7oyD7oyD7oyD7oyDCiAgICAgICAg7oyD7oyD7oyD7oyuCiAgICAgICAgICAgICDujIMgICAgICAg7oSQCu6Mru6EkCAgICDujIggICAg7oSQ7oSQCiAgICDuhJDuhJAgIO6MiO6EkO6EkAogICAgIO6Mru6EkO6MiO6EkA==</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">4pSP4pSB4pSTICAgICAgICAg7oGM4pSP4pSB4pSTCiAgIO6AoiAgICAgICAgICAgICAgICAgICAgIO6AogrilJfilIHilJvujK4gICAgICAgICDilJfilIHilJsKICAgICBPICAgICAgICAgICAgICAgICAgICAgIE8gIO6Mrgog7oyuICBvICAgICAgICAgICAgICAgIG8KICAgICAg7oCC7oSEICAgICAg7oCB7oCJCg==</EmojiArt>
+</EmojiArtCatalog>
+
+<EmojiArtCatalog id="4" name="zh_CN:搞怪;zh_TW:搞怪;en:Fun;th:สนุก;" version="3">
+<Icon>7oSH</Icon>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICAgICAgICAgICAgfHx8fHx8fHx8fHx8fHx8fHx8fAogICAgICAgICAgIGQgICAg7pCZICAgIGIKICAgICAgICAgICAoICAgICDukJwgICAgICkgCiAgICAgICAgICDujLEgICDPiSDujLEK7oGG7oGG7o2A7o2A7o2C7o2C7o2L7o2LCiAgICDujLvujLvuhKDuhKDujY3ujY0KICAgICAgICDujLrujLrujLzujLw=</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oy1ICAgICAgIO6MriAgICAgICAgICDujK4KICAgICAgIOKVreKUgOKUgOKUgOKUgOKUgOKVrgogICAgICAgIHwpICDuhIzuhIzuhIwgICAofCDuhL0KICAgIO+8j+6Msu6MsiAgIO6Msu6Msu+8vAog77yP77y/77y/77y/77y/77y/77y/77y/77y/77y8ICAgICAgICAgICAgICAgICAKICAgICAg4pWy77y/4pWy77y/4pWx77y/4pWxCiDuhL0g4pWxICAgICBVRk8gICAgICDilbLuhL0KICDilbEg7oSH7pCQ7oSc7pCR7oSHICDilbI=</EmojiArt>
+<EmojiArt name="zh_CN:鲸鱼女宝宝;zh_TW:鯨魚女寶寶;en:
+Whale Baby Girl
+;th:สาวเด็กปลาวาฬ">ICAgICAgICAgICAgICAgICDimIYKICAgICAgICDjgILimIbuhI7imIYgIOOAgiAKICAgIO6Uou6UoO6Uou6UoO6Uou6UoArulKLulKDulKLulKDulKLulKDugLDujIMK7pSgIC4uICAgICAgICAgICAgICAgICAgICAgLi7ugLAK7pSiKCrimLstICAgIO6AgyAgICAgLeKYuyop7pSgCu6UoO6Uou6UoO6Uou6UoO6Uou6UoO6Uogp+Ku6Mrn4qfirujK5+Kn4q7oyuKn4K7oyufip+7oyufip+Ku6Mrn4qfu6Mrg==</EmojiArt>
+<EmojiArt name="zh_CN:怪蜀黍;zh_TW:趣怪大叔;en:manther;th:ลุงแปลก;">7oyuICAgICDukYPukYPukYPukYMKICAgICDukYPukYPukYPukYPukYPukYPujK4KICAgICDukYMgICAgICAgICAgICAgICAgICAgICAg7pGDCu6MriAgIHwg7oCwLiAgICAgICAg7oCwLiB8CiAgICAgICAgfCAg7oyOX19fX18gICAgICB8CiAgICAgICAgXC4uLi4uIHwgfCB8IHwgfCAuLi4uLi8KICDuhYwgICAgICAgICAgICAgICAgICAgICAgICAg7oCO</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICAgICDilI/ilIHilIHilIHilIHilIHilJMKICAgICDilIPuhLwgIO6EvCAg7oS84pSDCiAgICAg4pSX4pSB4pSB4pSz4pSB4pSB4pSbCiAgICAgICAgIO6QiO+8j++8vCDulJsKICDuhKMgIO6MgiAgICAgICAgIO6AhiAg7oSjCiAg7oGFICAgICAgICAgICAgICAgICAgICAgICAg7oGF</EmojiArt>
+</EmojiArtCatalog>
+
+<EmojiArtCatalog id="5" name="zh_CN:流行;zh_TW:流行;en:Pop;th:นิยม;" version="3">
+<Icon>7oC+</Icon>
+<EmojiArt name="zh_CN:假期;zh_TW:假期;en:holiday;th:วันหยุด;">7oGJICAgIO6Bie6Bie6Biu6Bie6Bie6BiQogICAgICAgICAgICAgICAgICAgICAgICAgICAg7pGHCiAgICAg7pSEICAgICAg7pGHCiAgICAg7oC4ICAgICAgICAgICAgICAgICAg7oCi7oCiCu6Mh+6AuCDuhZPukL0gICDuhLbukKjuhY0=</EmojiArt>
+<EmojiArt name="zh_CN:出游;zh_TW:出遊;en:Travel;th:เดินทาง;">7pGDICAg7oGJICAg7pGD7pGDICAgIO6AnSAgCu6BiSDugYogICAgICAgICDugYnugYnukYMKICAgICDukYcKICAgICAgICAg7oSZCiAgICAg7oSZ7pGHICAgICAgICAgICDukYfuhJkK7pC17oCe7pSd7oCe7pSJ7oCe7pSF7oCe</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICDugYnugYnujLEgIO6MlCAgICAg7oGJCu6MsSAgICAgICAg7oGL7oGL7oGLICAg7oyxCiAgICAgICAg7oGL7oGL7oGL7oGL7oGLICAgICAKICAgICAg7oGL7oGL7oGL7oGL7oGL7oGLCiAgICAgICAgICAgICAgICAgICAgIHwgICAgICAKICAgICAgICAgICDukKggICAgSiAgIO6QqA==</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oGJICAg7oGJICAgICAgICDugYogIO6BiQogICAgICAgICAgICAgICAgICAg7oGJCiAgIO6QlAogICDujKLujIcgIH5+fn5+7oCcfn5+Cu6MhyAgICAg77y87pGDfn5+7pGDfn5+CiDukKnujIcgICDvvLx+7pGDfn5+7oCcCg==</EmojiArt>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">7oGJ7oGJ7oGJ7oGJ7oGJ7oS97oGJ7oGJCiAgICAg7oGJ7oS97oGJ7oGJ7oGJ7oGJClwgICAg7oyxICAgXCAgICBcICAgIFwgICAgXCAgICBcCiAgIFwgICAgXCAgICBcICAgIFwgICAg7oyxICAgXCAgICAKIFwgICAg7oyxICAgIFwgICAgXCAgICAgXCAgICBcCu6MhyAg7oyH7oSVICAg7oSVICAg7pCk</EmojiArt>
+</EmojiArtCatalog>
+
+<EmojiArtCatalog id="6" name="zh_CN:物品;zh_TW:物品;en:Stuff;th:สิ่งของ;" version="3">
+<Icon>7pCq</Icon>
+<EmojiArt name="zh_CN:;zh_TW:;en:;th:;">ICAgX19fX19fX19fX19fXwovICAgIF9fX19fX19fX18gICAgIFzujKYKfF9ffCAg7oic7oid7oieICB8X198CiAgICAgLyDuiJ/uiKDuiKEgXCAgICAg7oymCiAgIC8gICDuiKLuiKPuiKQgICBcICAgCiAvICAgICDuiKXuiZDuiJAgICAgIFwg7oymIAp8X19fX19fX19fX19fX19ffA==</EmojiArt>
+<EmojiArt name="zh_CN:钻戒;zh_TW:鑽戒;en:Diamond Ring;th:แหวนเพชร;">ICAgICAgICAg7oyuIO6Ate6Ate6MrgogICAgICAgICAgICDugLXugLXugLUK7oyuICAgIO6EpiDugLXugLXuhKYg7oyuCiAgICAgIO6EpiAgICAgICAgICAgICAgICAgIO6EpgogICAg7oSmICAgICAgICAgICAgICAgICAgICAg7oSmCiAgICAg7oSmICAgICAgICAgICAgICAgICAgIO6EpiAKICAgICAgICDuhKYgICAgICAgICAgICAg7oSmCiAgICAgIO6MriAg7oSmIO6Epu6Mrg==</EmojiArt>
+<EmojiArt name="zh_CN:啤酒;zh_TW:啤酒;en:beer;th:เบียร์;">7oyuICAgIO6Bie6Bie6BiQogICAg7oGJ7oGJ7oGJ7oGJ7oGJ7oGJCu6Bie6Bh+6Bh+6Bh+6Bh+6Bh+6Bh+6BhwrugYnugYfugYfugYfugYfugYcgICAg7oGHCu6Bie6Bh+6Bh+6Bh+6Bh+6BhyAgICDugYcKICAgICDugYfugYfugYfugYfugYcgICDugYcKICAgICDugYfugYfugYfugYfugYfugYcKICAgICDugYfugYfugYfugYfugYcK7oyS7oCY7oWS7pSV7oCB7oCE7oCY7oyS</EmojiArt>
+</EmojiArtCatalog>
+
+<EmojiArtCatalog id="1" name="zh_CN:我收藏的;zh_TW:我收藏的;en:My Favorite;th:ความชื่นชอบของฉัน;" version="3">
+<Icon>7oWM</Icon>
+</EmojiArtCatalog>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_moment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_moment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon25" fill="#000000">
+            <g id="Group-18" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)">
+                <path d="M10,18.8 C14.8601058,18.8 18.8,14.8601058 18.8,10 C18.8,5.1398942 14.8601058,1.2 10,1.2 C5.1398942,1.2 1.2,5.1398942 1.2,10 C1.2,14.8601058 5.1398942,18.8 10,18.8 Z M10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 15.5228475,20 10,20 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+                <path d="M10.000001,13.0000027 C11.6568551,13.0000027 13.0000008,11.656857 13.0000008,10.0000029 C13.0000008,8.34314872 11.6568551,7.00000305 10.000001,7.00000305 C8.34314681,7.00000305 7.00000114,8.34314872 7.00000114,10.0000029 C7.00000114,11.656857 8.34314681,13.0000027 10.000001,13.0000027 Z M10.000001,14.2000027 C7.68040511,14.2000027 5.80000114,12.3195987 5.80000114,10.0000029 C5.80000114,7.68040702 7.68040511,5.80000305 10.000001,5.80000305 C12.3195968,5.80000305 14.2000008,7.68040702 14.2000008,10.0000029 C14.2000008,12.3195987 12.3195968,14.2000027 10.000001,14.2000027 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+                <polygon id="Path" points="5.79999995 1 7 1 7 10 5.79999995 10"></polygon>
+                <polygon id="Path" points="12.9999998 10 14.1999998 10 14.1999998 19 12.9999998 19"></polygon>
+                <rect id="Rectangle-6" x="10" y="5.80000305" width="9" height="1.20000005"></rect>
+                <rect id="Rectangle-6" x="1" y="13" width="9" height="1.20000005"></rect>
+                <polygon id="Path" transform="translate(10.636396, 4.272435) rotate(45.000000) translate(-10.636396, -4.272435) " points="10.0363961 -0.227564944 11.2363961 -0.227564944 11.2363961 8.77243506 10.0363961 8.77243506"></polygon>
+                <polygon id="Path" transform="translate(9.363604, 15.727565) rotate(45.000000) translate(-9.363604, -15.727565) " points="8.76360389 11.2275649 9.96360394 11.2275649 9.96360394 20.2275649 8.76360389 20.2275649"></polygon>
+                <rect id="Rectangle-6" transform="translate(15.727563, 10.636398) rotate(45.000000) translate(-15.727563, -10.636398) " x="11.2275628" y="10.0363983" width="9" height="1.20000005"></rect>
+                <rect id="Rectangle-6" transform="translate(4.272435, 9.363604) rotate(45.000000) translate(-4.272435, -9.363604) " x="-0.227564944" y="8.76360389" width="9" height="1.20000005"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

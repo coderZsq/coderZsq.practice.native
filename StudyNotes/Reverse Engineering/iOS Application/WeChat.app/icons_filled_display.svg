@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_display</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_display" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="common_icons_tv&amp;display" fill="#000000" fill-rule="nonzero">
+            <g id="Pic" transform="translate(2.000000, 3.500000)">
+                <path d="M0,1.5 C-6.76353751e-17,0.94771525 0.44771525,0.5 1,0.5 L19,0.5 C19.5522847,0.5 20,0.94771525 20,1.5 L20,14.5 C20,15.0522847 19.5522847,15.5 19,15.5 L1,15.5 C0.44771525,15.5 -9.13419418e-16,15.0522847 0,14.5 L0,1.5 Z M6,17.5499992 C6,17.1357857 6.34375,16.7999992 6.75262058,16.7999992 L13.2473794,16.7999992 C13.6630403,16.7999992 14,17.1328979 14,17.5499992 L14,18.2999992 L6,18.2999992 L6,17.5499992 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

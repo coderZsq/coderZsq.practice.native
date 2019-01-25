@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page key="SIGHT_CHAT_SCREEN" title="Sight: Chat" version="4" resetable="yes">
+    
+    <section title="OTHER SETTINGS" tail="tailtext">
+        <item type="switch"   key="SIGHT_AUTODOWNLOAD"            title="自动下载"           defaultValue="on" />
+        <item type="switch"   key="SIGHT_CLOSECAMERA_AFTERSHOT"   title="拍摄完成后关闭相机"   defaultValue="on"/>
+        <item type="switch"   key="SIGHT_MACHINE_GUN"             title="Machine Gun(must close upper switch)"   defaultValue="off"/>
+        <item type="switch"   key="SIGHT_FORCEFORWARD"            title="强制打开转发"        defaultValue="on"/>
+    </section >
+    
+    <section title="ToolBar">
+        <item type="value" title="Draft Icon size" key="SD_DB_ICON_SIZE" defaultValue="44" maxValue="60" minValue="0" step="1"/>
+        <item type="value" title="Draft Button margin" key="SD_DB_MARGIN" defaultValue="14" maxValue="60" minValue="0" step="1"/>
+        <item type="value" title="Close Icon alpha" key="SIGHT_CHAT_ICON_ALPHA" defaultValue="1.0" maxValue="1" minValue="0" step="0.01"/>
+        <item type="value" title="Capture Btn shrink dur." key="SIGHT_CHAT_BTN_ZOOMIN_DUR" defaultValue="0.2" maxValue="6.5" minValue="0" step="0.1"/>
+        <item type="value" title="Capture Btn large dur." key="SIGHT_CHAT_BTN_ZOOMOUT_DUR" defaultValue="0.2" maxValue="6.5" minValue="0" step="0.1"/>
+        <item type="value" title="Capture Btn min size" key="SIGHT_CHAT_BTN_ZOOMIN_SIZE" defaultValue="1.5" maxValue="1" minValue="0" step="0.05"/>
+    </section>
+    
+    <section title="UI">
+        <item type="value" key="SIGHT_CHAT_PREVIEW_HEIGHT" title="Preview Height (w/x)" defaultValue ="1.30" maxValue="2" minValue="0.5" step="0.01"/>
+        <item type="value" key="SIGHT_CHAT_BAR_ALPHA" title="Toolbars Opague Level" defaultValue ="0.6" maxValue="1" minValue="0" step="0.05"/>
+        <item type="value" key="SIGHT_CHAT_BAR_HEIGHT_6m" title="Toolbars Height 6-" defaultValue ="82" step="1"/>
+        <item type="value" key="SIGHT_CHAT_BAR_HEIGHT_6" title="Toolbars Height 6" defaultValue ="94" step="1"/>
+        <item type="value" key="SIGHT_CHAT_BAR_HEIGHT_6p" title="Toolbars Height 6+" defaultValue ="114" step="1"/>
+        <item type="value" key="SIGHT_ZOOM_TIPS_BOUNCE_COUNT" title="ZoomTip Anim. Bounces Count" defaultValue ="2" maxValue="10" minValue="0" step="1"/>
+        <item type="value" key="SIGHT_ZOOM_TIPS_BOUNCE_STIFF" title="ZoomTip Anim. Stiff" defaultValue ="4" maxValue="8" minValue="0.5" step="0.5"/>
+        <item type="value" key="SIGHT_ZOOM_TIPS_BOUNCE_DUR" title="ZoomTip Anim. Duration" defaultValue ="0.5" maxValue="2" minValue="0.3" step="0.05"/>
+        <item type="value" key="SIGHT_ZOOM_TIPS_DISTANCE" title="ZoomTip Anim. Distance." defaultValue ="30" maxValue="300" minValue="0" step="2"/>
+        <item type="value" key="SIGHT_MASK_ALPHA_TOP" title="Mask alpha top" defaultValue ="0.70" maxValue="1.0" minValue="0.0" step="0.02"/>
+        <item type="value" key="SIGHT_MASK_ALPHA_BOTTOM" title="Mask alpha bottom" defaultValue ="0.90" maxValue="1.0" minValue="0.0" step="0.02"/>
+        <item type="value" key="SIGHT_NORMAL_MASK_ALPHA" title="Normal mask alpha" defaultValue ="0.52" maxValue="1.0" minValue="0.0" step="0.02"/>
+        <item type="value" key="SIGHT_SIGHTING_MASK_ALPHA" title="Sighting mask alpha" defaultValue ="0.86" maxValue="1.0" minValue="0.0" step="0.02"/>
+    </section>
+</page>

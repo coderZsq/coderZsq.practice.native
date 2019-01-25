@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="SIGHT_DECTOR" title="Sight: Detector" version="5" resetable="yes">
+    
+    <section title="API State detect">
+        <item type="switch" key="SIGHT_CAMERA_STABLIZATION" title="Stablization" defaultValue ="on"/>
+        <item type="switch" key="SIGHT_CAMERA_LIGHTBOOST" title="Light Boost" defaultValue ="on"/>
+        <item type="switch" key="SIGHT_CAMERA_LESSFRAMERATE" title="Less Framerate(24fps)" defaultValue ="off"/>
+        <item type="switch" key="SIGHT_CAMERA_STATE_DETECT" title="State Detector" defaultValue ="off"/>
+    </section>
+    
+    <section title="Motion Detector">
+        <item type="switch" key="SIGHT_MOTION_DETECTOR_TIP" title="MOTION_DETECTOR" defaultValue ="on"/>
+        <item type="value" key="SIGHT_MOTION_DETECTOR_GAP" title="MOTION_DETECTOR_GAP" defaultValue ="0.5" minValue="0.1" maxValue="3.0"/>
+        <item type="value" key="SIGHT_ACCERLER_DETECTOR_TRIGGER" title="ACCERLER_DETECTOR_TRIGGER" defaultValue ="0.4" minValue="0.01" maxValue="3.0"/>
+        <item type="value" key="SIGHT_ROTATE_DETECTOR_TRIGGER" title="ROTATE_DETECTOR_TRIGGER" defaultValue ="1.5" minValue="0.01" maxValue="15.0"/>
+        <item type="value" key="SIGHT_ACCERLER_DETECTOR_TRIGGER_P" title="ACCERLER_DETECTOR_TRIGGER_P" defaultValue ="0.4" minValue="0.01" maxValue="3.0"/>
+        <item type="value" key="SIGHT_ROTATE_DETECTOR_TRIGGER_P" title="ROTATE_DETECTOR_TRIGGER_P" defaultValue ="1.5" minValue="0.01" maxValue="15.0"/>
+    </section>
+    
+    <section title="Low Light Detector">
+        <item type="value" key="SIGHT_LIGHT_DETACT_GAP" title="Light detact Delay" defaultValue ="0.5" maxValue="10" minValue="0.1" step="0.1"/>
+        <item type="value" key="SIGHT_LIGHT_DETACT_TRIGGER" title="Light detact Trigger" defaultValue ="17" maxValue="768" minValue="10" step="1"/>
+        
+        <page title="animation" key="SIGHT_LIGHT_BOOST_ANIM" version="2">
+            <section title="mask anim">
+                <item type="switch" key="SLBA_MASK_ANIM" title="White Mask" defaultValue ="on"/>
+                <item type="value" key="SLBA_MASK_ALPHA_MAX" title="Max Alpha" defaultValue ="0.3" maxValue="1.0" minValue="0.1" step="0.05"/>
+                <item type="value" key="SLBA_MASK_DUR_T1" title="Anim dur. T1" defaultValue ="0.16" maxValue="10" minValue="0.0" step="0.02"/>
+                <item type="value" key="SLBA_MASK_DUR_T2" title="Anim dur. T2" defaultValue ="0.90" maxValue="10" minValue="0.0" step="0.05"/>
+            </section>
+            <section title="zooming">
+                <item type="switch" key="SLBA_ZOOMING_ANIM" title="Preview Zooming" defaultValue ="on"/>
+                <item type="value" key="SLBA_ZOOMING_MAX" title="Max Zoom" defaultValue ="1.8" maxValue="10" minValue="0.1" step="0.2"/>
+                <item type="value" key="SLBA_ZOOMING_DUR_T1" title="Zoom Dur. T1" defaultValue ="0.0" maxValue="5.0" minValue="0.0" step="0.05"/>
+                <item type="value" key="SLBA_ZOOMING_DUR_T2" title="Zoom Dur. T2" defaultValue ="0.35" maxValue="5.0" minValue="0.0" step="0.05"/>
+            </section>
+        </page>
+        
+    </section>
+    
+    <mode key="SIGHT_MOTION_DETECTOR_CAC_MODE" title="MOTION_DETECTOR_CAC_MODE" defaultValue="1" >
+        <option title="accerler and rotate"/>
+        <option title="accerler or rotate"/>
+        <option title="only accerler"/>
+        <option title="only rotate"/>
+    </mode>
+    
+</page>

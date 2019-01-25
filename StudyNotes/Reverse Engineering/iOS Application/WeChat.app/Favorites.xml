@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="Favorites_Desc" title="收藏" version="2" resetable="yes">
+    <section title="笔记">
+        <item type="switch" key="Fav_Note_Template" title="打开笔记模板" defaultValue ="off"/>
+    </section>
+    
+</page>

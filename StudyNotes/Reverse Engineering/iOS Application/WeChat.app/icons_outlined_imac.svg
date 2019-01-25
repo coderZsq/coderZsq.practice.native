@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_imac</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_imac" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon31" fill="#000000" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(2.000000, 4.000000)">
+                <path d="M1.2,1.2 L1.2,13.8 L18.8,13.8 L18.8,1.2 L1.2,1.2 Z M0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L19,0 C19.5522847,-1.01453063e-16 20,0.44771525 20,1 L20,14 C20,14.5522847 19.5522847,15 19,15 L1,15 C0.44771525,15 6.76353751e-17,14.5522847 0,14 L0,1 Z M8.11122629,14.9999878 L7.67203442,16.3 L12.3279656,16.3 L11.8887737,14.9999878 L8.11122629,14.9999878 Z M12.75,13.7999878 L13.7770168,16.8399675 C13.7944347,16.8915248 13.803319,16.9455799 13.803319,17 C13.803319,17.2761424 13.5794614,17.5 13.303319,17.5 L6.69668101,17.5 C6.64226093,17.5 6.58820584,17.4911158 6.5366485,17.4736978 C6.27503244,17.3853143 6.13459971,17.1015836 6.22298322,16.8399675 L7.25,13.7999878 L12.75,13.7999878 Z M0,11 L20,11 L20,12.2 L0,12.2 L0,11 Z" id="Rectangle-40"></path>
+            </g>
+        </g>
+    </g>
+</svg>

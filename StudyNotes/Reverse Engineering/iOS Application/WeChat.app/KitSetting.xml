@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="KitSetting" title="Setting" version="16" resetable="no">
+    <section>
+      <include file="Group.xml"/>
+      <include file="Sight.xml"/>
+      <include file="ModernStyle.xml"/>
+      <include file="GlobalSearch.xml"/>
+      <include file="WeChatOut.xmlx"/>
+      <include file="FaceAuth.xml"/>
+      <include file="Emoticon.xml"/>
+      <include file="Storage.xml"/>
+      <include file="ScanCode.xml"/>
+      <include file="NearBy.xml"/>
+      <include file="iPad.xml"/>
+      <include file="HighResolutionImage.xml"/>
+      <include file="Favorites.xml"/>
+      <include file="VoipVideoFilter.xml"/>
+      <include file="TimeLine.xml"/>
+      <include file="Image.xml"/>
+      <include file="Story.xml"/>
+    </section>
+</page>

@@ -1,0 +1,10 @@
+{
+  "supported complication families" : {
+    "1" : "61D9C5CE-3CEE-48D2-9BBB-7BE1E58420AD.json",
+    "4" : "EF3D26EC-9F96-486E-ACC1-14E2D4F8891F.json",
+    "2" : "72D17986-2B36-4CCC-990C-CAD71C25BA31.json",
+    "0" : "21390D0E-2985-4DCD-809F-BA00A380B450.json",
+    "7" : "C4C721BE-39B5-44EA-AB12-4D8C44642B44.json"
+  },
+  "client ID" : "com.tencent.wc.xin.watchkitapp.watchkitextension"
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="ModernStyle" title="Modern Style Config" version="2" resetable="yes">
+    <section>
+        <item type="switch" key="MSChatsList" title="Modern Chats List" defaultValue ="off"/>
+        <item type="switch" key="MSChatsListAvatar" title="Modern Group Chat Avatar" defaultValue ="off"/>
+        <item type="switch" key="MSInputBar" title="Modern Input Bar" defaultValue ="off"/>
+        <item type="switch" key="MSTabbar" title="Modern Tabbar" defaultValue ="off"/>
+    </section>
+    
+    <section>
+        
+        <page key="MSChatsListConfig" title="Modern Chats List Config" version="1" resetable="yes">
+            <section title="Chats List Layout">
+                <item type="value" key="MSChatsListTitleFontSize" title="Title font size" defaultValue ="16.5" maxValue="30" minValue="8" step="0.5"/>
+                <item type="value" key="MSChatsListMessageFontSize" title="Message font size" defaultValue ="12" maxValue="30" minValue="8" step="0.5"/>
+                <item type="value" key="MSChatsListAvatarSize" title="Avatar size" defaultValue ="51" maxValue="100" minValue="20" step="0.5"/>
+                <item type="value" key="MSChatsListAvatarMarginRight" title="Avatar margin right" defaultValue ="12" maxValue="30" minValue="0" step="0.5"/>
+                <item type="value" key="MSChatsListTextMarginTop" title="Text margin top" defaultValue ="7" maxValue="40" minValue="0" step="0.5"/>
+                <item type="value" key="MSChatsListTextMarginBottom" title="Text margin bottom" defaultValue ="7" maxValue="40" minValue="0" step="0.5"/>
+                <item type="value" key="MSChatsListTimeFontSize" title="Time font size" defaultValue ="11" maxValue="30" minValue="8" step="0.5"/>
+                <item type="value" key="MSChatsListAvatarMarginLeft" title="Avatar margin left" defaultValue ="4" maxValue="30" minValue="0" step="0.5"/>
+                <item type="value" key="MSChatsListAvatarMarginTop" title="Avatar margin top and bottom" defaultValue ="4" maxValue="30" minValue="0" step="0.5"/>
+                
+            </section>
+            <section title="Chats List Style">
+                <item type="value" key="MSChatsListStickBackgroundAlpha" title="Stickies background alpha" defaultValue ="0.88" maxValue="1" minValue="0" step="0.01"/>
+                <item type="value" key="MSChatsListSearchbarInputLightAlpha" title="Searchbar inputfield light mask alpha" defaultValue ="0.8" maxValue="1" minValue="0" step="0.01"/>
+                <item type="value" key="MSChatsListSearchbarInputLightRed" title="Searchbar inputfield light mask Red" defaultValue ="255" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListSearchbarInputLightGreen" title="Searchbar inputfield light mask Green" defaultValue ="251" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListSearchbarInputLightBlue" title="Searchbar inputfield light mask Blue" defaultValue ="253" maxValue="255" minValue="0" step="2"/>
+                
+                <item type="value" key="MSChatsListSearchbarInputDarkAlpha" title="Searchbar inputfield dark mask alpha" defaultValue ="0.01" maxValue="1" minValue="0" step="0.01"/>
+                <item type="value" key="MSChatsListSeparatorAlpha" title="TableView Separator alpha" defaultValue ="0.1" maxValue="1" minValue="0" step="0.01"/>
+                <item type="value" key="MSChatsListBlurImageMaskColorRed" title="Blur image mask color Red" defaultValue ="255" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListBlurImageMaskColorGreen" title="Blur image mask color Green" defaultValue ="170" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListBlurImageMaskColorBlue" title="Blur image mask color Blue" defaultValue ="210" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListBlurImageMaskAlphaTop" title="Blur image mask alpha top" defaultValue ="0.10" maxValue="1" minValue="0" step="0.01"/>
+                <item type="value" key="MSChatsListBlurImageMaskAlphaBottom" title="Blur image mask alpha bottom" defaultValue ="0.20" maxValue="1" minValue="0" step="0.01"/>
+                <item type="switch" key="MSChatsListTitleFontStyle" title="Medium font title" defaultValue ="off"/>
+                <item type="value" key="MSChatsListMessageFontColorRed" title="Message font color red" defaultValue ="126" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListMessageFontColorGreen" title="Message font color green" defaultValue ="120" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListMessageFontColorBlue" title="Message font color blue" defaultValue ="136" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSChatsListMessageFontColorAlpha" title="Message font color alpha" defaultValue ="1.0" maxValue="1" minValue="0" step="0.01"/>
+                
+            </section>
+        </page>
+        <page key="MSInputBarConfig" title="Modern Input Bar Config" version="1" resetable="yes">
+            <section title="Input Bar Config">
+                <item type="value" key="MSInputBarShadowColorRed" title="Shadow color Red" defaultValue ="238" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSInputBarShadowColorGreen" title="Shadow color Green" defaultValue ="238" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSInputBarShadowColorBlue" title="Shadow color Blue" defaultValue ="255" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSInputBarShadowAlpha" title="Shadow alpha" defaultValue ="0.1" maxValue="1.0" minValue="0" step="0.02"/>
+                <item type="value" key="MSInputBarMargin" title="Buttons margin outer" defaultValue ="7.0" maxValue="20" minValue="-10" step="0.2"/>
+                <item type="value" key="MSInputBarMarginInside" title="Space b/w buttons" defaultValue ="5.6" maxValue="20" minValue="-10" step="0.2"/>
+            </section>
+        </page>
+        <page key="MSTabbarConfig" title="Modern Tabbar Config" version="1" resetable="yes">
+            <mode key="MSTabbarStyle" title="Tab bar style" defaultValue="1">
+                <option title="White"/>
+                <option title="Black"/>
+            </mode>
+            <section title="Tab bar icons">
+                <item type="switch" key="MSTabbarImageStyle" title="Use original images" defaultValue ="on"/>
+            </section>
+            <mode key="MSTabbarTintColor" title="Tab bar tint color" defaultValue="2" >
+                <option title="Sky Blue"/>
+                <option title="Blue"/>
+                <option title="Green"/>
+                <option title="Yellow"/>
+                <option title="Orange"/>
+                <option title="Red"/>
+                <option title="Music Red"/>
+                <option title="Purple"/>
+                <option title="Gray"/>
+                <option title="Black"/>
+                <option title="WeChat Light Green"/>
+                <option title="WeChat Dark Green"/>
+            </mode>
+        </page>
+        <page key="MSNavBarConfig" title="Modern Navigationbar Config" version="1" resetable="yes">
+            <section title="NavigationBar Style">
+                <item type="value" key="MSNavBarShadowColorRed" title="Shadow color Red" defaultValue ="4" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSNavBarShadowColorGreen" title="Shadow color Green" defaultValue ="0" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSNavBarShadowColorBlue" title="Shadow color Blue" defaultValue ="18" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="MSNavBarShadowAlphaTop" title="Shadow top alpha" defaultValue ="0.76" maxValue="1.0" minValue="0" step="0.02"/>
+                <item type="value" key="MSNavBarShadowAlphaBottom" title="Shadow bottom alpha" defaultValue ="0.28" maxValue="1.0" minValue="0" step="0.02"/>
+            </section>
+        </page>
+    </section>
+
+</page>

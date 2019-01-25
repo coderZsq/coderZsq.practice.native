@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_transfer-text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_transfer-text" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4,3 L20,3 C20.5522847,3 21,3.44771525 21,4 L21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 Z M4.2,4.2 L4.2,19.8 L19.8,19.8 L19.8,4.2 L4.2,4.2 Z M7.57,8.86 L11.53,8.86 C11.28,8.4 10.97,7.97 10.61,7.56 L11.66,7.18 C12.02,7.65 12.35,8.21 12.65,8.86 L16.43,8.86 L16.43,9.9 L14.92,9.9 C14.44,11.4 13.74,12.65 12.82,13.66 C13.85,14.48 15.13,15.16 16.65,15.72 L16.07,16.61 C14.47,16.01 13.14,15.27 12.08,14.39 C10.96,15.38 9.58,16.11 7.95,16.57 L7.39,15.65 C8.98,15.24 10.3,14.6 11.34,13.72 C10.26,12.62 9.51,11.35 9.09,9.9 L7.57,9.9 L7.57,8.86 Z M10.09,9.9 C10.5,11.08 11.16,12.11 12.08,13.01 C12.86,12.15 13.45,11.11 13.84,9.9 L10.09,9.9 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

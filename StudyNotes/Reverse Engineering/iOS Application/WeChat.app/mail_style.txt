@@ -1,0 +1,5 @@
+<head>
+    <meta name = "viewport" content = "initial-scale=1.0, minimum-scale=0.1, maximum-scale=2, user-scalable=yes">
+	<style>body,table,p,td,th,select,input,select { font-family:Helvetica,Arial,Tahoma;line-height:1.5; }
+	</style>
+</head>

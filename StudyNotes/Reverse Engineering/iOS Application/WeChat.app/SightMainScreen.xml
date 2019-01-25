@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page key="SIGHT_MAIN_SCREEN" title="Sight: Main" version="1" resetable="yes">
+    
+    <section title="Multi Send Bar">
+        <item type="switch" key="SIGHT_MULTIBAR_AUTO_PREVIEW" title="AutoPreview in Bar (always on upper iphone 6)" defaultValue ="off"/>
+        <item type="value" key="SIGHT_MULTIBAR_PROGRESS_DUR" title="Progress min dur.(s)" defaultValue="3" minValue="0.3" maxValue="5.0" step="0.1"/>
+    </section>
+    
+    <section title="Components">
+        <page key="Sight_QRScan" title="QR Scanner" version="2" resetable="yes">
+            <section title="PLAYBACK SETTINGS">
+                <item type="switch" key="SQR_OPEN" title="Open QR Scanner" defaultValue ="off"/>
+            </section>
+            <section title="QR Scanner">
+                <item type="switch" key="SQR_Auto_Trig" title="Auto Trig QR Code" defaultValue ="off"/>
+                <item type="value" key="SQR_Skip_Frame" title="Scanner Frame Skip" defaultValue ="10" maxValue="100" minValue="0" step="2"/>
+                <item type="value" key="SQR_Anim_Speed" title="Locking Anim Speed" defaultValue ="10" maxValue="20" minValue="1" step="0.5"/>
+                <item type="value" key="SQR_Anim_Locking_Dur" title="Locking Timeout" defaultValue ="0.60" maxValue="5" minValue="0.05" step="0.05"/>
+                <item type="value" key="SQR_Anim_Click_Dur" title="QR Trigger Time" defaultValue ="1.2" maxValue="5" minValue="1" step="0.05"/>
+                <item type="value" key="SQR_Frame_Width" title="Lock Stroke Size" defaultValue ="1.5" maxValue="4" minValue="0" step="0.5"/>
+                <item type="value" key="SQR_FrameBG_Alpha" title="Lock Shadow Alpha" defaultValue ="1.0" maxValue="1" minValue="0" step="0.05"/>
+                <item type="value" key="SQR_FrameBG_Width" title="Lock Shadow Stroke Size" defaultValue ="2.5" maxValue="10" minValue="1" step="0.5"/>
+                <item type="value" key="SQR_FrameShadow_Width" title="Lock Shadow Radius" defaultValue ="20" maxValue="30" minValue="0" step="0.5"/>
+                <item type="value" key="SQR_Bar_Alpha" title="QR Bar Alpha" defaultValue ="0.95" maxValue="1" minValue="0" step="0.05"/>
+                <item type="value" key="SQR_Trigger_Size" title="QR Progress Size" defaultValue ="20" maxValue="30" minValue="2" step="1"/>
+                <item type="value" key="SQR_Trigger_Alpha" title="QR Progress Alpha" defaultValue ="0.8" maxValue="1.0" minValue="0" step="0.05"/>
+                <item type="value" key="SQR_Trigger_Shadow_Alpha" title="QR Progress Shadow Alpha" defaultValue ="1.0" maxValue="1" minValue="0" step="0.05"/>
+            </section>
+        </page>
+        
+        <page key="Sight_Search" title="Search" version="1" resetable="yes">
+            <section title="Search">
+                <item type="switch" key="SightSearch_Sound" title="Search Click Sound" defaultValue ="off"/>
+                <item type="value" key="SightSearch_Trig_Delay" title="Search_Trig_Delay" defaultValue ="0.05" maxValue="3" minValue="0" step="0.05"/>
+            </section>
+        </page>
+        
+        <page key="Sight_Moment" title="Moment" version="1" resetable="yes">
+            <section title="Moment">
+                <item type="switch" key="SightMoment_View_Debug" title="Debug View Size" defaultValue ="off"/>
+                <item type="value" key="SightMoment_Padding" title="Text Area Padding" defaultValue ="5" maxValue="30" minValue="0" step="1"/>
+                <item type="value" key="SightMoment_Player_Width" title="Mini Video Width" defaultValue ="90" maxValue="200" minValue="20" step="5"/>
+                <item type="value" key="SightMoment_Toolbar_Margin_Left" title="Toolbar Margin Left" defaultValue ="4" maxValue="40" minValue="0" step="1"/>
+                <item type="value" key="SightMoment_Toolbar_Margin_Right" title="Toolbar Margin Right" defaultValue ="14" maxValue="40" minValue="0" step="1"/>
+                <item type="value" key="SightMoment_Toolbar_Margin_Center" title="Toolbar Space Between Emoji and Groups" defaultValue ="10" maxValue="40" minValue="0" step="1"/>
+                <item type="value" key="SightMoment_SentAnim_Dur" title="Sent Anim P1 Dur." defaultValue ="0.6" maxValue="3" minValue="0.1" step="0.1"/>
+                <item type="value" key="SightMoment_SentAnimAlpha_Dur" title="Sent Anim P2 Dur." defaultValue ="0.6" maxValue="3" minValue="0.1" step="0.1"/>
+                <item type="value" key="SightMoment_MoveAnimAlpha_Dur" title="Move Anim P2 Dur." defaultValue ="0.3" maxValue="3" minValue="0.1" step="0.1"/>
+                <item type="value" key="SightMoment_Edit_Fullplay_BGMask_Alpha" title="Fullplay_BGMask_Alpha" defaultValue ="0.95" maxValue="1" minValue="0" step="0.05"/>
+                
+                <item type="value" key="SightMoment_BGMask_Alpha" title="BG Opague Level" defaultValue ="0.6" maxValue="1" minValue="0" step="0.05"/>
+            </section>
+        </page>
+        
+        <page key="SMF_PULLDOWN_ANIM" title="Pull Down Anim" version="2" resetable="yes">
+            <section title="MAINFRAME PULL DOWN">
+                <item type="switch" key="SMSA_CAMERA_TRIGGER_EFFECT" title="Trigger Debug Effect" defaultValue ="off"/>
+                <item type="value" key="SMSA_LOGO_ALPHA" title="PullDown Logo Alpha" defaultValue ="0.45" maxValue="1.0" minValue="0.0" step="0.05"/>
+                <item type="value" key="SMSA_LOGO_DOWN_DUR" title="PullDown Logo Duration" defaultValue ="0.3" maxValue="3.0" minValue="0.05" step="0.05"/>
+                <item type="value" key="SMSA_DOWN_BLUR_ALPHA" title="Camera Blur Darkness (Not Working)" defaultValue ="0.0" maxValue="1.0" minValue="0.0" step="0.05"/>
+                <item type="value" key="SMSA_LOGO_SPEED" title="Logo Anim. Speed" defaultValue ="0.13" maxValue="1" minValue="0.01" step="0.005"/>
+                <item type="value" key="SMSA_CAMERA_DRAG_MIN_TRANS" title="Trigger Point" defaultValue ="104" maxValue="150" minValue="60" step="1"/>
+                <item type="value" key="SMSA_CAMERA_DRAG_MAX_SPEED" title="Max Allowed Speed" defaultValue ="1300" maxValue="4000" minValue="800" step="50"/>
+            </section>
+        </page>
+        
+        <page key="SMF_PULLUP_ANIM" title="Pull Up Anim" version="1" resetable="yes">
+            <section title="SIGHT PULL UP">
+                <item type="value" key="SMSA_UP_PRETRIG_ALPHA" title="Starting Alpha" defaultValue ="0.6" maxValue="2.0" minValue="0.0" step="0.1"/>
+                <item type="value" key="SMSA_UP_POSTTRIG_ALPHA" title="Post Trigger Alpha" defaultValue ="1" maxValue="2.0" minValue="0.0" step="0.1"/>
+                <item type="value" key="SMSA_UP_PRETRIG_POINT" title="Trigger Point" defaultValue ="100" maxValue="300" minValue="50" step="20"/>
+                <item type="value" key="SMSA_UP_PRETRIG_SPEED" title="Starting Speed" defaultValue ="4" maxValue="8.0" minValue="0.0" step="0.5"/>
+                <item type="value" key="SMSA_UP_POSTTRIG_SPEED" title="Post Trigger Speed" defaultValue ="0.5" maxValue="2.0" minValue="0.2" step="0.1"/>
+                <item type="value" key="SMSW_UP_BOUNCE" title="Bounce Anim. Bounces Count" defaultValue ="1" maxValue="5" minValue="0" step="1"/>
+                <item type="value" key="SMSW_UP_BOUNCE_STIFF" title="Bounce Anim. Stiffness" defaultValue ="5" maxValue="8" minValue="0.5" step="0.5"/>
+                <item type="value" key="SMSW_UP_BOUNCE_DUR" title="Bounce Anim. Duration" defaultValue ="0.45" maxValue="2" minValue="0.3" step="0.05"/>
+            </section>
+        </page>
+        
+        <page key="SMF_SHARE_PANEL" title="Share View" version="1" resetable="yes">
+            <section title="SIGHT SHARE VIEW">
+                <item type="value" key="SMSW_PANEL_SHADOW_ALPHA" title="Nav Shadow Alpha" defaultValue ="0.2" maxValue="0.6" minValue="0" step="0.05"/>
+                <item type="value" key="SMSW_PANEL_NAV_ALPHA" title="Nav Scroll Up Final Alpha" defaultValue ="0.9" maxValue="1" minValue="0" step="0.05"/>
+                <item type="value" key="SMSW_PANEL_TABLE_BOUNCE" title="Bounce Anim. Bounces Count" defaultValue ="2" maxValue="10" minValue="0" step="1"/>
+                <item type="value" key="SMSW_PANEL_TABLE_BOUNCE_STIFF" title="Bounce Anim. Stiffness" defaultValue ="5" maxValue="8" minValue="0.5" step="0.5"/>
+                <item type="value" key="SMSW_PANEL_TABLE_BOUNCE_DUR" title="Bounce Anim. Duration" defaultValue ="0.85" maxValue="2" minValue="0.3" step="0.05"/>
+                <item type="value" key="SMSW_PANEL_MARGIN_RIGHT" title="Margin Right" defaultValue ="7" maxValue="20" minValue="0" step="0.5"/>
+                <item type="value" key="SIGHT_MOMENTS_CELL_HIGHLIGHT_ALPHA" title="Cell highlighted alpha" defaultValue ="0.8" maxValue="1" minValue="0" step="0.05"/>
+            </section>
+        </page>
+        
+        <page key="SMF_RECORD_PANEL_ANIM" title="Camera View" version="5" resetable="yes">
+            <section title="Motion Detector UI">
+                <item type="value" key="SMSA_WINDOW_MOTION_DIM_ALPHA" title="Camera dim alpha when motion detector tips showed" defaultValue ="0.4" maxValue="1.0" minValue="0.0" step="0.01"/>
+
+            </section>
+            <section title="Gradient Mask Style">
+                <item type="value" key="SMSA_WINDOW_PULLDOWN_MASK_ALPHA_TOP" title="Pulldown mask alpha top" defaultValue ="0.2" maxValue="1.0" minValue="0.0" step="0.01"/>
+                <item type="value" key="SMSA_WINDOW_PULLDOWN_MASK_ALPHA_BOTTOM" title="Pulldown mask alpha bottom" defaultValue ="0.7" maxValue="1.0" minValue="0.0" step="0.01"/>
+                <item type="value" key="SMSA_WINDOW_PULLDOWN_MASK_COLOR_RED" title="Pulldown mask color red" defaultValue ="28" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="SMSA_WINDOW_PULLDOWN_MASK_COLOR_GREEN" title="Pulldown mask color green" defaultValue ="0" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="SMSA_WINDOW_PULLDOWN_MASK_COLOR_BLUE" title="Pulldown mask color blue" defaultValue ="22" maxValue="255" minValue="0" step="2"/>
+                
+                <item type="value" key="SMSA_WINDOW_ALPHA_TOP" title="Global background alpha top" defaultValue ="0.66" maxValue="1.0" minValue="0.0" step="0.01"/>
+                <item type="value" key="SMSA_WINDOW_ALPHA_BOTTOM" title="Global background alpha bottom" defaultValue ="0.88" maxValue="1.0" minValue="0.0" step="0.01"/>
+                <item type="value" key="SMSA_WINDOW_COLOR_RED" title="Global background color red" defaultValue ="4" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="SMSA_WINDOW_COLOR_GREEN" title="Global background color green" defaultValue ="0" maxValue="255" minValue="0" step="2"/>
+                <item type="value" key="SMSA_WINDOW_COLOR_BLUE" title="Global background color blue" defaultValue ="6" maxValue="255" minValue="0" step="2"/>
+            </section>
+            
+            <section title="CAMERA PREVIEW">
+                <item type="value" key="SMSA_UP_PREVIEW_HEIGHT" title="Preview Height (w/x)" defaultValue ="1.30" maxValue="2" minValue="0.5" step="0.01"/>
+                <item type="value" key="SMSA_UP_PREVIEW_DURATION" title="Preview Begin Anim. Duration" defaultValue ="0.4" maxValue="3.0" minValue="0.2" step="0.1"/>
+                <item type="value" key="SMSA_UP_PREVIEW_SCALE_FACTOR" title="Preview Begin Anim. Scale" defaultValue ="2" maxValue="5.0" minValue="0.2" step="0.2"/>
+            </section>
+            
+            <section title="SIGHT RECORD BUTTON">
+                <item type="value" key="SMSA_RECORD_BTN_SIZE" title="Button Size" defaultValue ="140" maxValue="200" minValue="100" step="5"/>
+                <item type="value" key="SMSA_RECORD_BTN_STROKE_SIZE" title="Button Stroke Size" defaultValue ="1.5" maxValue="5" minValue="0" step="0.5"/>
+                <item type="value" key="SMSA_RECORD_BTN_STROKE_ALPHA" title="Button Stroke Alpha" defaultValue ="0.05" maxValue="1" minValue="0" step="0.01"/>
+            </section>
+        </page>
+    </section>
+    
+</page>

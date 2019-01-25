@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_clip</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_clip" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 3.000000)" fill="#000000">
+            <path d="M4.20000005,4.20000005 L4.20000005,13.8 L13.8,13.8 L13.8,4.20000005 L4.20000005,4.20000005 Z M3,4.20000005 L0,4.20000005 L0,3 L3,3 L3,0 L4.20000005,0 L4.20000005,3 L13.8,3 L14,3 C14.5522847,3 15,3.44771525 15,4 L15,13.8 L18,13.8 L18,15 L15,15 L15,18 L13.8,18 L13.8,15 L4,15 C3.44771525,15 3,14.5522847 3,14 L3,4.20000005 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_maxsize</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_maxsize" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Max-icon" fill="#000000" fill-rule="nonzero">
+            <path d="M21,16 L21,20 C21,20.5522847 20.5522847,21 20,21 L16,21 L16,19.8 L19.8,19.8 L19.8,16 L21,16 Z M8,3 L8,4.2 L4.2,4.2 L4.2,8 L3,8 L3,4 C3,3.44771525 3.44771525,3 4,3 L8,3 Z" id="Combined-Shape"></path>
+            <path d="M17.9023047,3.763827 L17.9023047,11.5023106 L16.7023047,11.5023106 L16.7023047,3.76383916 L14.615305,5.85083879 L13.7667768,5.00231062 L16.595204,2.1738835 C16.9857283,1.78335921 17.6188932,1.78335921 18.0094175,2.1738835 L18.1508389,2.31530489 L20.8378447,5.00231062 L19.9893165,5.85083879 L17.9023047,3.763827 Z" id="Combined-Shape" transform="translate(17.302311, 6.691650) rotate(-315.000000) translate(-17.302311, -6.691650) "></path>
+            <path d="M7.29768319,14.3805261 L7.29768319,22.1190097 L6.09768314,22.1190097 L6.09768314,14.3805383 L4.01068351,16.4675379 L3.16215534,15.6190097 L5.99058246,12.7905826 C6.38110676,12.4000583 7.01427174,12.4000583 7.40479603,12.7905826 L7.54621742,12.932004 L10.2332232,15.6190097 L9.38469498,16.4675379 L7.29768319,14.3805261 Z" id="Combined-Shape" transform="translate(6.697689, 17.308350) rotate(-495.000000) translate(-6.697689, -17.308350) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_home</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon31" fill="#000000">
+            <path d="M13.5,21 L13.5,17 L10.5,17 L10.5,21 L7,21 C6.44771525,21 6,20.5522847 6,20 L6,14 L3.41421356,14 C3.14899707,14 2.89464316,13.8946432 2.70710678,13.7071068 C2.31658249,13.3165825 2.31658249,12.6834175 2.70710678,12.2928932 L11.2928932,3.70710678 C11.6834175,3.31658249 12.3165825,3.31658249 12.7071068,3.70710678 L21.2928932,12.2928932 C21.4804296,12.4804296 21.5857864,12.7347835 21.5857864,13 C21.5857864,13.5522847 21.1380712,14 20.5857864,14 L18,14 L18,20 C18,20.5522847 17.5522847,21 17,21 L13.5,21 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

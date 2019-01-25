@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="utf-8"?>
+<page type="KitNode" key="Story_Desc" title="状态" version="2" resetable="yes">
+    <section title="大嘴巴">
+        <item type="switch" key="Story_Close_Contact" title="关心的好友" defaultValue ="on"/>
+    </section>
+    
+</page>

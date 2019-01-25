@@ -1,0 +1,3390 @@
+<config>
+	<country isocode="MX" countrycode="52" minlen="10" maxlen="11">
+		<format>
+			<leading><![CDATA[33|55|81]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([358]\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2467]|3[12457-9]|5[89]|8[02-9]|9[0-35-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:33|55|81)]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(1)([358]\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:[2467]|3[12457-9]|5[89]|8[2-9]|9[1-35-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PS" countrycode="970" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2489]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2489])(2\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5[69]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[78]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[78]00)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SN" countrycode="221" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MY" countrycode="60" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[[4-79]]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[([4-79])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[(3)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[02-46-9][1-9]|8]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[([18]\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[36-8]0]]></leading>
+			<pattern><![CDATA[$1-$2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(1)([36-8]00)(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[11]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[(11)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[15]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[(154)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="YE" countrycode="967" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-6]|7[24-68]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-7])(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[0137]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PT" countrycode="351" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-46-9]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SO" countrycode="252" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[2[0-79]|[13-5]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[24|[67]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[15|28|6[178]|9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{5,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[69]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(69\d)(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BR" countrycode="55" minlen="10" maxlen="11">
+		<format>
+			<leading><![CDATA[119]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{5})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[1-9][1-9]]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[34]00]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[([34]00\d)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3589]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3589]00)(\d{2,3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MZ" countrycode="258" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[2|8[246]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([28]\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(80\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KE" countrycode="254" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[24-6]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BT" countrycode="975" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[1|77]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([17]7)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-68]|7[246]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-8])(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PW" countrycode="680" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NA" countrycode="264" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[8[1235]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(8\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(6\d)(\d{2,3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[88]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(88)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[870]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(870)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="HK" countrycode="852" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[235-7]|[89](?:0[1-9]|[1-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(800)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[900]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(900)(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[900]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(900)(\d{2,5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SR" countrycode="597" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-4]|5[2-58]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[56]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[6-8]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SS" countrycode="211" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="VN" countrycode="84" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[[17]99]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([17]99)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[48]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([48])(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[025-79]|3[0136-9]|5[2-9]|6[0-46-8]|7[02-79]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([235-7]\d)(\d{4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(80)(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[69]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(69\d)(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[1348]|3[25]|5[01]|65|7[18]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([235-7]\d{2})(\d{4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:[26]|8[68]|99)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[2689]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[89]0]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1[89]00)(\d{4,6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KG" countrycode="996" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[31[25]|[5-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:1[36]|[2-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d)(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ST" countrycode="239" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BW" countrycode="267" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-6]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(90)(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NC" countrycode="687" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1.$2.$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ER" countrycode="291" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PY" countrycode="595" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[(?:[26]1|3[289]|4[124678]|7[123]|8[1236])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{5,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-9]0]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8700]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-8][1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4,6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KH" countrycode="855" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[1\d[1-9]|[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[89]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[89]00)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ES" countrycode="34" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([5-9]\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="HN" countrycode="504" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SV" countrycode="503" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[267]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BY" countrycode="375" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-4]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-4]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8[01]|9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[82]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NE" countrycode="227" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[29]|09]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([029]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[08]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(08)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ET" countrycode="251" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-59]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BZ" countrycode="501" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-8]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[$1-$2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(0)(800)(\d{4})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NF" countrycode="672" minlen="5" maxlen="6">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="QA" countrycode="974" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[28]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([28]\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-7]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([3-7]\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NG" countrycode="234" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[[129]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([129])(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-6]|7(?:[1-79]|0[1-9])|8[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-8]\d)(\d{3})(\d{2,3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[70|8[01]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([78]\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[78]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([78]00)(\d{4})(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[78]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([78]00)(\d{5})(\d{5,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[78]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(78)(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SY" countrycode="963" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-5]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="HR" countrycode="385" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1)(\d{4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[09]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(6[09])(\d{4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[62]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(62)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-5]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-5]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{3,4})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[145]|7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2,3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[145]|7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3,4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(80[01])(\d{2})(\d{2,3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(80[01])(\d{3,4})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KM" countrycode="269" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SZ" countrycode="268" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[027]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NI" countrycode="505" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="VU" countrycode="678" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[579]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="HT" countrycode="509" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KP" countrycode="850" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="HU" countrycode="36" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CD" countrycode="243" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[8[0-259]|9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8[48]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[1-6]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NL" countrycode="31" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[1[035]|2[0346]|3[03568]|4[0356]|5[0358]|7|8[458]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-578]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[16-8]|2[259]|3[124]|4[17-9]|5[124679]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-5]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[0-57-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(6)(\d{8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[66]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(66)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[14]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(14)(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80|9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([89]0\d)(\d{4,7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KR" countrycode="82" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[1(?:0|1[19]|[69]9|5[458])|[57]0#1(?:0|1[19]|[69]9|5(?:44|59|8))|[57]0]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:[169][2-8]|[78]|5[1-4])|[68]0|[3-6][1-9][2-9]#1(?:[169][2-8]|[78]|5(?:[1-3]|4[56]))|[68]0|[3-6][1-9][2-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[131#1312]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[131#131[13-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[13[2-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[30]]></leading>
+			<pattern><![CDATA[$1-$2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[2-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21[0-46-9]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-6][1-9]1#[3-6][1-9]1(?:[0-46-9])]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:5[46-9]|6[04678])#1(?:5(?:44|66|77|88|99)|6(?:00|44|6[16]|70|88))]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CF" countrycode="236" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TD" countrycode="235" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CG" countrycode="242" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[02]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NO" countrycode="47" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[489]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([489]\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[235-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([235-7]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CH" countrycode="41" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-7]|[89]1]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([2-9]\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8[047]|90]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[860]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4 $5]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NP" countrycode="977" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[1[2-6]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(1)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[01]|[2-8]|9(?:[1-69]|7[15-9])]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9(?:7[45]|8)]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(9\d{2})(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CI" countrycode="225" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TG" countrycode="228" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="KW" countrycode="965" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[1269]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(5[015]\d)(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NR" countrycode="674" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TH" countrycode="66" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-9]\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[89]00)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CK" countrycode="682" minlen="5" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CL" countrycode="56" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[357]|4[1-35]|6[13-57]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2,3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9)([5-9]\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[44]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(44)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[60|8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([68]00)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[60]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(600)(\d{3})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1230)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TJ" countrycode="992" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[34]7|91[78]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([349]\d{2})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[4[48]|5|9(?:1[59]|[0235-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([459]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[331#3317#33170#331700]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(331700)(\d)(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3[1-5]#3(?:[1245]|3(?:[02-9]|1[0-589]))]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d)(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CM" countrycode="237" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[2379]|88]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([237-9]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(800)(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="WF" countrycode="681" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CN" countrycode="86" minlen="11" maxlen="20">
+		<format>
+			<leading><![CDATA[80[2678]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(80\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[48]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([48]00)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(21)(\d{4})(\d{4,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[10[1-9]|2[02-9]#10[1-9]|2[02-9]#10(?:[1-79]|8(?:[1-9]|0[1-9]))|2[02-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([12]\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:11|7[179])|4(?:[15]1|3[12])|5(?:1|2[37]|3[12]|7[13-79]|9[15])|7(?:31|5[457]|6[09]|91)|898]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:1[02-9]|35|49|5|7[02-68]|9[1-68])|4(?:1[02-9]|2[179]|[35][2-9]|6[4789]|7\d|8[23])|5(?:3[03-9]|4[36]|5|6[1-6]|7[028]|80|9[2-46-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[04-9]|4[3-6]|6[2368])|8(?:1[236-8]|2[5-7]|[37]|5[1-9]|8[3678]|9[1-7])|9(?:0[1-3689]|1[1-79]|[379]|4[13]|5[1-5])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[3-58]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[3-58]\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[108#1080#10800]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(10800)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="FI" countrycode="358" minlen="6" maxlen="11">
+		<format>
+			<leading><![CDATA[(?:[1-3]00|[6-8]0)]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[09]|[14]|50|7[135]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[25689][1-8]|3]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{4,11})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ZA" countrycode="27" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[860]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(860)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[1-57]|8(?:[0-57-9]|6[1-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-578]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7|8[1-5789]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7|8[1-5789]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2,3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ID" countrycode="62" minlen="9" maxlen="11">
+		<format>
+			<leading><![CDATA[2[124]|[36]1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{7,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[4579]|2[035-9]|[36][02-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8[1-35-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{3,4})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(177)(\d{6,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(800)(\d{5,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[809]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(809)(\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TL" countrycode="670" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-489]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CO" countrycode="57" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[1(?:8[2-9]|9[0-3]|[2-7])|[24-8]#1(?:8[2-9]|9(?:09|[1-3])|[2-7])|[24-8]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:80|9[04])#1(?:800|9(?:0[01]|4[78]))]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3})(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="FJ" countrycode="679" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[36-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IE" countrycode="353" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[2-9]|4[347]|5[2-58]|6[2-47-9]|9[3-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[40[24]|50[45]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[48]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(48)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[81]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(818)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[24-69]|7[14]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[76|8[35-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([78]\d)(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[70]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(700)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:8[059]|5)#1(?:8[059]0|5)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TM" countrycode="993" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[12]]></leading>
+			<pattern><![CDATA[$1 $2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[13|[2-5]]]></leading>
+			<pattern><![CDATA[$1 $2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d)(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LA" countrycode="856" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[20]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(20)(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[13]|[3-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-8]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TN" countrycode="216" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LB" countrycode="961" minlen="7" maxlen="8">
+		<format>
+			<leading><![CDATA[[13-6]|7(?:[2-579]|62|8[0-7])|[89][2-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89][01]|7(?:[01]|6[013-9]|8[89]|91)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([7-9]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TO" countrycode="676" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-6]|7[0-4]|8[05]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[5-9]|8[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CR" countrycode="506" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[24-7]|8[3-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]0]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="FM" countrycode="691" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="NZ" countrycode="64" minlen="8" maxlen="10">
+		<format>
+			<leading><![CDATA[[3467]|9[1-9]]]></leading>
+			<pattern><![CDATA[$1-$2 $3]]></pattern>
+			<formatregex><![CDATA[([34679])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[240#2409#24099]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(24099)(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:1[1-9]|[69]|7[0-35-9])|86]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[028]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2\d)(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:10|74)|5|[89]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="FO" countrycode="298" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1]]></pattern>
+			<formatregex><![CDATA[(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TR" countrycode="90" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[[23]|4(?:[0-35-9]|4[0-35-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[589]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[444]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(444)(\d{1})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CU" countrycode="53" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{6,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-4]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CV" countrycode="238" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IL" countrycode="972" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-489]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[([2-489])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[57]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[([57]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[7-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3-$4]]></pattern>
+			<formatregex><![CDATA[(1)([7-9]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[125]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(1255)(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[120]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(1200)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[121]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(1212)(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[15]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(1599)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-689]]]></leading>
+			<pattern><![CDATA[*$1]]></pattern>
+			<formatregex><![CDATA[(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CW" countrycode="599" minlen="7" maxlen="8">
+		<format>
+			<leading><![CDATA[[13-7]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="FR" countrycode="33" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-79]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4 $5]]></pattern>
+			<formatregex><![CDATA[([1-79])(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IN" countrycode="91" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[7(?:2[0579]|3[057-9]|4[0-389]|5[024-9]|6[0-35-9]|7[03469]|8[0-4679])|8(?:0[01589]|1[0-479]|2[236-9]|3[0-57-9]|[45]|6[0245789]|7[1-69]|8[0124-9]|9[02-9])|9#7(?:2(?:0[04-9]|5[09]|7[5-8]|9[389])|3(?:0[1-9]|[58]|7[3679]|9[689])|4(?:0[1-9]|1[15-9]|[29][89]|39|8[389])|5(?:0|[47]9|[25]0|6[6-9]|[89][7-9])|6(?:0[027]|12|20|3[19]|5[45]|6[5-9]|7[679]|9[6-9])|7(?:0[27-9]|3[5-9]|42|60|9[5-9])|8(?:[03][07-9]|14|2[7-9]|4[25]|6[09]|7|9[013-9]))|8(?:0[01589]|1(?:[024]|1[56]|30|7[19]|97)|2[236-9]|3(?:[037-9]|4[1-9]|5[0-37-9])|[45]|6[02457-9]|7[1-69]|8(?:[0-26-9]|44|5[2-9])|9(?:[035-9]|2[2-9]|4[0-8]))|9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[11|2[02]|33|4[04]|79|80[2-46]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:2[0-249]|3[0-25]|4[145]|[569][14]|7[1257]|8[1346]|[68][1-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[126-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:[136][25]|22|4[28]|5[12]|[78]1|9[15])|6(?:12|[2345]1|57|6[13]|7[14]|80)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7(?:12|2[14]|3[134]|4[47]|5[15]|[67]1|88)#7(?:12|2[14]|3[134]|4[47]|5(?:1|5[2-6])|[67]1|88)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8(?:16|2[014]|3[126]|6[136]|7[078]|8[34]|91)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:[2-579]|[68][1-9])|[2-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[160#1600]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1600)(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[180#1800]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1800)(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[18[06]#18[06]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(18[06]0)(\d{2,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[18[06]#18(?:03|6[12])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{4})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LI" countrycode="423" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[23]|7[3-57-9]|87]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(6\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[567]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(6[567]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[697]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(69)(7\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[7-9]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([7-9]0\d)(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([89]0\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CY" countrycode="357" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IO" countrycode="246" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TW" countrycode="886" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-7]|8[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-8])(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80|9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LK" countrycode="94" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-689]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{1})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="CZ" countrycode="420" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-8]|9[015-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-9]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[96]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(96\d)(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9[36]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AD" countrycode="376" minlen="6" maxlen="20">
+		<format>
+			<leading><![CDATA[[346-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(180[02])(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="WS" countrycode="685" minlen="6" maxlen="7">
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(7\d)(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ZM" countrycode="260" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[29]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([29]\d)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(800)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AE" countrycode="971" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-4679][2-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-4679])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5[0256])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[479]0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([479]00)(\d)(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[60|8]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([68]00)(\d{2,9})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IQ" countrycode="964" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-6]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-6]\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IR" countrycode="98" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(21)(\d{3,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(21)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(21)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[13-9]|2[02-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AF" countrycode="93" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2-7]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="TZ" countrycode="255" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[24]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([24]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[67]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([67]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IS" countrycode="354" minlen="7" maxlen="9">
+		<format>
+			<leading><![CDATA[[4-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(3\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="RE" countrycode="262" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([268]\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="IT" countrycode="39" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[0[26]|55]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[26]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(0[26])(\d{4})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[26]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(0[26])(\d{4,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[13-57-9][0159]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(0\d{2})(\d{3,4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[13-57-9][0159]|8(?:03|4[17]|9[245])#0[13-57-9][0159]|8(?:03|4[17]|9(?:2|[45][0-4]))]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[13-57-9][2-46-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(0\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0[13-57-9][2-46-8]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(0\d{3})(\d{2,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[13]|8(?:00|4[08]|9[59])#[13]|8(?:00|4[08]|9(?:5[5-9]|9))]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[894#894[5-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="UA" countrycode="380" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[39|4(?:[45][0-5]|87)|5(?:0|6[37]|7[37])|6[36-8]|9[1-9]#39|4(?:[45][0-5]|87)|5(?:0|6(?:3[14-7]|7)|7[37])|6[36-8]|9[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-69]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3[1-8]2|4[1378]2|5(?:[12457]2|6[24])|6(?:[49]2|[12][29]|5[24])|8|90#3(?:[1-46-8]2[013-9]|52)|4[1378]2|5(?:[12457]2|6[24])|6(?:[49]2|[12][29]|5[24])|8|90]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-689]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:5[013-9]|[1-46-8])|4(?:[137][013-9]|6|[45][6-9]|8[4-6])|5(?:[1245][013-9]|6[0135-9]|3|7[4-6])|6(?:[49][013-9]|5[0135-9]|[12][13-8])#3(?:5[013-9]|[1-46-8](?:22|[013-9]))|4(?:[137][013-9]|6|[45][6-9]|8[4-6])|5(?:[1245][013-9]|6(?:3[02389]|[015689])|3|7[4-6])|6(?:[49][013-9]|5[0135-9]|[12][13-8])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([3-6]\d{3})(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="DE" countrycode="49" minlen="10" maxlen="11">
+		<format>
+			<leading><![CDATA[3[02]|40|[68]9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,11})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:\d1|0[2389]|1[24]|28|34)|3(?:[3-9][15]|40)|[4-8][1-9]1|9(?:06|[1-9]1)]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,11})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[24-6]|[7-9](?:\d[1-9]|[1-9]\d)|3(?:[3569][02-46-9]|4[2-4679]|7[2-467]|8[2-46-8])#[24-6]|[7-9](?:\d[1-9]|[1-9]\d)|3(?:3(?:0[1-467]|2[127-9]|3[124578]|[46][1246]|7[1257-9]|8[1256]|9[145])|4(?:2[135]|3[1357]|4[13578]|6[1246]|7[1356]|9[1346])|5(?:0[14]|2[1-3589]|3[1357]|4[1246]|6[1-4]|7[1346]|8[13568]|9[1246])|6(?:0[356]|2[1-489]|3[124-6]|4[1347]|6[13]|7[12579]|8[1-356]|9[135])|7(?:2[1-7]|3[1357]|4[145]|6[1-5]|7[1-4])|8(?:21|3[1468]|4[1347]|6[0135-9]|7[1467]|8[136])|9(?:0[12479]|2[1358]|3[1357]|4[134679]|6[1-9]|7[136]|8[147]|9[1468]))]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{2,11})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{5})(\d{1,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[5-7]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1\d{2})(\d{7,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[177#1779#17799]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(177)(99)(\d{7,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{7,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[(?:18|90)0#180|900[1359]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d)(\d{4,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[181]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1\d{2})(\d{5,11})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[185#1850#18500]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(18\d{3})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[18[68]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(18\d{2})(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[18[2-579]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(18\d)(\d{8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[700]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(700)(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LR" countrycode="231" minlen="7" maxlen="9">
+		<format>
+			<leading><![CDATA[[279]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([279]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[4-6]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([4-6])(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[38]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GA" countrycode="241" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(1)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(0\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="OM" countrycode="968" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2\d)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(9\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[58]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([58]00)(\d{4,6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LS" countrycode="266" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GB" countrycode="44" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[2|5[56]|7(?:0|6[013-9])#2|5[56]|7(?:0|6(?:[013-9]|2[0-35-9]))]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:1|\d1)|3|9[018]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:38|5[23]|69|76|94)#1(?:387|5(?:24|39)|697|768|946)#1(?:3873|5(?:242|39[456])|697[347]|768[347]|9467)]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{5})(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1\d{3})(\d{5,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7(?:[1-5789]|62)#7(?:[1-5789]|624)]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(7\d{3})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800#8001#80011#800111#8001111]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(800)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[845#8454#84546#845464]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(845)(46)(4\d)]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8(?:4[2-5]|7[0-3])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(8\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(80\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[58]00]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([58]00)(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AL" countrycode="355" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[4[0-6]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(4)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(6[6-9])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2358][2-5]|4[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[235][16-9]|8[016-9]|[79]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LT" countrycode="370" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[37|4(?:1|5[45]|6[2-4])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([34]\d)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3[148]|4(?:[24]|6[09])|528|6]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([3-6]\d{2})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([7-9]\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[52[0-79]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5)(2\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AM" countrycode="374" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[1|47]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[5-7]|9[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[23]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8|90]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ZW" countrycode="263" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[4|9[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([49])(\d{3})(\d{2,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[19]1|7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([179]\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[86[24]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(86\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[3-9]|2(?:[1-469]|0[0-35-9]|[45][0-79])|3(?:0[0-79]|1[0-689]|[24-69]|3[0-69])|5(?:[02-46-9]|[15][0-69])|6(?:[0145]|[29][0-79]|3[0-689]|[68][0-69])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([1-356]\d)(\d{3,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[3-9]|2(?:[1-469]|0[0-35-9]|[45][0-79])|3(?:0[0-79]|1[0-689]|[24-69]|3[0-69])|5(?:[02-46-9]|[15][0-69])|6(?:[0145]|[29][0-79]|3[0-689]|[68][0-69])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-356]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:[278]|0[45]|48)|3(?:08|17|3[78]|[78])|5[15][78]|6(?:[29]8|37|[68][78])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([2356]\d{2})(\d{3,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:[278]|0[45]|48)|3(?:08|17|3[78]|[78])|5[15][78]|6(?:[29]8|37|[68][78])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2356]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[(?:25|54)8#258[23]|5483]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([25]\d{3})(\d{3,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[(?:25|54)8#258[23]|5483]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([25]\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[86[1389]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(8\d{3})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LU" countrycode="352" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-5]|7[1-9]|[89](?:[1-9]|0[2-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2-5]|7[1-9]|[89](?:[1-9]|0[2-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[20]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:[0367]|4[3-8])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{1,2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[20]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:[0367]|4[3-8])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4 $5]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})(\d{1,2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:[12589]|4[12])|[3-5]|7[1-9]|[89](?:[1-9]|0[2-9])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{1,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]0[01]|70]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="UG" countrycode="256" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[7-9]|20(?:[013-5]|2[5-9])|4(?:6[45]|[7-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3|4(?:[1-5]|6[0-36-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2024]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2024)(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="DJ" countrycode="253" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LV" countrycode="371" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2689]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GE" countrycode="995" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[348]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AO" countrycode="244" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="DK" countrycode="45" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GF" countrycode="594" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="LY" countrycode="218" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[([25679]\d)(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GH" countrycode="233" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[235]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="RO" countrycode="40" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[23]1|7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([237]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[21]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(21)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[23][3-7]|[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[3-6]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AR" countrycode="54" minlen="10" maxlen="11">
+		<format>
+			<leading><![CDATA[[68]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[([68]\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[911]]></leading>
+			<pattern><![CDATA[$1 $2 $3-$4]]></pattern>
+			<formatregex><![CDATA[(9)(11)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9(?:2[234689]|3[3-8])#9(?:2(?:2[013]|3[067]|49|6[01346]|80|9[147-9])|3(?:36|4[12358]|5[138]|6[24]|7[069]|8[013578]))#9(?:2(?:2[013]|3[067]|49|6[01346]|80|9(?:[17-9]|4[13479]))|3(?:36|4[12358]|5(?:[18]|3[014-689])|6[24]|7[069]|8(?:[01]|3[013469]|5[0-39]|7[0-2459]|8[0-49])))]]></leading>
+			<pattern><![CDATA[$1 $2 $3-$4]]></pattern>
+			<formatregex><![CDATA[(9)(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[93[58]#9(?:3(?:53|8[78]))#9(?:3(?:537|8(?:73|88)))]]></leading>
+			<pattern><![CDATA[$2 15-$3-$4]]></pattern>
+			<formatregex><![CDATA[(9)(\d{4})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9[23]]]></leading>
+			<pattern><![CDATA[$1 $2 $3-$4]]></pattern>
+			<formatregex><![CDATA[(9)(\d{4})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(11)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:2[013]|3[067]|49|6[01346]|80|9[147-9])|3(?:36|4[12358]|5[138]|6[24]|7[069]|8[013578])#2(?:2[013]|3[067]|49|6[01346]|80|9(?:[17-9]|4[13479]))|3(?:36|4[12358]|5(?:[18]|3[0-689])|6[24]|7[069]|8(?:[01]|3[013469]|5[0-39]|7[0-2459]|8[0-49]))]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:53|8[78])#3(?:537|8(?:73|88))]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[23]]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AT" countrycode="43" minlen="10" maxlen="13">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1)(\d{3,12})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5[079]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(5\d)(\d{3,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5[079]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5[079]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5\d)(\d{4})(\d{4,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[316|46|51|732|6(?:44|5[0-3579]|[6-9])|7(?:1|[28]0)|[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2|3(?:1[1-578]|[3-8])|4[2378]|5[2-6]|6(?:[12]|4[1-35-9]|5[468])|7(?:2[1-8]|35|4[1-8]|[57-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3,9})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AU" countrycode="61" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2378]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([2378])(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[45]|14]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[16]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(16)(\d{3})(\d{2,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:[38]0|90)#1(?:[38]00|90)]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[389]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[180#1802]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(180)(2\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[19[13]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(19\d)(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[19[67]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(19\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[13[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(13)(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MA" countrycode="212" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[5(?:2[015-7]|3[0-4])|6]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[([56]\d{2})(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5(?:2[2-489]|3[5-9])|892#5(?:2(?:[2-48]|90)|3(?:[5-79]|80))|892]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[([58]\d{3})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5(?:29|38)#5(?:29|38)[89]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(5\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[8(?:0|9[013-9])]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(8[09])(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="RS" countrycode="381" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[(?:2[389]|39)0]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([23]\d{2})(\d{4,9})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1|2(?:[0-24-7]|[389][1-9])|3(?:[0-8]|9[1-9])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([1-3]\d)(\d{5,10})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(6\d)(\d{6,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{3,9})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[26]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(7[26])(\d{4,9})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[08]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(7[08]\d)(\d{4,9})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GL" countrycode="299" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GM" countrycode="220" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AW" countrycode="297" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MC" countrycode="377" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[4]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4 $5]]></pattern>
+			<formatregex><![CDATA[(6)(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="RU" countrycode="7" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-79]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[34689]]]></leading>
+			<pattern><![CDATA[$1 $2-$3-$4]]></pattern>
+			<formatregex><![CDATA[([3489]\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MD" countrycode="373" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[22|3]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[13-79]|[5-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([25-7]\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GN" countrycode="224" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[[23567]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[62]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ME" countrycode="382" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[[2-57-9]|6[3789]#[2-57-9]|6(?:[389]|7(?:[0-8]|9[3-9]))]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[679#679[0-2]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(67)(9)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="RW" countrycode="250" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([7-9]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(0\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="AZ" countrycode="994" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[(?:1[28]|2(?:[45]2|[0-36])|365)]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[4-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PA" countrycode="507" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-57-9]]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GP" countrycode="590" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[([56]90)(\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="US" countrycode="1" minlen="10" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MG" countrycode="261" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([23]\d)(\d{2})(\d{3})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GQ" countrycode="240" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[235]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MH" countrycode="692" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GR" countrycode="30" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[21|7]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([27]\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[2-9]1|[689]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[2-9][02-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2\d{3})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BA" countrycode="387" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[[3-5]]]></leading>
+			<pattern><![CDATA[$1 $2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[1-356]|[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[6[047]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PE" countrycode="51" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(1)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[4-7]|8[2-4]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([4-8]\d)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GT" countrycode="502" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[2-7]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="JO" countrycode="962" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[2356]|87]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[457-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[70|8[0158]|9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5,6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MK" countrycode="389" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[347]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([347]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[58]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([58]\d{2})(\d)(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="DZ" countrycode="213" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-4]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([1-4]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[5-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([5-8]\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(9\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PF" countrycode="689" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SA" countrycode="966" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[1-467]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-467])(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[5]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(5\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(9200)(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(800)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[81]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(8111)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BD" countrycode="880" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2)(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-79]1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-79][2-9]|8]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="ML" countrycode="223" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([246-8]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PG" countrycode="675" minlen="7" maxlen="8">
+		<format>
+			<leading><![CDATA[[1-689]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7[1-36]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7[1-36]\d)(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SB" countrycode="677" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[7-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BE" countrycode="32" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[4[6-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(4[6-9]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[23]|[49][23]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([2-49])(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[156]|7[0178]|8(?:0[1-9]|[1-79])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([15-8]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[(?:80|9)0]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="JP" countrycode="81" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[(?:12|57|99)0]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[077]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[077]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[088]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0(?:37|66)]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0(?:37|66)]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0(?:37|66)]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{5})(\d{5,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0(?:37|66)]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6})(\d{6,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2579]0|80[1-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:26|3[79]|4[56]|5[4-68]|6[3-5])|5(?:76|97)|499|746|8(?:3[89]|63|47|51)|9(?:49|80|9[16])#1(?:267|3(?:7[247]|9[278])|4(?:5[67]|66)|5(?:47|58|64|8[67])|6(?:3[245]|48|5[4-68]))|5(?:76|97)9|499[2468]|7468|8(?:3(?:8[78]|96)|636|477|51[24])|9(?:496|802|9(?:1[23]|69))#1(?:267|3(?:7[247]|9[278])|4(?:5[67]|66)|5(?:47|58|64|8[67])|6(?:3[245]|48|5[4-68]))|5(?:769|979[2-69])|499[2468]|7468|8(?:3(?:8[78]|96[2457-9])|636[2-57-9]|477|51[24])|9(?:496|802|9(?:1[23]|69))]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d)(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:2[3-6]|3[3-9]|4[2-6]|5[2-8]|[68][2-7]|7[2-689]|9[1-578])|2(?:2[03-689]|3[3-58]|4[0-468]|5[04-8]|6[013-8]|7[06-9]|8[02-57-9]|9[13])|4(?:2[28]|3[689]|6[035-7]|7[05689]|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|6[1-9]|7[2-8]|8[14-7]|9[4-9])|7(?:2[15]|3[5-9]|4[02-9]|6[135-8]|7[0-4689]|9[014-9])|8(?:2[49]|3[3-8]|4[5-8]|5[2-9]|6[35-9]|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9[3-7])#1(?:2[3-6]|3[3-9]|4[2-6]|5(?:[236-8]|[45][2-69])|[68][2-7]|7[2-689]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:5[78]|7[2-4]|[0468][2-9])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|6[1-9]|7[2-8]|8[14-7]|9(?:[89][2-8]|[4-7]))|7(?:2[15]|3[5-9]|4[02-9]|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9[2-8])|3(?:7[2-6]|[3-6][2-9]|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5[4-7]|6[2-9]|8[2-8]|9[236-9])|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3[34]|[4-7]))#1(?:2[3-6]|3[3-9]|4[2-6]|5(?:[236-8]|[45][2-69])|[68][2-7]|7[2-689]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:5[78]|7[2-4]|[0468][2-9])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|6[1-9]|7[2-8]|8[14-7]|9(?:[89][2-8]|[4-7]))|7(?:2[15]|3[5-9]|4[02-9]|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9(?:[3578]|20|4[04-9]|6[56]))|3(?:7(?:[2-5]|6[0-59])|[3-6][2-9]|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5(?:[467]|5[014-9])|6(?:[2-8]|9[02-69])|8[2-8]|9(?:[236-8]|9[23]))|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3(?:3[02-9]|4[0-24689])|4[2-69]|[5-7]))#1(?:2[3-6]|3[3-9]|4[2-6]|5(?:[236-8]|[45][2-69])|[68][2-7]|7[2-689]|9[1-578])|2(?:2(?:[04-689]|3[23])|3[3-58]|4[0-468]|5(?:5[78]|7[2-4]|[0468][2-9])|6(?:[0135-8]|4[2-5])|7(?:[0679]|8[2-7])|8(?:[024578]|3[25-9]|9[6-9])|9(?:11|3[2-4]))|4(?:2(?:2[2-9]|8[237-9])|3[689]|6[035-7]|7(?:[059][2-8]|[68])|80|9[3-5])|5(?:3[1-36-9]|4[4578]|5[013-8]|6[1-9]|7[2-8]|8[14-7]|9(?:[89][2-8]|[4-7]))|7(?:2[15]|3[5-9]|4[02-9]|6[135-8]|7[0-4689]|9(?:[017-9]|4[6-8]|5[2-478]|6[2-589]))|8(?:2(?:4[4-8]|9(?:[3578]|20|4[04-9]|6(?:5[25]|60)))|3(?:7(?:[2-5]|6[0-59])|[3-6][2-9]|8[2-5])|4[5-8]|5[2-9]|6(?:[37]|5(?:[467]|5[014-9])|6(?:[2-8]|9[02-69])|8[2-8]|9(?:[236-8]|9[23]))|7[579]|8[03-579]|9[2-8])|9(?:[23]0|4[02-46-9]|5[024-79]|6[4-9]|7[2-47-9]|8[02-7]|9(?:3(?:3[02-9]|4[0-24689])|4[2-69]|[5-7]))]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1|2(?:2[37]|5[5-9]|64|78|8[39]|91)|4(?:2[2689]|64|7[347])|5(?:[2-589]|39)|60|8(?:[46-9]|3[279]|2[124589])|9(?:[235-8]|93)#1|2(?:2[37]|5(?:[57]|[68]0|9[19])|64|78|8[39]|917)|4(?:2(?:[68]|20|9[178])|64|7[347])|5(?:[2-589]|39[67])|60|8(?:[46-9]|3[279]|2[124589])|9(?:[235-8]|93[34])#1|2(?:2[37]|5(?:[57]|[68]0|9(?:17|99))|64|78|8[39]|917)|4(?:2(?:[68]|20|9[178])|64|7[347])|5(?:[2-589]|39[67])|60|8(?:[46-9]|3[279]|2[124589])|9(?:[235-8]|93(?:31|4))]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2(?:9[14-79]|74|[34]7|[56]9)|82|993]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3|4(?:2[09]|7[01])|6[1-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[2479][1-9]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MM" countrycode="95" minlen="8" maxlen="10">
+		<format>
+			<leading><![CDATA[1|2[45]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[251]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[16|2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[67|81]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[4-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9(?:[25-9]|4[13789])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9)(\d{3})(\d{4,5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[94[0245]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9)(4\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PH" countrycode="63" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3(?:23|39|46)|4(?:2[3-6]|[35]9|4[26]|76)|5(?:22|44)|642|8(?:62|8[245])#3(?:230|397|461)|4(?:2(?:35|[46]4|51)|396|4(?:22|63)|59[347]|76[15])|5(?:221|446)|642[23]|8(?:622|8(?:[24]2|5[13]))]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[346|4(?:27|9[35])|883#3469|4(?:279|9(?:30|56))|8834]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{5})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-8]\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(9\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1800)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(1800)(\d{1,2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GW" countrycode="245" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BF" countrycode="226" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SC" countrycode="248" minlen="6" maxlen="7">
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[246]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MN" countrycode="976" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[12]1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([12]\d)(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[12]2[1-3]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([12]2\d)(\d{5,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[12](?:27|[3-5])#[12](?:27|[3-5]\d)2]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([12]\d{3})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[57-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[12](?:27|[3-5])#[12](?:27|[3-5]\d)[4-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([12]\d{4})(\d{4,5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BG" countrycode="359" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[29]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(2)(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[43[124-7]|70[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[43[124-7]|70[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[78]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[356]|7[1-9]|8[1-6]|9[1-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2,3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[48|8[7-9]|9[08]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SD" countrycode="249" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="UY" countrycode="598" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[24]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]0]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="UZ" countrycode="998" minlen="7" maxlen="9">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([679]\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MO" countrycode="853" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([268]\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="EC" countrycode="593" minlen="8" maxlen="9">
+		<format>
+			<leading><![CDATA[[247]|[356][2-8]]]></leading>
+			<pattern><![CDATA[$1-$2-$3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1800)(\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="GY" countrycode="592" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BH" countrycode="973" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SE" countrycode="46" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[8]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(8)(\d{2,3})(\d{2,3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[013689]|2[0136]|3[1356]|4[0246]|54|6[03]|90]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([1-69]\d)(\d{2,3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[13689]|2[136]|3[1356]|4[0246]|54|6[03]|90]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([1-69]\d)(\d{3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[2457]|2[2457-9]|3[0247-9]|4[1357-9]|5[0-35-9]|6[124-9]|9(?:[125-8]|3[0-5]|4[0-3])]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[2457]|2[2457-9]|3[0247-9]|4[1357-9]|5[0-35-9]|6[124-9]|9(?:[125-8]|3[0-5]|4[0-3])]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2,3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[7]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(7\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[20]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(20)(\d{2,3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[9[034]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(9[034]\d)(\d{2})(\d{2})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PK" countrycode="92" minlen="10" maxlen="20">
+		<format>
+			<leading><![CDATA[(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)1#(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)11#(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)111]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(111)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[349]|45|54|60|72|8[2-5]|9[2-9]#(?:2[349]|45|54|60|72|8[2-5]|9[2-9])\d1#(?:2[349]|45|54|60|72|8[2-5]|9[2-9])\d11#(?:2[349]|45|54|60|72|8[2-5]|9[2-9])\d111]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(111)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{7,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2[349]|45|54|60|72|8[2-5]|9[2-9]#(?:2[349]|45|54|60|72|8[2-5]|9[2-9])\d[2-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{6,7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[3]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(3\d{2})(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[58[12]|1]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([15]\d{3})(\d{5,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[586]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(586\d{2})(\d{5})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([89]00)(\d{3})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BI" countrycode="257" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([27]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="VA" countrycode="379" minlen="10" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(06)(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MQ" countrycode="596" minlen="9" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="EE" countrycode="372" minlen="7" maxlen="8">
+		<format>
+			<leading><![CDATA[[369]|4[3-8]|5(?:[0-2]|5[0-478]|6[45])|7[1-9]#[369]|4[3-8]|5(?:[02]|1(?:[0-8]|95)|5[0-478]|6(?:4[0-4]|5[1-589]))|7[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([3-79]\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[70]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(70)(\d{2})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[800#8000]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(8000)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[40|5|8(?:00|[1-5])#40|5|8(?:00[1-9]|[1-5])]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([458]\d{3})(\d{3,4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PL" countrycode="48" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[[124]|3[2-4]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[124]|3[2-4]|5[24-689]|6[1-3578]|7[14-7]|8[1-7]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{4,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[39|5[013]|6[0469]|7[0289]|8[08]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[64]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2,3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[64]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BJ" countrycode="229" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SG" countrycode="65" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[369]|8[1-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([3689]\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[89]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(1[89]00)(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[70]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(7000)(\d{4})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[80]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(800)(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MR" countrycode="222" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([2-48]\d)(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="PM" countrycode="508" minlen="6" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([45]\d)(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SI" countrycode="386" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[12]|3[4-8]|4[24-8]|5[2-8]|7[3-8]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[37][01]|4[019]|51|6]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([3-7]\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89][09]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([89][09])(\d{3,6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[59|8[1-3]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([58]\d{2})(\d{5})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="EG" countrycode="20" minlen="9" maxlen="10">
+		<format>
+			<leading><![CDATA[[23]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{7,8})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1[012]|[89]00]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[1(?:3|5[23])|[4-6]|[89][2-9]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6,7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MT" countrycode="356" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{4})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="VE" countrycode="58" minlen="10" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MU" countrycode="230" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([2-9]\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BN" countrycode="673" minlen="7" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([2-578]\d{2})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SK" countrycode="421" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1/$2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(2)(\d{3})(\d{3})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[3-5]]]></leading>
+			<pattern><![CDATA[$1/$2 $3 $4]]></pattern>
+			<formatregex><![CDATA[([3-5]\d)(\d{3})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[689]]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[([689]\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MV" countrycode="960" minlen="7" maxlen="20">
+		<format>
+			<leading><![CDATA[[3467]|9(?:[1-9]|0[1-9])]]></leading>
+			<pattern><![CDATA[$1-$2]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{4})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[900]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{3})(\d{4})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="BO" countrycode="591" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[234]]]></leading>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[([234])(\d{7})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[67]]]></leading>
+			<pattern><![CDATA[$1]]></pattern>
+			<formatregex><![CDATA[([67]\d{7})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SL" countrycode="232" minlen="8" maxlen="20">
+		<format>
+			<pattern><![CDATA[$1 $2]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{6})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="MW" countrycode="265" minlen="9" maxlen="20">
+		<format>
+			<leading><![CDATA[1]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(\d)(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[2]]></leading>
+			<pattern><![CDATA[$1 $2 $3]]></pattern>
+			<formatregex><![CDATA[(2\d{2})(\d{3})(\d{3})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[1789]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{3})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+	</country>
+	<country isocode="SM" countrycode="378" minlen="8" maxlen="20">
+		<format>
+			<leading><![CDATA[[5-7]]]></leading>
+			<pattern><![CDATA[$1 $2 $3 $4]]></pattern>
+			<formatregex><![CDATA[(\d{2})(\d{2})(\d{2})(\d{2})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[0]]></leading>
+			<pattern><![CDATA[($1) $2]]></pattern>
+			<formatregex><![CDATA[(0549)(\d{6})]]></formatregex>
+		</format>
+		<format>
+			<leading><![CDATA[[89]]]></leading>
+			<pattern><![CDATA[(0549) $1]]></pattern>
+			<formatregex><![CDATA[(\d{6})]]></formatregex>
+		</format>
+	</country>
+</config>

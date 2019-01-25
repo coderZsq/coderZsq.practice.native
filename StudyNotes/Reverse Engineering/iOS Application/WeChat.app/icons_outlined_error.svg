@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_error</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_error" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="common_icons_info" fill="#000000" fill-rule="nonzero">
+            <path d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M12,20.8 C16.8601058,20.8 20.8,16.8601058 20.8,12 C20.8,7.1398942 16.8601058,3.2 12,3.2 C7.1398942,3.2 3.2,7.1398942 3.2,12 C3.2,16.8601058 7.1398942,20.8 12,20.8 Z M11.3408203,6.43115234 L12.6591797,6.43115234 L12.5712891,13.4916992 L11.4287109,13.4916992 L11.3408203,6.43115234 Z M12,17.0732422 C11.53125,17.0732422 11.1650391,16.7070312 11.1650391,16.2382812 C11.1650391,15.762207 11.53125,15.4033203 12,15.4033203 C12.4760742,15.4033203 12.8349609,15.762207 12.8349609,16.2382812 C12.8349609,16.7070312 12.4760742,17.0732422 12,17.0732422 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

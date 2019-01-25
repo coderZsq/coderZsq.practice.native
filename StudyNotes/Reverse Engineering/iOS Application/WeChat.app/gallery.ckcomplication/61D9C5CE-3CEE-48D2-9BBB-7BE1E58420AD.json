@@ -1,0 +1,83 @@
+{
+  "row1ImageProvider" : {
+    "tintColor" : {
+      "green" : 0.9098039,
+      "red" : 0.3490196,
+      "alpha" : 1,
+      "blue" : 0.2352941
+    },
+    "onePieceImage" : {
+      "file name" : "E89EAAEF-723A-4078-AD9D-1E97885CA7BD.png",
+      "scale" : 2
+    }
+  },
+  "row1Column1TextProvider" : {
+    "tintColor" : {
+      "green" : 1,
+      "red" : 1,
+      "alpha" : 1,
+      "blue" : 1
+    },
+    "class" : "CLKSimpleTextProvider",
+    "text" : "小雷"
+  },
+  "row3Column2TextProvider" : {
+    "class" : "CLKSimpleTextProvider",
+    "text" : ""
+  },
+  "row2Column1TextProvider" : {
+    "tintColor" : {
+      "green" : 1,
+      "red" : 1,
+      "alpha" : 1,
+      "blue" : 1
+    },
+    "class" : "CLKSimpleTextProvider",
+    "text" : "吃饭小组"
+  },
+  "row1Column2TextProvider" : {
+    "class" : "CLKSimpleTextProvider",
+    "text" : ""
+  },
+  "column2Alignment" : 0,
+  "row2Column2TextProvider" : {
+    "class" : "CLKSimpleTextProvider",
+    "text" : ""
+  },
+  "version" : 30000,
+  "row3ImageProvider" : {
+    "tintColor" : {
+      "green" : 0.9098039,
+      "red" : 0.3490196,
+      "alpha" : 1,
+      "blue" : 0.2352941
+    },
+    "onePieceImage" : {
+      "file name" : "227A205B-3CFD-46DE-BC90-006D6B945DB7.png",
+      "scale" : 2
+    }
+  },
+  "row2ImageProvider" : {
+    "tintColor" : {
+      "green" : 0.9098039,
+      "red" : 0.3490196,
+      "alpha" : 1,
+      "blue" : 0.2352941
+    },
+    "onePieceImage" : {
+      "file name" : "6504B999-7E73-4647-8991-733E0A24B029.png",
+      "scale" : 2
+    }
+  },
+  "row3Column1TextProvider" : {
+    "tintColor" : {
+      "green" : 1,
+      "red" : 1,
+      "alpha" : 1,
+      "blue" : 1
+    },
+    "class" : "CLKSimpleTextProvider",
+    "text" : "Robin"
+  },
+  "class" : "CLKComplicationTemplateModularLargeColumns"
+}

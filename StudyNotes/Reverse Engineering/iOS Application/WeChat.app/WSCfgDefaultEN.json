@@ -1,0 +1,89 @@
+{
+   "data" : {
+      "articleTab" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "bizEntry" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "bizTab" : {
+         "bizServiceSugSwitch" : 0,
+         "bizSugSwitch" : 1,
+         "mfsBizSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "bizUnionTopEntry" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "discoverRecommendEntry" : {
+         "entrySwitch" : 0,
+         "timevalSec" : 86400,
+         "wording" : "Look"
+      },
+      "discoverSearchEntry" : {
+         "entrySwitch" : 0,
+         "searchBarWording" : "Search",
+         "timevalSec" : 86400,
+         "wording" : "Search"
+      },
+      "educationTab" : {
+         "items" : [
+            {
+               "businessType" : 8,
+               "hotword" : "Moments",
+               "optype" : 5
+            },
+            {
+               "businessType" : 2,
+               "hotword" : "Articles",
+               "optype" : 5
+            },
+            {
+               "businessType" : 1,
+               "hotword" : "Official Accounts",
+               "optype" : 5
+            }
+         ],
+         "timevalSec" : 86400,
+         "title" : "Search Specified Contents"
+      },
+      "emotionTab" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "mixGlobal" : {
+         "bizSugSwitch" : 1,
+         "emotionSugSwitch" : 1,
+         "mixSugSwitch" : 1,
+         "musicSugSwitch" : 1,
+         "novelSugSwitch" : 1,
+         "snsSugSwitch" : 0,
+         "timevalSec" : 86400,
+         "weAppSugSwitch" : 0
+      },
+      "musicTab" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "novelTab" : {
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "snsTab" : {
+         "localSugSwitch" : 1,
+         "sugSwitch" : 1,
+         "timevalSec" : 86400
+      },
+      "webSearchBar" : {
+         "style" : 0,
+         "timevalSec" : 86400,
+         "wording" : "Mini Program, Moments, Official Accounts, Articles, etc."
+      }
+   },
+   "searchID" : "683028421",
+   "timevalSec" : 86400
+}
+

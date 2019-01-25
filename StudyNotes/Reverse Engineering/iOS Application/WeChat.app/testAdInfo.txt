@@ -1,0 +1,11 @@
+<ADInfo>
+    <viewid>MMOCADEXPERIMENTVIEWID</viewid>
+    <ad_sns_pos>4</ad_sns_pos>
+    <noExposureExpireTime>660</noExposureExpireTime>
+    <exposureNoActionExpireTime>660</exposureNoActionExpireTime>
+    <uxInfo>1600002618|MMOCADEXPERIMENTVIEWID</uxInfo>
+    <adActionLink>http://as.weixin.qq.com/cgi-bin/redirect?tid=1601218&amp;wx_aid=1600002618&amp;wx_traceid=1C5D0000E6849B0A7FA9E6568AF30E00</adActionLink>
+    <session_data>
+        <trace_id>12345678</trace_id>
+    </session_data>
+</ADInfo>

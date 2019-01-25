@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_outlined_max-window</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons_outlined_max-window" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Max-icon" transform="translate(3.000000, 2.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M18,14 L18,18 C18,18.5522847 17.5522847,19 17,19 L13,19 L13,17.8 L16.8,17.8 L16.8,14 L18,14 Z M5,1 L5,2.2 L1.2,2.2 L1.2,6 L0,6 L0,2 C0,1.44771525 0.44771525,1 1,1 L5,1 Z M16.7968544,3.04562642 L11.3249201,8.51756067 L10.4763919,7.6690325 L15.9483176,2.19710685 L12.9968544,2.19710685 L12.9968544,0.997106803 L16.9968544,0.997106803 C17.5491392,0.997106803 17.9968544,1.44482205 17.9968544,1.9971068 L17.9968544,5.9971068 L16.7968544,5.9971068 L16.7968544,3.04562642 Z M1.20314565,16.9543736 L6.67507989,11.4824393 L7.52360806,12.3309675 L2.05168241,17.8028931 L5.0031456,17.8028931 L5.0031456,19.0028932 L1.0031456,19.0028932 C0.450860848,19.0028932 0.00314559792,18.5551779 0.00314559792,18.0028932 L0.00314559792,14.0028932 L1.20314565,14.0028932 L1.20314565,16.9543736 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

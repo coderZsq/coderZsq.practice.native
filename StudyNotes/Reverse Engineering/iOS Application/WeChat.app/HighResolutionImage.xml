@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page type="KitNode" key="HighResolutionImage" title="图像人脸识别" version="7" resetable="yes">
+    <section title="多人合影像素提高">
+        <item type="switch" key="KIT_Open_High_Resolution_Image" title="朋友圈多人合照检测" defaultValue="YES" locked="NO"/>
+        <item type="value" key="KIT_High_Resolution_Image_Short_Edge" title="图像短边长度" defaultValue="1440" minValue="0" maxValue="9999" step="20"/>
+    </section>
+    <section title="扫一扫翻译">
+        <item type="switch" key="KIT_Open_Translate_Gray_Image" title="上传灰度图" defaultValue="YES" locked="NO"/>
+        <item type="value" key="KIT_Translate_Image_Compress" title="上传图压缩参数" defaultValue="0.5" minValue="0" maxValue="1" step="0.1"/>
+        <item type="switch" key="KIT_Translate_Image_Resolution" title="上传图压缩分辨率" defaultValue="YES" locked="NO"/>
+        <item type="value" key="KIT_Translate_Image_Resolution_Width" title="上传图分辨率宽度限制" defaultValue="720" minValue="0" maxValue="10000" step="10"/>
+        <item type="switch" key="KIT_Open_Translate_New" title="打开新版翻译" defaultValue="YES" locked="NO"/>
+    </section>
+</page>

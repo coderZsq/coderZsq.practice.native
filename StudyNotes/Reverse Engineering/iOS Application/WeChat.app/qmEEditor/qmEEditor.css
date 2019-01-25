@@ -1,0 +1,143 @@
+html{
+    background:#fff!important;padding:12px 0px 2px;
+}
+body {
+    font-family: sans-serif;    
+    padding: 0;
+    margin: 0 !important;
+    height: 100%;
+    line-height:1.5;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* prevent default highlight style */
+    /*-webkit-user-select: auto;*/
+    /*background-color: green;*/
+    word-wrap:break-word; 
+    font-size: 17px;
+}
+
+#QMEditor {
+    /*background-color: red;*/
+    width: auto;
+    min-height: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 20px;
+}
+
+.ios-upload-image, 
+.app-upload-image, 
+img[src^=webkit-fake-url], 
+img[src^=file] {
+    max-width: 292px;
+    margin: 4px 0;
+}
+.portrait .ios-upload-image, 
+.portrait .app-upload-image, 
+.portrait img[src^=webkit-fake-url], 
+.portrait img[src^=file] {
+    max-width: 294px;
+}
+.landscape .ios-upload-image,
+.landscape .app-upload-image,
+.landscape img[src^=webkit-fake-url],
+.landscape img[src^=file] {
+    max-width: 454px !important;
+}
+.ios-upload-audio {
+    display: none;
+    hidden: true;
+    visibility: hidden;
+}
+
+#QMEditor .qm-preloader {
+    margin:3px 5px 3px 5px !important;
+    border:1px solid #e6e6e6;
+    width: 10px !important;
+    height: 10px !important;
+    background: #fff;
+}
+
+/*
+ 删除节点时的占位class
+*/
+.qm-minHeightPlace {
+    min-height: 20px;
+}
+
+@media screen and (orientation: landscape) {
+    max-width: 454px;
+}
+
+.origin-mail-header, .mail-footer{
+    color:#444;
+    font-size:15px;
+}
+
+.origin-mail-header strong, .mail-footer strong{
+    font-weight: bold;
+}
+
+textarea {
+    display:none !important;
+}   
+
+div {
+    min-height: 20px;
+}
+
+.editordidload img{ 
+    max-width:294px!important; 
+    max-height:none; 
+    height:auto!important;
+}
+
+@media screen and (max-device-width: 480px) and (orientation: landscape){
+    .editordidload img{ max-width:454px!important;}
+}
+@media screen and (max-device-width: 568px) and (orientation: landscape){
+    .editordidload img{ max-width:542px!important;}
+}
+
+/* webkit puts cursor against the left edge of checkboxes when in contentEditable mode
+   which is confusing as it appears to be before the checkbox, this fixes the appearance */
+input[type=checkbox]:after {
+    content: ' ';
+}
+input[type=checkbox] {
+    padding-right: 16px;
+}
+
+/************** audio **************/
+object.ios-upload-qmaudio {
+    border:1px solid #c6c6c6;
+    border-radius:6px;
+    -webkit-border-radius: 10px;
+    margin: 8px 4px 0px 4px;
+    opacity: 1;
+    max-width: 290px;
+    max-height: 60px;
+}
+
+/*********** debug *******************/
+.qm-debug.qm-debug-padded {
+    position: absolute;
+    border:1px solid red;
+}
+
+.qm-debug.qm-debug-paddedinfo {
+    color: red;
+    position: absolute;
+    right: 10px;
+}
+
+.qm-debug.qm-debug-visibleinfo {
+    color: green;
+    position: absolute;
+    right: 10px;
+}
+
+.qm-debug.qm-debug-visible{
+    position: absolute;
+    border:3px solid green;
+}
+
+

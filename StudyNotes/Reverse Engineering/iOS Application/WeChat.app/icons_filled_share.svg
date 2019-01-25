@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icons_filled_share</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons_filled_share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon38" fill="#000000" fill-rule="nonzero">
+            <path d="M12.75,4.36643249 L12.75,7 L19.0010434,7 C19.5508697,7 20,7.44583866 20,7.99580851 L20,21.0041915 C20,21.5510798 19.5541613,22 19.0041915,22 L4.99580851,22 C4.44892021,22 4,21.5541613 4,21.0041915 L4,7.99580851 C4,7.44892021 4.44724809,7 4.99895656,7 L11.25,7 L11.25,4.37643471 L9.53050029,6.09619408 L8.47000027,5.03553391 L11.2978402,2.20705341 C11.688335,1.81649963 12.3215,1.81645183 12.7120537,2.20694664 C12.7120893,2.20698223 12.7121249,2.20701782 12.7121605,2.20705341 L12.7120537,2.20716017 L15.5400004,5.03553391 L14.4795004,6.09619408 L12.75,4.36643249 Z M11.25,7 L11.25,13.5 L12.75,13.5 L12.75,7 L11.25,7 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
