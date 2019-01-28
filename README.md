@@ -5,21 +5,38 @@
 
 ##### Contents
 
-- `Programming basis`
-	- `Algorithm` >>> Some practices of self-learning `algorithms`.
-	- `DataStructure` >>> Some practices of self-learning `data-structure`.
+- `Foundation`
+	- `algorithm4c++` >>> `C++ classic algorithm` implementation principle.
+	- `Algorithm4Objective-C` >>> `Linear table implementation` use `ObjC`.
+	- `Algorithm4Swift` >>> `Raywenderlich algorithm` study use `Swift`.
 	- `DesignPatterns` >>> Some practices of self-learning `design-patterns`.
-	- `algorithm4c++` >>> C++ `classic algorithm` implementation principle.
-
-- `High-level reader`
-	- `ObjC.io` >>> `Advanced` Swift books learning.
-	- `CS193p` >>> Stanford University `iOS public class` study notes.
-
-- `Self practice`
 	- `LeetCode` >>> LeetCode's `brushing questions` for future algorithmic interviews.
-	- `CocoaTouch` >>> Based on UIControl to implementation UIButton, the `Meituan interview` 
-questions.
 	- `UIAlgorithm` >>> The `iOS implementation` of the only blackout problem in the whole network.
+- `Swift Note`
+	- `ObjC.io` >>> `Advanced` Swift books learning.
+	- `CS193p` >>> `Stanford University` iOS public class study notes.
+	- `CocoaTouch` >>> `Based on UIControl` to implementation UIButton, the `Meituan interview` 
+questions.	
+	- `PhotoBrowser` >>> `Swift` project `transition animation` practice.
+	- `LiveBroadcast` >>> `Live project` practice use `Swift`.
+
+
+- `iOS Collection`
+	- `UI` >>> `UI related technology stacks` are organized into projects.
+	- `Network` >>> `Network related technology stacks` are organized into projects.
+	- `Business` >>> `Business related technology stacks` are organized into projects.
+
+- `ReactiveCocoa` >>>  `Learning and Practice` of `Responsive Programming` Thoughts.
+
+- `ReactNative` >>> `Learning and Practice` of `ReactNative` Thoughts.
+
+- `Componentization` >>> `Learning and Practice` of `Componentization` Thoughts.
+
+- `Reverse Engineering`
+	- `iOS Application` >>> `Reverse Engineering` about iOS Application.
+	- `iOS AntiDebug` >>> `Reverse Engineering` about iOS AntiDebug.
+	- `MFCApplication` >>> `Reverse Engineering` about MFCApplication.
+	
 
 
 ##### Display
