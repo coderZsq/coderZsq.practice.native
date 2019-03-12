@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		14188D9C21EC852900CBA334 /* RView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14188D9B21EC852900CBA334 /* RView.m */; };
+		141A23AE22381CBA0021870F /* RCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141A23AD22381CBA0021870F /* RCell.xib */; };
 		14206C7421EC893C00CBC8C7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14206C7321EC893C00CBC8C7 /* flags.plist */; };
 		14206C7721EC8A4900CBC8C7 /* RModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14206C7621EC8A4900CBC8C7 /* RModel.m */; };
 		1422E82121E882CE00EF0BC4 /* ChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82021E882CE00EF0BC4 /* ChainProgramming.m */; };
 		1422E82521E886B700EF0BC4 /* NSObject+Responsive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82421E886B700EF0BC4 /* NSObject+Responsive.m */; };
 		1422E82821E88CFC00EF0BC4 /* FunctionalProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */; };
 		1459DDC821F02945009A70E1 /* RCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459DDC621F02945009A70E1 /* RCell.m */; };
-		1459DDC921F02945009A70E1 /* RCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1459DDC721F02945009A70E1 /* RCell.xib */; };
 		1459DDCC21F029EE009A70E1 /* RCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1459DDCB21F029EE009A70E1 /* RCellViewModel.m */; };
 		14CBBBAC21E497CB009010BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAB21E497CB009010BA /* AppDelegate.m */; };
 		14CBBBAF21E497CB009010BA /* RViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBBBAE21E497CB009010BA /* RViewController.m */; };
@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		14188D9A21EC852900CBA334 /* RView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RView.h; sourceTree = "<group>"; };
 		14188D9B21EC852900CBA334 /* RView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RView.m; sourceTree = "<group>"; };
+		141A23AD22381CBA0021870F /* RCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCell.xib; sourceTree = "<group>"; };
 		14206C7321EC893C00CBC8C7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
 		14206C7521EC8A4900CBC8C7 /* RModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RModel.h; sourceTree = "<group>"; };
 		14206C7621EC8A4900CBC8C7 /* RModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RModel.m; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		1422E82721E88CFC00EF0BC4 /* FunctionalProgramming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalProgramming.m; sourceTree = "<group>"; };
 		1459DDC521F02945009A70E1 /* RCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCell.h; sourceTree = "<group>"; };
 		1459DDC621F02945009A70E1 /* RCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCell.m; sourceTree = "<group>"; };
-		1459DDC721F02945009A70E1 /* RCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCell.xib; path = "../../../../../../../../Desktop/3 码哥课堂/课堂代码/02阶段/01/RAC/10-ReactiveCocoa + MVVM(网络请求数据)/01-导入RAC/Classes/View/RCell.xib"; sourceTree = "<group>"; };
 		1459DDCA21F029EE009A70E1 /* RCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCellViewModel.h; sourceTree = "<group>"; };
 		1459DDCB21F029EE009A70E1 /* RCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCellViewModel.m; sourceTree = "<group>"; };
 		1492DF7521F02D2000D61130 /* RProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RProtocol.h; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				14188D9B21EC852900CBA334 /* RView.m */,
 				1459DDC521F02945009A70E1 /* RCell.h */,
 				1459DDC621F02945009A70E1 /* RCell.m */,
-				1459DDC721F02945009A70E1 /* RCell.xib */,
+				141A23AD22381CBA0021870F /* RCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,10 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CBBBB721E497CC009010BA /* LaunchScreen.storyboard in Resources */,
+				141A23AE22381CBA0021870F /* RCell.xib in Resources */,
 				14CBBBB421E497CC009010BA /* Assets.xcassets in Resources */,
 				14206C7421EC893C00CBC8C7 /* flags.plist in Resources */,
 				14CBBBB221E497CB009010BA /* Main.storyboard in Resources */,
-				1459DDC921F02945009A70E1 /* RCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
