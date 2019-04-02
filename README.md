@@ -28,8 +28,6 @@ questions.
 
 - `ReactiveCocoa` >>>  `Learning and Practice` of `Responsive Programming` Thoughts.
 
-- `ReactNative` >>> `Learning and Practice` of `ReactNative` Thoughts.
-
 - `Componentization` >>> `Learning and Practice` of `Componentization` Thoughts.
 
 - `Reverse Engineering`
