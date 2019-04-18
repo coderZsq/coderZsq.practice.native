@@ -5,21 +5,14 @@
 
 ##### Contents
 
-- `Foundation`
-	- `algorithm4c++` >>> `C++ classic algorithm` implementation principle.
-	- `Algorithm4Objective-C` >>> `Linear table implementation` use `ObjC`.
-	- `Algorithm4Swift` >>> `Raywenderlich algorithm` study use `Swift`.
-	- `DesignPatterns` >>> Some practices of self-learning `design-patterns`.
-	- `LeetCode` >>> LeetCode's `brushing questions` for future algorithmic interviews.
-	- `UIAlgorithm` >>> The `iOS implementation` of the only blackout problem in the whole network.
-- `Swift Note`
+- `Swift Collection`
 	- `ObjC.io` >>> `Advanced` Swift books learning.
 	- `CS193p` >>> `Stanford University` iOS public class study notes.
 	- `CocoaTouch` >>> `Based on UIControl` to implementation UIButton, the `Meituan interview` 
 questions.	
 	- `PhotoBrowser` >>> `Swift` project `transition animation` practice.
 	- `LiveBroadcast` >>> `Live project` practice use `Swift`.
-
+	- `UIAlgorithm` >>> The `iOS implementation` of the only blackout problem in the whole network.
 
 - `iOS Collection`
 	- `UI` >>> `UI related technology stacks` are organized into projects.
@@ -39,7 +32,7 @@ questions.
 
 ##### Display
 
-<img src="./StudyNotes/Foundation/UIAlgorithm/UIAlgorithm/contents/img1.png" width="360"><img src="./StudyNotes/Foundation/UIAlgorithm/UIAlgorithm/contents/img2.gif" width="388">
+<img src="./StudyNotes/Swift Collection/UIAlgorithm/UIAlgorithm/contents/img1.png" width="360"><img src="./StudyNotes/Swift Collection/UIAlgorithm/UIAlgorithm/contents/img2.gif" width="388">
 
 Apply the algorithm to the actual, now showing a `visual version` of the light-off problem.
 
