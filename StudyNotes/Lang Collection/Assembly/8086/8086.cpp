@@ -193,6 +193,44 @@ int __fastcall minus4(int a, int b, int c, int d) {
 00382579  ret         8
 */
 
+int sum2(int a, int b) {
+	int c = 3;
+	int d = 4;
+	int e = c + d;
+	return a + b + e;
+}
+/*
+00E11950  push        ebp
+00E11951  mov         ebp,esp
+00E11953  sub         esp,0E4h
+00E11959  push        ebx
+00E1195A  push        esi
+00E1195B  push        edi
+00E1195C  lea         edi,[ebp+FFFFFF1Ch]
+00E11962  mov         ecx,39h
+00E11967  mov         eax,0CCCCCCCCh
+00E1196C  rep stos    dword ptr es:[edi]
+00E1196E  mov         ecx,0E1C003h
+00E11973  call        00E11230
+00E11978  mov         dword ptr [ebp-8],3
+00E1197F  mov         dword ptr [ebp-14h],4
+00E11986  mov         eax,dword ptr [ebp-8]
+00E11989  add         eax,dword ptr [ebp-14h]
+00E1198C  mov         dword ptr [ebp-20h],eax
+00E1198F  mov         eax,dword ptr [ebp+8]
+00E11992  add         eax,dword ptr [ebp+0Ch]
+00E11995  add         eax,dword ptr [ebp-20h]
+00E11998  pop         edi
+00E11999  pop         esi
+00E1199A  pop         ebx
+00E1199B  add         esp,0E4h
+00E119A1  cmp         ebp,esp
+00E119A3  call        00E1123A
+00E119A8  mov         esp,ebp
+00E119AA  pop         ebp
+00E119AB  ret
+*/
+
 int main(int argc, char* argv[])
 {
 	/*
@@ -303,8 +341,8 @@ int main(int argc, char* argv[])
 	->  003813B1  jmp         minus4 (0382530h)
 	*/
 	
+	sum2(a, b);
 	int c = 0;
-	sum(10, 2);
 	__asm {
 		mov c, eax
 	}
