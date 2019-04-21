@@ -220,6 +220,78 @@ int main(int argc, const char * argv[]) {
          0x100000f36 <+70>:  addl   %ecx, %edi
          0x100000f38 <+72>:  movl   %edi, -0x18(%rbp)
          */
+        
+        /*
+        int a = 10;
+        if (a > 10) {
+            NSLog(@"1");
+        } else {
+            NSLog(@"2");
+        }
+         0x100000f0b <+27>:  movl   $0xa, -0x14(%rbp)
+         0x100000f12 <+34>:  cmpl   $0xa, -0x14(%rbp)
+         0x100000f16 <+38>:  movq   %rax, -0x20(%rbp)
+         0x100000f1a <+42>:  jle    0x100000f36               ; <+70> at main.m
+         0x100000f20 <+48>:  leaq   0x101(%rip), %rax         ; @"'1'"
+         0x100000f27 <+55>:  movq   %rax, %rdi
+         0x100000f2a <+58>:  movb   $0x0, %al
+         0x100000f2c <+60>:  callq  0x100000f58               ; symbol stub for: NSLog
+         0x100000f31 <+65>:  jmp    0x100000f47               ; <+87> at main.m:230:5
+         0x100000f36 <+70>:  leaq   0x10b(%rip), %rax         ; @"'2'"
+         0x100000f3d <+77>:  movq   %rax, %rdi
+         0x100000f40 <+80>:  movb   $0x0, %al
+         0x100000f42 <+82>:  callq  0x100000f58               ; symbol stub for: NSLog
+         */
+        
+        /*
+         int a = 10;
+         if (a > 10) {
+         NSLog(@"1");
+         } else if (a > 5) {
+         NSLog(@"2");
+         } else {
+         NSLog(@"3");
+         }
+         0x100000eeb <+27>:  movl   $0xa, -0x14(%rbp)
+         0x100000ef2 <+34>:  cmpl   $0xa, -0x14(%rbp)
+         0x100000ef6 <+38>:  movq   %rax, -0x20(%rbp)
+         0x100000efa <+42>:  jle    0x100000f16               ; <+70> at main.m:249:22
+         0x100000f00 <+48>:  leaq   0x121(%rip), %rax         ; @"'1'"
+         0x100000f07 <+55>:  movq   %rax, %rdi
+         0x100000f0a <+58>:  movb   $0x0, %al
+         0x100000f0c <+60>:  callq  0x100000f5e               ; symbol stub for: NSLog
+         0x100000f11 <+65>:  jmp    0x100000f4c               ; <+124> at main.m:255:5
+         0x100000f16 <+70>:  cmpl   $0x5, -0x14(%rbp)
+         0x100000f1a <+74>:  jle    0x100000f36               ; <+102> at main.m
+         0x100000f20 <+80>:  leaq   0x121(%rip), %rax         ; @"'2'"
+         0x100000f27 <+87>:  movq   %rax, %rdi
+         0x100000f2a <+90>:  movb   $0x0, %al
+         0x100000f2c <+92>:  callq  0x100000f5e               ; symbol stub for: NSLog
+         0x100000f31 <+97>:  jmp    0x100000f47               ; <+119> at main.m
+         0x100000f36 <+102>: leaq   0x12b(%rip), %rax         ; @"'3'"
+         0x100000f3d <+109>: movq   %rax, %rdi
+         0x100000f40 <+112>: movb   $0x0, %al
+         0x100000f42 <+114>: callq  0x100000f5e               ; symbol stub for: NSLog
+         0x100000f47 <+119>: jmp    0x100000f4c               ; <+124> at main.m:255:5
+         */
+        
+        /*
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"1");
+        }
+         0x100000f1b <+27>: movl   $0x0, -0x14(%rbp)
+         0x100000f22 <+34>: movq   %rax, -0x20(%rbp)
+         0x100000f26 <+38>: cmpl   $0x5, -0x14(%rbp)
+         0x100000f2a <+42>: jge    0x100000f4f               ; <+79> at main.m:281:5
+         0x100000f30 <+48>: leaq   0xf1(%rip), %rax          ; @"'1'"
+         0x100000f37 <+55>: movq   %rax, %rdi
+         0x100000f3a <+58>: movb   $0x0, %al
+         0x100000f3c <+60>: callq  0x100000f60               ; symbol stub for: NSLog
+         0x100000f41 <+65>: movl   -0x14(%rbp), %eax
+         0x100000f44 <+68>: addl   $0x1, %eax
+         0x100000f47 <+71>: movl   %eax, -0x14(%rbp)
+         0x100000f4a <+74>: jmp    0x100000f26               ; <+38> at main.m:278:27
+         */
     }
     return 0;
 }
