@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "sum.h"
 
 int sum(int a, int b) {
     return a + b;
@@ -102,6 +103,78 @@ int sum3(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, i
  0x100000ecb <+75>: retq
  */
 
+int sum4(int a, int b) {
+    int c = a + b;
+    int d = c + 10;
+    return d;
+}
+/*
+ 0x100000ee0 <+0>:  pushq  %rbp
+ 0x100000ee1 <+1>:  movq   %rsp, %rbp
+ 0x100000ee4 <+4>:  movl   %edi, -0x4(%rbp)
+ 0x100000ee7 <+7>:  movl   %esi, -0x8(%rbp)
+ 
+ General Purpose Registers:
+ rax = 0x0000000101006038
+ rbx = 0x0000000000000000
+ rcx = 0x0000000101006040
+ rdx = 0x00007ffeefbff5c8
+ rdi = 0x00000000 00000001
+ rsi = 0x0000000000000002
+ rbp = 0x00007ffeefbff560
+ rsp = 0x00007ffeefbff560
+ r8 = 0x0000000000000000
+ r9 = 0x0000000000000000
+ r10 = 0x00007ffeefbff6f0
+ r11 = 0x00007fff6553cf4f  libobjc.A.dylib`objc_autoreleasePoolPush
+ r12 = 0x0000000000000000
+ r13 = 0x0000000000000000
+ r14 = 0x0000000000000000
+ r15 = 0x0000000000000000
+ rip = 0x0000000100000eea  AT&T`sum4 + 10 at main.m:106:13
+ rflags = 0x0000000000000202
+ cs = 0x000000000000002b
+ fs = 0x0000000000000000
+ gs = 0x0000000000000000
+ 
+ 0x100000eea <+10>: movl   -0x4(%rbp), %esi
+ 0x100000eed <+13>: addl   -0x8(%rbp), %esi
+ 0x100000ef0 <+16>: movl   %esi, -0xc(%rbp)
+ 0x100000ef3 <+19>: movl   -0xc(%rbp), %esi
+ 0x100000ef6 <+22>: addl   $0xa, %esi
+ 0x100000ef9 <+25>: movl   %esi, -0x10(%rbp)
+ 0x100000efc <+28>: movl   -0x10(%rbp), %eax
+ 0x100000eff <+31>: popq   %rbp
+ 0x100000f00 <+32>: retq
+ */
+
+void test() {}
+
+int sum5(int a, int b) {
+    int c = a + b;
+    int d = c + 10;
+    test();
+    return d;
+}
+/*
+ 0x100000ee0 <+0>:  pushq  %rbp
+ 0x100000ee1 <+1>:  movq   %rsp, %rbp
+ 0x100000ee4 <+4>:  subq   $0x10, %rsp
+ -> 0x100000ee8 <+8>:  movl   %edi, -0x4(%rbp)
+ 0x100000eeb <+11>: movl   %esi, -0x8(%rbp)
+ 0x100000eee <+14>: movl   -0x4(%rbp), %esi
+ 0x100000ef1 <+17>: addl   -0x8(%rbp), %esi
+ 0x100000ef4 <+20>: movl   %esi, -0xc(%rbp)
+ 0x100000ef7 <+23>: movl   -0xc(%rbp), %esi
+ 0x100000efa <+26>: addl   $0xa, %esi
+ 0x100000efd <+29>: movl   %esi, -0x10(%rbp)
+ 0x100000f00 <+32>: callq  0x100000ed0               ; test at main.m:150
+ 0x100000f05 <+37>: movl   -0x10(%rbp), %eax
+ -> 0x100000f08 <+40>: addq   $0x10, %rsp
+ 0x100000f0c <+44>: popq   %rbp
+ 0x100000f0d <+45>: retq
+ */
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         /*
@@ -110,7 +183,7 @@ int main(int argc, const char * argv[]) {
          int c = a + b;
          NSLog(@"%d", c);
          0x100000f32 <+34>: movl   $0xa, -0x14(%rbp)
-                            mov    [rbp - 0x14], 0xa
+         mov    [rbp - 0x14], 0xa
          0x100000f39 <+41>: movl   $0xa, -0x18(%rbp)
          0x100000f40 <+48>: movl   -0x14(%rbp), %edi
          0x100000f43 <+51>: addl   -0x18(%rbp), %edi
@@ -222,12 +295,12 @@ int main(int argc, const char * argv[]) {
          */
         
         /*
-        int a = 10;
-        if (a > 10) {
-            NSLog(@"1");
-        } else {
-            NSLog(@"2");
-        }
+         int a = 10;
+         if (a > 10) {
+         NSLog(@"1");
+         } else {
+         NSLog(@"2");
+         }
          0x100000f0b <+27>:  movl   $0xa, -0x14(%rbp)
          0x100000f12 <+34>:  cmpl   $0xa, -0x14(%rbp)
          0x100000f16 <+38>:  movq   %rax, -0x20(%rbp)
@@ -276,9 +349,9 @@ int main(int argc, const char * argv[]) {
          */
         
         /*
-        for (int i = 0; i < 5; i++) {
-            NSLog(@"1");
-        }
+         for (int i = 0; i < 5; i++) {
+         NSLog(@"1");
+         }
          0x100000f1b <+27>: movl   $0x0, -0x14(%rbp)
          0x100000f22 <+34>: movq   %rax, -0x20(%rbp)
          0x100000f26 <+38>: cmpl   $0x5, -0x14(%rbp)
@@ -292,6 +365,152 @@ int main(int argc, const char * argv[]) {
          0x100000f47 <+71>: movl   %eax, -0x14(%rbp)
          0x100000f4a <+74>: jmp    0x100000f26               ; <+38> at main.m:278:27
          */
-    }
+        
+        /*
+         int a = 4;
+         if (a == 1) {
+             NSLog(@"1");
+         } else if (a == 2) {
+             NSLog(@"2");
+         } else if (a == 3) {
+             NSLog(@"3");
+         } else if (a == 4) {
+             NSLog(@"4");
+         } else if (a == 5) {
+             NSLog(@"5");
+         } else {
+             NSLog(@"else");
+         }
+         0x100000e6b <+27>:  movl   $0x4, -0x14(%rbp)
+         0x100000e72 <+34>:  cmpl   $0x1, -0x14(%rbp)
+         0x100000e76 <+38>:  movq   %rax, -0x20(%rbp)
+         0x100000e7a <+42>:  jne    0x100000e96               ; <+70> at main.m:300:22
+         0x100000e80 <+48>:  leaq   0x1a1(%rip), %rax         ; @"'1'"
+         0x100000e87 <+55>:  movq   %rax, %rdi
+         0x100000e8a <+58>:  movb   $0x0, %al
+         0x100000e8c <+60>:  callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000e91 <+65>:  jmp    0x100000f3b               ; <+235> at main.m:376:5
+         0x100000e96 <+70>:  cmpl   $0x2, -0x14(%rbp)
+         0x100000e9a <+74>:  jne    0x100000eb6               ; <+102> at main.m:302:22
+         0x100000ea0 <+80>:  leaq   0x1a1(%rip), %rax         ; @"'2'"
+         0x100000ea7 <+87>:  movq   %rax, %rdi
+         0x100000eaa <+90>:  movb   $0x0, %al
+         0x100000eac <+92>:  callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000eb1 <+97>:  jmp    0x100000f36               ; <+230> at main.m
+         0x100000eb6 <+102>: cmpl   $0x3, -0x14(%rbp)
+         0x100000eba <+106>: jne    0x100000ed6               ; <+134> at main.m:304:22
+         0x100000ec0 <+112>: leaq   0x1a1(%rip), %rax         ; @"'3'"
+         0x100000ec7 <+119>: movq   %rax, %rdi
+         0x100000eca <+122>: movb   $0x0, %al
+         0x100000ecc <+124>: callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000ed1 <+129>: jmp    0x100000f31               ; <+225> at main.m
+         0x100000ed6 <+134>: cmpl   $0x4, -0x14(%rbp)
+         0x100000eda <+138>: jne    0x100000ef6               ; <+166> at main.m:306:22
+         0x100000ee0 <+144>: leaq   0x1a1(%rip), %rax         ; @"'4'"
+         0x100000ee7 <+151>: movq   %rax, %rdi
+         0x100000eea <+154>: movb   $0x0, %al
+         0x100000eec <+156>: callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000ef1 <+161>: jmp    0x100000f2c               ; <+220> at main.m
+         0x100000ef6 <+166>: cmpl   $0x5, -0x14(%rbp)
+         0x100000efa <+170>: jne    0x100000f16               ; <+198> at main.m
+         0x100000f00 <+176>: leaq   0x1a1(%rip), %rax         ; @"'5'"
+         0x100000f07 <+183>: movq   %rax, %rdi
+         0x100000f0a <+186>: movb   $0x0, %al
+         0x100000f0c <+188>: callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000f11 <+193>: jmp    0x100000f27               ; <+215> at main.m
+         0x100000f16 <+198>: leaq   0x1ab(%rip), %rax         ; @"else"
+         0x100000f1d <+205>: movq   %rax, %rdi
+         0x100000f20 <+208>: movb   $0x0, %al
+         0x100000f22 <+210>: callq  0x100000f4c               ; symbol stub for: NSLog
+         0x100000f27 <+215>: jmp    0x100000f2c               ; <+220> at main.m
+         0x100000f2c <+220>: jmp    0x100000f31               ; <+225> at main.m
+         0x100000f31 <+225>: jmp    0x100000f36               ; <+230> at main.m
+         0x100000f36 <+230>: jmp    0x100000f3b               ; <+235> at main.m:376:5
+         */
+        
+        /*
+        int a = 4;
+        switch (a) {
+            case 1:
+                NSLog(@"1");
+                break;
+            case 2:
+                NSLog(@"2");
+                break;
+            case 3:
+                NSLog(@"3");
+                break;
+            case 4:
+                NSLog(@"4");
+                break;
+            case 5:
+                NSLog(@"5");
+                break;
+            default:
+                break;
+        }
+         0x100000e8b <+27>:  movl   $0x4, -0x14(%rbp)
+         0x100000e92 <+34>:  movl   -0x14(%rbp), %edi
+         0x100000e95 <+37>:  decl   %edi
+         0x100000e97 <+39>:  movl   %edi, %esi
+         0x100000e99 <+41>:  subl   $0x4, %edi
+         0x100000e9c <+44>:  movq   %rax, -0x20(%rbp)
+         0x100000ea0 <+48>:  movq   %rsi, -0x28(%rbp)
+         0x100000ea4 <+52>:  movl   %edi, -0x2c(%rbp)
+         -> 0x100000ea7 <+55>:  ja     0x100000f2f               ; <+191> at main.m:377:17
+         0x100000ead <+61>:  leaq   0x94(%rip), %rax          ; main + 216
+         0x100000eb4 <+68>:  movq   -0x28(%rbp), %rcx
+                             (lldb) po/d $rcx -> 3 //变量和最小条件的差值
+         0x100000eb8 <+72>:  movslq (%rax,%rcx,4), %rdx
+                             mov    rax, [rax + rcx * 4] //连续的地址 空间换时间
+         0x100000ebc <+76>:  addq   %rax, %rdx
+         0x100000ebf <+79>:  jmpq   *%rdx
+                             (lldb) po/x $rdx -> 0x0000000100000f03
+         0x100000ec1 <+81>:  leaq   0x160(%rip), %rax         ; @"'1'"
+         0x100000ec8 <+88>:  movq   %rax, %rdi
+         0x100000ecb <+91>:  movb   $0x0, %al
+         0x100000ecd <+93>:  callq  0x100000f5c               ; symbol stub for: NSLog
+         0x100000ed2 <+98>:  jmp    0x100000f34               ; <+196> at main.m:382:5
+         0x100000ed7 <+103>: leaq   0x16a(%rip), %rax         ; @"'2'"
+         0x100000ede <+110>: movq   %rax, %rdi
+         0x100000ee1 <+113>: movb   $0x0, %al
+         0x100000ee3 <+115>: callq  0x100000f5c               ; symbol stub for: NSLog
+         0x100000ee8 <+120>: jmp    0x100000f34               ; <+196> at main.m:382:5
+         0x100000eed <+125>: leaq   0x174(%rip), %rax         ; @"'3'"
+         0x100000ef4 <+132>: movq   %rax, %rdi
+         0x100000ef7 <+135>: movb   $0x0, %al
+         0x100000ef9 <+137>: callq  0x100000f5c               ; symbol stub for: NSLog
+         0x100000efe <+142>: jmp    0x100000f34               ; <+196> at main.m:382:5
+         0x100000f03 <+147>: leaq   0x17e(%rip), %rax         ; @"'4'"
+         0x100000f0a <+154>: movq   %rax, %rdi
+         0x100000f0d <+157>: movb   $0x0, %al
+         0x100000f0f <+159>: callq  0x100000f5c               ; symbol stub for: NSLog
+         0x100000f14 <+164>: jmp    0x100000f34               ; <+196> at main.m:382:5
+         0x100000f19 <+169>: leaq   0x188(%rip), %rax         ; @"'5'"
+         0x100000f20 <+176>: movq   %rax, %rdi
+         0x100000f23 <+179>: movb   $0x0, %al
+         0x100000f25 <+181>: callq  0x100000f5c               ; symbol stub for: NSLog
+         0x100000f2a <+186>: jmp    0x100000f34               ; <+196> at main.m:382:5
+         0x100000f2f <+191>: jmp    0x100000f34               ; <+196> at main.m:382:5
+         */
+        
+        /*
+        NSLog(@"%d", sum6(1, 2));
+        AT&T`sum6:
+        0x100000f52 <+0>: movq   %rdi, %rax
+        0x100000f55 <+3>: addq   %rsi, %rax
+        0x100000f58 <+6>: retq
+         */
+        
+        int num1 = 1;
+        int num2 = 2;
+        int result;
+        __asm__(
+            "addq %%rbx, %%rax"
+                : "=a"(result)
+                : "a"(num1), "b"(num2)
+        );
+        NSLog(@"%d", result);
+     }
     return 0;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1488D9E0226D644A00DED39B /* sum.s in Sources */ = {isa = PBXBuildFile; fileRef = 1488D9DF226D644A00DED39B /* sum.s */; };
 		14AD44F7226C70B20084468A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AD44F6226C70B20084468A /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1488D9DE226D643300DED39B /* sum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sum.h; sourceTree = "<group>"; };
+		1488D9DF226D644A00DED39B /* sum.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = sum.s; sourceTree = "<group>"; };
 		14AD44F3226C70B20084468A /* AT&T */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AT&T"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AD44F6226C70B20084468A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				14AD44F6226C70B20084468A /* main.m */,
+				1488D9DE226D643300DED39B /* sum.h */,
+				1488D9DF226D644A00DED39B /* sum.s */,
 			);
 			path = "AT&T";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14AD44F7226C70B20084468A /* main.m in Sources */,
+				1488D9E0226D644A00DED39B /* sum.s in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
