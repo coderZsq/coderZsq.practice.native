@@ -15,8 +15,8 @@ void haha() {
     int b = 3;
 }
 
-//void hehe() {
-//    int a = 4;
-//    int b = 5;
-//    haha();
-//}
+void hehe() {
+    int a = 4;
+    int b = 5;
+    haha();
+}

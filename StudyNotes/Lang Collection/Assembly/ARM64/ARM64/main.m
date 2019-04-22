@@ -131,6 +131,7 @@ int main(int argc, char * argv[]) {
          int a = 8;
          mov x2 0x000000016fa9792c
          -> ldp w0, w1, [x2, #0x10]
+         
          (lldb) p &a
          (int *) $0 = 0x000000016fa9792c
          (lldb) c
@@ -197,6 +198,15 @@ int main(int argc, char * argv[]) {
          (lldb) si
          
          0x1008d67d4 <+36>:  orr    w0, wzr, #0x2
+         */
+        
+        /*
+         fp / x29 堆栈指针
+         
+         (lldb) register read fp
+         fp = 0x000000016f723940
+         (lldb) register read x29
+         fp = 0x000000016f723940
          */
         
         test();

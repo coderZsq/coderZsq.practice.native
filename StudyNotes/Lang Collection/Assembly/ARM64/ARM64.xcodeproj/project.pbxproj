@@ -14,8 +14,6 @@
 		14CA47C4226D688A00B4A7B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CA47C2226D688A00B4A7B3 /* LaunchScreen.storyboard */; };
 		14CA47C7226D688A00B4A7B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA47C6226D688A00B4A7B3 /* main.m */; };
 		14CA47CE226D6B8E00B4A7B3 /* arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 14CA47CD226D6B8E00B4A7B3 /* arm.s */; };
-		14CA47D4226D9B3600B4A7B3 /* CTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 14CA47D3226D9B3600B4A7B3 /* CTest.c */; };
-		14CA47D6226D9C1E00B4A7B3 /* CTest.s in Sources */ = {isa = PBXBuildFile; fileRef = 14CA47D5226D9C1E00B4A7B3 /* CTest.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,8 +155,6 @@
 				14CA47BC226D688900B4A7B3 /* ViewController.m in Sources */,
 				14CA47C7226D688A00B4A7B3 /* main.m in Sources */,
 				14CA47CE226D6B8E00B4A7B3 /* arm.s in Sources */,
-				14CA47D6226D9C1E00B4A7B3 /* CTest.s in Sources */,
-				14CA47D4226D9B3600B4A7B3 /* CTest.c in Sources */,
 				14CA47B9226D688900B4A7B3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
