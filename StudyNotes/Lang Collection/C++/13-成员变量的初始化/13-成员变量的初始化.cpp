@@ -1,8 +1,23 @@
-﻿// 13-成员变量的初始化.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// 13-成员变量的初始化.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 using namespace std;
+
+void test() {
+//    int *p = new int();
+//    memset(p, 1, 4);
+//    // 0000 0001 0000 0001 0000 0001 0000 0001
+//    cout << *p << endl;
+//
+//    int *p = (int *) malloc(8);
+//    free(p);
+    
+//    int *p = (int *)malloc(2);
+//    *p = 5;
+    
+    // 0000 0000 0000 0000 0000 0000 0000 0101
+}
 
 struct Person
 {
