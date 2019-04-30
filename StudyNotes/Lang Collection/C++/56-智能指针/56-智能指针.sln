@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "56-智能指针", "56-智能指针.vcxproj", "{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Debug|x64.ActiveCfg = Debug|x64
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Debug|x64.Build.0 = Debug|x64
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Debug|x86.ActiveCfg = Debug|Win32
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Debug|x86.Build.0 = Debug|Win32
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Release|x64.ActiveCfg = Release|x64
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Release|x64.Build.0 = Release|x64
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Release|x86.ActiveCfg = Release|Win32
+		{F7E7BBD4-C70D-4D9A-8DFC-4C29A129E829}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {881BB4F5-5D1A-41CF-BBD1-EFBB797D47B1}
+	EndGlobalSection
+EndGlobal
