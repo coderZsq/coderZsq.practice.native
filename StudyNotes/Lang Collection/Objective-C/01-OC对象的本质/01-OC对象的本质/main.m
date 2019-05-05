@@ -10,6 +10,12 @@
 #import <objc/runtime.h>
 #import <malloc/malloc.h>
 
+/*
+ 一个NSObject对象占用多少内存
+ 系统分配了16个字节给NSObject对象 (通过malloc_size函数获得)
+ 但NSObject对象内部只使用了8个字节的空间 (64bit环境下, 可以通过class_getInstanceSize函数获得)
+ */
+
 struct NSObject_IMPL {
     Class isa;
 };
@@ -201,11 +207,6 @@ void _Student() {
 //typedef struct objc_class *Class;
 
 void _NSObject() {
-    /*
-     一个NSObject对象占用多少内存
-     系统分配了16个字节给NSObject对象 (通过malloc_size函数获得)
-     但NSObject对象内部只使用了8个字节的空间 (64bit环境下, 可以通过class_getInstanceSize函数获得)
-     */
     NSObject *obj = [[NSObject alloc] init];
     // 41 F1 12 AF FF FF 1D 00
     // 00 00 00 00 00 00 00 00
