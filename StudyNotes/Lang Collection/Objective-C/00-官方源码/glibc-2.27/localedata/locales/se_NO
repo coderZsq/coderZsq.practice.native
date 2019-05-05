@@ -1,0 +1,323 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Northern Saami Language Locale for Norway
+% Source: http://www.hum.uit.no/a/trond/loc.html
+% Contact: Børre Gaup
+% Email: boerre.gaup@pc.nu
+% Language: se
+% Territory: NO
+% Revision: 0.1
+% Date: 2001-11-03
+% Application: general
+% Users: general
+
+LC_IDENTIFICATION
+title "Northern Saami language locale for Norway"
+source "http:////www.hum.uit.no//a//trond//loc.html"
+address ""
+contact "B<U00F8>rre Gaup"
+email "boerre.gaup@pc.nu"
+tel ""
+fax ""
+language "Northern Sami"
+territory "Norway"
+revision "0.1"
+date "2001-11-09"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+END LC_IDENTIFICATION
+
+
+LC_COLLATE
+copy "iso14651_t1"
+
+collating-symbol <aring>
+collating-symbol <atilde>
+collating-symbol <acircumflex>
+collating-symbol <agrave>
+collating-symbol <aacute>
+collating-symbol <noae>
+collating-symbol <svae>
+collating-symbol <ccedilla>
+collating-symbol <ccaron>
+collating-symbol <ezh>
+collating-symbol <ezhcaron>
+collating-symbol <dstroke>
+collating-symbol <eth>
+collating-symbol <fhook>
+collating-symbol <gcaron>
+collating-symbol <gstroke>
+collating-symbol <kcaron>
+collating-symbol <otilde>
+collating-symbol <oe>
+collating-symbol <ssharp>
+collating-symbol <scaron>
+collating-symbol <oumlaut>
+collating-symbol <oslash>
+
+%
+reorder-after <CAP>
+<MIN>
+
+reorder-after <a>
+<agrave>
+<atilde>
+<aacute>
+<acircumflex>
+
+
+reorder-after <c>
+<ccaron>
+<ccedilla>
+<ezh>
+<ezhcaron>
+
+reorder-after <d>
+<dstroke>
+<eth>
+
+reorder-after <f>
+<fhook>
+
+reorder-after <g>
+<gcaron>
+<gstroke>
+
+reorder-after <k>
+<kcaron>
+
+reorder-after <s>
+<ssharp>
+<scaron>
+
+reorder-after <th>
+<noae>
+<oslash>
+<aring>
+<svae>
+<oumlaut>
+
+reorder-after <U0061>
+<U00E0> <agrave>;<GRA>;<MIN>;IGNORE % 201 à
+<U00E1> <aacute>;<ACA>;<MIN>;IGNORE % 200 á
+<U00E2> <acircumflex>;<CIR>;<MIN>;IGNORE % 202 â
+<U00E3> <atilde>;<TIL>;<MIN>;IGNORE % 203 ã
+
+reorder-after <U0041>
+<U00C0> <agrave>;<GRA>;<CAP>;IGNORE % 321 À
+<U00C1> <aacute>;<ACA>;<CAP>;IGNORE % 320 Á
+<U00C2> <acircumflex>;<CIR>;<CAP>;IGNORE % 322 Â
+<U00C3> <atilde>;<TIL>;<CAP>;IGNORE % 323 Ã
+
+reorder-after <U0063>
+<U00E7> <ccedilla>;<CDI>;<MIN>;IGNORE % 212 ç
+<U010D> <ccaron>;<CAR>;<MIN>;IGNORE % 215 <c<>
+
+reorder-after <U0043>
+<U00C7> <ccedilla>;<CDI>;<CAP>;IGNORE % 332 Ç
+<U010C> <ccaron>;<CAR>;<CAP>;IGNORE % 335 <C<>
+
+reorder-after <U010B>
+<U0292> <ezh>;<BAS>;<MIN>;IGNORE % ezh
+<U01EF> <ezhcaron>;<CAR>;<MIN>;IGNORE % ezh caron
+
+reorder-after <U010A>
+<U01B7> <ezh>;<BAS>;<MIN>;IGNORE % EZH
+<U01EE> <ezhcaron>;<CAR>;<CAP>;IGNORE % EZH caron
+
+reorder-after <U0064>
+<U00F0> <eth>;<PCL>;<MIN>;IGNORE % 218 ð
+<U0111> <dstroke>;<OBL>;<MIN>;IGNORE % 220 <d//>
+
+reorder-after <U0044>
+<U00D0> <eth>;<PCL>;<CAP>;IGNORE % 338 Ð
+<U0110> <dstroke>;<OBL>;<CAP>;IGNORE % 340 <D//>
+
+reorder-after <U0066>
+<U0192> <fhook>;<BAS>;<MIN>;IGNORE % f WITH HOOK
+
+reorder-after <U0123>
+<U01E7> <gcaron>;<CAR>;<MIN>;IGNORE % gcaron
+<U01E5> <gstroke>;<OBL>;<MIN>;IGNORE % gstroke
+
+reorder-after <U0122>
+<U01E6> <gcaron>;<CAR>;<MIN>;IGNORE % Gcaron
+<U01E4> <gstroke>;<OBL>;<MIN>;IGNORE % Gstroke
+
+reorder-after <U0137>
+<U01E9> <kcaron>;<CAR>;<MIN>;IGNORE % kcaron
+reorder-after <U0136>
+<U01E8> <kcaron>;<CAR>;<CAP>;IGNORE % Kcaron
+
+reorder-after <U0053>
+<U00DF> <ssharp>;"<LIG><LIG>";"<MIN><MIN>";IGNORE % ß
+<U0161> <scaron>;<CAR>;<MIN>;IGNORE % 288 <s<>
+<U0160> <scaron>;<CAR>;<CAP>;IGNORE % 405 <S<>
+
+
+reorder-after <U00E3>
+<U00E4> <svae>;<REU>;<MIN>;IGNORE % ä
+<U00E5> <aring>;<RNE>;<MIN>;IGNORE % å
+<U00E6> <noae>;<LIG>;<MIN>;IGNORE % æ
+reorder-after <U00F5>
+<U00F6> <oumlaut>;<REU>;<MIN>;IGNORE % ö
+<U00F8> <oslash>;<OBL>;<MIN>;IGNORE % ø
+
+reorder-after <U00C3>
+<U00C4> <svae>;<REU>;<CAP>;IGNORE % Ä
+<U00C5> <aring>;<RNE>;<CAP>;IGNORE % Å
+<U00C6> <noae>;<LIG>;<CAP>;IGNORE % Æ
+reorder-after <U00D5>
+<U00D6> <oumlaut>;<REU>;<CAP>;IGNORE % Ö
+<U00D8> <oslash>;<OBL>;<CAP>;IGNORE % Ø
+
+% ü/Ü is treated like y/Y but is sorted after the latter
+reorder-after <U00FB>
+<U00FC> <y>;<REU>;<MIN>;IGNORE % ü
+reorder-after <U00DB>
+<U00DC> <y>;<REU>;<CAP>;IGNORE % Ü
+reorder-end
+
+END LC_COLLATE
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include  "translit_combining";""
+translit_end
+END LC_CTYPE
+
+LC_MONETARY
+int_curr_symbol         "NOK "
+currency_symbol         "kr"
+mon_decimal_point       ","
+mon_thousands_sep       "."
+mon_grouping            3;3
+positive_sign           ""
+negative_sign           "-"
+int_frac_digits         2
+frac_digits             2
+p_cs_precedes           1
+p_sep_by_space          0
+n_cs_precedes           1
+n_sep_by_space          0
+p_sign_posn             4
+n_sign_posn             4
+END LC_MONETARY
+
+LC_NUMERIC
+decimal_point           ","
+thousands_sep           "."
+grouping                3;3
+END LC_NUMERIC
+
+
+LC_TIME
+abday       "sotn";"vuos";/
+	    "ma<U014B>";"gask";/
+	    "duor";"bear";/
+	    "l<U00E1>v"
+day         "sotnabeaivi";/
+            "vuoss<U00E1>rga";/
+            "ma<U014B><U014B>ebarga";/
+            "gaskavahkku";/
+            "duorasdat";/
+            "bearjadat";/
+            "l<U00E1>vvardat"
+abmon       "o<U0111><U0111>j";"guov";/
+            "njuk";"cuo<U014B>";/
+            "mies";"geas";/
+            "suoi";"borg";/
+            "<U010D>ak<U010D>";"golg";/
+            "sk<U00E1>b";"juov"
+mon         "o<U0111><U0111>ajagem<U00E1>nnu";/
+	    "guovvam<U00E1>nnu";/
+            "njuk<U010D>am<U00E1>nnu";/
+	    "cuo<U014B>om<U00E1>nnu";/
+            "miessem<U00E1>nnu";/
+	    "geassem<U00E1>nnu";/
+            "suoidnem<U00E1>nnu";/
+            "borgem<U00E1>nnu";/
+            "<U010D>ak<U010D>am<U00E1>nnu";/
+	    "golggotm<U00E1>nnu";/
+            "sk<U00E1>bmam<U00E1>nnu";/
+            "juovlam<U00E1>nnu"
+% usual date representation
+% Linjen nedenfor er: %a, %b %e b. %Y %T %Z
+% f.eks. bear, geas 14. b. 2001 21:15:11 CEST
+d_t_fmt     "%a, %b %e. b. %Y %T %Z"
+%Linjen nedenfor er: %Y-%m-%d
+%f.eks 2001-04-26
+d_fmt       "%Y-%m-%d"
+t_fmt       "%T"
+am_pm       "";""
+t_fmt_ampm  ""
+
+% Denne linjen vil gi f.eks.:
+% duorasdat, borgem<U00E1>nu 23. b. 2001 00:47:57 CEST
+date_fmt       "%A, %B %d. b. %Y %H:%M:%S %Z"
+
+% %a %b-%e %H:%M:%S %Z %Y søn jan-31 21:15:11 CET 2001
+week 7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_MESSAGES
+yesexpr "^[+1JjYy]"
+noexpr  "^[-0IiNn]"
+yesstr  "jo"
+nostr   "ii"
+END LC_MESSAGES
+
+
+LC_PAPER
+copy "i18n"
+END LC_PAPER
+
+LC_TELEPHONE
+tel_int_fmt    "+%c %l"
+tel_dom_fmt    "%l"
+int_select     "00"
+int_prefix     "47"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "i18n"
+END LC_MEASUREMENT
+
+LC_NAME
+name_fmt    "%d%t%g%t%m%t%f"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+country_name "Norga"
+country_ab2 "NO"
+country_ab3 "NOR"
+country_num 578
+country_car "N"
+% davvisámegiella
+lang_name    "davvis<U00E1>megiella"
+lang_ab      "se"
+lang_term    "sme"
+lang_lib    "sme"
+END LC_ADDRESS

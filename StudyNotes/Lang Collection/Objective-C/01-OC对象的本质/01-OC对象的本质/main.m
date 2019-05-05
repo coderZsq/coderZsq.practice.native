@@ -42,7 +42,21 @@ struct SQPerson_IMPL {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"%zd", sizeof(struct SQPerson_IMPL)); //24
-
+        
+        // gnu的全称是gnu is not unix, 开源组织
+        
+//#define MALLOC_ALIGNMENT (2 * SIZE_SZ < __alignof__ (long double) \
+//? __alignof__ (long double) : 2 * SIZE_SZ)
+//
+//#define SIZE_SZ (sizeof (INTERNAL_SIZE_T))
+//
+//#ifndef INTERNAL_SIZE_T
+//# define INTERNAL_SIZE_T size_t
+//#endif
+        
+        NSLog(@"%zd", sizeof(size_t)); //8
+        NSLog(@"%zd", sizeof(__alignof__ (long double))); //8
+        
         SQPerson *p = [[SQPerson alloc] init];
         // 79 15 00 00 01 80 1D 00
         // 00 00 00 00 00 00 00 00
@@ -50,41 +64,41 @@ int main(int argc, const char * argv[]) {
         // 00 00 00 00 00 00 00 00
         
         /*
-         void *
-         calloc(size_t num_items, size_t size)
-         {
-         void *retval;
-         retval = malloc_zone_calloc(default_zone, num_items, size);
-         if (retval == NULL) {
-         errno = ENOMEM;
-         }
-         return retval;
-         }
-         
-         void *
-         malloc_zone_calloc(malloc_zone_t *zone, size_t num_items, size_t size)
-         {
-         void *ptr;
-         size_t alloc_size;
-         if (malloc_check_start && (malloc_check_counter++ >= malloc_check_start)) {
-         internal_check();
-         }
-         if (os_mul_overflow(num_items, size, &alloc_size) || alloc_size > MALLOC_ABSOLUTE_MAX_SIZE){
-         errno = ENOMEM;
-         return NULL;
-         }
-         
-         ptr = zone->calloc(zone, num_items, size);
-         
-         if (malloc_logger) {
-         malloc_logger(MALLOC_LOG_TYPE_ALLOCATE | MALLOC_LOG_TYPE_HAS_ZONE | MALLOC_LOG_TYPE_CLEARED, (uintptr_t)zone,
-         (uintptr_t)(num_items * size), 0, (uintptr_t)ptr, 0);
-         }
-         return ptr;
-         }
-         
-         #define NANO_MAX_SIZE            256  //Buckets sized {16, 32, 48, 64, 80, 96, 112, ...}
-         */
+        void *
+        calloc(size_t num_items, size_t size)
+        {
+            void *retval;
+            retval = malloc_zone_calloc(default_zone, num_items, size);
+            if (retval == NULL) {
+                errno = ENOMEM;
+            }
+            return retval;
+        }
+        
+        void *
+        malloc_zone_calloc(malloc_zone_t *zone, size_t num_items, size_t size)
+        {
+            void *ptr;
+            size_t alloc_size;
+            if (malloc_check_start && (malloc_check_counter++ >= malloc_check_start)) {
+                internal_check();
+            }
+            if (os_mul_overflow(num_items, size, &alloc_size) || alloc_size > MALLOC_ABSOLUTE_MAX_SIZE){
+                errno = ENOMEM;
+                return NULL;
+            }
+            
+            ptr = zone->calloc(zone, num_items, size);
+            
+            if (malloc_logger) {
+                malloc_logger(MALLOC_LOG_TYPE_ALLOCATE | MALLOC_LOG_TYPE_HAS_ZONE | MALLOC_LOG_TYPE_CLEARED, (uintptr_t)zone,
+                              (uintptr_t)(num_items * size), 0, (uintptr_t)ptr, 0);
+            }
+            return ptr;
+        }
+        
+#define NANO_MAX_SIZE            256  //Buckets sized {16, 32, 48, 64, 80, 96, 112, ...}
+        */
         NSLog(@"%zd - %zd",
               class_getInstanceSize([SQPerson class]), //24
               malloc_size((__bridge const void *)p)); //32
@@ -228,101 +242,101 @@ void _NSObject() {
      */
     
     /*
-     id
-     _objc_rootAllocWithZone(Class cls, malloc_zone_t *zone)
-     {
-     id obj;
-     
-     #if __OBJC2__
-     // allocWithZone under __OBJC2__ ignores the zone parameter
-     (void)zone;
-     obj = class_createInstance(cls, 0);
-     #else
-     if (!zone) {
-     obj = class_createInstance(cls, 0);
-     }
-     else {
-     obj = class_createInstanceFromZone(cls, 0, zone);
-     }
-     #endif
-     
-     if (slowpath(!obj)) obj = callBadAllocHandler(cls);
-     return obj;
-     }
-     
-     id
-     class_createInstance(Class cls, size_t extraBytes)
-     {
-     return _class_createInstanceFromZone(cls, extraBytes, nil);
-     }
-     
-     static __attribute__((always_inline))
-     id
-     _class_createInstanceFromZone(Class cls, size_t extraBytes, void *zone,
-     bool cxxConstruct = true,
-     size_t *outAllocatedSize = nil)
-     {
-     if (!cls) return nil;
-     
-     assert(cls->isRealized());
-     
-     // Read class's info bits all at once for performance
-     bool hasCxxCtor = cls->hasCxxCtor();
-     bool hasCxxDtor = cls->hasCxxDtor();
-     bool fast = cls->canAllocNonpointer();
-     
-     size_t size = cls->instanceSize(extraBytes);
-     if (outAllocatedSize) *outAllocatedSize = size;
-     
-     id obj;
-     if (!zone  &&  fast) {
-     obj = (id)calloc(1, size);
-     if (!obj) return nil;
-     obj->initInstanceIsa(cls, hasCxxDtor);
-     }
-     else {
-     if (zone) {
-     obj = (id)malloc_zone_calloc ((malloc_zone_t *)zone, 1, size);
-     } else {
-     obj = (id)calloc(1, size);
-     }
-     if (!obj) return nil;
-     
-     // Use raw pointer isa on the assumption that they might be
-     // doing something weird with the zone or RR.
-     obj->initIsa(cls);
-     }
-     
-     if (cxxConstruct && hasCxxCtor) {
-     obj = _objc_constructOrFree(obj, cls);
-     }
-     
-     return obj;
-     }
-     
-     size_t instanceSize(size_t extraBytes) {
-     size_t size = alignedInstanceSize() + extraBytes;
-     // CF requires all objects be at least 16 bytes.
-     if (size < 16) size = 16;
-     return size;
-     }
-     */
+    id
+    _objc_rootAllocWithZone(Class cls, malloc_zone_t *zone)
+    {
+        id obj;
+        
+#if __OBJC2__
+        // allocWithZone under __OBJC2__ ignores the zone parameter
+        (void)zone;
+        obj = class_createInstance(cls, 0);
+#else
+        if (!zone) {
+            obj = class_createInstance(cls, 0);
+        }
+        else {
+            obj = class_createInstanceFromZone(cls, 0, zone);
+        }
+#endif
+        
+        if (slowpath(!obj)) obj = callBadAllocHandler(cls);
+        return obj;
+    }
+    
+    id
+    class_createInstance(Class cls, size_t extraBytes)
+    {
+        return _class_createInstanceFromZone(cls, extraBytes, nil);
+    }
+    
+    static __attribute__((always_inline))
+    id
+    _class_createInstanceFromZone(Class cls, size_t extraBytes, void *zone,
+                                  bool cxxConstruct = true,
+                                  size_t *outAllocatedSize = nil)
+    {
+        if (!cls) return nil;
+        
+        assert(cls->isRealized());
+        
+        // Read class's info bits all at once for performance
+        bool hasCxxCtor = cls->hasCxxCtor();
+        bool hasCxxDtor = cls->hasCxxDtor();
+        bool fast = cls->canAllocNonpointer();
+        
+        size_t size = cls->instanceSize(extraBytes);
+        if (outAllocatedSize) *outAllocatedSize = size;
+        
+        id obj;
+        if (!zone  &&  fast) {
+            obj = (id)calloc(1, size);
+            if (!obj) return nil;
+            obj->initInstanceIsa(cls, hasCxxDtor);
+        }
+        else {
+            if (zone) {
+                obj = (id)malloc_zone_calloc ((malloc_zone_t *)zone, 1, size);
+            } else {
+                obj = (id)calloc(1, size);
+            }
+            if (!obj) return nil;
+            
+            // Use raw pointer isa on the assumption that they might be
+            // doing something weird with the zone or RR.
+            obj->initIsa(cls);
+        }
+        
+        if (cxxConstruct && hasCxxCtor) {
+            obj = _objc_constructOrFree(obj, cls);
+        }
+        
+        return obj;
+    }
+    
+    size_t instanceSize(size_t extraBytes) {
+        size_t size = alignedInstanceSize() + extraBytes;
+        // CF requires all objects be at least 16 bytes.
+        if (size < 16) size = 16;
+        return size;
+    }
+    */
     
     // 16个字节
     
     // 获得NSObject类的实例对象的成员变量所占用的大小 >> 8
     NSLog(@"%zd", class_getInstanceSize([NSObject class]));
     /*
-     size_t class_getInstanceSize(Class cls)
-     {
-     if (!cls) return 0;
-     return cls->alignedInstanceSize();
-     }
-     //Class's ivar size rounded up to a pointer-size boundary.
-     uint32_t alignedInstanceSize() {
-     return word_align(unalignedInstanceSize());
-     }
-     */
+    size_t class_getInstanceSize(Class cls)
+    {
+        if (!cls) return 0;
+        return cls->alignedInstanceSize();
+    }
+    //Class's ivar size rounded up to a pointer-size boundary.
+    uint32_t alignedInstanceSize() {
+        return word_align(unalignedInstanceSize());
+    }
+    */
     
     // 获得obj指针所指向内存的大小 >> 16
     NSLog(@"%zd", malloc_size((__bridge const void *)obj));

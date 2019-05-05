@@ -1,0 +1,207 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Kurdish (latin) language locale for Turkey
+% Source: Kader DILSIZ
+% Contact: Kader DILSIZ, Pablo Saratxaga
+% Email: kader@ikader.com, pablo@mandrakesoft.com
+% Tel:
+% Fax:
+% Language: ku
+% Territory: TR
+% Revision: 0.1
+% Date: 2003-07-27
+% Users: general
+% History:
+
+LC_IDENTIFICATION
+title      "Kurdish (latin) locale for Turkey"
+source     "Kader DILSIZ"
+address    ""
+contact    "Kader DILSIZ, Pablo Saratxaga"
+email      "kader@ikader.com, pablo@mandrakesoft.com"
+tel        ""
+fax        ""
+language   "Kurdish"
+territory  "Turkey"
+revision   "0.1"
+date       "2003-07-27"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "tr_TR"
+END LC_CTYPE
+
+LC_COLLATE
+copy "iso14651_t1"
+
+%% a b c c, d e e> f g h i i> j k l m n o p q r s s, t u u> v w x y z
+
+collating-symbol <c,>
+collating-symbol <e/>>
+collating-symbol <i.>
+collating-symbol <i/>>
+collating-symbol <s,>
+collating-symbol <u/>>
+
+reorder-after <c>
+<c,>
+reorder-after <e>
+<e/>>
+reorder-after <h>
+<i>
+<i.>
+<i/>>
+reorder-after <s>
+<s,>
+reorder-after <u>
+<u/>>
+
+reorder-after <U0063>
+<U00E7> <c,>;<CDI>;<MIN>;IGNORE
+reorder-after <U0043>
+<U00C7> <c,>;<CDI>;<CAP>;IGNORE
+
+reorder-after <U0065>
+<U00EA> <e/>>;<CIR>;<MIN>;IGNORE
+reorder-after <U0045>
+<U00CA> <e/>>;<CIR>;<CAP>;IGNORE
+
+reorder-after <U0068>
+<U0131> <i>;<BAS>;<MIN>;IGNORE
+<U0069> <i.>;<PCT>;<MIN>;IGNORE
+<U00EE> <i/>>;<CIR>;<MIN>;IGNORE
+reorder-after <U0048>
+<U0049> <i>;<BAS>;<CAP>;IGNORE
+<U0130> <i.>;<PCT>;<CAP>;IGNORE
+<U00CE> <i/>>;<CIR>;<CAP>;IGNORE
+
+reorder-after <U0073>
+<U015F> <s,>;<CDI>;<MIN>;IGNORE
+reorder-after <U0053>
+<U015E> <s,>;<CDI>;<CAP>;IGNORE
+
+reorder-after <U0075>
+<U00FB> <u/>>;<CIR>;<MIN>;IGNORE
+reorder-after <U0055>
+<U00DB> <u/>>;<CIR>;<CAP>;IGNORE
+
+reorder-end
+
+END LC_COLLATE
+
+LC_MONETARY
+copy "tr_TR"
+END LC_MONETARY
+
+LC_NUMERIC
+copy "tr_TR"
+END LC_NUMERIC
+
+LC_TIME
+abday       "y<U00EA>k";"dus";/
+            "s<U00EA>s";"<U00E7>ar";/
+            "p<U00EA>n";"<U00EE>n<U00EE>";/
+            "sep"
+day         "y<U00EA>ks<U00EA>m";/
+            "dus<U00EA>m";/
+            "s<U00EA>s<U00EA>m";/
+            "<U00E7>ars<U00EA>m";/
+            "p<U00EA>ncs<U00EA>m";/
+            "<U00EE>n<U00EE>";/
+            "sept"
+abmon       "<U00C7>il";"Sib";/
+            "Ada";"N<U00EE>s";/
+            "Gul";"Hez";/
+            "T<U00EE>r";"Teb";/
+            "<U00CE>lo";"Cot";/
+            "Mij";"Kan"
+mon         "<U00C7>ile";/
+            "Sibat";/
+            "Adar";/
+            "N<U00EE>san";/
+            "Gulan";/
+            "Hez<U00EE>ran";/
+            "T<U00EE>rmeh";/
+            "Tebax";/
+            "<U00CE>lon";/
+            "Cotmeh";/
+            "Mijdar";/
+            "Kan<U00FB>n"
+d_t_fmt  "%A %d %B %Y %T %Z"
+d_fmt   "%d//%m//%Y"
+t_fmt       "%T"
+am_pm       "";""
+t_fmt_ampm  ""
+% format: %A %d %B %Y
+date_fmt  "%A %d %B %Y"
+week 7;19971130;1
+first_weekday 2
+END LC_TIME
+
+LC_MESSAGES
+yesexpr "^[+1eEdDyY]"
+noexpr  "^[-0nN]"
+yesstr  "er<U00EA>"
+nostr   "n<U00E2>"
+END LC_MESSAGES
+
+LC_PAPER
+copy "tr_TR"
+END LC_PAPER
+
+LC_TELEPHONE
+copy "tr_TR"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "tr_TR"
+END LC_MEASUREMENT
+
+LC_NAME
+name_fmt    "%d%t%g%t%m%t%f"
+% TODO
+% Sayın
+name_gen    "Say<U0131>n"
+name_mr     "M."
+name_mrs    "Jne"
+name_ms     "Jne"
+% "Kc,k"
+name_miss   "K<U00E7>k"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+% TODO
+country_name "Turkey"
+country_post "TR"
+country_ab2  "TR"
+country_ab3  "TUR"
+country_num  792
+country_isbn 975
+country_car    "TR"
+lang_name   "kurdi"
+lang_ab      "ku"
+lang_term    "kur"
+lang_lib     "kur"
+END LC_ADDRESS

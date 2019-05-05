@@ -1,0 +1,250 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Finnish language locale for Finland
+% sorting according to SFS 4600 (1986-06-09)
+% Source: RAP
+% Address: Sankt Jo//rgens Alle 8
+%    DK-1615 Ko//benhavn V, Danmark
+% Contact: Keld Simonsen
+% Email: Keld.Simonsen@dkuug.dk
+% Tel: +45 - 31226543
+% Fax: +45 - 33256543
+% Language: fi
+% Territory: FI
+% Revision: 4.3
+% Date: 1996-10-15
+% Application: general
+% Users: general
+%
+% Useful sources:
+%   Locale info for Finnish in Finland
+%     http://std.dkuug.dk/cultreg/registrations/narrative/fi_FI,_1.0
+
+LC_IDENTIFICATION
+title      "Finnish locale for Finland"
+source     "RAP"
+address    "Sankt J<U00F8>rgens Alle 8, DK-1615 K<U00F8>benhavn V, Danmark"
+contact    ""
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Finnish"
+territory  "Finland"
+revision   "1.0"
+date       "2000-06-29"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_MEASUREMENT
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+END LC_IDENTIFICATION
+
+LC_COLLATE
+copy "iso14651_t1"
+
+collating-symbol <a-ring>
+collating-symbol <a-diaerisis>
+collating-symbol <o-diaerisis>
+
+reorder-after <z>
+<a-ring>
+<a-diaerisis>
+<o-diaerisis>
+
+reorder-after <U007A>
+<U00E5> <a-ring>;<BAS>;<MIN>;IGNORE
+<U01FB> <a-ring>;<ACA>;<MIN>;IGNORE
+<U00E4> <a-diaerisis>;<BAS>;<MIN>;IGNORE
+<U00E6> <a-diaerisis>;<REU>;<MIN>;IGNORE
+<U01FD> <a-diaerisis>;<U01FD>;<MIN>;IGNORE
+<U01E3> <a-diaerisis>;<MAC>;<MIN>;IGNORE
+<U00F6> <o-diaerisis>;<BAS>;<MIN>;IGNORE
+<U00F8> <o-diaerisis>;<U00D8>;<MIN>;IGNORE
+<U01FF> <o-diaerisis>;<U01FF>;<MIN>;IGNORE
+<U00F5> <o-diaerisis>;<TIL>;<MIN>;IGNORE
+reorder-after <U005A>
+<U00C5> <a-ring>;<BAS>;<CAP>;IGNORE
+<U01FA> <a-ring>;<ACA>;<CAP>;IGNORE
+<U00C4> <a-diaerisis>;<BAS>;<CAP>;IGNORE
+<U00C6> <a-diaerisis>;<REU>;<CAP>;IGNORE
+<U01FC> <a-diaerisis>;<U01FD>;<CAP>;IGNORE
+<U01E2> <a-diaerisis>;<MAC>;<CAP>;IGNORE
+<U00D6> <o-diaerisis>;<BAS>;<CAP>;IGNORE
+<U00D8> <o-diaerisis>;<U00D8>;<CAP>;IGNORE
+<U01FE> <o-diaerisis>;<U01FF>;<CAP>;IGNORE
+<U00D5> <o-diaerisis>;<TIL>;<CAP>;IGNORE
+
+reorder-after <U016B>
+<U0076> <v>;<U0056>;<BAS>;<MIN>
+<U1E7D> <v>;<U0056>;<TIL>;<MIN>
+<U0077> <w>;<U0057>;<BAS>;<MIN>
+<U1E83> <w>;<U0057>;<ACA>;<MIN>
+<U1E81> <w>;<U0057>;<GRA>;<MIN>
+<U0175> <w>;<U0057>;<CIR>;<MIN>
+<U1E85> <w>;<U0057>;<REU>;<MIN>
+<U1E87> <w>;<U0057>;<PCT>;<MIN>
+reorder-after <U016A>
+<U0056> <v>;<U0056>;<BAS>;<CAP>
+<U1E7C> <v>;<U0056>;<TIL>;<CAP>
+<U0057> <w>;<U0057>;<BAS>;<CAP>
+<U1E82> <w>;<U0057>;<ACA>;<CAP>
+<U1E80> <w>;<U0057>;<GRA>;<CAP>
+<U0174> <w>;<U0057>;<CIR>;<CAP>
+<U1E84> <w>;<U0057>;<REU>;<CAP>
+<U1E86> <w>;<U0057>;<PCT>;<CAP>
+
+reorder-after <U00FF>
+<U00FC> <y>;<DTT>;<MIN>;IGNORE
+reorder-after <U0178>
+<U00DC> <y>;<DTT>;<CAP>;IGNORE
+
+%  Present in iso14651_t1, but these definitions seem to have been
+%  removed from latest iso14651 tables.
+reorder-after <U0163>
+<U00FE> "<t><h>";"<LIG><LIG>";"<MIN><MIN>";IGNORE
+reorder-after <U0162>
+<U00DE> "<t><h>";"<LIG><LIG>";"<CAP><CAP>";IGNORE
+
+reorder-after <U0064>
+<U00F0> <d>;<PCL>;<MIN>;IGNORE
+<U0111> <d>;<OBL>;<MIN>;IGNORE
+reorder-after <U0044>
+<U00D0> <d>;<PCL>;<CAP>;IGNORE
+<U0110> <d>;<OBL>;<CAP>;IGNORE
+
+reorder-end
+END LC_COLLATE
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include "translit_combining";""
+translit_end
+END LC_CTYPE
+
+LC_MONETARY
+int_curr_symbol      "EUR "
+currency_symbol      "<U20AC>"
+mon_decimal_point    ","
+mon_thousands_sep    "<U202F>"
+mon_grouping         3;3
+positive_sign        ""
+negative_sign        "-"
+int_frac_digits      2
+frac_digits          2
+p_cs_precedes        0
+p_sep_by_space       1
+n_cs_precedes        0
+n_sep_by_space       1
+p_sign_posn          1
+n_sign_posn          1
+END LC_MONETARY
+
+LC_NUMERIC
+decimal_point        ","
+thousands_sep        "<U202F>"
+grouping             3;3
+END LC_NUMERIC
+
+LC_TIME
+abday    "su";"ma";"ti";"ke";"to";"pe";"la"
+day      "sunnuntai";/
+         "maanantai";/
+         "tiistai";/
+         "keskiviikko";/
+         "torstai";/
+         "perjantai";/
+         "lauantai"
+abmon    "tammi";/
+         "helmi";/
+         "maalis";/
+         "huhti";/
+         "touko";/
+         "kes<U00E4>";/
+         "hein<U00E4>";/
+         "elo";/
+         "syys";/
+         "loka";/
+         "marras";/
+         "joulu"
+mon      "tammikuu";/
+         "helmikuu";/
+         "maaliskuu";/
+         "huhtikuu";/
+         "toukokuu";/
+         "kes<U00E4>kuu";/
+         "hein<U00E4>kuu";/
+         "elokuu";/
+         "syyskuu";/
+         "lokakuu";/
+         "marraskuu";/
+         "joulukuu"
+d_t_fmt  "%a %e. %Bta %Y %H.%M.%S"
+d_fmt    "%d.%m.%Y"
+t_fmt    "%H.%M.%S"
+am_pm    "";""
+t_fmt_ampm  ""
+date_fmt       "%a %-d.%-m.%Y %H.%M.%S %z"
+week     7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_MESSAGES
+yesexpr "^[+1KkYy]"
+noexpr  "^[-0EeNn]"
+yesstr  "kyllä"
+nostr   "ei"
+END LC_MESSAGES
+
+LC_PAPER
+copy "i18n"
+END LC_PAPER
+
+LC_TELEPHONE
+tel_dom_fmt    "(%A) %l"
+tel_int_fmt    "+%c %a %l"
+int_prefix     "358"
+int_select     "00"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "i18n"
+END LC_MEASUREMENT
+
+LC_NAME
+name_fmt    "%d%t%g%t%m%t%f"
+% Finnish equivalents for Mr/Mrs/Miss/Ms are herra/rouva/rouva/neiti
+% but they are practically never used, thus we don't define them here.
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt   "%f%N%d%N%b%N%a%N%s %h%t%e%t%r%N%z %T%N%c%N"
+country_ab2 "FI"
+country_ab3 "FIN"
+country_num 246
+country_name "Suomi"
+country_post "FI"
+country_car  "FIN"
+country_isbn 952
+lang_name    "suomi"
+lang_ab      "fi"
+lang_term    "fin"
+lang_lib     "fin"
+END LC_ADDRESS

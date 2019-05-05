@@ -1,0 +1,214 @@
+comment_char %
+escape_char /
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% Kashubian Language Locale for Poland
+% Source: csb_PL locale
+% Contact: Michal Ostrowski
+% Email: ostrowski.michal@gmail.com
+% Tel: +48586717262
+% Fax: none
+% Language: csb
+% Territory: PL
+% Revision: 1.0
+% Date: 2006-07-25
+% Application: general
+% Users: general
+
+LC_IDENTIFICATION
+title      "Kashubian locale for Poland"
+source     "csb_PL locale"
+address    ""
+contact    "Michal Ostrowski"
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Kashubian"
+territory  "Poland"
+revision   "1.0"
+date       "2006-07-25"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "pl_PL"
+END LC_CTYPE
+
+LC_COLLATE
+copy "iso14651_t1"
+
+collating-symbol <aogonek>
+collating-symbol <atilde>
+collating-symbol <eacute>
+collating-symbol <ediaeresis>
+collating-symbol <lstroke>
+collating-symbol <nacute>
+collating-symbol <ograve>
+collating-symbol <oacute>
+collating-symbol <ocircumflex>
+collating-symbol <ugrave>
+collating-symbol <zdot>
+
+reorder-after <a>
+<aogonek>
+<atilde>
+
+reorder-after <e>
+<eacute>
+<ediaeresis>
+
+reorder-after <l>
+<lstroke>
+
+reorder-after <n>
+<nacute>
+
+reorder-after <o>
+<ograve>
+<oacute>
+<ocircumflex>
+
+reorder-after <u>
+<ugrave>
+
+reorder-after <z>
+<zdot>
+
+reorder-after <U0061>
+<U0105> <aogonek>;<BAS>;<MIN>;IGNORE
+<U0104> <aogonek>;<BAS>;<CAP>;IGNORE
+<U00E3> <atilde>;<BAS>;<MIN>;IGNORE
+<U00C3> <atilde>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U0065>
+<U00E9> <eacute>;<BAS>;<MIN>;IGNORE
+<U00C9> <eacute>;<BAS>;<CAP>;IGNORE
+<U00EB> <ediaeresis>;<BAS>;<MIN>;IGNORE
+<U00CB> <ediaeresis>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U006C>
+<U0142> <lstroke>;<BAS>;<MIN>;IGNORE
+<U0141> <lstroke>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U006E>
+<U0144> <nacute>;<BAS>;<MIN>;IGNORE
+<U0143> <nacute>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U006F>
+<U00F2> <ograve>;<BAS>;<MIN>;IGNORE
+<U00D2> <ograve>;<BAS>;<CAP>;IGNORE
+<U00F3> <oacute>;<BAS>;<MIN>;IGNORE
+<U00D3> <oacute>;<BAS>;<CAP>;IGNORE
+<U00F4> <ocircumflex>;<BAS>;<MIN>;IGNORE
+<U00D4> <ocircumflex>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U0075>
+<U00F9> <ugrave>;<BAS>;<MIN>;IGNORE
+<U00D9> <ugrave>;<BAS>;<CAP>;IGNORE
+
+reorder-after <U007A>
+<U017C> <zdot>;<BAS>;<MIN>;IGNORE
+<U017B> <zdot>;<BAS>;<CAP>;IGNORE
+
+reorder-end
+
+END LC_COLLATE
+
+LC_MESSAGES
+yesexpr "^[+1JjTtYy]"
+noexpr  "^[-0nN]"
+END LC_MESSAGES
+
+LC_MONETARY
+copy "pl_PL"
+END LC_MONETARY
+
+LC_NUMERIC
+copy "pl_PL"
+END LC_NUMERIC
+
+LC_TIME
+abday   "nie"; "p<U00F2>n";/
+        "wt<U00F3>"; "str";/
+        "czw"; "pi<U0105>";/
+        "sob"
+
+day    "niedzela";/
+        "p<U00F2>niedz<U00F4><U0142>k";/
+        "wt<U00F3>rk";/
+        "strzoda";/
+        "czwi<U00F4>rtk";/
+        "pi<U0105>tk";/
+        "sob<U00F2>ta"
+abmon  "st<U00EB>"; "gro";/
+        "str"; "<U0142><U017C><U00EB>";/
+        "m<U00F4>j"; "cze";/
+        "l<U00EB>p"; "z<U00E9>l";/
+        "s<U00E9>w"; "ruj";/
+        "l<U00EB>s"; "g<U00F2>d"
+mon    "st<U00EB>cznik";/
+        "gromicznik";/
+        "str<U00EB>miannik";/
+        "<U0142><U017C><U00EB>kwi<U00F4>t";/
+        "m<U00F4>j";/
+        "czerwi<U0144>c";/
+        "l<U00EB>pinc";/
+        "z<U00E9>lnik";/
+        "s<U00E9>wnik";/
+        "rujan";/
+        "l<U00EB>stopadnik";/
+        "g<U00F2>dnik"
+d_t_fmt "%a %d %b %Y %T %Z"
+d_fmt   "%Y-%m-%d"
+t_fmt   "%T"
+am_pm   "";""
+t_fmt_ampm ""
+week    7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_PAPER
+copy "pl_PL"
+END LC_PAPER
+
+LC_TELEPHONE
+copy "pl_PL"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "pl_PL"
+END LC_MEASUREMENT
+
+LC_NAME
+copy "pl_PL"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+country_ab2 "PL"
+country_ab3 "POL"
+country_num 616
+country_car    "PL"
+% kaszëbsczi jãzëk
+lang_name    "kasz<U00EB>bsczi j<U00E3>z<U00EB>k"
+lang_term    "csb"
+lang_lib    "csb"
+END LC_ADDRESS
