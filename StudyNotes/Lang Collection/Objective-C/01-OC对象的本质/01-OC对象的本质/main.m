@@ -19,7 +19,7 @@ struct SQPerson_IMPL {
     int _age;
     int _height;
     int _no;
-};
+}; // 计算结构体大小, 内存对齐, 24
 
 @interface SQPerson : NSObject
 {
@@ -41,13 +41,53 @@ struct SQPerson_IMPL {
 // 模拟器(i386), 32bit(armv7), 64bit(arm64)
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"%zd", sizeof(struct SQPerson_IMPL));
+        NSLog(@"%zd", sizeof(struct SQPerson_IMPL)); //24
+
         SQPerson *p = [[SQPerson alloc] init];
         // 79 15 00 00 01 80 1D 00
         // 00 00 00 00 00 00 00 00
         // 00 00 00 00 00 00 00 00
         // 00 00 00 00 00 00 00 00
-        NSLog(@"%zd - %zd", class_getInstanceSize([SQPerson class]), malloc_size((__bridge const void *)p));
+        
+        /*
+         void *
+         calloc(size_t num_items, size_t size)
+         {
+         void *retval;
+         retval = malloc_zone_calloc(default_zone, num_items, size);
+         if (retval == NULL) {
+         errno = ENOMEM;
+         }
+         return retval;
+         }
+         
+         void *
+         malloc_zone_calloc(malloc_zone_t *zone, size_t num_items, size_t size)
+         {
+         void *ptr;
+         size_t alloc_size;
+         if (malloc_check_start && (malloc_check_counter++ >= malloc_check_start)) {
+         internal_check();
+         }
+         if (os_mul_overflow(num_items, size, &alloc_size) || alloc_size > MALLOC_ABSOLUTE_MAX_SIZE){
+         errno = ENOMEM;
+         return NULL;
+         }
+         
+         ptr = zone->calloc(zone, num_items, size);
+         
+         if (malloc_logger) {
+         malloc_logger(MALLOC_LOG_TYPE_ALLOCATE | MALLOC_LOG_TYPE_HAS_ZONE | MALLOC_LOG_TYPE_CLEARED, (uintptr_t)zone,
+         (uintptr_t)(num_items * size), 0, (uintptr_t)ptr, 0);
+         }
+         return ptr;
+         }
+         
+         #define NANO_MAX_SIZE            256  //Buckets sized {16, 32, 48, 64, 80, 96, 112, ...}
+         */
+        NSLog(@"%zd - %zd",
+              class_getInstanceSize([SQPerson class]), //24
+              malloc_size((__bridge const void *)p)); //32
     }
     return 0;
 }
@@ -125,12 +165,12 @@ void _Student() {
     Student1 *stu = [[Student1 alloc] init];
     stu->_no = 4;
     stu->_age = 5;
-
+    
     // D1 11 00 00 01 80 1D 00
     // 04 00 00 00 05 00 00 00
     NSLog(@"%zd", class_getInstanceSize([Student1 class]));
     NSLog(@"%zd", malloc_size((__bridge const void *)stu));
-
+    
     struct Student1_IMPL *stuImpl = (__bridge struct Student1_IMPL *)stu;
     NSLog(@"no is %d, age is %d", stuImpl->_no, stuImpl->_age);
 }
