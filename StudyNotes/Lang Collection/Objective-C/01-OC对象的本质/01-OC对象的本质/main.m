@@ -10,25 +10,63 @@
 #import <objc/runtime.h>
 #import <malloc/malloc.h>
 
-//struct Person_IMPL {
-//    struct NSObject_IMPL NSObject_IVARS;
-//    int _age;
-//    int _height;
-//};
+struct NSObject_IMPL {
+    Class isa;
+};
 
-//struct NSObject_IMPL {
-//    Class isa;
-//};
-//
+struct SQPerson_IMPL {
+    struct NSObject_IMPL NSOBJECT_IVARS;
+    int _age;
+    int _height;
+    int _no;
+};
+
+@interface SQPerson : NSObject
+{
+    int _age;
+    int _height;
+    int _no;
+}
+@end
+
+@implementation SQPerson
+
+@end
+
+// clang -rewrite-objc main.m -o main.cpp
+// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m -o main-arm64.cpp
+// 什么平台的代码
+// 不同平台支持的代码肯定是不一样的
+// Windows, Mac, iOS
+// 模拟器(i386), 32bit(armv7), 64bit(arm64)
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSLog(@"%zd", sizeof(struct SQPerson_IMPL));
+        SQPerson *p = [[SQPerson alloc] init];
+        // 79 15 00 00 01 80 1D 00
+        // 00 00 00 00 00 00 00 00
+        // 00 00 00 00 00 00 00 00
+        // 00 00 00 00 00 00 00 00
+        NSLog(@"%zd - %zd", class_getInstanceSize([SQPerson class]), malloc_size((__bridge const void *)p));
+    }
+    return 0;
+}
+
+struct Person_IMPL {
+    struct NSObject_IMPL NSObject_IVARS;
+    int _age;
+    int _height;
+};
+
 //struct Person_IMPL {
 //    struct NSObject_IMPL NSObject_IVARS; // 8
 //    int _age; // 4
 //}; // 16 内存对齐: 结构体的大小必须是最大成员大小的倍数
-//
-//struct Student_IMPL {
-//    struct Person_IMPL Person_IVARS;
-//    int _no;
-//};
+
+struct Student_IMPL {
+    struct Person_IMPL Person_IVARS;
+    int _no;
+};
 
 // Person
 @interface Person : NSObject
@@ -42,72 +80,59 @@
 
 @end
 
-//// Student
-//@interface Student : Person
-//{
-//    int _no;
-//}
-//@end
-//
-//@implementation Student
+// Student
+@interface Student : Person
+{
+    int _no;
+}
+@end
 
-//@end
+@implementation Student
 
-// clang -rewrite-objc main.m -o main.cpp
-// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m -o main-arm64.cpp
-// 什么平台的代码
-// 不同平台支持的代码肯定是不一样的
-// Windows, Mac, iOS
-// 模拟器(i386), 32bit(armv7), 64bit(arm64)
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-//        Student *stu = [[Student alloc] init];
-//        NSLog(@"stu - %zd", class_getInstanceSize([Student class]));
-//        NSLog(@"stu - %zd", malloc_size((__bridge const void *)stu));
-        
-        Person *person = [[Person alloc] init];
-        [person setHeight:10];
-        [person height];
-//        NSLog(@"person - %zd", class_getInstanceSize([Person class]));
-//        NSLog(@"person - %zd", malloc_size((__bridge const void *)person));
-    }
-    return 0;
+@end
+
+void _Person() {
+    Student *stu = [[Student alloc] init];
+    NSLog(@"stu - %zd", class_getInstanceSize([Student class]));
+    NSLog(@"stu - %zd", malloc_size((__bridge const void *)stu));
+    
+    Person *person = [[Person alloc] init];
+    [person setHeight:10];
+    [person height];
+    NSLog(@"person - %zd", class_getInstanceSize([Person class]));
+    NSLog(@"person - %zd", malloc_size((__bridge const void *)person));
 }
 
-//struct NSObject_IMPL {
-//    Class isa;
-//};
-//
-//struct Student_IMPL {
-//    //    struct NSObject_IMPL NSObject_IVARS;
-//    Class isa;
-//    int _no;
-//    int _age;
-//};
-//
-//@interface Student : NSObject
-//{
-//@public
-//    int _no;
-//    int _age;
-//}
-//@end
+struct Student1_IMPL {
+    struct NSObject_IMPL NSObject_IVARS;
+    int _no;
+    int _age;
+};
 
-//@implementation Student
-//
-//@end
+@interface Student1 : NSObject
+{
+@public
+    int _no;
+    int _age;
+}
+@end
+
+@implementation Student1
+
+@end
 
 void _Student() {
-//    Student *stu = [[Student alloc] init];
-//    stu->_no = 4;
-//    stu->_age = 5;
-//
-//    // D1 11 00 00 01 80 1D 00 04 00 00 00 05 00 00 00
-//    NSLog(@"%zd", class_getInstanceSize([Student class]));
-//    NSLog(@"%zd", malloc_size((__bridge const void *)stu));
-//
-//    struct Student_IMPL *stuImpl = (__bridge struct Student_IMPL *)stu;
-//    NSLog(@"no is %d, age is %d", stuImpl->_no, stuImpl->_age);
+    Student1 *stu = [[Student1 alloc] init];
+    stu->_no = 4;
+    stu->_age = 5;
+
+    // D1 11 00 00 01 80 1D 00
+    // 04 00 00 00 05 00 00 00
+    NSLog(@"%zd", class_getInstanceSize([Student1 class]));
+    NSLog(@"%zd", malloc_size((__bridge const void *)stu));
+
+    struct Student1_IMPL *stuImpl = (__bridge struct Student1_IMPL *)stu;
+    NSLog(@"no is %d, age is %d", stuImpl->_no, stuImpl->_age);
 }
 
 // NSObject 定义
@@ -128,7 +153,8 @@ void _NSObject() {
      但NSObject对象内部只使用了8个字节的空间 (64bit环境下, 可以通过class_getInstanceSize函数获得)
      */
     NSObject *obj = [[NSObject alloc] init];
-    // 41 F1 12 AF FF FF 1D 00 00 00 00 00 00 00 00 00
+    // 41 F1 12 AF FF FF 1D 00
+    // 00 00 00 00 00 00 00 00
     /*
      (lldb) p obj
      (NSObject *) $0 = 0x0000000100711c40
