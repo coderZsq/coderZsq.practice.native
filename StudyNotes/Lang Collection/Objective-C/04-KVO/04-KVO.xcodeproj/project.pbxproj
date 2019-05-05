@@ -29,6 +29,8 @@
 		14243633227EDEA5004FFCDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1424363A227EDECB004FFCDB /* SQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
 		1424363B227EDECB004FFCDB /* SQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
+		1424363D227EE5F0004FFCDB /* NSKVONotifying_SQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSKVONotifying_SQPerson.h; sourceTree = "<group>"; };
+		1424363E227EE5F0004FFCDB /* NSKVONotifying_SQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSKVONotifying_SQPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,8 @@
 				14243628227EDEA4004FFCDB /* ViewController.m */,
 				1424363A227EDECB004FFCDB /* SQPerson.h */,
 				1424363B227EDECB004FFCDB /* SQPerson.m */,
+				1424363D227EE5F0004FFCDB /* NSKVONotifying_SQPerson.h */,
+				1424363E227EE5F0004FFCDB /* NSKVONotifying_SQPerson.m */,
 				1424362A227EDEA4004FFCDB /* Main.storyboard */,
 				1424362D227EDEA5004FFCDB /* Assets.xcassets */,
 				1424362F227EDEA5004FFCDB /* LaunchScreen.storyboard */,

@@ -1,5 +1,5 @@
 //
-//  SQPerson.m
+//  NSKVONotifying_SQPerson.h
 //  04-KVO
 //
 //  Created by 朱双泉 on 2019/5/5.
@@ -8,14 +8,10 @@
 
 #import "SQPerson.h"
 
-@implementation SQPerson
+NS_ASSUME_NONNULL_BEGIN
 
-- (void)setAge:(int)age {
-    _age = age;
-}
-
-//- (int)age {
-//    return _age;
-//}
+@interface NSKVONotifying_SQPerson : SQPerson
 
 @end
+
+NS_ASSUME_NONNULL_END
