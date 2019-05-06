@@ -12,10 +12,27 @@
 
 - (void)setAge:(int)age {
     _age = age;
+    
+    NSLog(@"%s", __func__);
 }
 
 //- (int)age {
 //    return _age;
 //}
+
+- (void)willChangeValueForKey:(NSString *)key {
+    [super willChangeValueForKey:key];
+    
+    NSLog(@"%s", __func__);
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    
+    NSLog(@"%s - begin", __func__);
+    
+    [super didChangeValueForKey:key];
+    
+    NSLog(@"%s - end", __func__);
+}
 
 @end

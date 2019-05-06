@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQPerson : NSObject
+@interface SQPerson : NSObject {
+    @public
+    int _age;
+}
 @property (assign, nonatomic) int age;
 @property (assign, nonatomic) int height;
 @end

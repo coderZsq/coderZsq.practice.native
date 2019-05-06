@@ -14,6 +14,19 @@
     _NSSetIntValueAndNotify();
 }
 
+// 屏幕内部实现, 隐藏了NSKVONotifying_SQPerson类的存在
+- (Class)class {
+    return [SQPerson class];
+}
+
+- (void)dealloc {
+    // 收尾工作
+}
+
+- (BOOL)_isKVOA {
+    return YES;
+}
+
 void _NSSetIntValueAndNotify() {
     [self willChangeValueForKey:@"age"];
     [super setAge:age];
