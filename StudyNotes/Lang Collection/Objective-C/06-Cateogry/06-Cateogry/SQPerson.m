@@ -19,6 +19,10 @@
     NSLog(@"%s", __func__);
 }
 
++ (void)initialize {
+    NSLog(@"%s", __func__);
+}
+
 + (void)test {
     NSLog(@"%s", __func__);
 }
