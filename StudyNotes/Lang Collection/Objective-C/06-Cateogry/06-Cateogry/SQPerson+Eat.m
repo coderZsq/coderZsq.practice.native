@@ -10,6 +10,10 @@
 
 @implementation SQPerson (Eat)
 
+- (void)run {
+    NSLog(@"%s", __func__);
+}
+
 - (void)eat {
     NSLog(@"%s", __func__);
 }

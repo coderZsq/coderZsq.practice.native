@@ -8,6 +8,11 @@
 
 #import "SQPerson.h"
 
+// class extension (匿名分类/类扩展)
+//@interface SQPerson ()
+//@property (nonatomic, assign) int age;
+//@end
+
 @implementation SQPerson
 
 - (void)run {
