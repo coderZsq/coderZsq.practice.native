@@ -1,5 +1,5 @@
 //
-//  SQPerson.h
+//  SQCat.h
 //  06-Cateogry
 //
 //  Created by 朱双泉 on 2019/5/7.
@@ -10,13 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQPerson : NSObject
-
-+ (void)test;
-
-- (void)run;
-
-+ (void)run2;
+@interface SQCat : NSObject
 
 @end
 

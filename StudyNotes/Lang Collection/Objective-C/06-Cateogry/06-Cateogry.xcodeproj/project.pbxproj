@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142699852281627A00944E6F /* SQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 142699842281627A00944E6F /* SQStudent.m */; };
+		142699882281628800944E6F /* SQPerson+Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 142699872281628800944E6F /* SQPerson+Test1.m */; };
+		1426998B2281629600944E6F /* SQPerson+Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426998A2281629600944E6F /* SQPerson+Test2.m */; };
+		1426998E228162BA00944E6F /* SQStudent+Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426998D228162BA00944E6F /* SQStudent+Test1.m */; };
+		14269991228162C500944E6F /* SQStudent+Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14269990228162C500944E6F /* SQStudent+Test2.m */; };
+		1426999622816ABE00944E6F /* SQDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426999522816ABE00944E6F /* SQDog.m */; };
+		1426999922816AD600944E6F /* SQCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426999822816AD600944E6F /* SQCat.m */; };
 		142E34BC22814A8300DC3608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 142E34BB22814A8300DC3608 /* main.m */; };
 		142E34C422814AE200DC3608 /* SQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 142E34C322814AE200DC3608 /* SQPerson.m */; };
 		142E34C722814B3500DC3608 /* SQPerson+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 142E34C622814B3500DC3608 /* SQPerson+Test.m */; };
@@ -26,6 +33,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		142699832281627A00944E6F /* SQStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQStudent.h; sourceTree = "<group>"; };
+		142699842281627A00944E6F /* SQStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQStudent.m; sourceTree = "<group>"; };
+		142699862281628800944E6F /* SQPerson+Test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQPerson+Test1.h"; sourceTree = "<group>"; };
+		142699872281628800944E6F /* SQPerson+Test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQPerson+Test1.m"; sourceTree = "<group>"; };
+		142699892281629600944E6F /* SQPerson+Test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQPerson+Test2.h"; sourceTree = "<group>"; };
+		1426998A2281629600944E6F /* SQPerson+Test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQPerson+Test2.m"; sourceTree = "<group>"; };
+		1426998C228162BA00944E6F /* SQStudent+Test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQStudent+Test1.h"; sourceTree = "<group>"; };
+		1426998D228162BA00944E6F /* SQStudent+Test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQStudent+Test1.m"; sourceTree = "<group>"; };
+		1426998F228162C500944E6F /* SQStudent+Test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQStudent+Test2.h"; sourceTree = "<group>"; };
+		14269990228162C500944E6F /* SQStudent+Test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQStudent+Test2.m"; sourceTree = "<group>"; };
+		142699922281662B00944E6F /* load.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = load.cpp; sourceTree = "<group>"; };
+		1426999422816ABE00944E6F /* SQDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQDog.h; sourceTree = "<group>"; };
+		1426999522816ABE00944E6F /* SQDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQDog.m; sourceTree = "<group>"; };
+		1426999722816AD600944E6F /* SQCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQCat.h; sourceTree = "<group>"; };
+		1426999822816AD600944E6F /* SQCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQCat.m; sourceTree = "<group>"; };
 		142E34B822814A8300DC3608 /* 06-Cateogry */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "06-Cateogry"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142E34BB22814A8300DC3608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		142E34C222814AE200DC3608 /* SQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
@@ -36,7 +58,7 @@
 		142E34C922814B7900DC3608 /* SQPerson+Eat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQPerson+Eat.m"; sourceTree = "<group>"; };
 		142E34CD228151C400DC3608 /* SQPerson+Eat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SQPerson+Eat.cpp"; sourceTree = "<group>"; };
 		142E34CF228153DC00DC3608 /* SQPerson+Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SQPerson+Test.cpp"; sourceTree = "<group>"; };
-		142E34D1228156E800DC3608 /* source.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = source.cpp; sourceTree = "<group>"; };
+		142E34D1228156E800DC3608 /* category.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = category.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +92,24 @@
 			isa = PBXGroup;
 			children = (
 				142E34BB22814A8300DC3608 /* main.m */,
-				142E34D1228156E800DC3608 /* source.cpp */,
+				142E34D1228156E800DC3608 /* category.cpp */,
+				142699922281662B00944E6F /* load.cpp */,
 				142E34C222814AE200DC3608 /* SQPerson.h */,
 				142E34C322814AE200DC3608 /* SQPerson.m */,
+				142699862281628800944E6F /* SQPerson+Test1.h */,
+				142699872281628800944E6F /* SQPerson+Test1.m */,
+				142699892281629600944E6F /* SQPerson+Test2.h */,
+				1426998A2281629600944E6F /* SQPerson+Test2.m */,
+				142699832281627A00944E6F /* SQStudent.h */,
+				142699842281627A00944E6F /* SQStudent.m */,
+				1426998C228162BA00944E6F /* SQStudent+Test1.h */,
+				1426998D228162BA00944E6F /* SQStudent+Test1.m */,
+				1426998F228162C500944E6F /* SQStudent+Test2.h */,
+				14269990228162C500944E6F /* SQStudent+Test2.m */,
+				1426999422816ABE00944E6F /* SQDog.h */,
+				1426999522816ABE00944E6F /* SQDog.m */,
+				1426999722816AD600944E6F /* SQCat.h */,
+				1426999822816AD600944E6F /* SQCat.m */,
 				142E34C522814B3500DC3608 /* SQPerson+Test.h */,
 				142E34C622814B3500DC3608 /* SQPerson+Test.m */,
 				142E34CF228153DC00DC3608 /* SQPerson+Test.cpp */,
@@ -139,9 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1426999622816ABE00944E6F /* SQDog.m in Sources */,
+				1426999922816AD600944E6F /* SQCat.m in Sources */,
+				142E34C422814AE200DC3608 /* SQPerson.m in Sources */,
 				142E34C722814B3500DC3608 /* SQPerson+Test.m in Sources */,
 				142E34CA22814B7900DC3608 /* SQPerson+Eat.m in Sources */,
-				142E34C422814AE200DC3608 /* SQPerson.m in Sources */,
+				142699882281628800944E6F /* SQPerson+Test1.m in Sources */,
+				1426998B2281629600944E6F /* SQPerson+Test2.m in Sources */,
+				142699852281627A00944E6F /* SQStudent.m in Sources */,
+				1426998E228162BA00944E6F /* SQStudent+Test1.m in Sources */,
+				14269991228162C500944E6F /* SQStudent+Test2.m in Sources */,
 				142E34BC22814A8300DC3608 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

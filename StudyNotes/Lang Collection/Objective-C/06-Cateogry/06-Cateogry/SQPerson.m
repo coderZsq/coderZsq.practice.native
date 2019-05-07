@@ -15,6 +15,14 @@
 
 @implementation SQPerson
 
++ (void)load {
+    NSLog(@"%s", __func__);
+}
+
++ (void)test {
+    NSLog(@"%s", __func__);
+}
+
 - (void)run {
     NSLog(@"%s", __func__);
 }
