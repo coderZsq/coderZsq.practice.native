@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]) {
         // a) 如果是instance对象, 返回class对象
         // b) 如果是class对象, 返回meta-class对象
         // c) 如果是meta-class对象, 返回NSObject (基类) 的meta-class对象
-        /*
+#if 0
         Class object_getClass(id obj)
         {
             if (obj) return obj->getIsa();
@@ -93,11 +93,11 @@ int main(int argc, const char * argv[]) {
             }
             return result;
         }
-        */
+#endif
         
         // 1> 传入字符串类名
         // 2> 返回对应的类对象
-        /*
+#if 0
         static Class getClass(const char *name)
         {
             runtimeLock.assertLocked();
@@ -135,7 +135,7 @@ int main(int argc, const char * argv[]) {
             void    *value;
             return (_NXMapMember(table, key, &value) != NX_MAPNOTAKEY) ? value : NULL;
         }
-         */
+#endif
     }
     return 0;
 }

@@ -69,7 +69,7 @@ int main(int argc, const char * argv[]) {
         // 00 00 00 00 00 00 00 00
         // 00 00 00 00 00 00 00 00
         
-        /*
+#if 0
         void *
         calloc(size_t num_items, size_t size)
         {
@@ -104,7 +104,7 @@ int main(int argc, const char * argv[]) {
         }
         
 #define NANO_MAX_SIZE            256  //Buckets sized {16, 32, 48, 64, 80, 96, 112, ...}
-        */
+#endif
         NSLog(@"%zd - %zd",
               class_getInstanceSize([SQPerson class]), //24
               malloc_size((__bridge const void *)p)); //32
@@ -242,7 +242,7 @@ void _NSObject() {
      (lldb)
      */
     
-    /*
+#if 0
     id
     _objc_rootAllocWithZone(Class cls, malloc_zone_t *zone)
     {
@@ -321,13 +321,13 @@ void _NSObject() {
         if (size < 16) size = 16;
         return size;
     }
-    */
+#endif
     
     // 16个字节
     
     // 获得NSObject类的实例对象的成员变量所占用的大小 >> 8
     NSLog(@"%zd", class_getInstanceSize([NSObject class]));
-    /*
+#if 0
     size_t class_getInstanceSize(Class cls)
     {
         if (!cls) return 0;
@@ -337,7 +337,7 @@ void _NSObject() {
     uint32_t alignedInstanceSize() {
         return word_align(unalignedInstanceSize());
     }
-    */
+#endif
     
     // 获得obj指针所指向内存的大小 >> 16
     NSLog(@"%zd", malloc_size((__bridge const void *)obj));
