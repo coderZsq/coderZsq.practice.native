@@ -31,6 +31,7 @@
 		142699B322817E6200944E6F /* SQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
 		142699B522817F0F00944E6F /* SQPerson+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQPerson+Test.h"; sourceTree = "<group>"; };
 		142699B622817F0F00944E6F /* SQPerson+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SQPerson+Test.m"; sourceTree = "<group>"; };
+		14DFA0C92282C2AC0061EF93 /* associatedobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = associatedobject.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				142699AB22817E3300944E6F /* main.m */,
+				14DFA0C92282C2AC0061EF93 /* associatedobject.cpp */,
 				142699B222817E6200944E6F /* SQPerson.h */,
 				142699B322817E6200944E6F /* SQPerson.m */,
 				142699B522817F0F00944E6F /* SQPerson+Test.h */,
