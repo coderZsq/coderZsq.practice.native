@@ -28,43 +28,202 @@ struct __main_block_impl_0 {
 
 // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m
 
+/*
+ 一切以运行时的结果为准
+ 
+ clang c++
+ 
+ llvm x.0 中间文件
+ */
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        void (^block)(void) = ^{
-            NSLog(@"Hello, World");
+        // 堆: 动态分配内存, 需要程序员申请, 也需要程序员自己管理内存
+        // malloc(20);
+        // free();
+        // [[NSObject alloc] release];
+        
+        void (^block1)(void) = ^{
+            NSLog(@"Hello");
         };
         
-        block();
-#if 0
-        // 定义block变量
-        void (*block)(void) = ((void (*)())
-                               &__main_block_impl_0((void *)
-                                                    __main_block_func_0, &__main_block_desc_0_DATA
-                                                    ));
-        
-        struct __main_block_impl_0 {
-            struct __block_impl impl;
-            struct __main_block_desc_0* Desc;
-            // 构造函数 (类似于OC的init方法) 返回结构体对象
-            __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
-                impl.isa = &_NSConcreteStackBlock;
-                impl.Flags = flags;
-                impl.FuncPtr = fp;
-                Desc = desc;
-            }
+        int age = 10;
+        void (^block2)(void) = ^{
+            NSLog(@"Hello - %d", age);
         };
         
-        // 封装了block执行逻辑的函数 
-        static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-            
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_a0bb7c_mi_0);
-        }
-        
-        // 执行block内部的代码
-        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-#endif
+        NSLog(@"%@ %@ %@", [block1 class], [block2 class], [^{
+            NSLog(@"%d", age);
+        } class]);
     }
     return 0;
+}
+
+void test5() {
+    // __NSGlobalBlock__ : __NSGlobalBlock : NSBlock : NSObject
+    void (^block)(void) = ^{
+        NSLog(@"Hello");
+    };
+    NSLog(@"%@", [block class]);
+    NSLog(@"%@", [[block class] superclass]);
+    NSLog(@"%@", [[[block class] superclass] superclass]);
+    NSLog(@"%@", [[[[block class] superclass] superclass] superclass]);
+  
+}
+
+int age_ = 10;
+static int height_ = 10;
+
+void test4() {
+    void (^block)(void) = ^{
+        NSLog(@"age is %d, height is %d", age_, height_);
+    };
+    
+    age_ = 20;
+    height_ = 20;
+    
+    block();
+    
+#if 0
+    int age_ = 10;
+    static int height_ = 10;
+    
+    void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
+    
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+    
+    age_ = 20;
+    height_ = 20;
+    
+    static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
+        
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_155c09_mi_0, age_, height_);
+    }
+    
+    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+#endif
+}
+
+void (^block)(void);
+
+void test3_test() {
+    int age = 10;
+    static int height = 10;
+    
+    block = ^{
+        NSLog(@"age is %d, height is %d", age, height);
+    };
+    
+    age = 20;
+    height = 30;
+}
+
+void test3() {
+    test3_test();
+    block();
+    
+    //        // auto: 自动变量, 离开作用域就销毁
+    //        auto int age = 10;
+    //        static int height = 10;
+    //
+    //        void (^block)(void) = ^{
+    //            // age的值捕获进来 (capture)
+    //            NSLog(@"age is %d, height is %d", age, height);
+    //        };
+    //
+    //        age = 20;
+    //        height = 20;
+    //
+    //        block();
+#if 0
+    auto int age = 10;
+    static int height = 10;
+    
+    void (*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, age, &height));
+    
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        int age;
+        int *height;
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _age, int *_height, int flags=0) : age(_age), height(_height) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+    
+    age = 20;
+    height = 20;
+    
+    static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
+        int age = __cself->age; // bound by copy
+        int *height = __cself->height; // bound by copy
+        
+        
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_ead15a_mi_0, age, (*height));
+    }
+    
+    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+#endif
+    
+    //        void (^block)(int, int) = ^(int a, int b) {
+    //            NSLog(@"Hello, World! - %d %d", a, b);
+    //        };
+    //
+    //        block(10, 20);
+    
+#if 0
+    void (*block)(int, int) = ((void (*)(int, int))&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
+    
+    ((void (*)(__block_impl *, int, int))((__block_impl *)block)->FuncPtr)((__block_impl *)block, 10, 20);
+#endif
+}
+
+void test2() {
+    void (^block)(void) = ^{
+        NSLog(@"Hello, World");
+    };
+    
+    block();
+#if 0
+    // 定义block变量
+    void (*block)(void) = ((void (*)())
+                           &__main_block_impl_0((void *)
+                                                __main_block_func_0, &__main_block_desc_0_DATA
+                                                ));
+    
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        // 构造函数 (类似于OC的init方法) 返回结构体对象
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+    
+    // 封装了block执行逻辑的函数
+    static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
+        
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_a0bb7c_mi_0);
+    }
+    
+    // 执行block内部的代码
+    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+#endif
 }
 
 void test() {

@@ -106,22 +106,15 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Hello",5};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Hello - %d",10};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@ %@ %@",8};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Hello",5};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"age is %d, height is %d",23};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_10 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"age is %d, height is %d",23};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_11 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Hello, World",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_12 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is a block! -- %d",22};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_13 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is a block!",16};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_14 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is a block!",16};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_15 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is a block!",16};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_SQPerson_ded891_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--------%p",10};
+
+
+
+
+
+
+
+
 
 
 
@@ -32634,273 +32627,238 @@ struct NSUUID_IMPL {
 
 #pragma clang assume_nonnull end
 
-struct __main_block_desc_0 {
-    size_t reserved;
-    size_t Block_size;
-};
+#pragma clang assume_nonnull begin
 
-struct __block_impl {
-    void *isa;
-    int Flags;
-    int Reserved;
-    void *FuncPtr;
-};
 
-struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
-    int age;
+#ifndef _REWRITER_typedef_SQPerson
+#define _REWRITER_typedef_SQPerson
+typedef struct objc_object SQPerson;
+typedef struct {} _objc_exc_SQPerson;
+#endif
+
+extern "C" unsigned long OBJC_IVAR_$_SQPerson$_name;
+struct SQPerson_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
+	NSString * _Nonnull _name;
 };
 
 
+// @property (copy, nonatomic) NSString *name;
 
-int age_ = 10;
-static int height_ = 10;
+// - (void)test;
+
+// - (instancetype)initWithName:(NSString *)name;
+
+/* @end */
+
+#pragma clang assume_nonnull end
 
 
-struct __main_block_impl_0 {
+
+// @implementation SQPerson
+
+
+struct __SQPerson__test_block_impl_0 {
   struct __block_impl impl;
-  struct __main_block_desc_0* Desc;
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
+  struct __SQPerson__test_block_desc_0* Desc;
+  SQPerson *self;
+  __SQPerson__test_block_impl_0(void *fp, struct __SQPerson__test_block_desc_0 *desc, SQPerson *_self, int flags=0) : self(_self) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
 };
-static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
+static void __SQPerson__test_block_func_0(struct __SQPerson__test_block_impl_0 *__cself) {
+  SQPerson *self = __cself->self; // bound by copy
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_0);
-        }
-
-static struct __main_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-} __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
-
-struct __main_block_impl_1 {
-  struct __block_impl impl;
-  struct __main_block_desc_1* Desc;
-  int age;
-  __main_block_impl_1(void *fp, struct __main_block_desc_1 *desc, int _age, int flags=0) : age(_age) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __main_block_func_1(struct __main_block_impl_1 *__cself) {
-  int age = __cself->age; // bound by copy
-
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_1, age);
-        }
-
-static struct __main_block_desc_1 {
-  size_t reserved;
-  size_t Block_size;
-} __main_block_desc_1_DATA = { 0, sizeof(struct __main_block_impl_1)};
-
-struct __main_block_impl_2 {
-  struct __block_impl impl;
-  struct __main_block_desc_2* Desc;
-  int age;
-  __main_block_impl_2(void *fp, struct __main_block_desc_2 *desc, int _age, int flags=0) : age(_age) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __main_block_func_2(struct __main_block_impl_2 *__cself) {
-  int age = __cself->age; // bound by copy
-
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_3, age);
-        }
-
-static struct __main_block_desc_2 {
-  size_t reserved;
-  size_t Block_size;
-} __main_block_desc_2_DATA = { 0, sizeof(struct __main_block_impl_2)};
-int main(int argc, const char * argv[]) {
-    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        void (*block1)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
-
-        int age = 10;
-        void (*block2)(void) = ((void (*)())&__main_block_impl_1((void *)__main_block_func_1, &__main_block_desc_1_DATA, age));
-
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_2, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)block1, sel_registerName("class")), ((Class (*)(id, SEL))(void *)objc_msgSend)((id)block2, sel_registerName("class")), ((Class (*)(id, SEL))(void *)objc_msgSend)((id)((void (*)())&__main_block_impl_2((void *)__main_block_func_2, &__main_block_desc_2_DATA, age)), sel_registerName("class")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_SQPerson_ded891_mi_0, (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SQPerson$_name)));
     }
-    return 0;
-}
+static void __SQPerson__test_block_copy_0(struct __SQPerson__test_block_impl_0*dst, struct __SQPerson__test_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
+static void __SQPerson__test_block_dispose_0(struct __SQPerson__test_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
-struct __test5_block_impl_0 {
-  struct __block_impl impl;
-  struct __test5_block_desc_0* Desc;
-  __test5_block_impl_0(void *fp, struct __test5_block_desc_0 *desc, int flags=0) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __test5_block_func_0(struct __test5_block_impl_0 *__cself) {
-
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_4);
-    }
-
-static struct __test5_block_desc_0 {
+static struct __SQPerson__test_block_desc_0 {
   size_t reserved;
   size_t Block_size;
-} __test5_block_desc_0_DATA = { 0, sizeof(struct __test5_block_impl_0)};
-void test5() {
+  void (*copy)(struct __SQPerson__test_block_impl_0*, struct __SQPerson__test_block_impl_0*);
+  void (*dispose)(struct __SQPerson__test_block_impl_0*);
+} __SQPerson__test_block_desc_0_DATA = { 0, sizeof(struct __SQPerson__test_block_impl_0), __SQPerson__test_block_copy_0, __SQPerson__test_block_dispose_0};
 
-    void (*block)(void) = ((void (*)())&__test5_block_impl_0((void *)__test5_block_func_0, &__test5_block_desc_0_DATA));
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_5, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)block, sel_registerName("class")));
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_6, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)block, sel_registerName("class")), sel_registerName("superclass")));
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_7, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)block, sel_registerName("class")), sel_registerName("superclass")), sel_registerName("superclass")));
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_8, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)block, sel_registerName("class")), sel_registerName("superclass")), sel_registerName("superclass")), sel_registerName("superclass")));
-
-}
-
-
-struct __test4_block_impl_0 {
-  struct __block_impl impl;
-  struct __test4_block_desc_0* Desc;
-  __test4_block_impl_0(void *fp, struct __test4_block_desc_0 *desc, int flags=0) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __test4_block_func_0(struct __test4_block_impl_0 *__cself) {
-
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_9, age_, height_);
-    }
-
-static struct __test4_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-} __test4_block_desc_0_DATA = { 0, sizeof(struct __test4_block_impl_0)};
-void test4() {
-    void (*block)(void) = ((void (*)())&__test4_block_impl_0((void *)__test4_block_func_0, &__test4_block_desc_0_DATA));
-
-    age_ = 20;
-    height_ = 20;
-
+static void _I_SQPerson_test(SQPerson * self, SEL _cmd) {
+    void (*block)(void) = ((void (*)())&__SQPerson__test_block_impl_0((void *)__SQPerson__test_block_func_0, &__SQPerson__test_block_desc_0_DATA, self, 570425344));
     ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
 }
 
-void (*block)(void);
-
-
-struct __test3_test_block_impl_0 {
-  struct __block_impl impl;
-  struct __test3_test_block_desc_0* Desc;
-  int age;
-  int *height;
-  __test3_test_block_impl_0(void *fp, struct __test3_test_block_desc_0 *desc, int _age, int *_height, int flags=0) : age(_age), height(_height) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __test3_test_block_func_0(struct __test3_test_block_impl_0 *__cself) {
-  int age = __cself->age; // bound by copy
-  int *height = __cself->height; // bound by copy
-
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_10, age, (*height));
+static instancetype _Nonnull _I_SQPerson_initWithName_(SQPerson * self, SEL _cmd, NSString * _Nonnull name) {
+    if (self = ((SQPerson *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SQPerson"))}, sel_registerName("init"))) {
+        ((void (*)(id, SEL, NSString * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setName:"), (NSString * _Nonnull)name);
     }
-
-static struct __test3_test_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-} __test3_test_block_desc_0_DATA = { 0, sizeof(struct __test3_test_block_impl_0)};
-void test3_test() {
-    int age = 10;
-    static int height = 10;
-
-    block = ((void (*)())&__test3_test_block_impl_0((void *)__test3_test_block_func_0, &__test3_test_block_desc_0_DATA, age, &height));
-
-    age = 20;
-    height = 30;
+    return self;
 }
 
-void test3() {
-    test3_test();
-    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-}
+static NSString * _Nonnull _I_SQPerson_name(SQPerson * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SQPerson$_name)); }
+extern "C" __declspec(dllimport) void objc_setProperty (id, SEL, long, id, bool, bool);
 
+static void _I_SQPerson_setName_(SQPerson * self, SEL _cmd, NSString * _Nonnull name) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SQPerson, _name), (id)name, 0, 1); }
+// @end
 
-struct __test2_block_impl_0 {
-  struct __block_impl impl;
-  struct __test2_block_desc_0* Desc;
-  __test2_block_impl_0(void *fp, struct __test2_block_desc_0 *desc, int flags=0) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
+struct _prop_t {
+	const char *name;
+	const char *attributes;
 };
-static void __test2_block_func_0(struct __test2_block_impl_0 *__cself) {
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_11);
-    }
+struct _protocol_t;
 
-static struct __test2_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-} __test2_block_desc_0_DATA = { 0, sizeof(struct __test2_block_impl_0)};
-void test2() {
-    void (*block)(void) = ((void (*)())&__test2_block_impl_0((void *)__test2_block_func_0, &__test2_block_desc_0_DATA));
-
-    ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-}
-
-
-struct __test_block_impl_0 {
-  struct __block_impl impl;
-  struct __test_block_desc_0* Desc;
-  int age;
-  __test_block_impl_0(void *fp, struct __test_block_desc_0 *desc, int _age, int flags=0) : age(_age) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
+struct _objc_method {
+	struct objc_selector * _cmd;
+	const char *method_type;
+	void  *_imp;
 };
-static void __test_block_func_0(struct __test_block_impl_0 *__cself, int a, int b) {
-  int age = __cself->age; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_12, age);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_13);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_14);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_dr_q415vqjx46n40jw2m8htjfgm0000gn_T_main_49635b_mi_15);
-    }
+struct _protocol_t {
+	void * isa;  // NULL
+	const char *protocol_name;
+	const struct _protocol_list_t * protocol_list; // super protocols
+	const struct method_list_t *instance_methods;
+	const struct method_list_t *class_methods;
+	const struct method_list_t *optionalInstanceMethods;
+	const struct method_list_t *optionalClassMethods;
+	const struct _prop_list_t * properties;
+	const unsigned int size;  // sizeof(struct _protocol_t)
+	const unsigned int flags;  // = 0
+	const char ** extendedMethodTypes;
+};
 
-static struct __test_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-} __test_block_desc_0_DATA = { 0, sizeof(struct __test_block_impl_0)};
-void test() {
+struct _ivar_t {
+	unsigned long int *offset;  // pointer to ivar offset location
+	const char *name;
+	const char *type;
+	unsigned int alignment;
+	unsigned int  size;
+};
 
+struct _class_ro_t {
+	unsigned int flags;
+	unsigned int instanceStart;
+	unsigned int instanceSize;
+	const unsigned char *ivarLayout;
+	const char *name;
+	const struct _method_list_t *baseMethods;
+	const struct _objc_protocol_list *baseProtocols;
+	const struct _ivar_list_t *ivars;
+	const unsigned char *weakIvarLayout;
+	const struct _prop_list_t *properties;
+};
 
+struct _class_t {
+	struct _class_t *isa;
+	struct _class_t *superclass;
+	void *cache;
+	void *vtable;
+	struct _class_ro_t *ro;
+};
 
+struct _category_t {
+	const char *name;
+	struct _class_t *cls;
+	const struct _method_list_t *instance_methods;
+	const struct _method_list_t *class_methods;
+	const struct _protocol_list_t *protocols;
+	const struct _prop_list_t *properties;
+};
+extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
+#pragma warning(disable:4273)
 
+extern "C" unsigned long int OBJC_IVAR_$_SQPerson$_name __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SQPerson, _name);
 
+static struct /*_ivar_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count;
+	struct _ivar_t ivar_list[1];
+} _OBJC_$_INSTANCE_VARIABLES_SQPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_ivar_t),
+	1,
+	{{(unsigned long int *)&OBJC_IVAR_$_SQPerson$_name, "_name", "@\"NSString\"", 3, 8}}
+};
 
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[4];
+} _OBJC_$_INSTANCE_METHODS_SQPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	4,
+	{{(struct objc_selector *)"test", "v16@0:8", (void *)_I_SQPerson_test},
+	{(struct objc_selector *)"initWithName:", "@24@0:8@16", (void *)_I_SQPerson_initWithName_},
+	{(struct objc_selector *)"name", "@16@0:8", (void *)_I_SQPerson_name},
+	{(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_SQPerson_setName_}}
+};
 
-    int age = 20;
+static struct /*_prop_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count_of_properties;
+	struct _prop_t prop_list[1];
+} _OBJC_$_PROP_LIST_SQPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_prop_t),
+	1,
+	{{"name","T@\"NSString\",C,N,V_name"}}
+};
 
+static struct _class_ro_t _OBJC_METACLASS_RO_$_SQPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	0, 
+	"SQPerson",
+	0, 
+	0, 
+	0, 
+	0, 
+	0, 
+};
 
-    void(*block)(int, int) = ((void (*)(int, int))&__test_block_impl_0((void *)__test_block_func_0, &__test_block_desc_0_DATA, age));
+static struct _class_ro_t _OBJC_CLASS_RO_$_SQPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, __OFFSETOFIVAR__(struct SQPerson, _name), sizeof(struct SQPerson_IMPL), 
+	0, 
+	"SQPerson",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_SQPerson,
+	0, 
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_SQPerson,
+	0, 
+	(const struct _prop_list_t *)&_OBJC_$_PROP_LIST_SQPerson,
+};
 
-    struct __main_block_impl_0 *blockStruct = (__bridge struct __main_block_impl_0 *)block;
+extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
 
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_SQPerson __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_METACLASS_RO_$_SQPerson,
+};
 
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
 
-    ((void (*)(__block_impl *, int, int))((__block_impl *)block)->FuncPtr)((__block_impl *)block, 10, 10);
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_SQPerson __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_SQPerson,
+	0, // &OBJC_CLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_CLASS_RO_$_SQPerson,
+};
+static void OBJC_CLASS_SETUP_$_SQPerson(void ) {
+	OBJC_METACLASS_$_SQPerson.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_SQPerson.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_SQPerson.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_SQPerson.isa = &OBJC_METACLASS_$_SQPerson;
+	OBJC_CLASS_$_SQPerson.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_SQPerson.cache = &_objc_empty_cache;
 }
+#pragma section(".objc_inithooks$B", long, read, write)
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
+	(void *)&OBJC_CLASS_SETUP_$_SQPerson,
+};
+static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+	&OBJC_CLASS_$_SQPerson,
+};
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };
