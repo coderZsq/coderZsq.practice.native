@@ -24,12 +24,20 @@ struct __main_block_desc_0 {
     void (*dispose)(struct __main_block_impl_0*);
 };
 
-struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
+struct __Block_byref_age_0 {
+    void *__isa;
+    struct __Block_byref_age_0 *__forwarding;
+    int __flags;
+    int __size;
     int age;
 };
 
+struct __main_block_impl_0 {
+    struct __block_impl impl;
+    struct __main_block_desc_0* Desc;
+    struct __Block_byref_age_0 *age; // by ref
+    //    int age;
+};
 
 // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m
 // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 main.m
@@ -42,14 +50,196 @@ struct __main_block_impl_0 {
  llvm x.0 中间文件
  */
 
+/*
+ block的原理是怎样的? 本质是什么?
+ 封装了函数调用以及调用环境的OC对象
+ */
+
+/*
+ block的属性修饰词为什么是copy? 使用block有哪些使用注意?
+ block一旦没有进行copy操作, 就不会在堆上
+ 使用注意: 循环引用问题
+ */
+
 typedef void (^SQBlock)(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
 
+        // MRC不支持__weak的
+//        __unsafe_unretained SQPerson *person = [[SQPerson alloc] init];
+        __block SQPerson *person = [[SQPerson alloc] init];
+        person.age = 10;
+        person.block = [^{
+            NSLog(@"age is %d", person.age);
+        } copy];
+//        [person release];
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+}
+
+void test18() {
+    __block SQPerson *person = [[SQPerson alloc] init];
+    person.age = 10;
+    person.block = ^{
+        NSLog(@"age is %d", person.age);
+        person = nil;
+    };
+    person.block();
+    
+}
+
+void test17() {
+    SQPerson *person = [[SQPerson alloc] init];
+    person.age = 10;
+    
+    // __weak: 不会产生强引用, 指向的对象销毁时, 会自动让指针置为nil
+    // __unsafe_unretained: 不会产生强引用, 不安全, 指向的对象销毁时, 指针存储的地址值不变
+    
+    //        __weak SQPerson *weakPerson = person;
+    __weak typeof(person) weakPerson = person;
+    //        __unsafe_unretained typeof(person) weakPerson = person;
+    person.block = ^{
+        NSLog(@"-----%d", weakPerson.age);
+    };
+#if 0
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        SQPerson *__weak weakPerson;
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, SQPerson *__weak _weakPerson, int flags=0) : weakPerson(_weakPerson) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+#endif
+    [person test2];
+}
+
+void test16() {
+    // MRC __block 不会retain
+    __block SQPerson *person = [[SQPerson alloc] init];
+    SQBlock block = [^{
+        NSLog(@"%p", person);
+    } copy];
+    
+//    [person release];
+    
+    block();
+    
+//    [block release];
+}
+
+void test15() {
+    SQPerson *person = [[SQPerson alloc] init];
+    __block __weak SQPerson *weakPerson = person;
+    SQBlock block = ^{
+        NSLog(@"%p", weakPerson);
+    };
+#if 0
+    struct __Block_byref_weakPerson_0 {
+        void *__isa;
+        __Block_byref_weakPerson_0 *__forwarding;
+        int __flags;
+        int __size;
+        void (*__Block_byref_id_object_copy)(void*, void*);
+        void (*__Block_byref_id_object_dispose)(void*);
+        SQPerson *__weak weakPerson;
+    };
+    
+    static void __Block_byref_id_object_copy_131(void *dst, void *src) {
+        _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
+    }
+    static void __Block_byref_id_object_dispose_131(void *src) {
+        _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
+    }
+    
+    __attribute__((__blocks__(byref))) __attribute__((objc_ownership(weak))) __Block_byref_weakPerson_0 weakPerson = {
+        (void*)0,
+        (__Block_byref_weakPerson_0 *)&weakPerson,
+        33554432,
+        sizeof(__Block_byref_weakPerson_0),
+        __Block_byref_id_object_copy_131,
+        __Block_byref_id_object_dispose_131,
+        person};
+    
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        __Block_byref_weakPerson_0 *weakPerson; // by ref
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_weakPerson_0 *_weakPerson, int flags=0) : weakPerson(_weakPerson->__forwarding) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+#endif
+    block();
+    
+}
+
+void test14() {
+    int no = 20;
+    
+    __block int age = 10;
+    
+    NSObject * object = [[NSObject alloc] init];
+    __weak NSObject *weakObject = object;
+    
+    SQBlock block = ^{
+        age = 20;
+        
+        NSLog(@"%d", no);
+        NSLog(@"%d", age);
+        NSLog(@"%p", weakObject);
+    };
+#if 0
+    struct __main_block_impl_0 {
+        struct __block_impl impl;
+        struct __main_block_desc_0* Desc;
+        int no;
+        NSObject *__weak weakObject;
+        __Block_byref_age_0 *age; // by ref
+        __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _no, NSObject *__weak _weakObject, __Block_byref_age_0 *_age, int flags=0) : no(_no), weakObject(_weakObject), age(_age->__forwarding) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+    
+    static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->weakObject, (void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+    
+    static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->weakObject, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+    
+#endif
+    
+    block();
+}
+
+void test13() {
+    __block int age = 10;
+    NSLog(@"%p", &age); // 0x7ffee026de78
+    
+    SQBlock block = ^{
+        age = 20;
+        NSLog(@"age is %d", age);
+    };
+    
+    struct __main_block_impl_0 *blockImpl = (__bridge struct __main_block_impl_0 *)block;
+    
+    NSLog(@"%p", &age); // 0x600000f59b98
+    NSLog(@"%p", blockImpl->age);
+    NSLog(@"%p", &(blockImpl->age->__forwarding->age));
+    
+    //        (lldb) p/x blockImpl->age
+    //        (__Block_byref_age_0 *) $0 = 0x0000600000f59b80
+    //        (lldb) p/x &(blockImpl->age->__forwarding->age)
+    //        (int *) $1 = 0x0000600000f59b98
 }
 
 void test12() {
@@ -171,9 +361,9 @@ void test11() {
         SQPerson *person = [[SQPerson alloc] init];
         person.age = 10;
         block = [^{
-            //                [person retain];
+            [person retain];
             NSLog(@"----------%d", person.age);
-            //                [person release];
+            [person release];
         } copy];
         [person release];
     }
@@ -271,7 +461,7 @@ void test8_test() {
     block = [^{
         NSLog(@"block-----------%d", age);
     } copy]; // copy NSMallocBlock
-    //    [block release]; MRC
+//    [block release]; // MRC
 #if 0
     struct __test8_test_block_impl_0 {
         struct __block_impl impl;

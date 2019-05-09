@@ -30,7 +30,7 @@
 		141A489C2283F75A003E90CC /* SQPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
 		141A489D2283F75A003E90CC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		141A489E2283F75A003E90CC /* SQPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
-		141A489F2283F75A003E90CC /* SQPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SQPerson.cpp; path = "../../../Native Drive/GitHub/coderZsq.practice.native.swift/StudyNotes/Lang Collection/Objective-C/08-Block/08-Block/SQPerson.cpp"; sourceTree = "<group>"; };
+		141A48A322841893003E90CC /* SQPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQPerson.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				141A489D2283F75A003E90CC /* main.cpp */,
 				141A489C2283F75A003E90CC /* SQPerson.h */,
 				141A489E2283F75A003E90CC /* SQPerson.m */,
-				141A489F2283F75A003E90CC /* SQPerson.cpp */,
+				141A48A322841893003E90CC /* SQPerson.cpp */,
 			);
 			path = "08-Block";
 			sourceTree = "<group>";
@@ -295,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "08-Block/Info.plist";
@@ -312,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "08-Block/Info.plist";

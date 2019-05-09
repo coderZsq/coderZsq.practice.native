@@ -9,12 +9,42 @@
 #import "SQPerson.h"
 
 // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc SQPerson.m
+// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 SQPerson.m
 
 @implementation SQPerson
 
 - (void)dealloc {
 //    [super dealloc];
     NSLog(@"%s", __func__);
+}
+
+- (void)test2 {
+    __weak typeof(self) weakSelf = self;
+    self.block = ^{
+        __strong typeof(weakSelf) myself = weakSelf;
+        NSLog(@"age is %d", myself->_age);
+    };
+    
+    self.block = ^{
+        NSLog(@"age is %d", self.age);
+    };
+#if 0
+    static void _I_SQPerson_test2(SQPerson * self, SEL _cmd) {
+        ((void (*)(id, SEL, SQBlock _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setBlock:"), ((void (*)())&__SQPerson__test2_block_impl_0((void *)__SQPerson__test2_block_func_0, &__SQPerson__test2_block_desc_0_DATA, self, 570425344)));
+    }
+    
+    struct __SQPerson__test_block_impl_0 {
+        struct __block_impl impl;
+        struct __SQPerson__test_block_desc_0* Desc;
+        SQPerson *const __strong self;
+        __SQPerson__test_block_impl_0(void *fp, struct __SQPerson__test_block_desc_0 *desc, SQPerson *const __strong _self, int flags=0) : self(_self) {
+            impl.isa = &_NSConcreteStackBlock;
+            impl.Flags = flags;
+            impl.FuncPtr = fp;
+            Desc = desc;
+        }
+    };
+#endif
 }
 
 - (void)test {
