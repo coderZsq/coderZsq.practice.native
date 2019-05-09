@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
+@property (copy, nonatomic) void (^block)(void);
+
+@property (assign, nonatomic) int age;
+
 @property (copy, nonatomic) NSString *name;
 
 - (void)test;

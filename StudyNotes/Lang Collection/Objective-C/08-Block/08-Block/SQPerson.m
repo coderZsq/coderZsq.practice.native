@@ -12,6 +12,11 @@
 
 @implementation SQPerson
 
+- (void)dealloc {
+//    [super dealloc];
+    NSLog(@"%s", __func__);
+}
+
 - (void)test {
     void (^block)(void) = ^{
         NSLog(@"--------%d", _name);
