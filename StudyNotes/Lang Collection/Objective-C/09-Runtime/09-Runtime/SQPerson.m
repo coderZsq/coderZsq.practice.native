@@ -63,6 +63,23 @@
 
 @implementation SQPerson
 
+//- (void)test {
+//    NSLog(@"%s", __func__);
+//}
+
+- (int)test:(int)age height:(float)height {
+    NSLog(@"%s", __func__);
+    return 0;
+}
+
+- (void)personTest {
+    NSLog(@"%s", __func__);
+}
+
+- (void)personTest2 {}
+
+- (void)personTest3 {}
+
 - (void)setTall:(BOOL)tall {
     if (tall) {
         _tallRichHandsome.bits |= SQTallMask;

@@ -12,6 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
+//- (void)test;
+
+// "i 24 @ 0 : 8 i 16 f 20"
+// id SEL int float == 24
+- (int)test:(int)age height:(float)height;
+
+//_key = @selector(personTest);
+//_imp = personTest的地址
+- (void)personTest;
+- (void)personTest2;
+- (void)personTest3;
+
 //@property (assign, nonatomic, getter=isTall) BOOL tall;
 //@property (assign, nonatomic, getter=isRich) BOOL rich;
 //@property (assign, nonatomic, getter=isHandsome) BOOL handsome;

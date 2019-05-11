@@ -12,8 +12,10 @@
 		14779CC722869172007592F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14779CC522869172007592F9 /* Main.storyboard */; };
 		14779CC922869173007592F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14779CC822869173007592F9 /* Assets.xcassets */; };
 		14779CCC22869173007592F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14779CCA22869173007592F9 /* LaunchScreen.storyboard */; };
-		14779CCF22869173007592F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CCE22869173007592F9 /* main.m */; };
+		14779CCF22869173007592F9 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14779CCE22869173007592F9 /* main.mm */; };
 		14779CD7228691CC007592F9 /* SQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CD5228691CC007592F9 /* SQPerson.m */; };
+		14779CDF2286A98E007592F9 /* SQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CDE2286A98E007592F9 /* SQStudent.m */; };
+		14779CE22286A9AD007592F9 /* SQGoodStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CE12286A9AD007592F9 /* SQGoodStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +28,16 @@
 		14779CC822869173007592F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14779CCB22869173007592F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14779CCD22869173007592F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14779CCE22869173007592F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14779CCE22869173007592F9 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		14779CD5228691CC007592F9 /* SQPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
 		14779CD6228691CC007592F9 /* SQPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
+		14779CD82286979F007592F9 /* SQClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQClassInfo.h; sourceTree = "<group>"; };
+		14779CD922869B3F007592F9 /* class_rw_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = class_rw_t.cpp; sourceTree = "<group>"; };
+		14779CDB2286A6F6007592F9 /* cache_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cache_t.cpp; sourceTree = "<group>"; };
+		14779CDD2286A98E007592F9 /* SQStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQStudent.h; sourceTree = "<group>"; };
+		14779CDE2286A98E007592F9 /* SQStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQStudent.m; sourceTree = "<group>"; };
+		14779CE02286A9AD007592F9 /* SQGoodStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQGoodStudent.h; sourceTree = "<group>"; };
+		14779CE12286A9AD007592F9 /* SQGoodStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQGoodStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +78,16 @@
 				14779CC822869173007592F9 /* Assets.xcassets */,
 				14779CCA22869173007592F9 /* LaunchScreen.storyboard */,
 				14779CCD22869173007592F9 /* Info.plist */,
-				14779CCE22869173007592F9 /* main.m */,
+				14779CCE22869173007592F9 /* main.mm */,
+				14779CD922869B3F007592F9 /* class_rw_t.cpp */,
+				14779CDB2286A6F6007592F9 /* cache_t.cpp */,
+				14779CD82286979F007592F9 /* SQClassInfo.h */,
 				14779CD6228691CC007592F9 /* SQPerson.h */,
 				14779CD5228691CC007592F9 /* SQPerson.m */,
+				14779CDD2286A98E007592F9 /* SQStudent.h */,
+				14779CDE2286A98E007592F9 /* SQStudent.m */,
+				14779CE02286A9AD007592F9 /* SQGoodStudent.h */,
+				14779CE12286A9AD007592F9 /* SQGoodStudent.m */,
 			);
 			path = "09-Runtime";
 			sourceTree = "<group>";
@@ -148,8 +164,10 @@
 			files = (
 				14779CD7228691CC007592F9 /* SQPerson.m in Sources */,
 				14779CC422869172007592F9 /* ViewController.m in Sources */,
-				14779CCF22869173007592F9 /* main.m in Sources */,
+				14779CE22286A9AD007592F9 /* SQGoodStudent.m in Sources */,
+				14779CCF22869173007592F9 /* main.mm in Sources */,
 				14779CC122869172007592F9 /* AppDelegate.m in Sources */,
+				14779CDF2286A98E007592F9 /* SQStudent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

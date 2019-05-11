@@ -14,10 +14,15 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)test {
+    
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+//    [self performSelector:@selector(test)];
+//    [person performSelector:@selector(test)]
+}
 
 @end
