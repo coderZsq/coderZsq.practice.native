@@ -19,10 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setTall:(BOOL)tall;
 - (void)setRich:(BOOL)rich;
 - (void)setHandsome:(BOOL)handsome;
+- (void)setThin:(BOOL)thin;
 
 - (BOOL)isTall;
 - (BOOL)isRich;
 - (BOOL)isHandsome;
+- (BOOL)isThin;
 
 @end
 

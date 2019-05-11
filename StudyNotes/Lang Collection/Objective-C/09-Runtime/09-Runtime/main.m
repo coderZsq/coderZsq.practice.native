@@ -15,6 +15,8 @@
 // Runtime: 运行时
 // 提供了一套C语言API
 
+// Class meta-class的地址值, 最后3位一定是0
+
 #if 0
 struct objc_object {
 private:
@@ -83,13 +85,39 @@ union isa_t
 
 #endif
 
+union Date {
+    int year;
+    char month;
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        union Date date;
+        date.year = 2019;
+        date.month = 5;
+    
         SQPerson *person = [[SQPerson alloc] init];
-        NSLog(@"tall: %d, rich: %d, handsome: %d", person.isTall, person.isRich, person.isHandsome);
-//        person.rich = YES;
-//        person.tall = YES;
-//        person.handsome = NO;
+        person.tall = YES;
+        person.rich = YES;
+        person.handsome = NO;
+        person.thin = NO;
+        /*
+        (lldb) p/x person->_tallRichHandsome
+        ((anonymous struct)) $0 = (tall = 0x01, rich = 0x00, hansome = 0x00)
+        (lldb) p/x &(person->_tallRichHandsome)
+        ((anonymous struct) *) $0 = 0x0000000101206978
+        (lldb) x 0x0000000101206978
+        0x101206978: 01 00 00 00 00 00 00 00 50 6a 20 01 01 00 00 00  ........Pj .....
+        0x101206988: 90 6c 20 01 01 00 00 00 00 6a 20 01 01 00 00 00  .l ......j .....
+        */
+        /*
+         (lldb) p/x &(person->_tallRichHandsome)
+         ((anonymous struct) *) $0 = 0x0000000100632488
+         (lldb) x 0x0000000100632488
+         0x100632488: 05 00 00 00 00 00 00 00 60 25 63 00 01 00 00 00  ........`%c.....
+         0x100632498: a0 27 63 00 01 00 00 00 10 25 63 00 01 00 00 00  .'c......%c.....
+         */
+        NSLog(@"thin: %d, tall: %d, rich: %d, handsome: %d", person.isThin, person.isTall, person.isRich, person.isHandsome);
         
         NSLog(@"%zd", class_getInstanceSize([SQPerson class]));
     }
