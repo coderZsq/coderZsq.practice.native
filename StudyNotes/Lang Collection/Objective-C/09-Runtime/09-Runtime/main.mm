@@ -171,45 +171,68 @@ struct class_rw_t {
     };
 #endif
     
+// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 main.mm
+    
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-//        SQPerson *person = [[SQPerson alloc] init];
-//        sq_objc_class *personClass = (__bridge sq_objc_class *) [SQPerson class];
-//        [person personTest];
 
-        SQGoodStudent *goodStudent = [[SQGoodStudent alloc] init];
-        sq_objc_class *goodStudentClass = (__bridge sq_objc_class *) [SQGoodStudent class];
-        [goodStudent goodStudentTest];
-        [goodStudent studentTest];
-        [goodStudent personTest];
-        [goodStudent goodStudentTest];
-        [goodStudent studentTest];
-
-        NSLog(@"---------------------------------");
+        SQPerson *person = [[SQPerson alloc] init];
+        [person personTest];
+//        NSLog(@"%p %p", sel_registerName("personTest"), @selector(personTest));
+//        ((void (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("personTest"));
+        // 消息接受者 (receiver): person
+        // 消息名称: personTest
         
-        cache_t cache = goodStudentClass->cache;
-        NSLog(@"%s %p", @selector(personTest), cache.imp(@selector(personTest)));
-        NSLog(@"%s %p", @selector(studentTest), cache.imp(@selector(studentTest)));
-        NSLog(@"%s %p", @selector(goodStudentTest), cache.imp(@selector(goodStudentTest)));
-        /*
-         (lldb) p (IMP)0x101a1f6c0
-         (IMP) $0 = 0x0000000101a1f6c0 (09-Runtime`-[SQPerson personTest] at SQPerson.m:75)
-         (lldb) p (IMP)0x101a20690
-         (IMP) $1 = 0x0000000101a20690 (09-Runtime`-[SQStudent studentTest] at SQStudent.m:13)
-         (lldb) p (IMP)0x101a1f9e0
-         (IMP) $2 = 0x0000000101a1f9e0 (09-Runtime`-[SQGoodStudent goodStudentTest] at SQGoodStudent.m:13)
-         */
+        [SQPerson initialize];
+//        ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("initialize"));
+        // 消息接受者 (receiver): [SQPerson class]
+        // 消息名称: initialize
         
-        bucket_t *buckets = cache._buckets;
-        bucket_t bucket = buckets[(long long)@selector(studentTest) & cache._mask];
-        NSLog(@"%s %p", bucket._key, bucket._imp);
+        // OC的方法调用: 消息机制, 给方法调用者发送消息
         
-        for (int i = 0; i <= cache._mask; i++) {
-            bucket_t bucket = buckets[i];
-            NSLog(@"%s %p", bucket._key, bucket._imp);
-        }
-    
+//        [person abc];
+//        objc_msgSend如果找不到合适的方法进行调用, 会报错
+//        '-[SQPerson abc]: unrecognized selector sent to instance 0x6000033ac270'
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
+    
+void test4() {
+    //        SQPerson *person = [[SQPerson alloc] init];
+    //        sq_objc_class *personClass = (__bridge sq_objc_class *) [SQPerson class];
+    //        [person personTest];
+    
+    SQGoodStudent *goodStudent = [[SQGoodStudent alloc] init];
+    sq_objc_class *goodStudentClass = (__bridge sq_objc_class *) [SQGoodStudent class];
+    [goodStudent goodStudentTest];
+    [goodStudent studentTest];
+    [goodStudent personTest];
+    [goodStudent goodStudentTest];
+    [goodStudent studentTest];
+    
+    NSLog(@"---------------------------------");
+    
+    cache_t cache = goodStudentClass->cache;
+    NSLog(@"%s %p", @selector(personTest), cache.imp(@selector(personTest)));
+    NSLog(@"%s %p", @selector(studentTest), cache.imp(@selector(studentTest)));
+    NSLog(@"%s %p", @selector(goodStudentTest), cache.imp(@selector(goodStudentTest)));
+    /*
+     (lldb) p (IMP)0x101a1f6c0
+     (IMP) $0 = 0x0000000101a1f6c0 (09-Runtime`-[SQPerson personTest] at SQPerson.m:75)
+     (lldb) p (IMP)0x101a20690
+     (IMP) $1 = 0x0000000101a20690 (09-Runtime`-[SQStudent studentTest] at SQStudent.m:13)
+     (lldb) p (IMP)0x101a1f9e0
+     (IMP) $2 = 0x0000000101a1f9e0 (09-Runtime`-[SQGoodStudent goodStudentTest] at SQGoodStudent.m:13)
+     */
+    
+    bucket_t *buckets = cache._buckets;
+    bucket_t bucket = buckets[(long long)@selector(studentTest) & cache._mask];
+    NSLog(@"%s %p", bucket._key, bucket._imp);
+    
+    for (int i = 0; i <= cache._mask; i++) {
+        bucket_t bucket = buckets[i];
+        NSLog(@"%s %p", bucket._key, bucket._imp);
     }
 }
     

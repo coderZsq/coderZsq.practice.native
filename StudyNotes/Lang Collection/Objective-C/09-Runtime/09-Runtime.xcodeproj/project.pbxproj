@@ -38,6 +38,7 @@
 		14779CDE2286A98E007592F9 /* SQStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQStudent.m; sourceTree = "<group>"; };
 		14779CE02286A9AD007592F9 /* SQGoodStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQGoodStudent.h; sourceTree = "<group>"; };
 		14779CE12286A9AD007592F9 /* SQGoodStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQGoodStudent.m; sourceTree = "<group>"; };
+		14A972BB22896F8E0036311F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 				14779CCA22869173007592F9 /* LaunchScreen.storyboard */,
 				14779CCD22869173007592F9 /* Info.plist */,
 				14779CCE22869173007592F9 /* main.mm */,
+				14A972BB22896F8E0036311F /* main.cpp */,
 				14779CD922869B3F007592F9 /* class_rw_t.cpp */,
 				14779CDB2286A6F6007592F9 /* cache_t.cpp */,
 				14779CD82286979F007592F9 /* SQClassInfo.h */,

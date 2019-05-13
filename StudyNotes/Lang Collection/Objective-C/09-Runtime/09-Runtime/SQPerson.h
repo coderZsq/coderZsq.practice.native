@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
+- (void)abc;
+
 //- (void)test;
 
 // "i 24 @ 0 : 8 i 16 f 20"
