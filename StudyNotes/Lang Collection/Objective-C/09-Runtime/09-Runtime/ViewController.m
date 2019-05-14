@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SQPerson.h"
 
 @interface ViewController ()
 
@@ -18,8 +19,18 @@
     
 }
 
+/*
+ 1. print为什么能够调用成功?
+ 2. 为什么self.name变成了ViewController
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    NSObject * obj2 = [[NSObject alloc] init];
+    
+    id cls = [SQPerson class];
+    void *obj = &cls;
+    [(__bridge id)obj print];
     
 //    [self performSelector:@selector(test)];
 //    [person performSelector:@selector(test)]

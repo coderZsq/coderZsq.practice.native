@@ -65,6 +65,10 @@
 
 @implementation SQPerson
 
+- (void)print {
+    NSLog(@"my name is %@", self.name);
+}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     // 本来能调用的方法
     if ([self respondsToSelector:aSelector]) {

@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
+@property (nonatomic, copy) NSString *name;
+
+- (void)print;
+
 - (void)other;
 
 - (void)run;
