@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 #import "SQClassInfo.h"
 #import "SQGoodStudent.h"
+#import "SQStudent.h"
 
 // 编写代码 -> 编译链接 -> 运行
 
@@ -185,15 +186,88 @@ void objc_msgSend(id receiver, SEL selector) {
  objc_msgSend底层有3大阶段
  消息发送(当前类, 父类中查找), 动态方法解析, 消息转发
  */
+#if 0
+@implementation NSObject
++ (BOOL)isMemberOfClass:(Class)cls {
+    return object_getClass((id)self) == cls;
+}
+    
+- (BOOL)isMemberOfClass:(Class)cls {
+    return [self class] == cls;
+}
+    
++ (BOOL)isKindOfClass:(Class)cls {
+    for (Class tcls = object_getClass((id)self); tcls; tcls = tcls->superclass) {
+        if (tcls == cls) return YES;
+    }
+    return NO;
+}
+    
+- (BOOL)isKindOfClass:(Class)cls {
+    for (Class tcls = [self class]; tcls; tcls = tcls->superclass) {
+        if (tcls == cls) return YES;
+    }
+    return NO;
+}
+@end
+#endif
+void test(id obj) {
+    if ([obj isMemberOfClass:[SQPerson class]]) {
+        
+    }
+}
     
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]);
+        NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]);
+        NSLog(@"%d", [[SQPerson class] isKindOfClass:[SQPerson class]]);
+        NSLog(@"%d", [[SQPerson class] isMemberOfClass:[SQPerson class]]);
         
+        // 这句代码的方法调用者不管是哪个类(只要是NSObject体系下的), 都返回YES
+        NSLog(@"%d", [NSObject isKindOfClass:[NSObject class]]); //1
+        NSLog(@"%d", [NSObject isMemberOfClass:[NSObject class]]); //0
+        NSLog(@"%d", [SQPerson isKindOfClass:[SQPerson class]]); //0
+        NSLog(@"%d", [SQPerson isMemberOfClass:[SQPerson class]]); //0
+
+        test([[SQPerson alloc] init]);
+
+        id person = [[SQPerson alloc] init];
+        NSLog(@"%d", [person isMemberOfClass:[SQPerson class]]);
+        NSLog(@"%d", [person isMemberOfClass:[NSObject class]]);
+
+        NSLog(@"%d", [person isKindOfClass:[SQPerson class]]);
+        NSLog(@"%d", [person isKindOfClass:[NSObject class]]);
+        
+        NSLog(@"%d", [SQPerson isMemberOfClass:object_getClass([SQPerson class])]);
+        NSLog(@"%d", [SQPerson isKindOfClass:object_getClass([NSObject class])]);
+        
+        NSLog(@"%d", [SQPerson isKindOfClass:[NSObject class]]);
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
 
+void test(SEL selector) {
+    SQPerson * person = [[SQPerson alloc] init];
+    if ([person respondsToSelector:selector]) {
+        [person performSelector:selector];
+    }
+}
+    
+void test(NSMutableArray *array) {
+    [array addObject:@"123"];
+}
+    
+// 降低unrecognized selector崩溃率
+void test7() {
+    SQStudent *student = [[SQStudent alloc] init];
+    SQPerson *person = [[SQPerson alloc] init];
+    [person run];
+    [person test];
+    [person other];
+}
+    
 // 消息转发: 将消息转发给别人
 void test6() {
     SQPerson *person = [[SQPerson alloc] init];
@@ -202,6 +276,9 @@ void test6() {
     
     [person test:15];
     [person test2:15];
+    
+    person.age = 20;
+    NSLog(@"%d", person.age);
 }
     
 void test5() {

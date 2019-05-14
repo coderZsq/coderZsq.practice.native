@@ -27,6 +27,7 @@
 		1448BDAC228A90E500EEA390 /* objc_msgForward.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = objc_msgForward.s; sourceTree = "<group>"; };
 		1448BDAE228A926800EEA390 /* __forwarding__.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__.c; sourceTree = "<group>"; };
 		1448BDB0228A928400EEA390 /* __forwarding__clean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__clean.c; sourceTree = "<group>"; };
+		1448BDB2228AB6F300EEA390 /* SQStudent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQStudent.cpp; sourceTree = "<group>"; };
 		14779CBC22869172007592F9 /* 09-Runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "09-Runtime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14779CBF22869172007592F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14779CC022869172007592F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 				14779CD5228691CC007592F9 /* SQPerson.m */,
 				14779CDD2286A98E007592F9 /* SQStudent.h */,
 				14779CDE2286A98E007592F9 /* SQStudent.m */,
+				1448BDB2228AB6F300EEA390 /* SQStudent.cpp */,
 				14779CE02286A9AD007592F9 /* SQGoodStudent.h */,
 				14779CE12286A9AD007592F9 /* SQGoodStudent.m */,
 				1448BDA9228A8FCE00EEA390 /* SQCat.h */,

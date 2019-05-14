@@ -12,6 +12,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
+- (void)other;
+
+- (void)run;
+
+//{
+//    int _age;
+//}
+
+@property (nonatomic, assign) int age;
+@property (nonatomic, assign) double height;
+
+//- (void)setAge:(int)age;
+//
+//- (int)age;
+
 - (int)test2:(int)age;
 
 - (void)test:(int)age;

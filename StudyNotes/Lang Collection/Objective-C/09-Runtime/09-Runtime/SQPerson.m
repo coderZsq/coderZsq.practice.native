@@ -65,6 +65,50 @@
 
 @implementation SQPerson
 
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    // 本来能调用的方法
+    if ([self respondsToSelector:aSelector]) {
+        return [super methodSignatureForSelector:aSelector];
+    }
+    
+    // 找不到的方法
+    return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+}
+
+// 找不到的方法, 都会来到这里
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"找不到%@方法", NSStringFromSelector(anInvocation.selector));
+}
+
+// NSProxy
+
+- (void)run {
+    NSLog(@"%s", __func__);
+}
+
+// 提醒编译器不要自动生成setter和getter的实现, 不要自动生成成员变量
+@dynamic age;
+//@synthesize age = _age, height = _height;
+
+void setAge(id self, SEL _cmd, int age) {
+    NSLog(@"age is %d", age);
+}
+
+int age() {
+    return 120;
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    if (sel == @selector(setAge:)) {
+        class_addMethod(self, sel, (IMP)setAge, "v@:i");
+        return YES;
+    } else if (sel == @selector(age)) {
+        class_addMethod(self, sel, (IMP)age, "i@:");
+        return YES;
+    }
+    return [super resolveClassMethod:sel];
+}
+
 + (id)forwardingTargetForSelector:(SEL)aSelector {
     if (aSelector == @selector(test)) {
 //        return [SQCat class];
@@ -94,7 +138,7 @@
     }
     return [super forwardingTargetForSelector:aSelector];
 }
-
+#if 0
 // 方法签名: 返回值类型, 参数类型
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     if (aSelector == @selector(test2:)) {
@@ -142,7 +186,7 @@
         [anInvocation invokeWithTarget:[[SQCat alloc] init]];
     }
 }
-
+#endif
 #if 0
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     if (aSelector == @selector(test)) {
