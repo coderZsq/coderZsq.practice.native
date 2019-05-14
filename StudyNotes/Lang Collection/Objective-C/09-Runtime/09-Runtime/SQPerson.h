@@ -12,9 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQPerson : NSObject
 
-- (void)abc;
+- (int)test2:(int)age;
 
-//- (void)test;
+- (void)test:(int)age;
+
++ (void)test;
+
+- (void)test;
 
 // "i 24 @ 0 : 8 i 16 f 20"
 // id SEL int float == 24

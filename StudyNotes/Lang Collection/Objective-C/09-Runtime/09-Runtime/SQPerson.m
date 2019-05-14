@@ -7,6 +7,8 @@
 //
 
 #import "SQPerson.h"
+#import <objc/runtime.h>
+#import "SQCat.h"
 
 // & 可以用来取出特定的位
 //   0000 0011
@@ -63,9 +65,177 @@
 
 @implementation SQPerson
 
++ (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(test)) {
+//        return [SQCat class];
+//        return nil;
+        // objc_msgSend([[SQCat alloc] init], @selector(test));
+        // [[[SQCat alloc] init] test]
+        return [[SQCat alloc] init];
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    if (aSelector == @selector(test)) {
+        return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    }
+    return [super methodSignatureForSelector:aSelector];
+}
+
++ (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"%s", __func__);
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(test)) {
+//        return [[SQCat alloc] init];
+        return nil;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
+// 方法签名: 返回值类型, 参数类型
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    if (aSelector == @selector(test2:)) {
+//        return [NSMethodSignature signatureWithObjCTypes:"i@:i"];
+        return [[[SQCat alloc] init] methodSignatureForSelector:aSelector];
+    }
+    if (aSelector == @selector(test)) {
+        return [NSMethodSignature signatureWithObjCTypes:"v16@0:8"];
+    }
+    if (aSelector == @selector(test:)) {
+//        return [NSMethodSignature signatureWithObjCTypes:"v20@0:8i16"];
+        return [NSMethodSignature signatureWithObjCTypes:"v@:i"];
+    }
+    return [super methodSignatureForSelector:aSelector];
+}
+
+// NSInvocation封装了一个方法调用, 包括: 方法调用者, 方法名, 方法参数
+//    anInvocation.target 方法调用者
+//    anInvocation.selector 方法名
+//    [anInvocation getArgument:NULL atIndex:0]
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"%s", __func__);
+    
+    if (anInvocation.selector == @selector(test2:)) {
+        // anInvocation.target == person对象
+        // anInvocation.target == test2:
+        // anInvocation的参数: receiver, selector, 15
+        // [[[SQCat alloc] init] test2: 15]
+        [anInvocation invokeWithTarget:[[SQCat alloc] init]];
+        int ret;
+        [anInvocation getReturnValue:&ret];
+        NSLog(@"%d", ret);
+    }
+    
+    if (anInvocation.selector == @selector(test:)) {
+        // 参数顺序: reveiver, selector, other arguments
+        int age;
+        [anInvocation getArgument:&age atIndex:2];
+        NSLog(@"%d", age + 10);
+    }
+    
+    if (anInvocation.selector == @selector(test)) {
+        //    anInvocation.target = [[SQCat alloc] init];
+        //    [anInvocation invoke];
+        [anInvocation invokeWithTarget:[[SQCat alloc] init]];
+    }
+}
+
+#if 0
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(test)) {
+        // objc_msgSend([[SQCat alloc] init], aSelector);
+        return [[SQCat alloc] init];
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+#endif
+
+void c_other(id self, SEL _cmd) {
+    NSLog(@"c_other - %@ - %@", self, NSStringFromSelector(_cmd));
+}
+
+- (void)other {
+    NSLog(@"%s", __func__);
+}
+#if 0
++ (BOOL)resolveClassMethod:(SEL)sel {
+    if (sel == @selector(test)) {
+        class_addMethod(object_getClass(self), sel,
+                        (IMP)c_other,
+                        "v16@0:8");
+        return YES;
+    }
+    return [super resolveClassMethod:sel];
+}
+#endif
 //- (void)test {
 //    NSLog(@"%s", __func__);
 //}
+
+// typedef struct objc_method *Method;
+// struct objc_method == struct method_t
+// struct method_t *otherMethod = (struct method_t *)class_getInstanceMethod(self, @selector(other));
+// NSLog(@"%s %s %p", otherMethod->sel, otherMethod->types, otherMethod->imp);
+
+struct method_t {
+    SEL sel;
+    char *types;
+    IMP imp;
+};
+
+#if 0
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    NSLog(@"%s", __func__);
+    if (sel == @selector(test)) {
+        // 动态添加test方法的实现
+        class_addMethod(self, sel,
+                        (IMP)c_other,
+                        "v16@0:8");
+        // 返回YES代表有动态添加方法
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+#endif
+
+#if 0
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    NSLog(@"%s", __func__);
+    if (sel == @selector(test)) {
+        // 获取其他方法
+        Method method = class_getInstanceMethod(self, @selector(other));
+
+        // 动态添加test方法的实现
+        class_addMethod(self, sel,
+                        method_getImplementation(method),
+                        method_getTypeEncoding(method));
+        // 返回YES代表有动态添加方法
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+#endif
+
+#if 0
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    NSLog(@"%s", __func__);
+    if (sel == @selector(test)) {
+        // 获取其他方法
+         struct method_t *otherMethod = (struct method_t *)class_getInstanceMethod(self, @selector(other));
+         NSLog(@"%s %s %p", otherMethod->sel, otherMethod->types, otherMethod->imp);
+
+        // 动态添加test方法的实现
+        class_addMethod(self, sel, otherMethod->imp, otherMethod->types);
+
+        // 返回YES代表有动态添加方法
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+#endif
 
 - (int)test:(int)age height:(float)height {
     NSLog(@"%s", __func__);

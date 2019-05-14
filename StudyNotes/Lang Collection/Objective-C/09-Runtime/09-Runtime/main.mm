@@ -172,30 +172,56 @@ struct class_rw_t {
 #endif
     
 // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 main.mm
+
+void objc_msgSend(id receiver, SEL selector) {
+    if (receiver == nil) return;
+    
+    // 查找缓存
+}
+
+/*
+ 讲一下OC的消息机制
+ OC中的方法调用其实都是转成了objc_msgSend函数的调用, 给receiver(方法调用者)发送了一条消息(selector方法名)
+ objc_msgSend底层有3大阶段
+ 消息发送(当前类, 父类中查找), 动态方法解析, 消息转发
+ */
     
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-
-        SQPerson *person = [[SQPerson alloc] init];
-        [person personTest];
-//        NSLog(@"%p %p", sel_registerName("personTest"), @selector(personTest));
-//        ((void (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("personTest"));
-        // 消息接受者 (receiver): person
-        // 消息名称: personTest
         
-        [SQPerson initialize];
-//        ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("initialize"));
-        // 消息接受者 (receiver): [SQPerson class]
-        // 消息名称: initialize
-        
-        // OC的方法调用: 消息机制, 给方法调用者发送消息
-        
-//        [person abc];
-//        objc_msgSend如果找不到合适的方法进行调用, 会报错
-//        '-[SQPerson abc]: unrecognized selector sent to instance 0x6000033ac270'
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+}
+
+// 消息转发: 将消息转发给别人
+void test6() {
+    SQPerson *person = [[SQPerson alloc] init];
+    [person test];
+    [SQPerson test];
+    
+    [person test:15];
+    [person test2:15];
+}
+    
+void test5() {
+    SQPerson *person = [[SQPerson alloc] init];
+    [person personTest];
+    //        NSLog(@"%p %p", sel_registerName("personTest"), @selector(personTest));
+    //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("personTest"));
+    // 消息接受者 (receiver): person
+    // 消息名称: personTest
+    
+    [SQPerson initialize];
+    //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("initialize"));
+    // 消息接受者 (receiver): [SQPerson class]
+    // 消息名称: initialize
+    
+    // OC的方法调用: 消息机制, 给方法调用者发送消息
+    
+    //        [person test];
+    //        objc_msgSend如果找不到合适的方法进行调用, 会报错
+    //        '-[SQPerson test]: unrecognized selector sent to instance 0x6000033ac270'
 }
     
 void test4() {

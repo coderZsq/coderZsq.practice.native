@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1448BDAB228A8FCE00EEA390 /* SQCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448BDAA228A8FCE00EEA390 /* SQCat.m */; };
 		14779CC122869172007592F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CC022869172007592F9 /* AppDelegate.m */; };
 		14779CC422869172007592F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14779CC322869172007592F9 /* ViewController.m */; };
 		14779CC722869172007592F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14779CC522869172007592F9 /* Main.storyboard */; };
@@ -19,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1448BDA5228A6C1200EEA390 /* objc_msgSend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objc_msgSend.cpp; sourceTree = "<group>"; };
+		1448BDA7228A6C8F00EEA390 /* objc_msgSend.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = objc_msgSend.s; sourceTree = "<group>"; };
+		1448BDA9228A8FCE00EEA390 /* SQCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQCat.h; sourceTree = "<group>"; };
+		1448BDAA228A8FCE00EEA390 /* SQCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQCat.m; sourceTree = "<group>"; };
+		1448BDAC228A90E500EEA390 /* objc_msgForward.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = objc_msgForward.s; sourceTree = "<group>"; };
+		1448BDAE228A926800EEA390 /* __forwarding__.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__.c; sourceTree = "<group>"; };
+		1448BDB0228A928400EEA390 /* __forwarding__clean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__clean.c; sourceTree = "<group>"; };
 		14779CBC22869172007592F9 /* 09-Runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "09-Runtime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14779CBF22869172007592F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14779CC022869172007592F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +91,11 @@
 				14A972BB22896F8E0036311F /* main.cpp */,
 				14779CD922869B3F007592F9 /* class_rw_t.cpp */,
 				14779CDB2286A6F6007592F9 /* cache_t.cpp */,
+				1448BDA7228A6C8F00EEA390 /* objc_msgSend.s */,
+				1448BDA5228A6C1200EEA390 /* objc_msgSend.cpp */,
+				1448BDAC228A90E500EEA390 /* objc_msgForward.s */,
+				1448BDAE228A926800EEA390 /* __forwarding__.c */,
+				1448BDB0228A928400EEA390 /* __forwarding__clean.c */,
 				14779CD82286979F007592F9 /* SQClassInfo.h */,
 				14779CD6228691CC007592F9 /* SQPerson.h */,
 				14779CD5228691CC007592F9 /* SQPerson.m */,
@@ -90,6 +103,8 @@
 				14779CDE2286A98E007592F9 /* SQStudent.m */,
 				14779CE02286A9AD007592F9 /* SQGoodStudent.h */,
 				14779CE12286A9AD007592F9 /* SQGoodStudent.m */,
+				1448BDA9228A8FCE00EEA390 /* SQCat.h */,
+				1448BDAA228A8FCE00EEA390 /* SQCat.m */,
 			);
 			path = "09-Runtime";
 			sourceTree = "<group>";
@@ -169,6 +184,7 @@
 				14779CE22286A9AD007592F9 /* SQGoodStudent.m in Sources */,
 				14779CCF22869173007592F9 /* main.mm in Sources */,
 				14779CC122869172007592F9 /* AppDelegate.m in Sources */,
+				1448BDAB228A8FCE00EEA390 /* SQCat.m in Sources */,
 				14779CDF2286A98E007592F9 /* SQStudent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
