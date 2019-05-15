@@ -63,8 +63,106 @@
 }
 @end
 
+struct SQPerson_IMPL {
+    Class isa;
+    NSString *_name;
+};
+#if 0
+struct SQPerson_IMPL {
+    struct NSObject_IMPL NSObject_IVARS;
+    
+    union  {
+        char bits;
+        
+        struct  {
+            char tall : 1;
+            char rich : 1;
+            char handsome : 1;
+            char thin : 1;
+        } ;
+    } _tallRichHandsome;
+    NSString * _Nonnull _name;
+    double _height;
+};
+#endif
+
+// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc SQPerson.m
+// clang -emit-llvm -S SQPerson.m
+
 @implementation SQPerson
 
+// LLVM
+// OC -> 中间代码 -> 汇编 -> 机器代码
+
+void test(int param) {
+    
+}
+#if 0
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    [super forwardInvocation:anInvocation];
+    
+    /*
+    ; Function Attrs: noinline optnone ssp uwtable
+    define internal void @"\01-[SQPerson forwardInvocation:]"(%1*, i8*, %2*) #1 {
+        %4 = alloca %1*, align 8
+        %5 = alloca i8*, align 8
+        %6 = alloca %2*, align 8
+        %7 = alloca %struct._objc_super, align 8
+        %8 = alloca i32, align 4
+        %9 = alloca i32, align 4
+        %10 = alloca i32, align 4
+        store %1* %0, %1** %4, align 8
+        store i8* %1, i8** %5, align 8
+        store %2* %2, %2** %6, align 8
+        %11 = load %1*, %1** %4, align 8
+        %12 = load %2*, %2** %6, align 8
+        %13 = bitcast %1* %11 to i8*
+        %14 = getelementptr inbounds %struct._objc_super, %struct._objc_super* %7, i32 0, i32 0
+        store i8* %13, i8** %14, align 8
+        %15 = load %struct._class_t*, %struct._class_t** @"OBJC_CLASSLIST_SUP_REFS_$_", align 8
+        %16 = bitcast %struct._class_t* %15 to i8*
+        %17 = getelementptr inbounds %struct._objc_super, %struct._objc_super* %7, i32 0, i32 1
+        store i8* %16, i8** %17, align 8
+        %18 = load i8*, i8** @OBJC_SELECTOR_REFERENCES_.2, align 8, !invariant.load !9
+        call void bitcast (i8* (%struct._objc_super*, i8*, ...)* @objc_msgSendSuper2 to void (%struct._objc_super*, i8*, %2*)*)(%struct._objc_super* %7, i8* %18, %2* %12)
+        store i32 10, i32* %8, align 4
+        store i32 20, i32* %9, align 4
+        %19 = load i32, i32* %8, align 4
+        %20 = load i32, i32* %9, align 4
+        %21 = add nsw i32 %19, %20
+        store i32 %21, i32* %10, align 4
+        %22 = load i32, i32* %10, align 4
+        call void @test(i32 %22)
+        ret void
+    }*/
+    
+    // 查看汇编
+    // objc_msgSendSuper2()
+    /*
+     movq    %rdx, -40(%rbp)
+     movq    L_OBJC_CLASSLIST_SUP_REFS_$_(%rip), %rdx
+     movq    %rdx, -32(%rbp)
+     movq    L_OBJC_SELECTOR_REFERENCES_.2(%rip), %rdx
+     leaq    -40(%rbp), %rdi
+     movq    %rsi, -64(%rbp)         ## 8-byte Spill
+     movq    %rdx, %rsi
+     movq    -64(%rbp), %rdx         ## 8-byte Reload
+     callq    _objc_msgSendSuper2
+     */
+    
+    //转为cpp文件
+    // ((void (*)(__rw_objc_super *, SEL, NSInvocation *))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SQPerson"))}, sel_registerName("forwardInvocation:"), (NSInvocation *)anInvocation);
+    
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+    test(c);
+}
+#endif
 - (void)print {
     NSLog(@"my name is %@", self.name);
 }
@@ -83,7 +181,6 @@
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
     NSLog(@"找不到%@方法", NSStringFromSelector(anInvocation.selector));
 }
-
 // NSProxy
 
 - (void)run {

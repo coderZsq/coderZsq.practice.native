@@ -172,53 +172,71 @@ struct class_rw_t {
     };
 #endif
     
-// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 main.mm
-
-void objc_msgSend(id receiver, SEL selector) {
-    if (receiver == nil) return;
+    // xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-12.0.0 main.mm
     
-    // 查找缓存
-}
-
-/*
- 讲一下OC的消息机制
- OC中的方法调用其实都是转成了objc_msgSend函数的调用, 给receiver(方法调用者)发送了一条消息(selector方法名)
- objc_msgSend底层有3大阶段
- 消息发送(当前类, 父类中查找), 动态方法解析, 消息转发
- */
-#if 0
-@implementation NSObject
-+ (BOOL)isMemberOfClass:(Class)cls {
-    return object_getClass((id)self) == cls;
-}
+    /*
+     讲一下OC的消息机制
+     OC中的方法调用其实都是转成了objc_msgSend函数的调用, 给receiver(方法调用者)发送了一条消息(selector方法名)
+     objc_msgSend底层有3大阶段
+     消息发送(当前类, 父类中查找), 动态方法解析, 消息转发
+     */
     
-- (BOOL)isMemberOfClass:(Class)cls {
-    return [self class] == cls;
-}
-    
-+ (BOOL)isKindOfClass:(Class)cls {
-    for (Class tcls = object_getClass((id)self); tcls; tcls = tcls->superclass) {
-        if (tcls == cls) return YES;
+   
+    int main(int argc, char * argv[]) {
+        @autoreleasepool {
+            
+            
+            return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        }
     }
-    return NO;
-}
     
-- (BOOL)isKindOfClass:(Class)cls {
-    for (Class tcls = [self class]; tcls; tcls = tcls->superclass) {
-        if (tcls == cls) return YES;
-    }
-    return NO;
-}
-@end
-#endif
-void test(id obj) {
-    if ([obj isMemberOfClass:[SQPerson class]]) {
+    // 局部变量分配在栈空间
+    // 栈空间分配, 从高地址到低地址
+    void test9_test() {
+        long long a = 4; //0x7ffeeb4d6e38
+        long long b = 5; //0x7ffeeb4d6e30
+        long long c = 6; //0x7ffeeb4d6e28
+        long long d = 7; //0x7ffeeb4d6e20
         
+        NSLog(@"%p %p %p %p", &a, &b, &c, &d);
     }
-}
     
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
+    void test9() {
+        test9_test();
+    }
+    
+#if 0
+    @implementation NSObject
+    + (BOOL)isMemberOfClass:(Class)cls {
+        return object_getClass((id)self) == cls;
+    }
+    
+    - (BOOL)isMemberOfClass:(Class)cls {
+        return [self class] == cls;
+    }
+    
+    + (BOOL)isKindOfClass:(Class)cls {
+        for (Class tcls = object_getClass((id)self); tcls; tcls = tcls->superclass) {
+            if (tcls == cls) return YES;
+        }
+        return NO;
+    }
+    
+    - (BOOL)isKindOfClass:(Class)cls {
+        for (Class tcls = [self class]; tcls; tcls = tcls->superclass) {
+            if (tcls == cls) return YES;
+        }
+        return NO;
+    }
+    @end
+#endif
+    void test(id obj) {
+        if ([obj isMemberOfClass:[SQPerson class]]) {
+            
+        }
+    }
+    
+    void test8() {
         NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]);
         NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]);
         NSLog(@"%d", [[SQPerson class] isKindOfClass:[SQPerson class]]);
@@ -229,13 +247,13 @@ int main(int argc, char * argv[]) {
         NSLog(@"%d", [NSObject isMemberOfClass:[NSObject class]]); //0
         NSLog(@"%d", [SQPerson isKindOfClass:[SQPerson class]]); //0
         NSLog(@"%d", [SQPerson isMemberOfClass:[SQPerson class]]); //0
-
+        
         test([[SQPerson alloc] init]);
-
+        
         id person = [[SQPerson alloc] init];
         NSLog(@"%d", [person isMemberOfClass:[SQPerson class]]);
         NSLog(@"%d", [person isMemberOfClass:[NSObject class]]);
-
+        
         NSLog(@"%d", [person isKindOfClass:[SQPerson class]]);
         NSLog(@"%d", [person isKindOfClass:[NSObject class]]);
         
@@ -243,231 +261,234 @@ int main(int argc, char * argv[]) {
         NSLog(@"%d", [SQPerson isKindOfClass:object_getClass([NSObject class])]);
         
         NSLog(@"%d", [SQPerson isKindOfClass:[NSObject class]]);
+    }
+    
+    void test(SEL selector) {
+        SQPerson * person = [[SQPerson alloc] init];
+        if ([person respondsToSelector:selector]) {
+            [person performSelector:selector];
+        }
+    }
+    
+    void test(NSMutableArray *array) {
+        [array addObject:@"123"];
+    }
+    
+    // 降低unrecognized selector崩溃率
+    void test7() {
+        SQStudent *student = [[SQStudent alloc] init];
+        SQPerson *person = [[SQPerson alloc] init];
+        [person run];
+        [person test];
+        [person other];
+    }
+    
+    // 消息转发: 将消息转发给别人
+    void test6() {
+        SQPerson *person = [[SQPerson alloc] init];
+        [person test];
+        [SQPerson test];
         
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        [person test:15];
+        [person test2:15];
+        
+        person.age = 20;
+        NSLog(@"%d", person.age);
     }
-}
-
-void test(SEL selector) {
-    SQPerson * person = [[SQPerson alloc] init];
-    if ([person respondsToSelector:selector]) {
-        [person performSelector:selector];
+    
+    void objc_msgSend(id receiver, SEL selector) {
+        if (receiver == nil) return;
+        
+        // 查找缓存
     }
-}
     
-void test(NSMutableArray *array) {
-    [array addObject:@"123"];
-}
+    void test5() {
+        SQPerson *person = [[SQPerson alloc] init];
+        [person personTest];
+        //        NSLog(@"%p %p", sel_registerName("personTest"), @selector(personTest));
+        //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("personTest"));
+        // 消息接受者 (receiver): person
+        // 消息名称: personTest
+        
+        [SQPerson initialize];
+        //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("initialize"));
+        // 消息接受者 (receiver): [SQPerson class]
+        // 消息名称: initialize
+        
+        // OC的方法调用: 消息机制, 给方法调用者发送消息
+        
+        //        [person test];
+        //        objc_msgSend如果找不到合适的方法进行调用, 会报错
+        //        '-[SQPerson test]: unrecognized selector sent to instance 0x6000033ac270'
+    }
     
-// 降低unrecognized selector崩溃率
-void test7() {
-    SQStudent *student = [[SQStudent alloc] init];
-    SQPerson *person = [[SQPerson alloc] init];
-    [person run];
-    [person test];
-    [person other];
-}
-    
-// 消息转发: 将消息转发给别人
-void test6() {
-    SQPerson *person = [[SQPerson alloc] init];
-    [person test];
-    [SQPerson test];
-    
-    [person test:15];
-    [person test2:15];
-    
-    person.age = 20;
-    NSLog(@"%d", person.age);
-}
-    
-void test5() {
-    SQPerson *person = [[SQPerson alloc] init];
-    [person personTest];
-    //        NSLog(@"%p %p", sel_registerName("personTest"), @selector(personTest));
-    //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)person, sel_registerName("personTest"));
-    // 消息接受者 (receiver): person
-    // 消息名称: personTest
-    
-    [SQPerson initialize];
-    //        ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("initialize"));
-    // 消息接受者 (receiver): [SQPerson class]
-    // 消息名称: initialize
-    
-    // OC的方法调用: 消息机制, 给方法调用者发送消息
-    
-    //        [person test];
-    //        objc_msgSend如果找不到合适的方法进行调用, 会报错
-    //        '-[SQPerson test]: unrecognized selector sent to instance 0x6000033ac270'
-}
-    
-void test4() {
-    //        SQPerson *person = [[SQPerson alloc] init];
-    //        sq_objc_class *personClass = (__bridge sq_objc_class *) [SQPerson class];
-    //        [person personTest];
-    
-    SQGoodStudent *goodStudent = [[SQGoodStudent alloc] init];
-    sq_objc_class *goodStudentClass = (__bridge sq_objc_class *) [SQGoodStudent class];
-    [goodStudent goodStudentTest];
-    [goodStudent studentTest];
-    [goodStudent personTest];
-    [goodStudent goodStudentTest];
-    [goodStudent studentTest];
-    
-    NSLog(@"---------------------------------");
-    
-    cache_t cache = goodStudentClass->cache;
-    NSLog(@"%s %p", @selector(personTest), cache.imp(@selector(personTest)));
-    NSLog(@"%s %p", @selector(studentTest), cache.imp(@selector(studentTest)));
-    NSLog(@"%s %p", @selector(goodStudentTest), cache.imp(@selector(goodStudentTest)));
-    /*
-     (lldb) p (IMP)0x101a1f6c0
-     (IMP) $0 = 0x0000000101a1f6c0 (09-Runtime`-[SQPerson personTest] at SQPerson.m:75)
-     (lldb) p (IMP)0x101a20690
-     (IMP) $1 = 0x0000000101a20690 (09-Runtime`-[SQStudent studentTest] at SQStudent.m:13)
-     (lldb) p (IMP)0x101a1f9e0
-     (IMP) $2 = 0x0000000101a1f9e0 (09-Runtime`-[SQGoodStudent goodStudentTest] at SQGoodStudent.m:13)
-     */
-    
-    bucket_t *buckets = cache._buckets;
-    bucket_t bucket = buckets[(long long)@selector(studentTest) & cache._mask];
-    NSLog(@"%s %p", bucket._key, bucket._imp);
-    
-    for (int i = 0; i <= cache._mask; i++) {
-        bucket_t bucket = buckets[i];
+    void test4() {
+        //        SQPerson *person = [[SQPerson alloc] init];
+        //        sq_objc_class *personClass = (__bridge sq_objc_class *) [SQPerson class];
+        //        [person personTest];
+        
+        SQGoodStudent *goodStudent = [[SQGoodStudent alloc] init];
+        sq_objc_class *goodStudentClass = (__bridge sq_objc_class *) [SQGoodStudent class];
+        [goodStudent goodStudentTest];
+        [goodStudent studentTest];
+        [goodStudent personTest];
+        [goodStudent goodStudentTest];
+        [goodStudent studentTest];
+        
+        NSLog(@"---------------------------------");
+        
+        cache_t cache = goodStudentClass->cache;
+        NSLog(@"%s %p", @selector(personTest), cache.imp(@selector(personTest)));
+        NSLog(@"%s %p", @selector(studentTest), cache.imp(@selector(studentTest)));
+        NSLog(@"%s %p", @selector(goodStudentTest), cache.imp(@selector(goodStudentTest)));
+        /*
+         (lldb) p (IMP)0x101a1f6c0
+         (IMP) $0 = 0x0000000101a1f6c0 (09-Runtime`-[SQPerson personTest] at SQPerson.m:75)
+         (lldb) p (IMP)0x101a20690
+         (IMP) $1 = 0x0000000101a20690 (09-Runtime`-[SQStudent studentTest] at SQStudent.m:13)
+         (lldb) p (IMP)0x101a1f9e0
+         (IMP) $2 = 0x0000000101a1f9e0 (09-Runtime`-[SQGoodStudent goodStudentTest] at SQGoodStudent.m:13)
+         */
+        
+        bucket_t *buckets = cache._buckets;
+        bucket_t bucket = buckets[(long long)@selector(studentTest) & cache._mask];
         NSLog(@"%s %p", bucket._key, bucket._imp);
+        
+        for (int i = 0; i <= cache._mask; i++) {
+            bucket_t bucket = buckets[i];
+            NSLog(@"%s %p", bucket._key, bucket._imp);
+        }
     }
-}
     
-void test3() {
-    NSLog(@"%s", @encode(int));
-    NSLog(@"%s", @encode(void));
-    NSLog(@"%s", @encode(id));
-    NSLog(@"%s", @encode(SEL));
+    void test3() {
+        NSLog(@"%s", @encode(int));
+        NSLog(@"%s", @encode(void));
+        NSLog(@"%s", @encode(id));
+        NSLog(@"%s", @encode(SEL));
+        
+        SQPerson *person = [[SQPerson alloc] init];
+        sq_objc_class *cls = (__bridge sq_objc_class *) [SQPerson class];
+        class_rw_t *data = cls->data();
+        // v 16 @ 0 : 8
+        //        [person test];
+        //        Printing description of data->methods->first.types:
+        //        (const char *) types = 0x0000000104b78494 "i24@0:8i16f20"
+        [person test:10 height:20];
+        
+        SEL sel1 = sel_registerName("test");
+        SEL sel2 = @selector(test);
+        
+        sel_getName(sel1);
+        NSStringFromSelector(sel2);
+        
+        NSLog(@"%p %p %p", @selector(test), @selector(test), sel1);
+    }
     
-    SQPerson *person = [[SQPerson alloc] init];
-    sq_objc_class *cls = (__bridge sq_objc_class *) [SQPerson class];
-    class_rw_t *data = cls->data();
-    // v 16 @ 0 : 8
-    //        [person test];
-    //        Printing description of data->methods->first.types:
-    //        (const char *) types = 0x0000000104b78494 "i24@0:8i16f20"
-    [person test:10 height:20];
+    void test2() {
+        SQPerson *person = [[SQPerson alloc] init];
+        __weak SQPerson *weakPerson = person;
+        weakPerson = nil;
+        uintptr_t weakly_referenced = 1;
+        
+        //        objc_setAssociatedObject(person, @"name", @"Castie!", OBJC_ASSOCIATION_COPY_NONATOMIC);
+        //        objc_setAssociatedObject(person, @"name", nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        //        uintptr_t has_assoc = 1;
+        
+        /*
+        void *objc_destructInstance(id obj)
+        {
+            if (obj) {
+                // Read all of the flags at once for performance.
+                bool cxx = obj->hasCxxDtor();
+                bool assoc = obj->hasAssociatedObjects();
+                
+                // This order is important.
+                if (cxx) object_cxxDestruct(obj);
+                if (assoc) _object_remove_assocations(obj);
+                obj->clearDeallocating();
+            }
+            
+            return obj;
+        }*/
+        
+    }
     
-    SEL sel1 = sel_registerName("test");
-    SEL sel2 = @selector(test);
+    typedef enum {
+        SQOptionNone = 0,     // 0b0000
+        SQOptionOne = 1<<0,   // 0b0001
+        SQOptionTwo = 1<<2,   // 0b0010
+        SQOptionThree = 1<<3, // 0b0100
+        SQOptionFour = 1<<4,  // 0b1000
+    } SQOptions;
     
-    sel_getName(sel1);
-    NSStringFromSelector(sel2);
+    //typedef enum {
+    //    SQOptionOne = 1,   // 0b0001
+    //    SQOptionTwo = 2,   // 0b0010
+    //    SQOptionThree = 3, // 0b0100
+    //    SQOptionFour = 4,  // 0b1000
+    //} SQOptions;
     
-    NSLog(@"%p %p %p", @selector(test), @selector(test), sel1);
-}
-
-void test2() {
-    SQPerson *person = [[SQPerson alloc] init];
-    __weak SQPerson *weakPerson = person;
-    weakPerson = nil;
-    uintptr_t weakly_referenced = 1;
-    
-    //        objc_setAssociatedObject(person, @"name", @"Castie!", OBJC_ASSOCIATION_COPY_NONATOMIC);
-    //        objc_setAssociatedObject(person, @"name", nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    //        uintptr_t has_assoc = 1;
+    union Date {
+        int year;
+        char month;
+    };
     
     /*
-     void *objc_destructInstance(id obj)
-     {
-         if (obj) {
-             // Read all of the flags at once for performance.
-             bool cxx = obj->hasCxxDtor();
-             bool assoc = obj->hasAssociatedObjects();
-     
-             // This order is important.
-             if (cxx) object_cxxDestruct(obj);
-             if (assoc) _object_remove_assocations(obj);
-             obj->clearDeallocating();
-         }
-     
-         return obj;
-     }
-    */
-}
-
-typedef enum {
-    SQOptionNone = 0,     // 0b0000
-    SQOptionOne = 1<<0,   // 0b0001
-    SQOptionTwo = 1<<2,   // 0b0010
-    SQOptionThree = 1<<3, // 0b0100
-    SQOptionFour = 1<<4,  // 0b1000
-} SQOptions;
-
-//typedef enum {
-//    SQOptionOne = 1,   // 0b0001
-//    SQOptionTwo = 2,   // 0b0010
-//    SQOptionThree = 3, // 0b0100
-//    SQOptionFour = 4,  // 0b1000
-//} SQOptions;
-
-union Date {
-    int year;
-    char month;
-};
-
-/*
- 0b0001
- |0b0010
- |0b1000
- ------
- 0b1011
- &0b1000
- ------
- 0b1000
- */
-
-void setOptions(SQOptions options) {
-    if (options & SQOptionOne) {
-        NSLog(@"包含了SQOptionOne");
-    }
-    if (options & SQOptionTwo) {
-        NSLog(@"包含了SQOptionTwo");
-    }
-    if (options & SQOptionThree) {
-        NSLog(@"包含了SQOptionThree");
-    }
-    if (options & SQOptionFour) {
-        NSLog(@"包含了SQOptionFour");
-    }
-}
-
-void test() {
-//    setOptions(SQOptionOne | SQOptionTwo | SQOptionFour);
-//    setOptions(SQOptionOne + SQOptionTwo + SQOptionFour);
-    
-    union Date date;
-    date.year = 2019;
-    date.month = 5;
-    
-    SQPerson *person = [[SQPerson alloc] init];
-    person.tall = YES;
-    person.rich = YES;
-    person.handsome = NO;
-    person.thin = NO;
-    /*
-     (lldb) p/x person->_tallRichHandsome
-     ((anonymous struct)) $0 = (tall = 0x01, rich = 0x00, hansome = 0x00)
-     (lldb) p/x &(person->_tallRichHandsome)
-     ((anonymous struct) *) $0 = 0x0000000101206978
-     (lldb) x 0x0000000101206978
-     0x101206978: 01 00 00 00 00 00 00 00 50 6a 20 01 01 00 00 00  ........Pj .....
-     0x101206988: 90 6c 20 01 01 00 00 00 00 6a 20 01 01 00 00 00  .l ......j .....
+     0b0001
+     |0b0010
+     |0b1000
+     ------
+     0b1011
+     &0b1000
+     ------
+     0b1000
      */
-    /*
-     (lldb) p/x &(person->_tallRichHandsome)
-     ((anonymous struct) *) $0 = 0x0000000100632488
-     (lldb) x 0x0000000100632488
-     0x100632488: 05 00 00 00 00 00 00 00 60 25 63 00 01 00 00 00  ........`%c.....
-     0x100632498: a0 27 63 00 01 00 00 00 10 25 63 00 01 00 00 00  .'c......%c.....
-     */
-    NSLog(@"thin: %d, tall: %d, rich: %d, handsome: %d", person.isThin, person.isTall, person.isRich, person.isHandsome);
     
-    NSLog(@"%zd", class_getInstanceSize([SQPerson class]));
-}
+    void setOptions(SQOptions options) {
+        if (options & SQOptionOne) {
+            NSLog(@"包含了SQOptionOne");
+        }
+        if (options & SQOptionTwo) {
+            NSLog(@"包含了SQOptionTwo");
+        }
+        if (options & SQOptionThree) {
+            NSLog(@"包含了SQOptionThree");
+        }
+        if (options & SQOptionFour) {
+            NSLog(@"包含了SQOptionFour");
+        }
+    }
+    
+    void test() {
+        //    setOptions(SQOptionOne | SQOptionTwo | SQOptionFour);
+        //    setOptions(SQOptionOne + SQOptionTwo + SQOptionFour);
+        
+        union Date date;
+        date.year = 2019;
+        date.month = 5;
+        
+        SQPerson *person = [[SQPerson alloc] init];
+        person.tall = YES;
+        person.rich = YES;
+        person.handsome = NO;
+        person.thin = NO;
+        /*
+         (lldb) p/x person->_tallRichHandsome
+         ((anonymous struct)) $0 = (tall = 0x01, rich = 0x00, hansome = 0x00)
+         (lldb) p/x &(person->_tallRichHandsome)
+         ((anonymous struct) *) $0 = 0x0000000101206978
+         (lldb) x 0x0000000101206978
+         0x101206978: 01 00 00 00 00 00 00 00 50 6a 20 01 01 00 00 00  ........Pj .....
+         0x101206988: 90 6c 20 01 01 00 00 00 00 6a 20 01 01 00 00 00  .l ......j .....
+         */
+        /*
+         (lldb) p/x &(person->_tallRichHandsome)
+         ((anonymous struct) *) $0 = 0x0000000100632488
+         (lldb) x 0x0000000100632488
+         0x100632488: 05 00 00 00 00 00 00 00 60 25 63 00 01 00 00 00  ........`%c.....
+         0x100632498: a0 27 63 00 01 00 00 00 10 25 63 00 01 00 00 00  .'c......%c.....
+         */
+        NSLog(@"thin: %d, tall: %d, rich: %d, handsome: %d", person.isThin, person.isTall, person.isRich, person.isHandsome);
+        
+        NSLog(@"%zd", class_getInstanceSize([SQPerson class]));
+    }

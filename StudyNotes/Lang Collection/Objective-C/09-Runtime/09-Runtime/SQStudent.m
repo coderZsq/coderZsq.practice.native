@@ -34,6 +34,12 @@ struct objc_super {
     /* super_class is the first class to search */
 };
 
+- (void)print {
+    [super print];
+//    ((void (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SQStudent"))}, sel_registerName("print"));
+//    int a = 10;
+}
+
 - (void)run {
     // super调用的receiver仍然是SQStudent对象
     [super run];

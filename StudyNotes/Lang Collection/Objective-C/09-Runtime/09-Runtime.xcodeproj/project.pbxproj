@@ -28,6 +28,9 @@
 		1448BDAE228A926800EEA390 /* __forwarding__.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__.c; sourceTree = "<group>"; };
 		1448BDB0228A928400EEA390 /* __forwarding__clean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = __forwarding__clean.c; sourceTree = "<group>"; };
 		1448BDB2228AB6F300EEA390 /* SQStudent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQStudent.cpp; sourceTree = "<group>"; };
+		147219F0228BB2DD00F37D61 /* SQPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SQPerson.cpp; sourceTree = "<group>"; };
+		147219F2228BBD5E00F37D61 /* objc_msgSendSuper2.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = objc_msgSendSuper2.s; sourceTree = "<group>"; };
+		147219F4228BC30200F37D61 /* SQPerson.ll */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.llvm; path = SQPerson.ll; sourceTree = "<group>"; };
 		14779CBC22869172007592F9 /* 09-Runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "09-Runtime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14779CBF22869172007592F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14779CC022869172007592F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,9 +100,12 @@
 				1448BDAC228A90E500EEA390 /* objc_msgForward.s */,
 				1448BDAE228A926800EEA390 /* __forwarding__.c */,
 				1448BDB0228A928400EEA390 /* __forwarding__clean.c */,
+				147219F2228BBD5E00F37D61 /* objc_msgSendSuper2.s */,
 				14779CD82286979F007592F9 /* SQClassInfo.h */,
 				14779CD6228691CC007592F9 /* SQPerson.h */,
 				14779CD5228691CC007592F9 /* SQPerson.m */,
+				147219F0228BB2DD00F37D61 /* SQPerson.cpp */,
+				147219F4228BC30200F37D61 /* SQPerson.ll */,
 				14779CDD2286A98E007592F9 /* SQStudent.h */,
 				14779CDE2286A98E007592F9 /* SQStudent.m */,
 				1448BDB2228AB6F300EEA390 /* SQStudent.cpp */,
