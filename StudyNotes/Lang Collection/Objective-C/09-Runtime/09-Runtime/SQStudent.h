@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQStudent : SQPerson
 
+@property (nonatomic, assign) int no;
+
 - (void)studentTest;
 
 @end

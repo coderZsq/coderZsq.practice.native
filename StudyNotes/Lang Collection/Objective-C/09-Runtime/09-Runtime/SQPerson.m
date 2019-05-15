@@ -187,8 +187,12 @@ void test(int param) {
     NSLog(@"%s", __func__);
 }
 
+- (void)test {
+    NSLog(@"%s", __func__);
+}
+
 // 提醒编译器不要自动生成setter和getter的实现, 不要自动生成成员变量
-@dynamic age;
+//@dynamic age;
 //@synthesize age = _age, height = _height;
 
 void setAge(id self, SEL _cmd, int age) {
@@ -538,5 +542,16 @@ struct method_t {
     return !!(_tallRichHandsome & SQHandsomeMask);
 }
 */
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 
 @end

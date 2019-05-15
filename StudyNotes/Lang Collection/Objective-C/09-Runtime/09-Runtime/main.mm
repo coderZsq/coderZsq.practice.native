@@ -13,6 +13,8 @@
 #import "SQClassInfo.h"
 #import "SQGoodStudent.h"
 #import "SQStudent.h"
+#import "SQCar.h"
+#import "NSObject+Json.h"
 
 // 编写代码 -> 编译链接 -> 运行
 
@@ -181,13 +183,131 @@ struct class_rw_t {
      消息发送(当前类, 父类中查找), 动态方法解析, 消息转发
      */
     
-   
+    /*
+     什么是Runtime? 平时项目中有用过么?
+     OC是一门动态性比较强的编程语言, 允许很多操作推迟到程序运行时再进行
+     OC的动态性就是由Runtime来支撑和实现的, Runtime是一套C语言的API, 封装了很多动态性相关的函数
+     平时编写的OC代码, 底层都是转换成了RuntimeAPI进行调用
+     
+     具体应用
+     利用关联对象 (AssociatedObject) 给分类添加属性
+     遍历类的所有成员变量 (修改textfield的占位文字颜色, 字典转模型, 自动归档解档)
+     交换方法实现 (交换系统的方法)
+     利用消息转发机制解决方法找不到的异常问题
+     ...
+     */
+    
     int main(int argc, char * argv[]) {
         @autoreleasepool {
+            SQPerson *person = [[SQPerson alloc] init];
+            Method runMethod = class_getInstanceMethod([SQPerson class], @selector(run));
+            Method testMethod = class_getInstanceMethod([SQPerson class], @selector(test));
             
+            // 如果有方法IMP为空则不交换
+            method_exchangeImplementations(runMethod, testMethod);
             
+            [person run];
+
             return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
         }
+    }
+    
+    void myrun() {
+        NSLog(@"----myrun");
+    }
+    
+    void test14() {
+        SQPerson *person = [[SQPerson alloc] init];
+        //            class_replaceMethod([SQPerson class], @selector(run), (IMP)myrun, "v");
+        class_replaceMethod([SQPerson class], @selector(run), imp_implementationWithBlock(^{
+            NSLog(@"123123");
+        }), "v");
+        [person run];
+    }
+    
+    void test13() {
+        // 字典转模型
+        NSDictionary *json = @{
+                               @"age": @20,
+                               @"height": @60,
+                               @"name": @"Castie!",
+                               @"no": @30
+                               };
+        SQPerson *person = [SQPerson sq_objectWithJson:json];
+        //            [SQCar sq_objectWithJson:json];
+        
+        //            SQPerson *person = [[SQPerson alloc] init];
+        //            person.age = [json[@"age"] intValue];
+        //            person.height = [json[@"height"] intValue];
+        //            person.name = json[@"name"];
+        
+        //            SQStudent *student = [SQStudent sq_objectWithJson:json];
+    }
+    
+    void test12() {
+        // 获取成员变量信息
+        Ivar ageIvar = class_getInstanceVariable([SQPerson class], "_age");
+        NSLog(@"%s %s", ivar_getName(ageIvar), ivar_getTypeEncoding(ageIvar));
+        
+        // 设置和获取成员变量的值
+        Ivar nameIvar = class_getInstanceVariable([SQPerson class], "_name");
+        SQPerson *person = [[SQPerson alloc] init];
+        object_setIvar(person, nameIvar, @"123");
+        //            object_getIvar(person, nameIvar);
+        NSLog(@"%@", person.name);
+        object_setIvar(person, ageIvar, (__bridge id)(void *)10);
+        NSLog(@"%d", person.age);
+        
+        // 成员变量的数量
+        unsigned int count;
+        Ivar *ivars = class_copyIvarList([SQPerson class], &count);
+        for (int i = 0; i < count; i++) {
+            // 取出i位置的成员变量
+            Ivar ivar = ivars[i];
+            NSLog(@"%s %s", ivar_getName(ivar), ivar_getTypeEncoding(ivar));
+        }
+        free(ivars);
+    }
+    
+    void run(id self, SEL _cmd) {
+        NSLog(@"%@ - %@", self, NSStringFromSelector(_cmd));
+    }
+    
+    void test11() {
+        // 创建类
+        Class newClass = objc_allocateClassPair([NSObject class], "SQDog", 0);
+        class_addIvar(newClass, "_age", 4, 1, @encode(int));
+        class_addIvar(newClass, "_weight", 4, 1, @encode(int));
+        class_addMethod(newClass, @selector(run), (IMP)run, "v@:");
+        // 注册类
+        objc_registerClassPair(newClass);
+        
+        id dog = [[newClass alloc] init];
+        [dog setValue:@10 forKey:@"_age"];
+        [dog setValue:@20 forKey:@"_weight"];
+        [dog run];
+        
+        NSLog(@"%zd", class_getInstanceSize(newClass));
+        NSLog(@"%@ %@", [dog valueForKey:@"_age"], [dog valueForKey:@"_weight"]);
+        
+        SQPerson *person = [[SQPerson alloc] init];
+        object_setClass(person, newClass);
+        [person run];
+        
+        // 在不需要这个类时释放
+        objc_disposeClassPair(newClass);
+    }
+    
+    void test10() {
+        SQPerson *person = [[SQPerson alloc] init];
+        [person run];
+        
+        NSLog(@"%p %p", object_getClass(person), [SQPerson class]);
+        
+        object_setClass(person, [SQCar class]);
+        [person run];
+        
+        NSLog(@"%d %d %d", object_isClass(person), object_isClass([SQPerson class]), object_isClass(object_getClass([SQPerson class])));
     }
     
     // 局部变量分配在栈空间
