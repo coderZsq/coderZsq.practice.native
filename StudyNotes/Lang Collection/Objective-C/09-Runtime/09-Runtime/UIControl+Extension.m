@@ -12,10 +12,13 @@
 @implementation UIControl (Extension) 
 
 + (void)load {
-    // hook 钩子函数
-    Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
-    Method method2 = class_getInstanceMethod(self, @selector(sq_sendAction:to:forEvent:));
-    method_exchangeImplementations(method1, method2);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // hook 钩子函数
+        Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
+        Method method2 = class_getInstanceMethod(self, @selector(sq_sendAction:to:forEvent:));
+        method_exchangeImplementations(method1, method2);
+    });
 #if 0
     static void flushCaches(Class cls)
     {
