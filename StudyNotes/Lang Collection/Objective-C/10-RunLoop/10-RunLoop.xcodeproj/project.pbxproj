@@ -13,6 +13,7 @@
 		147DD62F228D3602008FFDE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147DD62E228D3602008FFDE4 /* Assets.xcassets */; };
 		147DD632228D3602008FFDE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147DD630228D3602008FFDE4 /* LaunchScreen.storyboard */; };
 		147DD635228D3602008FFDE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147DD634228D3602008FFDE4 /* main.m */; };
+		147DD749228D5BBF008FFDE4 /* SQThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 147DD748228D5BBF008FFDE4 /* SQThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		147DD633228D3602008FFDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147DD634228D3602008FFDE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		147DD745228D3B34008FFDE4 /* runloop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = runloop.cpp; sourceTree = "<group>"; };
+		147DD747228D5BBF008FFDE4 /* SQThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQThread.h; sourceTree = "<group>"; };
+		147DD748228D5BBF008FFDE4 /* SQThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				147DD633228D3602008FFDE4 /* Info.plist */,
 				147DD634228D3602008FFDE4 /* main.m */,
 				147DD745228D3B34008FFDE4 /* runloop.cpp */,
+				147DD747228D5BBF008FFDE4 /* SQThread.h */,
+				147DD748228D5BBF008FFDE4 /* SQThread.m */,
 			);
 			path = "10-RunLoop";
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				147DD62A228D3601008FFDE4 /* ViewController.m in Sources */,
+				147DD749228D5BBF008FFDE4 /* SQThread.m in Sources */,
 				147DD635228D3602008FFDE4 /* main.m in Sources */,
 				147DD627228D3601008FFDE4 /* AppDelegate.m in Sources */,
 			);

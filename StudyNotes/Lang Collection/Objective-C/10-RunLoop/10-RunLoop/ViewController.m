@@ -7,12 +7,102 @@
 //
 
 #import "ViewController.h"
+#import "SQThread.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) SQThread *thread;
+@property (nonatomic, assign, getter=isStopped) BOOL stopped;
 @end
 
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+//    self.thread = [[SQThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+    
+    __weak typeof (self) weakSelf = self;
+    self.stopped = NO;
+    
+    self.thread = [[SQThread alloc] initWithBlock:^{
+        NSLog(@"%@----begin----", [NSThread currentThread]);
+        // 往RunLoop里面添加Source\Timer\Observer
+        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+        while (weakSelf && !weakSelf.isStopped) {
+            NSLog(@"%@", weakSelf);
+            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        }
+        /*
+         NSRunLoop的run方法是无法停止的, 它专门用于开启一个永不销毁的线程 (NSRunLoop)
+         [[NSRunLoop currentRunLoop] run];
+         
+         it runs the receiver in the NSDefaultRunLoopMode by repeatedly invoking runMode:beforeDate:. In other words, this method effectively begins an infinite loop that processes data from the run loop’s input sources and timers.
+         */
+        NSLog(@"%@-----end-----", [NSThread currentThread]);
+    }];
+    [self.thread start];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (!self.thread) return;
+    [self performSelector:@selector(test3_test) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+// 子线程需要执行的任务
+- (void)test3_test {
+    NSLog(@"%s %@", __func__, [NSThread currentThread]);
+}
+
+- (IBAction)stop {
+    if (!self.thread) return;
+    // 在子线程调用stop (waitUntilDone设置为YES, 代表子线程的代码执行完毕后, 这个方法才会往下走)
+    [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+}
+
+// 用于停止子线程的RunLoop
+- (void)stopThread {
+    // 设置标记为YES
+    self.stopped = YES;
+    
+    // 停止RunLoop
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"%s %@", __func__, [NSThread currentThread]);
+    
+    // 清空线程
+    self.thread = nil;
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+    [self stop];
+}
+
+#if 0
+- (void)run {
+    NSLog(@"%s, %@", __func__, [NSThread currentThread]);
+    // 往RunLoop里面添加Source\Timer\Observer
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+    NSLog(@"%s -----end-----", __func__);
+}
+#endif
+- (void)test2 {
+    static int count = 0;
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"%d", ++count);
+    }];
+    //    [[NSRunLoop currentRunLoop] addTimer:timer forMode: NSDefaultRunLoopMode];
+    //    [[NSRunLoop currentRunLoop] addTimer:timer forMode: UITrackingRunLoopMode];
+    
+    // NSDefaultRunLoopMode, UITrackingRunLoopMode才是真正存在的模式
+    // NSRunLoopCommonModes并不是一个真的模式, 它只是一个标记
+    // timer能在_commonModes数组中存放的模式下工作
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode: NSRunLoopCommonModes];
+    
+    //    [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    //        NSLog(@"%d", ++count);
+    //    }];
+}
 
 NSMutableDictionary *runloops;
 
@@ -41,40 +131,38 @@ void observerRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity 
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-//    NSRunLoop *runloop;
-//    CFRunLoopRef runloop2;
+- (void)test {
+    //    NSRunLoop *runloop;
+    //    CFRunLoopRef runloop2;
     
-//    runloops[thread] = runloop;
+    //    runloops[thread] = runloop;
     
-//    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
-//    CFRunLoopRef runloop2 = CFRunLoopGetCurrent();
+    //    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    //    CFRunLoopRef runloop2 = CFRunLoopGetCurrent();
     
-//    NSArray *array;
-//    CFArrayRef array2;
-//
-//    NSString *string;
-//    CFStringRef string2;
+    //    NSArray *array;
+    //    CFArrayRef array2;
+    //
+    //    NSString *string;
+    //    CFStringRef string2;
     
     NSLog(@"%p %p", [NSRunLoop currentRunLoop], [NSRunLoop mainRunLoop]);
     NSLog(@"%p %p", CFRunLoopGetCurrent(), CFRunLoopGetMain());
     
     // 有序的
-//    NSMutableArray *array;
-//    [array addObject:@""];
-//    array[0];
+    //    NSMutableArray *array;
+    //    [array addObject:@""];
+    //    array[0];
     
     // 无序的
-//    NSMutableSet *set;
-//    [set addObject:@""];
-//    [set anyObject];
-
-//    kCFRunLoopDefaultMode;
-//    NSDefaultRunLoopMode;
+    //    NSMutableSet *set;
+    //    [set addObject:@""];
+    //    [set anyObject];
     
-//    NSLog(@"%@", [NSRunLoop mainRunLoop]);
+    //    kCFRunLoopDefaultMode;
+    //    NSDefaultRunLoopMode;
+    
+    //    NSLog(@"%@", [NSRunLoop mainRunLoop]);
     
     // kCFRunLoopCommonModes默认包括kCFRunLoopDefaultMode, UITrackingRunLoopMode
 #if 0
@@ -85,7 +173,7 @@ void observerRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity 
     // 释放observer
     CFRelease(observer);
 #endif
-
+    
     // 创建Observer
     CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
         switch (activity) {
@@ -109,13 +197,35 @@ void observerRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity 
     CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
     // 释放observer
     CFRelease(observer);
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        // 处理一些子线程的逻辑
+        
+        // 回到主线程去刷新UI界面
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"GCD-------");
+        });
+        /*
+         (lldb)  bt
+         * thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+         * frame #0: 0x00000001076e4427 10-RunLoop`__29-[ViewController viewDidLoad]_block_invoke_3(.block_descriptor=0x00000001076e6148) at ViewController.m:118:13
+         frame #1: 0x000000010a280d7f libdispatch.dylib`_dispatch_call_block_and_release + 12
+         frame #2: 0x000000010a281db5 libdispatch.dylib`_dispatch_client_callout + 8
+         frame #3: 0x000000010a28f080 libdispatch.dylib`_dispatch_main_queue_callback_4CF + 1540
+         frame #4: 0x000000010897e8a9 CoreFoundation`__CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+         frame #5: 0x0000000108978f56 CoreFoundation`__CFRunLoopRun + 2310
+         frame #6: 0x0000000108978302 CoreFoundation`CFRunLoopRunSpecific + 626
+         frame #7: 0x0000000110fd32fe GraphicsServices`GSEventRunModal + 65
+         frame #8: 0x000000010bab9ba2 UIKitCore`UIApplicationMain + 140
+         frame #9: 0x00000001076e45c0 10-RunLoop`main(argc=1, argv=0x00007ffee851aec8) at main.m:73:16
+         frame #10: 0x000000010a2f6541 libdyld.dylib`start + 1
+         frame #11: 0x000000010a2f6541 libdyld.dylib`start + 1
+         */
+    });
 }
-
+#if 0
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%s", __func__);
-    [NSTimer scheduledTimerWithTimeInterval:3.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"定时器-------");
-    }];
     /*
      (lldb) bt
      * thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
@@ -137,8 +247,27 @@ void observerRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity 
      frame #15: 0x000000011023f541 libdyld.dylib`start + 1
      frame #16: 0x000000011023f541 libdyld.dylib`start + 1
      */
+    [NSTimer scheduledTimerWithTimeInterval:3.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"定时器-------");
+        /*
+         (lldb) bt
+         * thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+         * frame #0: 0x0000000107000533 10-RunLoop`__41-[ViewController touchesBegan:withEvent:]_block_invoke(.block_descriptor=0x0000000107002188, timer=0x0000600000ca0a80) at ViewController.m:163:9
+         frame #1: 0x00000001073c1135 Foundation`__NSFireTimer + 83
+         frame #2: 0x000000010829b3e4 CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 20
+         frame #3: 0x000000010829aff2 CoreFoundation`__CFRunLoopDoTimer + 1026
+         frame #4: 0x000000010829a85a CoreFoundation`__CFRunLoopDoTimers + 266
+         frame #5: 0x0000000108294efc CoreFoundation`__CFRunLoopRun + 2220
+         frame #6: 0x0000000108294302 CoreFoundation`CFRunLoopRunSpecific + 626
+         frame #7: 0x00000001108232fe GraphicsServices`GSEventRunModal + 65
+         frame #8: 0x000000010b0a1ba2 UIKitCore`UIApplicationMain + 140
+         frame #9: 0x00000001070005c0 10-RunLoop`main(argc=1, argv=0x00007ffee8bfeec8) at main.m:73:16
+         frame #10: 0x0000000109c12541 libdyld.dylib`start + 1
+         frame #11: 0x0000000109c12541 libdyld.dylib`start + 1
+         */
+    }];
 }
-
+#endif
 @end
 
 #if 0

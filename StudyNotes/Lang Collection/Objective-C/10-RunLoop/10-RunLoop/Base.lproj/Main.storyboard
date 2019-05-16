@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AEs-5r-SBf">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="KUO-TC-s4Z">
+            <objects>
+                <navigationController id="AEs-5r-SBf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Bd-Rn-tRk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TkE-II-WzG" kind="relationship" relationship="rootViewController" id="BQh-WN-ZE9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvV-jE-6fN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1622" y="29"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y0P-Yw-0KO">
+            <objects>
+                <viewController id="TkE-II-WzG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7N8-NU-OnA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-qb-cGF">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LYf-Tv-qMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bRe-qb-cGF" firstAttribute="centerX" secondItem="7N8-NU-OnA" secondAttribute="centerX" id="fNX-lo-dF4"/>
+                            <constraint firstItem="bRe-qb-cGF" firstAttribute="centerY" secondItem="7N8-NU-OnA" secondAttribute="centerY" id="wW0-VT-l8C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rv5-eE-F5O"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eUR-ju-4td"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfg-yo-rBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="29"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,10 +74,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rl-Ir-fGa">
+                                <rect key="frame" x="191.5" y="254" width="31" height="30"/>
+                                <state key="normal" title="停止"/>
+                                <connections>
+                                    <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="mbT-Wy-syx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sot-9D-vUH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ErL-tA-tSN"/>
+                            <constraint firstItem="Sot-9D-vUH" firstAttribute="top" secondItem="2Rl-Ir-fGa" secondAttribute="bottom" constant="100" id="SCs-ZG-JN3"/>
+                            <constraint firstItem="2Rl-Ir-fGa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YuS-Ix-Qih"/>
                             <constraint firstItem="Sot-9D-vUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgD-TD-Yj1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="387" y="30"/>
         </scene>
     </scenes>
 </document>
