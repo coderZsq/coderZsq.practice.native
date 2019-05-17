@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14116635228E556B0007586D /* SQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 14116634228E556B0007586D /* SQPermenantThread.m */; };
 		147DD627228D3601008FFDE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147DD626228D3601008FFDE4 /* AppDelegate.m */; };
 		147DD62A228D3601008FFDE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147DD629228D3601008FFDE4 /* ViewController.m */; };
 		147DD62D228D3601008FFDE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147DD62B228D3601008FFDE4 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14116633228E556B0007586D /* SQPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPermenantThread.h; sourceTree = "<group>"; };
+		14116634228E556B0007586D /* SQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQPermenantThread.m; sourceTree = "<group>"; };
 		147DD622228D3601008FFDE4 /* 10-RunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10-RunLoop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		147DD625228D3601008FFDE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		147DD626228D3601008FFDE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				147DD745228D3B34008FFDE4 /* runloop.cpp */,
 				147DD747228D5BBF008FFDE4 /* SQThread.h */,
 				147DD748228D5BBF008FFDE4 /* SQThread.m */,
+				14116633228E556B0007586D /* SQPermenantThread.h */,
+				14116634228E556B0007586D /* SQPermenantThread.m */,
 			);
 			path = "10-RunLoop";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			files = (
 				147DD62A228D3601008FFDE4 /* ViewController.m in Sources */,
 				147DD749228D5BBF008FFDE4 /* SQThread.m in Sources */,
+				14116635228E556B0007586D /* SQPermenantThread.m in Sources */,
 				147DD635228D3602008FFDE4 /* main.m in Sources */,
 				147DD627228D3601008FFDE4 /* AppDelegate.m in Sources */,
 			);

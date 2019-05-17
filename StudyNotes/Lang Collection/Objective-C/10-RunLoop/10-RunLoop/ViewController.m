@@ -8,17 +8,24 @@
 
 #import "ViewController.h"
 #import "SQThread.h"
+#import "SQPermenantThread.h"
 
 @interface ViewController ()
+@property (nonatomic, strong) SQPermenantThread *thread;
+#if 0
 @property (strong, nonatomic) SQThread *thread;
 @property (nonatomic, assign, getter=isStopped) BOOL stopped;
+#endif
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.thread = [[SQPermenantThread alloc] init];
+//    [self.thread run];
     
+#if 0
 //    self.thread = [[SQThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     
     __weak typeof (self) weakSelf = self;
@@ -41,24 +48,35 @@
         NSLog(@"%@-----end-----", [NSThread currentThread]);
     }];
     [self.thread start];
+#endif
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.thread executeTask:^{
+        NSLog(@"执行任务 - %@", [NSThread currentThread]);
+    }];
+//    [self.thread executeTaskWithTarget:self action:@selector(test3_test) object:nil];
+#if 0
     if (!self.thread) return;
     [self performSelector:@selector(test3_test) onThread:self.thread withObject:nil waitUntilDone:NO];
+#endif
 }
-
+#if 0
 // 子线程需要执行的任务
 - (void)test3_test {
     NSLog(@"%s %@", __func__, [NSThread currentThread]);
 }
-
+#endif
 - (IBAction)stop {
+    [self.thread stop];
+#if 0
     if (!self.thread) return;
     // 在子线程调用stop (waitUntilDone设置为YES, 代表子线程的代码执行完毕后, 这个方法才会往下走)
     [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+#endif
 }
 
+#if 0
 // 用于停止子线程的RunLoop
 - (void)stopThread {
     // 设置标记为YES
@@ -71,10 +89,14 @@
     // 清空线程
     self.thread = nil;
 }
+#endif
 
 - (void)dealloc {
     NSLog(@"%s", __func__);
+//    [self.thread stop];
+#if 0
     [self stop];
+#endif
 }
 
 #if 0
