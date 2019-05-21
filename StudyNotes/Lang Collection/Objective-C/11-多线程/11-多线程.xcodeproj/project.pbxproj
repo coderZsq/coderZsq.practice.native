@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1412F9B22293A7E40079399C /* OSSpinLockDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */; };
+		1412F9B52293AB0B0079399C /* OSUnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */; };
 		1438C95B2292978C0093983F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C95A2292978C0093983F /* AppDelegate.m */; };
 		1438C95E2292978C0093983F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C95D2292978C0093983F /* ViewController.m */; };
 		1438C9612292978C0093983F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1438C95F2292978C0093983F /* Main.storyboard */; };
 		1438C9632292978E0093983F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1438C9622292978E0093983F /* Assets.xcassets */; };
 		1438C9662292978E0093983F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1438C9642292978E0093983F /* LaunchScreen.storyboard */; };
 		1438C9692292978E0093983F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C9682292978E0093983F /* main.m */; };
+		148670272293A35300558482 /* SQBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 148670262293A35300558482 /* SQBaseDemo.m */; };
+		1486702A2293A4E200558482 /* OSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 148670292293A4E200558482 /* OSSpinLockDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1412F9B02293A7E40079399C /* OSSpinLockDemo2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSpinLockDemo2.h; sourceTree = "<group>"; };
+		1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo2.m; sourceTree = "<group>"; };
+		1412F9B32293AB0B0079399C /* OSUnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSUnfairLockDemo.h; sourceTree = "<group>"; };
+		1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSUnfairLockDemo.m; sourceTree = "<group>"; };
 		1438C9562292978C0093983F /* 11-多线程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "11-多线程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1438C9592292978C0093983F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1438C95A2292978C0093983F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +34,10 @@
 		1438C9652292978E0093983F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1438C9672292978E0093983F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1438C9682292978E0093983F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		148670252293A35300558482 /* SQBaseDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQBaseDemo.h; sourceTree = "<group>"; };
+		148670262293A35300558482 /* SQBaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQBaseDemo.m; sourceTree = "<group>"; };
+		148670282293A4E200558482 /* OSSpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSpinLockDemo.h; sourceTree = "<group>"; };
+		148670292293A4E200558482 /* OSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,14 @@
 				1438C95A2292978C0093983F /* AppDelegate.m */,
 				1438C95C2292978C0093983F /* ViewController.h */,
 				1438C95D2292978C0093983F /* ViewController.m */,
+				148670252293A35300558482 /* SQBaseDemo.h */,
+				148670262293A35300558482 /* SQBaseDemo.m */,
+				148670282293A4E200558482 /* OSSpinLockDemo.h */,
+				148670292293A4E200558482 /* OSSpinLockDemo.m */,
+				1412F9B02293A7E40079399C /* OSSpinLockDemo2.h */,
+				1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */,
+				1412F9B32293AB0B0079399C /* OSUnfairLockDemo.h */,
+				1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */,
 				1438C95F2292978C0093983F /* Main.storyboard */,
 				1438C9622292978E0093983F /* Assets.xcassets */,
 				1438C9642292978E0093983F /* LaunchScreen.storyboard */,
@@ -141,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1412F9B52293AB0B0079399C /* OSUnfairLockDemo.m in Sources */,
 				1438C95E2292978C0093983F /* ViewController.m in Sources */,
+				1486702A2293A4E200558482 /* OSSpinLockDemo.m in Sources */,
+				1412F9B22293A7E40079399C /* OSSpinLockDemo2.m in Sources */,
 				1438C9692292978E0093983F /* main.m in Sources */,
 				1438C95B2292978C0093983F /* AppDelegate.m in Sources */,
+				148670272293A35300558482 /* SQBaseDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

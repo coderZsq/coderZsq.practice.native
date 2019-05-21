@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "SQBaseDemo.h"
+#import "OSSpinLockDemo.h"
+#import "OSSpinLockDemo2.h"
+#import "OSUnfairLockDemo.h"
 
-@interface ViewController ()
-@property (assign, nonatomic) int ticketsCount;
-@property (nonatomic, assign) int money;
+@interface ViewController ();
+@property (nonatomic, strong) SQBaseDemo *demo;
 @end
 
 @implementation ViewController
@@ -23,73 +26,25 @@
  3.主队列 (也是一个串行队列)
  */
 
+/*
+ thread 1: 优先级比较高
+ 
+ thread 2: 优先级比较低
+ 
+ thread 3
+ 
+ 线程的调度, 10ms
+ 
+ 时间片轮转调度算法 (进程, 线程)
+ 线程优先级
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self moneyTest];
-}
-
-- (void)moneyTest {
-    self.money = 100;
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 10; i++) {
-            [self saveMoney];
-        }
-    });
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 10; i++) {
-            [self drawMoney];
-        }
-    });
-}
-
-- (void)saveMoney {
-    int oldMoney = self.money;
-    sleep(.2);
-    oldMoney += 50;
-    self.money = oldMoney;
     
-    NSLog(@"存50, 还剩%d元 - %@", oldMoney, [NSThread currentThread]);
-}
-
-- (void)drawMoney {
-    
-    int oldMoney = self.money;
-    sleep(.2);
-    oldMoney -= 20;
-    self.money = oldMoney;
-    
-    NSLog(@"取20, 还剩%d元 - %@", oldMoney, [NSThread currentThread]);
-}
-
-- (void)saleTicket {
-    int oldTicketsCount = self.ticketsCount;
-    sleep(.2);
-    oldTicketsCount--;
-    self.ticketsCount = oldTicketsCount;
-    
-    NSLog(@"还剩%d张票 - %@", oldTicketsCount, [NSThread currentThread]);
-}
-
-- (void)ticketTest {
-    self.ticketsCount = 15;
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self saleTicket];
-        }
-    });
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self saleTicket];
-        }
-    });
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self saleTicket];
-        }
-    });
+    SQBaseDemo *demo = [[OSUnfairLockDemo alloc] init];
+    [demo ticketTest];
+    [demo moneyTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
