@@ -15,6 +15,8 @@
 
 @implementation SQBaseDemo
 
+- (void)otherTest {}
+
 - (void)moneyTest {
     self.money = 100;
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -56,6 +58,7 @@
     
     int oldTicketsCount = self.ticketsCount;
     sleep(.2);
+//    sleep(600.0);
     oldTicketsCount--;
     self.ticketsCount = oldTicketsCount;
     
@@ -65,7 +68,11 @@
 
 - (void)ticketTest {
     self.ticketsCount = 15;
-    
+#if 0
+    for (int i = 0; i < 10; i++) {
+        [[[NSThread alloc] initWithTarget:self selector:@selector(__saleTicket) object:nil] start];
+    }
+#else
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     dispatch_async(queue, ^{
         for (int i = 0; i < 5; i++) {
@@ -82,6 +89,7 @@
             [self __saleTicket];
         }
     });
+#endif
 }
 
 @end

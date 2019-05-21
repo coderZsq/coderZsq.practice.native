@@ -9,14 +9,24 @@
 /* Begin PBXBuildFile section */
 		1412F9B22293A7E40079399C /* OSSpinLockDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */; };
 		1412F9B52293AB0B0079399C /* OSUnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */; };
+		1412F9BB2293C5090079399C /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412F9BA2293C5090079399C /* MutexDemo.m */; };
 		1438C95B2292978C0093983F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C95A2292978C0093983F /* AppDelegate.m */; };
 		1438C95E2292978C0093983F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C95D2292978C0093983F /* ViewController.m */; };
 		1438C9612292978C0093983F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1438C95F2292978C0093983F /* Main.storyboard */; };
 		1438C9632292978E0093983F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1438C9622292978E0093983F /* Assets.xcassets */; };
 		1438C9662292978E0093983F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1438C9642292978E0093983F /* LaunchScreen.storyboard */; };
 		1438C9692292978E0093983F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438C9682292978E0093983F /* main.m */; };
+		143FA25E2293E21700A39768 /* NSConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 143FA25D2293E21700A39768 /* NSConditionDemo.m */; };
+		1466A1A02293CD6A00639A4B /* MutexDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1466A19F2293CD6A00639A4B /* MutexDemo2.m */; };
+		1475991C2293F110003D19CF /* SynchronizedDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1475991B2293F110003D19CF /* SynchronizedDemo.m */; };
 		148670272293A35300558482 /* SQBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 148670262293A35300558482 /* SQBaseDemo.m */; };
 		1486702A2293A4E200558482 /* OSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 148670292293A4E200558482 /* OSSpinLockDemo.m */; };
+		149A6FEF2293DEDD006265E7 /* NSLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 149A6FEE2293DEDD006265E7 /* NSLockDemo.m */; };
+		14A94CB62293E75D00373AB5 /* NSConditionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A94CB52293E75D00373AB5 /* NSConditionLockDemo.m */; };
+		14A94CBC2293EAD500373AB5 /* SerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A94CBB2293EAD500373AB5 /* SerialQueueDemo.m */; };
+		14A96C612293ECFB00861264 /* SemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A96C602293ECFB00861264 /* SemaphoreDemo.m */; };
+		14AFEA3A2293D7D000A8F4BD /* MutexDemo3.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AFEA392293D7D000A8F4BD /* MutexDemo3.m */; };
+		14BF18AD2293F9BB003DE65D /* SQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BF18AC2293F9BB003DE65D /* SQPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,8 @@
 		1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo2.m; sourceTree = "<group>"; };
 		1412F9B32293AB0B0079399C /* OSUnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSUnfairLockDemo.h; sourceTree = "<group>"; };
 		1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSUnfairLockDemo.m; sourceTree = "<group>"; };
+		1412F9B92293C5090079399C /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
+		1412F9BA2293C5090079399C /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
 		1438C9562292978C0093983F /* 11-多线程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "11-多线程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1438C9592292978C0093983F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1438C95A2292978C0093983F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,10 +46,28 @@
 		1438C9652292978E0093983F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1438C9672292978E0093983F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1438C9682292978E0093983F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		143FA25C2293E21700A39768 /* NSConditionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSConditionDemo.h; sourceTree = "<group>"; };
+		143FA25D2293E21700A39768 /* NSConditionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSConditionDemo.m; sourceTree = "<group>"; };
+		1466A19E2293CD6A00639A4B /* MutexDemo2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo2.h; sourceTree = "<group>"; };
+		1466A19F2293CD6A00639A4B /* MutexDemo2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo2.m; sourceTree = "<group>"; };
+		1475991A2293F110003D19CF /* SynchronizedDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchronizedDemo.h; sourceTree = "<group>"; };
+		1475991B2293F110003D19CF /* SynchronizedDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchronizedDemo.m; sourceTree = "<group>"; };
 		148670252293A35300558482 /* SQBaseDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQBaseDemo.h; sourceTree = "<group>"; };
 		148670262293A35300558482 /* SQBaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQBaseDemo.m; sourceTree = "<group>"; };
 		148670282293A4E200558482 /* OSSpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSpinLockDemo.h; sourceTree = "<group>"; };
 		148670292293A4E200558482 /* OSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo.m; sourceTree = "<group>"; };
+		149A6FED2293DEDD006265E7 /* NSLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSLockDemo.h; sourceTree = "<group>"; };
+		149A6FEE2293DEDD006265E7 /* NSLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSLockDemo.m; sourceTree = "<group>"; };
+		14A94CB42293E75D00373AB5 /* NSConditionLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSConditionLockDemo.h; sourceTree = "<group>"; };
+		14A94CB52293E75D00373AB5 /* NSConditionLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSConditionLockDemo.m; sourceTree = "<group>"; };
+		14A94CBA2293EAD500373AB5 /* SerialQueueDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SerialQueueDemo.h; sourceTree = "<group>"; };
+		14A94CBB2293EAD500373AB5 /* SerialQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SerialQueueDemo.m; sourceTree = "<group>"; };
+		14A96C5F2293ECFB00861264 /* SemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreDemo.h; sourceTree = "<group>"; };
+		14A96C602293ECFB00861264 /* SemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreDemo.m; sourceTree = "<group>"; };
+		14AFEA382293D7D000A8F4BD /* MutexDemo3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo3.h; sourceTree = "<group>"; };
+		14AFEA392293D7D000A8F4BD /* MutexDemo3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo3.m; sourceTree = "<group>"; };
+		14BF18AB2293F9BB003DE65D /* SQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
+		14BF18AC2293F9BB003DE65D /* SQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +112,26 @@
 				1412F9B12293A7E40079399C /* OSSpinLockDemo2.m */,
 				1412F9B32293AB0B0079399C /* OSUnfairLockDemo.h */,
 				1412F9B42293AB0B0079399C /* OSUnfairLockDemo.m */,
+				1412F9B92293C5090079399C /* MutexDemo.h */,
+				1412F9BA2293C5090079399C /* MutexDemo.m */,
+				1466A19E2293CD6A00639A4B /* MutexDemo2.h */,
+				1466A19F2293CD6A00639A4B /* MutexDemo2.m */,
+				14AFEA382293D7D000A8F4BD /* MutexDemo3.h */,
+				14AFEA392293D7D000A8F4BD /* MutexDemo3.m */,
+				149A6FED2293DEDD006265E7 /* NSLockDemo.h */,
+				149A6FEE2293DEDD006265E7 /* NSLockDemo.m */,
+				143FA25C2293E21700A39768 /* NSConditionDemo.h */,
+				143FA25D2293E21700A39768 /* NSConditionDemo.m */,
+				14A94CB42293E75D00373AB5 /* NSConditionLockDemo.h */,
+				14A94CB52293E75D00373AB5 /* NSConditionLockDemo.m */,
+				14A94CBA2293EAD500373AB5 /* SerialQueueDemo.h */,
+				14A94CBB2293EAD500373AB5 /* SerialQueueDemo.m */,
+				14A96C5F2293ECFB00861264 /* SemaphoreDemo.h */,
+				14A96C602293ECFB00861264 /* SemaphoreDemo.m */,
+				1475991A2293F110003D19CF /* SynchronizedDemo.h */,
+				1475991B2293F110003D19CF /* SynchronizedDemo.m */,
+				14BF18AB2293F9BB003DE65D /* SQPerson.h */,
+				14BF18AC2293F9BB003DE65D /* SQPerson.m */,
 				1438C95F2292978C0093983F /* Main.storyboard */,
 				1438C9622292978E0093983F /* Assets.xcassets */,
 				1438C9642292978E0093983F /* LaunchScreen.storyboard */,
@@ -161,13 +211,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A94CBC2293EAD500373AB5 /* SerialQueueDemo.m in Sources */,
+				14BF18AD2293F9BB003DE65D /* SQPerson.m in Sources */,
+				14AFEA3A2293D7D000A8F4BD /* MutexDemo3.m in Sources */,
+				1475991C2293F110003D19CF /* SynchronizedDemo.m in Sources */,
+				14A94CB62293E75D00373AB5 /* NSConditionLockDemo.m in Sources */,
 				1412F9B52293AB0B0079399C /* OSUnfairLockDemo.m in Sources */,
 				1438C95E2292978C0093983F /* ViewController.m in Sources */,
 				1486702A2293A4E200558482 /* OSSpinLockDemo.m in Sources */,
+				1466A1A02293CD6A00639A4B /* MutexDemo2.m in Sources */,
+				14A96C612293ECFB00861264 /* SemaphoreDemo.m in Sources */,
+				143FA25E2293E21700A39768 /* NSConditionDemo.m in Sources */,
 				1412F9B22293A7E40079399C /* OSSpinLockDemo2.m in Sources */,
 				1438C9692292978E0093983F /* main.m in Sources */,
 				1438C95B2292978C0093983F /* AppDelegate.m in Sources */,
+				1412F9BB2293C5090079399C /* MutexDemo.m in Sources */,
 				148670272293A35300558482 /* SQBaseDemo.m in Sources */,
+				149A6FEF2293DEDD006265E7 /* NSLockDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
