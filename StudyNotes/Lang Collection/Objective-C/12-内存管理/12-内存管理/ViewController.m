@@ -34,6 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)test6 {
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     
 #if 0

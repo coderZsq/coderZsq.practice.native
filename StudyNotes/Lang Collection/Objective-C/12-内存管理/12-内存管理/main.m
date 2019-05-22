@@ -32,21 +32,60 @@
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         
-        NSMutableString *str1 = [[NSMutableString alloc] initWithFormat:@"test"];
-        NSString *str2 = [str1 copy]; // 深拷贝
-        NSMutableString *str3 = [str1 mutableCopy]; // 深拷贝
+        SQPerson *p1 = [[SQPerson alloc] init];
+        p1.age = 20;
+        p1.weight = 50;
         
-        [str1 appendString:@"111"];
-        [str3 appendFormat:@"333"];
+        SQPerson *p2 = [p1 copy];
+        p2.age = 30;
         
-        NSLog(@"%@ %@ %@", str1, str2, str3);
+        NSLog(@"%@", p1);
+        NSLog(@"%@", p2);
         
-        [str1 release];
-        [str2 release];
-        [str3 release];
+        [p2 release];
+        [p1 release];
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+}
+
+void test13() {
+    SQPerson *p = [[SQPerson alloc] init];
+    p.data = [NSMutableArray array];
+    
+    [p.data addObject:@"jack"];
+    [p.data addObject:@"rose"];
+    
+    NSLog(@"%@", p.data);
+    
+    [p release];
+}
+
+void test12() {
+    NSArray *array1 = [[NSArray alloc] initWithObjects:@"a", @"b", nil];
+    NSArray *array2 = [array1 copy]; // 浅拷贝
+    NSMutableArray *array3 = [array1 mutableCopy]; // 深拷贝
+    
+    NSLog(@"%p %p %p", array1, array2, array3);
+    
+    [array1 release];
+    [array2 release];
+    [array3 release];
+}
+
+void test11() {
+    NSMutableString *str1 = [[NSMutableString alloc] initWithFormat:@"test"];
+    NSString *str2 = [str1 copy]; // 深拷贝
+    NSMutableString *str3 = [str1 mutableCopy]; // 深拷贝
+    
+    [str1 appendString:@"111"];
+    [str3 appendFormat:@"333"];
+    
+    NSLog(@"%@ %@ %@", str1, str2, str3);
+    
+    [str1 release];
+    [str2 release];
+    [str3 release];
 }
 
 void test10() {

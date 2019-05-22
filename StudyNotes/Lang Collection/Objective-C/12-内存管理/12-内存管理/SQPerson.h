@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQPerson : NSObject
+@interface SQPerson : NSObject <NSCopying>
 #if 0
 {
     SQDog *_dog;
@@ -38,6 +38,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain) SQCar *car;
 
 + (instancetype)person;
+
+@property (nonatomic, copy) NSMutableArray *data;
+
+@property (nonatomic, assign) double weight;
 
 @end
 

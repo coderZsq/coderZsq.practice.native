@@ -46,7 +46,27 @@
     return [[[self alloc] init] autorelease];
 }
 
+- (void)setData:(NSMutableArray *)data {
+    if (_data != data) {
+        [_data release];
+        _data = [data copy];
+    }
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"age = %d, weight = %f", self.age, self.weight];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    SQPerson *person = [[SQPerson allocWithZone:zone] init];
+    person.age = self.age;
+    person.weight = self.weight;
+    return person;
+}
+
 - (void)dealloc {
+    self.data = nil;
+    
 //    [_dog release];
 //    _dog = nil;
     self.dog = nil;
