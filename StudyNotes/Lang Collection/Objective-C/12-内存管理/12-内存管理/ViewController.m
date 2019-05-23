@@ -10,6 +10,7 @@
 #import "SQObject.h"
 #import "SQProxy.h"
 #import "SQTimer.h"
+#import "SQPerson.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) CADisplayLink *link;
@@ -33,12 +34,68 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+#if 0
+    @autoreleasepool {
+        SQPerson *person = [[[SQPerson alloc] init] autorelease];
+    }
+    NSLog(@"%s", __func__);
+#endif
+    // 这个Person什么时候调用release, 是由RunLoop来控制的
+    // 它可能是在某次RunLoop循环中, RunLoop休眠之前调用了release
+    SQPerson *person = [[[SQPerson alloc] init] autorelease];
+    NSLog(@"%s", __func__);
+//    NSLog(@"%@", [NSRunLoop mainRunLoop]);
+#if 0
+     typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
+         kCFRunLoopEntry = (1UL << 0), // 1
+         kCFRunLoopBeforeTimers = (1UL << 1), // 2
+         kCFRunLoopBeforeSources = (1UL << 2), // 4
+         kCFRunLoopBeforeWaiting = (1UL << 5), // 32
+         kCFRunLoopAfterWaiting = (1UL << 6), // 64
+         kCFRunLoopExit = (1UL << 7), // 128
+         kCFRunLoopAllActivities = 0x0FFFFFFFU
+     };
+     
+     observers = (
+     //   kCFRunLoopEntry push
+     "<CFRunLoopObserver 0x6000010e4140 [0x10d0f2ae8]>{valid = Yes, activities = 0x1, repeats = Yes, order = -2147483647, callout = _wrapRunLoopWithAutoreleasePoolHandler (0x1156aa87d), context = <CFArray 0x600002fa8270 [0x10d0f2ae8]>{type = mutable-small, count = 1, values = (\n\t0 : <0x7fce97802058>\n)}}",
+     ...
+     //   kCFRunLoopBeforeWaiting | kCFRunLoopExit
+     //   kCFRunLoopBeforeWaiting pop, push
+     //   kCFRunLoopExit pop
+     "<CFRunLoopObserver 0x6000010e41e0 [0x10d0f2ae8]>{valid = Yes, activities = 0xa0, repeats = Yes, order = 2147483647, callout = _wrapRunLoopWithAutoreleasePoolHandler (0x1156aa87d), context = <CFArray 0x600002fa8270 [0x10d0f2ae8]>{type = mutable-small, count = 1, values = (\n\t0 : <0x7fce97802058>\n)}}"
+#endif
+    // ARC LLVM 直接插入release
+    SQPerson *person2 = [[SQPerson alloc] init];
+    NSLog(@"%s", __func__);
+    [person2 release];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%s", __func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%s", __func__);
+}
+
+- (void)test7 {
+    // ARC是LLVM编译器和Runtime系统相互协作的一个结果
     
+    __strong SQPerson *person1;
+    __weak SQPerson *person2;
+    __unsafe_unretained SQPerson *person3;
+    {
+        SQPerson *person = [[SQPerson alloc] init];
+        person2 = person;
+    }
+    NSLog(@"%s - %@", __func__, person2);
 }
 
 - (void)test6 {
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    
 #if 0
     @implementation NSMutableArray
     
@@ -48,7 +105,6 @@
     
     @end
 #endif
-    
     self.data = [NSMutableArray array];
     
     self.data = [[[NSMutableArray alloc] init] autorelease];

@@ -40,6 +40,12 @@
 		143EE139229536FA009812CF /* SQCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQCar.m; sourceTree = "<group>"; };
 		14AAAB30229525CC0014FE7D /* SQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPerson.h; sourceTree = "<group>"; };
 		14AAAB31229525CC0014FE7D /* SQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQPerson.m; sourceTree = "<group>"; };
+		14D3C5F922963EC9009CA4AA /* retaincount.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = retaincount.cpp; sourceTree = "<group>"; };
+		14D3C5FB22963FE6009CA4AA /* release.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = release.cpp; sourceTree = "<group>"; };
+		14D3C5FD229640DD009CA4AA /* retain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = retain.cpp; sourceTree = "<group>"; };
+		14D3C5FF229643F9009CA4AA /* dealloc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dealloc.cpp; sourceTree = "<group>"; };
+		14D3C6012296485D009CA4AA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		14D3C603229649E2009CA4AA /* autorelease.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = autorelease.cpp; sourceTree = "<group>"; };
 		14E515D82294ECC1005CDDCB /* SQProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQProxy.h; sourceTree = "<group>"; };
 		14E515D92294ECC1005CDDCB /* SQProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQProxy.m; sourceTree = "<group>"; };
 		14E515DB2294F613005CDDCB /* SQTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQTimer.h; sourceTree = "<group>"; };
@@ -85,6 +91,12 @@
 				1414724D2294E54900F1AC31 /* LaunchScreen.storyboard */,
 				141472502294E54900F1AC31 /* Info.plist */,
 				141472512294E54900F1AC31 /* main.m */,
+				14D3C6012296485D009CA4AA /* main.cpp */,
+				14D3C5F922963EC9009CA4AA /* retaincount.cpp */,
+				14D3C5FB22963FE6009CA4AA /* release.cpp */,
+				14D3C5FD229640DD009CA4AA /* retain.cpp */,
+				14D3C5FF229643F9009CA4AA /* dealloc.cpp */,
+				14D3C603229649E2009CA4AA /* autorelease.cpp */,
 				141472582294EA3D00F1AC31 /* SQObject.h */,
 				141472592294EA3D00F1AC31 /* SQObject.m */,
 				14E515D82294ECC1005CDDCB /* SQProxy.h */,

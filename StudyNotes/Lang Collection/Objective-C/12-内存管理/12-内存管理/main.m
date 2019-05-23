@@ -29,24 +29,104 @@
  2.浅拷贝: 指针拷贝. 没有产生新的对象
  */
 
+// xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        
-        SQPerson *p1 = [[SQPerson alloc] init];
-        p1.age = 20;
-        p1.weight = 50;
-        
-        SQPerson *p2 = [p1 copy];
-        p2.age = 30;
-        
-        NSLog(@"%@", p1);
-        NSLog(@"%@", p2);
-        
-        [p2 release];
-        [p1 release];
-        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
+}
+
+extern void _objc_autoreleasePoolPrint(void);
+
+void test15() {
+#if 0
+    
+#define I386_PGBYTES            4096            /* bytes per 80386 page */
+#define PAGE_SIZE               I386_PGBYTES
+#define PAGE_MAX_SIZE           PAGE_SIZE
+    
+    class AutoreleasePoolPage
+    {
+        // EMPTY_POOL_PLACEHOLDER is stored in TLS when exactly one pool is
+        // pushed and it has never contained any objects. This saves memory
+        // when the top level (i.e. libdispatch) pushes and pops pools but
+        // never uses them.
+#   define EMPTY_POOL_PLACEHOLDER ((id*)1)
+        
+#   define POOL_BOUNDARY nil
+        static pthread_key_t const key = AUTORELEASE_POOL_KEY;
+        static uint8_t const SCRIBBLE = 0xA3;  // 0xA3A3A3A3 after releasing
+        static size_t const SIZE =
+#if PROTECT_AUTORELEASEPOOL
+        PAGE_MAX_SIZE;  // must be multiple of vm page size
+#else
+        PAGE_MAX_SIZE;  // size and alignment, power of 2
+#endif
+        static size_t const COUNT = SIZE / sizeof(id);
+        
+        magic_t const magic;
+        id *next;
+        pthread_t const thread;
+        AutoreleasePoolPage * const parent;
+        AutoreleasePoolPage *child;
+        uint32_t const depth;
+        uint32_t hiwat;
+        
+        ...
+        
+        id * begin() {
+            return (id *) ((uint8_t *)this+sizeof(*this));
+        }
+        
+        id * end() {
+            return (id *) ((uint8_t *)this+SIZE);
+        }
+        
+        ...
+    }
+#endif
+    
+    @autoreleasepool {
+        //            atautoreleasepoolobj = objc_autoreleasePoolPush();
+        //            atautoreleasepoolobj = 0x1038
+        
+        for (int i = 0; i < 1000; i++) {
+            SQPerson *person = [[[SQPerson alloc] init] autorelease];
+        } // 8000个字节
+        
+        _objc_autoreleasePoolPrint();
+        
+        //            objc_autoreleasePoolPop(atautoreleasepoolobj);
+    }
+#if 0
+    struct __AtAutoreleasePool {
+        __AtAutoreleasePool() {atautoreleasepoolobj = objc_autoreleasePoolPush();}
+        ~__AtAutoreleasePool() {objc_autoreleasePoolPop(atautoreleasepoolobj);}
+        void * atautoreleasepoolobj;
+    };
+    
+    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool;
+        SQPerson *person = ((SQPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((SQPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((SQPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("SQPerson"), sel_registerName("alloc")), sel_registerName("init")), sel_registerName("autorelease"));
+    }
+#endif
+    NSLog(@"%s", __func__);
+    
+}
+
+void test14() {
+    SQPerson *p1 = [[SQPerson alloc] init];
+    p1.age = 20;
+    p1.weight = 50;
+    
+    SQPerson *p2 = [p1 copy];
+    p2.age = 30;
+    
+    NSLog(@"%@", p1);
+    NSLog(@"%@", p2);
+    
+    [p2 release];
+    [p1 release];
 }
 
 void test13() {
