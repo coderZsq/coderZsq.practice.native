@@ -3,7 +3,12 @@
 ### StudyNotes
 > Practice some **programming basics** such as **algorithms** and **higher-order readers**.
 
-##### Contents
+#### Contents
+
+- **Lang Collection**
+	- **Assembly:** In-depth study with **8086** & **AT&T** & **ARM64**. 
+	- **C++:** In-depth study with **C++** grammar using **assembly**.
+	- **Objective-C:** In-depth study with **Objective-C** using **C++**.
 
 - **Swift Collection**
 	- **ObjC.io:** **Advanced** Swift books learning.
@@ -28,13 +33,13 @@
 	
 
 
-##### Display
+#### Display
 
 <img src="./StudyNotes/Swift Collection/UIAlgorithm/UIAlgorithm/contents/img1.png" width="360"><img src="./StudyNotes/Swift Collection/UIAlgorithm/UIAlgorithm/contents/img2.gif" width="388">
 
 Apply the algorithm to the actual, now showing a `visual version` of the light-off problem.
 
-##### Artical
+#### Artical
 
 - [Swift 数据结构与算法初探 / 2018 / 01](https://coderzsq.github.io/2018/01/Swift-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%9D%E6%8E%A2/)
 - [Swift 排序算法的简单取舍 / 2018 / 02](https://coderzsq.github.io/2018/02/Swift-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%8F%96%E8%88%8D/)
@@ -46,7 +51,7 @@ Apply the algorithm to the actual, now showing a `visual version` of the light-o
 ### RouterPattern
 > Practice  **mobile-side** **front-end** **back-end** **three-end interaction** to implementation a **degraded architecture**.
 
-##### Get Started
+#### Get Started
 
 - First, you need a [node](https://nodejs.org/en/) server environment
 - Then, run the following command to launch server
@@ -66,19 +71,19 @@ $ cd web/RouterPattern
 $ npm run dev
 ```
 
-##### Contents
+#### Contents
 
 - **app:** Practice **Swift** as a mobile-end development language
 - **web:** Practice **Vue** as a front-end development framework
 - **server:** Practice **Koa** as a back-end development framework
 
-##### Display
+#### Display
 
 <img src="./RouterPattern/contents/img.gif">
 
 Completed a **degradable architecture**, just call the **back-end interface**, the client automatically downgrades from **native** to **webpage**.
 
-##### Article
+#### Article
 
 - [Hybird 搭建零耦合架构从MVC开始 / 2017 / 04](https://coderzsq.github.io/2017/04/Hybird-%E6%90%AD%E5%BB%BA%E9%9B%B6%E8%80%A6%E5%90%88%E6%9E%B6%E6%9E%84%E4%BB%8EMVC%E5%BC%80%E5%A7%8B/)
 - [Hybird 搭建后端Koa.js并过度到MVVM / 2017 / 04](https://coderzsq.github.io/2017/04/Hybird-%E6%90%AD%E5%BB%BA%E5%90%8E%E7%AB%AFKoa.js%E5%B9%B6%E8%BF%87%E5%BA%A6%E5%88%B0MVVM/)
@@ -91,11 +96,11 @@ Completed a **degradable architecture**, just call the **back-end interface**, t
 ### PhotoGallery
 > Practice the **interaction** logic between **mobile-end** and **front-end**.
 
-##### Contents
+#### Contents
 - **UIWebView:** use UIWebView to implement **HTML** to call **native** album function
 
-##### Display
+#### Display
 <img src="./PhotoGallery/contents/img.gif">
 
-##### Article
+#### Article
 - [Hybird 说说与Web交互的那些事儿 / 2017 / 01](https://coderzsq.github.io/2017/01/Hybird-%E8%AF%B4%E8%AF%B4%E4%B8%8EWeb%E4%BA%A4%E4%BA%92%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/)
