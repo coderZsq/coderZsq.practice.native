@@ -1,32 +1,30 @@
 ## Find inspiration in practice
 
 ### StudyNotes
-> Practice some `programming basics` such as `algorithms` and `higher-order readers`.
+> Practice some **programming basics** such as **algorithms** and **higher-order readers**.
 
 ##### Contents
 
-- `Swift Collection`
-	- `ObjC.io` >>> `Advanced` Swift books learning.
-	- `CS193p` >>> `Stanford University` iOS public class study notes.
-	- `CocoaTouch` >>> `Based on UIControl` to implementation UIButton, the `Meituan interview` 
-questions.	
-	- `PhotoBrowser` >>> `Swift` project `transition animation` practice.
-	- `LiveBroadcast` >>> `Live project` practice use `Swift`.
-	- `UIAlgorithm` >>> The `iOS implementation` of the only blackout problem in the whole network.
+- **Swift Collection**
+	- **ObjC.io:** **Advanced** Swift books learning.
+	- **CS193p:** **Stanford University** iOS public class study notes.
+	- **UIAlgorithm:** The **iOS implementation** of the only blackout problem in the whole network.
+	- **UIButton:** **Based on UIControl** to implementation UIButton, the **Meituan interview** questions.	
+	- **UIExamples:** Some examples of using **Swift**.
 
-- `iOS Collection`
-	- `UI` >>> `UI related technology stacks` are organized into projects.
-	- `Network` >>> `Network related technology stacks` are organized into projects.
-	- `Business` >>> `Business related technology stacks` are organized into projects.
+- **iOS Collection**
+	- **UI:** **UI related technology stacks** are organized into projects.
+	- **Network:** **Network related technology stacks** are organized into projects.
+	- **Business:** **Business related technology stacks** are organized into projects.
 
-- `ReactiveCocoa` >>>  `Learning and Practice` of `Responsive Programming` Thoughts.
+- **ReactiveCocoa:** **Learning and practice** of **responsive programming** thoughts.
 
-- `Componentization` >>> `Learning and Practice` of `Componentization` Thoughts.
+- **Componentization:** **Learning and practice** of **componentization** thoughts.
 
-- `Reverse Engineering`
-	- `iOS Application` >>> `Reverse Engineering` about iOS Application.
-	- `iOS AntiDebug` >>> `Reverse Engineering` about iOS AntiDebug.
-	- `MFCApplication` >>> `Reverse Engineering` about MFCApplication.
+- **Reverse Engineering**
+	- **iOS Application:** **Reverse engineering** about iOS Application.
+	- **iOS AntiDebug:** **Reverse engineering** about iOS AntiDebug.
+	- **MFCApplication:** **Reverse engineering** about MFCApplication.
 	
 
 
@@ -46,7 +44,7 @@ Apply the algorithm to the actual, now showing a `visual version` of the light-o
 <br/>
 
 ### RouterPattern
-> Practice  `mobile-side``front-end` `back-end``three-end interaction` to implementation a `degraded architecture`.
+> Practice  **mobile-side** **front-end** **back-end** **three-end interaction** to implementation a **degraded architecture**.
 
 ##### Get Started
 
@@ -70,15 +68,15 @@ $ npm run dev
 
 ##### Contents
 
-- `app` >>> Practice `Swift` as a mobile-end development language
-- `web` >>> Practice `Vue` as a front-end development framework
-- `server` >>> Practice `Koa` as a back-end development framework
+- **app:** Practice **Swift** as a mobile-end development language
+- **web:** Practice **Vue** as a front-end development framework
+- **server:** Practice **Koa** as a back-end development framework
 
 ##### Display
 
 <img src="./RouterPattern/contents/img.gif">
 
-Completed a `degradable architecture`, just call the `back-end interface`, the client automatically downgrades from `native` to `webpage`.
+Completed a **degradable architecture**, just call the **back-end interface**, the client automatically downgrades from **native** to **webpage**.
 
 ##### Article
 
@@ -91,10 +89,10 @@ Completed a `degradable architecture`, just call the `back-end interface`, the c
 <br/>
 
 ### PhotoGallery
-> Practice the `interaction` logic between `mobile-end` and `front-end`.
+> Practice the **interaction** logic between **mobile-end** and **front-end**.
 
 ##### Contents
-- `UIWebView` >>> use UIWebView to implement `HTML` to call `native` album function
+- **UIWebView:** use UIWebView to implement **HTML** to call **native** album function
 
 ##### Display
 <img src="./PhotoGallery/contents/img.gif">
