@@ -1,6 +1,6 @@
 //
 //  Button.swift
-//  CocoaTouch
+//  UIButton
 //
 //  Created by 朱双泉 on 2018/4/13.
 //  Copyright © 2018 Castie!. All rights reserved.
@@ -90,15 +90,15 @@ class Button: UIControl, ButtonInterface {
     func bestSize() -> CGSize {
         if titleLabelIsCreated && !imageViewIsCreated && !backgroundImageViewCreated {
             let text: NSString? = titleLabel.text as NSString?
-            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.width ?? 0.0
-            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.height ?? 0.0
+            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.width ?? 0.0
+            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.height ?? 0.0
             return CGSize(width: titleLabelW, height: titleLabelH + 10)
         } else if !titleLabelIsCreated && imageViewIsCreated {
             return imageView.image?.size ?? CGSize.zero
         } else if titleLabelIsCreated && imageViewIsCreated {
             let text: NSString? = titleLabel.text as NSString?
-            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.width ?? 0.0
-            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.height ?? 0.0
+            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.width ?? 0.0
+            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.height ?? 0.0
             let imageViewW: CGFloat = imageView.image?.size.width ?? 0.0
             let imageViewH: CGFloat = imageView.image?.size.height ?? 0.0
             return CGSize(width: titleLabelW + imageViewW, height: imageViewH > titleLabelH ? imageViewH : titleLabelH)
@@ -123,8 +123,8 @@ class Button: UIControl, ButtonInterface {
             let imageViewW: CGFloat = imageView.image?.size.width ?? 0;
             let imageViewH: CGFloat = bounds.height;
             let text: NSString? = titleLabel.text as NSString?
-            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.width ?? 0.0
-            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).size.height ?? 0.0
+            let titleLabelW: CGFloat = text?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.width ?? 0.0
+            let titleLabelH: CGFloat = text?.boundingRect(with: CGSize(width: titleLabelW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font as Any], context: nil).size.height ?? 0.0
             let imageViewX: CGFloat = (bounds.width - imageViewW - titleLabelW) * 0.5;
             let titleLabelX: CGFloat = imageViewX + imageViewW
             let titleLabelY = (bounds.height - titleLabelH) * 0.5
