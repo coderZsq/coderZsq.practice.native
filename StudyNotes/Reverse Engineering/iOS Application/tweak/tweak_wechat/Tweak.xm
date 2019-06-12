@@ -3,7 +3,8 @@
  
 #define SQDefaults [NSUserDefaults standardUserDefaults] 
 #define SQAutoKey @"sq_auto_key"
-#define SQFile(path) @"/Library/PreferenceLoader/Preferences/SQWeChat/" #path
+// #define SQFile(path) @"/Library/PreferenceLoader/Preferences/SQWeChat/" #path
+#define SQFile(path) @"/Library/Caches/SQWeChat/" #path
 
 %hook FindFriendEntryViewController
 
