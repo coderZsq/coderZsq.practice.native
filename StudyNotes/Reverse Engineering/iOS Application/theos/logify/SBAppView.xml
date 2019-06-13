@@ -1,0 +1,77 @@
+%hook SBAppView
++ (id)defaultDisplayModeAnimationFactory { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setStatusBarDescriptor:(SBAppViewStatusBarDescriptor *)statusBarDescriptor { %log; %orig; }
+- (SBAppViewStatusBarDescriptor *)statusBarDescriptor { %log; SBAppViewStatusBarDescriptor * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setCachedResizeIconView:(SBSceneViewAppIconView *)cachedResizeIconView { %log; %orig; }
+- (SBSceneViewAppIconView *)cachedResizeIconView { %log; SBSceneViewAppIconView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSceneSnapshotView:(UIView *)sceneSnapshotView { %log; %orig; }
+- (UIView *)sceneSnapshotView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setBackgroundView:(UIView<SBAppViewBackgroundView> *)backgroundView { %log; %orig; }
+- (UIView<SBAppViewBackgroundView> *)backgroundView { %log; UIView<SBAppViewBackgroundView> * r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (unsigned long long )displayModeOptions { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (long long )effectiveDisplayMode { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long )displayMode { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long )contextHostingPriority { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (NSString *)contextHostingRequester { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (FBSDisplay *)display { %log; FBSDisplay * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setOrientation:(long long )orientation { %log; %orig; }
+- (long long )orientation { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (struct CGSize )referenceSize { %log; struct CGSize  r = %orig; return r; }
+- (SBApplication *)application { %log; SBApplication * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)appViewRequesterPriority:(id)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)appViewRequesterIdentifier:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_activationStateDidChange:(id)arg1 { %log; %orig; }
+- (void)_recheckLiveContentDependencies { %log; %orig; }
+- (void)_hotSwapLiveSnapshotView { %log; %orig; }
+- (void)_hotSwapStaticContentView { %log; %orig; }
+- (void)_updateStatusBarVisibilityForContextHostView { %log; %orig; }
+- (void)_updateStatusBarVisibility { %log; %orig; }
+- (void)_configureContextHostView { %log; %orig; }
+- (void)updateReferenceSize:(struct CGSize)arg1 andOrientation:(long long)arg2 { %log; %orig; }
+- (void)updateSceneSnapshotViewOnQueue:(id)arg1 completionHandler:(CDUnknownBlockType)arg2 { %log; %orig; }
+- (void)_clearSnapshotViews { %log; %orig; }
+- (void)_makeSceneContentSnapshotViewOnBackgroundQueue:(id)arg1 completionHandler:(CDUnknownBlockType)arg2 { %log; %orig; }
+- (id)_sceneContentSnapshotView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)makeLiveSnapshotViewOnBackgroundQueue:(id)arg1 completionHandler:(CDUnknownBlockType)arg2 { %log; %orig; }
+- (id)liveSnapshotView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)_hasLiveContent { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_configureSceneSnapshotView { %log; %orig; }
+- (id)_snapshotOrDefaultImageView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (struct CGSize)_naturalSize { %log; struct CGSize r = %orig; return r; }
+- (void)_configureStaticContentView { %log; %orig; }
+- (void)_updateBackgroundViewTinting { %log; %orig; }
+- (id)_newDefaultBackgroundView { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_crossfadeFromDisplayMode:(long long)arg1 showingView:(id)arg2 toDisplayMode:(long long)arg3 showingView:(id)arg4 options:(unsigned long long)arg5 withAnimationFactory:(id)arg6 completion:(CDUnknownBlockType)arg7 { %log; %orig; }
+- (id)_viewForDisplayMode:(long long)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)_bestDisplayModeLessThanMode:(long long)arg1 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)_configureViewForEffectiveDisplayMode:(long long)arg1 { %log; %orig; }
+- (void)_setEffectiveDisplayMode:(long long)arg1 options:(unsigned long long)arg2 withAnimationFactory:(id)arg3 completion:(CDUnknownBlockType)arg4 { %log; %orig; }
+- (double)cornerRadius { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)setCornerRadius:(double)arg1 { %log; %orig; }
+- (void)sceneMonitor:(id)arg1 sceneClientSettingsDidChangeWithDiff:(id)arg2 transitionContext:(id)arg3 { %log; %orig; }
+- (void)sceneMonitor:(id)arg1 sceneWasDestroyed:(id)arg2 { %log; %orig; }
+- (void)sceneMonitor:(id)arg1 sceneWasCreated:(id)arg2 { %log; %orig; }
+- (void)_disableContextHosting { %log; %orig; }
+- (void)_enableContextHosting { %log; %orig; }
+- (_Bool)_shouldAnimatePropertyWithKey:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)layoutSubviews { %log; %orig; }
+- (struct CGSize)sizeThatFits:(struct CGSize)arg1 { %log; struct CGSize r = %orig; return r; }
+- (void)setForcesStatusBarHidden:(_Bool)arg1 { %log; %orig; }
+- (_Bool)_forcesStatusBarHidden { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (long long)setDisplayMode:(long long)arg1 options:(unsigned long long)arg2 withAnimationFactory:(id)arg3 completion:(CDUnknownBlockType)arg4 { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)setDisplayMode:(long long)arg1 withAnimationFactory:(id)arg2 completion:(CDUnknownBlockType)arg3 { %log; %orig; }
+- (void)setPlaceholderView:(id)arg1 withAnimationFactory:(id)arg2 { %log; %orig; }
+- (void)setPlaceholderView:(UIView *)placeholderView { %log; %orig; }
+- (UIView *)placeholderView { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)invalidate { %log; %orig; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)dealloc { %log; %orig; }
+- (id)init { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithCoder:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithFrame:(struct CGRect)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithApp:(id)arg1 referenceSize:(struct CGSize)arg2 orientation:(long long)arg3 display:(id)arg4 hostRequester:(id)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithApp:(id)arg1 referenceSize:(struct CGSize)arg2 orientation:(long long)arg3 display:(id)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
