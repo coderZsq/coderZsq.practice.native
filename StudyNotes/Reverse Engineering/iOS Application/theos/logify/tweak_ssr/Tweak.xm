@@ -1,0 +1,31 @@
+%hook AppDelegate
+- (void)setWindow:(UIWindow *)window { %log; %orig; }
+- (UIWindow *)window { %log; UIWindow * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void).cxx_destruct { %log; %orig; }
+- (void)languageDidChangeNotification:(id)arg1 { %log; %orig; }
+- (void)cleanDocumentInboxDelay:(double)arg1 { %log; %orig; }
+- (void)setupNotifications { %log; %orig; }
+- (void)setupMigrations { %log; %orig; }
+- (void)setupBackgroundTasks { %log; %orig; }
+- (void)setupAppLanguage { %log; %orig; }
+- (void)syncServerObject:(id)arg1 userInfo:(id)arg2 { %log; %orig; }
+- (void)serversWillSyncNotification:(id)arg1 { %log; %orig; }
+- (void)serversWillArchiveNotification:(id)arg1 { %log; %orig; }
+- (void)syncConfigObject:(id)arg1 userInfo:(id)arg2 { %log; %orig; }
+- (void)configWillSyncNotification:(id)arg1 { %log; %orig; }
+- (void)handleOverwriteConfigFileWithURL:(id)arg1 { %log; %orig; }
+- (void)saveConfigFileWithURL:(id)arg1 { %log; %orig; }
+- (_Bool)application:(id)arg1 openURL:(id)arg2 options:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)application:(id)arg1 performActionForShortcutItem:(id)arg2 completionHandler:(CDUnknownBlockType)arg3 { %log; %orig; }
+- (void)suspendApplication { %log; %orig; }
+- (void)applicationWillTerminate:(id)arg1 { %log; %orig; }
+- (void)applicationDidBecomeActive:(id)arg1 { %log; %orig; }
+- (void)applicationWillEnterForeground:(id)arg1 { %log; %orig; }
+- (void)applicationDidEnterBackground:(id)arg1 { %log; %orig; }
+- (void)applicationWillResignActive:(id)arg1 { %log; %orig; }
+- (_Bool)application:(id)arg1 didFinishLaunchingWithOptions:(id)arg2 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
