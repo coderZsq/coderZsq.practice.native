@@ -1,0 +1,49 @@
+~/Desktop/LLVM/LLVM zhushuangquan$ clang -fmodules -E -Xclang -dump-tokens main.m
+
+annot_module_include '#include <stdio.h>
+
+#define AGE 40
+
+int main(int argc, const char * argv[]) {
+
+int a = 10;
+int b = 20;
+int c = a + b'        Loc=<main.m:9:1>
+int 'int'     [StartOfLine]    Loc=<main.m:13:1>
+identifier 'main'     [LeadingSpace]    Loc=<main.m:13:5>
+l_paren '('        Loc=<main.m:13:9>
+int 'int'        Loc=<main.m:13:10>
+identifier 'argc'     [LeadingSpace]    Loc=<main.m:13:14>
+comma ','        Loc=<main.m:13:18>
+const 'const'     [LeadingSpace]    Loc=<main.m:13:20>
+char 'char'     [LeadingSpace]    Loc=<main.m:13:26>
+star '*'     [LeadingSpace]    Loc=<main.m:13:31>
+identifier 'argv'     [LeadingSpace]    Loc=<main.m:13:33>
+l_square '['        Loc=<main.m:13:37>
+r_square ']'        Loc=<main.m:13:38>
+r_paren ')'        Loc=<main.m:13:39>
+l_brace '{'     [LeadingSpace]    Loc=<main.m:13:41>
+int 'int'     [StartOfLine] [LeadingSpace]    Loc=<main.m:15:5>
+identifier 'a'     [LeadingSpace]    Loc=<main.m:15:9>
+equal '='     [LeadingSpace]    Loc=<main.m:15:11>
+numeric_constant '10'     [LeadingSpace]    Loc=<main.m:15:13>
+semi ';'        Loc=<main.m:15:15>
+int 'int'     [StartOfLine] [LeadingSpace]    Loc=<main.m:16:5>
+identifier 'b'     [LeadingSpace]    Loc=<main.m:16:9>
+equal '='     [LeadingSpace]    Loc=<main.m:16:11>
+numeric_constant '20'     [LeadingSpace]    Loc=<main.m:16:13>
+semi ';'        Loc=<main.m:16:15>
+int 'int'     [StartOfLine] [LeadingSpace]    Loc=<main.m:17:5>
+identifier 'c'     [LeadingSpace]    Loc=<main.m:17:9>
+equal '='     [LeadingSpace]    Loc=<main.m:17:11>
+identifier 'a'     [LeadingSpace]    Loc=<main.m:17:13>
+plus '+'     [LeadingSpace]    Loc=<main.m:17:15>
+identifier 'b'     [LeadingSpace]    Loc=<main.m:17:17>
+plus '+'     [LeadingSpace]    Loc=<main.m:17:19>
+numeric_constant '40'     [LeadingSpace]    Loc=<main.m:17:21 <Spelling=main.m:11:13>>
+semi ';'        Loc=<main.m:17:24>
+return 'return'     [StartOfLine] [LeadingSpace]    Loc=<main.m:19:5>
+numeric_constant '0'     [LeadingSpace]    Loc=<main.m:19:12>
+semi ';'        Loc=<main.m:19:13>
+r_brace '}'     [StartOfLine]    Loc=<main.m:20:1>
+eof ''        Loc=<main.m:20:2>

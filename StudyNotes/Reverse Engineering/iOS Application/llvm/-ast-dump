@@ -1,0 +1,50 @@
+~/Desktop/LLVM/LLVM zhushuangquan$ clang -fmodules -fsyntax-only -Xclang -ast-dump main.m
+
+TranslationUnitDecl 0x7fed8d0198e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fed8d01a180 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fed8d019e80 '__int128'
+|-TypedefDecl 0x7fed8d01a1e8 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fed8d019ea0 'unsigned __int128'
+|-TypedefDecl 0x7fed8d01a280 <<invalid sloc>> <invalid sloc> implicit SEL 'SEL *'
+| `-PointerType 0x7fed8d01a240 'SEL *'
+|   `-BuiltinType 0x7fed8d01a0e0 'SEL'
+|-TypedefDecl 0x7fed8d01a358 <<invalid sloc>> <invalid sloc> implicit id 'id'
+| `-ObjCObjectPointerType 0x7fed8d01a300 'id'
+|   `-ObjCObjectType 0x7fed8d01a2d0 'id'
+|-TypedefDecl 0x7fed8d01a438 <<invalid sloc>> <invalid sloc> implicit Class 'Class'
+| `-ObjCObjectPointerType 0x7fed8d01a3e0 'Class'
+|   `-ObjCObjectType 0x7fed8d01a3b0 'Class'
+|-ObjCInterfaceDecl 0x7fed8d01a488 <<invalid sloc>> <invalid sloc> implicit Protocol
+|-TypedefDecl 0x7fed8d054de8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fed8d054c00 'struct __NSConstantString_tag'
+|   `-Record 0x7fed8d01a550 '__NSConstantString_tag'
+|-TypedefDecl 0x7fed8d054e80 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fed8d054e40 'char *'
+|   `-BuiltinType 0x7fed8d019980 'char'
+|-TypedefDecl 0x7fed8d055148 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fed8d0550f0 'struct __va_list_tag [1]' 1
+|   `-RecordType 0x7fed8d054f70 'struct __va_list_tag'
+|     `-Record 0x7fed8d054ed0 '__va_list_tag'
+|-ImportDecl 0x7fed8d0559c0 <main.m:9:1> col:1 implicit Darwin.C.stdio
+|-FunctionDecl 0x7fed8c899678 <line:13:1, line:20:1> line:13:5 main 'int (int, const char **)'
+| |-ParmVarDecl 0x7fed8d055a10 <col:10, col:14> col:14 argc 'int'
+| |-ParmVarDecl 0x7fed8d055b20 <col:20, col:38> col:33 argv 'const char **':'const char **'
+| `-CompoundStmt 0x7fed8c899af8 <col:41, line:20:1>
+|   |-DeclStmt 0x7fed8c899848 <line:15:5, col:15>
+|   | `-VarDecl 0x7fed8c8997c8 <col:5, col:13> col:9 used a 'int' cinit
+|   |   `-IntegerLiteral 0x7fed8c899828 <col:13> 'int' 10
+|   |-DeclStmt 0x7fed8c8998f8 <line:16:5, col:15>
+|   | `-VarDecl 0x7fed8c899878 <col:5, col:13> col:9 used b 'int' cinit
+|   |   `-IntegerLiteral 0x7fed8c8998d8 <col:13> 'int' 20
+|   |-DeclStmt 0x7fed8c899aa8 <line:17:5, col:24>
+|   | `-VarDecl 0x7fed8c899928 <col:5, line:11:13> line:17:9 c 'int' cinit
+|   |   `-BinaryOperator 0x7fed8c899a80 <col:13, line:11:13> 'int' '+'
+|   |     |-BinaryOperator 0x7fed8c899a38 <line:17:13, col:17> 'int' '+'
+|   |     | |-ImplicitCastExpr 0x7fed8c899a08 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fed8c899988 <col:13> 'int' lvalue Var 0x7fed8c8997c8 'a' 'int'
+|   |     | `-ImplicitCastExpr 0x7fed8c899a20 <col:17> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fed8c8999c8 <col:17> 'int' lvalue Var 0x7fed8c899878 'b' 'int'
+|   |     `-IntegerLiteral 0x7fed8c899a60 <line:11:13> 'int' 40
+|   `-ReturnStmt 0x7fed8c899ae0 <line:19:5, col:12>
+|     `-IntegerLiteral 0x7fed8c899ac0 <col:12> 'int' 0
+`-<undeserialized declarations>
