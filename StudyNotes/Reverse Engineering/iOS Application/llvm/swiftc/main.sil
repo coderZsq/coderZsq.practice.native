@@ -1,0 +1,84 @@
+~/Desktop/AST/AST zhushuangquan$ swiftc -emit-sil main.swift
+
+sil_stage canonical
+
+import Builtin
+import Swift
+import SwiftShims
+
+import Foundation
+
+// main
+sil @main : $@convention(c) (Int32, UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>) -> Int32 {
+bb0(%0 : $Int32, %1 : $UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>):
+%2 = integer_literal $Builtin.Word, 1           // user: %4
+// function_ref specialized _allocateUninitializedArray<A>(_:)
+%3 = function_ref @$ss27_allocateUninitializedArrayySayxG_BptBwlFyp_Tg5 : $@convention(thin) (Builtin.Word) -> (@owned Array<Any>, Builtin.RawPointer) // user: %4
+%4 = apply %3(%2) : $@convention(thin) (Builtin.Word) -> (@owned Array<Any>, Builtin.RawPointer) // users: %5, %6
+%5 = tuple_extract %4 : $(Array<Any>, Builtin.RawPointer), 0 // users: %24, %21
+%6 = tuple_extract %4 : $(Array<Any>, Builtin.RawPointer), 1 // user: %7
+%7 = pointer_to_address %6 : $Builtin.RawPointer to [strict] $*Any // user: %14
+%8 = string_literal utf8 "Hello, World!"        // user: %13
+%9 = integer_literal $Builtin.Word, 13          // user: %13
+%10 = integer_literal $Builtin.Int1, -1         // user: %13
+%11 = metatype $@thin String.Type               // user: %13
+// function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+%12 = function_ref @$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %13
+%13 = apply %12(%8, %9, %10, %11) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %15
+%14 = init_existential_addr %7 : $*Any, $String // user: %15
+store %13 to %14 : $*String                     // id: %15
+// function_ref default argument 1 of print(_:separator:terminator:)
+%16 = function_ref @$ss5print_9separator10terminatoryypd_S2StFfA0_ : $@convention(thin) () -> @owned String // user: %17
+%17 = apply %16() : $@convention(thin) () -> @owned String // users: %23, %21
+// function_ref default argument 2 of print(_:separator:terminator:)
+%18 = function_ref @$ss5print_9separator10terminatoryypd_S2StFfA1_ : $@convention(thin) () -> @owned String // user: %19
+%19 = apply %18() : $@convention(thin) () -> @owned String // users: %22, %21
+// function_ref print(_:separator:terminator:)
+%20 = function_ref @$ss5print_9separator10terminatoryypd_S2StF : $@convention(thin) (@guaranteed Array<Any>, @guaranteed String, @guaranteed String) -> () // user: %21
+%21 = apply %20(%5, %17, %19) : $@convention(thin) (@guaranteed Array<Any>, @guaranteed String, @guaranteed String) -> ()
+release_value %19 : $String                     // id: %22
+release_value %17 : $String                     // id: %23
+release_value %5 : $Array<Any>                  // id: %24
+%25 = integer_literal $Builtin.Int32, 0         // user: %26
+%26 = struct $Int32 (%25 : $Builtin.Int32)      // user: %27
+return %26 : $Int32                             // id: %27
+} // end sil function 'main'
+
+// _allocateUninitializedArray<A>(_:)
+sil [serialized] [always_inline] @$ss27_allocateUninitializedArrayySayxG_BptBwlF : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer)
+
+// String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+sil [serialized] [always_inline] [readonly] [_semantics "string.makeUTF8"] @$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String
+
+// default argument 1 of print(_:separator:terminator:)
+sil shared_external [serialized] @$ss5print_9separator10terminatoryypd_S2StFfA0_ : $@convention(thin) () -> @owned String {
+bb0:
+%0 = string_literal utf8 " "                    // user: %5
+%1 = integer_literal $Builtin.Word, 1           // user: %5
+%2 = integer_literal $Builtin.Int1, -1          // user: %5
+%3 = metatype $@thin String.Type                // user: %5
+// function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+%4 = function_ref @$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %5
+%5 = apply %4(%0, %1, %2, %3) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %6
+return %5 : $String                             // id: %6
+} // end sil function '$ss5print_9separator10terminatoryypd_S2StFfA0_'
+
+// default argument 2 of print(_:separator:terminator:)
+sil shared_external [serialized] @$ss5print_9separator10terminatoryypd_S2StFfA1_ : $@convention(thin) () -> @owned String {
+bb0:
+%0 = string_literal utf8 "\n"                   // user: %5
+%1 = integer_literal $Builtin.Word, 1           // user: %5
+%2 = integer_literal $Builtin.Int1, -1          // user: %5
+%3 = metatype $@thin String.Type                // user: %5
+// function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+%4 = function_ref @$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %5
+%5 = apply %4(%0, %1, %2, %3) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %6
+return %5 : $String                             // id: %6
+} // end sil function '$ss5print_9separator10terminatoryypd_S2StFfA1_'
+
+// print(_:separator:terminator:)
+sil @$ss5print_9separator10terminatoryypd_S2StF : $@convention(thin) (@guaranteed Array<Any>, @guaranteed String, @guaranteed String) -> ()
+
+// specialized _allocateUninitializedArray<A>(_:)
+sil [always_inline] @$ss27_allocateUninitializedArrayySayxG_BptBwlFyp_Tg5 : $@convention(thin) (Builtin.Word) -> (@owned Array<Any>, Builtin.RawPointer)
+

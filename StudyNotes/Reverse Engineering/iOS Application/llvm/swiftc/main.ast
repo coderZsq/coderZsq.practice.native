@@ -1,0 +1,12 @@
+~/Desktop/AST/AST zhushuangquan$ swiftc -dump-ast main.swift
+
+(source_file "main.swift"
+ (import_decl range=[main.swift:9:1 - line:9:8] 'Foundation')
+ (top_level_code_decl range=[main.swift:11:1 - line:11:22]
+ (brace_stmt range=[main.swift:11:1 - line:11:22]
+ (call_expr type='()' location=main.swift:11:1 range=[main.swift:11:1 - line:11:22] nothrow arg_labels=_:
+ (declref_expr type='(Any..., String, String) -> ()' location=main.swift:11:1 range=[main.swift:11:1 - line:11:1] decl=Swift.(file).print(_:separator:terminator:) function_ref=single)
+ (tuple_shuffle_expr implicit type='(Any..., separator: String, terminator: String)' location=main.swift:11:7 range=[main.swift:11:6 - line:11:22] scalar_to_tuple elements=[-2, -1, -1] variadic_sources=[0] default_args_owner=Swift.(file).print(_:separator:terminator:)
+ (paren_expr type='(Any)' location=main.swift:11:7 range=[main.swift:11:6 - line:11:22]
+ (erasure_expr implicit type='Any' location=main.swift:11:7 range=[main.swift:11:7 - line:11:7]
+ (string_literal_expr type='String' location=main.swift:11:7 range=[main.swift:11:7 - line:11:7] encoding=utf8 value="Hello, World!" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))))))
