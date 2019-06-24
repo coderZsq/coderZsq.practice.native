@@ -3,5 +3,9 @@
     <pages>
         <page name='01-注释'/>
         <page name='02-数据类型'/>
+        <page name='03-流程控制'/>
+        <page name='04-函数'/>
+        <page name='05-枚举'/>
+        <page name='06-可选项'/>
     </pages>
 </playground>
