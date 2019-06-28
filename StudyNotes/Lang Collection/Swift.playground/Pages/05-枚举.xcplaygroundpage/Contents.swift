@@ -127,3 +127,52 @@ case .test5:
     print("test5")
 }
 
+
+enum TestEnum4 {
+    case test0
+    case test1
+    case test2
+    case test4(Int)
+    case test5(Int, Int)
+    case test6(Int, Int, Int, Bool)
+}
+
+MemoryLayout<TestEnum4>.size
+MemoryLayout<TestEnum4>.stride
+MemoryLayout<TestEnum4>.alignment
+
+var e4 = TestEnum4.test6(1, 2, 3, true)
+//e4 = .test0
+print(Mems.memStr(ofVal: &e4))
+
+enum TestEnum5 {
+    case test0
+    case test1
+    case test2
+    case test4(Int)
+    case test5(Int, Int)
+    case test6(Int, Int, Bool, Int)
+}
+
+MemoryLayout<TestEnum5>.size
+MemoryLayout<TestEnum5>.stride
+MemoryLayout<TestEnum5>.alignment
+
+var e5 = TestEnum5.test6(1, 2, true, 4)
+print(Mems.memStr(ofVal: &e5))
+
+enum TestEnum6 {
+    case test0
+    case test1
+    case test2
+    case test4(Int)
+    case test5(Int, Int)
+    case test6(Int, Bool, Int)
+}
+
+MemoryLayout<TestEnum6>.size
+MemoryLayout<TestEnum6>.stride
+MemoryLayout<TestEnum6>.alignment
+
+var e6 = TestEnum6.test6(1, true, 3)
+print(Mems.memStr(ofVal: &e6))
