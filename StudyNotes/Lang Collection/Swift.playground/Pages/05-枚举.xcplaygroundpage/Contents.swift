@@ -85,6 +85,7 @@ e = .test5
 
 enum TestEnum2 {
     case test
+    
 }
 
 var t = TestEnum2.test
@@ -107,10 +108,10 @@ MemoryLayout<TestEnum3>.alignment
 e = TestEnum.test1(10, 20, 30)
 /*  register read rip CPU要执行的下一条指令地址就存储在rip中
  ->  0x10000144f <+63>:   movq   $0xa, 0x1bee(%rip)        ; _dyld_private + 4
-     0x10000145a <+74>:   leaq   0x1be7(%rip), %rax        ; TestEnum
-     0x100001461 <+81>:   movq   $0x14, 0x1be4(%rip)       ; TestEnum + 4
-     0x10000146c <+92>:   movq   $0x1e, 0x1be1(%rip)       ; TestEnum + 12
-     0x100001477 <+103>:  movb   $0x0, 0x1be2(%rip)        ; TestEnum + 23 枚举的成员值
+     0x10000145a <+74>:   leaq   0x1be7(%rip), %rax        ; SwiftDemo.TestEnum
+     0x100001461 <+81>:   movq   $0x14, 0x1be4(%rip)       ; SwiftDemo.TestEnum + 4
+     0x10000146c <+92>:   movq   $0x1e, 0x1be1(%rip)       ; SwiftDemo.TestEnum + 12
+     0x100001477 <+103>:  movb   $0x0, 0x1be2(%rip)        ; SwiftDemo.TestEnum + 23 枚举的成员值
  */
 
 switch e {
