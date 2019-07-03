@@ -133,3 +133,78 @@ fn2(4)
  0x100000c27 <+743>: movq   -0x120(%rbp), %rax
  0x100000c2e <+750>: callq  *%rax
  */
+
+typealias Func = (Int) -> (Int, Int)
+
+func getFuncs() -> (Func, Func) {
+    var num1 = 0
+    /*
+     0x100001416 <+54>:  callq  0x100001e7a               ; symbol stub for: swift_allocObject
+     0x10000141b <+59>:  movq   %rax, %rdx
+     */
+    var num2 = 0
+    /*
+     0x100001444 <+100>: callq  0x100001e7a               ; symbol stub for: swift_allocObject
+     0x100001449 <+105>: movq   %rax, %rdx
+     */
+    func plus(_ i: Int) -> (Int, Int) {
+        num1 += i
+        num2 += i << 1
+        return (num1, num2)
+    }
+    func minus(_ i: Int) -> (Int, Int) {
+        num1 -= i
+        num2 -= i << 1
+        return (num1, num2)
+    }
+    return (plus, minus)
+}
+
+let (p, m) = getFuncs()
+p(6)
+m(5)
+p(4)
+/*
+ (lldb) register read rax
+ rax = 0x0000000100701c30
+ (lldb) register read rax
+ rax = 0x0000000103200180
+ (lldb) x/5xg 0x0000000100701c30
+ 0x100701c30: 0x0000000100002058 0x0000000200000002
+ 0x100701c40: 0x0000000000000005 0x00027fff70991128
+ 0x100701c50: 0x00007fff8b995b38
+ (lldb) x/5xg 0x0000000103200180
+ 0x103200180: 0x0000000100002058 0x0000000200000002
+ 0x103200190: 0x000000000000000a 0x0000000000000000
+ 0x1032001a0: 0x0000000000000000
+ */
+m(3)
+
+var functions: [() -> Int] = []
+for i in 1...3 {
+    functions.append {i}
+}
+for f in functions {
+    print("\(f())")
+}
+
+func getNumber() -> Int {
+    let a = 10
+    let b = 11
+    print("----")
+    return a + b
+}
+
+func getFirstPositive(_ v1: Int, _ v2: () -> Int) -> Int {
+    return v1 > 0 ? v1 : v2()
+}
+
+func getFirstPositive(_ v1: Int, _ v2: @autoclosure () -> Int) -> Int {
+    return v1 > 0 ? v1 : v2()
+}
+getFirstPositive(10, 20)
+getFirstPositive(-2, 20)
+getFirstPositive(0, -4)
+
+getFirstPositive(10, getNumber())
+getFirstPositive(10) {getNumber()}
