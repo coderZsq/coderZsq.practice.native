@@ -38,10 +38,10 @@ func getFn() -> Fn {
  */
 
 var fn = getFn()
-print(fn(1))
-print(fn(2))
-print(fn(3))
-print(fn(4))
+fn(1)
+fn(2)
+fn(3)
+fn(4)
 
 /*
  (lldb) register read rax
@@ -68,3 +68,68 @@ print(fn(4))
  10
  */
 
+var fn1 = getFn()
+MemoryLayout.stride(ofValue: fn1)
+fn1(1)
+fn1(3)
+/*
+ 0x100000a2b <+235>: movq   0x686(%rip), %rax         ; SwiftDemo.fn1 : (Swift.Int) -> Swift.Int
+ 0x100000a32 <+242>: movq   0x687(%rip), %rcx         ; SwiftDemo.fn1 : (Swift.Int) -> Swift.Int + 8
+ 0x100000a39 <+249>: movq   %rcx, %rdi
+ 0x100000a3c <+252>: movq   %rax, -0xb0(%rbp)
+ 0x100000a43 <+259>: movq   %rcx, -0xb8(%rbp)
+ 0x100000a4a <+266>: callq  0x100000f08               ; symbol stub for: swift_retain
+ 0x100000a4f <+271>: leaq   -0x38(%rbp), %rdi
+ 0x100000a53 <+275>: movq   %rax, -0xc0(%rbp)
+ 0x100000a5a <+282>: callq  0x100000ef6               ; symbol stub for: swift_endAccess
+ 0x100000a5f <+287>: movl   $0x1, %r9d
+ 0x100000a65 <+293>: movl   %r9d, %edi
+ 0x100000a68 <+296>: movq   -0xb8(%rbp), %r13
+ 0x100000a6f <+303>: movq   -0xb0(%rbp), %rax
+ 0x100000a76 <+310>: callq  *%rax
+ */
+/*
+ SwiftDemo`partial apply for plus #1 (_:) in getFn():
+ ->  0x100000ed0 <+0>:  pushq  %rbp
+ 0x100000ed1 <+1>:  movq   %rsp, %rbp
+ 0x100000ed4 <+4>:  movq   %r13, %rsi
+ 0x100000ed7 <+7>:  callq  0x100000cc0               ; plus #1 (Swift.Int) -> Swift.Int in SwiftDemo.getFn() -> (Swift.Int) -> Swift.Int at main.swift:12
+ 0x100000edc <+12>: popq   %rbp
+ 0x100000edd <+13>: retq
+ */
+/*
+ (lldb) register read rdi
+ rdi = 0x0000000000000001
+ (lldb) register read r13
+ r13 = 0x00000001030040f0
+ (lldb) register read rsi
+ rsi = 0x00000001030040f0
+ */
+/*
+ 0x100000ce5 <+37>:  movq   %rdi, -0x48(%rbp)
+ 0x100000ce9 <+41>:  movq   %r10, %rdi
+ 0x100000cec <+44>:  movq   %rsi, -0x50(%rbp)
+ ...
+ 0x100000d4b <+139>: movq   -0x48(%rbp), %rcx
+ 0x100000d4f <+143>: movq   -0x50(%rbp), %rdx
+ 0x100000d53 <+147>: addq   0x10(%rdx), %rcx
+ */
+var fn2 = getFn()
+fn2(2)
+fn2(4)
+/*
+ 0x100000be3 <+675>: movq   0x4de(%rip), %rax         ; SwiftDemo.fn2 : (Swift.Int) -> Swift.Int
+ 0x100000bea <+682>: movq   0x4df(%rip), %rcx         ; SwiftDemo.fn2 : (Swift.Int) -> Swift.Int + 8
+ 0x100000bf1 <+689>: movq   %rcx, %rdi
+ 0x100000bf4 <+692>: movq   %rax, -0x120(%rbp)
+ 0x100000bfb <+699>: movq   %rcx, -0x128(%rbp)
+ 0x100000c02 <+706>: callq  0x100000f08               ; symbol stub for: swift_retain
+ 0x100000c07 <+711>: leaq   -0x80(%rbp), %rdi
+ 0x100000c0b <+715>: movq   %rax, -0x130(%rbp)
+ 0x100000c12 <+722>: callq  0x100000ef6               ; symbol stub for: swift_endAccess
+ 0x100000c17 <+727>: movl   $0x4, %r9d
+ 0x100000c1d <+733>: movl   %r9d, %edi
+ 0x100000c20 <+736>: movq   -0x128(%rbp), %r13
+ 0x100000c27 <+743>: movq   -0x120(%rbp), %rax
+ 0x100000c2e <+750>: callq  *%rax
+ */
