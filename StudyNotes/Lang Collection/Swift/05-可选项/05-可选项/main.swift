@@ -272,6 +272,30 @@ do {
 // 可以使用lldb指令 frame variable -R 或者 fr v -R 查看区别
 
 do {
+    /*
+     (lldb) fr v -R num1
+     (Swift.Optional<Swift.Int>) num1 = some {
+       some = {
+         _value = 10
+       }
+     }
+     (lldb) fr v -R num2
+     (Swift.Optional<Swift.Optional<Swift.Int>>) num2 = some {
+       some = some {
+         some = {
+           _value = 10
+         }
+       }
+     }
+     (lldb) fr v -R num3
+     (Swift.Optional<Swift.Optional<Swift.Int>>) num3 = some {
+       some = some {
+         some = {
+           _value = 10
+         }
+       }
+     }
+     */
     var num1: Int? = 10
     var num2: Int?? = num1
     var num3: Int?? = 10
@@ -279,6 +303,30 @@ do {
 }
 
 do {
+    /*
+     (lldb) fr v -R num1
+     (Swift.Optional<Swift.Int>) num1 = none {
+       some = {
+         _value = 0
+       }
+     }
+     (lldb) fr v -R num2
+     (Swift.Optional<Swift.Optional<Swift.Int>>) num2 = some {
+       some = none {
+         some = {
+           _value = 0
+         }
+       }
+     }
+     (lldb) fr v -R num3
+     (Swift.Optional<Swift.Optional<Swift.Int>>) num3 = none {
+       some = some {
+         some = {
+           _value = 0
+         }
+       }
+     }
+     */
     var num1: Int? = nil
     var num2: Int?? = num1
     var num3: Int?? = nil
