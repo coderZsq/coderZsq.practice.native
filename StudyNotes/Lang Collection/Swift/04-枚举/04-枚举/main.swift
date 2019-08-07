@@ -231,8 +231,23 @@ do {
         case test1, test2, test3
     }
     var t = TestEnum.test1
+    print(Mems.ptr(ofVal: &t))
+    print(Mems.memStr(ofVal: &t))
     t = .test2
     t = .test3
+    
+    print(MemoryLayout<TestEnum>.size)
+    print(MemoryLayout<TestEnum>.stride)
+    print(MemoryLayout<TestEnum>.alignment)
+    
+    switch t {
+    case .test1:
+        print("test1")
+    case .test2:
+        print("test2")
+    case .test3:
+        print("test3")
+    }
 }
 
 do {
@@ -240,8 +255,14 @@ do {
         case test1 = 1, test2 = 2, test3 = 3
     }
     var t = TestEnum.test1
+    print(Mems.ptr(ofVal: &t))
+    print(Mems.memStr(ofVal: &t))
     t = .test2
     t = .test3
+    
+    print(MemoryLayout<TestEnum>.size)
+    print(MemoryLayout<TestEnum>.stride)
+    print(MemoryLayout<TestEnum>.alignment)
 }
 
 do {
@@ -249,6 +270,10 @@ do {
         case test
     }
     var t = TestEnum.test
+    print(Mems.memStr(ofVal: &t)) // 没有内存
+    print(MemoryLayout<TestEnum>.size) // 0
+    print(MemoryLayout<TestEnum>.stride) // 1
+    print(MemoryLayout<TestEnum>.alignment) // 1
 }
 
 do {
@@ -256,6 +281,10 @@ do {
         case test(Int)
     }
     var t = TestEnum.test(10)
+    print(Mems.memStr(ofVal: &t))
+    print(MemoryLayout<TestEnum>.size) // 8
+    print(MemoryLayout<TestEnum>.stride) // 8
+    print(MemoryLayout<TestEnum>.alignment) // 8
 }
 
 do {
@@ -266,11 +295,61 @@ do {
         case test4(Bool)
         case test5
     }
+    /*
+     01 00 00 00 00 00 00 00
+     02 00 00 00 00 00 00 00
+     03 00 00 00 00 00 00 00
+     00
+     */
     var e = TestEnum.test1(1, 2, 3)
+    print(Mems.ptr(ofVal: &e))
+    print(Mems.memStr(ofVal: &e))
+    
+    switch e {
+    case let .test1(v1, v2, v3):
+        print("test1", v1, v2, v3)
+    case let .test2(v1, v2):
+        print("test2", v1, v2)
+    case let .test3(v1):
+        print("test3", v1)
+    case let .test4(v1):
+        print("test4", v1)
+    case .test5:
+        print("test5")
+    }
+    
+    /*
+     04 00 00 00 00 00 00 00
+     05 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     01
+     */
     e = .test2(4, 5)
+    /*
+     06 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     02
+     */
     e = .test3(6)
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     03
+     */
     e = .test4(true)
+    /*
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     04
+     */
     e = .test5
+    
+    print(MemoryLayout<TestEnum>.size)
+    print(MemoryLayout<TestEnum>.stride)
+    print(MemoryLayout<TestEnum>.alignment)
 }
 
 // MARK: - 进一步观察下面枚举的内存布局
