@@ -62,6 +62,7 @@ do {
         print(names[i])
     }
     
+    // i 默认是let, 有需要时可声明为var
     for var i in 1...3 {
         i += 5
         print(i)
@@ -76,8 +77,8 @@ do {
 
 do {
     let names = ["Anna", "Alex", "Brian", "Jack"]
-    for i in 0...3 {
-        print(names[i])
+    for name in names[0...3] {
+        print(name)
     }
     
     for name in names[2...] {
@@ -88,7 +89,7 @@ do {
         print(name)
     }
     
-    for name in names [..<2] {
+    for name in names[..<2] {
         print(name)
     }
     
@@ -102,6 +103,10 @@ do {
 // 字符, 字符串也能使用区间运算符, 但默认不能用在for-in中
 
 do {
+    let range1: ClosedRange<Int> = 1...3
+    let range2: Range<Int> = 1..<3
+    let range3: PartialRangeThrough<Int> = ...5
+    
     let stringRange1 = "cc"..."ff"
     print(stringRange1.contains("cb"))
     print(stringRange1.contains("dz"))
@@ -306,7 +311,7 @@ do {
 do {
     var numbers = [10, 20, -10, -20, 30, -30]
     var sum = 0
-    for num in numbers where num > 0 {
+    for num in numbers where num > 0 { // 使用where来过滤num
         sum += num;
     }
     print(sum)
