@@ -134,16 +134,37 @@ do {
  可以用inout定义一个输入输出参数: 可以在函数内部修改外部实参的值
  可变参数不能标记为inout
  inout参数不能有默认值
- inout参数只能传入可以被多次赋值的值
+ inout参数只能传入可以被多次赋值的
  inout参数的本质是地址传递(引用传递)
  */
 
 do {
+    /*
+     03-函数`swapValues #1 (_:_:) in :
+     ->  0x100002400 <+0>:  pushq  %rbp
+         0x100002401 <+1>:  movq   %rsp, %rbp
+         0x100002404 <+4>:  movq   $0x0, -0x8(%rbp)
+         0x10000240c <+12>: movq   $0x0, -0x10(%rbp)
+         0x100002414 <+20>: movq   %rdi, -0x8(%rbp)
+         0x100002418 <+24>: movq   %rsi, -0x10(%rbp)
+         0x10000241c <+28>: movq   (%rdi), %rax
+         0x10000241f <+31>: movq   %rax, %rcx
+         0x100002422 <+34>: movq   (%rsi), %rcx
+         0x100002425 <+37>: movq   %rcx, (%rdi)
+         0x100002428 <+40>: movq   %rax, (%rsi)
+         0x10000242b <+43>: popq   %rbp
+         0x10000242c <+44>: retq
+     */
     func swapValues(_ v1: inout Int, _ v2: inout Int) {
         let tmp = v1
         v1 = v2
         v2 = tmp
     }
+    /*
+     ->  0x10000160a <+1818>: leaq   -0x28(%rbp), %rdi
+         0x10000160e <+1822>: leaq   -0x30(%rbp), %rsi
+         0x100001612 <+1826>: callq  0x100002400               ; swapValues #1 (inout Swift.Int, inout Swift.Int) -> () in _3_函数 at main.swift:142
+     */
     var num1 = 10
     var num2 = 20
     swapValues(&num1, &num2)
