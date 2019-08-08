@@ -367,9 +367,11 @@ do {
          rbp = 0x00007ffeefbfebd0
          */
         // 0x1000040a6 <+70>:  movq   %rax, -0x10(%rbp)
-        var s1 = Size(width: 10, height: 20)
+        var s1 = Size(width: 10, height: 20) // 0x00007ffeefbfebc0
+        print("s1", Mems.ptr(ofVal: &s1))
         // 0x1000040ad <+77>:  movq   %rax, -0x90(%rbp)
         var s2 = s1
+        print("s2", Mems.ptr(ofVal: &s2))
         /*
          0x100004109 <+169>: movq   -0x90(%rbp), %rax
          0x100004110 <+176>: movq   $0xb, 0x10(%rax)
@@ -398,6 +400,7 @@ do {
     var p = Point()
     print(class_getInstanceSize(type(of: p)))
     print(class_getInstanceSize(Point.self))
+    print(Mems.size(ofRef: p))
 }
 
 // MARK: - 引用类型的赋值操作
