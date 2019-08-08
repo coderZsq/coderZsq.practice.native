@@ -301,6 +301,16 @@ do {
      03 00 00 00 00 00 00 00
      00
      */
+    /*
+     0x100003216 <+9894>:  movq   $0x1, -0x150(%rbp)
+     0x100003221 <+9905>:  movq   $0x2, -0x148(%rbp)
+     0x10000322c <+9916>:  movq   $0x3, -0x140(%rbp)
+     0x100003237 <+9927>:  movb   $0x0, -0x138(%rbp)
+     */
+    /*
+     (lldb) register read rbp
+     rbp = 0x00007ffeefbff520
+     */
     var e = TestEnum.test1(1, 2, 3)
     print(Mems.ptr(ofVal: &e))
     print(Mems.memStr(ofVal: &e))
