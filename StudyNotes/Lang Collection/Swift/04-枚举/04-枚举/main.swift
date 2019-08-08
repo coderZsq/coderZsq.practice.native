@@ -373,6 +373,54 @@ do {
         case test5(Int, Int)
         case test6(Int, Int, Int, Bool)
     }
+    /*
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     C0 
+     */
+    var e = TestEnum.test0
+    print(Mems.ptr(ofVal: &e))
+    print(Mems.memStr(ofVal: &e))
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     C0
+     */
+    e = .test1
+    /*
+     02 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     C0
+     */
+    e = .test2
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00
+     */
+    e = .test4(1)
+    /*
+     02 00 00 00 00 00 00 00
+     03 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     40
+     */
+    e = .test5(2, 3)
+    /*
+     04 00 00 00 00 00 00 00
+     05 00 00 00 00 00 00 00
+     06 00 00 00 00 00 00 00
+     80
+     */
+    e = .test6(4, 5, 6, false)
+    
+    print(MemoryLayout<TestEnum>.size) // 25
+    print(MemoryLayout<TestEnum>.stride) // 32
+    print(MemoryLayout<TestEnum>.alignment) // 8
 }
 
 do {
@@ -384,6 +432,54 @@ do {
         case test5(Int, Int)
         case test6(Int, Bool, Int)
     }
+    /*
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     03
+     */
+    var e = TestEnum.test0
+    print(Mems.ptr(ofVal: &e))
+    print(Mems.memStr(ofVal: &e))
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     03
+     */
+    e = .test1
+    /*
+     02 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     03
+     */
+    e = .test2
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00
+     */
+    e = .test4(1)
+    /*
+     02 00 00 00 00 00 00 00
+     03 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     01
+     */
+    e = .test5(2, 3)
+    /*
+     04 00 00 00 00 00 00 00
+     01 00 00 00 00 00 00 00
+     05 00 00 00 00 00 00 00
+     02
+     */
+    e = .test6(4, true, 5)
+    
+    print(MemoryLayout<TestEnum>.size) // 25
+    print(MemoryLayout<TestEnum>.stride) // 32
+    print(MemoryLayout<TestEnum>.alignment) // 8
 }
 
 do {
@@ -395,4 +491,53 @@ do {
         case test5(Int, Int)
         case test6(Int, Int, Bool, Int)
     }
+    /*
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 C0
+     00 00 00 00 00 00 00 00
+     */
+    var e = TestEnum.test0
+    print(Mems.ptr(ofVal: &e))
+    print(Mems.memStr(ofVal: &e))
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 C0
+     00 00 00 00 00 00 00 00
+     */
+    e = .test1
+    /*
+     02 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 C0
+     00 00 00 00 00 00 00 00
+     */
+    e = .test2
+    /*
+     01 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 00
+     */
+    e = .test4(1)
+    /*
+     02 00 00 00 00 00 00 00
+     03 00 00 00 00 00 00 00
+     00 00 00 00 00 00 00 40
+     00 00 00 00 00 00 00 00
+     */
+    e = .test5(2, 3)
+    /*
+     04 00 00 00 00 00 00 00
+     05 00 00 00 00 00 00 00
+     01 00 00 00 00 00 00 80
+     06 00 00 00 00 00 00 00
+     */
+    e = .test6(4, 5, true, 6)
+    
+    print(MemoryLayout<TestEnum>.size) // 32
+    print(MemoryLayout<TestEnum>.stride) // 32
+    print(MemoryLayout<TestEnum>.alignment) // 8
+    
 }
