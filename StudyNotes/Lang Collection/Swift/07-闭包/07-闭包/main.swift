@@ -360,7 +360,17 @@ do {
 do {
     typealias Fn = (Int) -> (Int, Int)
     func getFns() -> (Fn, Fn) {
+        /*
+         0x10000519b <+43>:  callq  0x1000078a6               ; symbol stub for: swift_allocObject
+         (lldb) register read rax
+         rax = 0x00000001006000a0
+         */
         var num1 = 0
+        /*
+         0x1000051c6 <+86>:  callq  0x1000078a6               ; symbol stub for: swift_allocObject
+         (lldb) register read rax
+         rax = 0x0000000101910ca0
+         */
         var num2 = 0
         func plus(_ i: Int) -> (Int, Int) {
             num1 += i
