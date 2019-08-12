@@ -321,5 +321,12 @@ do {
             }
         }
     }
+    /*
+     Circle getRadius // oldValue
+     SubCircle willSetRadius 10
+     Circle setRadius 10
+     Circle getRadius
+     SubCircle didSetRadius 20 20
+     */
     SubCircle.radius = 10
 }
