@@ -241,3 +241,143 @@ do {
     print(person)
     debugPrint(person)
 }
+
+// MARK: - Any, AnyObject
+/*
+ Swift提供了2种特殊的类型: Any, AnyObject
+ Any: 可以代表任意类型 (枚举, 结构体, 类, 也包括函数类型)
+ AnyObject: 可以代表任意类类型 (在协议后面写上: AnyObject代表只有类能遵守这个协议)
+ 在协议后面写上: class也代表只有类能遵守这个协议
+ */
+
+do {
+    class Student {}
+    var stu: Any = 10
+    stu = "Jack"
+    stu = Student()
+    var data = [Any]()
+    data.append(1)
+    data.append(3.14)
+    data.append(Student())
+    data.append("Jack")
+    data.append({ 10 })
+}
+
+// MARK: - is, as?, as!, as
+// is用来判断是否为某种类型, as用来做强制类型转换
+
+protocol Runnable3 { func run() }
+
+do {
+    class Person {}
+    class Student: Person, Runnable3 {
+        func run() {
+            print("Student run")
+        }
+        func study() {
+            print("Student study")
+        }
+    }
+    var stu: Any = 10
+    print(stu is Int)
+    stu = "Jack"
+    print(stu is String)
+    stu = Student()
+    print(stu is Person)
+    print(stu is Student)
+    print(stu is Runnable3)
+    (stu as? Student)?.study()
+    stu = Student()
+    (stu as? Student)?.study()
+    (stu as! Student).study()
+    (stu as? Runnable3)?.run()
+    var data = [Any]()
+    data.append(Int("123") as Any)
+    var d = 10 as Double
+    print(d)
+}
+
+// MARK: - X.self, X.Type, AnyClass
+/*
+ X.self是一个元类型(metadata)的指针, metadata存放着类型相关信息
+ X.self属于X.Type类型
+ */
+
+do {
+    class Person {}
+    class Student: Person {}
+    var perType: Person.Type = Person.self
+    var stuType: Student.Type = Student.self
+    perType = Student.self
+    
+    var anyType: AnyObject.Type = Person.self
+    anyType = Student.self
+    
+    typealias AnyClass = AnyObject.Type
+    var anyType2: AnyClass = Person.self
+    anyType2 = Student.self
+    
+    var per = Person()
+    perType = type(of: per)
+    print(Person.self == type(of: per))
+}
+
+// MARK: - 元类型的应用
+
+do {
+    class Animal { required init() {} }
+    class Cat: Animal {}
+    class Dog: Animal {}
+    class Pig: Animal {}
+    
+    func create(_ clses: [Animal.Type]) -> [Animal] {
+        var arr = [Animal]()
+        for cls in clses {
+            arr.append(cls.init())
+        }
+        return arr
+    }
+    print(create([Cat.self, Dog.self, Pig.self]))
+}
+
+import Foundation
+do {
+    class Person {
+        var age: Int = 0
+    }
+    class Student: Person {
+        var no: Int = 0
+    }
+    print(class_getInstanceSize(Student.self))
+    print(class_getSuperclass(Student.self)!)
+    print(class_getSuperclass(Person.self)!)
+}
+
+// MARK: - Self
+
+do {
+    class Person {
+        var age = 1
+        static var count = 2
+        func run() {
+            print(self.age)
+            print(Self.count)
+        }
+    }
+}
+
+protocol Runnable4 {
+    func test() -> Self
+}
+
+do {
+    class Person: Runnable4 {
+        required init() {}
+        func test() -> Self { type(of: self).init() }
+    }
+    class Student: Person {}
+    var p = Person()
+    print(p.test())
+    var stu = Student()
+    print(stu.test())
+}
