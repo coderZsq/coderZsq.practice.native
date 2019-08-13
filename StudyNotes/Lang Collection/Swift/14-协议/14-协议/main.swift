@@ -306,6 +306,11 @@ do {
 do {
     class Person {}
     class Student: Person {}
+    /*
+     0x100002e61 <+5249>: callq  0x100006a20               ; type metadata accessor for Person #9 in _4_协议 at <compiler-generated>
+     (lldb) register read rax
+     rax = 0x000000010000dda0  type metadata for Person #9 in _4_协议
+     */
     var perType: Person.Type = Person.self
     var stuType: Student.Type = Student.self
     perType = Student.self
@@ -313,11 +318,22 @@ do {
     var anyType: AnyObject.Type = Person.self
     anyType = Student.self
     
-    typealias AnyClass = AnyObject.Type
+//    typealias AnyClass = AnyObject.Type
     var anyType2: AnyClass = Person.self
     anyType2 = Student.self
     
+    /*
+     (lldb) register read rax
+          rax = 0x0000000100506e70
+     (lldb) x/4xg 0x0000000100506e70
+     0x100506e70: 0x000000010000dda0 0x0000000000000002
+     0x100506e80: 0x75636f44534e5b2d 0x4d6e6f4e746e656d
+     */
     var per = Person()
+    /*
+     0x100002f9d <+5357>: movq   (%rax), %rax
+     0x100002fa0 <+5360>: movq   %rax, -0x3a0(%rbp)
+     */
     perType = type(of: per)
     print(Person.self == type(of: per))
 }
