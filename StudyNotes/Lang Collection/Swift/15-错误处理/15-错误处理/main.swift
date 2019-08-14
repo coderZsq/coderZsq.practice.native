@@ -146,14 +146,23 @@ do {
 }
 
 do {
-//    func processFile(_ filename: String) throws {
-//        let file = open(filename)
-//        defer {
-//            close(file)
-//        }
+    func open(_ filename: String) -> Int {
+        print("open")
+        return 0
+    }
+    
+    func close(_ file: Int) {
+        print("close")
+    }
+    
+    func processFile(_ filename: String) throws {
+        let file = open(filename)
+        defer {
+            close(file)
+        }
 //        try divide(20, 0)
-//    }
-//    try processFile("test.txt")
+    }
+    try processFile("test.txt")
 }
 
 // MARK: - assert (断言)

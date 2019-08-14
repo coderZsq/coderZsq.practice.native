@@ -338,6 +338,30 @@ do {
     print(Person.self == type(of: per))
 }
 
+do {
+    class Perosn {
+        static var age = 0
+        static func run() {}
+    }
+    Perosn.age = 10
+    Perosn.run()
+    
+    Perosn.self.age = 10
+    Perosn.self.run()
+    
+    var p0 = Perosn()
+    var p1 = Perosn.self()
+    var p2 = Perosn.init()
+    var p3 = Perosn.self.init()
+    
+    var pType1 = Perosn.self
+    
+    func test(_ cls: AnyClass) {
+        
+    }
+    test(Perosn.self)
+}
+
 // MARK: - 元类型的应用
 
 do {
