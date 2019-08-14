@@ -203,3 +203,24 @@ do {
      */
     print(Mems.memStr(ofVal: &str2))
 }
+
+// MARK: - 关于Array的思考
+
+do {
+    var arr = [1, 2, 3, 4]
+    /*
+     0x00007ffeefbff460
+     (lldb) x/1xg 0x00007ffeefbff460
+     0x7ffeefbff460: 0x000000010217bde0
+     (lldb) x/10xg 0x000000010217bde0
+     0x10217bde0: 0x00007fff942c6e78 0x0000000000000002
+     0x10217bdf0: 0x0000000000000004 0x0000000000000008
+     0x10217be00: 0x0000000000000001 0x0000000000000002
+     0x10217be10: 0x0000000000000003 0x0000000000000004
+     0x10217be20: 0x000000004d55545a 0x000020a000000000
+     */
+    print(Mems.ptr(ofVal: &arr))
+    print(Mems.memStr(ofRef: arr))
+    print(MemoryLayout.stride(ofValue: arr))
+    print(MemoryLayout<Array<Int>>.stride)
+}
