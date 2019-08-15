@@ -83,6 +83,43 @@ do {
     print(p1 != p2)
 }
 
+class Person: Equatable {
+    var age: Int
+    init(age: Int) {
+        self.age = age
+    }
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        lhs.age == rhs.age
+    }
+}
+
+do {
+    var p1 = Person(age: 10)
+    var p2 = Person(age: 11)
+    print(p1 == p2)
+    print(p1 != p2)
+}
+
+do {
+    enum Answer: String {
+        case wrong
+        case right
+    }
+    var s1 = Answer.wrong
+    var s2 = Answer.right
+    print(s1 == s2)
+}
+
+do {
+    enum Answer: Equatable {
+        case wrong(Int)
+        case right
+    }
+    var s1 = Answer.wrong(10)
+    var s2 = Answer.right
+    print(s1 == s2)
+}
+
 // MARK: - Comparable
 
 struct Student: Comparable {
