@@ -99,10 +99,29 @@ do {
  */
 
 protocol TestProtocol {
+    func test()
+}
+
+class TestClass {
+    func test() {
+        print("test")
+    }
+}
+extension TestClass: TestProtocol {}
+
+func isOdd<T: BinaryInteger>(_ i: T) -> Bool {
+    i % 2 != 0
+}
+
+extension BinaryInteger {
+    func isOdd() -> Bool { self % 2 != 0 }
+}
+
+protocol TestProtocol2 {
     func test1()
 }
 
-extension TestProtocol {
+extension TestProtocol2 {
     func test1() {
         print("TestProtocol test1")
     }
@@ -111,13 +130,17 @@ extension TestProtocol {
     }
 }
 
-class TestClass: TestProtocol {}
-var cls = TestClass()
+class TestClass2: TestProtocol2 {
+    func test1() { print("TestClass test1") }
+    func test2() { print("TestClass test2") }
+}
+
+var cls = TestClass2()
 cls.test1()
 cls.test2()
-var cls2: TestProtocol = TestClass()
-cls.test1()
-cls.test2()
+var cls2: TestProtocol2 = TestClass2()
+cls2.test1()
+cls2.test2()
 
 // MARK: - 泛型
 
