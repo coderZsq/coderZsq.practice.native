@@ -254,9 +254,11 @@ do {
 //    Inout arguments are not allowed to alias each other
 //    oscar.shareHealth(with: &oscar)
     
+    // 全局作用域 会内存访问冲突
     var tulpe = (health: 10, energy: 20)
     balance(&tulpe.health, &tulpe.energy)
 
+    // 全局作用域 会内存访问冲突
     var holly = Player(name: "Holly", health: 10, energy: 10)
     balance(&holly.health, &holly.energy)
     
