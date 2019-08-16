@@ -148,6 +148,50 @@ class Person8 {
     }
 }
 
+// MARK: - 初始化器
+/*
+ 如果一个 public 类想在另一个模块调用编译生成的默认无参初始化器, 必须显式提供 public 的无参初始化器
+ 因为 public 类的初始化器是 internal 级别
+ 
+ required 初始化器 >= 它的默认访问级别
+ 
+ 如果结构体有 private/fileprivate 的存储实例属性, 那么它的成员初始化器也是 private/fileprivate
+ 否则默认就是 internal
+ */
+
+// xxx.dylib
+public class Person9 {
+    public init() { // 默认为 internal
+        
+    }
+}
+
+do {
+    var p = Person9()
+}
+
+struct Point {
+    fileprivate var x = 0
+    var y = 0
+}
+
+do {
+    var p = Point(x: 10, y: 20)
+}
+
+// MARK: - 枚举类型的case
+/*
+ 不能给 enum 的每个 case 单独设置访问级别
+ 
+ 每个 case 自动接收 enum 的访问级别
+ public enum 定义的 case 也是 public
+ */
+
+public enum Season {
+    case spring // public
+    case summer, autumn, winter // public
+}
+
 // MARK: - 协议
 /*
  协议中定义的要求自动接收协议的访问级别, 不能单独设置访问级别
@@ -158,10 +202,10 @@ class Person8 {
  */
 
 public protocol Runnable {
-    func run()
+    func run() // public
 }
 
-public class Person9: Runnable {
+public class Person10: Runnable {
 //    Method 'run()' must be declared public because it matches a requirement in public protocol 'Runnable'
 //    func run() {}
     public func run() {}
@@ -182,22 +226,40 @@ public class Person9: Runnable {
  在扩展中声明一个私有成员, 可以在同一文件的其他扩展中, 原本声明中访问它
  */
 
-public class Person10 {
+public class Person11 {
     private func run0() {}
     private func eat0() {
         run1()
     }
 }
 
-extension Person10 {
+extension Person11 {
     private func run1() {}
     private func eat1() {
         run0()
     }
 }
 
-extension Person10 {
+extension Person11 {
     private func eat2() {
         run1()
     }
+}
+
+// MARK: - 将方法赋值给var\let
+
+do {
+    struct Person {
+        var age: Int
+        func run(_ v: Int) { print("func run", age, v) }
+        static func run(_ v: Int) { print("static func run", v) }
+    }
+    let fn1 = Person.run
+    fn1(10)
+    
+    let fn2: (Int) -> () = Person.run
+    fn2(20)
+    
+    let fn3: (Person) -> ((Int) -> ()) = Person.run
+    fn3(Person(age: 18))(30)
 }
