@@ -78,20 +78,22 @@ do {
 // 枚举Case模式 (Enumeration Case Pattern)
 
 do {
-    let age = 2
-    if age >= 0 && age <= 9 {
+    {
+        let age = 2
+        if age >= 0 && age <= 9 {
+            print("[0, 9]")
+        }
+        if case 0...9 = age {
+            print("[0, 9]")
+        }
+        guard case 0...9 = age else { return }
         print("[0, 9]")
-    }
-    if case 0...9 = age {
-        print("[0, 9]")
-    }
-    //    guard case 0...9 = age else { return }
-    print("[0, 9]")
-    
-    switch age {
-    case 0...9: print("[0, 9]")
-    default: break
-    }
+        
+        switch age {
+        case 0...9: print("[0, 9]")
+        default: break
+        }
+    }()
 }
 
 do {
@@ -265,9 +267,9 @@ prefix operator ~>
 prefix operator ~>=
 prefix operator ~<
 prefix operator ~<=
-prefix func ~>(_ i: Int) -> ((Int) -> Bool) { { $0 > i} }
-prefix func ~>=(_ i: Int) -> ((Int) -> Bool) { { $0 >= i} }
-prefix func ~<(_ i: Int) -> ((Int) -> Bool) { { $0 < i} }
+prefix func ~>(_ i: Int) -> ((Int) -> Bool) { { $0 > i } }
+prefix func ~>=(_ i: Int) -> ((Int) -> Bool) { { $0 >= i } }
+prefix func ~<(_ i: Int) -> ((Int) -> Bool) { { $0 < i } }
 prefix func ~<=(_ i: Int) -> ((Int) -> Bool) { { $0 <= i} }
 
 do {
