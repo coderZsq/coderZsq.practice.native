@@ -122,7 +122,7 @@ import UIKit
 
 do {
     class SQApplication: UIApplication {}
-    
+
     UIApplicationMain(CommandLine.argc,
                       CommandLine.unsafeArgv,
                       NSStringFromClass(SQApplication.self),
@@ -261,7 +261,6 @@ do {
     """
 }
 
-
 do {
     let str = """
     Escaping the first quoto \"""
@@ -279,7 +278,6 @@ do {
         4
     """
 }
-
 
 // MARK: - String与NSString
 
@@ -342,4 +340,217 @@ do {
      0x103db117e <+814>:  callq  0x103db3780               ; test2() -> () in Dog #1 in _4_从OC到Swift at main.swift:14
      */
     d.test2()
+}
+
+// MARK: - KVC/KVO
+/*
+ 属性所在的类, 监听器最终继承自NSObject
+ 用@objc dyanmic修饰对应的属性
+ */
+
+do {
+    class Observer: NSObject {
+        override func observeValue(forKeyPath keyPath: String?,
+                                         of object: Any?,
+                                         change: [NSKeyValueChangeKey : Any]?,
+                                         context: UnsafeMutableRawPointer?) {
+            print("observeValue", change?[.newKey] as Any)
+        }
+    }
+    class Person: NSObject {
+        @objc dynamic var age: Int = 0
+        var observer: Observer = Observer()
+        override init() {
+            super.init()
+            self.addObserver(observer,
+                             forKeyPath: "age",
+                             options: .new,
+                             context: nil)
+        }
+        deinit {
+            self.removeObserver(observer,
+                                forKeyPath: "age")
+        }
+    }
+    var p = Person()
+    p.age = 20
+    p.setValue(25, forKey: "age")
+}
+
+// MARK: - block方式的KVO
+
+do {
+    class Observer: NSObject {
+        override func observeValue(forKeyPath keyPath: String?,
+                                         of object: Any?,
+                                         change: [NSKeyValueChangeKey : Any]?,
+                                         context: UnsafeMutableRawPointer?) {
+            print("observeValue", change?[.newKey] as Any)
+        }
+    }
+    class Person: NSObject {
+        @objc dynamic var age: Int = 0
+        var observation: NSKeyValueObservation?
+        override init() {
+            super.init()
+            observation = observe(\Person.age, options: .new) {
+                (person, change) in
+                print(change.newValue as Any)
+            }
+        }
+    }
+    var p = Person()
+    p.age = 20
+    p.setValue(25, forKey: "age")
+}
+
+
+
+// MARK: - 关联对象 (Associated Object)
+/*
+ 默认情况, extension不可以增加存储属性
+ 借助关联对象, 可以实现类似extension为class增加存储属性的效果
+ */
+
+class Person {}
+extension Person {
+    private static var AGE_KEY: Void?
+    var age: Int {
+        get {
+            (objc_getAssociatedObject(self, &Self.AGE_KEY) as? Int) ?? 0
+        }
+        set {
+            objc_setAssociatedObject(self,
+                                     &Self.AGE_KEY,
+                                     newValue,
+                                     .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
+}
+
+do {
+    var p = Person()
+    print(p.age)
+    p.age = 10
+    print(p.age)
+}
+
+// MARK: - 多线程开发 - 异步
+
+class Async {
+    public typealias Task = () -> Void
+    public static func async(_ task: @escaping Task) {
+        _async(task)
+    }
+    public static func asynv(_ task: @escaping Task,
+                      _ mainTask: @escaping Task) {
+        _async(task, mainTask)
+    }
+    private static func _async(_ task: @escaping Task,
+                               _ mainTask: Task? = nil) {
+        let item = DispatchWorkItem(block: task)
+        DispatchQueue.global().async(execute: item)
+        if let main = mainTask {
+            item.notify(queue: DispatchQueue.main, execute: main)
+        }
+    }
+}
+
+// MARK: - 多线程开发 - 延迟
+
+extension Async {
+    @discardableResult
+    public static func delay(_ seconds: Double,
+                             _ block: @escaping Task) -> DispatchWorkItem {
+        let item = DispatchWorkItem(block: block)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds,
+                                      execute: item)
+        return item
+    }
+}
+
+// MARK: - 多线程开发 - 异步延迟
+
+extension Async {
+    @discardableResult
+    public static func asyncDelay(_ seconds: Double,
+                                  _ task: @escaping Task) -> DispatchWorkItem {
+        return _asyncDelay(seconds, task)
+    }
+    @discardableResult
+    public static func asyncDelay(_ seconds: Double,
+                                  _ task: @escaping Task,
+                                  _ mainTask: @escaping Task) -> DispatchWorkItem {
+        return _asyncDelay(seconds, task, mainTask)
+    }
+    private static func _asyncDelay(_ seconds: Double,
+                                    _ task: @escaping Task,
+                                    _ mainTask: Task? = nil) -> DispatchWorkItem {
+        let item = DispatchWorkItem(block: task)
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + seconds,
+                                          execute: item)
+        if let main = mainTask {
+            item.notify(queue: DispatchQueue.main, execute: main)
+        }
+        return item
+    }
+}
+
+// MARK: - 多线程开发 - once
+/*
+ dispatch_once在Swift中已被废弃, 取而代之
+ 可以用类型属性或者全局变量\常量
+ 默认自带lazy + dispatch_once 效果
+ */
+
+fileprivate let initTask2: Void = {
+   print("initTask2-----------")
+}()
+
+do {
+    class ViewController2: UIViewController {
+        static let initTask1: Void = {
+            print("initTask1------------")
+        }()
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            let _ = Self.initTask1
+            let _ = initTask2
+        }
+    }
+}
+
+// MARK: - 多线程开发 - 加锁
+
+do {
+    class Cache {
+        private static var data = [String: Any]()
+        private static var lock = DispatchSemaphore(value: 1)
+        static func set(_ key: String, _ value: Any) {
+            lock.wait()
+            defer { lock.signal() }
+            data[key] = value
+        }
+    }
+}
+
+do {
+    class Cache {
+        private static var lock = NSLock()
+        static func set(_ key: String, _ value: Any) {
+            lock.lock()
+            defer { lock.unlock() }
+        }
+    }
+}
+
+do {
+    class Cache {
+        private static var lock = NSRecursiveLock()
+        static func set(_ key: String, _ value: Any) {
+            lock.lock()
+            defer { lock.unlock() }
+        }
+    }
 }
