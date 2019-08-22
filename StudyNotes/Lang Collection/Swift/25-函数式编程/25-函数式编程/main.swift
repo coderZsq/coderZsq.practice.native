@@ -131,3 +131,81 @@ do {
     var p1 = json != nil ? Person(json!) : nil
     var p2 = json.flatMap(Person.init)
 }
+
+// MARK: - FP实践 - 传统写法
+
+do {
+    // 假设要实现以下功能: [(num + 3) * 5 - 1] % 10 / 2
+    var num = 1
+    func add(_ v1: Int, _ v2: Int) -> Int { v1 + v2 }
+    func sub(_ v1: Int, _ v2: Int) -> Int { v1 - v2 }
+    func multipe(_ v1: Int, _ v2: Int) -> Int { v1 * v2 }
+    func divide(_ v1: Int, _ v2: Int) -> Int { v1 / v2 }
+    func mod(_ v1: Int, _ v2: Int) -> Int { v1 % v2 }
+    print(divide(mod(sub(multipe(add(num, 3), 5), 1), 10), 2))
+}
+
+// MARK: - FP实践 - 函数式写法
+
+infix operator >>>: AdditionPrecedence
+func >>><A, B, C>(_ f1: @escaping (A) -> B,
+                  _ f2: @escaping (B) -> C) -> (A) -> C { { f2(f1($0)) } }
+
+do {
+    var num = 1
+    func add(_ v: Int) -> (Int) -> Int { { $0 + v } }
+    func sub(_ v: Int) -> (Int) -> Int { { $0 - v } }
+    func multiple(_ v: Int) -> (Int) -> Int { { $0 * v } }
+    func divide(_ v: Int) -> (Int) -> Int { { $0 / v } }
+    func mod(_ v: Int) -> (Int) -> Int { { $0 % v } }
+    
+    var fn = add(3) >>> multiple(5) >>> sub(1) >>> mod(10) >>> divide(2)
+    print(fn(num))
+}
+    
+// MARK: - 柯里化 (Currying)
+// 将一个接受多参数的函数变换为一系列只接受单个参数的函数
+
+do {
+    func add(_ v1: Int, _ v2: Int) -> Int { v1 + v2 }
+    add(10, 20)
+}
+
+do {
+    func add(_ v: Int) -> (Int) -> Int { { $0 + v } }
+    add(10)(20)
+}
+
+do {
+    func add1(_ v1: Int, _ v2: Int) -> Int { v1 + v2 }
+    func currying<A, B, C>(_ fn: @escaping (A, B) -> C)
+        -> (B) -> (A) -> C {
+        { b in { a in fn(a, b) } }
+    }
+    let curriedAdd1 = currying(add1)
+    print(curriedAdd1(10)(20))
+}
+
+do {
+    func add2(_ v1: Int, _ v2: Int, _ v3: Int) { v1 + v2 + v3 }
+    func currying<A, B, C, D>(_ fn: @escaping (A, B, C) -> D)
+        -> (C) -> (B) -> (A) -> D {
+        { c in { b in { a in fn(a, b, c) } } }
+    }
+    let curriedAdd2 = currying(add2)
+    print(curriedAdd2(10)(20)(30))
+}
+
+prefix func ~<A, B, C>(_ fn: @escaping (A, B) -> C) -> (B) -> (A) -> C { { b in { a in fn(a, b) } } }
+
+do {
+    func add(_ v1: Int, _ v2: Int) -> Int { v1 + v2 }
+    func sub(_ v1: Int, _ v2: Int) -> Int { v1 - v2 }
+    func multiple(_ v1: Int, _ v2: Int) -> Int { v1 * v2 }
+    func divide(_ v1: Int, _ v2: Int) -> Int { v1 / v2 }
+    func mod(_ v1: Int, _ v2: Int) -> Int { v1 % v2 }
+    
+    var num = 1
+    var fn = (~add)(3) >>> (~multiple)(5) >>> (~sub)(1) >>> (~mod)(10) >>> (~divide)(2)
+    print(fn(num))
+}
