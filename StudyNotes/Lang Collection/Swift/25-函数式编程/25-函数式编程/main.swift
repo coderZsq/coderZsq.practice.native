@@ -209,3 +209,52 @@ do {
     var fn = (~add)(3) >>> (~multiple)(5) >>> (~sub)(1) >>> (~mod)(10) >>> (~divide)(2)
     print(fn(num))
 }
+
+// MARK: - 函子 (Functor)
+// 像Array, Optional这样支持map运算的类型, 称为函子 (Functor)
+
+do {
+//    @inlinable public func map<T>(_ transform: (Element) throws -> T) rethrows -> [T]
+
+//    @inlinable public func map<U>(_ transform: (Wrapped) throws -> U) rethrows -> U?
+}
+
+// MARK: - 适用函子 (Applicative Functor)
+// 对任意一个函子F, 如果能支持以下运算, 该函子就是一个适用函子
+
+do {
+//    func pure<A>(_ value: A) -> F<A>
+//    func <*><A, B>(fn: F<(A) -> B>, value: F<A>) -> F<B>
+}
+
+infix operator <*>: AdditionPrecedence
+
+// Optional可以成为适用函子
+
+func pure<A>(_ value: A) -> A? { value }
+func <*><A, B>(fn: ((A) -> B)?, value: A?) -> B? {
+    guard let f = fn, let v = value else { return nil }
+    return f(v)
+}
+
+// Array 可以成为适用函子
+
+func pure<A>(_ value: A) -> [A] { [value] }
+func <*><A, B>(fn: [((A) -> B)], value: [A]) -> [B] {
+    var arr: [B] = []
+    if fn.count == value.count {
+        for i in fn.startIndex..<fn.endIndex {
+            arr.append(fn[i](value[i]))
+        }
+    }
+    return arr
+}
+
+// MARK: - 单子 (Monad)
+// 对任意一个类型F, 如果能支持以下运算, 那么久可以称为是一个单子(Monad)
+// 很显然, Array, Optional都是单子
+
+do {
+//    func pure<A>(_ value: A) -> F<A>
+//    func flatMap<A, B>(_ value: F<A>, _ fn: (A) -> F<B>) -> F<B>
+}
