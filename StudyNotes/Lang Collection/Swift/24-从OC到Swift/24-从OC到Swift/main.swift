@@ -11,6 +11,7 @@
 do {
     func test() {
         // TODO: 未完成
+        #warning("undo")
     }
     
     func test2() {
@@ -148,6 +149,7 @@ do {
     print(sum(10, 20))
 }
 
+func sum(_ v1: Int, _ v2: Int) -> Int { v1 - v2 }
 @_silgen_name("sum") func swift_sum(_ v1: Int32, _ v2:Int32) -> Int32
 
 do {
@@ -285,6 +287,9 @@ do {
     var str1: String = "jack"
     var str2: NSString = "rose"
     
+    /*
+    0x10298d5f5 <+8869>:  callq  0x102995098               ; symbol stub for: (extension in Foundation):Swift.String._bridgeToObjectiveC() -> __C.NSString
+     */
     var str3 = str1 as NSString
     var str4 = str2 as String
     

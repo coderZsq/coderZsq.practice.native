@@ -49,14 +49,20 @@ class ViewController: UIViewController {
             let img = UIImage(named: "logo")
             let btn = UIButton(type: .custom)
             btn.setTitle("添加", for: .normal)
+            #if targetEnvironment(simulator)
+            #else
             performSegue(withIdentifier: "login_main", sender: self)
+            #endif
         }
         
         do {
             let img = UIImage(R.image.logo)
             let btn = UIButton(type: .custom)
             btn.setTitle(R.string.add, for: .normal)
+            #if targetEnvironment(simulator)
+            #else
             performSegue(withIdentifier: R.segue.login_main, sender: self)
+            #endif
         }
         
         // MARK: - 资源名管理的其他思路

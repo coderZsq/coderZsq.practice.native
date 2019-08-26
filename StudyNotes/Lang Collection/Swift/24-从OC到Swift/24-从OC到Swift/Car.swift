@@ -20,6 +20,15 @@ import Foundation
  可以通过@objc重命名Swift暴露给OC的符号名(类名, 属性名, 函数名等)
  */
 
+/*
+ 1. 为什么Swift暴露给OC的类最终要继承自NSObject
+    objc_msgSend()
+ 2. p.run()底层是怎么调用的? 反过来, OC调用Swift底层又是如何调用?
+    objc_msgSend()
+ 3. car.run()底层是怎么调用的?
+    call *
+ */
+
 @objc(SQCar)
 @objcMembers class Car: NSObject {
     var price: Double
