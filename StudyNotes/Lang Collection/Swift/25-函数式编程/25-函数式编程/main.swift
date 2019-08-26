@@ -147,6 +147,11 @@ do {
 
 // MARK: - FP实践 - 函数式写法
 
+func composite(_ f1: @escaping (Int) -> Int,
+               _ f2: @escaping (Int) -> Int) -> (Int) -> Int {
+    return { f2(f1($0)) }
+}
+
 infix operator >>>: AdditionPrecedence
 func >>><A, B, C>(_ f1: @escaping (A) -> B,
                   _ f2: @escaping (B) -> C) -> (A) -> C { { f2(f1($0)) } }
@@ -188,6 +193,13 @@ do {
 
 do {
     func add2(_ v1: Int, _ v2: Int, _ v3: Int) { v1 + v2 + v3 }
+    func add2(_ v3: Int) -> (Int) -> (Int) -> Int {
+        return { v2 in
+            return { v1 in
+                return v1 + v2 + v3
+            }
+        }
+    }
     func currying<A, B, C, D>(_ fn: @escaping (A, B, C) -> D)
         -> (C) -> (B) -> (A) -> D {
         { c in { b in { a in fn(a, b, c) } } }
@@ -214,8 +226,9 @@ do {
 // 像Array, Optional这样支持map运算的类型, 称为函子 (Functor)
 
 do {
+//    func map<T>(_ fn: (Inner) -> T) -> Type<T>
+    
 //    @inlinable public func map<T>(_ transform: (Element) throws -> T) rethrows -> [T]
-
 //    @inlinable public func map<U>(_ transform: (Wrapped) throws -> U) rethrows -> U?
 }
 
@@ -231,15 +244,20 @@ infix operator <*>: AdditionPrecedence
 
 // Optional可以成为适用函子
 
-func pure<A>(_ value: A) -> A? { value }
 func <*><A, B>(fn: ((A) -> B)?, value: A?) -> B? {
     guard let f = fn, let v = value else { return nil }
     return f(v)
 }
 
+do {
+    func pure<A>(_ value: A) -> A? { value }
+    var value: Int? = 10
+    var fn: ((Int) -> Int)? = { $0 * 2 }
+    print(fn <*> value as Any)
+}
+
 // Array 可以成为适用函子
 
-func pure<A>(_ value: A) -> [A] { [value] }
 func <*><A, B>(fn: [((A) -> B)], value: [A]) -> [B] {
     var arr: [B] = []
     if fn.count == value.count {
@@ -250,6 +268,13 @@ func <*><A, B>(fn: [((A) -> B)], value: [A]) -> [B] {
     return arr
 }
 
+do {
+    func pure<A>(_ value: A) -> [A] { [value] }
+    print(pure(10))
+    var arr = [{ $0 * 2 }, { $0 + 10 }, { $0 - 5 }] <*> [1, 2, 3]
+    print(arr)
+}
+
 // MARK: - 单子 (Monad)
 // 对任意一个类型F, 如果能支持以下运算, 那么久可以称为是一个单子(Monad)
 // 很显然, Array, Optional都是单子
@@ -257,4 +282,7 @@ func <*><A, B>(fn: [((A) -> B)], value: [A]) -> [B] {
 do {
 //    func pure<A>(_ value: A) -> F<A>
 //    func flatMap<A, B>(_ value: F<A>, _ fn: (A) -> F<B>) -> F<B>
+    
+//    @inlinable public func flatMap<SegmentOfResult>(_ transform: (Element) throws -> SegmentOfResult) rethrows -> [SegmentOfResult.Element] where SegmentOfResult : Sequence
+//    @inlinable public func flatMap<U>(_ transform: (Wrapped) throws -> U?) rethrows -> U?
 }
