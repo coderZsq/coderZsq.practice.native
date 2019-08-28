@@ -7,8 +7,9 @@
 
 - **Lang Collection**
 	- **Assembly:** In-depth study with **8086** & **AT&T** & **ARM64**. 
-	- **C++:** In-depth study with **C++** grammar using **assembly**.
-	- **Objective-C:** In-depth study with **Objective-C** using **C++**.
+	- **C++:** In-depth study with **C++** grammar using **Assembly**.
+	- **Objective-C:** In-depth study with **Objective-C** grammar using **C++**.
+	- **Swift:** In-depth study with **Swift** grammar using **Assembly**.
 
 - **Swift Collection**
 	- **ObjC.io:** **Advanced** Swift books learning.

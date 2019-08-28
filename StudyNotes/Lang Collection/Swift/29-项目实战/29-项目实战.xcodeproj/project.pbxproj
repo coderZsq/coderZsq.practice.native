@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144F86DA2316255C00F897D4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86D92316255C00F897D4 /* API.swift */; };
+		144F86DE231627AA00F897D4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86DB231627A900F897D4 /* Item.swift */; };
+		144F86DF231627AA00F897D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86DC231627A900F897D4 /* User.swift */; };
+		144F86E0231627AA00F897D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86DD231627AA00F897D4 /* Comment.swift */; };
+		144F86ED2316506D00F897D4 /* _9_____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86EC2316506D00F897D4 /* _9_____Tests.swift */; };
 		148854C52315261300B99D1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854C42315261300B99D1E /* AppDelegate.swift */; };
 		148854C72315261300B99D1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854C62315261300B99D1E /* SceneDelegate.swift */; };
-		148854C92315261300B99D1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854C82315261300B99D1E /* ViewController.swift */; };
 		148854CC2315261300B99D1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148854CA2315261300B99D1E /* Main.storyboard */; };
 		148854CE2315261400B99D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148854CD2315261400B99D1E /* Assets.xcassets */; };
 		148854D12315261400B99D1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148854CF2315261400B99D1E /* LaunchScreen.storyboard */; };
@@ -18,13 +22,32 @@
 		148854E02315286000B99D1E /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854DF2315286000B99D1E /* TrendViewController.swift */; };
 		148854E32315287700B99D1E /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854E22315287700B99D1E /* LiveViewController.swift */; };
 		148854E623152ADD00B99D1E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148854E523152ADD00B99D1E /* TabBar.swift */; };
+		14E183F72316515C0078C3DC /* MathTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144F86E42316501E00F897D4 /* MathTool.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		144F86EF2316506D00F897D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 148854B92315261300B99D1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 148854C02315261300B99D1E;
+			remoteInfo = "29-项目实战";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		144F86D92316255C00F897D4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		144F86DB231627A900F897D4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		144F86DC231627A900F897D4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		144F86DD231627AA00F897D4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		144F86E123164E1800F897D4 /* 29-项目实战-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "29-项目实战-Bridging-Header.h"; sourceTree = "<group>"; };
+		144F86E42316501E00F897D4 /* MathTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTool.swift; sourceTree = "<group>"; };
+		144F86EA2316506D00F897D4 /* 29-项目实战Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "29-项目实战Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		144F86EC2316506D00F897D4 /* _9_____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_9_____Tests.swift"; sourceTree = "<group>"; };
+		144F86EE2316506D00F897D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148854C12315261300B99D1E /* 29-项目实战.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29-项目实战.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		148854C42315261300B99D1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		148854C62315261300B99D1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		148854C82315261300B99D1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		148854CB2315261300B99D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148854CD2315261400B99D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148854D02315261400B99D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +62,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		144F86E72316506D00F897D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148854BE2315261300B99D1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144F86EB2316506D00F897D4 /* 29-项目实战Tests */ = {
+			isa = PBXGroup;
+			children = (
+				144F86E42316501E00F897D4 /* MathTool.swift */,
+				144F86EC2316506D00F897D4 /* _9_____Tests.swift */,
+				144F86EE2316506D00F897D4 /* Info.plist */,
+			);
+			path = "29-项目实战Tests";
+			sourceTree = "<group>";
+		};
 		148854B82315261300B99D1E = {
 			isa = PBXGroup;
 			children = (
 				148854C32315261300B99D1E /* 29-项目实战 */,
+				144F86EB2316506D00F897D4 /* 29-项目实战Tests */,
 				148854C22315261300B99D1E /* Products */,
 				8A870D7AB64131BA26228299 /* Pods */,
 				510CE766DAD945A8EE99FAB5 /* Frameworks */,
@@ -63,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				148854C12315261300B99D1E /* 29-项目实战.app */,
+				144F86EA2316506D00F897D4 /* 29-项目实战Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,7 +117,7 @@
 				148854E42315287C00B99D1E /* Live */,
 				148854D92315275100B99D1E /* Main */,
 				148854D82315266D00B99D1E /* Resource */,
-				148854C82315261300B99D1E /* ViewController.swift */,
+				144F86E123164E1800F897D4 /* 29-项目实战-Bridging-Header.h */,
 			);
 			path = "29-项目实战";
 			sourceTree = "<group>";
@@ -98,6 +140,7 @@
 				148854C62315261300B99D1E /* SceneDelegate.swift */,
 				148854DA231527AF00B99D1E /* TabBarViewController.swift */,
 				148854E523152ADD00B99D1E /* TabBar.swift */,
+				144F86D92316255C00F897D4 /* API.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -106,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				148854DC2315280800B99D1E /* HomeViewController.swift */,
+				144F86DD231627AA00F897D4 /* Comment.swift */,
+				144F86DB231627A900F897D4 /* Item.swift */,
+				144F86DC231627A900F897D4 /* User.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -145,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		144F86E92316506D00F897D4 /* 29-项目实战Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F86F12316506D00F897D4 /* Build configuration list for PBXNativeTarget "29-项目实战Tests" */;
+			buildPhases = (
+				144F86E62316506D00F897D4 /* Sources */,
+				144F86E72316506D00F897D4 /* Frameworks */,
+				144F86E82316506D00F897D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				144F86F02316506D00F897D4 /* PBXTargetDependency */,
+			);
+			name = "29-项目实战Tests";
+			productName = "29-项目实战Tests";
+			productReference = 144F86EA2316506D00F897D4 /* 29-项目实战Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		148854C02315261300B99D1E /* 29-项目实战 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148854D52315261400B99D1E /* Build configuration list for PBXNativeTarget "29-项目实战" */;
@@ -174,8 +238,13 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Castie!";
 				TargetAttributes = {
+					144F86E92316506D00F897D4 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 148854C02315261300B99D1E;
+					};
 					148854C02315261300B99D1E = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -193,11 +262,19 @@
 			projectRoot = "";
 			targets = (
 				148854C02315261300B99D1E /* 29-项目实战 */,
+				144F86E92316506D00F897D4 /* 29-项目实战Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		144F86E82316506D00F897D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148854BF2315261300B99D1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,22 +347,42 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		144F86E62316506D00F897D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144F86ED2316506D00F897D4 /* _9_____Tests.swift in Sources */,
+				14E183F72316515C0078C3DC /* MathTool.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148854BD2315261300B99D1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				148854DD2315280800B99D1E /* HomeViewController.swift in Sources */,
+				144F86DE231627AA00F897D4 /* Item.swift in Sources */,
 				148854DB231527AF00B99D1E /* TabBarViewController.swift in Sources */,
 				148854E32315287700B99D1E /* LiveViewController.swift in Sources */,
 				148854E623152ADD00B99D1E /* TabBar.swift in Sources */,
-				148854C92315261300B99D1E /* ViewController.swift in Sources */,
 				148854C52315261300B99D1E /* AppDelegate.swift in Sources */,
 				148854E02315286000B99D1E /* TrendViewController.swift in Sources */,
+				144F86DA2316255C00F897D4 /* API.swift in Sources */,
+				144F86DF231627AA00F897D4 /* User.swift in Sources */,
+				144F86E0231627AA00F897D4 /* Comment.swift in Sources */,
 				148854C72315261300B99D1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		144F86F02316506D00F897D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 148854C02315261300B99D1E /* 29-项目实战 */;
+			targetProxy = 144F86EF2316506D00F897D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		148854CA2315261300B99D1E /* Main.storyboard */ = {
@@ -307,6 +404,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		144F86F22316506D00F897D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
+				INFOPLIST_FILE = "29-项目实战Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-9-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/29-项目实战.app/29-项目实战";
+			};
+			name = Debug;
+		};
+		144F86F32316506D00F897D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMZP26248F;
+				INFOPLIST_FILE = "29-项目实战Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-9-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/29-项目实战.app/29-项目实战";
+			};
+			name = Release;
+		};
 		148854D32315261400B99D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +563,7 @@
 			baseConfigurationReference = 6F881F5A4FC0B9D6B4FBB96A /* Pods-29-项目实战.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "29-项目实战/Resource/Info.plist";
@@ -435,6 +573,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-9-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "29-项目实战/29-项目实战-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,6 +585,7 @@
 			baseConfigurationReference = 8DB5EACAE0E25C55B31111D9 /* Pods-29-项目实战.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMZP26248F;
 				INFOPLIST_FILE = "29-项目实战/Resource/Info.plist";
@@ -454,6 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-9-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "29-项目实战/29-项目实战-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +604,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		144F86F12316506D00F897D4 /* Build configuration list for PBXNativeTarget "29-项目实战Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F86F22316506D00F897D4 /* Debug */,
+				144F86F32316506D00F897D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		148854BC2315261300B99D1E /* Build configuration list for PBXProject "29-项目实战" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
