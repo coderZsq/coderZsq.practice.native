@@ -53,6 +53,7 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"objectMetaClass - %p %d", objectMetaClass, class_isMetaClass(objectMetaClass));
         
+        // Class object_getClass(id obj)
         // 1> 传入的可能是instance对象, class对象, meta-class对象
         // 2> 返回值
         // a) 如果是instance对象, 返回class对象
@@ -64,7 +65,12 @@ int main(int argc, const char * argv[]) {
             if (obj) return obj->getIsa();
             else return Nil;
         }
-        
+#endif
+
+        // Class objc_getClass(const char *aClassName)
+        // 1> 传入字符串类名
+        // 2> 返回对应的类对象
+#if 0
         Class objc_getClass(const char *aClassName)
         {
             if (!aClassName) return Nil;
@@ -93,11 +99,7 @@ int main(int argc, const char * argv[]) {
             }
             return result;
         }
-#endif
-        
-        // 1> 传入字符串类名
-        // 2> 返回对应的类对象
-#if 0
+
         static Class getClass(const char *name)
         {
             runtimeLock.assertLocked();
@@ -136,6 +138,8 @@ int main(int argc, const char * argv[]) {
             return (_NXMapMember(table, key, &value) != NX_MAPNOTAKEY) ? value : NULL;
         }
 #endif
+        // - (Class)class , + (Class)class
+        // 1> 返回的就是类对象
     }
     return 0;
 }
