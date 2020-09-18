@@ -60,8 +60,8 @@ int main(int argc, const char * argv[]) {
 //# define INTERNAL_SIZE_T size_t
 //#endif
         
+        NSLog(@"%zd", __alignof__ (long double)); //16
         NSLog(@"%zd", sizeof(size_t)); //8
-        NSLog(@"%zd", sizeof(__alignof__ (long double))); //8
         
         SQPerson *p = [[SQPerson alloc] init];
         // 79 15 00 00 01 80 1D 00
