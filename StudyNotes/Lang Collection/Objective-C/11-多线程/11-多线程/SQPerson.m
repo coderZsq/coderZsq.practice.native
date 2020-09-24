@@ -8,6 +8,21 @@
 
 #import "SQPerson.h"
 
+
+/*
+ nonatomic 和 atomic
+ atom: 原子, 不可再分割单位
+ atomic: 原子性
+ 
+ 给属性加上atomic修饰, 可以保证属性的setter和getter都是原子性操作, 也就是保证setter和getter内部是线程同步的
+ 
+ // 加锁
+ int a = 10;
+ int b = 20;
+ int c = a + b;
+ // 解锁
+ 
+ */
 @implementation SQPerson
 
 //- (void)setName:(NSString *)name {

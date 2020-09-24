@@ -14,15 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) int age;
 @property (atomic, copy) NSString *name;
+@property (strong, nonatomic) NSMutableArray *data;
 
 @end
-
-/*
- nonatomic 和 atomic
- atom: 原子, 不可再分割的单位
- atomic: 原子性
- 
- 给属性加上atomic修饰, 可以保证属性的setter和getter都是原子性操作, 也就是保证setter和getter内部是线程同步
- */
 
 NS_ASSUME_NONNULL_END
