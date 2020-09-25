@@ -7,37 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142EEE80251DC6030000D55E /* MVP-SQAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE7C251DC6030000D55E /* MVP-SQAppView.m */; };
+		142EEE81251DC6030000D55E /* MVP-SQApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE7D251DC6030000D55E /* MVP-SQApp.m */; };
+		142EEE82251DC6030000D55E /* MVP-SQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE7F251DC6030000D55E /* MVP-SQViewController.m */; };
+		142EEE8D251DC69C0000D55E /* MVP-SQAppPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE8C251DC69C0000D55E /* MVP-SQAppPresenter.m */; };
+		142EEE99251DCBEC0000D55E /* MVVM-SQApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE95251DCBEC0000D55E /* MVVM-SQApp.m */; };
+		142EEE9A251DCBEC0000D55E /* MVVM-SQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE96251DCBEC0000D55E /* MVVM-SQViewController.m */; };
+		142EEE9B251DCBEC0000D55E /* MVVM-SQAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE97251DCBEC0000D55E /* MVVM-SQAppView.m */; };
+		142EEEA0251DCC3E0000D55E /* MVVM-SQAppViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEE9F251DCC3E0000D55E /* MVVM-SQAppViewModel.m */; };
+		142EEEA9251DCE940000D55E /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEA6251DCE940000D55E /* NSObject+FBKVOController.m */; };
+		142EEEAA251DCE940000D55E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEA7251DCE940000D55E /* FBKVOController.m */; };
+		142EEEAF251DD00D0000D55E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEAE251DD00D0000D55E /* ViewController.m */; };
+		142EEEB7251DD0630000D55E /* SQNewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEB6251DD0630000D55E /* SQNewsService.m */; };
+		142EEEBC251DD1630000D55E /* SQHTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEBB251DD1630000D55E /* SQHTTPTool.m */; };
+		142EEEC0251DD16E0000D55E /* SQDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 142EEEBF251DD16E0000D55E /* SQDBTool.m */; };
 		14BC0CF6251DA81700DB5E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0CF5251DA81700DB5E4E /* AppDelegate.m */; };
 		14BC0CF9251DA81700DB5E4E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0CF8251DA81700DB5E4E /* SceneDelegate.m */; };
-		14BC0CFC251DA81700DB5E4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0CFB251DA81700DB5E4E /* ViewController.m */; };
 		14BC0CFF251DA81700DB5E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BC0CFD251DA81700DB5E4E /* Main.storyboard */; };
 		14BC0D01251DA81800DB5E4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BC0D00251DA81800DB5E4E /* Assets.xcassets */; };
 		14BC0D04251DA81800DB5E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BC0D02251DA81800DB5E4E /* LaunchScreen.storyboard */; };
 		14BC0D07251DA81800DB5E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D06251DA81800DB5E4E /* main.m */; };
-		14BC0D14251DA87900DB5E4E /* SQNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D13251DA87900DB5E4E /* SQNews.m */; };
+		14BC0D14251DA87900DB5E4E /* MVC-Apple-SQNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D13251DA87900DB5E4E /* MVC-Apple-SQNews.m */; };
 		14BC0D19251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D18251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m */; };
-		14BC0D1D251DAB3A00DB5E4E /* SQShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D1C251DAB3A00DB5E4E /* SQShop.m */; };
+		14BC0D1D251DAB3A00DB5E4E /* MVC-Apple-SQShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D1C251DAB3A00DB5E4E /* MVC-Apple-SQShop.m */; };
+		14BC0D25251DBCC900DB5E4E /* MVX-SQApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D24251DBCC900DB5E4E /* MVX-SQApp.m */; };
+		14BC0D29251DBCFE00DB5E4E /* MVX-SQAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D28251DBCFE00DB5E4E /* MVX-SQAppView.m */; };
+		14BC0D33251DBEA800DB5E4E /* MVX-SQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC0D32251DBEA800DB5E4E /* MVX-SQViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142EEE79251DC6030000D55E /* MVP-SQApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVP-SQApp.h"; sourceTree = "<group>"; };
+		142EEE7B251DC6030000D55E /* MVP-SQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVP-SQViewController.h"; sourceTree = "<group>"; };
+		142EEE7C251DC6030000D55E /* MVP-SQAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVP-SQAppView.m"; sourceTree = "<group>"; };
+		142EEE7D251DC6030000D55E /* MVP-SQApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVP-SQApp.m"; sourceTree = "<group>"; };
+		142EEE7E251DC6030000D55E /* MVP-SQAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVP-SQAppView.h"; sourceTree = "<group>"; };
+		142EEE7F251DC6030000D55E /* MVP-SQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVP-SQViewController.m"; sourceTree = "<group>"; };
+		142EEE8B251DC69C0000D55E /* MVP-SQAppPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVP-SQAppPresenter.h"; sourceTree = "<group>"; };
+		142EEE8C251DC69C0000D55E /* MVP-SQAppPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVP-SQAppPresenter.m"; sourceTree = "<group>"; };
+		142EEE91251DCBEC0000D55E /* MVVM-SQApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVVM-SQApp.h"; sourceTree = "<group>"; };
+		142EEE92251DCBEC0000D55E /* MVVM-SQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVVM-SQViewController.h"; sourceTree = "<group>"; };
+		142EEE93251DCBEC0000D55E /* MVVM-SQAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVVM-SQAppView.h"; sourceTree = "<group>"; };
+		142EEE95251DCBEC0000D55E /* MVVM-SQApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVVM-SQApp.m"; sourceTree = "<group>"; };
+		142EEE96251DCBEC0000D55E /* MVVM-SQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVVM-SQViewController.m"; sourceTree = "<group>"; };
+		142EEE97251DCBEC0000D55E /* MVVM-SQAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVVM-SQAppView.m"; sourceTree = "<group>"; };
+		142EEE9E251DCC3E0000D55E /* MVVM-SQAppViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVVM-SQAppViewModel.h"; sourceTree = "<group>"; };
+		142EEE9F251DCC3E0000D55E /* MVVM-SQAppViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVVM-SQAppViewModel.m"; sourceTree = "<group>"; };
+		142EEEA5251DCE940000D55E /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		142EEEA6251DCE940000D55E /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		142EEEA7251DCE940000D55E /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		142EEEA8251DCE940000D55E /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
+		142EEEAD251DD00D0000D55E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		142EEEAE251DD00D0000D55E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		142EEEB5251DD0630000D55E /* SQNewsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQNewsService.h; sourceTree = "<group>"; };
+		142EEEB6251DD0630000D55E /* SQNewsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQNewsService.m; sourceTree = "<group>"; };
+		142EEEBA251DD1630000D55E /* SQHTTPTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQHTTPTool.h; sourceTree = "<group>"; };
+		142EEEBB251DD1630000D55E /* SQHTTPTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQHTTPTool.m; sourceTree = "<group>"; };
+		142EEEBE251DD16E0000D55E /* SQDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQDBTool.h; sourceTree = "<group>"; };
+		142EEEBF251DD16E0000D55E /* SQDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQDBTool.m; sourceTree = "<group>"; };
 		14BC0CF1251DA81700DB5E4E /* 14-设计模式与架构.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "14-设计模式与架构.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BC0CF4251DA81700DB5E4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14BC0CF5251DA81700DB5E4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14BC0CF7251DA81700DB5E4E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		14BC0CF8251DA81700DB5E4E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		14BC0CFA251DA81700DB5E4E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		14BC0CFB251DA81700DB5E4E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		14BC0CFE251DA81700DB5E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14BC0D00251DA81800DB5E4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14BC0D03251DA81800DB5E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14BC0D05251DA81800DB5E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BC0D06251DA81800DB5E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		14BC0D12251DA87900DB5E4E /* SQNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQNews.h; sourceTree = "<group>"; };
-		14BC0D13251DA87900DB5E4E /* SQNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQNews.m; sourceTree = "<group>"; };
+		14BC0D12251DA87900DB5E4E /* MVC-Apple-SQNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVC-Apple-SQNews.h"; sourceTree = "<group>"; };
+		14BC0D13251DA87900DB5E4E /* MVC-Apple-SQNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVC-Apple-SQNews.m"; sourceTree = "<group>"; };
 		14BC0D17251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVC-Apple-SQNewsViewController.h"; sourceTree = "<group>"; };
 		14BC0D18251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVC-Apple-SQNewsViewController.m"; sourceTree = "<group>"; };
-		14BC0D1B251DAB3A00DB5E4E /* SQShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQShop.h; sourceTree = "<group>"; };
-		14BC0D1C251DAB3A00DB5E4E /* SQShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQShop.m; sourceTree = "<group>"; };
+		14BC0D1B251DAB3A00DB5E4E /* MVC-Apple-SQShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVC-Apple-SQShop.h"; sourceTree = "<group>"; };
+		14BC0D1C251DAB3A00DB5E4E /* MVC-Apple-SQShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVC-Apple-SQShop.m"; sourceTree = "<group>"; };
+		14BC0D23251DBCC900DB5E4E /* MVX-SQApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVX-SQApp.h"; sourceTree = "<group>"; };
+		14BC0D24251DBCC900DB5E4E /* MVX-SQApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVX-SQApp.m"; sourceTree = "<group>"; };
+		14BC0D27251DBCFE00DB5E4E /* MVX-SQAppView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVX-SQAppView.h"; sourceTree = "<group>"; };
+		14BC0D28251DBCFE00DB5E4E /* MVX-SQAppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVX-SQAppView.m"; sourceTree = "<group>"; };
+		14BC0D31251DBEA800DB5E4E /* MVX-SQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVX-SQViewController.h"; sourceTree = "<group>"; };
+		14BC0D32251DBEA800DB5E4E /* MVX-SQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MVX-SQViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +99,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142EEE78251DC6030000D55E /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				142EEE79251DC6030000D55E /* MVP-SQApp.h */,
+				142EEE7D251DC6030000D55E /* MVP-SQApp.m */,
+				142EEE7E251DC6030000D55E /* MVP-SQAppView.h */,
+				142EEE7C251DC6030000D55E /* MVP-SQAppView.m */,
+				142EEE7B251DC6030000D55E /* MVP-SQViewController.h */,
+				142EEE7F251DC6030000D55E /* MVP-SQViewController.m */,
+				142EEE8B251DC69C0000D55E /* MVP-SQAppPresenter.h */,
+				142EEE8C251DC69C0000D55E /* MVP-SQAppPresenter.m */,
+			);
+			name = MVP;
+			path = "14-设计模式与架构/MVP";
+			sourceTree = SOURCE_ROOT;
+		};
+		142EEE8F251DCBEC0000D55E /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				142EEEA4251DCE940000D55E /* KVOController */,
+				142EEE91251DCBEC0000D55E /* MVVM-SQApp.h */,
+				142EEE95251DCBEC0000D55E /* MVVM-SQApp.m */,
+				142EEE93251DCBEC0000D55E /* MVVM-SQAppView.h */,
+				142EEE97251DCBEC0000D55E /* MVVM-SQAppView.m */,
+				142EEE9E251DCC3E0000D55E /* MVVM-SQAppViewModel.h */,
+				142EEE9F251DCC3E0000D55E /* MVVM-SQAppViewModel.m */,
+				142EEE92251DCBEC0000D55E /* MVVM-SQViewController.h */,
+				142EEE96251DCBEC0000D55E /* MVVM-SQViewController.m */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		142EEEA4251DCE940000D55E /* KVOController */ = {
+			isa = PBXGroup;
+			children = (
+				142EEEA5251DCE940000D55E /* FBKVOController.h */,
+				142EEEA7251DCE940000D55E /* FBKVOController.m */,
+				142EEEA6251DCE940000D55E /* NSObject+FBKVOController.m */,
+				142EEEA8251DCE940000D55E /* NSObject+FBKVOController.h */,
+			);
+			name = KVOController;
+			path = "14-设计模式与架构/KVOController";
+			sourceTree = SOURCE_ROOT;
+		};
+		142EEEB1251DD0160000D55E /* 分层设计 */ = {
+			isa = PBXGroup;
+			children = (
+				142EEEB4251DD0450000D55E /* Data */,
+				142EEEB3251DD0340000D55E /* Service */,
+				142EEEAD251DD00D0000D55E /* ViewController.h */,
+				142EEEAE251DD00D0000D55E /* ViewController.m */,
+			);
+			path = "分层设计";
+			sourceTree = "<group>";
+		};
+		142EEEB3251DD0340000D55E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				142EEEB5251DD0630000D55E /* SQNewsService.h */,
+				142EEEB6251DD0630000D55E /* SQNewsService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		142EEEB4251DD0450000D55E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				142EEEBA251DD1630000D55E /* SQHTTPTool.h */,
+				142EEEBB251DD1630000D55E /* SQHTTPTool.m */,
+				142EEEBE251DD16E0000D55E /* SQDBTool.h */,
+				142EEEBF251DD16E0000D55E /* SQDBTool.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		14BC0CE8251DA81700DB5E4E = {
 			isa = PBXGroup;
 			children = (
@@ -70,18 +193,15 @@
 		14BC0CF3251DA81700DB5E4E /* 14-设计模式与架构 */ = {
 			isa = PBXGroup;
 			children = (
+				14BC0D1F251DBCA100DB5E4E /* MVC-Apple */,
+				14BC0D35251DBEC500DB5E4E /* MVX */,
+				142EEE78251DC6030000D55E /* MVP */,
+				142EEE8F251DCBEC0000D55E /* MVVM */,
+				142EEEB1251DD0160000D55E /* 分层设计 */,
 				14BC0CF4251DA81700DB5E4E /* AppDelegate.h */,
 				14BC0CF5251DA81700DB5E4E /* AppDelegate.m */,
 				14BC0CF7251DA81700DB5E4E /* SceneDelegate.h */,
 				14BC0CF8251DA81700DB5E4E /* SceneDelegate.m */,
-				14BC0CFA251DA81700DB5E4E /* ViewController.h */,
-				14BC0CFB251DA81700DB5E4E /* ViewController.m */,
-				14BC0D12251DA87900DB5E4E /* SQNews.h */,
-				14BC0D13251DA87900DB5E4E /* SQNews.m */,
-				14BC0D17251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.h */,
-				14BC0D18251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m */,
-				14BC0D1B251DAB3A00DB5E4E /* SQShop.h */,
-				14BC0D1C251DAB3A00DB5E4E /* SQShop.m */,
 				14BC0CFD251DA81700DB5E4E /* Main.storyboard */,
 				14BC0D00251DA81800DB5E4E /* Assets.xcassets */,
 				14BC0D02251DA81800DB5E4E /* LaunchScreen.storyboard */,
@@ -89,6 +209,32 @@
 				14BC0D06251DA81800DB5E4E /* main.m */,
 			);
 			path = "14-设计模式与架构";
+			sourceTree = "<group>";
+		};
+		14BC0D1F251DBCA100DB5E4E /* MVC-Apple */ = {
+			isa = PBXGroup;
+			children = (
+				14BC0D12251DA87900DB5E4E /* MVC-Apple-SQNews.h */,
+				14BC0D13251DA87900DB5E4E /* MVC-Apple-SQNews.m */,
+				14BC0D1B251DAB3A00DB5E4E /* MVC-Apple-SQShop.h */,
+				14BC0D1C251DAB3A00DB5E4E /* MVC-Apple-SQShop.m */,
+				14BC0D17251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.h */,
+				14BC0D18251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m */,
+			);
+			path = "MVC-Apple";
+			sourceTree = "<group>";
+		};
+		14BC0D35251DBEC500DB5E4E /* MVX */ = {
+			isa = PBXGroup;
+			children = (
+				14BC0D23251DBCC900DB5E4E /* MVX-SQApp.h */,
+				14BC0D24251DBCC900DB5E4E /* MVX-SQApp.m */,
+				14BC0D27251DBCFE00DB5E4E /* MVX-SQAppView.h */,
+				14BC0D28251DBCFE00DB5E4E /* MVX-SQAppView.m */,
+				14BC0D31251DBEA800DB5E4E /* MVX-SQViewController.h */,
+				14BC0D32251DBEA800DB5E4E /* MVX-SQViewController.m */,
+			);
+			path = MVX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,13 +306,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142EEE82251DC6030000D55E /* MVP-SQViewController.m in Sources */,
 				14BC0D19251DA8DF00DB5E4E /* MVC-Apple-SQNewsViewController.m in Sources */,
-				14BC0D14251DA87900DB5E4E /* SQNews.m in Sources */,
-				14BC0CFC251DA81700DB5E4E /* ViewController.m in Sources */,
+				14BC0D14251DA87900DB5E4E /* MVC-Apple-SQNews.m in Sources */,
 				14BC0CF6251DA81700DB5E4E /* AppDelegate.m in Sources */,
+				14BC0D33251DBEA800DB5E4E /* MVX-SQViewController.m in Sources */,
+				142EEEC0251DD16E0000D55E /* SQDBTool.m in Sources */,
 				14BC0D07251DA81800DB5E4E /* main.m in Sources */,
-				14BC0D1D251DAB3A00DB5E4E /* SQShop.m in Sources */,
+				142EEE8D251DC69C0000D55E /* MVP-SQAppPresenter.m in Sources */,
+				142EEE99251DCBEC0000D55E /* MVVM-SQApp.m in Sources */,
+				142EEE9A251DCBEC0000D55E /* MVVM-SQViewController.m in Sources */,
+				142EEEB7251DD0630000D55E /* SQNewsService.m in Sources */,
+				14BC0D29251DBCFE00DB5E4E /* MVX-SQAppView.m in Sources */,
+				14BC0D1D251DAB3A00DB5E4E /* MVC-Apple-SQShop.m in Sources */,
 				14BC0CF9251DA81700DB5E4E /* SceneDelegate.m in Sources */,
+				142EEEA9251DCE940000D55E /* NSObject+FBKVOController.m in Sources */,
+				142EEE81251DC6030000D55E /* MVP-SQApp.m in Sources */,
+				142EEEAF251DD00D0000D55E /* ViewController.m in Sources */,
+				142EEE80251DC6030000D55E /* MVP-SQAppView.m in Sources */,
+				142EEEA0251DCC3E0000D55E /* MVVM-SQAppViewModel.m in Sources */,
+				142EEE9B251DCBEC0000D55E /* MVVM-SQAppView.m in Sources */,
+				14BC0D25251DBCC900DB5E4E /* MVX-SQApp.m in Sources */,
+				142EEEAA251DCE940000D55E /* FBKVOController.m in Sources */,
+				142EEEBC251DD1630000D55E /* SQHTTPTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

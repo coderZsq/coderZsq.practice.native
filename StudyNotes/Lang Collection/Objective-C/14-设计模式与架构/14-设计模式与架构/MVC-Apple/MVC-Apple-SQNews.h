@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQNews : NSObject
+@interface MVC_Apple_SQNews : NSObject
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *content;
