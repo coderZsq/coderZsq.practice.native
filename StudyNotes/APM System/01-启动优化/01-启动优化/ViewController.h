@@ -1,5 +1,5 @@
 //
-//  SQLaunchScreenViewController.h
+//  ViewController.h
 //  01-启动优化
 //
 //  Created by 朱双泉 on 2020/9/30.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQLaunchScreenViewController : UIViewController
+@interface ViewController : UIViewController
 
 @end
 

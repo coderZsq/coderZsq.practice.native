@@ -6,7 +6,8 @@
 //
 
 #import "SceneDelegate.h"
-#import "SQLaunchScreenViewController.h"
+#import "ViewController.h"
+#import "SMCallTrace.h"
 
 @interface SceneDelegate ()
 
@@ -14,6 +15,17 @@
 
 @implementation SceneDelegate
 
++ (void)load {
+    NSLog(@"%s", __func__);
+}
+
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"%s", __func__);
+    });
+}
 
 /**
  冷启动
@@ -32,13 +44,16 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     NSLog(@"%s - begin", __func__);
+    [SMCallTrace start];
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
-    self.window.rootViewController = [[SQLaunchScreenViewController alloc] init];
+    self.window.rootViewController = [[ViewController alloc] init];
     [self.window makeKeyAndVisible];
     
+    [SMCallTrace stop];
+    [SMCallTrace save];
     NSLog(@"%s - end", __func__);
     /**
      启动阶段3
@@ -50,6 +65,13 @@
      这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。
      但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。
      */
+    // 异步
+    dispatch_async(dispatch_queue_create("串行队列", DISPATCH_QUEUE_SERIAL), ^{
+        // 耗时操作...
+        for (int i = 0; i < 10000; i++) {
+            
+        }
+    });
 }
 
 

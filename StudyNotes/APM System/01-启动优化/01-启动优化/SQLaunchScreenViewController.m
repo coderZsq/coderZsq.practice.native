@@ -5,13 +5,13 @@
 //  Created by 朱双泉 on 2020/9/30.
 //
 
-#import "SQLaunchScreenViewController.h"
+#import "LaunchScreenViewController.h"
 
-@interface SQLaunchScreenViewController ()
+@interface LaunchScreenViewController ()
 
 @end
 
-@implementation SQLaunchScreenViewController
+@implementation LaunchScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

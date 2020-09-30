@@ -6,13 +6,26 @@
 //
 
 #import "AppDelegate.h"
-#import "SQLaunchScreenViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
++ (void)load {
+    NSLog(@"%s", __func__);
+}
+
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"%s", __func__);
+    });
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"%s", __func__);
@@ -31,7 +44,9 @@
      更加优化的开发方式，应该是从功能上梳理出哪些是首屏渲染必要的初始化功能，哪些是 App 启动必要的初始化功能，而哪些是只需要在对应功能开始使用时才需要初始化的。
      梳理完之后，将这些初始化功能分别放到合适的阶段进行。
      
-     优化的思路是： main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。
+     功能级别的启动优化
+     优化的思路是： main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，
+     其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。
      */
     
     return YES;
@@ -42,16 +57,13 @@
 
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
+    NSLog(@"%s", __func__);
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
 }
 
 
 - (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    NSLog(@"%s", __func__);
 }
 
 
