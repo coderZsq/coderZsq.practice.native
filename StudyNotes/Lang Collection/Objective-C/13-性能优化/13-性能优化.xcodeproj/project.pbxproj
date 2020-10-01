@@ -38,6 +38,9 @@
 		148381AC25256AB800F9929D /* objc-msg-simulator-x86_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-simulator-x86_64.s"; sourceTree = "<group>"; };
 		148381AD25256AB800F9929D /* objc-msg-win32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "objc-msg-win32.m"; sourceTree = "<group>"; };
 		148381AE25256AB800F9929D /* objc-msg-arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-arm64.s"; sourceTree = "<group>"; };
+		148381C6252578F400F9929D /* Boy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boy.h; sourceTree = "<group>"; };
+		148381C7252578F400F9929D /* Boy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boy.m; sourceTree = "<group>"; };
+		148381CB25257AF200F9929D /* SayHi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SayHi.m; sourceTree = "<group>"; };
 		14BAB263251DA29F00389C95 /* 13-性能优化.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13-性能优化.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BAB266251DA29F00389C95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14BAB267251DA29F00389C95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +108,25 @@
 			path = objc_msgSend;
 			sourceTree = "<group>";
 		};
+		149EE6572525C2F10072EA03 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				148381C6252578F400F9929D /* Boy.h */,
+				148381C7252578F400F9929D /* Boy.m */,
+				148381CB25257AF200F9929D /* SayHi.m */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		149EE6582525C3230072EA03 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				1483819D25256AB800F9929D /* SQCallTraceMonitor */,
+				14BAB280251DA2D400389C95 /* SQFluecyMonitor */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		14BAB25A251DA29F00389C95 = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +146,8 @@
 		14BAB265251DA29F00389C95 /* 13-性能优化 */ = {
 			isa = PBXGroup;
 			children = (
-				1483819D25256AB800F9929D /* SQCallTraceMonitor */,
-				14BAB280251DA2D400389C95 /* SQFluecyMonitor */,
+				149EE6582525C3230072EA03 /* Lib */,
+				149EE6572525C2F10072EA03 /* Link */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
@@ -388,6 +410,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-3-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,6 +431,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-3-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

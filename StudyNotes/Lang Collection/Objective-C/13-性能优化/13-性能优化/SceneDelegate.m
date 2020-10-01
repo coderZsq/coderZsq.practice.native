@@ -45,7 +45,6 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     NSLog(@"%s - begin", __func__);
-    [SQCallTrace start];
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
@@ -53,8 +52,6 @@
     self.window.rootViewController = [[UIStoryboard storyboardWithName: @"Main" bundle: nil] instantiateInitialViewController];
     [self.window makeKeyAndVisible];
     
-    [SQCallTrace stop];
-    [SQCallTrace save];
     NSLog(@"%s - end", __func__);
     /**
      启动阶段3
@@ -71,6 +68,9 @@
         // 耗时操作...
         [[SQFluecyMonitor sharedMonitor] startMonitoring];
     });
+    
+    [SQCallTrace stop];
+    [SQCallTrace save];
 }
 
 
