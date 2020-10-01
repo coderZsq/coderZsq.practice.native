@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1424FC492525D490002F0A10 /* Hello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello.m; sourceTree = "<group>"; };
 		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
 		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
@@ -70,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1424FC4E2525D49E002F0A10 /* Lint */ = {
+			isa = PBXGroup;
+			children = (
+				1424FC492525D490002F0A10 /* Hello.m */,
+			);
+			path = Lint;
+			sourceTree = "<group>";
+		};
 		1483819D25256AB800F9929D /* SQCallTraceMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +157,7 @@
 			children = (
 				149EE6582525C3230072EA03 /* Lib */,
 				149EE6572525C2F10072EA03 /* Link */,
+				1424FC4E2525D49E002F0A10 /* Lint */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
@@ -410,10 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-Xlinker",
-					"-interposable",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-3-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -432,10 +439,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-Xlinker",
-					"-interposable",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.-3-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
