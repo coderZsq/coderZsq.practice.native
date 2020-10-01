@@ -2,10 +2,13 @@
 //  SceneDelegate.m
 //  13-性能优化
 //
-//  Created by 朱双泉 on 2020/9/25.
+//  Created by 朱双泉 on 2020/9/30.
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
+#import "SQCallTrace.h"
+#import "SQFluecyMonitor.h"
 
 @interface SceneDelegate ()
 
@@ -13,44 +16,86 @@
 
 @implementation SceneDelegate
 
++ (void)load {
+    NSLog(@"%s", __func__);
+}
+
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"%s", __func__);
+    });
+}
+
+/**
+ 冷启动
+ main
+ -[AppDelegate application:didFinishLaunchingWithOptions:]
+ -[SceneDelegate scene:willConnectToSession:options:] - begin
+ -[SQLaunchScreenViewController viewDidLoad]
+ -[SceneDelegate scene:willConnectToSession:options:] - end
+ -[SceneDelegate sceneWillEnterForeground:]
+ -[SceneDelegate sceneDidBecomeActive:]
+ 
+ 热启动
+ -[SceneDelegate sceneWillEnterForeground:]
+ -[SceneDelegate sceneDidBecomeActive:]
+ */
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    NSLog(@"%s - begin", __func__);
+    [SQCallTrace start];
+    
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    self.window.frame = windowScene.coordinateSpace.bounds;
+    self.window.rootViewController = [[UIStoryboard storyboardWithName: @"Main" bundle: nil] instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+    
+    [SQCallTrace stop];
+    [SQCallTrace save];
+    NSLog(@"%s - end", __func__);
+    /**
+     启动阶段3
+     
+     首屏渲染后的这个阶段，主要完成的是，非首屏其他业务服务模块的初始化、监听的注册、配置文件的读取等。
+     从函数上来看，这个阶段指的就是截止到 didFinishLaunchingWithOptions 方法作用域内执行首屏渲染之后的所有方法执行完成。
+     简单说的话，这个阶段就是从渲染完成时开始，到 didFinishLaunchingWithOptions 方法作用域结束时结束。
+     
+     这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。
+     但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。
+     */
+    // 异步
+    dispatch_async(dispatch_queue_create("串行队列", DISPATCH_QUEUE_SERIAL), ^{
+        // 耗时操作...
+        [[SQFluecyMonitor sharedMonitor] startMonitoring];
+    });
 }
 
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
-    // Called as the scene is being released by the system.
-    // This occurs shortly after the scene enters the background, or when its session is discarded.
-    // Release any resources associated with this scene that can be re-created the next time the scene connects.
-    // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-}
-
-
-- (void)sceneDidBecomeActive:(UIScene *)scene {
-    // Called when the scene has moved from an inactive state to an active state.
-    // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-}
-
-
-- (void)sceneWillResignActive:(UIScene *)scene {
-    // Called when the scene will move from an active state to an inactive state.
-    // This may occur due to temporary interruptions (ex. an incoming phone call).
+    NSLog(@"%s", __func__);
 }
 
 
 - (void)sceneWillEnterForeground:(UIScene *)scene {
-    // Called as the scene transitions from the background to the foreground.
-    // Use this method to undo the changes made on entering the background.
+    NSLog(@"%s", __func__);
+}
+
+
+- (void)sceneDidBecomeActive:(UIScene *)scene {
+    NSLog(@"%s", __func__);
+}
+
+
+- (void)sceneWillResignActive:(UIScene *)scene {
+    NSLog(@"%s", __func__);
 }
 
 
 - (void)sceneDidEnterBackground:(UIScene *)scene {
-    // Called as the scene transitions from the foreground to the background.
-    // Use this method to save data, release shared resources, and store enough scene-specific state information
-    // to restore the scene back to its current state.
+    NSLog(@"%s", __func__);
 }
 
 

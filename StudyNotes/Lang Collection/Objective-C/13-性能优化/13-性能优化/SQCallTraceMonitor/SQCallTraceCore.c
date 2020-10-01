@@ -1,11 +1,11 @@
 //
-//  SMCallTraceCore.c
-//  01-启动优化
+//  SQCallTraceCore.c
+//  13-性能优化
 //
 //  Created by 朱双泉 on 2020/9/30.
 //
 
-#include "SMCallTraceCore.h"
+#include "SQCallTraceCore.h"
 #include "fishhook.h"
 
 #ifdef __aarch64__
@@ -29,9 +29,9 @@ static int _max_call_depth = 3;
 static pthread_key_t _thread_key;
 __unused static id (*orig_objc_msgSend)(id, SEL, ...);
 
-static SMCallRecord *_SMCallRecords;
-static int _SMRecordNum;
-static int _SMRecordAlloc;
+static SQCallRecord *_SQCallRecords;
+static int _SQRecordNum;
+static int _SQRecordAlloc;
 
 /**
  第一步，设计两个结构体：CallRecord 记录调用方法详细信息，包括 obj 和 SEL 等；
@@ -133,18 +133,18 @@ static inline uintptr_t pop_call_record()
         uint64_t cost = time - pRecord->time;
         if (cost > _min_time_cost && cs->index < _max_call_depth)
         {
-            if (!_SMCallRecords)
+            if (!_SQCallRecords)
             {
-                _SMRecordAlloc = 1024;
-                _SMCallRecords = malloc(sizeof(SMCallRecord) * _SMRecordAlloc);
+                _SQRecordAlloc = 1024;
+                _SQCallRecords = malloc(sizeof(SQCallRecord) * _SQRecordAlloc);
             }
-            _SMRecordNum++;
-            if (_SMRecordNum >= _SMRecordAlloc)
+            _SQRecordNum++;
+            if (_SQRecordNum >= _SQRecordAlloc)
             {
-                _SMRecordAlloc += 1024;
-                _SMCallRecords = realloc(_SMCallRecords, sizeof(SMCallRecord) * _SMRecordAlloc);
+                _SQRecordAlloc += 1024;
+                _SQCallRecords = realloc(_SQCallRecords, sizeof(SQCallRecord) * _SQRecordAlloc);
             }
-            SMCallRecord *log = &_SMCallRecords[_SMRecordNum - 1];
+            SQCallRecord *log = &_SQCallRecords[_SQRecordNum - 1];
             log->cls = pRecord->cls;
             log->depth = curIndex;
             log->sel = pRecord->cmd;
@@ -242,7 +242,7 @@ __attribute__((__naked__)) static void hook_Objc_msgSend()
     ret()
 }
 
-void SMCallTraceStart()
+void SQCallTraceStart()
 {
     _call_record_enabled = true;
     static dispatch_once_t onceToken;
@@ -256,50 +256,50 @@ void SMCallTraceStart()
     });
 }
 
-void SMCallTraceStop()
+void SQCallTraceStop()
 {
     _call_record_enabled = false;
 }
 
-void SMCallConfigMinTime(uint64_t us)
+void SQCallConfigMinTime(uint64_t us)
 {
     _min_time_cost = us;
 }
-void SMCallConfigMaxDepth(int depth)
+void SQCallConfigMaxDepth(int depth)
 {
     _max_call_depth = depth;
 }
 
-SMCallRecord *SMGetCallRecords(int *num)
+SQCallRecord *SQGetCallRecords(int *num)
 {
     if (num)
     {
-        *num = _SMRecordNum;
+        *num = _SQRecordNum;
     }
-    return _SMCallRecords;
+    return _SQCallRecords;
 }
 
-void SMClearCallRecords()
+void SQClearCallRecords()
 {
-    if (_SMCallRecords)
+    if (_SQCallRecords)
     {
-        free(_SMCallRecords);
-        _SMCallRecords = NULL;
+        free(_SQCallRecords);
+        _SQCallRecords = NULL;
     }
-    _SMRecordNum = 0;
+    _SQRecordNum = 0;
 }
 
 #else
 
-void SMCallTraceStart() {}
-void SMCallTraceStop() {}
-void SMCallConfigMinTime(uint64_t us)
+void SQCallTraceStart() {}
+void SQCallTraceStop() {}
+void SQCallConfigMinTime(uint64_t us)
 {
 }
-void SMCallConfigMaxDepth(int depth)
+void SQCallConfigMaxDepth(int depth)
 {
 }
-SMCallRecord *SMGetCallRecords(int *num)
+SQCallRecord *SQGetCallRecords(int *num)
 {
     if (num)
     {
@@ -307,6 +307,6 @@ SMCallRecord *SMGetCallRecords(int *num)
     }
     return NULL;
 }
-void SMClearCallRecords() {}
+void SQClearCallRecords() {}
 
 #endif

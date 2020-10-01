@@ -1,43 +1,43 @@
 //
-//  SMCallTrace.m
-//  01-启动优化
+//  SQCallTrace.m
+//  13-性能优化
 //
 //  Created by 朱双泉 on 2020/9/30.
 //
 
-#import "SMCallTrace.h"
-#import "SMCallTraceCore.h"
+#import "SQCallTrace.h"
+#import "SQCallTraceCore.h"
 #include <objc/runtime.h>
-#import "SMCallTraceModel.h"
+#import "SQCallTraceModel.h"
 
 
-@implementation SMCallTrace
+@implementation SQCallTrace
 
 #pragma mark - Trace
 #pragma mark - OC Interface
 + (void)start {
-    SMCallTraceStart();
+    SQCallTraceStart();
 }
 + (void)startWithMaxDepth:(int)depth {
-    SMCallConfigMaxDepth(depth);
-    [SMCallTrace start];
+    SQCallConfigMaxDepth(depth);
+    [SQCallTrace start];
 }
 + (void)startWithMinCost:(double)ms {
-    SMCallConfigMinTime(ms * 1000);
-    [SMCallTrace start];
+    SQCallConfigMinTime(ms * 1000);
+    [SQCallTrace start];
 }
 + (void)startWithMaxDepth:(int)depth minCost:(double)ms {
-    SMCallConfigMaxDepth(depth);
-    SMCallConfigMinTime(ms * 1000);
-    [SMCallTrace start];
+    SQCallConfigMaxDepth(depth);
+    SQCallConfigMinTime(ms * 1000);
+    [SQCallTrace start];
 }
 + (void)stop {
-    SMCallTraceStop();
+    SQCallTraceStop();
 }
 + (void)save {
     NSMutableString *mStr = [NSMutableString new];
-    NSArray<SMCallTraceModel *> *arr = [self loadRecords];
-    for (SMCallTraceModel *model in arr) {
+    NSArray<SQCallTraceModel *> *arr = [self loadRecords];
+    for (SQCallTraceModel *model in arr) {
         //记录方法路径
         model.path = [NSString stringWithFormat:@"[%@ %@]",model.className,model.methodName];
         [self appendRecord:model to:mStr];
@@ -45,19 +45,19 @@
     NSLog(@"%@",mStr);
 }
 + (void)stopSaveAndClean {
-    [SMCallTrace stop];
-    [SMCallTrace save];
-    SMClearCallRecords();
+    [SQCallTrace stop];
+    [SQCallTrace save];
+    SQClearCallRecords();
 }
-+ (void)appendRecord:(SMCallTraceModel *)cost to:(NSMutableString *)mStr {
++ (void)appendRecord:(SQCallTraceModel *)cost to:(NSMutableString *)mStr {
     [mStr appendFormat:@"\n%@",[cost des]];
     if (cost.subCosts.count < 1) {
         cost.lastCall = YES;
         //记录到数据库中
         //...
     } else {
-        for (SMCallTraceModel *model in cost.subCosts) {
-            if ([model.className isEqualToString:@"SMCallTrace"]) {
+        for (SQCallTraceModel *model in cost.subCosts) {
+            if ([model.className isEqualToString:@"SQCallTrace"]) {
                 break;
             }
             //记录方法的子方法的路径
@@ -67,13 +67,13 @@
     }
     
 }
-+ (NSArray<SMCallTraceModel *>*)loadRecords {
-    NSMutableArray<SMCallTraceModel *> *arr = [NSMutableArray new];
++ (NSArray<SQCallTraceModel *>*)loadRecords {
+    NSMutableArray<SQCallTraceModel *> *arr = [NSMutableArray new];
     int num = 0;
-    SMCallRecord *records = SMGetCallRecords(&num);
+    SQCallRecord *records = SQGetCallRecords(&num);
     for (int i = 0; i < num; i++) {
-        SMCallRecord *rd = &records[i];
-        SMCallTraceModel *model = [SMCallTraceModel new];
+        SQCallRecord *rd = &records[i];
+        SQCallTraceModel *model = [SQCallTraceModel new];
         model.className = NSStringFromClass(rd->cls);
         model.methodName = NSStringFromSelector(rd->sel);
         model.isClasSMethod = class_isMetaClass(rd->cls);
@@ -83,7 +83,7 @@
     }
     NSUInteger count = arr.count;
     for (NSUInteger i = 0; i < count; i++) {
-        SMCallTraceModel *model = arr[i];
+        SQCallTraceModel *model = arr[i];
         if (model.callDepth > 0) {
             [arr removeObjectAtIndex:i];
             //Todo:不需要循环，直接设置下一个，然后判断好边界就行

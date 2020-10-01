@@ -1,18 +1,18 @@
 //
-//  SQAppFluecyMonitor.h
-//  SQAppFluecyMonitor
+//  SQFluecyMonitor.h
+//  SQFluecyMonitor
 //
 //  Created by 朱双泉 on 2020/9/25.
 //
 
 #import <Foundation/Foundation.h>
 
-#define SHAREDMONITOR [SQAppFluecyMonitor sharedMonitor]
+#define SHAREDMONITOR [SQFluecyMonitor sharedMonitor]
 
 /*!
  *  @brief  监听UI线程卡顿
  */
-@interface SQAppFluecyMonitor : NSObject
+@interface SQFluecyMonitor : NSObject
 
 + (instancetype)sharedMonitor;
 

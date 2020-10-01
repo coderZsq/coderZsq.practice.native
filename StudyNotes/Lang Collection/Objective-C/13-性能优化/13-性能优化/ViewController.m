@@ -6,8 +6,6 @@
 //
 
 #import "ViewController.h"
-#import "SQBacktraceLogger.h"
-#import "SQAppFluecyMonitor.h"
 
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -18,9 +16,21 @@
 
 @implementation ViewController
 
++ (void)load {
+    NSLog(@"%s", __func__);
+}
+
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"%s", __func__);
+    });
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[SQAppFluecyMonitor sharedMonitor] startMonitoring];
+    NSLog(@"%s", __func__);
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 

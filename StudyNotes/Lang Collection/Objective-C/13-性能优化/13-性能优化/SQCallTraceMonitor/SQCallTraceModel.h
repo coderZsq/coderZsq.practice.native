@@ -1,13 +1,13 @@
 //
-//  SMCallTraceModel.h
-//  01-启动优化
+//  SQCallTraceModel.h
+//  13-性能优化
 //
 //  Created by 朱双泉 on 2020/9/30.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SMCallTraceModel : NSObject
+@interface SQCallTraceModel : NSObject
 
 @property(nonatomic, strong) NSString *className;     //类名
 @property(nonatomic, strong) NSString *methodName;    //方法名
@@ -17,7 +17,7 @@
 @property(nonatomic, copy) NSString *path;            //路径
 @property(nonatomic, assign) BOOL lastCall;           //是否是最后一个 Call
 @property(nonatomic, assign) NSUInteger frequency;    //访问频次
-@property(nonatomic, strong) NSArray<SMCallTraceModel *> *subCosts;
+@property(nonatomic, strong) NSArray<SQCallTraceModel *> *subCosts;
 
 - (NSString *)des;
 

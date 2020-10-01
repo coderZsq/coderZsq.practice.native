@@ -1,13 +1,13 @@
 //
-//  SMCallTrace.h
-//  01-启动优化
+//  SQCallTrace.h
+//  13-性能优化
 //
 //  Created by 朱双泉 on 2020/9/30.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SMCallTrace : NSObject
+@interface SQCallTrace : NSObject
 + (void)start; //开始记录
 + (void)startWithMaxDepth:(int)depth;
 + (void)startWithMinCost:(double)ms;

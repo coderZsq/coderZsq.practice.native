@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14A2457825249E35006D66E6"
-               BuildableName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;.app"
-               BlueprintName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;"
-               ReferencedContainer = "container:01-&#x542f;&#x52a8;&#x4f18;&#x5316;.xcodeproj">
+               BlueprintIdentifier = "14BAB262251DA29F00389C95"
+               BuildableName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;.app"
+               BlueprintName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;"
+               ReferencedContainer = "container:13-&#x6027;&#x80fd;&#x4f18;&#x5316;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14A2457825249E35006D66E6"
-            BuildableName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;.app"
-            BlueprintName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;"
-            ReferencedContainer = "container:01-&#x542f;&#x52a8;&#x4f18;&#x5316;.xcodeproj">
+            BlueprintIdentifier = "14BAB262251DA29F00389C95"
+            BuildableName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;.app"
+            BlueprintName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;"
+            ReferencedContainer = "container:13-&#x6027;&#x80fd;&#x4f18;&#x5316;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -68,10 +68,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14A2457825249E35006D66E6"
-            BuildableName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;.app"
-            BlueprintName = "01-&#x542f;&#x52a8;&#x4f18;&#x5316;"
-            ReferencedContainer = "container:01-&#x542f;&#x52a8;&#x4f18;&#x5316;.xcodeproj">
+            BlueprintIdentifier = "14BAB262251DA29F00389C95"
+            BuildableName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;.app"
+            BlueprintName = "13-&#x6027;&#x80fd;&#x4f18;&#x5316;"
+            ReferencedContainer = "container:13-&#x6027;&#x80fd;&#x4f18;&#x5316;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

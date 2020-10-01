@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148381AF25256AB800F9929D /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 148381A025256AB800F9929D /* fishhook.c */; };
+		148381B025256AB800F9929D /* SQCallTraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A325256AB800F9929D /* SQCallTraceModel.m */; };
+		148381B125256AB800F9929D /* SQCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A425256AB800F9929D /* SQCallTrace.m */; };
+		148381B225256AB800F9929D /* SQCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 148381A525256AB800F9929D /* SQCallTraceCore.c */; };
 		14BAB268251DA29F00389C95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB267251DA29F00389C95 /* AppDelegate.m */; };
 		14BAB26B251DA29F00389C95 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB26A251DA29F00389C95 /* SceneDelegate.m */; };
 		14BAB26E251DA29F00389C95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB26D251DA29F00389C95 /* ViewController.m */; };
@@ -15,10 +19,25 @@
 		14BAB276251DA2A000389C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BAB274251DA2A000389C95 /* LaunchScreen.storyboard */; };
 		14BAB279251DA2A000389C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB278251DA2A000389C95 /* main.m */; };
 		14BAB286251DA2D400389C95 /* SQBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB282251DA2D400389C95 /* SQBacktraceLogger.m */; };
-		14BAB287251DA2D400389C95 /* SQAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB285251DA2D400389C95 /* SQAppFluecyMonitor.m */; };
+		14BAB287251DA2D400389C95 /* SQFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAB285251DA2D400389C95 /* SQFluecyMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
+		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		148381A225256AB800F9929D /* SQCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTraceCore.h; sourceTree = "<group>"; };
+		148381A325256AB800F9929D /* SQCallTraceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQCallTraceModel.m; sourceTree = "<group>"; };
+		148381A425256AB800F9929D /* SQCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQCallTrace.m; sourceTree = "<group>"; };
+		148381A525256AB800F9929D /* SQCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SQCallTraceCore.c; sourceTree = "<group>"; };
+		148381A625256AB800F9929D /* SQCallTraceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTraceModel.h; sourceTree = "<group>"; };
+		148381A825256AB800F9929D /* objc-msg-arm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-arm.s"; sourceTree = "<group>"; };
+		148381A925256AB800F9929D /* objc-msg-simulator-i386.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-simulator-i386.s"; sourceTree = "<group>"; };
+		148381AA25256AB800F9929D /* objc-msg-i386.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-i386.s"; sourceTree = "<group>"; };
+		148381AB25256AB800F9929D /* objc-msg-x86_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-x86_64.s"; sourceTree = "<group>"; };
+		148381AC25256AB800F9929D /* objc-msg-simulator-x86_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-simulator-x86_64.s"; sourceTree = "<group>"; };
+		148381AD25256AB800F9929D /* objc-msg-win32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "objc-msg-win32.m"; sourceTree = "<group>"; };
+		148381AE25256AB800F9929D /* objc-msg-arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "objc-msg-arm64.s"; sourceTree = "<group>"; };
 		14BAB263251DA29F00389C95 /* 13-性能优化.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13-性能优化.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BAB266251DA29F00389C95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14BAB267251DA29F00389C95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,8 +52,8 @@
 		14BAB278251DA2A000389C95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14BAB282251DA2D400389C95 /* SQBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQBacktraceLogger.m; sourceTree = "<group>"; };
 		14BAB283251DA2D400389C95 /* SQBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQBacktraceLogger.h; sourceTree = "<group>"; };
-		14BAB284251DA2D400389C95 /* SQAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAppFluecyMonitor.h; sourceTree = "<group>"; };
-		14BAB285251DA2D400389C95 /* SQAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAppFluecyMonitor.m; sourceTree = "<group>"; };
+		14BAB284251DA2D400389C95 /* SQFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFluecyMonitor.h; sourceTree = "<group>"; };
+		14BAB285251DA2D400389C95 /* SQFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQFluecyMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +67,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1483819D25256AB800F9929D /* SQCallTraceMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				148381A725256AB800F9929D /* objc_msgSend */,
+				1483819F25256AB800F9929D /* fishhook */,
+				1483819E25256AB800F9929D /* SQCallTrace.h */,
+				148381A425256AB800F9929D /* SQCallTrace.m */,
+				148381A225256AB800F9929D /* SQCallTraceCore.h */,
+				148381A525256AB800F9929D /* SQCallTraceCore.c */,
+				148381A625256AB800F9929D /* SQCallTraceModel.h */,
+				148381A325256AB800F9929D /* SQCallTraceModel.m */,
+			);
+			path = SQCallTraceMonitor;
+			sourceTree = "<group>";
+		};
+		1483819F25256AB800F9929D /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				148381A125256AB800F9929D /* fishhook.h */,
+				148381A025256AB800F9929D /* fishhook.c */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		148381A725256AB800F9929D /* objc_msgSend */ = {
+			isa = PBXGroup;
+			children = (
+				148381A825256AB800F9929D /* objc-msg-arm.s */,
+				148381AE25256AB800F9929D /* objc-msg-arm64.s */,
+				148381AA25256AB800F9929D /* objc-msg-i386.s */,
+				148381A925256AB800F9929D /* objc-msg-simulator-i386.s */,
+				148381AC25256AB800F9929D /* objc-msg-simulator-x86_64.s */,
+				148381AB25256AB800F9929D /* objc-msg-x86_64.s */,
+				148381AD25256AB800F9929D /* objc-msg-win32.m */,
+			);
+			path = objc_msgSend;
+			sourceTree = "<group>";
+		};
 		14BAB25A251DA29F00389C95 = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +124,8 @@
 		14BAB265251DA29F00389C95 /* 13-性能优化 */ = {
 			isa = PBXGroup;
 			children = (
-				14BAB280251DA2D400389C95 /* SQAppFluecyMonitor */,
+				1483819D25256AB800F9929D /* SQCallTraceMonitor */,
+				14BAB280251DA2D400389C95 /* SQFluecyMonitor */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
@@ -83,23 +141,23 @@
 			path = "13-性能优化";
 			sourceTree = "<group>";
 		};
-		14BAB280251DA2D400389C95 /* SQAppFluecyMonitor */ = {
+		14BAB280251DA2D400389C95 /* SQFluecyMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				14BAB281251DA2D400389C95 /* Backtrace */,
-				14BAB284251DA2D400389C95 /* SQAppFluecyMonitor.h */,
-				14BAB285251DA2D400389C95 /* SQAppFluecyMonitor.m */,
+				14BAB281251DA2D400389C95 /* backtrace */,
+				14BAB284251DA2D400389C95 /* SQFluecyMonitor.h */,
+				14BAB285251DA2D400389C95 /* SQFluecyMonitor.m */,
 			);
-			path = SQAppFluecyMonitor;
+			path = SQFluecyMonitor;
 			sourceTree = "<group>";
 		};
-		14BAB281251DA2D400389C95 /* Backtrace */ = {
+		14BAB281251DA2D400389C95 /* backtrace */ = {
 			isa = PBXGroup;
 			children = (
 				14BAB283251DA2D400389C95 /* SQBacktraceLogger.h */,
 				14BAB282251DA2D400389C95 /* SQBacktraceLogger.m */,
 			);
-			path = Backtrace;
+			path = backtrace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +230,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BAB286251DA2D400389C95 /* SQBacktraceLogger.m in Sources */,
-				14BAB287251DA2D400389C95 /* SQAppFluecyMonitor.m in Sources */,
-				14BAB26E251DA29F00389C95 /* ViewController.m in Sources */,
-				14BAB268251DA29F00389C95 /* AppDelegate.m in Sources */,
+				148381B025256AB800F9929D /* SQCallTraceModel.m in Sources */,
+				148381AF25256AB800F9929D /* fishhook.c in Sources */,
+				14BAB287251DA2D400389C95 /* SQFluecyMonitor.m in Sources */,
+				148381B225256AB800F9929D /* SQCallTraceCore.c in Sources */,
+				148381B125256AB800F9929D /* SQCallTrace.m in Sources */,
 				14BAB279251DA2A000389C95 /* main.m in Sources */,
+				14BAB268251DA29F00389C95 /* AppDelegate.m in Sources */,
 				14BAB26B251DA29F00389C95 /* SceneDelegate.m in Sources */,
+				14BAB26E251DA29F00389C95 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,18 +1,18 @@
 //
-//  SQAppFluecyMonitor.m
-//  SQAppFluecyMonitor
+//  SQFluecyMonitor.m
+//  SQFluecyMonitor
 //
 //  Created by 朱双泉 on 2020/9/25.
 //
 
-#import "SQAppFluecyMonitor.h"
+#import "SQFluecyMonitor.h"
 #import "SQBacktraceLogger.h"
 
 
 #define SQ_DEPRECATED_POLLUTE_MAIN_QUEUE
 
 
-@interface SQAppFluecyMonitor ()
+@interface SQFluecyMonitor ()
 
 @property (nonatomic, assign) int timeOut;
 @property (nonatomic, assign) BOOL isMonitoring;
@@ -95,12 +95,12 @@ static void SQRunLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopAc
 
 
 
-@implementation SQAppFluecyMonitor
+@implementation SQFluecyMonitor
 
 
 #pragma mark - Singleton override
 + (instancetype)sharedMonitor {
-    static SQAppFluecyMonitor * sharedMonitor;
+    static SQFluecyMonitor * sharedMonitor;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         sharedMonitor = [[super allocWithZone: NSDefaultMallocZone()] init];
