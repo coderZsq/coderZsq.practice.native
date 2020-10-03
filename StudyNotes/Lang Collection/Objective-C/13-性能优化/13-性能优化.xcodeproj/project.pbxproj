@@ -141,6 +141,7 @@
 			children = (
 				14BAB265251DA29F00389C95 /* 13-性能优化 */,
 				14BAB264251DA29F00389C95 /* Products */,
+				3F8BAF8DC93F4DFB6A3A9221 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +193,13 @@
 			path = backtrace;
 			sourceTree = "<group>";
 		};
+		3F8BAF8DC93F4DFB6A3A9221 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14BAB27C251DA2A000389C95 /* Build configuration list for PBXNativeTarget "13-性能优化" */;
 			buildPhases = (
+				5E600573DB846A513862BD61 /* [CP] Check Pods Manifest.lock */,
 				14BAB25F251DA29F00389C95 /* Sources */,
 				14BAB260251DA29F00389C95 /* Frameworks */,
 				14BAB261251DA29F00389C95 /* Resources */,
@@ -255,6 +264,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E600573DB846A513862BD61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-13-性能优化-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14BAB25F251DA29F00389C95 /* Sources */ = {

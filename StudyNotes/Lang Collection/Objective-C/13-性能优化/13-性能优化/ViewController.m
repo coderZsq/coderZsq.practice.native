@@ -30,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    int i = 0;
     NSLog(@"%s", __func__);
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
