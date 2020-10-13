@@ -34,12 +34,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="LfM-vT-faE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-Kf-pCa">
+                                <rect key="frame" x="369" y="832" width="25" height="24"/>
+                                <connections>
+                                    <action selector="sendAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lw-lc-QQo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3ge-1m-3D6" secondAttribute="bottom" id="Hu1-08-UEr"/>
+                            <constraint firstAttribute="bottom" secondItem="C9L-Kf-pCa" secondAttribute="bottom" constant="40" id="O2W-r8-PWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C9L-Kf-pCa" secondAttribute="trailing" constant="20" id="YxJ-1w-UAc"/>
                             <constraint firstItem="3ge-1m-3D6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eAq-dO-9Ce"/>
+                            <constraint firstItem="C9L-Kf-pCa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="lyg-2k-uUe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ge-1m-3D6" secondAttribute="trailing" id="nPv-dT-kPX"/>
                             <constraint firstItem="3ge-1m-3D6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ymd-eK-iig"/>
                         </constraints>

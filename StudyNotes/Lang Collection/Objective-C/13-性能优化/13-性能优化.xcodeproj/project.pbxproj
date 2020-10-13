@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142AA5E92535EC9200D17978 /* SQHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5E82535EC9200D17978 /* SQHook.m */; };
+		142AA5EE2535EDF600D17978 /* UIViewController+logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5ED2535EDF600D17978 /* UIViewController+logger.m */; };
+		142AA5F22535F05100D17978 /* UIControl+logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5F12535F05100D17978 /* UIControl+logger.m */; };
+		142AA5FF2536108400D17978 /* CrachReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5FE2536108400D17978 /* CrachReporter.m */; };
 		148381AF25256AB800F9929D /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 148381A025256AB800F9929D /* fishhook.c */; };
 		148381B025256AB800F9929D /* SQCallTraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A325256AB800F9929D /* SQCallTraceModel.m */; };
 		148381B125256AB800F9929D /* SQCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A425256AB800F9929D /* SQCallTrace.m */; };
@@ -23,7 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1424FC492525D490002F0A10 /* Hello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello.m; sourceTree = "<group>"; };
+		1424FC492525D490002F0A10 /* OCLint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLint.m; sourceTree = "<group>"; };
+		142AA5E22535E16200D17978 /* Clang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clang.m; sourceTree = "<group>"; };
+		142AA5E72535EC9200D17978 /* SQHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQHook.h; sourceTree = "<group>"; };
+		142AA5E82535EC9200D17978 /* SQHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQHook.m; sourceTree = "<group>"; };
+		142AA5EC2535EDF600D17978 /* UIViewController+logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+logger.h"; sourceTree = "<group>"; };
+		142AA5ED2535EDF600D17978 /* UIViewController+logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+logger.m"; sourceTree = "<group>"; };
+		142AA5F02535F05100D17978 /* UIControl+logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+logger.h"; sourceTree = "<group>"; };
+		142AA5F12535F05100D17978 /* UIControl+logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+logger.m"; sourceTree = "<group>"; };
+		142AA5F82536065100D17978 /* Infer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Infer.m; sourceTree = "<group>"; };
+		142AA5FE2536108400D17978 /* CrachReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrachReporter.m; sourceTree = "<group>"; };
 		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
 		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
@@ -74,9 +87,24 @@
 		1424FC4E2525D49E002F0A10 /* Lint */ = {
 			isa = PBXGroup;
 			children = (
-				1424FC492525D490002F0A10 /* Hello.m */,
+				1424FC492525D490002F0A10 /* OCLint.m */,
+				142AA5E22535E16200D17978 /* Clang.m */,
+				142AA5F82536065100D17978 /* Infer.m */,
 			);
 			path = Lint;
+			sourceTree = "<group>";
+		};
+		142AA5F42535F73300D17978 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				142AA5E72535EC9200D17978 /* SQHook.h */,
+				142AA5E82535EC9200D17978 /* SQHook.m */,
+				142AA5EC2535EDF600D17978 /* UIViewController+logger.h */,
+				142AA5ED2535EDF600D17978 /* UIViewController+logger.m */,
+				142AA5F02535F05100D17978 /* UIControl+logger.h */,
+				142AA5F12535F05100D17978 /* UIControl+logger.m */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		1483819D25256AB800F9929D /* SQCallTraceMonitor */ = {
@@ -159,12 +187,14 @@
 				149EE6582525C3230072EA03 /* Lib */,
 				149EE6572525C2F10072EA03 /* Link */,
 				1424FC4E2525D49E002F0A10 /* Lint */,
+				142AA5F42535F73300D17978 /* Logger */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
 				14BAB26A251DA29F00389C95 /* SceneDelegate.m */,
 				14BAB26C251DA29F00389C95 /* ViewController.h */,
 				14BAB26D251DA29F00389C95 /* ViewController.m */,
+				142AA5FE2536108400D17978 /* CrachReporter.m */,
 				14BAB26F251DA29F00389C95 /* Main.storyboard */,
 				14BAB272251DA2A000389C95 /* Assets.xcassets */,
 				14BAB274251DA2A000389C95 /* LaunchScreen.storyboard */,
@@ -300,9 +330,13 @@
 				14BAB287251DA2D400389C95 /* SQFluecyMonitor.m in Sources */,
 				148381B225256AB800F9929D /* SQCallTraceCore.c in Sources */,
 				148381B125256AB800F9929D /* SQCallTrace.m in Sources */,
+				142AA5FF2536108400D17978 /* CrachReporter.m in Sources */,
 				14BAB279251DA2A000389C95 /* main.m in Sources */,
 				14BAB268251DA29F00389C95 /* AppDelegate.m in Sources */,
+				142AA5EE2535EDF600D17978 /* UIViewController+logger.m in Sources */,
 				14BAB26B251DA29F00389C95 /* SceneDelegate.m in Sources */,
+				142AA5F22535F05100D17978 /* UIControl+logger.m in Sources */,
+				142AA5E92535EC9200D17978 /* SQHook.m in Sources */,
 				14BAB26E251DA29F00389C95 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

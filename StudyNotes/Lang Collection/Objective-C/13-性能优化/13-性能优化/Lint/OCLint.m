@@ -1,14 +1,14 @@
 //
-//  Hello.c
+//  OCLint.m
 //  13-性能优化
 //
 //  Created by 朱双泉 on 2020/10/1.
 //
 
-oclint Hello.m
+oclint OCLint.m
 
 //Error while trying to load a compilation database:
-//Could not auto-detect compilation database for file "Hello.m"
+//Could not auto-detect compilation database for file "OCLint.m"
 //No compilation database found in /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint or any parent directory
 //json-compilation-database: Error while opening JSON database: No such file or directory
 //Running without flags.
@@ -16,14 +16,14 @@ oclint Hello.m
 //Compiler Errors:
 //(please be aware that these errors will prevent OCLint from analyzing this source code)
 //
-///Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint/Hello.m:7:10: 'stdio.h' file not found
+///Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint/OCLint.m:7:10: 'stdio.h' file not found
 //
 //
 //OCLint Report
 //
 //Summary: TotalFiles=0 FilesWithViolations=0 P1=0 P2=0 P3=0
 
-oclint -report-type html -o report.html Hello.m
+oclint -report-type html -o report.html OCLint.m
 
 xcodebuild -project 13-性能优化.xcodeproj | tee xcodebuild.log | xcpretty -r json-compilation-database -o compile_commands.json
 

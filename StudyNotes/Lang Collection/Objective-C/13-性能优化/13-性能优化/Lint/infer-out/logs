@@ -1,0 +1,33 @@
+[31882][environment] CWD = /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint
+[31882][environment] No .inferconfig file found
+[31882][environment] Project root = /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint
+[31882][environment] INFER_ARGS =   command line arguments:   infer -- clang -c Infer.mActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), inefficient keyset iterator (Java), liveness (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java)
+[31882][environment] Infer log identifier is 
+Infer version v0.17.0
+[31882][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[31882][environment] 
+[31882][   progress] Capturing in make/cc mode...
+[31882][      debug] 
+[31882][      debug] *** Beginning capture of file /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint/Infer.m ***
+[31882][      debug] Clang frontend action is translating and linting
+[31882][      debug] Loading the following linters files: /usr/local/Cellar/infer/0.17.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[31882][      debug] Elapsed: 3.017s.
+[31882][      debug] 
+[31882][   progress] Found 1 source file to analyze in /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Lang Collection/Objective-C/13-性能优化/13-性能优化/Lint/infer-out
+[31882][environment] Parallel jobs: 8
+[31890][   progress] Infer.m starting
+[31890][   progress] Infer.m DONE
+[31882][   progress] 
+[31882][   progress] Analysis finished in 3.625ss
+[31882][      debug] collected stats:
+[31882][      debug] Backend stats:
+[31882][      debug]   summary_file_try_load= 16
+[31882][      debug]   summary_read_from_disk= 0
+[31882][      debug]   summary_cache_hits= 5 (38%)
+[31882][      debug]   summary_cache_misses= 8
+[31882][      debug]   summary_has_model_queries= 2
+[31882][      debug]   ondemand_procs_analyzed= 1
+[31882][      debug]   ondemand_local_cache_hits= 6 (75%)
+[31882][      debug]   ondemand_local_cache_misses= 2
+[31882][      debug]   
+[31882][      debug] 

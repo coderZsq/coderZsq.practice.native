@@ -28,6 +28,10 @@
     });
 }
 
+- (IBAction)sendAction:(UIButton *)sender {
+    NSLog(@"%s", __func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%s", __func__);
@@ -37,7 +41,6 @@
 - (void)viewDidAppear: (BOOL)animated {
     [super viewDidAppear: animated];
 }
-
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView: (UITableView *)tableView numberOfRowsInSection: (NSInteger)section {
