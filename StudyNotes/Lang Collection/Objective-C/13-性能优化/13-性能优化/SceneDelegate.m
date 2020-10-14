@@ -11,7 +11,7 @@
 #import "SQFluecyMonitor.h"
 
 @interface SceneDelegate ()
-
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 @end
 
 @implementation SceneDelegate
@@ -96,6 +96,17 @@
 
 - (void)sceneDidEnterBackground:(UIScene *)scene {
     NSLog(@"%s", __func__);
+    /**
+     而 Background Task 这种方式，就是系统提供了 beginBackgroundTaskWithExpirationHandler 方法来延长后台执行时间，可以解决你退后台后还需要一些时间去处理一些任务的诉求。
+     */
+    self.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        // 3m Task
+        /**
+         在这段代码中，yourTask 任务最多执行 3 分钟，3 分钟内 yourTask 运行完成，你的 App 就会挂起。 如果 yourTask 在 3 分钟之内没有执行完的话，系统会强制杀掉进程，从而造成崩溃，这就是为什么 App 退后台容易出现崩溃的原因。
+         
+         采用 Background Task 方式时，我们可以根据 beginBackgroundTaskWithExpirationHandler 会让后台保活 3 分钟这个阈值，先设置一个计时器，在接近 3 分钟时判断后台程序是否还在执行。如果还在执行的话，我们就可以判断该程序即将后台崩溃，进行上报、记录，以达到监控的效果。
+         */
+    }];
 }
 
 
