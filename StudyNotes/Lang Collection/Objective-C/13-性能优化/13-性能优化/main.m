@@ -38,8 +38,80 @@
  4 控制 C++ 全局变量的数量。
  */
 
+static int s_fatal_signals[] = {
+    SIGABRT,
+    SIGBUS,
+    SIGFPE,
+    SIGILL,
+    SIGSEGV,
+    SIGTRAP,
+    SIGTERM,
+    SIGKILL,
+};
+
+static int s_fatal_signal_num = sizeof(s_fatal_signals) / sizeof(s_fatal_signals[0]);
+
+void UncaughtExceptionHandler(NSException *exception) {
+    NSArray *exceptionArray = [exception callStackSymbols]; //得到当前调用栈信息
+    NSString *exceptionReason = [exception reason];       //非常重要，就是崩溃的原因
+    NSString *exceptionName = [exception name];           //异常类型
+}
+
+void SignalHandler(int code)
+{
+    NSLog(@"signal handler = %d",code);
+}
+
+void InitCrashReport()
+{
+    //系统错误信号捕获
+    for (int i = 0; i < s_fatal_signal_num; ++i) {
+        signal(s_fatal_signals[i], SignalHandler);
+    }
+    
+    //oc未捕获异常的捕获
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+}
+
+//// 获取数据
+//NSData *lagData = [[[PLCrashReporter alloc] initWithConfiguration:[[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll]] generateLiveReport];
+//// 转换成 PLCrashReport 对象
+//PLCrashReport *lagReport = [[PLCrashReport alloc] initWithData:lagData error:NULL];
+//// 进行字符串格式化处理
+//NSString *lagReportString = [PLCrashReportTextFormatter stringValueForCrashReport:lagReport withTextFormat:PLCrashReportTextFormatiOS];
+////将字符串上传服务器
+//NSLog(@"lag happen, detail below: \n %@",lagReportString);
+
+
+//接下来，我们就看看 iOS 10 之后，如何来获取 NSLog 日志。
+//统一日志系统的方式，是把日志集中存放在内存和数据库里，并提供单一、高效和高性能的接口去获取系统所有级别的消息传递。
+//macOS 10.12 开始使用了统一日志系统，我们通过控制台应用程序或日志命令行工具，就可以查看到日志消息。
+//但是，新的统一日志系统没有 ASL 那样的接口可以让我们取出全部日志，所以为了兼容新的统一日志系统，你就需要对 NSLog 日志的输出进行重定向。
+//对 NSLog 进行重定向，我们首先想到的就是采用 Hook 的方式。
+//因为 NSLog 本身就是一个 C 函数，而不是 Objective-C 方法，所以我们就可以使用 fishhook 来完成重定向的工作。具体的实现代码如下所示：
+
+//static void (&orig_nslog)(NSString *format, ...);
+//
+//void redirect_nslog(NSString *format, ...) {
+//    // 可以在这里先进行自己的处理
+//
+//    // 继续执行原 NSLog
+//    va_list va;
+//    va_start(va, format);
+//    NSLogv(format, va);
+//    va_end(va);
+//}
+
 int main(int argc, char * argv[]) {
+    InitCrashReport();
     [SQCallTrace start];
+    
+//    struct rebinding nslog_rebinding = {"NSLog",redirect_nslog,(void*)&orig_nslog};
+//    NSLog(@"try redirect nslog %@,%d",@"is that ok?");
+
+//    int fd = open(path, (O_RDWR | O_CREAT), 0644);
+//    dup2(fd, STDERR_FILENO);
+    
     NSLog(@"%s", __func__);
     NSString * appDelegateClassName;
     @autoreleasepool {

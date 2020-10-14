@@ -11,6 +11,9 @@
 		142AA5EE2535EDF600D17978 /* UIViewController+logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5ED2535EDF600D17978 /* UIViewController+logger.m */; };
 		142AA5F22535F05100D17978 /* UIControl+logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5F12535F05100D17978 /* UIControl+logger.m */; };
 		142AA5FF2536108400D17978 /* CrachReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA5FE2536108400D17978 /* CrachReporter.m */; };
+		142AA61E2536BAEC00D17978 /* CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA61D2536BAEC00D17978 /* CPU.m */; };
+		142AA6222536BD0900D17978 /* FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA6212536BD0900D17978 /* FPS.m */; };
+		142AA6262536BEFB00D17978 /* MEM.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA6252536BEFB00D17978 /* MEM.m */; };
 		148381AF25256AB800F9929D /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 148381A025256AB800F9929D /* fishhook.c */; };
 		148381B025256AB800F9929D /* SQCallTraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A325256AB800F9929D /* SQCallTraceModel.m */; };
 		148381B125256AB800F9929D /* SQCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A425256AB800F9929D /* SQCallTrace.m */; };
@@ -37,6 +40,16 @@
 		142AA5F12535F05100D17978 /* UIControl+logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+logger.m"; sourceTree = "<group>"; };
 		142AA5F82536065100D17978 /* Infer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Infer.m; sourceTree = "<group>"; };
 		142AA5FE2536108400D17978 /* CrachReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrachReporter.m; sourceTree = "<group>"; };
+		142AA6082536A62E00D17978 /* RunLoop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RunLoop.c; sourceTree = "<group>"; };
+		142AA60E2536B37F00D17978 /* OOM.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = OOM.c; sourceTree = "<group>"; };
+		142AA6142536B60800D17978 /* DDASLLogCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogCapture.h; sourceTree = "<group>"; };
+		142AA6152536B60800D17978 /* DDASLLogCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
+		142AA61C2536BAEB00D17978 /* CPU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPU.h; sourceTree = "<group>"; };
+		142AA61D2536BAEC00D17978 /* CPU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPU.m; sourceTree = "<group>"; };
+		142AA6202536BD0900D17978 /* FPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPS.h; sourceTree = "<group>"; };
+		142AA6212536BD0900D17978 /* FPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPS.m; sourceTree = "<group>"; };
+		142AA6242536BEFB00D17978 /* MEM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEM.h; sourceTree = "<group>"; };
+		142AA6252536BEFB00D17978 /* MEM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEM.m; sourceTree = "<group>"; };
 		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
 		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
@@ -94,7 +107,7 @@
 			path = Lint;
 			sourceTree = "<group>";
 		};
-		142AA5F42535F73300D17978 /* Logger */ = {
+		142AA5F42535F73300D17978 /* Track */ = {
 			isa = PBXGroup;
 			children = (
 				142AA5E72535EC9200D17978 /* SQHook.h */,
@@ -104,7 +117,53 @@
 				142AA5F02535F05100D17978 /* UIControl+logger.h */,
 				142AA5F12535F05100D17978 /* UIControl+logger.m */,
 			);
-			path = Logger;
+			path = Track;
+			sourceTree = "<group>";
+		};
+		142AA6052536A60C00D17978 /* Crach */ = {
+			isa = PBXGroup;
+			children = (
+				142AA5FE2536108400D17978 /* CrachReporter.m */,
+			);
+			path = Crach;
+			sourceTree = "<group>";
+		};
+		142AA60D2536AE6E00D17978 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				142AA6082536A62E00D17978 /* RunLoop.c */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		142AA6132536B4DB00D17978 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				142AA60E2536B37F00D17978 /* OOM.c */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		142AA61A2536B7D500D17978 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				142AA6142536B60800D17978 /* DDASLLogCapture.h */,
+				142AA6152536B60800D17978 /* DDASLLogCapture.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		142AA6282536BF9800D17978 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				142AA61C2536BAEB00D17978 /* CPU.h */,
+				142AA61D2536BAEC00D17978 /* CPU.m */,
+				142AA6202536BD0900D17978 /* FPS.h */,
+				142AA6212536BD0900D17978 /* FPS.m */,
+				142AA6242536BEFB00D17978 /* MEM.h */,
+				142AA6252536BEFB00D17978 /* MEM.m */,
+			);
+			path = Monitor;
 			sourceTree = "<group>";
 		};
 		1483819D25256AB800F9929D /* SQCallTraceMonitor */ = {
@@ -187,14 +246,18 @@
 				149EE6582525C3230072EA03 /* Lib */,
 				149EE6572525C2F10072EA03 /* Link */,
 				1424FC4E2525D49E002F0A10 /* Lint */,
-				142AA5F42535F73300D17978 /* Logger */,
+				142AA5F42535F73300D17978 /* Track */,
+				142AA6052536A60C00D17978 /* Crach */,
+				142AA60D2536AE6E00D17978 /* RunLoop */,
+				142AA6132536B4DB00D17978 /* Memory */,
+				142AA61A2536B7D500D17978 /* Log */,
+				142AA6282536BF9800D17978 /* Monitor */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
 				14BAB26A251DA29F00389C95 /* SceneDelegate.m */,
 				14BAB26C251DA29F00389C95 /* ViewController.h */,
 				14BAB26D251DA29F00389C95 /* ViewController.m */,
-				142AA5FE2536108400D17978 /* CrachReporter.m */,
 				14BAB26F251DA29F00389C95 /* Main.storyboard */,
 				14BAB272251DA2A000389C95 /* Assets.xcassets */,
 				14BAB274251DA2A000389C95 /* LaunchScreen.storyboard */,
@@ -329,10 +392,13 @@
 				148381AF25256AB800F9929D /* fishhook.c in Sources */,
 				14BAB287251DA2D400389C95 /* SQFluecyMonitor.m in Sources */,
 				148381B225256AB800F9929D /* SQCallTraceCore.c in Sources */,
+				142AA6262536BEFB00D17978 /* MEM.m in Sources */,
 				148381B125256AB800F9929D /* SQCallTrace.m in Sources */,
 				142AA5FF2536108400D17978 /* CrachReporter.m in Sources */,
 				14BAB279251DA2A000389C95 /* main.m in Sources */,
 				14BAB268251DA29F00389C95 /* AppDelegate.m in Sources */,
+				142AA6222536BD0900D17978 /* FPS.m in Sources */,
+				142AA61E2536BAEC00D17978 /* CPU.m in Sources */,
 				142AA5EE2535EDF600D17978 /* UIViewController+logger.m in Sources */,
 				14BAB26B251DA29F00389C95 /* SceneDelegate.m in Sources */,
 				142AA5F22535F05100D17978 /* UIControl+logger.m in Sources */,

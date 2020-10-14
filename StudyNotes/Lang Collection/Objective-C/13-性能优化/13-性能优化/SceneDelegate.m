@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "SQCallTrace.h"
 #import "SQFluecyMonitor.h"
+#import "CPU.h"
+#import "MEM.h"
 
 @interface SceneDelegate ()
 @property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
@@ -67,6 +69,8 @@
     dispatch_async(dispatch_queue_create("串行队列", DISPATCH_QUEUE_SERIAL), ^{
         // 耗时操作...
         [[SQFluecyMonitor sharedMonitor] startMonitoring];
+        NSLog(@"CPU %d", [CPU cpuUsage]);
+        NSLog(@"MEM %llu", memoryUsage());
     });
     
     [SQCallTrace stop];
