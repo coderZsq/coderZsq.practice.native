@@ -125,12 +125,12 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
-		142AA6052536A60C00D17978 /* Crach */ = {
+		142AA6052536A60C00D17978 /* Crash */ = {
 			isa = PBXGroup;
 			children = (
 				142AA5FE2536108400D17978 /* CrachReporter.m */,
 			);
-			path = Crach;
+			path = Crash;
 			sourceTree = "<group>";
 		};
 		142AA60D2536AE6E00D17978 /* RunLoop */ = {
@@ -263,7 +263,7 @@
 				149EE6572525C2F10072EA03 /* Link */,
 				1424FC4E2525D49E002F0A10 /* Lint */,
 				142AA5F42535F73300D17978 /* Track */,
-				142AA6052536A60C00D17978 /* Crach */,
+				142AA6052536A60C00D17978 /* Crash */,
 				142AA60D2536AE6E00D17978 /* RunLoop */,
 				142AA6132536B4DB00D17978 /* Memory */,
 				142AA61A2536B7D500D17978 /* Log */,
