@@ -50,6 +50,10 @@
 		142AA6212536BD0900D17978 /* FPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPS.m; sourceTree = "<group>"; };
 		142AA6242536BEFB00D17978 /* MEM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEM.h; sourceTree = "<group>"; };
 		142AA6252536BEFB00D17978 /* MEM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEM.m; sourceTree = "<group>"; };
+		142AA62A2536C36C00D17978 /* Battery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Battery.h; sourceTree = "<group>"; };
+		142AA62B2536C36C00D17978 /* Battery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Battery.m; sourceTree = "<group>"; };
+		142AA6552536C61A00D17978 /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
+		142AA6562536C61A00D17978 /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
 		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
 		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		148381C6252578F400F9929D /* Boy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boy.h; sourceTree = "<group>"; };
 		148381C7252578F400F9929D /* Boy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boy.m; sourceTree = "<group>"; };
 		148381CB25257AF200F9929D /* SayHi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SayHi.m; sourceTree = "<group>"; };
+		14A674392536CB18006657EF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 		14BAB263251DA29F00389C95 /* 13-性能优化.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13-性能优化.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BAB266251DA29F00389C95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14BAB267251DA29F00389C95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -223,6 +228,17 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		14A674482536D392006657EF /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				142AA62A2536C36C00D17978 /* Battery.h */,
+				142AA62B2536C36C00D17978 /* Battery.m */,
+				142AA6562536C61A00D17978 /* IOPowerSources.h */,
+				142AA6552536C61A00D17978 /* IOPSKeys.h */,
+			);
+			path = Battery;
+			sourceTree = "<group>";
+		};
 		14BAB25A251DA29F00389C95 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +268,7 @@
 				142AA6132536B4DB00D17978 /* Memory */,
 				142AA61A2536B7D500D17978 /* Log */,
 				142AA6282536BF9800D17978 /* Monitor */,
+				14A674482536D392006657EF /* Battery */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
@@ -289,6 +306,7 @@
 		3F8BAF8DC93F4DFB6A3A9221 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14A674392536CB18006657EF /* IOKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -548,6 +566,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/13-性能优化",
+				);
 				INFOPLIST_FILE = "13-性能优化/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,6 +590,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/13-性能优化",
+				);
 				INFOPLIST_FILE = "13-性能优化/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
