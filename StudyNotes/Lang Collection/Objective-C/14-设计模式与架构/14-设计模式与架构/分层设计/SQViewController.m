@@ -5,14 +5,14 @@
 //  Created by 朱双泉 on 2020/9/25.
 //
 
-#import "ViewController.h"
+#import "SQViewController.h"
 #import "SQNewsService.h"
 
-@interface ViewController ()
+@interface SQViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SQViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
