@@ -14,6 +14,7 @@
 		142AA61E2536BAEC00D17978 /* CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA61D2536BAEC00D17978 /* CPU.m */; };
 		142AA6222536BD0900D17978 /* FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA6212536BD0900D17978 /* FPS.m */; };
 		142AA6262536BEFB00D17978 /* MEM.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AA6252536BEFB00D17978 /* MEM.m */; };
+		143CE51525680D6500E98365 /* SQFishhook.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE51325680D6400E98365 /* SQFishhook.m */; };
 		148381AF25256AB800F9929D /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 148381A025256AB800F9929D /* fishhook.c */; };
 		148381B025256AB800F9929D /* SQCallTraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A325256AB800F9929D /* SQCallTraceModel.m */; };
 		148381B125256AB800F9929D /* SQCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 148381A425256AB800F9929D /* SQCallTrace.m */; };
@@ -54,6 +55,8 @@
 		142AA62B2536C36C00D17978 /* Battery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Battery.m; sourceTree = "<group>"; };
 		142AA6552536C61A00D17978 /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
 		142AA6562536C61A00D17978 /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		143CE51325680D6400E98365 /* SQFishhook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQFishhook.m; sourceTree = "<group>"; };
+		143CE51425680D6400E98365 /* SQFishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFishhook.h; sourceTree = "<group>"; };
 		1483819E25256AB800F9929D /* SQCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCallTrace.h; sourceTree = "<group>"; };
 		148381A025256AB800F9929D /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		148381A125256AB800F9929D /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
@@ -171,6 +174,15 @@
 			path = Monitor;
 			sourceTree = "<group>";
 		};
+		143CE51625680D6F00E98365 /* FishHook */ = {
+			isa = PBXGroup;
+			children = (
+				143CE51425680D6400E98365 /* SQFishhook.h */,
+				143CE51325680D6400E98365 /* SQFishhook.m */,
+			);
+			path = FishHook;
+			sourceTree = "<group>";
+		};
 		1483819D25256AB800F9929D /* SQCallTraceMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +281,7 @@
 				142AA61A2536B7D500D17978 /* Log */,
 				142AA6282536BF9800D17978 /* Monitor */,
 				14A674482536D392006657EF /* Battery */,
+				143CE51625680D6F00E98365 /* FishHook */,
 				14BAB266251DA29F00389C95 /* AppDelegate.h */,
 				14BAB267251DA29F00389C95 /* AppDelegate.m */,
 				14BAB269251DA29F00389C95 /* SceneDelegate.h */,
@@ -411,6 +424,7 @@
 				14BAB287251DA2D400389C95 /* SQFluecyMonitor.m in Sources */,
 				148381B225256AB800F9929D /* SQCallTraceCore.c in Sources */,
 				142AA6262536BEFB00D17978 /* MEM.m in Sources */,
+				143CE51525680D6500E98365 /* SQFishhook.m in Sources */,
 				148381B125256AB800F9929D /* SQCallTrace.m in Sources */,
 				142AA5FF2536108400D17978 /* CrachReporter.m in Sources */,
 				14BAB279251DA2A000389C95 /* main.m in Sources */,
