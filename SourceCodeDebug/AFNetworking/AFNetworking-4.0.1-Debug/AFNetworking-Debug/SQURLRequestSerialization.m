@@ -6,7 +6,6 @@
 //
 
 #import "SQURLRequestSerialization.h"
-#import "SQQueryStringPair.h"
 
 @implementation SQURLRequestSerialization
 

@@ -822,7 +822,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
         return self.request;
     }
 
-    // Reset the initial and final boundaries to ensure correct Content-Length
+    // 重置初始和最终边界，以确保正确的内容长度
     [self.bodyStream setInitialAndFinalBoundaries];
     [self.request setHTTPBodyStream:self.bodyStream];
 

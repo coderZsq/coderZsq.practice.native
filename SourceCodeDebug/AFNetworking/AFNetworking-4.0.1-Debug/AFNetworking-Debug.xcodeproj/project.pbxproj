@@ -18,6 +18,7 @@
 		14A334922568D62500772436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A334912568D62500772436 /* Assets.xcassets */; };
 		14A334952568D62500772436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A334932568D62500772436 /* LaunchScreen.storyboard */; };
 		14A334982568D62500772436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A334972568D62500772436 /* main.m */; };
+		14A998C02573D94E00C12076 /* SQStreamingMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A998BF2573D94E00C12076 /* SQStreamingMultipartFormData.m */; };
 		14ED0256256A480700D370FD /* SQQueryStringPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ED0255256A480700D370FD /* SQQueryStringPair.m */; };
 		14ED0267256A4AD700D370FD /* SQURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ED0266256A4AD700D370FD /* SQURLRequestSerialization.m */; };
 		1E4C433D320B90193A1EE719 /* Pods_AFNetworking_Debug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E27C56A0FCB7F71F556F4D1 /* Pods_AFNetworking_Debug.framework */; };
@@ -55,6 +56,9 @@
 		14A334942568D62500772436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14A334962568D62500772436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A334972568D62500772436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14A998BE2573D94E00C12076 /* SQStreamingMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQStreamingMultipartFormData.h; sourceTree = "<group>"; };
+		14A998BF2573D94E00C12076 /* SQStreamingMultipartFormData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQStreamingMultipartFormData.m; sourceTree = "<group>"; };
+		14A998C32573D9BD00C12076 /* SQMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMultipartFormData.h; sourceTree = "<group>"; };
 		14ED0254256A480700D370FD /* SQQueryStringPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQQueryStringPair.h; sourceTree = "<group>"; };
 		14ED0255256A480700D370FD /* SQQueryStringPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQQueryStringPair.m; sourceTree = "<group>"; };
 		14ED0265256A4AD700D370FD /* SQURLRequestSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQURLRequestSerialization.h; sourceTree = "<group>"; };
@@ -127,6 +131,9 @@
 				14963572256BEC5200B1E31B /* SQHTTPBodyPart.m */,
 				14560564256E957F00746C4A /* SQMultipartBodyStream.h */,
 				14560565256E957F00746C4A /* SQMultipartBodyStream.m */,
+				14A998C32573D9BD00C12076 /* SQMultipartFormData.h */,
+				14A998BE2573D94E00C12076 /* SQStreamingMultipartFormData.h */,
+				14A998BF2573D94E00C12076 /* SQStreamingMultipartFormData.m */,
 				14ED0265256A4AD700D370FD /* SQURLRequestSerialization.h */,
 				14ED0266256A4AD700D370FD /* SQURLRequestSerialization.m */,
 				14A3348E2568D62400772436 /* Main.storyboard */,
@@ -311,6 +318,7 @@
 				14963573256BEC5200B1E31B /* SQHTTPBodyPart.m in Sources */,
 				14560566256E957F00746C4A /* SQMultipartBodyStream.m in Sources */,
 				14A334872568D62400772436 /* AppDelegate.m in Sources */,
+				14A998C02573D94E00C12076 /* SQStreamingMultipartFormData.m in Sources */,
 				14ED0267256A4AD700D370FD /* SQURLRequestSerialization.m in Sources */,
 				14A334982568D62500772436 /* main.m in Sources */,
 				14A3348A2568D62400772436 /* SceneDelegate.m in Sources */,
