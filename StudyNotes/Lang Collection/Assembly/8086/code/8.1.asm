@@ -1,0 +1,6 @@
+mov ax, [bx]
+mov ax, [bx+si]
+mov ax, [bx+di]
+mov ax, [bp]
+mov ax, [bp+si]
+mov ax, [bp+si]
