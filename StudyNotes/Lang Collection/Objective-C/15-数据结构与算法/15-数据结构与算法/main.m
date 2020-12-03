@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SQMutableArray.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSLog(@"%zd", sizeof(id));
     }
     return 0;
 }

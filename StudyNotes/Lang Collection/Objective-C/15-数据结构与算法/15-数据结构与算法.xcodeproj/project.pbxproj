@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1410A995256FB1330071DF67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410A994256FB1330071DF67 /* main.m */; };
-		144D9979256FB19200853E8B /* SQArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 144D9978256FB19200853E8B /* SQArrayList.m */; };
+		1418CB8D2577CE210010A124 /* SQMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1418CB8C2577CE210010A124 /* SQMutableArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		1410A991256FB1330071DF67 /* 15-数据结构与算法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "15-数据结构与算法"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1410A994256FB1330071DF67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		144D9977256FB19200853E8B /* SQArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQArrayList.h; sourceTree = "<group>"; };
-		144D9978256FB19200853E8B /* SQArrayList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQArrayList.m; sourceTree = "<group>"; };
+		1418CB8B2577CE210010A124 /* SQMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMutableArray.h; sourceTree = "<group>"; };
+		1418CB8C2577CE210010A124 /* SQMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQMutableArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 		144D997B256FB19A00853E8B /* 动态数组 */ = {
 			isa = PBXGroup;
 			children = (
-				144D9977256FB19200853E8B /* SQArrayList.h */,
-				144D9978256FB19200853E8B /* SQArrayList.m */,
+				1418CB8B2577CE210010A124 /* SQMutableArray.h */,
+				1418CB8C2577CE210010A124 /* SQMutableArray.m */,
 			);
 			path = "动态数组";
 			sourceTree = "<group>";
@@ -131,8 +131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1418CB8D2577CE210010A124 /* SQMutableArray.m in Sources */,
 				1410A995256FB1330071DF67 /* main.m in Sources */,
-				144D9979256FB19200853E8B /* SQArrayList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
