@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142183D625836A15004689D4 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 142183D525836A15004689D4 /* LinkList.c */; };
 		14CF7D132579FDFA0037A20B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF7D122579FDFA0037A20B /* main.m */; };
 		14CF7D1C2579FE2C0037A20B /* SQMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF7D1B2579FE2C0037A20B /* SQMutableArray.m */; };
-		14EF04702581EF300042AA80 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 14EF046F2581EF300042AA80 /* ArrayList.c */; };
 		14EF0475258328920042AA80 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF0474258328920042AA80 /* Dog.m */; };
 		14EF047925833E660042AA80 /* NSArray+Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF047825833E660042AA80 /* NSArray+Address.m */; };
 		14EF04E8258361C10042AA80 /* ArrayListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF04E7258361C10042AA80 /* ArrayListTests.m */; };
@@ -28,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		142183D425836A15004689D4 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		142183D525836A15004689D4 /* LinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
 		14CF7D0F2579FDFA0037A20B /* 15-数据结构与算法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "15-数据结构与算法"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CF7D122579FDFA0037A20B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14CF7D1A2579FE2C0037A20B /* SQMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMutableArray.h; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 			children = (
 				14EF04E325835B560042AA80 /* 动态数组 */,
 				14CF7D122579FDFA0037A20B /* main.m */,
+				142183D425836A15004689D4 /* LinkList.h */,
+				142183D525836A15004689D4 /* LinkList.c */,
 			);
 			path = "15-数据结构与算法";
 			sourceTree = "<group>";
@@ -157,9 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EF04702581EF300042AA80 /* ArrayList.c in Sources */,
 				14EF04E8258361C10042AA80 /* ArrayListTests.m in Sources */,
 				14EF047925833E660042AA80 /* NSArray+Address.m in Sources */,
+				142183D625836A15004689D4 /* LinkList.c in Sources */,
 				14CF7D1C2579FE2C0037A20B /* SQMutableArray.m in Sources */,
 				14EF0475258328920042AA80 /* Dog.m in Sources */,
 				14CF7D132579FDFA0037A20B /* main.m in Sources */,

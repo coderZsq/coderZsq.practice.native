@@ -13,7 +13,7 @@ static const NSInteger ELEMENT_NOT_FOUND = -1;
 typedef void * Element;
 
 @interface SQMutableArray () {
-    /// 元素的容量
+    /// 数组容量
     NSUInteger capacity;
     /// 元素的数量
     NSUInteger size;
