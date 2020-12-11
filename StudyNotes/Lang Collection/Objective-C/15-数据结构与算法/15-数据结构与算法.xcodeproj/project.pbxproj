@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		14CF7D132579FDFA0037A20B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF7D122579FDFA0037A20B /* main.m */; };
 		14CF7D1C2579FE2C0037A20B /* SQMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF7D1B2579FE2C0037A20B /* SQMutableArray.m */; };
+		14EF04702581EF300042AA80 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 14EF046F2581EF300042AA80 /* ArrayList.c */; };
+		14EF0475258328920042AA80 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF0474258328920042AA80 /* Dog.m */; };
+		14EF047925833E660042AA80 /* NSArray+Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF047825833E660042AA80 /* NSArray+Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		14CF7D122579FDFA0037A20B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14CF7D1A2579FE2C0037A20B /* SQMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMutableArray.h; sourceTree = "<group>"; };
 		14CF7D1B2579FE2C0037A20B /* SQMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQMutableArray.m; sourceTree = "<group>"; };
+		14EF046E2581EF300042AA80 /* ArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
+		14EF046F2581EF300042AA80 /* ArrayList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayList.c; sourceTree = "<group>"; };
+		14EF0473258328920042AA80 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		14EF0474258328920042AA80 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		14EF047725833E660042AA80 /* NSArray+Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Address.h"; sourceTree = "<group>"; };
+		14EF047825833E660042AA80 /* NSArray+Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Address.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +69,33 @@
 		14CF7D112579FDFA0037A20B /* 15-数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
-				14CF7D1A2579FE2C0037A20B /* SQMutableArray.h */,
-				14CF7D1B2579FE2C0037A20B /* SQMutableArray.m */,
+				14EF04E325835B560042AA80 /* 动态数组 */,
 				14CF7D122579FDFA0037A20B /* main.m */,
 			);
 			path = "15-数据结构与算法";
+			sourceTree = "<group>";
+		};
+		14EF04E125835B3E0042AA80 /* C实现 */ = {
+			isa = PBXGroup;
+			children = (
+				14EF046E2581EF300042AA80 /* ArrayList.h */,
+				14EF046F2581EF300042AA80 /* ArrayList.c */,
+				14EF0473258328920042AA80 /* Dog.h */,
+				14EF0474258328920042AA80 /* Dog.m */,
+				14EF047725833E660042AA80 /* NSArray+Address.h */,
+				14EF047825833E660042AA80 /* NSArray+Address.m */,
+			);
+			path = "C实现";
+			sourceTree = "<group>";
+		};
+		14EF04E325835B560042AA80 /* 动态数组 */ = {
+			isa = PBXGroup;
+			children = (
+				14EF04E125835B3E0042AA80 /* C实现 */,
+				14CF7D1A2579FE2C0037A20B /* SQMutableArray.h */,
+				14CF7D1B2579FE2C0037A20B /* SQMutableArray.m */,
+			);
+			path = "动态数组";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EF04702581EF300042AA80 /* ArrayList.c in Sources */,
+				14EF047925833E660042AA80 /* NSArray+Address.m in Sources */,
 				14CF7D1C2579FE2C0037A20B /* SQMutableArray.m in Sources */,
+				14EF0475258328920042AA80 /* Dog.m in Sources */,
 				14CF7D132579FDFA0037A20B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

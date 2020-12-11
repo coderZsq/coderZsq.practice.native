@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SQMutableArray<ObjectType : NSObject*> : NSObject
+@interface SQMutableArray : NSObject
 
 /// 元素的数量
 @property (nonatomic, assign, readonly) NSUInteger count;
@@ -19,33 +19,33 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否包含某个元素
 /// @param anObject 元素
-- (BOOL)containsObject:(ObjectType)anObject;
+- (BOOL)containsObject:(NSObject *)anObject;
 
 /// 添加元素到最后面
 /// @param anObject 元素
-- (void)addObject:(ObjectType)anObject;
+- (void)addObject:(NSObject *)anObject;
 
 /// 返回index位置对应的元素
 /// @param index 索引
-- (ObjectType)objectAtIndex:(NSUInteger)index;
+- (NSObject *)objectAtIndex:(NSUInteger)index;
 
 /// 设置index位置的元素
 /// @param obj 元素
 /// @param idx 索引
-- (ObjectType)setObject:(ObjectType)obj atIndexedSubscript:(NSUInteger)idx;
+- (NSObject *)setObject:(NSObject *)obj atIndexedSubscript:(NSUInteger)idx;
 
 /// 在index位置插入一个元素
 /// @param anObject 元素
 /// @param index 索引
-- (void)addObject:(id)anObject atIndex:(NSUInteger)index;
+- (void)addObject:(NSObject *)anObject atIndex:(NSUInteger)index;
 
 /// 删除index位置对应的元素
 /// @param index 索引
-- (ObjectType)removeObjectAtIndex:(NSUInteger)index;
+- (NSObject *)removeObjectAtIndex:(NSUInteger)index;
 
 /// 查看元素的位置
 /// @param anObject 元素
-- (NSUInteger)indexOfObject:(ObjectType)anObject;
+- (NSUInteger)indexOfObject:(NSObject *)anObject;
 
 /// 清除所有元素
 - (void)removeAllObjects;
