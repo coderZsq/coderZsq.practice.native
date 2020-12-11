@@ -12,6 +12,7 @@
 		14EF04702581EF300042AA80 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 14EF046F2581EF300042AA80 /* ArrayList.c */; };
 		14EF0475258328920042AA80 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF0474258328920042AA80 /* Dog.m */; };
 		14EF047925833E660042AA80 /* NSArray+Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF047825833E660042AA80 /* NSArray+Address.m */; };
+		14EF04E8258361C10042AA80 /* ArrayListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EF04E7258361C10042AA80 /* ArrayListTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		14EF0474258328920042AA80 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		14EF047725833E660042AA80 /* NSArray+Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Address.h"; sourceTree = "<group>"; };
 		14EF047825833E660042AA80 /* NSArray+Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Address.m"; sourceTree = "<group>"; };
+		14EF04E7258361C10042AA80 /* ArrayListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayListTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				14EF0474258328920042AA80 /* Dog.m */,
 				14EF047725833E660042AA80 /* NSArray+Address.h */,
 				14EF047825833E660042AA80 /* NSArray+Address.m */,
+				14EF04E7258361C10042AA80 /* ArrayListTests.m */,
 			);
 			path = "C实现";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EF04702581EF300042AA80 /* ArrayList.c in Sources */,
+				14EF04E8258361C10042AA80 /* ArrayListTests.m in Sources */,
 				14EF047925833E660042AA80 /* NSArray+Address.m in Sources */,
 				14CF7D1C2579FE2C0037A20B /* SQMutableArray.m in Sources */,
 				14EF0475258328920042AA80 /* Dog.m in Sources */,
