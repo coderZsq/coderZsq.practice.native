@@ -1,0 +1,5 @@
+target 'App' do 
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'CocoaLumberjack'
+end
