@@ -10,7 +10,8 @@ public:
     explicit Sender(QObject *parent = nullptr);
 
 signals:
-    void exit();
+    int exit(int n1, int n2);
+    void exit2(int n1, int n2);
 };
 
 #endif // SENDER_H

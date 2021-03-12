@@ -10,7 +10,8 @@ public:
     explicit Receiver(QObject *parent = nullptr);
 
 public slots:
-   void handleExit();
+   int handleExit(int n1, int n2);
+   void handleExit2(int n1, int n2);
 };
 
 #endif // RECEIVER_H
