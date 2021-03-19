@@ -1,9 +1,7 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "audiothread.h"
 
 #include <QDebug>
 #include <QFile>
-#include <QThread>
 
 extern "C" {
 // 设备
@@ -27,24 +25,27 @@ extern "C" {
     #define FILENAME "/Users/zhushuangquan/Desktop/out.pcm"
 #endif
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow) {
-    ui->setupUi(this);
-
-    qDebug() << "MainWindow" << QThread::currentThread();
+AudioThread::AudioThread(QObject *parent) : QThread(parent) {
+    // 当监听到线程结束时（finished），就调用deleteLater回收内存
+    connect(this, &AudioThread::finished,
+            this, &AudioThread::deleteLater);
 }
 
-MainWindow::~MainWindow() {
-    delete ui;
+AudioThread::~AudioThread() {
+    // 内存回收之前，正常结束线程
+    requestInterruption();
+    // 安全退出
+    quit();
+    wait();
+    qDebug() << this << "析构（内存被回收）";
 }
 
-void MainWindow::on_audioButton_clicked() {
+// 当线程启动的时候（start），就会自动调用run函数
+// run函数中的代码是在子线程中执行的
+// 耗时操作应该放在run函数中
+void AudioThread::run() {
+    qDebug() << this << "开始执行----------";
 
-
-    qDebug() << "on_audioButton_clicked" << QThread::currentThread();
-
-    return;
     // 获取输入格式对象
     AVInputFormat *fmt = av_find_input_format(FMT_NAME);
     if (!fmt) {
@@ -76,16 +77,17 @@ void MainWindow::on_audioButton_clicked() {
         return;
     }
 
-    // 采集的次数
-    int count = 50;
-
     // 数据包
     AVPacket pkt;
     // 不断采集数据
-    while (count-- > 0 && av_read_frame(ctx, &pkt) == 0) {
+    while (!isInterruptionRequested() && av_read_frame(ctx, &pkt) == 0) {
         // 将数据写入文件
         file.write((const char *) pkt.data, pkt.size);
     }
+//    while (!_stop && av_read_frame(ctx, &pkt) == 0) {
+//        // 将数据写入文件
+//        file.write((const char *) pkt.data, pkt.size);
+//    }
 
     // 释放资源
     // 关闭文件
@@ -93,4 +95,10 @@ void MainWindow::on_audioButton_clicked() {
 
     // 关闭设备
     avformat_close_input(&ctx);
+
+    qDebug() << this << "正常结束----------";
+}
+
+void AudioThread::setStop(bool stop) {
+    _stop = stop;
 }
