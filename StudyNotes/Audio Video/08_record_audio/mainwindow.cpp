@@ -23,7 +23,7 @@ extern "C" {
     #define FILENAME "F:/out.pcm"
 #else
     #define FMT_NAME "avfoundation"
-    #define DEVICE_NAME ":0"
+    #define DEVICE_NAME ":1"
     #define FILENAME "/Users/zhushuangquan/Desktop/out.pcm"
 #endif
 
@@ -44,7 +44,7 @@ void MainWindow::on_audioButton_clicked() {
 
     qDebug() << "on_audioButton_clicked" << QThread::currentThread();
 
-    return;
+//    return;
     // 获取输入格式对象
     AVInputFormat *fmt = av_find_input_format(FMT_NAME);
     if (!fmt) {
