@@ -93,15 +93,13 @@ void AudioThread::run() {
         if (ret == 0) { // 读取成功
             // 将数据写入文件
             file.write((const char *) pkt.data, pkt.size);
-        } else {
-             if (ret == AVERROR(EAGAIN)) {
-                 char errbuf[1024];
-                 av_strerror(ret, errbuf, sizeof (errbuf));
-                 qDebug() << "av_read_frame error" << errbuf << ret;
-                 continue;
-             }
-            break;
+        } else if (ret == AVERROR(EAGAIN)) {
+            char errbuf[1024];
+            av_strerror(ret, errbuf, sizeof (errbuf));
+            qDebug() << "av_read_frame error" << errbuf << ret;
+            continue;
         }
+        break;
     }
 //    while (!_stop && av_read_frame(ctx, &pkt) == 0) {
 //        // 将数据写入文件

@@ -4,9 +4,11 @@
 #include <QDebug>
 #include <QFile>
 
-//#define FILENAME "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/11_sdl_play_pcm/in.pcm"
-#define FILENAME "/Users/zhushuangquan/Desktop/2.pcm"
-#define SAMPLE_RATE 48000
+//#define FILENAME "/Users/zhushuangquan/Desktop/1.pcm"
+//#define SAMPLE_RATE 48000
+//#define SAMPLE_FORMAT AUDIO_F32LSB
+#define FILENAME "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/11_sdl_play_pcm/in.pcm"
+#define SAMPLE_RATE 44100
 #define SAMPLE_FORMAT AUDIO_S16LSB
 #define SAMPLE_SIZE SDL_AUDIO_BITSIZE(SAMPLE_FORMAT)
 #define CHANNELS 2
