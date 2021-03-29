@@ -22,7 +22,7 @@ extern "C" {
     #define FILEPATH "F:/"
 #else
     #define FMT_NAME "avfoundation"
-    #define DEVICE_NAME ":1"
+    #define DEVICE_NAME ":0"
     #define FILEPATH "/Users/zhushuangquan/Desktop/"
 #endif
 
@@ -94,10 +94,12 @@ void AudioThread::run() {
             // 将数据写入文件
             file.write((const char *) pkt.data, pkt.size);
         } else {
-            // if (ret == AVERROR(EAGAIN))
-            char errbuf[1024];
-            av_strerror(ret, errbuf, sizeof (errbuf));
-            qDebug() << "av_read_frame error" << errbuf << ret;
+             if (ret == AVERROR(EAGAIN)) {
+                 char errbuf[1024];
+                 av_strerror(ret, errbuf, sizeof (errbuf));
+                 qDebug() << "av_read_frame error" << errbuf << ret;
+                 continue;
+             }
             break;
         }
     }
