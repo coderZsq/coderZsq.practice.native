@@ -7,6 +7,7 @@
 //#define FILENAME "/Users/zhushuangquan/Desktop/1.pcm"
 //#define SAMPLE_RATE 48000
 //#define SAMPLE_FORMAT AUDIO_F32LSB
+
 #define FILENAME "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/11_sdl_play_pcm/in.pcm"
 #define SAMPLE_RATE 44100
 #define SAMPLE_FORMAT AUDIO_S16LSB
@@ -15,7 +16,7 @@
 // 音频缓冲区的样本数量
 #define SAMPLES 1024
 // 每个样本占用多少个字节
-#define BYTES_PER_SAMPLE ((SAMPLE_SIZE * CHANNELS) / 8)
+#define BYTES_PER_SAMPLE ((SAMPLE_SIZE * CHANNELS) >> 3)
 // 文件缓冲区的大小
 #define BUFFER_SIZE (SAMPLES * BYTES_PER_SAMPLE)
 
@@ -46,6 +47,8 @@ void pull_audio_data(void *userdata,
                      // 希望填充的大小(samples * format * channels / 8)
                      int len
                     ) {
+    qDebug() << "pull_audio_data" << len;
+
     // 清空stream (静音处理)
     SDL_memset(stream, 0, len);
 

@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QFile>
 #include <QDateTime>
+#include "ffmpegs.h"
 
 extern "C" {
 // 设备
@@ -133,6 +134,22 @@ void AudioThread::run() {
     avformat_close_input(&ctx);
 
     qDebug() << this << "正常结束----------";
+
+//    char wavHeader[44];
+//    wavHeader[0] = 'R';
+//    wavHeader[1] = 'I';
+//    wavHeader[2] = 'F';
+//    wavHeader[3] = 'F';
+
+//    // 10 00 00 00
+//    wavHeader[4] = 0x10;
+//    wavHeader[5] = 0x00;
+//    wavHeader[6] = 0x00;
+//    wavHeader[7] = 0x00;
+
+    // pcm转wav文件
+//    FFmpegs::pcm2wav("/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio\ Video/12_pcm_to_wav/in.pcm",
+//                     "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio\ Video/12_pcm_to_wav/in.wav");
 }
 
 void AudioThread::setStop(bool stop) {
