@@ -103,6 +103,21 @@ void AudioThread::run() {
         goto end;
     }
 
+    /* 指针类型 (64bit, 8个字节)
+    int *;
+    double *;
+    void *;
+    int **;
+    int ***;
+    int ******;
+    */
+
+    // int *p = new int[15];
+    // int *p = av_calloc(15, sizeof (int))
+    // int **pp = av_calloc(7, sizeof (int *))
+
+    // uint8_t **inData = av_calloc(1, sizeof(uint8_t *)))
+
     // 创建输入缓冲区
     ret = av_samples_alloc_array_and_samples(
                 &inData,
