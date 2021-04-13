@@ -44,25 +44,6 @@ AudioThread::~AudioThread() {
     qDebug() << this << "析构（内存被回收）";
 }
 
-void showSpec(AVFormatContext *ctx) {
-    // 获取输入流
-    AVStream *stream = ctx->streams[0];
-    // 获取音频参数
-    AVCodecParameters *params = stream->codecpar;
-    // 声道数
-    qDebug() << params->channels;
-    // 采样率
-    qDebug() << params->sample_rate;
-    // 采样格式
-    qDebug() << params->format;
-    // 每一个样本的一个声道占用多少个字节
-    qDebug() << av_get_bytes_per_sample((AVSampleFormat) params->format);
-    // 编码ID (可以看出采样格式)
-    qDebug() << params->codec_id;
-    // 每一个样本的一个声道占用多少位
-    qDebug() << av_get_bits_per_sample(params->codec_id);
-}
-
 // 当线程启动的时候（start），就会自动调用run函数
 // run函数中的代码是在子线程中执行的
 // 耗时操作应该放在run函数中
@@ -133,7 +114,11 @@ void AudioThread::run() {
         if (ret == 0) { // 读取成功
             // 将数据写入文件
             file.write((const char *) pkt.data, pkt.size);
-//            header.dataChunkDataSize += pkt.size;
+
+            // 计算录音时长
+            header.dataChunkDataSize += pkt.size;
+            unsigned long long ms = 1000.0 * header.dataChunkDataSize / header.byteRate;
+            emit timeChanged(ms);
         } else if (ret == AVERROR(EAGAIN)) { // 资源临时不可用
             continue;
         } else { // 其他错误
@@ -146,15 +131,15 @@ void AudioThread::run() {
 
     //    qDebug() << file.size() << header.dataChunkDataSize;
 
-    int size = file.size();
+//    int size = file.size();
 
     // 写入dataChunkDataSize
-    header.dataChunkDataSize = size - sizeof (WAVHeader);
+//    header.dataChunkDataSize = size - sizeof (WAVHeader);
     file.seek(sizeof (WAVHeader) - sizeof (header.dataChunkDataSize));
     file.write((char *) &header.dataChunkDataSize, sizeof (header.dataChunkDataSize));
 
     // 写入riffChunkDataSize
-    header.riffChunkDataSize = size
+    header.riffChunkDataSize = file.size()
                              - sizeof (header.riffChunkId)
                              - sizeof (header.riffChunkDataSize);
     file.seek(sizeof (header.riffChunkId));
@@ -168,18 +153,6 @@ void AudioThread::run() {
     avformat_close_input(&ctx);
 
     qDebug() << this << "正常结束----------";
-
-//    char wavHeader[44];
-//    wavHeader[0] = 'R';
-//    wavHeader[1] = 'I';
-//    wavHeader[2] = 'F';
-//    wavHeader[3] = 'F';
-
-//    // 10 00 00 00
-//    wavHeader[4] = 0x10;
-//    wavHeader[5] = 0x00;
-//    wavHeader[6] = 0x00;
-//    wavHeader[7] = 0x00;
 }
 
 void AudioThread::setStop(bool stop) {

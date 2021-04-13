@@ -14,7 +14,7 @@ public:
     ~AudioThread();
     void setStop(bool stop);
 signals:
-
+    void timeChanged(unsigned long long ms);
 };
 
 #endif // AUDIOTHREAD_H

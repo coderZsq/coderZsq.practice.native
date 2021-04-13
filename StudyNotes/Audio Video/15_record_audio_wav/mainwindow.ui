@@ -46,6 +46,11 @@
      </item>
      <item>
       <widget class="QLabel" name="timeLabel">
+       <property name="font">
+        <font>
+         <family>Courier New</family>
+        </font>
+       </property>
        <property name="text">
         <string>TextLabel</string>
        </property>
