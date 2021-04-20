@@ -17,11 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     audiothread.cpp \
+    ffmpegs.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     audiothread.h \
+    ffmpegs.h \
     mainwindow.h
 
 FORMS += \
@@ -33,17 +35,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 win32 {
-    FFMPEG_HOME = ..
+    FFMPEG_HOME = F:/Dev/msys64/usr/local/ffmpeg
 }
 
 macx {
-    FFMPEG_HOME = /usr/local/ffmpeg/
-    QMAKE_INFO_PLIST = mac/Info.plist
+    FFMPEG_HOME = /usr/local/ffmpeg
 }
 
 INCLUDEPATH += $${FFMPEG_HOME}/include
 
 LIBS += -L $${FFMPEG_HOME}/lib \
-        -lavdevice \
-        -lavformat \
+        -lavcodec \
         -lavutil
