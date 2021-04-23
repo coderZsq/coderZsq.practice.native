@@ -23,6 +23,7 @@ static int check_sample_fmt(const AVCodec *codec,
     const enum AVSampleFormat *p = codec->sample_fmts;
 
     while (*p != AV_SAMPLE_FMT_NONE) {
+//        qDebug() << av_get_sample_fmt_name(*p);
         if (*p == sample_fmt) return 1;
         p++;
     }
@@ -86,7 +87,7 @@ void FFmpegs::aacEncode(AudioEncodeSpec &in, const char *outFilename)
     AVPacket *pkt = nullptr;
 
     // 获取编码器
-    //    codec = avcodec_find_encoder(AV_CODEC_ID_AAC);
+//    codec = avcodec_find_encoder(AV_CODEC_ID_AAC);
     codec = avcodec_find_encoder_by_name("libfdk_aac");
     if (!codec) {
         qDebug() << "encoder not found";
@@ -166,6 +167,14 @@ void FFmpegs::aacEncode(AudioEncodeSpec &in, const char *outFilename)
 
     // 读取数据到frame中
     while ((ret = inFile.read((char *) frame->data[0], frame->linesize[0])) > 0) {
+        // 从文件中读取的数据, 不足以填满frame缓冲区
+        if (ret < frame->linesize[0]) {
+            int bytes = av_get_bytes_per_sample((AVSampleFormat) frame->format);
+            int ch = av_get_channel_layout_nb_channels(frame->channel_layout);
+            // 设置真正有效的样本帧数量
+            // 防止编码器编码了一些冗余数据
+            frame->nb_samples = ret / (bytes * ch);
+        }
 
         // 进行编码
         if (encode(ctx, frame, pkt, outFile) < 0) {
