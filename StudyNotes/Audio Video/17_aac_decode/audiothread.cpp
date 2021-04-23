@@ -21,11 +21,12 @@ AudioThread::~AudioThread() {
 }
 
 void AudioThread::run() {
-    AudioEncodeSpec in;
-    in.filename = "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/16_aac_encode/44100_s16le_2.pcm";
-    in.sampleRate = 44100;
-    in.sampleFmt = AV_SAMPLE_FMT_S16;
-    in.chLayout = AV_CH_LAYOUT_STEREO;
+    AudioDecodeSpec out;
+    out.filename = "/Users/zhushuangquan/Desktop/out.pcm";
 
-    FFmpegs::aacEncode(in, "/Users/zhushuangquan/Desktop/out.aac");
+    FFmpegs::aacDecode("/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/17_aac_decode/in.aac", out);
+
+    qDebug() << "采样率: " << out.sampleRate;
+    qDebug() << "采样格式: " << av_get_sample_fmt_name(out.sampleFmt);
+    qDebug() << "声道数: " << av_get_channel_layout_nb_channels(out.chLayout);
 }
