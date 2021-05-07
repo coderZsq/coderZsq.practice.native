@@ -14,5 +14,5 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_playButton_clicked() {
     PlayThread *thread = new PlayThread(this);
-    thread->start();
+    thread->run();
 }

@@ -103,12 +103,13 @@ void PlayThread::run() {
     // 更新所有的渲染操作到屏幕上
     SDL_RenderPresent(renderer);
 
-    SDL_Delay(2000);
+//    SDL_Delay(2000);
 
 end:
-    SDL_FreeSurface(surface);
-    SDL_DestroyTexture(texture);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+//    SDL_FreeSurface(surface);
+//    SDL_DestroyTexture(texture);
+//    SDL_DestroyRenderer(renderer);
+//    SDL_DestroyWindow(window);
+//    SDL_Quit();
+    ;
 }

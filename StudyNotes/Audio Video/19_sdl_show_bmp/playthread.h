@@ -6,11 +6,11 @@
 class PlayThread : public QThread {
     Q_OBJECT
 private:
-    void run();
 
 public:
     explicit PlayThread(QObject *parent = nullptr);
     ~PlayThread();
+    void run();
 
 signals:
 
