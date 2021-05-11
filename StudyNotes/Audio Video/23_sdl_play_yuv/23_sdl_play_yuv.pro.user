@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.1, 2021-05-11T13:51:25. -->
+<!-- Written by QtCreator 4.14.1, 2021-05-11T16:20:17. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -94,8 +94,8 @@
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -134,8 +134,8 @@
     <value type="int" key="RunSystemFunction">0</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -176,8 +176,8 @@
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -292,14 +292,14 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/18_record_video/18_record_video.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/18_record_video/18_record_video.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/23_sdl_play_yuv/23_sdl_play_yuv.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/23_sdl_play_yuv/23_sdl_play_yuv.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-18_record_video-Desktop_Qt_5_15_2_clang_64bit-Debug/18_record_video.app/Contents/MacOS</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-23_sdl_play_yuv-Desktop_Qt_5_15_2_clang_64bit-Debug/23_sdl_play_yuv.app/Contents/MacOS</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
