@@ -3,6 +3,10 @@
 #include <QDebug>
 #include "ffmpegs.h"
 
+extern "C" {
+#include <libavutil/imgutils.h>
+}
+
 AudioThread::AudioThread(QObject *parent) : QThread(parent) {
     // 当监听到线程结束时（finished），就调用deleteLater回收内存
     connect(this, &AudioThread::finished,
@@ -21,13 +25,11 @@ AudioThread::~AudioThread() {
 }
 
 void AudioThread::run() {
-    VideoEncodeSpec in;
-    // $ ffmpeg -s 640x480 -pix_fmt yuyv422 -i out.yuv -pix_fmt yuv420p out.yuv
-    in.filename = "/Users/zhushuangquan/Desktop/out.yuv";
-    in.width = 640;
-    in.height = 480;
-    in.fps = 30;
-    in.pixFmt = AV_PIX_FMT_YUV420P;
+    VideoDecodeSpec out;
+    out.filename = "/Users/zhushuangquan/Desktop/out.yuv";
 
-    FFmpegs::h264Encode(in, "/Users/zhushuangquan/Desktop/out.h264");
+    FFmpegs::h264Decode("/Users/zhushuangquan/Desktop/in.h264", out);
+
+    qDebug() << out.width << out.height
+             << out.fps << av_get_pix_fmt_name(out.pixFmt);
 }
