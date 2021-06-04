@@ -112,6 +112,7 @@ void FFmpegs::h264Encode(VideoEncodeSpec &in,
     ctx->width = in.width;
     ctx->height = in.height;
     ctx->pix_fmt = in.pixFmt;
+//    ctx->gop_size = 5;
     // 设置帧率（1秒钟显示的帧数是in.fps）
     ctx->time_base = {1, in.fps};
 
