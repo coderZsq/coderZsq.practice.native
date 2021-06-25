@@ -2,12 +2,35 @@
 #define VIDEOPLAYER_H
 
 #include <QObject>
+#include <list>
+#include "condmutex.h"
 
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <libavutil/avutil.h>
+#include <libswresample/swresample.h>
 }
+
+#define ERROR_BUF \
+    char errbuf[1024]; \
+    av_strerror(ret, errbuf, sizeof (errbuf));
+
+#define END(func) \
+    if (ret < 0) { \
+    ERROR_BUF; \
+    qDebug() << #func << "error" << errbuf; \
+    setState(Stopped); \
+    emit playFailed(this); \
+    goto end; \
+    }
+
+#define RET(func) \
+    if (ret < 0) { \
+    ERROR_BUF; \
+    qDebug() << #func << "error" << errbuf; \
+    return ret; \
+    }
 
 /**
  * 预处理视频数据(不负责显示、渲染视频)
@@ -46,23 +69,77 @@ signals:
     void playFailed(VideoPlayer *player);
 
 private:
+    /******** 音频相关 ********/
+    typedef struct {
+        int sampleRate;
+        AVSampleFormat sampleFmt;
+        int chLayout;
+        int chs;
+        int bytesPerSampleFrame;
+    } AudioSwrSpec;
+    /** 解码上下文 */
+    AVCodecContext *_aDecodeCtx = nullptr;
+    /** 流 */
+    AVStream *_aStream = nullptr;
+    /** 存放音频包的列表 */
+    std::list<AVPacket> *_aPktList = nullptr;
+    /** 音频包列表的锁 */
+    CondMutex *_aMutex = nullptr;
+    /** 音频重采样上下文 */
+    SwrContext *_aSwrCtx = nullptr;
+    /** 音频重采样输入\输出参数 */
+    AudioSwrSpec _aSwrInSpec, _aSwrOutSpec;
+    /** 音频重采样输入\输出frame */
+    AVFrame *_aSwrInFrame = nullptr, *_aSwrOutFrame = nullptr;
+    /** */
+    int _aSwrOutIdx = 0;
+    /** 音频重采样输出PCM的大小 */
+    int _aSwrOutSize = 0;
+
+    /** 初始化音频信息 */
+    int initAudioInfo();
+    /** 初始化音频重采样 */
+    int initSwr();
+    /** 初始化SDL */
+    int initSDL();
+    /** 添加数据包到音频包列表中 */
+    void addAudioPkt(AVPacket &pkt);
+    /** 清空音频包列表 */
+    void clearAudioPktList();
+    /** SDL填充缓冲区的回调函数 */
+    static void sdlAudioCallbackFunc(void *userdata, Uint8 *stream, int len);
+    /** SDL填充缓冲区的回调函数 */
+    void sdlAudioCallback(Uint8 *stream, int len);
+    /** 音频解码 */
+    int decodeAudio();
+
+    /******** 视频相关 ********/
+    /** 解码上下文 */
+    AVCodecContext *_vDecodeCtx = nullptr;
+    /** 流 */
+    AVStream *_vStream = nullptr;
+    /** 存放解码后的数据 */
+    AVFrame *_vFrame = nullptr;
+    /** 存放视频包的列表 */
+    std::list<AVPacket> *_vPktList = nullptr;
+    /** 视频包列表的锁 */
+    CondMutex *_vMutex = nullptr;
+
+    /** 初始化视频信息 */
+    int initVideoInfo();
+    /** 添加数据包到视频包列表中 */
+    void addVideoPkt(AVPacket &pkt);
+    /** 清空视频包列表 */
+    void clearVideoPktList();
+
+    /******** 其他 ********/
     /** 当前的状态 */
     State _state = Stopped;
     /** 文件名 */
     const char *_filename;
-    // 解封装上下文
+    /** 解封装上下文 */
     AVFormatContext *_fmtCtx = nullptr;
-    // 解码上下文
-    AVCodecContext *_aDecodeCtx = nullptr, *_vDecodeCtx = nullptr;
-    // 流
-    AVStream *_aStream = nullptr, *_vStream = nullptr;
-    // 存放解码后的数据
-    AVFrame *_aFrame = nullptr, *_vFrame = nullptr;
 
-    /** 初始化视频信息 */
-    int initVideoInfo();
-    /** 初始化音频信息 */
-    int initAudioInfo();
     /** 初始化解码器和解码上下文 */
     int initDecoder(AVCodecContext **decodeCtx,
                     AVStream **stream,

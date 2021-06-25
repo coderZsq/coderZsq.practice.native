@@ -10,20 +10,10 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    videoplayer.cpp \
-    videoplayer_audio.cpp \
-    videoplayer_video.cpp \
-    videoslider.cpp \
-    videowidget.cpp \
-    condmutex.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    videoplayer.h \
-    videoslider.h \
-    videowidget.h \
-    condmutex.h
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
@@ -41,8 +31,7 @@ INCLUDEPATH += $${FFMPEG_HOME}/include
 LIBS += -L $${FFMPEG_HOME}/lib \
         -lavcodec \
         -lavformat \
-        -lavutil \
-        -lswresample
+        -lavutil
 
 INCLUDEPATH += $${SDL_HOME}/include
 

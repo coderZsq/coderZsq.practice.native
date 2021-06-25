@@ -3,34 +3,31 @@
 #include <QDebug>
 #include <QThread>
 
-#define ERROR_BUF \
-    char errbuf[1024]; \
-    av_strerror(ret, errbuf, sizeof (errbuf));
-
-#define END(func) \
-    if (ret < 0) { \
-    ERROR_BUF; \
-    qDebug() << #func << "error" << errbuf; \
-    setState(Stopped); \
-    emit playFailed(this); \
-    goto end; \
-    }
-
-#define RET(func) \
-    if (ret < 0) { \
-    ERROR_BUF; \
-    qDebug() << #func << "error" << errbuf; \
-    return ret; \
-    }
-
 #pragma mark - 构造、析构
-VideoPlayer::VideoPlayer(QObject *parent) : QObject(parent)
-{
+VideoPlayer::VideoPlayer(QObject *parent) : QObject(parent) {
+    qDebug() << "VideoPlayer::VideoPlayer";
+    // 初始化Audio子系统
+    if (SDL_Init(SDL_INIT_AUDIO)) {
+        // 返回值不是0, 就代表失败
+        qDebug() << "SDL_Init error" << SDL_GetError();
+        emit playFailed(this);
+        return;
+    }
 
+    _aPktList = new std::list<AVPacket>();
+    _vPktList = new std::list<AVPacket>();
+
+    _aMutex = new CondMutex();
+    _vMutex = new CondMutex();
 }
 
 VideoPlayer::~VideoPlayer() {
+    delete _aPktList;
+    delete _vPktList;
+    delete _aMutex;
+    delete _vMutex;
 
+    SDL_Quit();
 }
 
 #pragma mark - 公共方法
@@ -82,7 +79,7 @@ void VideoPlayer::readFile() {
     int ret = 0;
 
     // 创建解封装上下文、打开文件
-    ret = avformat_open_input(&_fmtCtx, "/Users/zhushuangquan/Desktop/in.mp4", nullptr, nullptr);
+    ret = avformat_open_input(&_fmtCtx, _filename, nullptr, nullptr);
 //    ret = -1;
     END(avformat_open_input);
 
@@ -91,7 +88,7 @@ void VideoPlayer::readFile() {
     END(avformat_find_stream_info);
 
     // 打印流信息到控制台
-    av_dump_format(_fmtCtx, 0, "/Users/zhushuangquan/Desktop/in.mp4", 0);
+    av_dump_format(_fmtCtx, 0, _filename, 0);
     fflush(stderr);
 
     // 初始化音频信息
@@ -108,38 +105,25 @@ void VideoPlayer::readFile() {
     emit initFinished(this);
 
     // 从输入文件中读取数据
-    AVPacket pkt;
-    while (av_read_frame(_fmtCtx, &pkt) == 0) {
-        if (pkt.stream_index == _aStream->index) { // 读取到的是音频数据
-
-        } else if (pkt.stream_index == _vStream->index) { // 读取到的是视频数据
-
+    while (true) {
+        AVPacket pkt;
+        ret = av_read_frame(_fmtCtx, &pkt);
+        if (ret == 0) {
+            if (pkt.stream_index == _aStream->index) { // 读取到的是音频数据
+                addAudioPkt(pkt);
+            } else if (pkt.stream_index == _vStream->index) { // 读取到的是视频数据
+                addVideoPkt(pkt);
+            }
+        } else {
+            continue;
         }
     }
 
 end:
-    printf("");
+    ;
 //    avcodec_free_context(&_aDecodeCtx);
 //    avcodec_free_context(&_vDecodeCtx);
 //    avformat_close_input(&_fmtCtx);
-}
-
-// 初始化音频信息
-int VideoPlayer::initAudioInfo() {
-    // 初始化解码器
-    int ret = initDecoder(&_aDecodeCtx, &_aStream, AVMEDIA_TYPE_AUDIO);
-    RET(initDecoder);
-
-    return 0;
-}
-
-// 初始化视频信息
-int VideoPlayer::initVideoInfo() {
-    // 初始化解码器
-    int ret = initDecoder(&_vDecodeCtx, &_vStream, AVMEDIA_TYPE_VIDEO);
-    RET(initDecoder);
-
-    return 0;
 }
 
 // 初始化解码器
@@ -184,7 +168,6 @@ int VideoPlayer::initDecoder(AVCodecContext **decodeCtx,
     return 0;
 }
 
-
 void VideoPlayer::setState(State state) {
     if (state == _state) return;
 
@@ -192,4 +175,3 @@ void VideoPlayer::setState(State state) {
 
     emit stateChanged(this);
 }
-

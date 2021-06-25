@@ -77,16 +77,15 @@ void MainWindow::on_stopBtn_clicked() {
 }
 
 void MainWindow::on_openFileBtn_clicked() {
-    QString filename = QFileDialog::getOpenFileName(nullptr,
+    std::string filename = QFileDialog::getOpenFileName(nullptr,
                                                     "选择多媒体文件",
                                                     "/Users/zhushuangquan/Desktop",
                                                     "视频文件 (*.mp4 *.avi *.mkv);;"
-                                                    "音频文件 (*.mp3 *.aac)");
-    qDebug() << "打开文件" << filename;
-    if (filename.isEmpty()) return;
-
+                                                    "音频文件 (*.mp3 *.aac)").toStdString();
+    qDebug() << "打开文件" << QString::fromStdString(filename);
+    if (filename.length() == 0) return;
     // 开始播放打开的文件
-    _player->setFilename(filename.toUtf8().data());
+    _player->setFilename(filename.c_str());
     _player->play();
 
     //    QStringList filenames = QFileDialog::getOpenFileNames(nullptr,
@@ -125,11 +124,16 @@ QString MainWindow::getTimeText(int value) {
     //    int m = (seconds / 60) % 60;
     //    int s = seconds % 60;
 
+
+//    QString h = QString("0%1").arg(seconds / 3600).right(2);
+//    QString m = QString("0%1").arg((seconds / 60) % 60).right(2);
+//    QString s = QString("0%1").arg(seconds % 60).right(2);
+//    return QString("%1:%2:%3").arg(h).arg(m).arg(s);
+
     int64_t seconds =  value / 1000000;
-
-    QString h = QString("0%1").arg(seconds / 3600).right(2);
-    QString m = QString("0%1").arg((seconds / 60) % 60).right(2);
-    QString s = QString("0%1").arg(seconds % 60).right(2);
-
-    return QString("%1:%2:%3").arg(h).arg(m).arg(s);
+    QLatin1Char fill = QLatin1Char('0');
+    return QString("%1:%2:%3")
+           .arg(seconds / 3600, 2, 10, fill)
+           .arg((seconds / 60) % 60, 2, 10, fill)
+           .arg(seconds % 60, 2, 10, fill);
 }
