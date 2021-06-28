@@ -48,7 +48,7 @@ public:
     QLabel *label_2;
     QLabel *durationLabel;
     QHBoxLayout *horizontalLayout_4;
-    QPushButton *silenceBtn;
+    QPushButton *muteBtn;
     VideoSlider *volumnSlider;
     QLabel *volumnLabel;
     QMenuBar *menubar;
@@ -149,12 +149,12 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        silenceBtn = new QPushButton(centralwidget);
-        silenceBtn->setObjectName(QString::fromUtf8("silenceBtn"));
-        silenceBtn->setEnabled(false);
-        silenceBtn->setMaximumSize(QSize(40, 16777215));
+        muteBtn = new QPushButton(centralwidget);
+        muteBtn->setObjectName(QString::fromUtf8("muteBtn"));
+        muteBtn->setEnabled(false);
+        muteBtn->setMaximumSize(QSize(40, 16777215));
 
-        horizontalLayout_4->addWidget(silenceBtn);
+        horizontalLayout_4->addWidget(muteBtn);
 
         volumnSlider = new VideoSlider(centralwidget);
         volumnSlider->setObjectName(QString::fromUtf8("volumnSlider"));
@@ -211,7 +211,7 @@ public:
         currentLabel->setText(QCoreApplication::translate("MainWindow", "00:00:00", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "/", nullptr));
         durationLabel->setText(QCoreApplication::translate("MainWindow", "00:00:00", nullptr));
-        silenceBtn->setText(QCoreApplication::translate("MainWindow", "\351\235\231\351\237\263", nullptr));
+        muteBtn->setText(QCoreApplication::translate("MainWindow", "\351\235\231\351\237\263", nullptr));
         volumnLabel->setText(QCoreApplication::translate("MainWindow", "100", nullptr));
     } // retranslateUi
 

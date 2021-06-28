@@ -18,18 +18,19 @@ extern "C" {
 
 #define END(func) \
     if (ret < 0) { \
-    ERROR_BUF; \
-    qDebug() << #func << "error" << errbuf; \
-    setState(Stopped); \
-    emit playFailed(this); \
-    goto end; \
+        ERROR_BUF; \
+        qDebug() << #func << "error" << errbuf; \
+        setState(Stopped); \
+        emit playFailed(this); \
+        free(); \
+        return; \
     }
 
 #define RET(func) \
     if (ret < 0) { \
-    ERROR_BUF; \
-    qDebug() << #func << "error" << errbuf; \
-    return ret; \
+        ERROR_BUF; \
+        qDebug() << #func << "error" << errbuf; \
+        return ret; \
     }
 
 /**
@@ -45,6 +46,12 @@ public:
         Playing,
         Paused
     } State;
+
+    // 音量
+    typedef enum {
+        Min = 0,
+        Max = 100
+    } Volumn;
 
     explicit VideoPlayer(QObject *parent = nullptr);
     ~VideoPlayer();
@@ -63,6 +70,13 @@ public:
     void setFilename(const char *filename);
     /** 获取总时长 (单位是微妙, 1秒=10^3毫秒=10^6微秒) */
     int64_t getDuration();
+    /** 设置音量 */
+    void setVolumn(int volumn);
+    int getVolumn();
+    /** 设置静音 */
+    void setMute(bool mute);
+    bool isMute();
+
 signals:
     void stateChanged(VideoPlayer *player);
     void initFinished(VideoPlayer *player);
@@ -82,19 +96,23 @@ private:
     /** 流 */
     AVStream *_aStream = nullptr;
     /** 存放音频包的列表 */
-    std::list<AVPacket> *_aPktList = nullptr;
+    std::list<AVPacket> _aPktList;
     /** 音频包列表的锁 */
-    CondMutex *_aMutex = nullptr;
+    CondMutex _aMutex;
     /** 音频重采样上下文 */
     SwrContext *_aSwrCtx = nullptr;
     /** 音频重采样输入\输出参数 */
     AudioSwrSpec _aSwrInSpec, _aSwrOutSpec;
     /** 音频重采样输入\输出frame */
     AVFrame *_aSwrInFrame = nullptr, *_aSwrOutFrame = nullptr;
-    /** */
+    /** 音频重采样输出PCM的索引(从哪个位置开始取出PCM数据填充到SDL的音频缓冲区) */
     int _aSwrOutIdx = 0;
     /** 音频重采样输出PCM的大小 */
     int _aSwrOutSize = 0;
+    /** 音量 */
+    int _volumn = Max;
+    /** 静音 */
+    bool _mute = false;
 
     /** 初始化音频信息 */
     int initAudioInfo();
@@ -121,9 +139,9 @@ private:
     /** 存放解码后的数据 */
     AVFrame *_vFrame = nullptr;
     /** 存放视频包的列表 */
-    std::list<AVPacket> *_vPktList = nullptr;
+    std::list<AVPacket> _vPktList;
     /** 视频包列表的锁 */
-    CondMutex *_vMutex = nullptr;
+    CondMutex _vMutex;
 
     /** 初始化视频信息 */
     int initVideoInfo();
@@ -148,6 +166,10 @@ private:
     void setState(State state);
     /** 读取文件数据 */
     void readFile();
+    /** 释放资源 */
+    void free();
+    void freeAudio();
+    void freeVideo();
 };
 
 #endif // VIDEOPLAYER_H

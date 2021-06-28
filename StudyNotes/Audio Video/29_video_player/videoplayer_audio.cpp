@@ -104,19 +104,37 @@ int VideoPlayer::initSDL() {
 }
 
 void VideoPlayer::addAudioPkt(AVPacket &pkt) {
-    _aMutex->lock();
-    _aPktList->push_back(pkt);
-    _aMutex->signal();
-    _aMutex->unlock();
+    _aMutex.lock();
+    _aPktList.push_back(pkt);
+    _aMutex.signal();
+    _aMutex.unlock();
 }
 
 void VideoPlayer::clearAudioPktList() {
-    _aMutex->lock();
-    for (AVPacket &pkt : *_aPktList) {
+    _aMutex.lock();
+    for (AVPacket &pkt : _aPktList) {
         av_packet_unref(&pkt);
     }
-    _aPktList->clear();
-    _aMutex->unlock();
+    _aPktList.clear();
+    _aMutex.unlock();
+}
+
+void VideoPlayer::freeAudio() {
+    _aSwrOutIdx = 0;
+    _aSwrOutSize = 0;
+
+    clearAudioPktList();
+    avcodec_free_context(&_aDecodeCtx);
+    swr_free(&_aSwrCtx);
+    av_frame_free(&_aSwrInFrame);
+    if (_aSwrOutFrame) {
+        av_freep(&_aSwrOutFrame->data[0]);
+        av_frame_free(&_aSwrOutFrame);
+    }
+
+    // 停止播放
+    SDL_PauseAudio(1);
+    SDL_CloseAudio();
 }
 
 void VideoPlayer::sdlAudioCallbackFunc(void *userdata, Uint8 *stream, int len) {
@@ -130,6 +148,8 @@ void VideoPlayer::sdlAudioCallback(Uint8 *stream, int len) {
 
     // len: SDL音频缓冲区剩余的大小 (还未填充的大小)
     while (len > 0) {
+        if (_state == Stopped) break;
+
         // 说明当前PCM的数据已经全部拷贝到SDL的音频缓冲区了
         // 需要解码下一个pkt, 获取新的PCM数据
         if (_aSwrOutIdx >= _aSwrOutSize) {
@@ -150,10 +170,13 @@ void VideoPlayer::sdlAudioCallback(Uint8 *stream, int len) {
         int fillLen = _aSwrOutSize - _aSwrOutIdx;
         fillLen = std::min(fillLen, len);
 
+        // 获取当前音量
+        int volumn = _mute ? 0 : ((_volumn * 1.0 / Max) * SDL_MIX_MAXVOLUME);
+
         // 填充SDL缓冲区
         SDL_MixAudio(stream,
                      _aSwrOutFrame->data[0] + _aSwrOutIdx,
-                     fillLen, SDL_MIX_MAXVOLUME);
+                     fillLen, volumn);
 
         // 移动偏移量
         len -= fillLen;
@@ -164,23 +187,23 @@ void VideoPlayer::sdlAudioCallback(Uint8 *stream, int len) {
 
 int VideoPlayer::decodeAudio() {
     // 加锁
-    _aMutex->lock();
+    _aMutex.lock();
 
-//    while (_aPktList->empty()) {
-//        _aMutex->wait();
+//    while (_aPktList.empty()) {
+//        _aMutex.wait();
 //    }
-    if (_aPktList->empty()) {
-        _aMutex->unlock();
+    if (_aPktList.empty() || _state == Stopped) {
+        _aMutex.unlock();
         return 0;
     }
 
     // 取出头部的数据包
-    AVPacket pkt = _aPktList->front();
+    AVPacket pkt = _aPktList.front();
     // 从头部中删除
-    _aPktList->pop_front();
+    _aPktList.pop_front();
 
     // 解锁
-    _aMutex->unlock();
+    _aMutex.unlock();
 
     // 发送压缩数据到解码器
     int ret = avcodec_send_packet(_aDecodeCtx, &pkt);

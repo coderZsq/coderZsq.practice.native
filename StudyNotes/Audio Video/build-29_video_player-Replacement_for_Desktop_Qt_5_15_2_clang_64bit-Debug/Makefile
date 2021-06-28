@@ -174,7 +174,6 @@ DIST          = /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_pre
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf \
-		../29_video_player/.qmake.stash \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf \
@@ -223,7 +222,7 @@ TARGET        = 29_video_player.app/Contents/MacOS/29_video_player
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-29_video_player-Replacement_for_Desktop_Qt_5_15_2_clang_64bit-Debug/.qmake.stash
+EXPORT__QMAKE_STASH_ = 
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
@@ -337,7 +336,6 @@ Makefile: ../29_video_player/29_video_player.pro /Users/zhushuangquan/Qt/6.1.1/c
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf \
@@ -470,7 +468,6 @@ Makefile: ../29_video_player/29_video_player.pro /Users/zhushuangquan/Qt/6.1.1/c
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf:
@@ -545,7 +542,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r 29_video_player.app
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -978,12 +974,6 @@ mainwindow.o: ../29_video_player/mainwindow.cpp ../29_video_player/mainwindow.h 
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
 		ui_mainwindow.h \
-		../29_video_player/videoslider.h \
-		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QSlider \
-		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
-		../29_video_player/videowidget.h \
-		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QFileDialog \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qfiledialog.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QDebug \
