@@ -40,7 +40,7 @@ DISTNAME      = 29_video_player1.0.0
 DISTDIR = /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio\ Video/build-29_video_player-Replacement_for_Desktop_Qt_5_15_2_clang_64bit-Debug/.tmp/29_video_player1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/Users/zhushuangquan/Qt/6.1.1/clang_64/lib
-LIBS          = $(SUBLIBS) -F/Users/zhushuangquan/Qt/6.1.1/clang_64/lib -L /usr/local/ffmpeg/lib -lavcodec -lavformat -lavutil -lswresample -L/usr/local/Cellar/sdl2/2.0.14_1/lib -lSDL2 -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtCore -framework DiskArbitration -framework IOKit -framework AGL -framework OpenGL   
+LIBS          = $(SUBLIBS) -F/Users/zhushuangquan/Qt/6.1.1/clang_64/lib -L /usr/local/ffmpeg/lib -lavcodec -lavformat -lavutil -lswresample -lswscale -L/usr/local/Cellar/sdl2/2.0.14_1/lib -lSDL2 -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtCore -framework DiskArbitration -framework IOKit -framework AGL -framework OpenGL   
 AR            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar cq
 RANLIB        = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -s
 SED           = sed
@@ -174,6 +174,7 @@ DIST          = /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_pre
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf \
+		../29_video_player/.qmake.stash \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf \
@@ -222,7 +223,7 @@ TARGET        = 29_video_player.app/Contents/MacOS/29_video_player
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-29_video_player-Replacement_for_Desktop_Qt_5_15_2_clang_64bit-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
@@ -336,6 +337,7 @@ Makefile: ../29_video_player/29_video_player.pro /Users/zhushuangquan/Qt/6.1.1/c
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf \
@@ -468,6 +470,7 @@ Makefile: ../29_video_player/29_video_player.pro /Users/zhushuangquan/Qt/6.1.1/c
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/qt_config.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/features/toolchain.prf:
@@ -542,6 +545,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r 29_video_player.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -657,6 +661,8 @@ moc_mainwindow.cpp: ../29_video_player/mainwindow.h \
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		moc_predefs.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/libexec/moc
 	/Users/zhushuangquan/Qt/6.1.1/clang_64/libexec/moc $(DEFINES) --include '/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-29_video_player-Replacement_for_Desktop_Qt_5_15_2_clang_64bit-Debug/moc_predefs.h' -I/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang -I'/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/29_video_player' -I/usr/local/ffmpeg/include -I/usr/local/Cellar/sdl2/2.0.14_1/include -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtGui.framework/Headers -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/zhushuangquan/Qt/6.1.1/clang_64/lib ../29_video_player/mainwindow.h -o moc_mainwindow.cpp
@@ -746,6 +752,8 @@ moc_videoplayer.cpp: ../29_video_player/videoplayer.h \
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		moc_predefs.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/libexec/moc
 	/Users/zhushuangquan/Qt/6.1.1/clang_64/libexec/moc $(DEFINES) --include '/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/build-29_video_player-Replacement_for_Desktop_Qt_5_15_2_clang_64bit-Debug/moc_predefs.h' -I/Users/zhushuangquan/Qt/6.1.1/clang_64/mkspecs/macx-clang -I'/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/Audio Video/29_video_player' -I/usr/local/ffmpeg/include -I/usr/local/Cellar/sdl2/2.0.14_1/include -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtGui.framework/Headers -I/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/zhushuangquan/Qt/6.1.1/clang_64/lib ../29_video_player/videoplayer.h -o moc_videoplayer.cpp
@@ -881,6 +889,8 @@ main.o: ../29_video_player/main.cpp ../29_video_player/mainwindow.h \
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../29_video_player/main.cpp
@@ -973,7 +983,15 @@ mainwindow.o: ../29_video_player/mainwindow.cpp ../29_video_player/mainwindow.h 
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		ui_mainwindow.h \
+		../29_video_player/videoslider.h \
+		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QSlider \
+		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
+		../29_video_player/videowidget.h \
+		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/QFileDialog \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtWidgets.framework/Headers/qfiledialog.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QDebug \
@@ -1067,6 +1085,8 @@ videoplayer.o: ../29_video_player/videoplayer.cpp ../29_video_player/videoplayer
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QDebug \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/qdebug.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QThread \
@@ -1158,6 +1178,8 @@ videoplayer_audio.o: ../29_video_player/videoplayer_audio.cpp ../29_video_player
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QDebug \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o videoplayer_audio.o ../29_video_player/videoplayer_audio.cpp
@@ -1247,6 +1269,8 @@ videoplayer_video.o: ../29_video_player/videoplayer_video.cpp ../29_video_player
 		/usr/local/ffmpeg/include/libavformat/version.h \
 		/usr/local/ffmpeg/include/libswresample/swresample.h \
 		/usr/local/ffmpeg/include/libswresample/version.h \
+		/usr/local/ffmpeg/include/libswscale/swscale.h \
+		/usr/local/ffmpeg/include/libswscale/version.h \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/QDebug \
 		/Users/zhushuangquan/Qt/6.1.1/clang_64/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o videoplayer_video.o ../29_video_player/videoplayer_video.cpp

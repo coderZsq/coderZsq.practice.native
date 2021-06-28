@@ -66,7 +66,7 @@ int VideoPlayer::initSwr() {
         return -1;
     }
 
-    // 初始化重采样的输出frame的data[0]空间
+    // _aSwrOutFrame的data[0]指向的内存空间
     ret = av_samples_alloc(_aSwrOutFrame->data,
                            _aSwrOutFrame->linesize,
                            _aSwrOutSpec.chs,
@@ -103,6 +103,7 @@ int VideoPlayer::initSDL() {
     return 0;
 }
 
+// 引用: 披着对象外衣的指针
 void VideoPlayer::addAudioPkt(AVPacket &pkt) {
     _aMutex.lock();
     _aPktList.push_back(pkt);

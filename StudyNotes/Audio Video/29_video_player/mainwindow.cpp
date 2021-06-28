@@ -10,10 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
-    // 设置音量滑块的范围
-    ui->volumnSlider->setRange(VideoPlayer::Volumn::Min,
-                               VideoPlayer::Volumn::Max);
-    ui->volumnSlider->setValue(ui->volumnSlider->maximum());
+    // 注册信号的参数类型, 保证能够发出信号
+    qRegisterMetaType<VideoPlayer::VideoSwsSpec>("VideoSwsSpec&");
 
     // 创建播放器
     _player = new VideoPlayer();
@@ -23,6 +21,13 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::onPlayerInitFinished);
     connect(_player, &VideoPlayer::playFailed,
             this, &MainWindow::onPlayerPlayFailed);
+    connect(_player, &VideoPlayer::frameDecoded,
+            ui->videoWidget, &VideoWidget::onPlayerFrameDecoded);
+
+    // 设置音量滑块的范围
+    ui->volumnSlider->setRange(VideoPlayer::Volumn::Min,
+                               VideoPlayer::Volumn::Max);
+    ui->volumnSlider->setValue(ui->volumnSlider->maximum());
 }
 
 MainWindow::~MainWindow() {
@@ -82,14 +87,15 @@ void MainWindow::on_stopBtn_clicked() {
 }
 
 void MainWindow::on_openFileBtn_clicked() {
-    std::string filename = QFileDialog::getOpenFileName(nullptr,
+    QString filename = QFileDialog::getOpenFileName(nullptr,
                                                     "选择多媒体文件",
                                                     "/Users/zhushuangquan/Desktop",
-                                                    "多媒体文件 (*.mp4 *.avi *.mkv *.mp3 *.aac)").toStdString();
-    qDebug() << "打开文件" << QString::fromStdString(filename);
-    if (filename.length() == 0) return;
+                                                    "多媒体文件 (*.mp4 *.avi *.mkv *.mp3 *.aac)");
+    qDebug() << "打开文件" << filename;
+    if (filename.isEmpty()) return;
+
     // 开始播放打开的文件
-    _player->setFilename("/Users/zhushuangquan/Desktop/in.mp4");
+    _player->setFilename(filename);
     _player->play();
 
     //    QStringList filenames = QFileDialog::getOpenFileNames(nullptr,

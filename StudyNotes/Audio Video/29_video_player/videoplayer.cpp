@@ -63,15 +63,9 @@ VideoPlayer::State VideoPlayer::getState() {
     return _state;
 }
 
-void VideoPlayer::setFilename(const char *filename) {
-    _filename = filename;
-}
-
-void VideoPlayer::free() {
-    avformat_close_input(&_fmtCtx);
-
-    freeAudio();
-    freeVideo();
+void VideoPlayer::setFilename(QString &filename) {
+    const char *name = filename.toUtf8().data();
+    memcpy(_filename, name, strlen(name) + 1);
 }
 
 int64_t VideoPlayer::getDuration() {
@@ -117,8 +111,7 @@ void VideoPlayer::readFile() {
     // 初始化视频信息
     bool hasVideo = initVideoInfo() >= 0;
     if (!hasAudio && !hasVideo) {
-        emit playFailed(this);
-        free();
+        fatalError();
         return;
     }
 
@@ -194,4 +187,17 @@ void VideoPlayer::setState(State state) {
     _state = state;
 
     emit stateChanged(this);
+}
+
+void VideoPlayer::free() {
+    avformat_close_input(&_fmtCtx);
+
+    freeAudio();
+    freeVideo();
+}
+
+void VideoPlayer::fatalError() {
+    setState(Stopped);
+    emit playFailed(this);
+    free();
 }
