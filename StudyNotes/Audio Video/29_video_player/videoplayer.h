@@ -54,6 +54,7 @@ public:
         int width;
         int height;
         AVPixelFormat pixFmt;
+        int size;
     } VideoSwsSpec;
 
     explicit VideoPlayer(QObject *parent = nullptr);
@@ -71,8 +72,13 @@ public:
     State getState();
     /** 设置文件名 */
     void setFilename(QString &filename);
-    /** 获取总时长 (单位是微妙, 1秒=10^3毫秒=10^6微秒) */
-    int64_t getDuration();
+    /** 获取总时长 (单位是微秒, 1秒=10^3毫秒=10^6微秒) */
+    /** 获取总时长 (单位是秒) */
+    int getDuration();
+    /** 当前的播放时刻 (单位是秒) */
+    int getTime();
+    /** 设置当前的播放时刻(单位是秒) */
+    void setTime(int seekTime);
     /** 设置音量 */
     void setVolumn(int volumn);
     int getVolumn();
@@ -82,6 +88,7 @@ public:
 
 signals:
     void stateChanged(VideoPlayer *player);
+    void timeChanged(VideoPlayer *player);
     void initFinished(VideoPlayer *player);
     void playFailed(VideoPlayer *player);
     void frameDecoded(VideoPlayer *player,
@@ -115,10 +122,12 @@ private:
     int _aSwrOutIdx = 0;
     /** 音频重采样输出PCM的大小 */
     int _aSwrOutSize = 0;
-    /** 音量 */
-    int _volumn = Max;
-    /** 静音 */
-    bool _mute = false;
+    /** 音频时钟, 当前音频包对应的时间值 */
+    double _aTime = 0;
+    /** 音频资源是否可以释放 */
+    bool _aCanFree = false;
+    /** 是否有音频流 */
+    bool _hasAudio = false;
 
     /** 初始化音频信息 */
     int initAudioInfo();
@@ -152,6 +161,12 @@ private:
     std::list<AVPacket> _vPktList;
     /** 视频包列表的锁 */
     CondMutex _vMutex;
+    /** 视频时钟, 当前视频包对应的时间值 */
+    double _vTime = 0;
+    /** 视频资源是否可以释放 */
+    bool _vCanFree = false;
+    /** 是否有视频流 */
+    bool _hasVideo = false;
 
     /** 初始化视频信息 */
     int initVideoInfo();
@@ -165,12 +180,20 @@ private:
     void decodeVideo();
 
     /******** 其他 ********/
+    /** 解封装上下文 */
+    AVFormatContext *_fmtCtx = nullptr;
+    /** fmtCtx是否可以释放 */
+    bool _fmtCtxCanFree = false;
+    /** 音量 */
+    int _volumn = Max;
+    /** 静音 */
+    bool _mute = false;
     /** 当前的状态 */
     State _state = Stopped;
     /** 文件名 */
     char _filename[512];
-    /** 解封装上下文 */
-    AVFormatContext *_fmtCtx = nullptr;
+    /** 外面设置的当前播放时刻(用于完成seek功能) */
+    int _seekTime = -1;
 
     /** 初始化解码器和解码上下文 */
     int initDecoder(AVCodecContext **decodeCtx,

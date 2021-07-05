@@ -19,10 +19,13 @@ public slots:
     void onPlayerFrameDecoded(VideoPlayer *player,
                               uint8_t *data,
                               VideoPlayer::VideoSwsSpec &spec);
+    void onPlayerStateChanged(VideoPlayer *player);
 private:
     QImage *_image = nullptr;
     QRect _rect;
     void paintEvent(QPaintEvent *event) override;
+
+    void freeImage();
 
 signals:
 

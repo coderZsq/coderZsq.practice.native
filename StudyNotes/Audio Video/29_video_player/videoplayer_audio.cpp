@@ -97,9 +97,6 @@ int VideoPlayer::initSDL() {
         return -1;
     }
 
-    // 开始播放
-    SDL_PauseAudio(0);
-
     return 0;
 }
 
@@ -121,8 +118,11 @@ void VideoPlayer::clearAudioPktList() {
 }
 
 void VideoPlayer::freeAudio() {
+    _aTime = 0;
     _aSwrOutIdx = 0;
     _aSwrOutSize = 0;
+    _aStream = nullptr;
+    _aCanFree = false;
 
     clearAudioPktList();
     avcodec_free_context(&_aDecodeCtx);
@@ -149,7 +149,10 @@ void VideoPlayer::sdlAudioCallback(Uint8 *stream, int len) {
 
     // len: SDL音频缓冲区剩余的大小 (还未填充的大小)
     while (len > 0) {
-        if (_state == Stopped) break;
+        if (_state == Stopped) {
+            _aCanFree = true;
+            break;
+        }
 
         // 说明当前PCM的数据已经全部拷贝到SDL的音频缓冲区了
         // 需要解码下一个pkt, 获取新的PCM数据
@@ -193,7 +196,7 @@ int VideoPlayer::decodeAudio() {
 //    while (_aPktList.empty()) {
 //        _aMutex.wait();
 //    }
-    if (_aPktList.empty() || _state == Stopped) {
+    if (_aPktList.empty()) {
         _aMutex.unlock();
         return 0;
     }
@@ -205,6 +208,13 @@ int VideoPlayer::decodeAudio() {
 
     // 解锁
     _aMutex.unlock();
+
+    // 保存音频时钟
+    if (pkt.pts != AV_NOPTS_VALUE) {
+        _aTime = av_q2d(_aStream->time_base) * pkt.pts;
+        // 通知外界: 播放时间点发送了改变
+        emit timeChanged(this);
+    }
 
     // 发送压缩数据到解码器
     int ret = avcodec_send_packet(_aDecodeCtx, &pkt);
