@@ -186,15 +186,15 @@ void VideoPlayer::readFile() {
                 _seekTime = -1;
             } else {
                 qDebug() << "seek成功" << _seekTime << ts << streamIdx;
+                //  清空之前读取的数据包
+                clearAudioPktList();
+                clearVideoPktList();
                 _vSeekTime = _seekTime;
                 _aSeekTime = _seekTime;
                 _seekTime = -1;
                 // 恢复时钟
                 _aTime = 0;
                 _vTime = 0;
-                //  清空之前读取的数据包
-                clearAudioPktList();
-                clearVideoPktList();
             }
         }
 
