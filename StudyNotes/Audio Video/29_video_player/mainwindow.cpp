@@ -18,7 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_player, &VideoPlayer::stateChanged,
             this, &MainWindow::onPlayerStateChanged);
     connect(_player, &VideoPlayer::timeChanged,
-            this, &MainWindow::onPlayerTimeChanged);    connect(_player, &VideoPlayer::initFinished,
+            this, &MainWindow::onPlayerTimeChanged);    
+    connect(_player, &VideoPlayer::initFinished,
             this, &MainWindow::onPlayerInitFinished);
     connect(_player, &VideoPlayer::playFailed,
             this, &MainWindow::onPlayerPlayFailed);

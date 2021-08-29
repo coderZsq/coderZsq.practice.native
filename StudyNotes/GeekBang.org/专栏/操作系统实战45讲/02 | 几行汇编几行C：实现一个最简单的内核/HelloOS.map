@@ -1,0 +1,90 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000200000                . = 0x200000
+                0x0000000000200000                __begin_start_text = .
+
+.start.text     0x0000000000200000       0xd5
+ *(.start.text)
+ .start.text    0x0000000000200000       0xd5 entry.o
+                0x0000000000200000                _start
+                0x00000000002000d5                __end_start_text = .
+                0x00000000002000d5                __begin_text = .
+
+.text           0x00000000002000d8       0x28
+ *(.text)
+ .text          0x00000000002000d8        0x0 main.o
+ .text          0x00000000002000d8       0x28 vgastr.o
+                0x00000000002000d8                _strwrite
+                0x00000000002000f1                printf
+                0x0000000000200100                __end_text = .
+                0x0000000000200100                __begin_data = .
+
+.iplt           0x0000000000200100        0x0
+ .iplt          0x0000000000200100        0x0 entry.o
+
+.text.startup   0x0000000000200100       0x17
+ .text.startup  0x0000000000200100       0x17 main.o
+                0x0000000000200100                main
+
+.data           0x0000000000200118        0x0
+ *(.data)
+ .data          0x0000000000200118        0x0 main.o
+ .data          0x0000000000200118        0x0 vgastr.o
+                0x0000000000200118                __end_data = .
+                0x0000000000200118                __begin_rodata = .
+
+.igot.plt       0x0000000000200118        0x0
+ .igot.plt      0x0000000000200118        0x0 entry.o
+
+.rodata         0x0000000000200118        0xa
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.str1.1
+                0x0000000000200118        0xa main.o
+                0x0000000000200122                __end_rodata = .
+                0x0000000000200122                __begin_kstrtab = .
+
+.eh_frame       0x0000000000200124       0x64
+ .eh_frame      0x0000000000200124       0x38 main.o
+ .eh_frame      0x000000000020015c       0x2c vgastr.o
+                                         0x44 (size before relaxing)
+
+.rel.dyn        0x0000000000200188        0x0
+ .rel.iplt      0x0000000000200188        0x0 entry.o
+ .rel.start.text
+                0x0000000000200188        0x0 entry.o
+ .rel.text.startup
+                0x0000000000200188        0x0 entry.o
+
+.kstrtab
+ *(.kstrtab)
+                0x0000000000200188                __end_kstrtab = .
+                0x0000000000200188                __begin_bss = .
+
+.bss            0x0000000000200188        0x0
+ *(.bss)
+ .bss           0x0000000000200188        0x0 main.o
+ .bss           0x0000000000200188        0x0 vgastr.o
+                0x0000000000200188                __end_bss = .
+LOAD entry.o
+LOAD main.o
+LOAD vgastr.o
+OUTPUT(HelloOS.elf elf32-i386)
+
+.comment        0x0000000000000000       0x2d
+ .comment       0x0000000000000000       0x2d main.o
+                                         0x2e (size before relaxing)
+ .comment       0x000000000000002d       0x2e vgastr.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 vgastr.o

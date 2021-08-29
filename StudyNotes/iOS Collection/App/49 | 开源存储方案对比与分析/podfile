@@ -1,3 +1,0 @@
-target 'App' do 
-  pod 'AFNetworking'
-end

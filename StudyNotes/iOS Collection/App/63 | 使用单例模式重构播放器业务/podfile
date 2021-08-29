@@ -1,4 +1,0 @@
-target 'App' do 
-  pod 'AFNetworking'
-  pod 'SDWebImage'
-end
