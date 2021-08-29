@@ -13,4 +13,8 @@ public class StackFrameTest {
     public StackFrameTest(ScopeTest scope) {
         this.scope = scope;
     }
+
+    public StackFrameTest(FunctionObjectTest functionObject) {
+
+    }
 }

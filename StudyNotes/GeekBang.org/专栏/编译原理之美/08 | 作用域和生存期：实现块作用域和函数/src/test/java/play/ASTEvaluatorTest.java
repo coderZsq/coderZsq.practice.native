@@ -2,6 +2,8 @@ package play;
 
 import play.PlayScriptParser.*;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 public class ASTEvaluatorTest extends PlayScriptBaseVisitor<Object> {
@@ -35,6 +37,50 @@ public class ASTEvaluatorTest extends PlayScriptBaseVisitor<Object> {
 
     private Object minus(Object obj1, Object obj2) {
         return ((Number) obj1).intValue() - ((Number) obj2).intValue();
+    }
+
+    @Override
+    public Object visitFunctionCall(FunctionCallContext ctx) {
+        Object rtn = null;
+
+        FunctionTest function = null;
+        FunctionObjectTest functionObject = null;
+
+        // 函数声明的 AST 节点
+        FunctionDeclarationContext functionCode = (FunctionDeclarationContext) function.ctx;
+
+        // 创建栈帧
+        functionObject = new FunctionObjectTest(function);
+        StackFrameTest functionFrame = new StackFrameTest(functionObject);
+
+        // 计算实参的值
+        List<Object> paramValues = new LinkedList<Object>();
+        if (ctx.expressionList() != null) {
+            for (ExpressionContext exp : ctx.expressionList().expression()) {
+                Object value = visitExpression(exp);
+                if (value instanceof LValue) {
+                    value = ((LValue) value).getValue();
+                }
+                paramValues.add(value);
+            }
+        }
+
+        // 根据形参的名称, 在栈帧中添加变量
+        if (functionCode.formalParameters().formalParameterList() != null) {
+            for (int i = 0; i < functionCode.formalParameters().formalParameterList().formalParameter().size(); i++) {
+                FormalParameterContext param = functionCode.formalParameters().formalParameterList().formalParameter(i);
+                LValue lValue = (LValue) visitVariableDeclaratorId(param.variableDeclaratorId());
+                lValue.setValue(paramValues.get(i));
+            }
+        }
+
+        // 调用方法体
+        rtn = visitFunctionDeclaration(functionCode);
+
+        // 运行完毕, 弹出栈
+        stack.pop();
+
+        return rtn;
     }
 
     @Override

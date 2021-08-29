@@ -371,3 +371,141 @@ String script = "int age = 44; for(int i = 0;i<10;i++) { age = age + 2;} int i =
 ```
 
 进一步的，我们可以实现对函数的支持。
+
+实现函数功能
+
+先来看一下与函数有关的语法：
+
+```
+//函数声明
+functionDeclaration
+    : typeTypeOrVoid? IDENTIFIER formalParameters ('[' ']')*
+      functionBody
+    ;
+//函数体
+functionBody
+    : block
+    | ';'
+    ;
+//类型或void
+typeTypeOrVoid
+    : typeType
+    | VOID
+    ;
+//函数所有参数
+formalParameters
+    : '(' formalParameterList? ')'
+    ;
+//参数列表
+formalParameterList
+    : formalParameter (',' formalParameter)* (',' lastFormalParameter)?
+    | lastFormalParameter
+    ;
+//单个参数
+formalParameter
+    : variableModifier* typeType variableDeclaratorId
+    ;
+//可变参数数量情况下，最后一个参数
+lastFormalParameter
+    : variableModifier* typeType '...' variableDeclaratorId
+    ;
+//函数调用
+functionCall
+    : IDENTIFIER '(' expressionList? ')'
+    | THIS '(' expressionList? ')'
+    | SUPER '(' expressionList? ')'
+    ;
+```
+
+在函数里，我们还要考虑一个额外的因素：参数。在函数内部，参数变量跟普通的本地变量在使用时没什么不同，在运行期，它们也像本地变量一样，保存在栈桢里。
+
+我们设计一个对象来代表函数的定义，它包括参数列表和返回值的类型：
+
+```java
+public class Function extends Scope implements FunctionType{
+    // 参数
+    protected List<Variable> parameters = new LinkedList<Variable>();
+
+    //返回值
+    protected Type returnType = null;
+
+    ...
+}
+```
+
+在调用函数时，我们实际上做了三步工作：
+
+- 建立一个栈桢；
+- 计算所有参数的值，并放入栈桢；
+- 执行函数声明中的函数体。
+
+我把相关代码放在了下面，你可以看一下：
+
+```java
+//函数声明的AST节点
+FunctionDeclarationContext functionCode = (FunctionDeclarationContext) function.ctx;
+
+//创建栈桢
+functionObject = new FunctionObject(function);
+StackFrame functionFrame = new StackFrame(functionObject);
+
+// 计算实参的值
+List<Object> paramValues = new LinkedList<Object>();
+if (ctx.expressionList() != null) {
+    for (ExpressionContext exp : ctx.expressionList().expression()) {
+        Object value = visitExpression(exp);
+        if (value instanceof LValue) {
+            value = ((LValue) value).getValue();
+        }
+        paramValues.add(value);
+    }
+}
+
+//根据形参的名称，在栈桢中添加变量
+if (functionCode.formalParameters().formalParameterList() != null) {
+    for (int i = 0; i < functionCode.formalParameters().formalParameterList().formalParameter().size(); i++) {
+        FormalParameterContext param = functionCode.formalParameters().formalParameterList().formalParameter(i);
+        LValue lValue = (LValue) visitVariableDeclaratorId(param.variableDeclaratorId());
+        lValue.setValue(paramValues.get(i));
+    }
+}
+
+// 调用方法体
+rtn = visitFunctionDeclaration(functionCode);
+
+// 运行完毕，弹出栈
+stack.pop();
+```
+
+你可以用 playscript 测试一下函数执行的效果，看看参数传递和作用域的效果：
+
+```java
+String script = "int b= 10; int myfunc(int a) {return a+b+3;} myfunc(2);";
+```
+
+课程小结
+
+本节课，我带你实现了块作用域和函数，还跟你一起探究了计算机语言的两个底层概念：作用域和生存期。你要知道：
+
+- 对作用域的分析是语义分析的一项工作。Antlr 能够完成很多词法分析和语法分析的工作，但语义分析工作需要我们自己做。
+- 变量的生存期涉及运行期的内存管理，也引出了栈桢和堆的概念，我会在编译器后端技术时进一步阐述。
+
+我建议你在学习新语言的时候，先了解它在作用域和生存期上的特点，然后像示例程序那样做几个例子，借此你会更快理解语言的设计思想。比如，为什么需要命名空间这个特性？全局变量可能带来什么问题？类的静态成员与普通成员有什么区别？等等。
+
+下一讲，我们会尝试实现面向对象特性，看看面向对象语言在语义上是怎么设计的，以及在运行期有什么特点。
+
+一课一思
+
+既然我强调了作用域和生存期的重要性，那么在你熟悉的语言中，有哪些特性是能用作用域和生存期的概念做更基础的解读呢？比如，面向对象的语言中，对象成员的作用域和生存期是怎样的？欢迎在留言区与大家一起交流。
+
+最后，感谢你的阅读，如果这篇文章让你有所收获，也欢迎你将它分享给更多的朋友。
+
+今天讲的功能照样能在 playscript-java 项目中找到示例代码，其中还有用 playscript 写的脚本，你可以多玩一玩。
+
+- playscript-java（项目目录）： 码云 GitHub
+- PlayScript.java（入口程序）：码云 GitHub
+- PlayScript.g4（语法规则）：码云 GitHub
+- ASTEvaluator.java（解释器）：码云 GitHub
+- BlockScope.play（演示块作用域）：码云 GitHub
+- function.play（演示基础函数功能）：码云 GitHub
+- lab/scope 目录（各种语言的作用域测试）：码云 GitHub
