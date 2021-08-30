@@ -8,6 +8,10 @@ import play.PlayScriptParser.*;
 public class RefResolverTest extends PlayScriptBaseListener {
     AnnotatedTreeTest at;
 
+    public RefResolverTest(AnnotatedTreeTest at) {
+
+    }
+
     @Override
     public void exitFunctionCall(PlayScriptParser.FunctionCallContext ctx) {
         String idName = ctx.IDENTIFIER().getText();

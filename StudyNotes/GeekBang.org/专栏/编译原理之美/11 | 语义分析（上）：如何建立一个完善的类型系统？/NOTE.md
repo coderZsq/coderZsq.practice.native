@@ -105,3 +105,118 @@ case PlayScriptParser.ADD:
 ```
 
 这段代码提到，如果操作符号两边有一边数据类型是 String 类型的，那整个表达式就是 String 类型的。如果是其他基础类型的，就要按照一定的规则进行类型的转换，并确定运算结果的类型。比如，+ 号一边是 double 类型的，另一边是 int 类型的，那就要把 int 型的转换成 double 型的，最后计算结果也是 double 类型的。
+
+做了类型的推导以后，我们就可以简化运行期的计算，不需要在运行期做类型判断了：
+
+```java
+private Object add(Object obj1, Object obj2, Type targetType) {
+    Object rtn = null;
+    if (targetType == PrimitiveType.String) {
+        rtn = String.valueOf(obj1) +
+              String.valueOf(obj2);
+    } else if (targetType == PrimitiveType.Integer) {
+        rtn = ((Number)obj1).intValue() +
+              ((Number)obj2).intValue();
+    } else if (targetType == PrimitiveType.Float) {
+        rtn = ((Number)obj1).floatValue()+
+              ((Number)obj2).floatValue();
+    }
+    ...
+    return rtn;
+}
+```
+
+通过这个类型推导的例子，我们又可以引出 S 属性（Synthesized Attribute）的知识点。如果一种属性能够从下级节点推导出来，那么这种属性就叫做 S 属性，字面意思是综合属性，就是在 AST 中从下级的属性归纳、综合出本级的属性。更准确地说，是通过下级节点和自身来确定的。
+
+![](https://static001.geekbang.org/resource/image/52/0c/52b4dfe5eb96dfeacd6a018c4e97720c.jpg)
+
+与 S 属性相对应的是 I 属性（Inherited Attribute），也就是继承属性，即 AST 中某个节点的属性是由上级节点、兄弟节点和它自身来决定的，比如：
+
+```java
+int a;
+```
+
+变量 a 的类型是 int，这个很直观，因为变量声明语句中已经指出了 a 的类型，但这个类型可不是从下级节点推导出来的，而是从兄弟节点推导出来的。
+
+在 PlayScript.g4 中，变量声明的相关语法如下：
+
+```
+variableDeclarators
+    : typeType variableDeclarator (',' variableDeclarator)*
+    ;
+
+variableDeclarator
+    : variableDeclaratorId ('=' variableInitializer)?
+    ;
+
+variableDeclaratorId
+    : IDENTIFIER ('[' ']')*
+    ;
+
+typeType
+    : (classOrInterfaceType| functionType | primitiveType) ('[' ']')*
+    ;
+```
+
+把 int a; 这样一个简单的变量声明语句解析成 AST，就形成了一棵有两个分枝的树：
+
+![](https://static001.geekbang.org/resource/image/25/14/2561a3dd309ba662c82a0bc985c2b614.jpg)
+
+这棵树的左枝，可以从下向上推导类型，所以类型属性也就是 S 属性。而右枝则必须从根节点（也就是 variableDeclarators）往下继承类型属性，所以对于 a 这个节点来说，它的类型属性是 I 属性。
+
+这里插一句，RefResolver.java 实现了 PlayScriptListener 接口。这样，我们可以用标准的方法遍历 AST。代码中的 enterXXX() 方法表示刚进入这个节点，exitXXX() 方法表示退出这个节点，这时所有的子节点都已经遍历过了。在计算 S 属性时，我一定是在 exitXXX() 方法中，因为可以利用下级节点的类型推导出自身节点的类型。
+
+很多现代语言会支持自动类型推导，例如 Go 语言就有两种声明变量的方式：
+
+```go
+var a int = 10  //第一种
+a := 10         //第二种
+```
+
+第一种方式，a 的类型是显式声明的；第二种方式，a 的类型是由右边的表达式推导出来
+
+![](https://static001.geekbang.org/resource/image/32/39/3229353c78b54db03afaa2a9318b9d39.jpg)
+
+说完了类型推导，我们再看看类型检查。
+
+类型检查主要出现在几个场景中：
+
+- 赋值语句（检查赋值操作左边和右边的类型是否匹配）。
+- 变量声明语句（因为变量声明语句中也会有初始化部分，所以也需要类型匹配）。
+- 函数传参（调用函数的时候，传入的参数要符合形参的要求）。
+- 函数返回值（从函数中返回一个值的时候，要符合函数返回值的规定）。
+
+类型检查还有一个特点：以赋值语句为例，左边的类型，是 I 属性，是从声明中得到的；右边的类型是 S 属性，是自下而上综合出来的。当左右两边的类型相遇之后，就要检查二者是否匹配，被赋值的变量要满足左边的类型要求。
+
+如果匹配，自然没有问题，如果不完全匹配，也不一定马上报错，而是要看看是否能进行类型转换。比如，一般的语言在处理整型和浮点型的混合运算时，都能进行自动的转换。像 JavaScript 和 SQL，甚至能够在算术运算时，自动将字符串转换成数字。在 MySQL 里，运行下面的语句，会得到 3，它自动将’2’转换成了数字：
+
+```sql
+select 1 + '2'
+```
+
+这个过程其实是有风险的，这就像在强类型的语言中开了一个后门，绕过或部分绕过了编译器的类型检查功能。把父类转成子类的场景中，编译器顶多能检查这两个类之间是否有继承关系，如果连继承关系都没有，这当然能检查出错误，制止这种转换。但一个基类的子类可能是很多的，具体这个转换对不对，只有到运行期才能检查出错误来。C 语言因为可以强制做各种转换，这个后门开的就更大了。不过这也是 C 语言要达到它的设计目的，必须具备的特性。
+
+关于类型的处理，大家可以参考 playscript 的示例代码，里面有三个类可以看一看：
+
+- TypeResolver.java（做了自上而下的类型推导，也就是 I 属性的计算，包括变量 - 声明、类的继承声明、函数声明）。
+- RefResolver.java（有自下而上的类型推导的逻辑）。
+- TypeChecker.java（类型检查）。
+
+本节课我们重点探讨了语义分析和语言设计中的一个重要话题：类型系统。
+
+理解类型系统，了解它的本质对我们学习语言会有很大的帮助。我希望在这个过程中，你不会再被静态类型和动态类型，强类型和弱类型这样的概念难倒，甚至可以质疑已有的一些观念。比如，如果你仔细研究，会发现静态类型和动态类型不是绝对的，静态类型的语言如 Java，也会在运行期去处理一些类型检查。强类型和弱类型可能也不是绝对的，就像 C 语言，你如果不允许做任何强制类型转换，不允许指针越界，那它也就完全变成强类型的了。
+
+掌握对计算机语言更深一点儿的理解能力，将会是你学习编译原理的额外回报！
+
+针对今天讲的类型系统的知识，你所熟悉的语言是静态类型的，还是动态类型的？是强类型的，还是弱类型的？它的类型系统中有哪些你觉得有意思或者引起你困扰的设计？欢迎在留言区分享你的发现。
+
+最后，感谢你的阅读，如果这篇文章让你有所收获，也欢迎你将它分享给更多的朋友。
+
+本节课相关的示例代码放在文末，供你参考。
+
+- playscript-java（项目目录）： 码云 GitHub
+- PlayScript.g4（语法规则）： 码云 GitHub
+- TypeAndScopeScanner.java（类型和作用域扫描）： 码云 GitHub
+- TypeResolver.java（自上而下的类型推导）： 码云 GitHub
+- RefResolver.java（自下而上的类型推导）： 码云 GitHub
+- TypeChecker.java（类型检查）： 码云 GitHub

@@ -42,8 +42,19 @@ public class ASTEvaluatorTest extends PlayScriptBaseVisitor<Object> {
         }
     }
 
-    private Object add(Object obj1, Object obj2) {
-        return ((Number) obj1).intValue() + ((Number) obj2).intValue();
+    private Object add(Object obj1, Object obj2, TypeTest targetType) {
+        Object rtn = null;
+        if (targetType == PrimitiveTypeTest.String) {
+            rtn = String.valueOf(obj1) +
+                    String.valueOf(obj2);
+        } else if (targetType == PrimitiveTypeTest.Integer) {
+            rtn = ((Number) obj1).intValue() +
+                    ((Number) obj2).intValue();
+        } else if (targetType == PrimitiveTypeTest.Float) {
+            rtn = ((Number) obj1).floatValue() +
+                    ((Number) obj2).floatValue();
+        }
+        return rtn;
     }
 
     private Object minus(Object obj1, Object obj2) {
@@ -192,7 +203,7 @@ public class ASTEvaluatorTest extends PlayScriptBaseVisitor<Object> {
             Object right = visitExpression(ctx.expression(1));
             switch (ctx.bop.getType()) {
                 case PlayScriptParser.ADD: //加法运算
-                    rtn = add(left, right);
+                    rtn = add(left, right, null);
                     break;
                 case PlayScriptParser.SUB: //减法运算
                     rtn = minus(left, right);

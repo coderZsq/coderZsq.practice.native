@@ -1,4 +1,7 @@
 package play;
 
-public class TypeResolverTest {
+public class TypeResolverTest extends PlayScriptBaseListener {
+    public TypeResolverTest(AnnotatedTreeTest at) {
+
+    }
 }
