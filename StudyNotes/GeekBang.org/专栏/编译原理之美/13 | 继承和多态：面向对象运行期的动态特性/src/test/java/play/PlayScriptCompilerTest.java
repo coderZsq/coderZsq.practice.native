@@ -35,4 +35,10 @@ public class PlayScriptCompilerTest {
 
         return at;
     }
+
+    public Object Execute(AnnotatedTreeTest at) {
+        ASTEvaluatorTest visitor = new ASTEvaluatorTest(at);
+        Object result = visitor.visit(at.ast);
+        return result;
+    }
 }

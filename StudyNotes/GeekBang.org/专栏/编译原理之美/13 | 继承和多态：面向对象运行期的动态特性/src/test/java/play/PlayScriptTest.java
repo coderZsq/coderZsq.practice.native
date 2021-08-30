@@ -14,5 +14,9 @@ public class PlayScriptTest {
 
        PlayScriptCompilerTest complier = new PlayScriptCompilerTest();
        AnnotatedTreeTest at = complier.complie(script, false, false);
+       if (!at.hasCompilationError()) {
+           Object result = complier.Execute(at);
+           System.out.println(result);
+       }
     }
 }

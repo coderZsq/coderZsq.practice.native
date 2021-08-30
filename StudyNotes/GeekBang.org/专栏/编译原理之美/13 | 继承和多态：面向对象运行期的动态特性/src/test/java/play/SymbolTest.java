@@ -15,4 +15,12 @@ public abstract class SymbolTest {
 
     // Symbol 关联的AST节点
     protected ParserRuleContext ctx = null;
+
+    public String getName() {
+        return name;
+    }
+
+    public ScopeTest getEnclosingScope() {
+        return enclosingScope;
+    }
 }

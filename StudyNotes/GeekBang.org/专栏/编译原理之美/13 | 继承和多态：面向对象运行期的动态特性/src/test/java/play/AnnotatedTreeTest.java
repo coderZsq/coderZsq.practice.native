@@ -37,4 +37,8 @@ public class AnnotatedTreeTest {
 
     public void log(String message, ParserRuleContext ctx) {
     }
+
+    public boolean hasCompilationError() {
+        return false;
+    }
 }

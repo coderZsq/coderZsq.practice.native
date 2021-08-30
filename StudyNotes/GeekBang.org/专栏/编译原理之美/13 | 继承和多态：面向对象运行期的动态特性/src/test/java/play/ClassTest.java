@@ -1,17 +1,26 @@
 package play;
 
+import org.antlr.v4.runtime.ParserRuleContext;
+
 import java.util.List;
 
 // 类作用域
 public class ClassTest extends ScopeTest implements TypeTest {
 
     private ClassTest parentClass = null; //= rootClass;
+    private ThisTest thisRef = null;
+    private SuperTest superRef = null;
+    private DefaultConstructorTest defaultConstructor = null;
 
-    @Override
-    public boolean containsSymbol(VariableTest variable) {
-        return false;
+
+    public ClassTest(String name, ParserRuleContext ctx) {
+        this.name = name;
+        this.ctx = ctx;
+        thisRef = new ThisTest(this, ctx);
+        thisRef.type = this;
     }
 
+    
     @Override
     public String getName() {
         return null;

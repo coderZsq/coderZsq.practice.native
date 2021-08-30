@@ -12,6 +12,10 @@ public class ASTEvaluatorTest extends PlayScriptBaseVisitor<Object> {
 
     private Stack<StackFrameTest> stack = new Stack<StackFrameTest>();
 
+    public ASTEvaluatorTest(AnnotatedTreeTest at) {
+        this.at = at;
+    }
+
     private void pushStack(StackFrameTest frame) {
         stack.push(frame);
     }
