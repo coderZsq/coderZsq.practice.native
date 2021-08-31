@@ -33,6 +33,9 @@ public class PlayScriptCompilerTest {
         TypeCheckTest pass4 = new TypeCheckTest(at);
         walker.walk(pass4, at.ast);
 
+        SematicValidatorTest pass5 = new SematicValidatorTest(at);
+        walker.walk(pass5, at.ast);
+
         return at;
     }
 
