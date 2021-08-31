@@ -1,19 +1,35 @@
 package play;
 
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import play.PlayScriptParser.*;
+
 import java.util.LinkedList;
 import java.util.List;
 
-import play.PlayScriptParser.*;
-
 public class RefResolverTest extends PlayScriptBaseListener {
-    AnnotatedTreeTest at;
+
+    private AnnotatedTreeTest at;
+    ParseTreeWalker typeResolverEalker = new ParseTreeWalker();
+    TypeResolverTest localVariableEnter = null;
+
+    private List<FunctionCallContext> thisConstructorList = new LinkedList<>();
+    private List<FunctionCallContext> superConstructorList = new LinkedList<>();
 
     public RefResolverTest(AnnotatedTreeTest at) {
-
+        this.at = at;
+        localVariableEnter = new TypeResolverTest(at, true);
     }
 
     @Override
-    public void exitFunctionCall(PlayScriptParser.FunctionCallContext ctx) {
+    public void enterVariableDeclarators(VariableDeclaratorsContext ctx) {
+        ScopeTest scope = at.enclosingScopeOfNode(ctx);
+        if (scope instanceof BlockScopeTest || scope instanceof FunctionTest) {
+            typeResolverEalker.walk(localVariableEnter, ctx);
+        }
+    }
+
+    @Override
+    public void exitFunctionCall(FunctionCallContext ctx) {
         String idName = ctx.IDENTIFIER().getText();
         ScopeTest scope = at.enclosingScopeOfNode(ctx);
         FunctionTest function;
@@ -29,8 +45,7 @@ public class RefResolverTest extends PlayScriptBaseListener {
             // 如果是与类名相同的方法, 并且没有参数, 那么就是缺省构造方法
             else if (ctx.expressionList() == null) {
                 at.symbolOfNode.put(ctx, theClass); // TODO 直接赋予 class
-            }
-            else {
+            } else {
                 at.log("unkown class constructor: " + ctx.getText(), ctx);
             }
             at.typeOfNode.put(ctx, theClass);
@@ -64,8 +79,7 @@ public class RefResolverTest extends PlayScriptBaseListener {
                 case PlayScriptParser.ADD:
                     if (type1 == PrimitiveTypeTest.String || type2 == PrimitiveTypeTest.String) {
                         type = PrimitiveTypeTest.String;
-                    }
-                    else if (type1 instanceof PrimitiveTypeTest && type2 instanceof PrimitiveTypeTest) {
+                    } else if (type1 instanceof PrimitiveTypeTest && type2 instanceof PrimitiveTypeTest) {
                         // 类型"向上"对齐, 比如一个 int 一个 float, 取 float
                         type = PrimitiveTypeTest.getUpperType(type1, type2);
                     } else {

@@ -96,5 +96,15 @@ public class TypeAndScopeScannerTest extends PlayScriptBaseListener {
         String idName = ctx.IDENTIFIER().getText();
         ClassTest theClass = new ClassTest(idName, ctx);
         at.types.add(theClass);
+        if (at.lookupClass(currentScope(), idName) != null) {
+            at.log("duplicate class name:" + idName, ctx);
+        }
+        currentScope().addSymbol(theClass);
+        pushScope(theClass, ctx);
+    }
+
+    @Override
+    public void exitClassDeclaration(PlayScriptParser.ClassDeclarationContext ctx) {
+        popScope();
     }
 }
