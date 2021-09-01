@@ -9,6 +9,11 @@ public class PlayObjectTest {
 
     public Object getValue(VariableTest variable) {
         Object rtn = fields.get(variable);
+
+        if (rtn == null) {
+            rtn = NullObjectTest.instance();
+        }
+
         return rtn;
     }
 

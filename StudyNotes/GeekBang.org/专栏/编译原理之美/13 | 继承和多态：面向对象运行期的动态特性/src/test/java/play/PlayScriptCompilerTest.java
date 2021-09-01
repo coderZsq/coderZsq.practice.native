@@ -10,7 +10,7 @@ public class PlayScriptCompilerTest {
     PlayScriptLexer lexer = null;
     PlayScriptParser parser = null;
 
-    public AnnotatedTreeTest complie(String script, boolean verbose, boolean ast_dump) {
+    public AnnotatedTreeTest compile(String script, boolean verbose, boolean ast_dump) {
         at = new AnnotatedTreeTest();
 
         lexer = new PlayScriptLexer(CharStreams.fromString(script));
@@ -36,7 +36,14 @@ public class PlayScriptCompilerTest {
         SematicValidatorTest pass5 = new SematicValidatorTest(at);
         walker.walk(pass5, at.ast);
 
+        ClosureAnalyzerTest closureAnalyzer = new ClosureAnalyzerTest(at);
+        closureAnalyzer.analyzeClosures();
+
         return at;
+    }
+
+    public AnnotatedTreeTest compile(String script) {
+        return  compile(script,false, false);
     }
 
     public Object Execute(AnnotatedTreeTest at) {

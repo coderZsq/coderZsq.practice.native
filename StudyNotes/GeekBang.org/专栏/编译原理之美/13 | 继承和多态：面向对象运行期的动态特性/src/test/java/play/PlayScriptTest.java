@@ -9,13 +9,12 @@ public class PlayScriptTest {
 
     @Test
     public void test() {
-        // String script = "int age = 44; for(int i = 0;i<10;i++) { age = age + 2;} int i = 8;";
-        String script = "int b= 10; int myfunc(int a) {return a+b+3;} myfunc(2);";
+        String script = "int age = 44; for(int i = 0;i<10;i++) { age = age + 2;} int i = 8;";
 
-       PlayScriptCompilerTest complier = new PlayScriptCompilerTest();
-       AnnotatedTreeTest at = complier.complie(script, false, false);
+       PlayScriptCompilerTest compiler = new PlayScriptCompilerTest();
+       AnnotatedTreeTest at = compiler.compile(script, false, false);
        if (!at.hasCompilationError()) {
-           Object result = complier.Execute(at);
+           Object result = compiler.Execute(at);
            System.out.println(result);
        }
     }
