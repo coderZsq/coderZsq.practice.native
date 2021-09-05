@@ -1,0 +1,48 @@
+Classfile /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/32 | 字节码生成：为什么Spring技术很强大？/MyClass.class
+  Last modified Sep 5, 2021; size 243 bytes
+  MD5 checksum cacf9d74ea2a6b61cedb0e5398be7224
+  Compiled from "MyClass.java"
+public class MyClass
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#12         // java/lang/Object."<init>":()V
+   #2 = Class              #13            // MyClass
+   #3 = Class              #14            // java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               foo
+   #9 = Utf8               (I)I
+  #10 = Utf8               SourceFile
+  #11 = Utf8               MyClass.java
+  #12 = NameAndType        #4:#5          // "<init>":()V
+  #13 = Utf8               MyClass
+  #14 = Utf8               java/lang/Object
+{
+  public MyClass();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public int foo(int);
+    descriptor: (I)I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_1
+         1: iconst_3
+         2: iadd
+         3: ireturn
+      LineNumberTable:
+        line 3: 0
+}
+SourceFile: "MyClass.java"

@@ -1,0 +1,133 @@
+Classfile /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/32 | 字节码生成：为什么Spring技术很强大？/DefaultPlayClass.class
+  Last modified Sep 5, 2021; size 633 bytes
+  MD5 checksum ef852bfa8b45ee3d9a53caafe4ce7407
+public class DefaultPlayClass
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               DefaultPlayClass
+   #2 = Class              #1             // DefaultPlayClass
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = NameAndType        #5:#6          // "<init>":()V
+   #8 = Methodref          #4.#7          // java/lang/Object."<init>":()V
+   #9 = Utf8               main
+  #10 = Utf8               ([Ljava/lang/String;)V
+  #11 = Utf8               args
+  #12 = Methodref          #2.#7          // DefaultPlayClass."<init>":()V
+  #13 = Utf8               java/lang/System
+  #14 = Class              #13            // java/lang/System
+  #15 = Utf8               out
+  #16 = Utf8               Ljava/io/PrintStream;
+  #17 = NameAndType        #15:#16        // out:Ljava/io/PrintStream;
+  #18 = Fieldref           #14.#17        // java/lang/System.out:Ljava/io/PrintStream;
+  #19 = Utf8               java/io/PrintStream
+  #20 = Class              #19            // java/io/PrintStream
+  #21 = Utf8               println
+  #22 = Utf8               (I)V
+  #23 = NameAndType        #21:#22        // println:(I)V
+  #24 = Methodref          #20.#23        // java/io/PrintStream.println:(I)V
+  #25 = Utf8               foo
+  #26 = Utf8               (I)I
+  #27 = NameAndType        #25:#26        // foo:(I)I
+  #28 = Methodref          #2.#27         // DefaultPlayClass.foo:(I)I
+  #29 = Utf8               b
+  #30 = Utf8               I
+  #31 = Utf8               c
+  #32 = Utf8               a
+  #33 = Utf8               bar
+  #34 = Utf8               (II)V
+  #35 = Utf8               Code
+  #36 = Utf8               LocalVariableTable
+  #37 = Utf8               MethodParameters
+{
+  public DefaultPlayClass();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=1
+         0: new           #2                  // class DefaultPlayClass
+         3: dup
+         4: invokespecial #12                 // Method "<init>":()V
+         7: astore_1
+         8: sipush        200
+        11: istore_2
+        12: iconst_2
+        13: iload_2
+        14: iadd
+        15: istore_3
+        16: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        19: iload_3
+        20: invokevirtual #24                 // Method java/io/PrintStream.println:(I)V
+        23: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        26: iload_2
+        27: invokevirtual #24                 // Method java/io/PrintStream.println:(I)V
+        30: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        33: aload_1
+        34: bipush        30
+        36: invokevirtual #28                 // Method foo:(I)I
+        39: invokevirtual #24                 // Method java/io/PrintStream.println:(I)V
+        42: sipush        2021
+        45: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      46     2     b   I
+            0      46     3     c   I
+    MethodParameters:
+      Name                           Flags
+      args
+
+  public int foo(int);
+    descriptor: (I)I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: iload_1
+         1: bipush        30
+         3: iadd
+         4: istore_2
+         5: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         8: iload_2
+         9: invokevirtual #24                 // Method java/io/PrintStream.println:(I)V
+        12: iload_2
+        13: ireturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     2     b   I
+    MethodParameters:
+      Name                           Flags
+      a
+
+  public void bar(int, int);
+    descriptor: (II)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=4, args_size=3
+         0: iload_1
+         1: iload_2
+         2: iadd
+         3: istore_3
+         4: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         7: iload_3
+         8: invokevirtual #24                 // Method java/io/PrintStream.println:(I)V
+        11: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     3     c   I
+    MethodParameters:
+      Name                           Flags
+      a
+      b
+}
