@@ -1,0 +1,6 @@
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/play.dir
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/acc_gen.dir
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/omp_gen.dir
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/26 | 生成IR：实现静态编译的语言/cmake-build-debug/CMakeFiles/intrinsics_gen.dir

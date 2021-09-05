@@ -1,0 +1,18 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/27 | 代码优化：为什么你的代码比他的更高效？"
+-- The CXX compiler identification is AppleClang 12.0.5.12050022
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ZLIB: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/lib/libz.tbd (found version "1.2.11") 
+-- Found LibXml2: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/lib/libxml2.tbd (found version "2.9.4") 
+-- Found LLVM 12.0.0
+-- Using LLVMConfig.cmake in: /usr/local/Cellar/llvm/12.0.0_1/lib/cmake/llvm
+-- LLVM_INCLUDE_DIRS: /usr/local/Cellar/llvm/12.0.0_1/include
+-- LLVM_DEFINITIONS: -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+-- SRC_LIST: src/PlayScript.cppsrc/grammar/PlayScriptBaseListener.cppsrc/grammar/PlayScriptBaseVisitor.cppsrc/grammar/PlayScriptLexer.cppsrc/grammar/PlayScriptListener.cppsrc/grammar/PlayScriptParser.cppsrc/grammar/PlayScriptVisitor.cppsrc/grammar/RefPass.cppsrc/grammar/Scope.cppsrc/grammar/Symbol.cppsrc/grammar/Variable.cppsrc/grammar/Variable.hsrc/grammar/Type.cppsrc/grammar/Type.hsrc/grammar/Function.cppsrc/grammar/Function.hsrc/grammar/FunctionType.cppsrc/grammar/FunctionType.hsrc/grammar/IRGen.cppsrc/grammar/IRGen.hsrc/grammar/ASTEvaluator.hsrc/grammar/ASTEvaluator.cppsrc/grammar/PlayScriptJIT.cppsrc/grammar/PlayScriptJIT.h
+-- llvm_libs: LLVMSupportLLVMCoreLLVMIRReaderLLVMAnalysisLLVMExecutionEngineLLVMInstCombineLLVMObjectLLVMOrcJITLLVMRuntimeDyldLLVMScalarOptsLLVMX86CodeGenLLVMX86AsmParserLLVMX86DescLLVMX86DisassemblerLLVMX86Info
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/zhushuangquan/Codes/GitHub/coderZsq.practice.native/StudyNotes/GeekBang.org/专栏/编译原理之美/27 | 代码优化：为什么你的代码比他的更高效？/cmake-build-debug
