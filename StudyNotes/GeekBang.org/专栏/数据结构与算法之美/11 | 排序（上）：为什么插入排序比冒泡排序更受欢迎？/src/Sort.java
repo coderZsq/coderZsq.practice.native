@@ -5,7 +5,8 @@ public class Sort {
     public static void main(String[] args) {
 
         int[] a = {5, 3, 2, 1, 4, 5, 1, 2};
-        bubbleSort(a, a.length);
+        // bubbleSort(a, a.length);
+        insertionSort(a, a.length);
         System.out.println(Arrays.toString(a));
     }
 
@@ -31,7 +32,17 @@ public class Sort {
 
         for (int i = 0; i < n; ++i) {
             int value = a[i];
+            int j = i - 1;
 
+            for (; j >= 0; --j) {
+                if (a[j] > value) {
+                    a[j + 1] = a[j];
+                } else {
+                    break;
+                }
+            }
+
+            a[j + 1] = value;
         }
     }
 }
