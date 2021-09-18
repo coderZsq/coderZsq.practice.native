@@ -26,7 +26,7 @@
 
 ```java
 // 用数组实现的队列
-public class ArrayQueue {
+public class queue.ArrayQueue {
   // 数组：items，数组大小：n
   private String[] items;
   private int n = 0;
@@ -35,7 +35,7 @@ public class ArrayQueue {
   private int tail = 0;
 
   // 申请一个大小为capacity的数组
-  public ArrayQueue(int capacity) {
+  public queue.ArrayQueue(int capacity) {
     items = new String[capacity];
     n = capacity;
   }
@@ -140,7 +140,7 @@ public class ArrayQueue {
 Talk is cheap，如果还是没怎么理解，那就 show you code 吧。
 
 ```java
-public class CircularQueue {
+public class queue.CircularQueue {
   // 数组：items，数组大小：n
   private String[] items;
   private int n = 0;
@@ -149,7 +149,7 @@ public class CircularQueue {
   private int tail = 0;
 
   // 申请一个大小为capacity的数组
-  public CircularQueue(int capacity) {
+  public queue.CircularQueue(int capacity) {
     items = new String[capacity];
     n = capacity;
   }

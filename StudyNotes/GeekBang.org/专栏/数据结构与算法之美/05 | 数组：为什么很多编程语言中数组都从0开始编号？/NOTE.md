@@ -56,7 +56,7 @@ a[i]_address = base_address + i * data_type_size
 
 我们现在需要将元素 x 插入到第 3 个位置。我们只需要将 c 放入到 a[5]，将 a[2]赋值为 x 即可。最后，数组中的元素如下： a，b，x，d，e，c。
 
-![](我们现在需要将元素 x 插入到第 3 个位置。我们只需要将 c 放入到 a[5]，将 a[2]赋值为 x 即可。最后，数组中的元素如下： a，b，x，d，e，c。)
+![](https://static001.geekbang.org/resource/image/3f/dc/3f70b4ad9069ec568a2caaddc231b7dc.jpg)
 
 利用这种处理技巧，在特定场景下，在第 k 个位置插入一个元素的时间复杂度就会降为 O(1)。这个处理思想在快排中也会用到，我会在排序那一节具体来讲，这里就说到这儿。
 
