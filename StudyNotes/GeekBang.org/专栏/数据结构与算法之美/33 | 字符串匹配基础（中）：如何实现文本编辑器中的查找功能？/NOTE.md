@@ -195,3 +195,85 @@ private void generateGS(char[] b, int m, int[] suffix, boolean[] prefix) {
   }
 }
 ```
+
+有了这两个数组之后，我们现在来看，在模式串跟主串匹配的过程中，遇到不能匹配的字符时，如何根据好后缀规则，计算模式串往后滑动的位数？
+
+假设好后缀的长度是 k。我们先拿好后缀，在 suffix 数组中查找其匹配的子串。如果 suffix[k]不等于 -1（-1 表示不存在匹配的子串），那我们就将模式串往后移动 j-suffix[k]+1 位（j 表示坏字符对应的模式串中的字符下标）。如果 suffix[k]等于 -1，表示模式串中不存在另一个跟好后缀匹配的子串片段。我们可以用下面这条规则来处理。
+
+![](https://static001.geekbang.org/resource/image/1d/72/1d046df5cc40bc57d3f92ff7c51afb72.jpg)
+
+好后缀的后缀子串 b[r, m-1]（其中，r 取值从 j+2 到 m-1）的长度 k=m-r，如果 prefix[k]等于 true，表示长度为 k 的后缀子串，有可匹配的前缀子串，这样我们可以把模式串后移 r 位。
+
+![](https://static001.geekbang.org/resource/image/63/0d/63a357abc9766393a77a9a006a31b10d.jpg)
+
+如果两条规则都没有找到可以匹配好后缀及其后缀子串的子串，我们就将整个模式串后移 m 位。
+
+![](https://static001.geekbang.org/resource/image/d9/a1/d982db00467964666de18ed5ac647fa1.jpg)
+
+至此，好后缀规则的代码实现我们也讲完了。我们把好后缀规则加到前面的代码框架里，就可以得到 BM 算法的完整版代码实现。
+
+```java
+// a,b表示主串和模式串；n，m表示主串和模式串的长度。
+public int bm(char[] a, int n, char[] b, int m) {
+  int[] bc = new int[SIZE]; // 记录模式串中每个字符最后出现的位置
+  generateBC(b, m, bc); // 构建坏字符哈希表
+  int[] suffix = new int[m];
+  boolean[] prefix = new boolean[m];
+  generateGS(b, m, suffix, prefix);
+  int i = 0; // j表示主串与模式串匹配的第一个字符
+  while (i <= n - m) {
+    int j;
+    for (j = m - 1; j >= 0; --j) { // 模式串从后往前匹配
+      if (a[i+j] != b[j]) break; // 坏字符对应模式串中的下标是j
+    }
+    if (j < 0) {
+      return i; // 匹配成功，返回主串与模式串第一个匹配的字符的位置
+    }
+    int x = j - bc[(int)a[i+j]];
+    int y = 0;
+    if (j < m-1) { // 如果有好后缀的话
+      y = moveByGS(j, m, suffix, prefix);
+    }
+    i = i + Math.max(x, y);
+  }
+  return -1;
+}
+
+// j表示坏字符对应的模式串中的字符下标; m表示模式串长度
+private int moveByGS(int j, int m, int[] suffix, boolean[] prefix) {
+  int k = m - 1 - j; // 好后缀长度
+  if (suffix[k] != -1) return j - suffix[k] +1;
+  for (int r = j+2; r <= m-1; ++r) {
+    if (prefix[m-r] == true) {
+      return r;
+    }
+  }
+  return m;
+}
+```
+
+### BM 算法的性能分析及优化
+
+我们先来分析 BM 算法的内存消耗。整个算法用到了额外的 3 个数组，其中 bc 数组的大小跟字符集大小有关，suffix 数组和 prefix 数组的大小跟模式串长度 m 有关。
+
+如果我们处理字符集很大的字符串匹配问题，bc 数组对内存的消耗就会比较多。因为好后缀和坏字符规则是独立的，如果我们运行的环境对内存要求苛刻，可以只使用好后缀规则，不使用坏字符规则，这样就可以避免 bc 数组过多的内存消耗。不过，单纯使用好后缀规则的 BM 算法效率就会下降一些了。
+
+对于执行效率来说，我们可以先从时间复杂度的角度来分析。
+
+实际上，我前面讲的 BM 算法是个初级版本。为了让你能更容易理解，有些复杂的优化我没有讲。基于我目前讲的这个版本，在极端情况下，预处理计算 suffix 数组、prefix 数组的性能会比较差。
+
+比如模式串是 aaaaaaa 这种包含很多重复的字符的模式串，预处理的时间复杂度就是 O(m^2)。当然，大部分情况下，时间复杂度不会这么差。关于如何优化这种极端情况下的时间复杂度退化，如果感兴趣，你可以自己研究一下。
+
+实际上，BM 算法的时间复杂度分析起来是非常复杂，这篇论文“A new proof of the linearity of the Boyer-Moore string searching algorithm”证明了在最坏情况下，BM 算法的比较次数上限是 5n。这篇论文“Tight bounds on the complexity of the Boyer-Moore string matching algorithm”证明了在最坏情况下，BM 算法的比较次数上限是 3n。你可以自己阅读看看。
+
+### 解答开篇 & 内容小结
+
+今天，我们讲了一种比较复杂的字符串匹配算法，BM 算法。尽管复杂、难懂，但匹配的效率却很高，在实际的软件开发中，特别是一些文本编辑器中，应用比较多。如果一遍看不懂的话，你就多看几遍。
+
+BM 算法核心思想是，利用模式串本身的特点，在模式串中某个字符与主串不能匹配的时候，将模式串往后多滑动几位，以此来减少不必要的字符比较，提高匹配的效率。BM 算法构建的规则有两类，坏字符规则和好后缀规则。好后缀规则可以独立于坏字符规则使用。因为坏字符规则的实现比较耗内存，为了节省内存，我们可以只用好后缀规则来实现 BM 算法。
+
+### 课后思考
+
+你熟悉的编程语言中的查找函数，或者工具、软件中的查找功能，都是用了哪种字符串匹配算法呢？
+
+欢迎留言和我分享，也欢迎点击“请朋友读”，把今天的内容分享给你的好友，和他一起讨论、学习。
