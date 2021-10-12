@@ -5,10 +5,7 @@ func swapPairs(head *ListNode) *ListNode {
     for pre.Next != nil && pre.Next.Next != nil {
         a := pre.Next
         b := pre.Next.Next
-        tmp := b.Next
-        pre.Next = b
-        b.Next = a
-        a.Next = tmp
+        pre.Next, b.Next, a.Next = b, a, b.Next
         pre = a
     }
     return dummy.Next
