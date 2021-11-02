@@ -1,6 +1,0 @@
-framework module SQFramework {
-  umbrella header "SQFramework.h"
-
-  export *
-  module * { export * }
-}
