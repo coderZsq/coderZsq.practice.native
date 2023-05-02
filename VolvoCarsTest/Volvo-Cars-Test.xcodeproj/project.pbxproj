@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B3A98D629F79E7C00EC2761 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98D529F79E7C00EC2761 /* AppDelegate.m */; };
+		9B3A98D929F79E7C00EC2761 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98D829F79E7C00EC2761 /* SceneDelegate.m */; };
+		9B3A98DC29F79E7C00EC2761 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98DB29F79E7C00EC2761 /* ViewController.m */; };
+		9B3A98DF29F79E7C00EC2761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3A98DD29F79E7C00EC2761 /* Main.storyboard */; };
+		9B3A98E129F79E7E00EC2761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3A98E029F79E7E00EC2761 /* Assets.xcassets */; };
+		9B3A98E429F79E7E00EC2761 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3A98E229F79E7E00EC2761 /* LaunchScreen.storyboard */; };
+		9B3A98E729F79E7E00EC2761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98E629F79E7E00EC2761 /* main.m */; };
+		9B3A98EF29F79F5C00EC2761 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98EE29F79F5C00EC2761 /* SwiftUIView.swift */; };
+		9B3A98F229F7A29E00EC2761 /* SwiftUIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98F129F7A29E00EC2761 /* SwiftUIViewFactory.swift */; };
+		9B3A990629F80ACE00EC2761 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98FC29F80ACE00EC2761 /* HomeViewModel.swift */; };
+		9B3A990729F80ACE00EC2761 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A98FE29F80ACE00EC2761 /* HomeModel.swift */; };
+		9B3A990829F80ACE00EC2761 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A990029F80ACE00EC2761 /* WeatherView.swift */; };
+		9B3A990929F80ACE00EC2761 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A990129F80ACE00EC2761 /* HomeView.swift */; };
+		9B3A990A29F80ACE00EC2761 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A990229F80ACE00EC2761 /* SearchBarView.swift */; };
+		9B3A990B29F80ACE00EC2761 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A990429F80ACE00EC2761 /* WeatherService.swift */; };
+		9B3A990C29F80ACE00EC2761 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A990529F80ACE00EC2761 /* WeatherDataManager.swift */; };
+		C09F738C5B356C4E8A7404EF /* Pods_Volvo_Cars_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCB13864289309463B2ED07 /* Pods_Volvo_Cars_Test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CCB13864289309463B2ED07 /* Pods_Volvo_Cars_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volvo_Cars_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2813FBDF9B2D7026EB9B80EA /* Pods-Volvo-Cars-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volvo-Cars-Test.debug.xcconfig"; path = "Target Support Files/Pods-Volvo-Cars-Test/Pods-Volvo-Cars-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		9B3A98D129F79E7C00EC2761 /* Volvo-Cars-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Volvo-Cars-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B3A98D429F79E7C00EC2761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9B3A98D529F79E7C00EC2761 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B3A98D729F79E7C00EC2761 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9B3A98D829F79E7C00EC2761 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		9B3A98DA29F79E7C00EC2761 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9B3A98DB29F79E7C00EC2761 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9B3A98DE29F79E7C00EC2761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B3A98E029F79E7E00EC2761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B3A98E329F79E7E00EC2761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B3A98E529F79E7E00EC2761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B3A98E629F79E7E00EC2761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B3A98ED29F79F5C00EC2761 /* Volvo-Cars-Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Volvo-Cars-Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B3A98EE29F79F5C00EC2761 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		9B3A98F129F7A29E00EC2761 /* SwiftUIViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewFactory.swift; sourceTree = "<group>"; };
+		9B3A98FC29F80ACE00EC2761 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9B3A98FE29F80ACE00EC2761 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		9B3A990029F80ACE00EC2761 /* WeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		9B3A990129F80ACE00EC2761 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9B3A990229F80ACE00EC2761 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		9B3A990429F80ACE00EC2761 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		9B3A990529F80ACE00EC2761 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		FBB4B39A7D152FF154516872 /* Pods-Volvo-Cars-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volvo-Cars-Test.release.xcconfig"; path = "Target Support Files/Pods-Volvo-Cars-Test/Pods-Volvo-Cars-Test.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B3A98CE29F79E7C00EC2761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C09F738C5B356C4E8A7404EF /* Pods_Volvo_Cars_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A0616E7EBAD8E605119E3D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2813FBDF9B2D7026EB9B80EA /* Pods-Volvo-Cars-Test.debug.xcconfig */,
+				FBB4B39A7D152FF154516872 /* Pods-Volvo-Cars-Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A7B6FCDE9A589AFB77CF550 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CCB13864289309463B2ED07 /* Pods_Volvo_Cars_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B3A98C829F79E7C00EC2761 = {
+			isa = PBXGroup;
+			children = (
+				9B3A98D329F79E7C00EC2761 /* Volvo-Cars-Test */,
+				9B3A98D229F79E7C00EC2761 /* Products */,
+				2A0616E7EBAD8E605119E3D6 /* Pods */,
+				5A7B6FCDE9A589AFB77CF550 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9B3A98D229F79E7C00EC2761 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98D129F79E7C00EC2761 /* Volvo-Cars-Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B3A98D329F79E7C00EC2761 /* Volvo-Cars-Test */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98F029F7A1DC00EC2761 /* SwiftUIViews */,
+				9B3A98D429F79E7C00EC2761 /* AppDelegate.h */,
+				9B3A98D529F79E7C00EC2761 /* AppDelegate.m */,
+				9B3A98D729F79E7C00EC2761 /* SceneDelegate.h */,
+				9B3A98D829F79E7C00EC2761 /* SceneDelegate.m */,
+				9B3A98DA29F79E7C00EC2761 /* ViewController.h */,
+				9B3A98DB29F79E7C00EC2761 /* ViewController.m */,
+				9B3A98DD29F79E7C00EC2761 /* Main.storyboard */,
+				9B3A98E029F79E7E00EC2761 /* Assets.xcassets */,
+				9B3A98E229F79E7E00EC2761 /* LaunchScreen.storyboard */,
+				9B3A98E529F79E7E00EC2761 /* Info.plist */,
+				9B3A98E629F79E7E00EC2761 /* main.m */,
+			);
+			path = "Volvo-Cars-Test";
+			sourceTree = "<group>";
+		};
+		9B3A98F029F7A1DC00EC2761 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98F929F80ACE00EC2761 /* Core */,
+				9B3A990329F80ACE00EC2761 /* Services */,
+				9B3A98EE29F79F5C00EC2761 /* SwiftUIView.swift */,
+				9B3A98F129F7A29E00EC2761 /* SwiftUIViewFactory.swift */,
+				9B3A98ED29F79F5C00EC2761 /* Volvo-Cars-Test-Bridging-Header.h */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		9B3A98F929F80ACE00EC2761 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98FA29F80ACE00EC2761 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9B3A98FA29F80ACE00EC2761 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98FB29F80ACE00EC2761 /* ViewModels */,
+				9B3A98FD29F80ACE00EC2761 /* Models */,
+				9B3A98FF29F80ACE00EC2761 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9B3A98FB29F80ACE00EC2761 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98FC29F80ACE00EC2761 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9B3A98FD29F80ACE00EC2761 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A98FE29F80ACE00EC2761 /* HomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B3A98FF29F80ACE00EC2761 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A990029F80ACE00EC2761 /* WeatherView.swift */,
+				9B3A990129F80ACE00EC2761 /* HomeView.swift */,
+				9B3A990229F80ACE00EC2761 /* SearchBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B3A990329F80ACE00EC2761 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A990429F80ACE00EC2761 /* WeatherService.swift */,
+				9B3A990529F80ACE00EC2761 /* WeatherDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B3A98D029F79E7C00EC2761 /* Volvo-Cars-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B3A98EA29F79E7E00EC2761 /* Build configuration list for PBXNativeTarget "Volvo-Cars-Test" */;
+			buildPhases = (
+				2A7C7E1C7DC6FA66BB052FF9 /* [CP] Check Pods Manifest.lock */,
+				9B3A98CD29F79E7C00EC2761 /* Sources */,
+				9B3A98CE29F79E7C00EC2761 /* Frameworks */,
+				9B3A98CF29F79E7C00EC2761 /* Resources */,
+				FD3355360BE066CE90090179 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Volvo-Cars-Test";
+			productName = "Volvo-Cars-Test";
+			productReference = 9B3A98D129F79E7C00EC2761 /* Volvo-Cars-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B3A98C929F79E7C00EC2761 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9B3A98D029F79E7C00EC2761 = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
+					};
+				};
+			};
+			buildConfigurationList = 9B3A98CC29F79E7C00EC2761 /* Build configuration list for PBXProject "Volvo-Cars-Test" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B3A98C829F79E7C00EC2761;
+			productRefGroup = 9B3A98D229F79E7C00EC2761 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B3A98D029F79E7C00EC2761 /* Volvo-Cars-Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B3A98CF29F79E7C00EC2761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B3A98E429F79E7E00EC2761 /* LaunchScreen.storyboard in Resources */,
+				9B3A98E129F79E7E00EC2761 /* Assets.xcassets in Resources */,
+				9B3A98DF29F79E7C00EC2761 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A7C7E1C7DC6FA66BB052FF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Volvo-Cars-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD3355360BE066CE90090179 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volvo-Cars-Test/Pods-Volvo-Cars-Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volvo-Cars-Test/Pods-Volvo-Cars-Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volvo-Cars-Test/Pods-Volvo-Cars-Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B3A98CD29F79E7C00EC2761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B3A98EF29F79F5C00EC2761 /* SwiftUIView.swift in Sources */,
+				9B3A98DC29F79E7C00EC2761 /* ViewController.m in Sources */,
+				9B3A990629F80ACE00EC2761 /* HomeViewModel.swift in Sources */,
+				9B3A990929F80ACE00EC2761 /* HomeView.swift in Sources */,
+				9B3A990B29F80ACE00EC2761 /* WeatherService.swift in Sources */,
+				9B3A98D629F79E7C00EC2761 /* AppDelegate.m in Sources */,
+				9B3A990729F80ACE00EC2761 /* HomeModel.swift in Sources */,
+				9B3A98F229F7A29E00EC2761 /* SwiftUIViewFactory.swift in Sources */,
+				9B3A990A29F80ACE00EC2761 /* SearchBarView.swift in Sources */,
+				9B3A990829F80ACE00EC2761 /* WeatherView.swift in Sources */,
+				9B3A990C29F80ACE00EC2761 /* WeatherDataManager.swift in Sources */,
+				9B3A98E729F79E7E00EC2761 /* main.m in Sources */,
+				9B3A98D929F79E7C00EC2761 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B3A98DD29F79E7C00EC2761 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B3A98DE29F79E7C00EC2761 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B3A98E229F79E7E00EC2761 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B3A98E329F79E7E00EC2761 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B3A98E829F79E7E00EC2761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9B3A98E929F79E7E00EC2761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B3A98EB29F79E7E00EC2761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2813FBDF9B2D7026EB9B80EA /* Pods-Volvo-Cars-Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NS4WKB8P79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Volvo-Cars-Test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.coderZsq.Volvo-Cars-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Volvo-Cars-Test/SwiftUIViews/Volvo-Cars-Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B3A98EC29F79E7E00EC2761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBB4B39A7D152FF154516872 /* Pods-Volvo-Cars-Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NS4WKB8P79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Volvo-Cars-Test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.coderZsq.Volvo-Cars-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Volvo-Cars-Test/SwiftUIViews/Volvo-Cars-Test-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B3A98CC29F79E7C00EC2761 /* Build configuration list for PBXProject "Volvo-Cars-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B3A98E829F79E7E00EC2761 /* Debug */,
+				9B3A98E929F79E7E00EC2761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B3A98EA29F79E7E00EC2761 /* Build configuration list for PBXNativeTarget "Volvo-Cars-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B3A98EB29F79E7E00EC2761 /* Debug */,
+				9B3A98EC29F79E7E00EC2761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B3A98C929F79E7C00EC2761 /* Project object */;
+}

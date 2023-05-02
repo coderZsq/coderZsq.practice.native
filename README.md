@@ -1,5 +1,23 @@
 ## Find inspiration in practice
 
+### VOLVO CARS iOS test task
+
+Build an application that shows tomorrow’s weather forecast for specific cities (listed below) using the Amap Weather REST API.
+Requirements
+- ✅ The application should be built in objective-c, Swift, SwiftUI , and Combine, Concurrency。
+- ✅ The application should make use of the Amap Weather restful API. The API description can be found here: https://lbs.amap.com/api/webservice/guide/api/weatherinfo
+
+- ✅ The application should show tomorrow’s weather forecast in the following six cities:
+	- Beijing
+	- Shanghai
+	- Guangzhou
+	- Shenzhen
+	- Suzhou
+	- Shengyang
+- ✅ The forecast for a specific city should be presented in the application by: 
+ 	- Showing a few additional forecast data of your choice (as available through Amap Weather)
+
+
 ### StudyNotes
 > Practice some **programming basics** such as **algorithms** and **higher-order readers**.
 
