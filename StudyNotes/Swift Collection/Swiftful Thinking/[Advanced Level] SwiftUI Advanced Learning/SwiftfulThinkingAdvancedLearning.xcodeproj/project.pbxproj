@@ -18,6 +18,7 @@
 		9DEAC4102A134ED40079DE4B /* CustomCurvesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC40F2A134ED40079DE4B /* CustomCurvesBootcamp.swift */; };
 		9DEAC4122A13700B0079DE4B /* AnimateableDataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */; };
 		9DEAC4142A137BB90079DE4B /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */; };
+		9DEAC4162A1387B50079DE4B /* ViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9DEAC40F2A134ED40079DE4B /* CustomCurvesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurvesBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateableDataBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
+		9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				9DEAC40F2A134ED40079DE4B /* CustomCurvesBootcamp.swift */,
 				9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */,
 				9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */,
+				9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */,
 				9BF3D54829C21622007022F7 /* Assets.xcassets */,
 				9BF3D54A29C21622007022F7 /* Preview Content */,
 			);
@@ -163,6 +166,7 @@
 				9DEAC4122A13700B0079DE4B /* AnimateableDataBootcamp.swift in Sources */,
 				9DEAC40A2A1317610079DE4B /* AnyTransitionBootcamp.swift in Sources */,
 				9BF3D54529C2161E007022F7 /* SwiftfulThinkingAdvancedLearningApp.swift in Sources */,
+				9DEAC4162A1387B50079DE4B /* ViewBuilderBootcamp.swift in Sources */,
 				9DEAC4142A137BB90079DE4B /* GenericsBootcamp.swift in Sources */,
 				9DEAC40C2A1324890079DE4B /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				9DEAC40E2A1345C40079DE4B /* CustomShapesBootcamp.swift in Sources */,
