@@ -19,6 +19,9 @@
 		9DEAC4122A13700B0079DE4B /* AnimateableDataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */; };
 		9DEAC4142A137BB90079DE4B /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */; };
 		9DEAC4162A1387B50079DE4B /* ViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */; };
+		9DEAC4182A1469D50079DE4B /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4172A1469D50079DE4B /* PreferenceKeyBootcamp.swift */; };
+		9DEAC41B2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC41A2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift */; };
+		9DEAC41D2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC41C2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateableDataBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootcamp.swift; sourceTree = "<group>"; };
+		9DEAC4172A1469D50079DE4B /* PreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
+		9DEAC41A2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
+		9DEAC41C2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				9DEAC4112A13700B0079DE4B /* AnimateableDataBootcamp.swift */,
 				9DEAC4132A137BB90079DE4B /* GenericsBootcamp.swift */,
 				9DEAC4152A1387B50079DE4B /* ViewBuilderBootcamp.swift */,
+				9DEAC4192A146EA20079DE4B /* PreferenceKeyBootcamp */,
 				9BF3D54829C21622007022F7 /* Assets.xcassets */,
 				9BF3D54A29C21622007022F7 /* Preview Content */,
 			);
@@ -89,6 +96,16 @@
 				9BF3D54B29C21622007022F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DEAC4192A146EA20079DE4B /* PreferenceKeyBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				9DEAC4172A1469D50079DE4B /* PreferenceKeyBootcamp.swift */,
+				9DEAC41A2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift */,
+				9DEAC41C2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
+			);
+			path = PreferenceKeyBootcamp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +185,11 @@
 				9BF3D54529C2161E007022F7 /* SwiftfulThinkingAdvancedLearningApp.swift in Sources */,
 				9DEAC4162A1387B50079DE4B /* ViewBuilderBootcamp.swift in Sources */,
 				9DEAC4142A137BB90079DE4B /* GenericsBootcamp.swift in Sources */,
+				9DEAC41B2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift in Sources */,
 				9DEAC40C2A1324890079DE4B /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				9DEAC40E2A1345C40079DE4B /* CustomShapesBootcamp.swift in Sources */,
+				9DEAC4182A1469D50079DE4B /* PreferenceKeyBootcamp.swift in Sources */,
+				9DEAC41D2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				9DEAC4102A134ED40079DE4B /* CustomCurvesBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
