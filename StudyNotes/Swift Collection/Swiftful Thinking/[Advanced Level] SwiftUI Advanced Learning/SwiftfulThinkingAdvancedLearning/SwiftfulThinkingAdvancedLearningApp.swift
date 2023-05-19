@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftfulThinkingAdvancedLearningApp: App {
     var body: some Scene {
         WindowGroup {
-            MatchedGeometryEffectExample2()
+            AppTabBarView()
+//            MatchedGeometryEffectExample2()
         }
     }
 }
