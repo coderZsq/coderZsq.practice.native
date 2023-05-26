@@ -12,6 +12,10 @@
 		9BF3D54C29C21622007022F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF3D54B29C21622007022F7 /* Preview Assets.xcassets */; };
 		9BF3D55329C216A9007022F7 /* ViewModifierBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D55229C216A9007022F7 /* ViewModifierBootcamp.swift */; };
 		9BF3D55529C35BFB007022F7 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D55429C35BFB007022F7 /* ButtonStyleBootcamp.swift */; };
+		9D2275932A1FA49900C9BD36 /* UITestingBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2275922A1FA49900C9BD36 /* UITestingBootcampView.swift */; };
+		9D22759B2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22759A2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.swift */; };
+		9D22759D2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22759C2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift */; };
+		9D2275A42A1FAC0200C9BD36 /* UITestingBootcampView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2275A32A1FAC0200C9BD36 /* UITestingBootcampView_UITests.swift */; };
 		9D4A8BE52A15BF28009CE3E4 /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A8BE42A15BF28009CE3E4 /* AppTabBarView.swift */; };
 		9D4A8BE72A15C3D6009CE3E4 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A8BE62A15C3D6009CE3E4 /* CustomTabBarView.swift */; };
 		9D4C704D2A1CEC7700F23557 /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C704C2A1CEC7700F23557 /* UIViewControllerRepresentableBootcamp.swift */; };
@@ -46,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9D22759E2A1FAA6D00C9BD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BF3D53929C2161E007022F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BF3D54029C2161E007022F7;
+			remoteInfo = SwiftfulThinkingAdvancedLearning;
+		};
 		9DF17FC12A1E480C008F2A25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9BF3D53929C2161E007022F7 /* Project object */;
@@ -62,6 +73,11 @@
 		9BF3D54B29C21622007022F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9BF3D55229C216A9007022F7 /* ViewModifierBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierBootcamp.swift; sourceTree = "<group>"; };
 		9BF3D55429C35BFB007022F7 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
+		9D2275922A1FA49900C9BD36 /* UITestingBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcampView.swift; sourceTree = "<group>"; };
+		9D2275982A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftfulThinkingAdvancedLearning_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D22759A2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingAdvancedLearning_UITests.swift; sourceTree = "<group>"; };
+		9D22759C2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D2275A32A1FAC0200C9BD36 /* UITestingBootcampView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcampView_UITests.swift; sourceTree = "<group>"; };
 		9D4A8BE42A15BF28009CE3E4 /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		9D4A8BE62A15C3D6009CE3E4 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		9D4C704C2A1CEC7700F23557 /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
@@ -104,6 +120,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D2275952A1FAA6D00C9BD36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DF17FBA2A1E480C008F2A25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,6 +142,7 @@
 			children = (
 				9BF3D54329C2161E007022F7 /* SwiftfulThinkingAdvancedLearning */,
 				9DF17FBE2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests */,
+				9D2275992A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests */,
 				9BF3D54229C2161E007022F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +152,7 @@
 			children = (
 				9BF3D54129C2161E007022F7 /* SwiftfulThinkingAdvancedLearning.app */,
 				9DF17FBD2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests.xctest */,
+				9D2275982A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +178,7 @@
 				9D4C704E2A1CF6A400F23557 /* ProtocolsBootcamp.swift */,
 				9D4C70502A1D004800F23557 /* DependencyInjectionBootcamp.swift */,
 				9DF17FB42A1E4517008F2A25 /* UnitTestingBootcamp */,
+				9D2275922A1FA49900C9BD36 /* UITestingBootcampView.swift */,
 				9BF3D54829C21622007022F7 /* Assets.xcassets */,
 				9BF3D54A29C21622007022F7 /* Preview Content */,
 			);
@@ -165,6 +191,16 @@
 				9BF3D54B29C21622007022F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D2275992A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D22759A2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.swift */,
+				9D22759C2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift */,
+				9D2275A32A1FAC0200C9BD36 /* UITestingBootcampView_UITests.swift */,
+			);
+			path = SwiftfulThinkingAdvancedLearning_UITests;
 			sourceTree = "<group>";
 		};
 		9D4A8BE32A15BF03009CE3E4 /* CustomTabBar */ = {
@@ -242,6 +278,24 @@
 			productReference = 9BF3D54129C2161E007022F7 /* SwiftfulThinkingAdvancedLearning.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9D2275972A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D2275A02A1FAA6D00C9BD36 /* Build configuration list for PBXNativeTarget "SwiftfulThinkingAdvancedLearning_UITests" */;
+			buildPhases = (
+				9D2275942A1FAA6D00C9BD36 /* Sources */,
+				9D2275952A1FAA6D00C9BD36 /* Frameworks */,
+				9D2275962A1FAA6D00C9BD36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D22759F2A1FAA6D00C9BD36 /* PBXTargetDependency */,
+			);
+			name = SwiftfulThinkingAdvancedLearning_UITests;
+			productName = SwiftfulThinkingAdvancedLearning_UITests;
+			productReference = 9D2275982A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9DF17FBC2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DF17FC32A1E480C008F2A25 /* Build configuration list for PBXNativeTarget "SwiftfulThinkingAdvancedLearning_Tests" */;
@@ -273,6 +327,10 @@
 					9BF3D54029C2161E007022F7 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					9D2275972A1FAA6D00C9BD36 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9BF3D54029C2161E007022F7;
+					};
 					9DF17FBC2A1E480C008F2A25 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 9BF3D54029C2161E007022F7;
@@ -294,6 +352,7 @@
 			targets = (
 				9BF3D54029C2161E007022F7 /* SwiftfulThinkingAdvancedLearning */,
 				9DF17FBC2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests */,
+				9D2275972A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +364,13 @@
 			files = (
 				9BF3D54C29C21622007022F7 /* Preview Assets.xcassets in Resources */,
 				9BF3D54929C21622007022F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2275962A1FAA6D00C9BD36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +390,7 @@
 			files = (
 				9DF17FB82A1E4746008F2A25 /* UnitTestingBootcampViewModel.swift in Sources */,
 				9DF17FC92A1E64F9008F2A25 /* NewMockDataService.swift in Sources */,
+				9D2275932A1FA49900C9BD36 /* UITestingBootcampView.swift in Sources */,
 				9D67DF322A17459B004F08EB /* AppNavBarView.swift in Sources */,
 				9D67DF2D2A171285004F08EB /* TabBarItemsPreferenceKey.swift in Sources */,
 				9DF17FB62A1E4551008F2A25 /* UnitTestingBootcampView.swift in Sources */,
@@ -356,6 +423,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D2275942A1FAA6D00C9BD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D22759D2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITestsLaunchTests.swift in Sources */,
+				9D2275A42A1FAC0200C9BD36 /* UITestingBootcampView_UITests.swift in Sources */,
+				9D22759B2A1FAA6D00C9BD36 /* SwiftfulThinkingAdvancedLearning_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DF17FB92A1E480C008F2A25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +446,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9D22759F2A1FAA6D00C9BD36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BF3D54029C2161E007022F7 /* SwiftfulThinkingAdvancedLearning */;
+			targetProxy = 9D22759E2A1FAA6D00C9BD36 /* PBXContainerItemProxy */;
+		};
 		9DF17FC22A1E480C008F2A25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9BF3D54029C2161E007022F7 /* SwiftfulThinkingAdvancedLearning */;
@@ -499,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulThinkingAdvancedLearning/Preview Content\"";
-				DEVELOPMENT_TEAM = NS4WKB8P79;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -528,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulThinkingAdvancedLearning/Preview Content\"";
-				DEVELOPMENT_TEAM = NS4WKB8P79;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -546,6 +628,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9D2275A12A1FAA6D00C9BD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.SwiftfulThinkingAdvancedLearning-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftfulThinkingAdvancedLearning;
+			};
+			name = Debug;
+		};
+		9D2275A22A1FAA6D00C9BD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coderZsq.SwiftfulThinkingAdvancedLearning-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftfulThinkingAdvancedLearning;
 			};
 			name = Release;
 		};
@@ -604,6 +722,15 @@
 			buildConfigurations = (
 				9BF3D55029C21622007022F7 /* Debug */,
 				9BF3D55129C21622007022F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D2275A02A1FAA6D00C9BD36 /* Build configuration list for PBXNativeTarget "SwiftfulThinkingAdvancedLearning_UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D2275A12A1FAA6D00C9BD36 /* Debug */,
+				9D2275A22A1FAA6D00C9BD36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
