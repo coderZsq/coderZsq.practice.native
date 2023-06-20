@@ -46,6 +46,7 @@
 		9DEAC4182A1469D50079DE4B /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4172A1469D50079DE4B /* PreferenceKeyBootcamp.swift */; };
 		9DEAC41B2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC41A2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift */; };
 		9DEAC41D2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC41C2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
+		9DEDFDFC2A40849D00B950F0 /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFDFB2A40849D00B950F0 /* CloudKitUtility.swift */; };
 		9DF17FB62A1E4551008F2A25 /* UnitTestingBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF17FB52A1E4551008F2A25 /* UnitTestingBootcampView.swift */; };
 		9DF17FB82A1E4746008F2A25 /* UnitTestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF17FB72A1E4746008F2A25 /* UnitTestingBootcampViewModel.swift */; };
 		9DF17FC02A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF17FBF2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests.swift */; };
@@ -114,6 +115,7 @@
 		9DEAC4172A1469D50079DE4B /* PreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC41A2A146F440079DE4B /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC41C2A1474C70079DE4B /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
+		9DEDFDFB2A40849D00B950F0 /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		9DF17FB52A1E4551008F2A25 /* UnitTestingBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampView.swift; sourceTree = "<group>"; };
 		9DF17FB72A1E4746008F2A25 /* UnitTestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel.swift; sourceTree = "<group>"; };
 		9DF17FBD2A1E480C008F2A25 /* SwiftfulThinkingAdvancedLearning_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftfulThinkingAdvancedLearning_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +251,7 @@
 				9D83B0EF2A22FB2F00E650F1 /* CloudKitUserBootcamp.swift */,
 				9D1FAF9E2A2634AA000DE9DC /* CloudKitCrudBootcamp.swift */,
 				9D78804A2A30D6EC00ACD639 /* CloudKitPushNotificationBootcamp.swift */,
+				9DEDFDFB2A40849D00B950F0 /* CloudKitUtility.swift */,
 			);
 			path = CloudKitBootcamps;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				9D4A8BE52A15BF28009CE3E4 /* AppTabBarView.swift in Sources */,
 				9D1FAF9F2A2634AA000DE9DC /* CloudKitCrudBootcamp.swift in Sources */,
 				9DBD8ECD2A1BB69C005E8264 /* UIViewRepresentableBootcamp.swift in Sources */,
+				9DEDFDFC2A40849D00B950F0 /* CloudKitUtility.swift in Sources */,
 				9BF3D55529C35BFB007022F7 /* ButtonStyleBootcamp.swift in Sources */,
 				9BF3D55329C216A9007022F7 /* ViewModifierBootcamp.swift in Sources */,
 				9DEAC4122A13700B0079DE4B /* AnimateableDataBootcamp.swift in Sources */,
