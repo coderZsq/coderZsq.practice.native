@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftuiThinkingBootcampApp: App {
     var body: some Scene {
         WindowGroup {
-            SubmitTextFieldBootcamp()
+            NavigationStackBootcamp()
         }
     }
 }

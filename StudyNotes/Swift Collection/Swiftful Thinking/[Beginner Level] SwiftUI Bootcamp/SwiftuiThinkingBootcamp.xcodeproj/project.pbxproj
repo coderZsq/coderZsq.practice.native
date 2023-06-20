@@ -73,6 +73,7 @@
 		9BC6FEFC297F791700B62297 /* DocumentationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6FEFB297F791700B62297 /* DocumentationBootcamp.swift */; };
 		9BC6FEFE297F825C00B62297 /* OnAppearBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6FEFD297F825C00B62297 /* OnAppearBootcamp.swift */; };
 		9BC6FF00297F87D500B62297 /* IfLetGuardBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6FEFF297F87D500B62297 /* IfLetGuardBootcamp.swift */; };
+		9DEDFDFE2A41E6F600B950F0 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +144,7 @@
 		9BC6FEFB297F791700B62297 /* DocumentationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationBootcamp.swift; sourceTree = "<group>"; };
 		9BC6FEFD297F825C00B62297 /* OnAppearBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearBootcamp.swift; sourceTree = "<group>"; };
 		9BC6FEFF297F87D500B62297 /* IfLetGuardBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfLetGuardBootcamp.swift; sourceTree = "<group>"; };
+		9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				9BC626E12986438500B62297 /* BadgesBootcamp.swift */,
 				9BC626E32986454B00B62297 /* FocusStateBootcamp.swift */,
 				9BC626E529864CFA00B62297 /* SubmitTextFieldBootcamp.swift */,
+				9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */,
 				9B22D853294CC17400CB371F /* Assets.xcassets */,
 				9B22D855294CC17400CB371F /* Preview Content */,
 			);
@@ -353,6 +356,7 @@
 				9B3C65CE2965C35200226C48 /* TernaryBootcamp.swift in Sources */,
 				9BC626DA2986398900B62297 /* TextSelectionBootcamp.swift in Sources */,
 				9BAF6598297697C3006E9AEF /* AlertBootcamp.swift in Sources */,
+				9DEDFDFE2A41E6F600B950F0 /* NavigationStackBootcamp.swift in Sources */,
 				9BB40EA62963E95C0059D887 /* ButtonsBootcamp.swift in Sources */,
 				9BB40EA42963C5EA0059D887 /* SafeAreaBootcamp.swift in Sources */,
 				9B3CB66B2967047B00226C48 /* AnimationTimingBootcamp.swift in Sources */,
