@@ -8,6 +8,10 @@
 import SwiftUI
 import CloudKit
 
+// protocol
+// generics
+// futures
+
 class CloudKitPushNotificationBootcampViewModel: ObservableObject {
     
     func requestNotificationPermissions() {

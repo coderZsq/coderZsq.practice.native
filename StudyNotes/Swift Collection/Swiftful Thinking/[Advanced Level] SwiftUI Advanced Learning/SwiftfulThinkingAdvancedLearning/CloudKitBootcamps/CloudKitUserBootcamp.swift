@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CloudKit
+import Combine
 
 class CloudKitUserBootcampViewModel: ObservableObject {
     
@@ -14,69 +14,50 @@ class CloudKitUserBootcampViewModel: ObservableObject {
     @Published var isSignedInToiCloud: Bool = false
     @Published var error: String = ""
     @Published var username: String =  ""
+    var cancellables = Set<AnyCancellable>()
     
     init() {
         getiCloudStatus()
         requestPermission()
-        fetchiCloudUserRecorID()
+        getCurrentUserName()
     }
     
     private func getiCloudStatus() {
-        CKContainer.default().accountStatus { [weak self] returnedStatus, returnedError in
-            DispatchQueue.main.async {
-                switch returnedStatus {
-                case .available:
+        CloudKitUtility.getiCloudStatus()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
                     break
-                case .noAccount:
-                    self?.error = CloudKitError.iCloudAccountNotFound.rawValue
-                    break
-                case .couldNotDetermine:
-                    self?.error = CloudKitError.iCloudAccountNotDetermined.rawValue
-                    break
-                case .restricted:
-                    self?.error = CloudKitError.iCloudAccountRestricted.rawValue
-                    break
-                default:
-                    self?.error = CloudKitError.iCloudAccountUnknown.rawValue
-                    break
+                case .failure(let error):
+                    self?.error = error.localizedDescription
                 }
+            } receiveValue: { [weak self] success in
+                self?.isSignedInToiCloud = success
             }
-        }
+            .store(in: &cancellables)
     }
     
-    enum CloudKitError: String, LocalizedError {
-        case iCloudAccountNotFound
-        case iCloudAccountNotDetermined
-        case iCloudAccountRestricted
-        case iCloudAccountUnknown
-    }
-     
     func requestPermission() {
-        CKContainer.default().requestApplicationPermission([.userDiscoverability]) { returnedStatus, returnedError in
-            DispatchQueue.main.async {
-                if returnedStatus == .granted {
-                    self.permissionStatus = true
-                }
+        CloudKitUtility.requestApplicationPermission()
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                
+            } receiveValue: { [weak self] success in
+                self?.permissionStatus = success
             }
-        }
+            .store(in: &cancellables)
     }
     
-    func fetchiCloudUserRecorID() {
-        CKContainer.default().fetchUserRecordID { [weak self] returnedID, returnedError in
-            if let id = returnedID {
-                self?.discoveriCloudUser(id: id)
+    func getCurrentUserName() {
+        CloudKitUtility.discoverUserIdentity()
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                
+            } receiveValue: { [weak self] returnedName in
+                self?.username = returnedName
             }
-        }
-    }
-    
-    func discoveriCloudUser(id: CKRecord.ID) {
-        CKContainer.default().discoverUserIdentity(withUserRecordID: id) { [weak self] returnedIdentity, returnedError in
-            DispatchQueue.main.async {
-                if let name = returnedIdentity?.nameComponents?.givenName {
-                    self?.username = name
-                }
-            }
-        }
+            .store(in: &cancellables)
     }
 }
 
