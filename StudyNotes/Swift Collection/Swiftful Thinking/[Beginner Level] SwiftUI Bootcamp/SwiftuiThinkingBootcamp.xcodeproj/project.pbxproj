@@ -77,6 +77,7 @@
 		9DEDFE002A4290C300B950F0 /* ToolbarBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */; };
 		9DEDFE242A43F8B000B950F0 /* ResizableSheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */; };
 		9DF199DA2A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */; };
+		9DF199DC2A49C915004EA7F2 /* GroupBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBootcamp.swift; sourceTree = "<group>"; };
 		9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableSheetBootcamp.swift; sourceTree = "<group>"; };
 		9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetBootcamp.swift; sourceTree = "<group>"; };
+		9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */,
 				9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */,
 				9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */,
+				9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */,
 				9B22D853294CC17400CB371F /* Assets.xcassets */,
 				9B22D855294CC17400CB371F /* Preview Content */,
 			);
@@ -383,6 +386,7 @@
 				9B3CB66D2967082200226C48 /* TransitionBootcamp.swift in Sources */,
 				9BAFA2CE2977C00B006E9AEF /* ToggleBootcamp.swift in Sources */,
 				9BC61D472984EA9C00B62297 /* ViewModelBootcamp.swift in Sources */,
+				9DF199DC2A49C915004EA7F2 /* GroupBootcamp.swift in Sources */,
 				9B22D86E294D82B700CB371F /* StacksBootcamp.swift in Sources */,
 				9BC61D4B2985045900B62297 /* AppStorageBootcamp.swift in Sources */,
 				9BC6FEFE297F825C00B62297 /* OnAppearBootcamp.swift in Sources */,
