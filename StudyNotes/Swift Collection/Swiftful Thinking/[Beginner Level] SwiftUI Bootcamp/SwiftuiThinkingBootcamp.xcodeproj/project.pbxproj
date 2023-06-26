@@ -76,6 +76,7 @@
 		9DEDFDFE2A41E6F600B950F0 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */; };
 		9DEDFE002A4290C300B950F0 /* ToolbarBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */; };
 		9DEDFE242A43F8B000B950F0 /* ResizableSheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */; };
+		9DF199DA2A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +150,7 @@
 		9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBootcamp.swift; sourceTree = "<group>"; };
 		9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableSheetBootcamp.swift; sourceTree = "<group>"; };
+		9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				9DEDFDFD2A41E6F600B950F0 /* NavigationStackBootcamp.swift */,
 				9DEDFDFF2A4290C300B950F0 /* ToolbarBootcamp.swift */,
 				9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */,
+				9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */,
 				9B22D853294CC17400CB371F /* Assets.xcassets */,
 				9B22D855294CC17400CB371F /* Preview Content */,
 			);
@@ -358,6 +361,7 @@
 				9BB4FB6E295ED8520059D887 /* InitializerBootcamp.swift in Sources */,
 				9BC61D542986179B00B62297 /* AsyncImageBootcamp.swift in Sources */,
 				9B22D860294CC44800CB371F /* ShapesBootcamp.swift in Sources */,
+				9DF199DA2A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift in Sources */,
 				9BC6FF00297F87D500B62297 /* IfLetGuardBootcamp.swift in Sources */,
 				9B3C65CE2965C35200226C48 /* TernaryBootcamp.swift in Sources */,
 				9BC626DA2986398900B62297 /* TextSelectionBootcamp.swift in Sources */,
