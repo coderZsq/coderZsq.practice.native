@@ -78,6 +78,7 @@
 		9DEDFE242A43F8B000B950F0 /* ResizableSheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */; };
 		9DF199DA2A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */; };
 		9DF199DC2A49C915004EA7F2 /* GroupBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */; };
+		9DF199DE2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +154,7 @@
 		9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableSheetBootcamp.swift; sourceTree = "<group>"; };
 		9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetBootcamp.swift; sourceTree = "<group>"; };
 		9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBootcamp.swift; sourceTree = "<group>"; };
+		9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUpdatedBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				9DEDFE232A43F8B000B950F0 /* ResizableSheetBootcamp.swift */,
 				9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */,
 				9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */,
+				9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */,
 				9B22D853294CC17400CB371F /* Assets.xcassets */,
 				9B22D855294CC17400CB371F /* Preview Content */,
 			);
@@ -369,6 +372,7 @@
 				9B3C65CE2965C35200226C48 /* TernaryBootcamp.swift in Sources */,
 				9BC626DA2986398900B62297 /* TextSelectionBootcamp.swift in Sources */,
 				9BAF6598297697C3006E9AEF /* AlertBootcamp.swift in Sources */,
+				9DF199DE2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift in Sources */,
 				9DEDFDFE2A41E6F600B950F0 /* NavigationStackBootcamp.swift in Sources */,
 				9BB40EA62963E95C0059D887 /* ButtonsBootcamp.swift in Sources */,
 				9BB40EA42963C5EA0059D887 /* SafeAreaBootcamp.swift in Sources */,
