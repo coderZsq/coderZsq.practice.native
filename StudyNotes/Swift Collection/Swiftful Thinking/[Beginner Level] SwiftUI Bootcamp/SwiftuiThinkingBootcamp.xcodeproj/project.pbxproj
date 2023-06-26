@@ -79,6 +79,7 @@
 		9DF199DA2A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */; };
 		9DF199DC2A49C915004EA7F2 /* GroupBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */; };
 		9DF199DE2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */; };
+		9DF199E02A49D640004EA7F2 /* MenuBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199DF2A49D640004EA7F2 /* MenuBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetBootcamp.swift; sourceTree = "<group>"; };
 		9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBootcamp.swift; sourceTree = "<group>"; };
 		9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUpdatedBootcamp.swift; sourceTree = "<group>"; };
+		9DF199DF2A49D640004EA7F2 /* MenuBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				9DF199D92A49C040004EA7F2 /* SafeAreaInsetBootcamp.swift */,
 				9DF199DB2A49C915004EA7F2 /* GroupBootcamp.swift */,
 				9DF199DD2A49CE18004EA7F2 /* AnimationUpdatedBootcamp.swift */,
+				9DF199DF2A49D640004EA7F2 /* MenuBootcamp.swift */,
 				9B22D853294CC17400CB371F /* Assets.xcassets */,
 				9B22D855294CC17400CB371F /* Preview Content */,
 			);
@@ -363,6 +366,7 @@
 				9B22D86A294D663600CB371F /* FrameBootcamp.swift in Sources */,
 				9BAF7A872977928F006E9AEF /* ContextMenuBootcamp.swift in Sources */,
 				9BB4FB6A295ED0DB0059D887 /* PaddingBootcamp.swift in Sources */,
+				9DF199E02A49D640004EA7F2 /* MenuBootcamp.swift in Sources */,
 				9BB421D8296425E10059D887 /* ExtractedFunctionsBootcamp.swift in Sources */,
 				9BB4FB6E295ED8520059D887 /* InitializerBootcamp.swift in Sources */,
 				9BC61D542986179B00B62297 /* AsyncImageBootcamp.swift in Sources */,
