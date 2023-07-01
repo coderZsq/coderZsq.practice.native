@@ -25,6 +25,7 @@
 		9BA727C729B8CD3A0017DB49 /* AsyncPublisherBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA727C629B8CD3A0017DB49 /* AsyncPublisherBootcamp.swift */; };
 		9D098E7C2A4C5D230053DEDA /* RefreshableDataServiceBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D098E7B2A4C5D230053DEDA /* RefreshableDataServiceBootcamp.swift */; };
 		9D098E9E2A4EA2FB0053DEDA /* SearchableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D098E9D2A4EA2FB0053DEDA /* SearchableBootcamp.swift */; };
+		9D098EA02A4FB2CC0053DEDA /* PhotoPickerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D098E9F2A4FB2CC0053DEDA /* PhotoPickerBootcamp.swift */; };
 		9DCDF2372A4B331400E801B9 /* MVVMBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDF2362A4B331400E801B9 /* MVVMBootcamp.swift */; };
 		9DF199E22A49D92E004EA7F2 /* StrongSelfBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF199E12A49D92E004EA7F2 /* StrongSelfBootcamp.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		9BA727C629B8CD3A0017DB49 /* AsyncPublisherBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisherBootcamp.swift; sourceTree = "<group>"; };
 		9D098E7B2A4C5D230053DEDA /* RefreshableDataServiceBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableDataServiceBootcamp.swift; sourceTree = "<group>"; };
 		9D098E9D2A4EA2FB0053DEDA /* SearchableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableBootcamp.swift; sourceTree = "<group>"; };
+		9D098E9F2A4FB2CC0053DEDA /* PhotoPickerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerBootcamp.swift; sourceTree = "<group>"; };
 		9DCDF2362A4B331400E801B9 /* MVVMBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMBootcamp.swift; sourceTree = "<group>"; };
 		9DF199E12A49D92E004EA7F2 /* StrongSelfBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongSelfBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				9DCDF2362A4B331400E801B9 /* MVVMBootcamp.swift */,
 				9D098E7B2A4C5D230053DEDA /* RefreshableDataServiceBootcamp.swift */,
 				9D098E9D2A4EA2FB0053DEDA /* SearchableBootcamp.swift */,
+				9D098E9F2A4FB2CC0053DEDA /* PhotoPickerBootcamp.swift */,
 				9BA42A1A29B1C21000707DCD /* Assets.xcassets */,
 				9BA42A1C29B1C21000707DCD /* Preview Content */,
 			);
@@ -189,6 +192,7 @@
 				9BA42A2529B1C35800707DCD /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				9BA42A1929B1C20E00707DCD /* ContentView.swift in Sources */,
 				9BA727C529B8C6E40017DB49 /* SendableBootcamp.swift in Sources */,
+				9D098EA02A4FB2CC0053DEDA /* PhotoPickerBootcamp.swift in Sources */,
 				9BA42A3529B71E1000707DCD /* ActorsBootcamp.swift in Sources */,
 				9BA42A3129B5D4A600707DCD /* CheckedContinuationBootcamp.swift in Sources */,
 				9BA42A3329B6F8D600707DCD /* StructClassActorBootcamp.swift in Sources */,
