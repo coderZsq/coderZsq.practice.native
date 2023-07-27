@@ -15,9 +15,10 @@
 		9DC29B4A2A530ADE008D7CD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC29B492A530ADE008D7CD0 /* ContentView.swift */; };
 		9DC29B4C2A530ADF008D7CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC29B4B2A530ADF008D7CD0 /* Assets.xcassets */; };
 		9DC29B4F2A530ADF008D7CD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC29B4E2A530ADF008D7CD0 /* Preview Assets.xcassets */; };
-		9DC29B562A530DA3008D7CD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DC29B552A530DA3008D7CD0 /* GoogleService-Info.plist */; };
 		9DC29B592A53B6C1008D7CD0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC29B582A53B6C1008D7CD0 /* FirebaseAnalytics */; };
 		9DC29B5B2A53B6C1008D7CD0 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC29B5A2A53B6C1008D7CD0 /* FirebaseAnalyticsSwift */; };
+		9DCD487C2A723BF200D76235 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD487B2A723BF200D76235 /* GoogleService-Info.plist */; };
+		9DCD487E2A72676B00D76235 /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD487D2A72676B00D76235 /* SignInAppleHelper.swift */; };
 		9DDFF2E02A54509F00005B30 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DDFF2DF2A54509F00005B30 /* FirebaseAuth */; };
 		9DDFF2E32A54512D00005B30 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDFF2E22A54512D00005B30 /* AuthenticationView.swift */; };
 		9DDFF2E52A54521000005B30 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDFF2E42A54521000005B30 /* SignInEmailView.swift */; };
@@ -35,7 +36,9 @@
 		9DC29B492A530ADE008D7CD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9DC29B4B2A530ADF008D7CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DC29B4E2A530ADF008D7CD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9DC29B552A530DA3008D7CD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DCD487A2A723AEE00D76235 /* SwiftfulFirebaseBootcamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftfulFirebaseBootcamp.entitlements; sourceTree = "<group>"; };
+		9DCD487B2A723BF200D76235 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DCD487D2A72676B00D76235 /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleHelper.swift; sourceTree = "<group>"; };
 		9DDFF2E22A54512D00005B30 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		9DDFF2E42A54521000005B30 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
 		9DDFF2E62A54548500005B30 /* AuthenticationMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMananger.swift; sourceTree = "<group>"; };
@@ -87,12 +90,13 @@
 		9DC29B462A530ADE008D7CD0 /* SwiftfulFirebaseBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				9DCD487A2A723AEE00D76235 /* SwiftfulFirebaseBootcamp.entitlements */,
 				9DB2F2052A5D908C007B1B36 /* Info.plist */,
 				9DC29B472A530ADE008D7CD0 /* SwiftfulFirebaseBootcampApp.swift */,
 				9DC29B492A530ADE008D7CD0 /* ContentView.swift */,
 				9DB2F2062A5D932A007B1B36 /* Utilities */,
 				9DDFF2E12A5450F400005B30 /* Authentication */,
-				9DC29B552A530DA3008D7CD0 /* GoogleService-Info.plist */,
+				9DCD487B2A723BF200D76235 /* GoogleService-Info.plist */,
 				9DC29B4B2A530ADF008D7CD0 /* Assets.xcassets */,
 				9DC29B4D2A530ADF008D7CD0 /* Preview Content */,
 			);
@@ -123,6 +127,7 @@
 				9DDFF2EA2A5459C200005B30 /* SettingsView.swift */,
 				9DDFF2E62A54548500005B30 /* AuthenticationMananger.swift */,
 				9DB2F2092A5D9BB0007B1B36 /* SignInGoogleHelper.swift */,
+				9DCD487D2A72676B00D76235 /* SignInAppleHelper.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -198,7 +203,7 @@
 			files = (
 				9DC29B4F2A530ADF008D7CD0 /* Preview Assets.xcassets in Resources */,
 				9DC29B4C2A530ADF008D7CD0 /* Assets.xcassets in Resources */,
-				9DC29B562A530DA3008D7CD0 /* GoogleService-Info.plist in Resources */,
+				9DCD487C2A723BF200D76235 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +222,7 @@
 				9DC29B482A530ADE008D7CD0 /* SwiftfulFirebaseBootcampApp.swift in Sources */,
 				9DDFF2E32A54512D00005B30 /* AuthenticationView.swift in Sources */,
 				9DB2F2082A5D934E007B1B36 /* Utilities.swift in Sources */,
+				9DCD487E2A72676B00D76235 /* SignInAppleHelper.swift in Sources */,
 				9DDFF2E52A54521000005B30 /* SignInEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,10 +349,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SwiftfulFirebaseBootcamp/SwiftfulFirebaseBootcamp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulFirebaseBootcamp/Preview Content\"";
-				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZPNVB9DK6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftfulFirebaseBootcamp/Info.plist;
@@ -360,8 +369,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.SwiftfulFirebaseBootcamp;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.volvocars.onCall.uat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "onCall uat(Dev)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,10 +384,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SwiftfulFirebaseBootcamp/SwiftfulFirebaseBootcamp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulFirebaseBootcamp/Preview Content\"";
-				DEVELOPMENT_TEAM = NGPFU6GT2A;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZPNVB9DK6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftfulFirebaseBootcamp/Info.plist;
@@ -390,8 +404,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = coderZsq.SwiftfulFirebaseBootcamp;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.volvocars.onCall.uat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "onCall uat(Dev)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

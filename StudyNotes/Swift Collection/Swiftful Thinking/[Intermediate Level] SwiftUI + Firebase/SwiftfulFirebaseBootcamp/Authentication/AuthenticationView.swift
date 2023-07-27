@@ -17,6 +17,12 @@ final class AuthenticationViewModel: ObservableObject {
         let tokens = try await helper.signIn()
         try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
     }
+    
+    func signInApple() async throws {
+        let helper = SignInAppleHelper()
+        let tokens = try await helper.startSignInWithAppleFlow()
+        try await AuthenticationManager.shared.signInWithApple(tokens: tokens)
+    }
 }
 
 struct AuthenticationView: View {
@@ -48,6 +54,21 @@ struct AuthenticationView: View {
                     }
                 }
             }
+            
+            Button(action: {
+                Task {
+                    do {
+                        try await viewModel.signInApple()
+                        showSignInView = false
+                    } catch {
+                        print(error)
+                    }
+                }
+            }, label: {
+                SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
+                    .allowsHitTesting(false)
+            })
+            .frame(height: 55)
             
             Spacer()
         }
