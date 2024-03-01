@@ -39,6 +39,7 @@
 		9D83B0E92A21A0DE00E650F1 /* FuturesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83B0E82A21A0DE00E650F1 /* FuturesBootcamp.swift */; };
 		9D83B0F02A22FB2F00E650F1 /* CloudKitUserBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83B0EF2A22FB2F00E650F1 /* CloudKitUserBootcamp.swift */; };
 		9D9886E12B90BF1F00FC102A /* KeypathsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9886E02B90BF1F00FC102A /* KeypathsBootcamp.swift */; };
+		9D9886E72B917AC600FC102A /* PropertyWrapperBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9886E62B917AC600FC102A /* PropertyWrapperBootcamp.swift */; };
 		9DBD8ECD2A1BB69C005E8264 /* UIViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD8ECC2A1BB69C005E8264 /* UIViewRepresentableBootcamp.swift */; };
 		9DEAC40A2A1317610079DE4B /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC4092A1317610079DE4B /* AnyTransitionBootcamp.swift */; };
 		9DEAC40C2A1324890079DE4B /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAC40B2A1324890079DE4B /* MatchedGeometryEffectBootcamp.swift */; };
@@ -112,6 +113,7 @@
 		9D83B0EF2A22FB2F00E650F1 /* CloudKitUserBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUserBootcamp.swift; sourceTree = "<group>"; };
 		9D83B0F12A22FC3B00E650F1 /* SwiftfulThinkingAdvancedLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftfulThinkingAdvancedLearning.entitlements; sourceTree = "<group>"; };
 		9D9886E02B90BF1F00FC102A /* KeypathsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypathsBootcamp.swift; sourceTree = "<group>"; };
+		9D9886E62B917AC600FC102A /* PropertyWrapperBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperBootcamp.swift; sourceTree = "<group>"; };
 		9DBD8ECC2A1BB69C005E8264 /* UIViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC4092A1317610079DE4B /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		9DEAC40B2A1324890079DE4B /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				9D4D0BA32B907F3B004DBE6C /* CustomBindingBootcamp.swift */,
 				9D4D0BA92B908E06004DBE6C /* ErrorAlertBootcamp.swift */,
 				9D9886E02B90BF1F00FC102A /* KeypathsBootcamp.swift */,
+				9D9886E62B917AC600FC102A /* PropertyWrapperBootcamp.swift */,
 				9BF3D54829C21622007022F7 /* Assets.xcassets */,
 				9BF3D54A29C21622007022F7 /* Preview Content */,
 			);
@@ -442,6 +445,7 @@
 				9DBD8ECD2A1BB69C005E8264 /* UIViewRepresentableBootcamp.swift in Sources */,
 				9DEDFDFC2A40849D00B950F0 /* CloudKitUtility.swift in Sources */,
 				9BF3D55529C35BFB007022F7 /* ButtonStyleBootcamp.swift in Sources */,
+				9D9886E72B917AC600FC102A /* PropertyWrapperBootcamp.swift in Sources */,
 				9BF3D55329C216A9007022F7 /* ViewModifierBootcamp.swift in Sources */,
 				9DEAC4122A13700B0079DE4B /* AnimateableDataBootcamp.swift in Sources */,
 				9DEAC40A2A1317610079DE4B /* AnyTransitionBootcamp.swift in Sources */,
